@@ -1,0 +1,99 @@
+# Source registry — the single, named, reviewable list of what we scan.
+#
+# Fields:
+#   name:      unique human-readable name (referenced in evidence logs)
+#   tier:      0 primary | 1 literature | 2 quality press | 3 community (discovery only)
+#   type:      rss | arxiv_api | html | youtube_channel
+#   url:       feed/API/page URL
+#   verified:  true once `validate-sources` has confirmed the feed resolves and parses
+#   notes:     anything an agent or reviewer should know
+#
+# Tier 3 sources are NEVER used to confirm a claim — discovery only (see
+# policy/verification.md §1). Add sources via PR so the registry history stays public.
+
+sources:
+  # ---- Tier 0: primary / official ------------------------------------------
+  - name: OpenAI News
+    tier: 0
+    type: rss
+    url: https://openai.com/news/rss.xml
+    verified: false
+  - name: Anthropic News
+    tier: 0
+    type: html
+    url: https://www.anthropic.com/news
+    verified: false
+    notes: No public RSS feed known; HTML listing page, parse latest entries.
+  - name: Google DeepMind Blog
+    tier: 0
+    type: rss
+    url: https://deepmind.google/blog/rss.xml
+    verified: false
+  - name: Meta AI Blog
+    tier: 0
+    type: html
+    url: https://ai.meta.com/blog/
+    verified: false
+  - name: Mistral AI News
+    tier: 0
+    type: html
+    url: https://mistral.ai/news
+    verified: false
+  - name: Hugging Face Blog
+    tier: 0
+    type: rss
+    url: https://huggingface.co/blog/feed.xml
+    verified: false
+  - name: Microsoft AI Blog
+    tier: 0
+    type: rss
+    url: https://blogs.microsoft.com/ai/feed/
+    verified: false
+
+  # ---- Tier 1: literature ---------------------------------------------------
+  - name: arXiv cs.AI+cs.LG+cs.CL
+    tier: 1
+    type: arxiv_api
+    url: http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=100
+    verified: false
+    notes: >
+      Use export.arxiv.org only. Rate limit: max 1 request per 3 seconds, single
+      connection. Label all results "preprint — not peer-reviewed".
+  - name: Nature Machine Intelligence
+    tier: 1
+    type: rss
+    url: https://www.nature.com/natmachintell.rss
+    verified: false
+
+  # ---- Tier 2: quality press ------------------------------------------------
+  - name: MIT Technology Review AI
+    tier: 2
+    type: rss
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed
+    verified: false
+  - name: IEEE Spectrum AI
+    tier: 2
+    type: rss
+    url: https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
+    verified: false
+  - name: The Verge AI
+    tier: 2
+    type: rss
+    url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+    verified: false
+  - name: Ars Technica AI
+    tier: 2
+    type: rss
+    url: https://arstechnica.com/ai/feed/
+    verified: false
+
+  # ---- Tier 3: community / discovery only -----------------------------------
+  - name: Hacker News AI search
+    tier: 3
+    type: html
+    url: https://hn.algolia.com/api/v1/search_by_date?query=AI&tags=story
+    verified: false
+    notes: Algolia API; JSON. Discovery only.
+  # YouTube channels (transcripts) go here once chosen — type: youtube_channel.
+  # Candidates to discuss: lab channels (OpenAI, Google DeepMind), quality
+  # explainers/interviews. Transcripts are Tier 3: leads only, never confirmation.
