@@ -1,0 +1,41 @@
+{
+  "slug": "claude-cowork-mobile-web",
+  "checked_at": "2026-07-09T00:00:00+00:00",
+  "method": "interactive verification run (design/flow simulation); web search cross-check (theverge.com direct fetch blocked; anthropic.com announcement page not fetched — Anthropic News has no RSS and the HTML fetcher is not built yet)",
+  "origin_items": [
+    "data/raw/2026-07-08/the-verge-ai.json id for https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic launched Claude Cowork on mobile and web in beta on 7 July 2026, rolling out to Max subscribers first",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Reported independently and consistently by TechCrunch, VentureBeat and The Verge, each with own reporting beyond the press materials. Primary Anthropic page not directly captured (no RSS; HTML fetcher pending) — noted as a gap, acceptable for an announcement claim witnessed by 3+ Tier-2 outlets.",
+      "evidence": [
+        "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/",
+        "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding",
+        "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web"
+      ]
+    },
+    {
+      "text": "Cowork tasks can run in the cloud and continue with no device online; work can be scheduled to run autonomously",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Feature descriptions trace back to Anthropic's launch materials (independence collapse). No independent hands-on verification found at publication time.",
+      "evidence": [
+        "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding",
+        "https://thenewstack.io/claude-cowork-cloud-mobile/"
+      ]
+    },
+    {
+      "text": "Anthropic's published usage data (1.2M anonymized sessions, 11–31 May, 600k+ organizations) puts software development at 8.7% of Cowork use; business-process work leads at 33.4%, content creation at 16.4%",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Claim is about what Anthropic published (self-reported data, labeled as such in the article); figures quoted consistently by VentureBeat.",
+      "evidence": [
+        "https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding"
+      ]
+    }
+  ],
+  "notes": "Watch items: capture Anthropic's primary announcement URL once the HTML fetcher exists; flip cloud-continuation claim to confirmed on independent hands-on reports."
+}

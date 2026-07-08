@@ -1,0 +1,54 @@
+{
+  "slug": "openai-gpt-live-voice",
+  "checked_at": "2026-07-09T00:00:00+00:00",
+  "method": "interactive verification run (design/flow simulation); web search cross-check after direct fetches of openai.com and theverge.com were blocked by bot protection",
+  "origin_items": [
+    "data/raw/2026-07-08/openai-news.json id for https://openai.com/index/introducing-gpt-live",
+    "data/raw/2026-07-08/the-verge-ai.json id for https://www.theverge.com/ai-artificial-intelligence/962856/chatgpt-upgraded-voice-mode-gpt-live"
+  ],
+  "claims": [
+    {
+      "text": "OpenAI released GPT-Live on 8 July 2026 and it now powers ChatGPT Voice",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Primary source (Tier 0, OpenAI News feed item + announcement page) plus independent same-day coverage by The Verge and TechCrunch.",
+      "evidence": [
+        "https://openai.com/index/introducing-gpt-live/",
+        "https://www.theverge.com/ai-artificial-intelligence/962856/chatgpt-upgraded-voice-mode-gpt-live",
+        "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/"
+      ]
+    },
+    {
+      "text": "Two models ship at launch: GPT-Live-1 for paid tiers, GPT-Live-1-mini for free users, on iOS, Android and the web",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated by OpenAI; tier/platform split reported consistently by TechCrunch and 9to5Mac.",
+      "evidence": [
+        "https://openai.com/index/introducing-gpt-live/",
+        "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/",
+        "https://9to5mac.com/2026/07/08/openai-upgrading-chatgpt-with-all-new-voice-mode-experience-watch-here/"
+      ]
+    },
+    {
+      "text": "GPT-Live is full-duplex — it listens and speaks simultaneously and handles interruptions without restarting",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Capability described by OpenAI; press coverage attributes it to OpenAI ('it says'). No independent benchmark or systematic hands-on test found at publication time. Independence collapse applies: all descriptions trace to the single OpenAI announcement.",
+      "evidence": [
+        "https://openai.com/index/introducing-gpt-live/",
+        "https://www.theverge.com/ai-artificial-intelligence/962856/chatgpt-upgraded-voice-mode-gpt-live"
+      ]
+    },
+    {
+      "text": "OpenAI says complex queries are handed off to a frontier model in the background, currently GPT-5.5",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Claim is about what OpenAI stated (not about measured behavior); statement present in the announcement and quoted by TechCrunch.",
+      "evidence": [
+        "https://openai.com/index/introducing-gpt-live/",
+        "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/"
+      ]
+    }
+  ],
+  "notes": "Watch item: flip the full-duplex capability claim to confirmed if/when independent hands-on testing or latency measurements appear."
+}
