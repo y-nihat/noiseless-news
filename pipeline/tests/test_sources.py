@@ -51,6 +51,63 @@ def test_tier_3_cannot_confirm(tmp_path):
     assert sources[1].can_confirm is False
 
 
+def test_status_defaults_to_active_and_accepts_lifecycle_values(tmp_path):
+    body = """
+sources:
+  - name: Default Status
+    tier: 2
+    type: rss
+    url: https://a.example.com/feed
+  - name: Candidate Source
+    tier: 2
+    type: rss
+    url: https://b.example.com/feed
+    status: candidate
+  - name: Retired Source
+    tier: 2
+    type: rss
+    url: https://c.example.com/feed
+    status: retired
+"""
+    sources = load_sources(write_registry(tmp_path, body))
+    assert [source.status for source in sources] == ["active", "candidate", "retired"]
+
+
+def test_delay_seconds_optional_and_validated(tmp_path):
+    body = """
+sources:
+  - name: Slow Source
+    tier: 3
+    type: rss
+    url: https://slow.example.com/feed
+    delay_seconds: 10
+  - name: Normal Source
+    tier: 3
+    type: rss
+    url: https://normal.example.com/feed
+"""
+    sources = load_sources(write_registry(tmp_path, body))
+    assert sources[0].delay_seconds == 10.0
+    assert sources[1].delay_seconds is None
+
+    bad = body.replace("delay_seconds: 10", "delay_seconds: -1")
+    with pytest.raises(SourceRegistryError, match="delay_seconds"):
+        load_sources(write_registry(tmp_path, bad))
+
+
+def test_rejects_invalid_status(tmp_path):
+    body = """
+sources:
+  - name: X
+    tier: 1
+    type: rss
+    url: https://x.example.com/feed
+    status: paused
+"""
+    with pytest.raises(SourceRegistryError, match="status"):
+        load_sources(write_registry(tmp_path, body))
+
+
 @pytest.mark.parametrize(
     "body, message_fragment",
     [

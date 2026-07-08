@@ -10,6 +10,8 @@ import yaml
 
 VALID_TIERS = {0, 1, 2, 3}
 VALID_TYPES = {"rss", "arxiv_api", "html", "youtube_channel"}
+# Lifecycle statuses — see policy/source-lifecycle.md. Only active sources are ingested.
+VALID_STATUSES = {"active", "candidate", "retired"}
 # Tier 3 is discovery-only and may never confirm a claim (policy/verification.md §1).
 CONFIRMATION_TIERS = {0, 1, 2}
 
@@ -20,8 +22,11 @@ class Source:
     tier: int
     type: str
     url: str
+    status: str = "active"
     verified: bool = False
     notes: str = ""
+    # Optional per-source politeness delay; None means the type default applies.
+    delay_seconds: float | None = None
 
     @property
     def slug(self) -> str:
@@ -58,13 +63,27 @@ def _validate_entry(entry: dict, index: int) -> Source:
     if not url or not isinstance(url, str) or not url.startswith(("http://", "https://")):
         raise SourceRegistryError(f"source '{name}': missing or invalid 'url'")
 
+    status = entry.get("status", "active")
+    if status not in VALID_STATUSES:
+        raise SourceRegistryError(
+            f"source '{name}': status must be one of {sorted(VALID_STATUSES)}, got {status!r}"
+        )
+
+    delay = entry.get("delay_seconds")
+    if delay is not None and (not isinstance(delay, (int, float)) or delay < 0):
+        raise SourceRegistryError(
+            f"source '{name}': delay_seconds must be a non-negative number, got {delay!r}"
+        )
+
     return Source(
         name=name,
         tier=tier,
         type=type_,
         url=url,
+        status=status,
         verified=bool(entry.get("verified", False)),
         notes=str(entry.get("notes", "")).strip(),
+        delay_seconds=float(delay) if delay is not None else None,
     )
 
 

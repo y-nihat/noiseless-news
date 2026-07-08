@@ -1,6 +1,6 @@
 """Unit tests for the ingest stage: normalization, identity, dedup (no network)."""
 
-from noiseless.ingest import canonical_url, dedupe, item_id, parse_feed_text
+from noiseless.ingest import canonical_url, dedupe, ingest_all, item_id, parse_feed_text
 from noiseless.sources import Source
 
 SOURCE = Source(name="Example Blog", tier=0, type="rss", url="https://example.com/feed.xml")
@@ -60,6 +60,17 @@ class TestParseFeedText:
         assert item["published"] == "2026-07-01T10:00:00+00:00"
         assert item["summary"] == "Model X is out."
         assert item["id"] == item_id("https://example.com/posts/model-x")
+
+
+class TestIngestAll:
+    def test_skips_non_active_sources(self, tmp_path):
+        """candidate/retired sources are never fetched (no network call happens)."""
+        sources = [
+            Source(name="C", tier=2, type="rss", url="https://c.example.com/f", status="candidate"),
+            Source(name="R", tier=2, type="rss", url="https://r.example.com/f", status="retired"),
+        ]
+        summary = ingest_all(sources, tmp_path)
+        assert summary == {}
 
 
 class TestDedupe:

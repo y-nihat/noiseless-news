@@ -92,7 +92,19 @@ def dedupe(items: list[dict], seen_ids: set[str]) -> list[dict]:
 
 
 def _delay_for(source: Source) -> float:
-    return ARXIV_DELAY_SECONDS if source.type == "arxiv_api" else DEFAULT_DELAY_SECONDS
+    type_default = ARXIV_DELAY_SECONDS if source.type == "arxiv_api" else DEFAULT_DELAY_SECONDS
+    if source.delay_seconds is not None:
+        return max(source.delay_seconds, type_default)
+    return type_default
+
+
+def polite_get(client: httpx.Client, url: str, retry_delay: float = 30.0) -> httpx.Response:
+    """GET with one polite retry on HTTP 429 (rate limit)."""
+    response = client.get(url, headers={"User-Agent": USER_AGENT})
+    if response.status_code == 429:
+        time.sleep(retry_delay)
+        response = client.get(url, headers={"User-Agent": USER_AGENT})
+    return response
 
 
 def fetch_source(source: Source, client: httpx.Client, fetched_at: str) -> list[dict]:
@@ -100,7 +112,7 @@ def fetch_source(source: Source, client: httpx.Client, fetched_at: str) -> list[
     here — they get dedicated fetchers in a later stage."""
     if source.type not in {"rss", "arxiv_api"}:
         return []
-    response = client.get(source.url, headers={"User-Agent": USER_AGENT})
+    response = polite_get(client, source.url)
     response.raise_for_status()
     return parse_feed_text(source, response.text, fetched_at)
 
@@ -139,6 +151,8 @@ def ingest_all(
     with httpx.Client(timeout=30, follow_redirects=True) as client:
         for source in sources:
             if only_source and source.name != only_source:
+                continue
+            if source.status != "active":
                 continue
             if source.type not in {"rss", "arxiv_api"}:
                 continue

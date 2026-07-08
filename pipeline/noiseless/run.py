@@ -21,7 +21,14 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="noiseless")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    subparsers.add_parser("validate-sources", help="validate policy/sources.yaml")
+    validate_parser = subparsers.add_parser(
+        "validate-sources", help="validate policy/sources.yaml"
+    )
+    validate_parser.add_argument(
+        "--live",
+        action="store_true",
+        help="also fetch every non-retired URL and check that it resolves and parses",
+    )
 
     ingest_parser = subparsers.add_parser("ingest", help="fetch registered feeds")
     ingest_parser.add_argument("--source", help="ingest a single source by name")
@@ -41,6 +48,16 @@ def main(argv: list[str] | None = None) -> int:
             by_tier[source.tier] = by_tier.get(source.tier, 0) + 1
         tiers = ", ".join(f"tier {t}: {n}" for t, n in sorted(by_tier.items()))
         print(f"OK — {len(sources)} sources ({tiers})")
+        if args.live:
+            from noiseless.validate import check_all
+
+            failures = 0
+            for result in check_all(sources):
+                mark = "ok  " if result.ok else "FAIL"
+                print(f"[{mark}] {result.source.name}: {result.detail}")
+                failures += 0 if result.ok else 1
+            print(f"live check done — {failures} failures")
+            return 0 if failures == 0 else 2
         return 0
 
     if args.command == "ingest":
