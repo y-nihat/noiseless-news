@@ -65,7 +65,10 @@ jobs:
             Today's raw items are in data/raw/ (latest date directory; already
             committed). Then:
 
-            1. Triage: cluster the raw items into candidate stories. Apply the
+            1. Triage: consider ONLY items whose published date is within the last
+               72 hours — first-run ingests backfill entire feed histories, and old
+               items are not news (use grep/jq on the JSON rather than reading whole
+               files). Cluster the recent items into candidate stories. Apply the
                clickbait residual-substance test (verification.md §4). Rank by
                newsworthiness. Select AT MOST 4 stories.
             2. For each selected story, in order:
