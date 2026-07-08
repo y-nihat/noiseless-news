@@ -133,7 +133,7 @@ def _save_seen_ids(state_path: Path, seen_ids: set[str]) -> None:
 def ingest_all(
     sources: list[Source],
     data_dir: Path | str,
-    only_source: str | None = None,
+    only_sources: list[str] | None = None,
 ) -> dict[str, int]:
     """Fetch every feed-like source, write new items to data/raw/<date>/, update state.
 
@@ -150,7 +150,7 @@ def ingest_all(
 
     with httpx.Client(timeout=30, follow_redirects=True) as client:
         for source in sources:
-            if only_source and source.name != only_source:
+            if only_sources and source.name not in only_sources:
                 continue
             if source.status != "active":
                 continue

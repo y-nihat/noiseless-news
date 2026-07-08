@@ -31,8 +31,17 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     ingest_parser = subparsers.add_parser("ingest", help="fetch registered feeds")
-    ingest_parser.add_argument("--source", help="ingest a single source by name")
+    ingest_parser.add_argument(
+        "--source",
+        action="append",
+        help="ingest only the named source(s); repeatable",
+    )
     ingest_parser.add_argument("--data-dir", default="data")
+
+    publish_parser = subparsers.add_parser(
+        "publish", help="build the static site from content/ and data/"
+    )
+    publish_parser.add_argument("--out", default="site/dist")
 
     args = parser.parse_args(argv)
 
@@ -61,10 +70,17 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.command == "ingest":
-        summary = ingest_all(sources, args.data_dir, only_source=args.source)
+        summary = ingest_all(sources, args.data_dir, only_sources=args.source)
         failures = [name for name, count in summary.items() if count < 0]
         total_new = sum(count for count in summary.values() if count > 0)
         print(f"done — {total_new} new items, {len(failures)} failed sources")
+        return 0
+
+    if args.command == "publish":
+        from noiseless.publish import build_site
+
+        counts = build_site(Path("."), args.out)
+        print(f"site built at {args.out} — articles: en={counts['en']}, tr={counts['tr']}")
         return 0
 
     return 1
