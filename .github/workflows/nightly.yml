@@ -1,0 +1,112 @@
+name: Nightly scan
+
+on:
+  schedule:
+    # 22:00 UTC = 01:00 Europe/Istanbul (Turkey is UTC+3 year-round, no DST).
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    # Hard window guard: even with GitHub's cron delay (~up to 30 min), a 200-minute
+    # cap ends the job well before 05:00 Istanbul. The prompt below additionally sets
+    # an absolute wrap-up deadline of 01:30 UTC (04:30 Istanbul).
+    timeout-minutes: 200
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r pipeline/requirements.txt
+
+      - name: Ingest registered sources
+        run: PYTHONPATH=pipeline python -m noiseless.run ingest
+
+      - name: Commit ingest artifacts
+        run: |
+          git config user.name "y-nihat"
+          git config user.email "nihat@yinovasyon.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Nightly ingest $(date -u +%F)"
+          git push
+
+      - name: Verify and write articles
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: '--model claude-sonnet-5 --max-turns 150 --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"'
+          prompt: |
+            You are the nightly noiseless-news pipeline, running unattended.
+
+            TIME BUDGET (absolute, check `date -u` regularly): your final commit must
+            be pushed before 01:30 UTC (04:30 Istanbul). Plan the remaining time
+            before starting each story; if the next story cannot finish in time,
+            stop instead of starting it.
+
+            CREDIT BUDGET: work sequentially, most newsworthy story first, so an
+            early stop loses the least. If any tool or model call fails with a
+            usage-limit / credit / rate-limit error, immediately commit whatever is
+            complete, push, and stop. Never lower the evidence bar to save budget.
+
+            Read first: CLAUDE.md, policy/verification.md, policy/sources.yaml,
+            policy/discovery.yaml, policy/article-template.md.
+
+            Today's raw items are in data/raw/ (latest date directory; already
+            committed). Then:
+
+            1. Triage: cluster the raw items into candidate stories. Apply the
+               clickbait residual-substance test (verification.md §4). Rank by
+               newsworthiness. Select AT MOST 4 stories.
+            2. For each selected story, in order:
+               - Extract typed factual claims (verification.md §3).
+               - Verify each claim per policy: independence rules, walk to primary
+                 sources, keyword searches from discovery.yaml. Budget: at most 12
+                 web searches/fetches per story.
+               - If the publishing gate passes: write the English article per
+                 policy/article-template.md to content/articles/en/YYYY/MM/<slug>.md,
+                 then its Turkish semantic mirror to content/articles/tr/YYYY/MM/<slug>.md.
+               - Save the evidence log to data/verified/<slug>.json and the story
+                 state to data/ledger/<slug>.json.
+               - Commit after each completed story (plain message, no AI attribution
+                 — the git identity is already configured).
+            3. Stories that fail the gate: record in data/ledger/ as watching or
+               dropped, with reasons. Do not publish them.
+            4. Before finishing: write data/ledger/run-report-<date>.md summarizing
+               items scanned, stories selected/published/dropped (with reasons), and
+               how much of the time budget was used. Commit and push everything.
+
+            Do NOT modify pipeline code, workflows, or policy files in this run.
+
+      - name: Fallback commit of any remaining artifacts
+        if: always()
+        run: |
+          git config user.name "y-nihat"
+          git config user.email "nihat@yinovasyon.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Nightly run artifacts $(date -u +%F)"
+          git push || true
+
+      # Pushes made with GITHUB_TOKEN do not trigger the deploy workflow,
+      # so the nightly job publishes the site itself.
+      - name: Build site
+        if: always()
+        run: PYTHONPATH=pipeline python -m noiseless.run publish
+      - uses: actions/configure-pages@v5
+        if: always()
+      - uses: actions/upload-pages-artifact@v3
+        if: always()
+        with:
+          path: site/dist
+      - uses: actions/deploy-pages@v4
+        if: always()
