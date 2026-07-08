@@ -1,0 +1,82 @@
+[
+  {
+    "id": "e73c663b6f6c78d9",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Guiding generative models to uncover diverse and novel crystals via reinforcement learning",
+    "url": "https://www.nature.com/articles/s42256-026-01262-4",
+    "published": "2026-07-06T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 06 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01262-4\">doi:10.1038/s42256-026-01262-4</a></p>Park and Walsh introduce a reinforcement learning framework that could accelerate the discovery of new, thermodynamically stable and diverse crystalline materials with desired properties.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  },
+  {
+    "id": "deba1614d1deacc9",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Principled approaches for extending neural architectures to function spaces for operator learning",
+    "url": "https://www.nature.com/articles/s42256-026-01267-z",
+    "published": "2026-07-03T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 03 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01267-z\">doi:10.1038/s42256-026-01267-z</a></p>Berner et al. show how to adapt popular neural networks into discretization-agnostic neural operators that learn from continuous scientific data, enabling scientific simulations that generalize more reliably across resolutions.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  },
+  {
+    "id": "25442a98bba172bb",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Empowering biomedical evidence exploration and synthesis with deep knowledge graph research",
+    "url": "https://www.nature.com/articles/s42256-026-01266-0",
+    "published": "2026-07-02T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 02 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01266-0\">doi:10.1038/s42256-026-01266-0</a></p>Wang et al. develop DeepEvidence, a biomedical deep research agent for exploring and synthesizing evidence across various knowledge sources to support drug discovery, clinical trials and evidence-based medicine.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  },
+  {
+    "id": "acf584713791d3ed",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Reshaping biomolecular structure prediction through strategic conformational exploration with HelixFold-S1",
+    "url": "https://www.nature.com/articles/s42256-026-01264-2",
+    "published": "2026-07-02T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 02 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01264-2\">doi:10.1038/s42256-026-01264-2</a></p>Liu and colleagues introduce HelixFold-S1, a guided sampling strategy for biomolecular complex structure prediction that targets high-probability interaction regions. The method achieves higher accuracy than traditional unguided methods while reducing computational costs.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  },
+  {
+    "id": "b9b4a1df9606f24a",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "An agentic artificially intelligent X-ray scientist",
+    "url": "https://www.nature.com/articles/s42256-026-01261-5",
+    "published": "2026-07-01T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 01 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01261-5\">doi:10.1038/s42256-026-01261-5</a></p>Chen et al. demonstrate an AI X-ray scientist that autonomously aligns single crystals at a real synchrotron beamline, showing how large language models can enable adaptive closed-loop experimentation at large-scale scientific facilities.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  },
+  {
+    "id": "dbc125e7c20cbcda",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Data-driven surrogates of rational design enable antimicrobial peptide optimization",
+    "url": "https://www.nature.com/articles/s42256-026-01258-0",
+    "published": "2026-06-25T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 25 June 2026; <a href=\"https://www.nature.com/articles/s42256-026-01258-0\">doi:10.1038/s42256-026-01258-0</a></p>Rising pathogen drug resistance makes next-generation antimicrobial peptides a global priority. Generative AI accelerates discovery by rapidly proposing new peptides with high therapeutic potential. The key question is no longer whether broad data-driven exploration is possible, but whether it can refine biologically complex activity scaffolds.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  },
+  {
+    "id": "56e280ba41f7275f",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Solutions, challenges and rising tensions in AI and mathematics",
+    "url": "https://www.nature.com/articles/s42256-026-01269-x",
+    "published": "2026-06-23T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 23 June 2026; <a href=\"https://www.nature.com/articles/s42256-026-01269-x\">doi:10.1038/s42256-026-01269-x</a></p>Recent breakthroughs in mathematical research show that AI is transforming the field at a remarkable pace. In an open letter published this month, an international group of mathematicians argue that the field needs to remain a human endeavour.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  },
+  {
+    "id": "34312c2634210e13",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "A dexterous soft hand exoskeleton restores intentional grasping in individuals with severe hand impairment",
+    "url": "https://www.nature.com/articles/s42256-026-01263-3",
+    "published": "2026-06-23T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 23 June 2026; <a href=\"https://www.nature.com/articles/s42256-026-01263-3\">doi:10.1038/s42256-026-01263-3</a></p>Nassour, Berberich and colleagues present a soft robotic hand exoskeleton that restores grasping ability in individuals with severe hand paralysis, enabling meaningful tasks such as feeding. A lightweight textile glove with wrist dorsiflexion and an active opposable thumb increases hand articulations to enable more dexterous grasping.",
+    "fetched_at": "2026-07-08T20:48:01.691707+00:00"
+  }
+]
