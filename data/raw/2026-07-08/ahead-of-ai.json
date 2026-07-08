@@ -1,0 +1,202 @@
+[
+  {
+    "id": "9b152c447df89686",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Using Local Coding Agents",
+    "url": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
+    "published": "2026-06-27T11:21:58+00:00",
+    "summary": "Using Open-Weight Models in Local Coding Harnesses as an Alternative to Claude Code and Codex Subscriptions",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "31775d7bc5032529",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "LLM Research Papers: The 2026 List (January to May)",
+    "url": "https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1",
+    "published": "2026-06-06T11:16:22+00:00",
+    "summary": "A curated roundup of notable LLM research papers that came out this year",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "45902f284acb2417",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+    "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+    "published": "2026-05-16T11:33:51+00:00",
+    "summary": "From Gemma 4 to DeepSeek V4, How New Open-Weight LLMs Are Reducing Long-Context Costs",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "e9f89571e8825880",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "My Workflow for Understanding LLM Architectures",
+    "url": "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms",
+    "published": "2026-04-18T11:24:36+00:00",
+    "summary": "A learning-oriented workflow for understanding new open-weight model releases",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "4b5942c9e4a3eb42",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Components of A Coding Agent",
+    "url": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
+    "published": "2026-04-04T11:45:37+00:00",
+    "summary": "How coding agents use tools, memory, and repo context to make LLMs work better in practice",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "4bd90b22eede110e",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "A Visual Guide to Attention Variants in Modern LLMs",
+    "url": "https://magazine.sebastianraschka.com/p/visual-attention-variants",
+    "published": "2026-03-22T11:55:40+00:00",
+    "summary": "From MHA and GQA to MLA, sparse attention, and hybrid architectures",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "8f69046b20d540eb",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan-Feb 2026",
+    "url": "https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight",
+    "published": "2026-02-25T13:26:56+00:00",
+    "summary": "A Round Up And Comparison of 10 Open-Weight LLM Releases in Spring 2026",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "cef9ff40519ebab3",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Categories of Inference-Time Scaling for Improved LLM Reasoning",
+    "url": "https://magazine.sebastianraschka.com/p/categories-of-inference-time-scaling",
+    "published": "2026-01-24T11:23:18+00:00",
+    "summary": "And an Overview of Recent Inference-Scaling Papers",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "90fe0bdbdeb9e9f0",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "The State Of LLMs 2025: Progress, Problems, and Predictions",
+    "url": "https://magazine.sebastianraschka.com/p/state-of-llms-2025",
+    "published": "2025-12-30T12:22:26+00:00",
+    "summary": "A 2025 review of large language models, from DeepSeek R1 and RLVR to inference-time scaling, benchmarks, architectures, and predictions for 2026.",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "826c2d2a2f7c52ee",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "LLM Research Papers: The 2025 List (July to December)",
+    "url": "https://magazine.sebastianraschka.com/p/llm-research-papers-2025-part2",
+    "published": "2025-12-30T12:15:39+00:00",
+    "summary": "In June, I shared a bonus article with my curated and bookmarked research paper lists to the paid subscribers who make this Substack possible.",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "f29a804a61ab0978",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "From DeepSeek V3 to V3.2: Architecture, Sparse Attention, and RL Updates",
+    "url": "https://magazine.sebastianraschka.com/p/technical-deepseek",
+    "published": "2025-12-03T12:03:33+00:00",
+    "summary": "Understanding How DeepSeek's Flagship Open-Weight Models Evolved",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "2125d2eb582463c1",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Beyond Standard LLMs",
+    "url": "https://magazine.sebastianraschka.com/p/beyond-standard-llms",
+    "published": "2025-11-04T13:06:07+00:00",
+    "summary": "Linear Attention Hybrids, Text Diffusion, Code World Models, and Small Recursive Transformers",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "9735501bb2cc019c",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Understanding the 4 Main Approaches to LLM Evaluation (From Scratch)",
+    "url": "https://magazine.sebastianraschka.com/p/llm-evaluation-4-approaches",
+    "published": "2025-10-05T11:12:32+00:00",
+    "summary": "Multiple-Choice Benchmarks, Verifiers, Leaderboards, and LLM Judges with Code Examples",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "2a67d7ea7473ba19",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Understanding and Implementing Qwen3 From Scratch",
+    "url": "https://magazine.sebastianraschka.com/p/qwen3-from-scratch",
+    "published": "2025-09-06T11:10:21+00:00",
+    "summary": "A Detailed Look at One of the Leading Open-Source LLMs",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "48712c9ff7428dcc",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "From GPT-2 to gpt-oss: Analyzing the Architectural Advances",
+    "url": "https://magazine.sebastianraschka.com/p/from-gpt-2-to-gpt-oss-analyzing-the",
+    "published": "2025-08-09T11:23:07+00:00",
+    "summary": "And How They Stack Up Against Qwen3",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "3ef027ce0a2753b7",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "The Big LLM Architecture Comparison",
+    "url": "https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison",
+    "published": "2025-07-19T11:11:10+00:00",
+    "summary": "From DeepSeek-V3 to Kimi K2: A Look At Modern LLM Architecture Design",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "6be4c92ed8e99fc5",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "LLM Research Papers: The 2025 List (January to June)",
+    "url": "https://magazine.sebastianraschka.com/p/llm-research-papers-2025-list-one",
+    "published": "2025-07-01T11:11:45+00:00",
+    "summary": "A topic-organized collection of 200+ LLM research papers from 2025",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "b0d0c6c5757f6fe2",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Understanding and Coding the KV Cache in LLMs from Scratch",
+    "url": "https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms",
+    "published": "2025-06-17T10:55:34+00:00",
+    "summary": "KV caches are one of the most critical techniques for efficient inference in LLMs in production.",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "a0409902b07b278e",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "Coding LLMs from the Ground Up: A Complete Course",
+    "url": "https://magazine.sebastianraschka.com/p/coding-llms-from-the-ground-up",
+    "published": "2025-05-10T11:03:17+00:00",
+    "summary": "Why build LLMs from scratch? It's probably the best and most efficient way to learn how LLMs really work. Plus, many readers have told me they had a lot of fun doing it.",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  },
+  {
+    "id": "cc2c347dff13a86f",
+    "source": "Ahead of AI",
+    "tier": 3,
+    "title": "The State of Reinforcement Learning for LLM Reasoning",
+    "url": "https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training",
+    "published": "2025-04-19T11:02:44+00:00",
+    "summary": "Understanding GRPO and New Insights from Reasoning Model Papers",
+    "fetched_at": "2026-07-08T22:56:47.252391+00:00"
+  }
+]
