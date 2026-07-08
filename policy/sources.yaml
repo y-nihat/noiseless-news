@@ -1,15 +1,17 @@
 # Source registry — the single, named, reviewable list of what we scan.
+# Lifecycle (candidate/active/retired, discovery, demotion): policy/source-lifecycle.md
 #
 # Fields:
 #   name:      unique human-readable name (referenced in evidence logs)
 #   tier:      0 primary | 1 literature | 2 quality press | 3 community (discovery only)
 #   type:      rss | arxiv_api | html | youtube_channel
 #   url:       feed/API/page URL
-#   verified:  true once `validate-sources` has confirmed the feed resolves and parses
+#   status:    active (default) | candidate | retired
+#   verified:  true once live validation confirmed the URL resolves and parses
 #   notes:     anything an agent or reviewer should know
 #
 # Tier 3 sources are NEVER used to confirm a claim — discovery only (see
-# policy/verification.md §1). Add sources via PR so the registry history stays public.
+# policy/verification.md §1). Add or change sources via commits only.
 
 sources:
   # ---- Tier 0: primary / official ------------------------------------------
@@ -17,83 +19,274 @@ sources:
     tier: 0
     type: rss
     url: https://openai.com/news/rss.xml
-    verified: false
+    verified: true
   - name: Anthropic News
     tier: 0
     type: html
     url: https://www.anthropic.com/news
-    verified: false
+    verified: true
     notes: No public RSS feed known; HTML listing page, parse latest entries.
   - name: Google DeepMind Blog
     tier: 0
     type: rss
     url: https://deepmind.google/blog/rss.xml
-    verified: false
+    verified: true
+  - name: Google AI Blog
+    tier: 0
+    type: rss
+    url: https://blog.google/technology/ai/rss/
+    verified: true
   - name: Meta AI Blog
     tier: 0
     type: html
     url: https://ai.meta.com/blog/
-    verified: false
+    verified: true
   - name: Mistral AI News
     tier: 0
     type: html
     url: https://mistral.ai/news
-    verified: false
+    verified: true
+  - name: xAI News
+    tier: 0
+    type: html
+    url: https://x.ai/news
+    verified: true
   - name: Hugging Face Blog
     tier: 0
     type: rss
     url: https://huggingface.co/blog/feed.xml
-    verified: false
-  - name: Microsoft AI Blog
+    verified: true
+  - name: Microsoft Source AI
     tier: 0
     type: rss
-    url: https://blogs.microsoft.com/ai/feed/
-    verified: false
+    url: https://news.microsoft.com/source/topics/ai/feed/
+    verified: true
+    notes: Official Microsoft newsroom AI topic (blogs.microsoft.com/ai feed returned 410).
+  - name: AWS Machine Learning Blog
+    tier: 0
+    type: rss
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+    verified: true
+  - name: NVIDIA AI Blog
+    tier: 0
+    type: rss
+    url: https://blogs.nvidia.com/blog/category/generative-ai/feed/
+    verified: true
+  - name: Apple Machine Learning Research
+    tier: 0
+    type: rss
+    url: https://machinelearning.apple.com/rss.xml
+    verified: true
+  - name: Qwen Blog
+    tier: 0
+    type: rss
+    url: https://qwenlm.github.io/blog/index.xml
+    verified: true
+    notes: Alibaba Qwen team blog (Hugo site, per-section blog feed).
+  - name: Cohere Blog
+    tier: 0
+    type: html
+    url: https://cohere.com/blog
+    verified: true
+  - name: Allen Institute for AI Blog
+    tier: 0
+    type: html
+    url: https://allenai.org/blog
+    verified: true
+  - name: NIST AI
+    tier: 0
+    type: html
+    url: https://www.nist.gov/artificial-intelligence
+    verified: true
+    notes: US standards body — policy/framework claims.
+  - name: European Commission Digital Strategy News
+    tier: 0
+    type: html
+    url: https://digital-strategy.ec.europa.eu/en/news
+    verified: true
+    notes: EU AI Act and related regulatory announcements.
 
   # ---- Tier 1: literature ---------------------------------------------------
   - name: arXiv cs.AI+cs.LG+cs.CL
     tier: 1
     type: arxiv_api
-    url: http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=100
-    verified: false
+    url: https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=100
+    verified: true
     notes: >
       Use export.arxiv.org only. Rate limit: max 1 request per 3 seconds, single
       connection. Label all results "preprint — not peer-reviewed".
+  - name: arXiv cs.CV+stat.ML
+    tier: 1
+    type: arxiv_api
+    url: https://export.arxiv.org/api/query?search_query=cat:cs.CV+OR+cat:stat.ML&sortBy=submittedDate&sortOrder=descending&max_results=100
+    verified: true
+    notes: Same rate limit as the other arXiv query; share the 3s budget.
   - name: Nature Machine Intelligence
     tier: 1
     type: rss
     url: https://www.nature.com/natmachintell.rss
-    verified: false
+    verified: true
+  - name: Nature Machine Learning subject feed
+    tier: 1
+    type: rss
+    url: https://www.nature.com/subjects/machine-learning.rss
+    verified: true
+  - name: Journal of Machine Learning Research
+    tier: 1
+    type: rss
+    url: https://www.jmlr.org/jmlr.xml
+    verified: true
+    notes: Peer-reviewed; low frequency. Conference proceedings (NeurIPS/ICML/ICLR)
+      are event-driven — handled via OpenReview lookups during verification, not a feed.
 
   # ---- Tier 2: quality press ------------------------------------------------
   - name: MIT Technology Review AI
     tier: 2
     type: rss
     url: https://www.technologyreview.com/topic/artificial-intelligence/feed
-    verified: false
+    verified: true
   - name: IEEE Spectrum AI
     tier: 2
     type: rss
     url: https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss
-    verified: false
+    verified: true
   - name: The Verge AI
     tier: 2
     type: rss
     url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
-    verified: false
+    verified: true
   - name: Ars Technica AI
     tier: 2
     type: rss
     url: https://arstechnica.com/ai/feed/
+    verified: true
+  - name: Wired AI
+    tier: 2
+    type: rss
+    url: https://www.wired.com/feed/tag/ai/latest/rss
+    verified: true
+  - name: TechCrunch AI
+    tier: 2
+    type: rss
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    verified: true
+    notes: Strong on funding/industry claims; capability claims still need Tier 0/1.
+  - name: VentureBeat AI
+    tier: 2
+    type: rss
+    url: https://venturebeat.com/category/ai/feed/
+    verified: true
+  - name: The Register AI
+    tier: 2
+    type: rss
+    url: https://www.theregister.com/software/ai_ml/headlines.atom
+    verified: true
+  - name: Reuters AI
+    tier: 2
+    type: html
+    url: https://www.reuters.com/technology/artificial-intelligence/
+    status: candidate
     verified: false
+    notes: Blocks automated clients (HTTP 401, 2026-07-08). Candidate until we have
+      an acceptable fetch strategy. Wire copy — remember the independence collapse
+      rule when other outlets syndicate it.
 
   # ---- Tier 3: community / discovery only -----------------------------------
   - name: Hacker News AI search
     tier: 3
     type: html
     url: https://hn.algolia.com/api/v1/search_by_date?query=AI&tags=story
-    verified: false
+    verified: true
     notes: Algolia API; JSON. Discovery only.
-  # YouTube channels (transcripts) go here once chosen — type: youtube_channel.
-  # Candidates to discuss: lab channels (OpenAI, Google DeepMind), quality
-  # explainers/interviews. Transcripts are Tier 3: leads only, never confirmation.
+  - name: r/MachineLearning
+    tier: 3
+    type: rss
+    url: https://www.reddit.com/r/MachineLearning/.rss
+    delay_seconds: 60
+    verified: true
+    notes: Reddit rate-limits aggressively — descriptive User-Agent + long delay.
+  - name: r/LocalLLaMA
+    tier: 3
+    type: rss
+    url: https://www.reddit.com/r/LocalLLaMA/.rss
+    delay_seconds: 60
+    verified: true
+    notes: Fastest community signal for open-weight model releases. Same rate-limit
+      handling as r/MachineLearning. Verified via single request after cool-down;
+      back-to-back validation runs will trip Reddit's 429.
+  - name: Hugging Face Daily Papers
+    tier: 3
+    type: html
+    url: https://huggingface.co/papers
+    verified: true
+    notes: Curated paper picks; use as a pointer into arXiv (Tier 1).
+  - name: Import AI
+    tier: 3
+    type: rss
+    url: https://importai.substack.com/feed
+    verified: true
+    notes: Jack Clark's newsletter — high-signal weekly analysis.
+  - name: Last Week in AI
+    tier: 3
+    type: rss
+    url: https://lastweekin.ai/feed
+    verified: true
+  - name: Ahead of AI
+    tier: 3
+    type: rss
+    url: https://magazine.sebastianraschka.com/feed
+    verified: true
+    notes: Sebastian Raschka — research-focused analysis.
+  - name: Interconnects
+    tier: 3
+    type: rss
+    url: https://www.interconnects.ai/feed
+    verified: true
+    notes: Nathan Lambert — open-model and RLHF analysis.
+  - name: Simon Willison's Weblog
+    tier: 3
+    type: rss
+    url: https://simonwillison.net/atom/everything/
+    verified: true
+    notes: Individual expert; excellent hands-on tool/model analysis. His direct
+      experiments may be cited as expert commentary, not as independent confirmation.
+
+  # YouTube (transcripts) — discovery + verbatim interview quotes only (see
+  # policy/source-lifecycle.md §6). Feed = videos.xml?channel_id=...
+  - name: YouTube — Two Minute Papers
+    tier: 3
+    type: youtube_channel
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg
+    verified: true
+    notes: Research paper summaries.
+  - name: YouTube — Yannic Kilcher
+    tier: 3
+    type: youtube_channel
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCHmD-oSpV0sNfAUnpYpj8KA
+    verified: true
+    notes: Paper deep-dives and ML news.
+  - name: YouTube — AI Explained
+    tier: 3
+    type: youtube_channel
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw
+    verified: true
+    notes: Careful, benchmark-focused analysis of model releases.
+  - name: YouTube — Machine Learning Street Talk
+    tier: 3
+    type: youtube_channel
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCMLtBahI5DMrt0NPvDSoIRQ
+    verified: true
+    notes: Long-form researcher interviews.
+  - name: YouTube — Lex Fridman Podcast
+    tier: 3
+    type: youtube_channel
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCJIfeSCssxSC_Dhc5s7woww
+    verified: true
+    notes: Interviews with lab leaders — verbatim statements quotable as primary
+      evidence that the person said it (with timestamp).
+  - name: YouTube — Dwarkesh Podcast
+    tier: 3
+    type: youtube_channel
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZa18YV7qayTh-MRIrBhDpA
+    verified: true
+    notes: High-profile AI interviews; same verbatim-quote rule as Lex Fridman.

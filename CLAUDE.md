@@ -44,6 +44,19 @@ English is canonical (sources are foreign). Turkish articles are generated from 
 **finished English article**, mirroring its structure semantically — never translated
 from raw sources. Same slug, parallel trees under `content/articles/en/` and `/tr/`.
 
+## Source curation (delegated to the agent — owner decision, 2026-07-08)
+
+- `policy/sources.yaml` is the single registry: named sources, tiers 0–3, statuses
+  active/candidate/retired, optional per-source `delay_seconds`.
+- The agent owns expanding, evaluating, promoting, demoting, and retiring sources per
+  `policy/source-lifecycle.md` — always via commits, never silently.
+- Discovery keywords live in `policy/discovery.yaml`; run-specific queries are appended
+  at run time, recurring ones proposed via commits.
+- Live-check the registry:
+  `docker compose run --rm pipeline python -m noiseless.run validate-sources --live`
+  (only `active` sources are checked/ingested; candidates are re-checked by the
+  periodic source-review pass).
+
 ## Verification principles (summary — full rules in policy/verification.md)
 
 - Verify **claims**, not articles. Claim types have different standards of proof.
