@@ -1,0 +1,30 @@
+# Discovery configuration — keyword searches agents run beyond registered feeds.
+# Lifecycle rules for this file: policy/source-lifecycle.md §5.
+#
+# Agents append run-specific queries (model names, active-story keywords) at run
+# time; only recurring queries live here. Every edit to this file is a commit.
+
+recurring_queries:
+  # Releases & capabilities
+  - "AI model release announcement"
+  - "open source LLM release weights"
+  - "LLM benchmark results independent evaluation"
+  - "AI model capabilities claim disputed"
+  # Research
+  - "machine learning paper significant result"
+  - "AI research replication failure"
+  # Industry
+  - "AI company funding round announcement"
+  - "AI acquisition deal confirmed"
+  - "AI datacenter compute investment"
+  # Policy & safety
+  - "AI regulation law passed"
+  - "AI safety evaluation report published"
+  - "AI incident harm report"
+
+# Verification-time search patterns (templates the verifier fills per claim):
+claim_check_templates:
+  - "{claim_subject} announcement site:{primary_domain}"
+  - "{claim_subject} confirmed"
+  - "{claim_subject} denied OR disputed OR debunked"
+  - "{model_name} independent benchmark"
