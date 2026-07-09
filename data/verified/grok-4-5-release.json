@@ -1,0 +1,42 @@
+{
+  "slug": "grok-4-5-release",
+  "checked_at": "2026-07-09T15:55:00+00:00",
+  "method": "web search cross-check (x.ai/news direct fetch returned HTTP 403; primary announcement URL located and its content corroborated via search snippets from TechCrunch and InfoWorld, per policy fallback for blocked Tier-0 fetches)",
+  "origin_items": [
+    "data/raw/2026-07-08/techcrunch-ai.json — SpaceXAI releases Grok 4.5, which Elon describes as an 'Opus-class model'",
+    "data/raw/2026-07-08/r-localllama.json — Grok 4.5 released - GLM-5.2 shows up in xAI's own charts, 2.6 pts behind on SWE Bench Pro (discovery only, Tier 3)"
+  ],
+  "claims": [
+    {
+      "text": "xAI, operating under the SpaceXAI brand, released Grok 4.5 on 8 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Primary xAI News URL (x.ai/news/grok-4-5) located via search; direct fetch blocked (403), consistent with known blocker pattern. Independently reported same-day by TechCrunch with its own reporting beyond press materials. Brand name 'SpaceXAI' used consistently across multiple independent outlets (TechCrunch, InfoWorld, Cursor's own partner post), suggesting a genuine rebrand rather than a single-source error.",
+      "evidence": [
+        "https://x.ai/news/grok-4-5",
+        "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+      ]
+    },
+    {
+      "text": "Grok 4.5 is priced at $2 per million input tokens and $6 per million output tokens, with a 500,000-token context window",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Spec/pricing claim traceable to the primary source and repeated consistently (including cached input pricing detail) by InfoWorld's independent writeup.",
+      "evidence": [
+        "https://x.ai/news/grok-4-5",
+        "https://www.infoworld.com/article/4194895/spacexai-launches-grok-4-5-touts-lower-coding-task-costs-than-ai-rivals.html"
+      ]
+    },
+    {
+      "text": "Musk described Grok 4.5 as roughly comparable to Opus 4.7 in capability; on xAI's own SWE-Bench Pro chart it scores behind Opus 4.8 and Claude Fable 5, while using about 4x fewer output tokens per resolved task than Opus 4.8",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Benchmark numbers trace back to xAI's own chart (single origin) even though multiple outlets report them (independence collapse per verification.md §2). No independent reproduction found within the 3-search budget for this story. Labeled vendor-claim per policy §3 rather than confirmed. Token-efficiency framing is xAI's own positioning.",
+      "evidence": [
+        "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/",
+        "https://www.infoworld.com/article/4194895/spacexai-launches-grok-4-5-touts-lower-coding-task-costs-than-ai-rivals.html"
+      ]
+    }
+  ],
+  "notes": "Adversarial pass: checked whether this is an old/republished announcement — release date (8 July 2026) is within the 72h window and consistent across all sources, no dispute found. Did not verify the separate, larger claim (mentioned in passing by some outlets) that SpaceX acquired Cursor for $60B in June 2026 — out of scope for this story and not load-bearing for the claims published here; flagged as a candidate story for a future run. Artificial Analysis third-party benchmark data (Intelligence Index ranking) was referenced in search result summaries but no direct, citable AA URL was captured within the story's 3-search budget, so it was left out of the published claim set rather than cited secondhand."
+}
