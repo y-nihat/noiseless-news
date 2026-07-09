@@ -1,0 +1,40 @@
+{
+  "slug": "nyt-openai-copyright-evidence-dispute",
+  "checked_at": "2026-07-09T23:27:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts), with explicit hallucination-check on all high-risk specific details (case number, judge, named individual, figures, quotes) given this is active litigation reporting",
+  "origin_items": [
+    "data/raw/2026-07-09/techcrunch-ai.json — New York Times says OpenAI hid evidence in ChatGPT copyright trial",
+    "data/raw/2026-07-09/ars-technica-ai.json — OpenAI may have made a fatal misstep in copyright fight with news orgs"
+  ],
+  "claims": [
+    {
+      "text": "Motion for sanctions filed 9 July 2026, case 1:23-cv-11195 SDNY, Judge Sidney Stein",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Case number and judge independently confirmed via court docket sources (Justia) plus consistent legal-press (Bloomberg Law) and wire (AP/US News) reporting distinct from the two original AI-beat feed items.",
+      "evidence": ["https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/", "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/", "https://news.bloomberglaw.com/privacy-and-data-security/new-york-times-seeks-sanctions-against-openai-in-copyright-case"]
+    },
+    {
+      "text": "Plaintiffs' allegation re: concealed search capability, Vinnie Monaco deposition, 78M-conversation database",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Correctly labeled as the plaintiffs' allegation, not fact -- all reporting traces to the same underlying motion (one origin under the independence rule). Adversarial pass explicitly hallucination-checked 'Vinnie Monaco' and the '78 million' figure against independent contemporaneous reporting (TechCrunch, Yahoo Finance, Variety) and confirmed both are real, accurately reported details, not fabricated.",
+      "evidence": ["https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/", "https://variety.com/2026/digital/news/new-york-times-news-outlets-accuse-openai-of-lying-lawsuit-1236805648/"]
+    },
+    {
+      "text": "Plaintiffs' allegation re: deleted logs, redacted sample",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Same single-origin caveat; plaintiffs' characterization from their own filing, correctly attributed rather than stated as fact.",
+      "evidence": ["https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/", "https://variety.com/2026/digital/news/new-york-times-news-outlets-accuse-openai-of-lying-lawsuit-1236805648/"]
+    },
+    {
+      "text": "OpenAI's denial (Pusateri quote)",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "The fact OpenAI made this on-the-record statement is independently corroborated and directly quoted across outlets; adversarial pass confirmed the quote is accurately attributed to Drew Pusateri, not fabricated or misattributed.",
+      "evidence": ["https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/"]
+    }
+  ],
+  "notes": "This is active, unresolved litigation reporting -- the article draft was written to clearly separate 'plaintiffs allege' from adjudicated fact, per policy's rumor/unnamed-sources and allegation-attribution standards. Adversarial pass ran an explicit hallucination check given the specificity of the details (case number, judge, named deposed employee, exact figures) -- all confirmed real via independent sourcing (Justia docket, Bloomberg Law, ABA Journal, Variety, Yahoo Finance/AP). No court ruling exists yet on either the sanctions motion or the underlying case; this builds on a January 2026 discovery ruling in the same long-running suit (filed December 2023), not a rehash of old news. Candidate source additions: news.bloomberglaw.com, variety.com (legal/trade press, useful for litigation stories) -- see source_candidates.json."
+}
