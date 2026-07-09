@@ -1,0 +1,30 @@
+{
+  "slug": "openai-atlas-shutdown",
+  "checked_at": "2026-07-09T23:26:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); adversarial pass located the Tier-0 primary source the initial verifier missed",
+  "origin_items": [
+    "data/raw/2026-07-09/techcrunch-ai.json — OpenAI is shutting down Atlas, but its AI browser ambitions are still growing"
+  ],
+  "claims": [
+    {
+      "text": "OpenAI discontinuing Atlas, sunset targeted early August 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Initial verifier found only 3 independent Tier-2 outlets (TechCrunch, 9to5Mac, Android Authority) plus a Tier-3 origin post, sufficient under the '>=2 independent Tier<=2' path for an unsourced announcement. Adversarial pass then located an actual Tier-0 OpenAI primary source (openai.com/index/chatgpt-for-your-most-ambitious-work/) explicitly stating the Atlas sunset -- upgrading the sourcing further. Confirmed the 3 press outlets source independently (9to5Mac/Android Authority cite the James Sun X post directly; TechCrunch cites the OpenAI blog post) rather than from each other.",
+      "evidence": ["https://openai.com/index/chatgpt-for-your-most-ambitious-work/", "https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/"]
+    },
+    {
+      "text": "Launch Oct 2025, ~9 months to shutdown",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": ["https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/"]
+    },
+    {
+      "text": "Features folded into ChatGPT desktop app + Chrome extension",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": ["https://openai.com/index/chatgpt-for-your-most-ambitious-work/", "https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/"]
+    }
+  ],
+  "notes": "Omitted from the published article: TechCrunch's single-source framing that the shutdown follows CEO Fidji Simo's 'side quests' cutback directive (compared to the March 2026 Sora shutdown) -- not corroborated by other outlets, so left out rather than presented as fact. Candidate source additions: 9to5mac.com, androidauthority.com (see source_candidates.json)."
+}
