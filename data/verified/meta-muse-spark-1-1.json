@@ -1,0 +1,48 @@
+{
+  "slug": "meta-muse-spark-1-1",
+  "checked_at": "2026-07-09T23:20:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); direct WebFetch of ai.meta.com and vals.ai, independent search for pricing corroboration",
+  "origin_items": [
+    "Meta AI Blog (Tier 0 html sweep) — Introducing Muse Spark 1.1",
+    "data/raw/2026-07-09/techcrunch-ai.json — Meta enters the crowded AI coding battle with Muse Spark 1.1",
+    "data/raw/2026-07-09/the-verge-ai.json — Meta says its new AI model is ready to compete on coding",
+    "data/raw/2026-07-09/simon-willison-s-weblog.json — Introducing Muse Spark 1.1 (Tier 3, discovery only)"
+  ],
+  "claims": [
+    {
+      "text": "Meta released Muse Spark 1.1 on 9 July 2026, multimodal agentic model, 1M-token context, US-only public preview",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/", "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/", "https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api"]
+    },
+    {
+      "text": "Pricing $1.25/$4.25 per million tokens, $20 free credits, undercuts rivals",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via Meta's developer blog plus independent Tier-2 corroboration (TechCrunch, CNBC, The Decoder all report matching figures).",
+      "evidence": ["https://developer.meta.com/ai/resources/blog/build-with-muse-spark/", "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/"]
+    },
+    {
+      "text": "Meta's 'ready to compete' framing and self-reported benchmark numbers",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Neither TechCrunch nor The Verge independently tested the model; both relay Meta's own messaging. Meta's own benchmark charts do not count as independent confirmation per policy even when press repeats them.",
+      "evidence": ["https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"]
+    },
+    {
+      "text": "Independent Vals AI benchmark ranking",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Initial verifier cited figures (4th of 23, 4/12 sub-benchmarks) that the adversarial pass found did NOT match a direct fetch of the live vals.ai page. Adversarial pass re-fetched vals.ai directly and obtained corrected, verified figures: 5th of 35 models, leading 3 of 27 sub-benchmarks (MedScribe, TaxEval v2, Harvey's Legal Agent Benchmark -- none coding-specific). Published article uses these corrected, directly-verified numbers rather than the initial verifier's figures. Vals AI is confirmed to be a real, legitimate third-party benchmark org, not hallucinated.",
+      "evidence": ["https://www.vals.ai/models/meta_muse_spark_1_1"]
+    },
+    {
+      "text": "Zuckerberg's X post, first in ~3 years",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Initial verifier flagged single-source (TechCrunch only); adversarial pass found independent corroboration from additional outlets (americanbazaaronline, stocktwits, cryptobriefing, inc.com) reporting the same detail and post content, clearing the 2-independent-source bar.",
+      "evidence": ["https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/"]
+    }
+  ],
+  "notes": "IMPORTANT correction during adversarial review: the verifier's first-pass Vals AI figures (4th of 23 models, 4/12 sub-benchmarks) were wrong -- did not match the live page. Corrected before publication via a direct re-fetch. This is a reminder that live third-party leaderboards drift between snapshots and any cited ranking needs a direct fetch at (or very near) publication time, not a recalled/summarized figure. vals.ai is not yet in policy/sources.yaml -- proposed as a candidate (see source_candidates.json)."
+}
