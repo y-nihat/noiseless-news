@@ -3,13 +3,21 @@ name: Nightly scan
 on:
   schedule:
     # 22:00 UTC = 01:00 Europe/Istanbul (Turkey is UTC+3 year-round, no DST).
+    # GitHub cron can fire up to ~1h late; the absolute deadline in the prompt
+    # and the job timeout keep the run inside the 01:00-05:00 Istanbul window.
     - cron: "0 22 * * *"
   workflow_dispatch:
+    inputs:
+      smoke:
+        description: "Smoke test: cap at 1 story / 3 searches"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: nightly
@@ -18,9 +26,6 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    # Hard window guard: even with GitHub's cron delay (~up to 30 min), a 200-minute
-    # cap ends the job well before 05:00 Istanbul. The prompt below additionally sets
-    # an absolute wrap-up deadline of 01:30 UTC (04:30 Istanbul).
     timeout-minutes: 200
     steps:
       - uses: actions/checkout@v4
@@ -41,79 +46,49 @@ jobs:
           git diff --cached --quiet || git commit -m "Nightly ingest $(date -u +%F)"
           git push
 
+      - name: Set run parameters
+        id: params
+        run: |
+          if [ "${{ github.event.inputs.smoke }}" = "true" ]; then
+            echo "max_stories=1"  >> "$GITHUB_OUTPUT"
+            echo "max_searches=3" >> "$GITHUB_OUTPUT"
+            echo "max_turns=40"   >> "$GITHUB_OUTPUT"
+            echo "deadline=$(date -u -d '+40 minutes' '+%H:%M') UTC today (smoke test)" >> "$GITHUB_OUTPUT"
+          else
+            echo "max_stories=8"  >> "$GITHUB_OUTPUT"
+            echo "max_searches=15" >> "$GITHUB_OUTPUT"
+            echo "max_turns=250"  >> "$GITHUB_OUTPUT"
+            echo "deadline=01:30 UTC (04:30 Istanbul)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Render prompt
+        run: |
+          sed -e "s/{{MAX_STORIES}}/${{ steps.params.outputs.max_stories }}/g" \
+              -e "s/{{MAX_SEARCHES}}/${{ steps.params.outputs.max_searches }}/g" \
+              -e "s/{{DEADLINE}}/${{ steps.params.outputs.deadline }}/g" \
+              .github/nightly-prompt.md > /tmp/prompt.md
+          echo "--- rendered prompt head ---"
+          head -8 /tmp/prompt.md
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: Verify and write articles
-        uses: anthropics/claude-code-action@v1
-        with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          claude_args: '--model claude-sonnet-5 --max-turns 250 --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"'
-          prompt: |
-            You are the nightly noiseless-news pipeline, running unattended.
+        timeout-minutes: 170
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "$(cat /tmp/prompt.md)" \
+            --model claude-sonnet-5 \
+            --max-turns ${{ steps.params.outputs.max_turns }} \
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" \
+            --output-format stream-json --verbose \
+            | tee /tmp/claude-stream.jsonl \
+            | python3 .github/scripts/stream_summary.py
 
-            TIME BUDGET (absolute, check `date -u` regularly): your final commit must
-            be pushed before 01:30 UTC (04:30 Istanbul). Plan the remaining time
-            before starting each story; if the next story cannot finish in time,
-            stop instead of starting it.
-
-            CREDIT BUDGET: work sequentially, most newsworthy story first, so an
-            early stop loses the least. If any tool or model call fails with a
-            usage-limit / credit / rate-limit error, immediately commit whatever is
-            complete, push, and stop. Never lower the evidence bar to save budget.
-
-            Read first: CLAUDE.md, policy/verification.md, policy/sources.yaml,
-            policy/discovery.yaml, policy/article-template.md.
-
-            Today's raw items are in data/raw/ (latest date directory; already
-            committed). Then:
-
-            1. Coverage sweep. RSS/arXiv items are already ingested. Additionally,
-               WebFetch each *active Tier-0 source of type html* in sources.yaml
-               (Anthropic, Meta AI, Mistral, xAI, Cohere, Ai2, NIST, EU Commission)
-               to catch announcements the feed ingest cannot see. If a fetch is
-               blocked (403 etc.), try ONE site-scoped web search instead, then move
-               on. Known blockers: openai.com and theverge.com refuse direct fetches
-               — verify their stories via search snippets and alternate outlets.
-            2. Triage: consider ONLY items whose published date is within the last
-               72 hours — first-run ingests backfill entire feed histories, and old
-               items are not news (use grep/jq on the JSON rather than reading whole
-               files). Cluster the recent items into candidate stories. Apply the
-               clickbait residual-substance test (verification.md §4). Rank by
-               newsworthiness. Select AT MOST 8 stories.
-            3. For each selected story, in order:
-               - Extract typed factual claims (verification.md §3).
-               - Verify each claim per policy: independence rules, walk to primary
-                 sources, keyword searches from discovery.yaml. Budget: at most 15
-                 web searches/fetches per story.
-               - If the publishing gate passes: write the English article per
-                 policy/article-template.md to content/articles/en/YYYY/MM/<slug>.md,
-                 then its Turkish semantic mirror to content/articles/tr/YYYY/MM/<slug>.md.
-               - Save the evidence log to data/verified/<slug>.json and the story
-                 state to data/ledger/<slug>.json.
-               - Commit after each completed story (plain message, no AI attribution
-                 — the git identity is already configured).
-            4. Stories that fail the gate: record in data/ledger/ as watching or
-               dropped, with reasons. Do not publish them.
-            5. Discovery feedback loop (policy/source-lifecycle.md §2): whenever an
-               unregistered domain provides useful evidence, append it to
-               data/ledger/source_candidates.json (domain, first_seen, occurrences,
-               sample URLs, context). Also note which discovery.yaml queries earned
-               their keep and which returned noise.
-            6. Before finishing, write data/ledger/run-report-<date>.md — the owner
-               reviews this every morning and it drives tuning, so structure it:
-               ## Coverage — items scanned per tier; recent-item counts; html sources
-                  swept and any that were unreachable.
-               ## Story decisions — EVERY candidate considered, one line each:
-                  selected/published/watching/dropped + reason.
-               ## Verification notes — per published story: which sources confirmed,
-                  which contradicted, which were blocked; verdict distribution.
-               ## Source & keyword proposals — candidate domains discovered, sources
-                  that contributed nothing, queries to add/remove.
-               ## Budget — turns and wall-clock used, where they went, what you
-                  would cut or expand next time.
-               ## For the owner — 3-5 concrete questions whose answers would most
-                  improve the next run (volume vs strictness, tone, length, Turkish
-                  quality, story mix). Commit and push everything.
-
-            Do NOT modify pipeline code, workflows, or policy files in this run.
+      - name: Gate on agent result
+        if: always()
+        run: python3 .github/scripts/check_result.py /tmp/claude-stream.jsonl
 
       - name: Fallback commit of any remaining artifacts
         if: always()
@@ -123,6 +98,22 @@ jobs:
           git add -A
           git diff --cached --quiet || git commit -m "Nightly run artifacts $(date -u +%F)"
           git push || true
+
+      - name: Open failure issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo '```'
+            tail -c 2500 /tmp/claude-stream.jsonl 2>/dev/null || echo "no agent output captured"
+            echo '```'
+          } > /tmp/issue-body.md
+          gh issue create \
+            --title "Nightly run failed $(date -u +%F)" \
+            --body-file /tmp/issue-body.md || true
 
       # Pushes made with GITHUB_TOKEN do not trigger the deploy workflow,
       # so the nightly job publishes the site itself.
