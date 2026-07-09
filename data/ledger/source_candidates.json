@@ -8,9 +8,130 @@
         "https://www.infoworld.com/article/4194895/spacexai-launches-grok-4-5-touts-lower-coding-task-costs-than-ai-rivals.html"
       ],
       "context": "Used as an unregistered Tier-2-equivalent source (per verification.md §1) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
+    },
+    {
+      "domain": "metr.org",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://metr.org/blog/2026-06-26-gpt-5-6-sol"],
+      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md §3) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
+    },
+    {
+      "domain": "vals.ai",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://www.vals.ai/models/meta_muse_spark_1_1"],
+      "context": "Independent third-party AI benchmark/leaderboard org, confirmed real via direct fetch (not hallucinated). Used as the only genuinely independent capability evidence in meta-muse-spark-1-1. IMPORTANT: the leaderboard updates continuously -- a first-pass verifier cited stale/wrong figures from memory/search-snippet reconstruction, and only a direct live re-fetch during adversarial review caught the discrepancy. Recommend registering as Tier 2, but any future citation must re-fetch live rather than recall previous figures."
+    },
+    {
+      "domain": "developer.meta.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://developer.meta.com/ai/resources/blog/build-with-muse-spark/"],
+      "context": "Meta's own developer blog, same publisher as the already-registered ai.meta.com (Meta AI Blog), used for pricing/API details the main blog post omitted. Recommend adding as a second Tier-0 URL under Meta's entry rather than a new source, since it's the same institutional origin."
+    },
+    {
+      "domain": "help.instagram.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://help.instagram.com/652943337035777"],
+      "context": "Meta/Instagram's own help-center documentation, directly load-bearing for the Muse Image opt-out mechanism claim. Tier 0, same corporate origin as Meta AI Blog but a distinct product-documentation domain -- worth a registry note since it may recur for Meta product-behavior stories."
+    },
+    {
+      "domain": "news.bloomberglaw.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://news.bloomberglaw.com/privacy-and-data-security/new-york-times-seeks-sanctions-against-openai-in-copyright-case"],
+      "context": "Legal-specialty press with detailed, accurate court-filing coverage (case number, docket details) for the NYT v. OpenAI sanctions motion. Likely to be useful again for AI litigation stories, which are recurring (copyright suits, safety liability). Propose Tier 1-2 candidate."
+    },
+    {
+      "domain": "variety.com",
+      "first_seen": "2026-07-07",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://variety.com/2026/digital/news/caa-slams-meta-opt-out-ai-muse-image-1236805387/",
+        "https://variety.com/2026/digital/news/new-york-times-news-outlets-accuse-openai-of-lying-lawsuit-1236805648/"
+      ],
+      "context": "Entertainment/media trade press; useful for talent-industry and media-litigation reactions to AI stories (CAA/SAG-AFTRA on Meta Muse Image; NYT copyright case detail). Direct fetch is frequently paywalled (HTTP 402 via a tollbit.variety.com redirect observed this run) -- note this as a known access limitation if registered."
+    },
+    {
+      "domain": "euronews.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://www.euronews.com/my-europe/2026/07/07/brussels-pitches-ai-cybersecurity-plan-amid-dependence-on-us-models"],
+      "context": "Independent quality press with strong EU policy/regulatory coverage including named MEP quotes and reaction framing. Useful for EU AI Act / regulatory stories going forward. Propose Tier 2."
+    },
+    {
+      "domain": "mlex.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.mlex.com/mlex/artificial-intelligence/articles/2498071/eu-cybersecurity-ai-action-plan-focuses-on-implementation-not-new-legislation",
+        "https://www.mlex.com/mlex/articles/2499095/news-outlets-seek-sanctions-on-openai-in-us-copyright-litigation"
+      ],
+      "context": "Specialist legal/regulatory press, paywalled but precise on regulatory and litigation framing; corroborated both the EU cybersecurity plan's non-binding framing and the NYT/OpenAI litigation. Propose Tier 2 candidate for regulatory + AI-litigation stories."
+    },
+    {
+      "domain": "cnbc.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.cnbc.com/2026/07/09/meta-jumps-into-ai-coding-market-to-chase-anthropic-and-openai.html",
+        "https://www.cnbc.com/2026/07/09/meta-to-put-ai-chip-into-production-in-september-report.html"
+      ],
+      "context": "Major business outlet, used to corroborate Muse Spark pricing (confirmed) and the Meta AI chip production report (did not add independence -- also cites the same Reuters memo). Propose Tier 2 for business/pricing corroboration."
+    },
+    {
+      "domain": "9to5mac.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://9to5mac.com/2026/07/09/openai-is-discontinuing-chatgpt-atlas-its-standalone-desktop-browser/"],
+      "context": "Apple/tech-focused outlet; independently corroborated the OpenAI Atlas shutdown (sourced from the same James Sun X post as Android Authority, but written independently). Propose Tier 2."
+    },
+    {
+      "domain": "androidauthority.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.androidauthority.com/openai-sunsetting-chatgpt-atlas-3686001/",
+        "https://www.androidauthority.com/claude-reflect-3685917/"
+      ],
+      "context": "Used twice this run for independent corroboration (OpenAI Atlas shutdown, Anthropic Claude Reflect). Propose Tier 2."
+    },
+    {
+      "domain": "rdworldonline.com",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://www.rdworldonline.com/openais-gpt-5-6-sol-sets-a-coding-record-its-own-system-card-says-it-cheats/"],
+      "context": "R&D World; long-running tech/science trade outlet, confirmed legitimate. Carried the METR reward-hacking finding accurately. Propose Tier 2."
+    },
+    {
+      "domain": "artificialanalysis.ai",
+      "first_seen": "2026-07-09",
+      "occurrences": 1,
+      "sample_urls": ["https://artificialanalysis.ai/articles/gpt-5-6-has-landed"],
+      "context": "Independent AI benchmark tracker (distinct from vals.ai). Used for partial corroboration of GPT-5.6 coding benchmark claims. Propose Tier 2 alongside vals.ai as an independent-benchmark source, with the same live-recheck caveat."
+    }
+  ],
+  "flagged_not_recommended": [
+    {
+      "domain": "benchlm.ai",
+      "context": "Claimed GPT-5.6 GA was restricted to 'vetted organizations at the US government's request' -- uncorroborated by any other outlet and contradicted by the primary OpenAI source and TechCrunch. Excluded from published claims. Do not register without independent corroboration of its other reporting."
+    },
+    {
+      "domain": "indexbox.io",
+      "context": "Used only to reconstruct a paywalled Variety story's quotes on the Meta Muse Image CAA/SAG-AFTRA reaction; appears to relay Variety rather than report independently. Not a genuine independent source -- do not register."
+    },
+    {
+      "domain": "techbuzz.ai",
+      "context": "Surfaced corroborating the OpenAI Atlas shutdown, but reads as an AI-news aggregator rather than a staffed newsroom. Needs editorial-standards vetting before any registration consideration."
     }
   ],
   "query_notes": [
-    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release — worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief)."
+    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release — worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
+    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) — worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
+    "'{company} response OR denies OR disputes {allegation}' was essential for the NYT/OpenAI litigation story to surface OpenAI's on-record denial alongside the plaintiffs' claims -- worth adding as an explicit claim_check_template for any business/legal claim type, not just capability claims.",
+    "For business claims sourced to a single wire/leak (Reuters exclusive on Meta's AI chip), tracing every outlet's citation back to one origin was decisive in correctly failing that story's gate -- a reminder that broad press pickup of a single leak is not multi-source confirmation.",
+    "Tier-0 html sweep (Anthropic, Meta, Mistral, Cohere, Ai2, NIST, EU Commission) via WebFetch worked well this run and surfaced 3 of the 7 published stories directly (Anthropic Reflect, Meta Muse Image, Meta Muse Spark, EU cybersecurity plan) that would otherwise have relied only on secondary press framing -- confirms this sweep is worth the run-time cost every night, not just when a Tier-2 story needs it."
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "slug": "meta-ai-chip-production",
+  "status": "watching",
+  "first_seen": "2026-07-09",
+  "published_at": null,
+  "langs": [],
+  "reason": "Failed publishing gate: every load-bearing claim (production timeline, Broadcom/TSMC partnership, 7GW->14GW capacity target) traces to a single origin -- a Reuters exclusive citing an internal Meta memo -- which all press coverage (TechCrunch, CNBC, Yahoo Finance/Reuters wire, US News) re-reports without independent confirmation. Meta declined to comment when asked, so no Tier-0 confirmation exists either. Per policy/verification.md, business claims need >=2 independent Tier<=2 sources or a filing/document; this does not clear that bar.",
+  "watch": [
+    "A Meta statement or filing confirming/denying the chip production timeline",
+    "A second, independently-sourced report (not citing the same Reuters memo) with corroborating or conflicting details",
+    "September 2026 itself, when production would start if the report is accurate -- can be checked directly"
+  ]
+}
