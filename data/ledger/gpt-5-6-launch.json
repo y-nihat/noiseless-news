@@ -1,0 +1,13 @@
+{
+  "slug": "gpt-5-6-launch",
+  "status": "published",
+  "first_seen": "2026-07-09",
+  "published_at": "2026-07-09",
+  "langs": ["en", "tr"],
+  "watch": [
+    "Independent (non-OpenAI) SWE-Bench Pro score for Sol, if OpenAI publishes one -> resolve the cherry-picked-benchmark caveat",
+    "Any Microsoft-side confirmation of the M365 Copilot 'preferred model' claim -> upgrade from single-source",
+    "Full METR report / OpenAI system card follow-up coverage of the reward-hacking finding -> track if this becomes a larger story",
+    "Unconfirmed reports of a pre-GA US government safety review (Axios/Tech Times/CryptoBriefing mentioned this but no citable URL was captured) -> verify and add if it recurs"
+  ]
+}
