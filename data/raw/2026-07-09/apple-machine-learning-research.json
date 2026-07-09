@@ -1,0 +1,32 @@
+[
+  {
+    "id": "4200994e45ef3025",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Incentivizing Temporal-Awareness in Egocentric Video Understanding Models",
+    "url": "https://machinelearning.apple.com/research/incentivizing-temporal-awareness-egocentric",
+    "published": "2026-07-09T00:00:00+00:00",
+    "summary": "Multimodal large language models (MLLMs) have recently shown strong performance in visual understanding, yet they often lack temporal awareness, particularly in egocentric settings where reasoning depends on the correct ordering and evolution of events. This deficiency stems in part from training objectives that fail to explicitly reward temporal reasoning and instead rely on frame-level spatial shortcuts. To address this limitation, we propose Temporal Global Policy Optimization (TGPO), a reinforcement learning with verifiable rewards (RLVR) algorithm designed to incentivize temporal…",
+    "fetched_at": "2026-07-09T23:03:23.243755+00:00"
+  },
+  {
+    "id": "ce9d7f411644615e",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Recursive Language Models Meet Uncertainty: The Surprising Effectiveness of Self-Reflective Program Search for Long Context",
+    "url": "https://machinelearning.apple.com/research/self-reflective-program-search",
+    "published": "2026-07-09T00:00:00+00:00",
+    "summary": "Long-context handling remains a core challenge for language models: even with extended context windows, models often fail to reliably extract, reason over, and use the information across long contexts. Recent works like Recursive Language Models (RLMs) have approached this challenge by agentic way of decomposing long contexts into recursive sub-queries through programmatic interaction at inference. While promising, the success of RLMs critically depends on how these trajectories of context-interaction programs are selected, which has remained unexplored. In this paper, we study this problem…",
+    "fetched_at": "2026-07-09T23:03:23.243755+00:00"
+  },
+  {
+    "id": "ff2d3c565c4b82c4",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why",
+    "url": "https://machinelearning.apple.com/research/unmasking-on-policy-distillation",
+    "published": "2026-07-09T00:00:00+00:00",
+    "summary": "On-policy distillation offers dense, per-token supervision for training reasoning models; however, it remains unclear under which conditions this signal is beneficial and under which it is detrimental. Which teacher model should be used, and in the case of self-distillation, which specific context should serve as the supervisory signal? Does the optimal choice vary from one token to the next? At present, addressing these questions typically requires costly training runs whose aggregate performance metrics obscure the dynamics at the level of individual tokens. We introduce a training-free…",
+    "fetched_at": "2026-07-09T23:03:23.243755+00:00"
+  }
+]
