@@ -1,0 +1,38 @@
+{
+  "slug": "eu-ai-cybersecurity-action-plan",
+  "checked_at": "2026-07-09T23:18:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); direct WebFetch of EU Commission primary pages, independent search for Euronews/MLex corroboration",
+  "origin_items": [
+    "European Commission Digital Strategy News (Tier 0 html sweep) — Commission presents EU Action Plan on Cybersecurity and Artificial Intelligence"
+  ],
+  "claims": [
+    {
+      "text": "On 7 July 2026 the Commission presented an EU Action Plan on Cybersecurity and AI",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Two Commission-owned primary pages (digital-strategy.ec.europa.eu and commission.europa.eu, same institutional origin) confirm the date and fact.",
+      "evidence": ["https://digital-strategy.ec.europa.eu/en/news/commission-presents-eu-action-plan-cybersecurity-and-artificial-intelligence", "https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en"]
+    },
+    {
+      "text": "Five action areas as summarized",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary content-of-document claim; adversarial pass independently corroborated all five areas via secondary reporting (AI Weekly, Innovation News Network) and found no fabrication.",
+      "evidence": ["https://commission.europa.eu/news-and-media/news/new-eu-plan-address-risks-and-opportunities-advanced-ai-cybersecurity-2026-07-07_en"]
+    },
+    {
+      "text": "Plan is explicitly non-binding, no new legislation, per EVP Virkkunen",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 self-description plus two independent Tier-2 outlets (Euronews, MLex) not derived from each other.",
+      "evidence": ["https://digital-strategy.ec.europa.eu/en/news/commission-presents-eu-action-plan-cybersecurity-and-artificial-intelligence", "https://www.euronews.com/my-europe/2026/07/07/brussels-pitches-ai-cybersecurity-plan-amid-dependence-on-us-models", "https://www.mlex.com/mlex/artificial-intelligence/articles/2498071/eu-cybersecurity-ai-action-plan-focuses-on-implementation-not-new-legislation"]
+    },
+    {
+      "text": "Unnamed critics see the plan as recommendations-only / a patchwork of existing tools",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Traces to Euronews alone. Adversarial pass fetched the Euronews piece directly and found the word 'toothless' is not a verbatim quote -- it is Euronews's own paraphrase of unnamed critics ('little to offer beyond recommendations', 'a typical EU reflex to generate paperwork rather than solve complicated problems'). Article text was revised to attribute this framing explicitly to Euronews and drop the word 'toothless' to avoid overstating it as a direct quote."
+    }
+  ],
+  "notes": "Dropped a tangential claim about Anthropic's 'Project Glasswing'/'Claude Mythos' EU/ENISA access from the published article -- while the adversarial pass confirmed these are real, correctly-named Anthropic initiatives independently corroborated (TechCrunch, SiliconANGLE, Dark Reading, Cybersecurity Dive), tying them to this specific Action Plan was the verifier's own inference rather than something stated in the Tier-0 text, so it was left out rather than implied as connected. MEP quotes (Aura Salla) checked out verbatim against Euronews but were left out of the published article for length/focus; available in the verifier transcript if a follow-up wants industry-reaction detail."
+}
