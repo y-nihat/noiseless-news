@@ -14,6 +14,10 @@ filters clickbait, writes its own headlines/articles, lists sources under every 
   unit tests, run inside Docker: `docker compose run --rm pipeline pytest`.
 - `.env` holds `CLAUDE_CODE_OAUTH_TOKEN`. Never commit it, never print its value.
   In CI it lives as a GitHub Actions secret.
+- **Local dev hygiene:** the nightly CI run owns `data/` (including
+  `data/state/seen_ids.json`). Before any local run that writes `data/`, `git pull`
+  first; for experiments, pass a scratch dir (`ingest --data-dir /tmp/nn-data`)
+  so local state never diverges from CI.
 
 ## Model & credit policy
 

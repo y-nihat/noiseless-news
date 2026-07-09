@@ -3,6 +3,9 @@ services:
     build:
       context: .
       dockerfile: pipeline/Dockerfile
+    # Write volume-mapped files as the host user, not root — root-owned files
+    # under data/ break git operations on the host.
+    user: "1000:1000"
     env_file:
       - path: .env
         required: false   # absent in CI; the token lives in Actions secrets there
