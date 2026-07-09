@@ -1,0 +1,12 @@
+{
+  "slug": "anthropic-claude-reflect",
+  "status": "published",
+  "first_seen": "2026-07-09",
+  "published_at": "2026-07-09",
+  "langs": ["en", "tr"],
+  "watch": [
+    "Independent audit or researcher review of Reflect's stated data exclusions -> upgrade privacy claim from vendor-claim to confirmed/disputed",
+    "Rollout of the planned 'time spent using Claude' view and Cowork coverage -> update in place",
+    "Any user or researcher pushback on the data-handling claims specifically (not just general engagement-design criticism)"
+  ]
+}

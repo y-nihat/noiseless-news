@@ -1,0 +1,46 @@
+{
+  "slug": "anthropic-claude-reflect",
+  "checked_at": "2026-07-09T23:19:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); direct WebFetch of anthropic.com primary announcement, residual-substance test explicitly applied to strip press editorializing",
+  "origin_items": [
+    "data/raw/2026-07-09/techcrunch-ai.json — Anthropic's new Claude feature is quietly selling you on AI",
+    "Anthropic News (Tier 0 html sweep) — Introducing a way to reflect on how you use Claude",
+    "The Verge — Say hello to Claude Wrapped (carryover context)"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic launched Reflect on 9 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary confirms; TechCrunch and The Verge independently cover the same launch.",
+      "evidence": ["https://www.anthropic.com/news/reflect-with-claude"]
+    },
+    {
+      "text": "Feature details: topics/patterns/task types over 1-12mo windows, 4D AI Fluency Framework categorization",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Adversarial pass directly fetched the Anthropic URL and confirmed the '4D AI Fluency Framework' name and the exact reflective-prompt quote appear verbatim on the page -- not a hallucination. Independently redescribed (not just quoted) by TechCrunch.",
+      "evidence": ["https://www.anthropic.com/news/reflect-with-claude", "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/"]
+    },
+    {
+      "text": "Quiet-hours, break nudges, reflective prompts",
+      "type": "capability",
+      "verdict": "confirmed",
+      "evidence": ["https://www.anthropic.com/news/reflect-with-claude", "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/"]
+    },
+    {
+      "text": "Beta availability: Free/Pro/Max with Memory enabled, not yet Cowork, 'time spent' view planned",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": ["https://www.anthropic.com/news/reflect-with-claude"]
+    },
+    {
+      "text": "Anthropic's stated privacy exclusions (incognito, connected-tool files, health-linked chats; data not reused)",
+      "type": "business",
+      "verdict": "vendor-claim",
+      "reasoning": "Internal data-handling assurance sourced solely to Anthropic; adversarial pass searched for privacy criticism specifically targeting Reflect and found none (general Claude privacy criticisms exist -- data-training opt-in dark patterns, a since-removed hidden tracker in Claude Code -- but nothing disputing Reflect's specific exclusions), so kept as vendor-claim rather than disputed.",
+      "evidence": ["https://www.anthropic.com/news/reflect-with-claude"]
+    }
+  ],
+  "notes": "Residual-substance test applied explicitly per policy §4: stripped TechCrunch's 'quietly selling you on AI' framing and the press-coined 'Claude Wrapped' nickname (Anthropic itself never uses that name) and confirmed a non-empty, verifiable claim set remains -- a real product launch with concrete, checkable details. Confirmed via adversarial pass that this is not a rename/re-skin of a prior dashboard; appears genuinely new."
+}
