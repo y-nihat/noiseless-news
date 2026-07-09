@@ -1,0 +1,42 @@
+{
+  "slug": "meta-muse-image-consent",
+  "checked_at": "2026-07-09T23:17:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); direct WebFetch of ai.meta.com and TechCrunch, site-scoped search reconstruction for Verge/Wired (direct fetch blocked), independent search for reaction coverage",
+  "origin_items": [
+    "data/raw/2026-07-08/ (carryover) TechCrunch AI — Meta just launched a new AI generator, Muse Image, and users are already pushing back over use of their photos",
+    "data/raw/2026-07-08/ (carryover) The Verge AI — Meta's new Muse Image model can pull other Instagram users into AI photos",
+    "data/raw/2026-07-08/ (carryover) Wired AI — Meta Now Lets Anyone Use Your Instagram Photos in AI Images",
+    "data/raw/2026-07-09/techcrunch-ai.json — Instagram users: Here's how to stop Meta's AI from using your photos"
+  ],
+  "claims": [
+    {
+      "text": "Meta announced and released Muse Image/Muse Video on 7 July 2026, available Meta AI app / meta.ai / Instagram Stories US / WhatsApp limited countries",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (ai.meta.com) directly fetched and confirms.",
+      "evidence": ["https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/"]
+    },
+    {
+      "text": "@-mention mechanic pulls a public account's photos into a generated image, on by default, no notification to the tagged account",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed by Meta's own blog plus independent, non-derivative reporting from TechCrunch and Wired (verified via direct fetch of TechCrunch and reconstructed Wired/Verge coverage; adversarial pass independently re-confirmed via TechCrunch direct fetch and additional outlets including Digital Trends, Malwarebytes, Medianama). No dispute or retraction found; Meta's own public response defended the design rather than denying the mechanic.",
+      "evidence": ["https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/", "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/", "https://www.wired.com/story/meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unless-you-opt-out/"]
+    },
+    {
+      "text": "Opt-out steps (Sharing and reuse setting); private/under-18 accounts auto-excluded",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Matching independent detail across TechCrunch's how-to piece, Wired, and Meta's own help-center documentation.",
+      "evidence": ["https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/", "https://help.instagram.com/652943337035777"]
+    },
+    {
+      "text": "CAA and SAG-AFTRA publicly criticized the opt-out design",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Initial verifier found only a single, paywalled Variety piece (relayed via an aggregator) -- flagged single-source. Adversarial falsification pass located independent reporting of the same CAA/SAG-AFTRA reaction from Deadline, The Hollywood Reporter, and TheWrap -- none derived from Variety or each other -- clearing the 2-independent-source bar for a business claim. Upgraded from single-source to confirmed.",
+      "evidence": ["https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/"]
+    }
+  ],
+  "notes": "Direct WebFetch of theverge.com and wired.com was blocked in the initial verify pass; the adversarial pass retried and got a direct TechCrunch fetch confirming the mechanic verbatim ('you will not be notified about content created using AI features at Meta'), plus corroboration from several additional outlets, so the core behavior claim rests on solid independent ground despite the Verge/Wired fetch block. Checked for an older/rehashed version of this controversy (Meta has had prior AI/photo controversies) -- found none predating July 2026 for this specific Muse Image mechanic. Candidate source additions: help.instagram.com (Tier 0, same publisher as ai.meta.com) and outlets used only for corroboration (Deadline, Hollywood Reporter, TheWrap) -- see source_candidates.json."
+}
