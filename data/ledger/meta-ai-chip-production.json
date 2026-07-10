@@ -9,5 +9,6 @@
     "A Meta statement or filing confirming/denying the chip production timeline",
     "A second, independently-sourced report (not citing the same Reuters memo) with corroborating or conflicting details",
     "September 2026 itself, when production would start if the report is accurate -- can be checked directly"
-  ]
+  ],
+  "cycle_2026-07-10_c1_note": "Re-checked (2 web searches). All new coverage (Yahoo, CNBC, US News, thenextweb, MLQ, androidheadlines, euronext) still traces to the same Reuters/memo exclusive -- no new independent source. One promising lead: TrendForce's 2026-01-30 MTIA-3 article predates the Reuters memo and cites Commercial Times (supply-chain sources) independently -- but it covers a different claim set (MTIA-3, TSMC 3nm, 2H26 debut) than the memo's claims (chip 'Iris', September start, 7GW->14GW capacity, Broadcom partnership through 2029). Did not have budget this cycle to fully reconcile whether MTIA-3/Iris are the same chip or resolve the node/date discrepancy -- needs a dedicated check, not a rushed one. Still watching."
 }
