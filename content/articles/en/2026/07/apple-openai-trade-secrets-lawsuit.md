@@ -1,0 +1,90 @@
+---
+title: Apple sues OpenAI, alleging ex-employees stole hardware trade secrets
+date: 2026-07-10
+slug: apple-openai-trade-secrets-lawsuit
+lang: en
+tldr: >
+  Apple filed a lawsuit on 10 July 2026 against OpenAI, its hardware chief Tang
+  Tan, engineer Chang Liu, and io Products, alleging trade secret misappropriation
+  tied to OpenAI's hardware push. The complaint accuses former Apple employees of
+  taking confidential device designs, components, and security-evasion know-how;
+  OpenAI says it has no interest in other companies' trade secrets.
+sources:
+  - name: TechCrunch
+    url: https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/
+  - name: CNBC
+    url: https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html
+  - name: Bloomberg
+    url: https://www.bloomberg.com/news/articles/2026-07-10/apple-sues-openai-for-trade-secret-theft-in-blockbuster-case
+  - name: AppleInsider
+    url: https://appleinsider.com/articles/26/07/10/apple-sues-openai-previous-vp-of-product-design-over-mass-ip-theft
+  - name: CourtListener docket — Apple Inc. v. Liu
+    url: https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/
+  - name: Axios
+    url: https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft
+claims:
+  - text: "Apple filed suit against OpenAI, its Chief Hardware Officer Tang Tan, engineer Chang Liu, and io Products LLC in the U.S. District Court for the Northern District of California on 10 July 2026 (Apple Inc. v. Liu, No. 5:26-cv-07078), alleging trade secret misappropriation and breach of contract"
+    type: business
+    verdict: confirmed
+    evidence: [1, 2, 3, 5]
+  - text: "Apple's complaint alleges Chang Liu, a former senior systems electrical engineer at Apple, kept a company laptop and downloaded confidential hardware files after leaving, and exploited a bug to access Apple's cloud storage post-departure — allegedly messaging a former colleague, 'LOL, I found out I can access the [network storage], so funny'"
+    type: business
+    verdict: single-source
+    evidence: [1, 2, 4]
+  - text: "Apple's complaint alleges Tang Tan, a former 24-year Apple VP of product design now OpenAI's Chief Hardware Officer, used Apple project code names while recruiting and coached departing employees on evading Apple security"
+    type: business
+    verdict: single-source
+    evidence: [1, 2, 4]
+  - text: "Apple's complaint further alleges misuse of a proprietary metal-finishing technique and confidential vendor and manufacturing-sourcing information"
+    type: business
+    verdict: single-source
+    evidence: [4]
+  - text: "Apple says it sent OpenAI a warning letter in February 2026 raising these concerns before filing suit"
+    type: business
+    verdict: confirmed
+    evidence: [1, 6]
+  - text: "OpenAI spokesperson Drew Pusateri said: 'We have no interest in other companies' trade secrets. We remain focused on building innovative technology that empowers people everywhere,' and the company said it was still reviewing the filing"
+    type: business
+    verdict: confirmed
+    evidence: [1, 2, 3]
+updated: []
+---
+
+## What happened
+
+Apple filed a lawsuit against OpenAI on 10 July 2026 in the U.S. District Court
+for the Northern District of California — captioned *Apple Inc. v. Liu*, No.
+5:26-cv-07078 — alleging trade secret misappropriation and breach of contract.
+Named alongside OpenAI are its Chief Hardware Officer Tang Tan, engineer Chang
+Liu, and io Products LLC, the hardware startup OpenAI acquired from Jony Ive
+[1][2][3][5].
+
+Apple's complaint alleges that Chang Liu, a former senior systems electrical
+engineer at Apple, kept a company laptop after leaving and downloaded
+confidential hardware files, then exploited a bug to keep accessing Apple's
+cloud storage after his departure — allegedly messaging a former colleague,
+"LOL, I found out I can access the [network storage], so funny" [1][2][4].
+Separately, the complaint alleges Tang Tan, a 24-year Apple veteran who led
+iPhone and Apple Watch product design before joining OpenAI, used Apple
+project code names while recruiting and coached departing employees on
+evading Apple's security measures [1][2][4]. Apple also alleges misuse of a
+proprietary metal-finishing technique and confidential vendor and
+manufacturing-sourcing information [4]. These are allegations from Apple's
+filing, not findings a court has made.
+
+Apple says it sent OpenAI a warning letter in February 2026 raising these
+concerns before deciding to sue [1][6]. OpenAI spokesperson Drew Pusateri
+responded: "We have no interest in other companies' trade secrets. We remain
+focused on building innovative technology that empowers people everywhere,"
+adding that the company was still reviewing the filing [1][2][3]. OpenAI has
+not addressed the specific allegations about Liu or Tan.
+
+## Why it matters
+
+The suit escalates tension between two companies that were AI partners just
+two years ago — ChatGPT is built into iOS — and are now rivals in consumer AI
+hardware since OpenAI's roughly $6.4 billion acquisition of Jony Ive's io
+Products. No court has ruled on any of Apple's claims, and OpenAI disputes
+having any interest in stolen trade secrets; how the case proceeds could shape
+how aggressively AI labs can recruit hardware talent from established device
+makers.
