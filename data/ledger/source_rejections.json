@@ -1,0 +1,19 @@
+{
+  "rejections": [
+    {
+      "domain": "benchlm.ai",
+      "date": "2026-07-10",
+      "reason": "Carried an uncorroborated claim about GPT-5.6 government-gated availability that was contradicted by primary sources during the 2026-07-09 night run. Fails accountability criterion."
+    },
+    {
+      "domain": "indexbox.io",
+      "date": "2026-07-10",
+      "reason": "Relays paywalled reporting from other outlets rather than reporting independently. Fails originality criterion (aggregator)."
+    },
+    {
+      "domain": "techbuzz.ai",
+      "date": "2026-07-10",
+      "reason": "Reads as an automated aggregator without a staffed newsroom or named authors. Fails originality and accountability criteria. Re-evaluate only if editorial practices become verifiable."
+    }
+  ]
+}

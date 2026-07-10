@@ -93,6 +93,16 @@ sources:
     type: html
     url: https://allenai.org/blog
     verified: true
+  - name: Zhipu AI (Z.ai) News
+    tier: 0
+    type: html
+    url: https://www.zhipuai.cn/en/news
+    verified: false
+    notes: Primary source for GLM model releases (owner-approved scope expansion,
+      2026-07-10 — heavy community discovery volume with no registered primary).
+      English newsroom of Zhipu/Z.ai; chat.z.ai/blog is a secondary mirror.
+      Page is JS-rendered (empty body on plain fetch) — use site-scoped web search
+      as the fallback, same procedure as the x.ai 403 blocker.
   - name: NIST AI
     tier: 0
     type: html
@@ -138,6 +148,29 @@ sources:
     verified: true
     notes: Peer-reviewed; low frequency. Conference proceedings (NeurIPS/ICML/ICLR)
       are event-driven — handled via OpenReview lookups during verification, not a feed.
+  - name: METR
+    tier: 1
+    type: html
+    url: https://metr.org/research
+    verified: false
+    notes: Independent AI safety/capability evaluator. Registered 2026-07-10 after
+      being load-bearing for the GPT-5.6 reward-hacking finding. Primarily a
+      verification target, not a scan source.
+  - name: Vals AI
+    tier: 1
+    type: html
+    url: https://www.vals.ai
+    verified: false
+    notes: Independent benchmark tracker — verification target for capability claims.
+      Live leaderboard drifts; figures MUST be fetched live at publication time with
+      timestamp recorded (verification.md §5).
+  - name: Artificial Analysis
+    tier: 1
+    type: html
+    url: https://artificialanalysis.ai
+    verified: false
+    notes: Independent model benchmark/pricing tracker — verification target for
+      capability claims. Same live-fetch rule as Vals AI.
 
   # ---- Tier 2: quality press ------------------------------------------------
   - name: MIT Technology Review AI
@@ -190,6 +223,47 @@ sources:
     notes: Blocks automated clients (HTTP 401, 2026-07-08). Candidate until we have
       an acceptable fetch strategy. Wire copy — remember the independence collapse
       rule when other outlets syndicate it.
+  - name: InfoWorld
+    tier: 2
+    type: rss
+    url: https://www.infoworld.com/feed/
+    verified: false
+    notes: Registered 2026-07-10 after repeated use as evidence (Grok 4.5 pricing).
+  - name: CNBC Technology
+    tier: 2
+    type: rss
+    url: https://www.cnbc.com/id/19854910/device/rss/rss.html
+    verified: false
+    notes: Business/funding claims. Registered from 2026-07-09 night-run candidates.
+  - name: Euronews Next
+    tier: 2
+    type: html
+    url: https://www.euronews.com/next
+    verified: false
+    notes: EU policy/tech coverage — useful for EU AI Act stories.
+  - name: MLex
+    tier: 2
+    type: html
+    url: https://www.mlex.com
+    status: candidate
+    verified: false
+    notes: Regulatory/legal specialty press; largely paywalled — evidence-only via
+      search snippets until access strategy decided.
+  - name: Bloomberg Law
+    tier: 2
+    type: html
+    url: https://news.bloomberglaw.com
+    status: candidate
+    verified: false
+    notes: Legal specialty press; paywalled — evidence-only via snippets for now.
+  - name: Variety
+    tier: 2
+    type: html
+    url: https://variety.com
+    status: candidate
+    verified: false
+    notes: Entertainment-industry reaction coverage; HTTP 402 (paywall) observed
+      twice on 2026-07-09. Evidence-only via snippets for now.
 
   # ---- Tier 3: community / discovery only -----------------------------------
   - name: Hacker News AI search
