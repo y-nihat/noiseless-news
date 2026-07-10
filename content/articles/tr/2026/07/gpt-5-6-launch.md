@@ -23,6 +23,12 @@ sources:
     url: https://metr.org/blog/2026-06-26-gpt-5-6-sol
   - name: R&D World
     url: https://www.rdworldonline.com/openais-gpt-5-6-sol-sets-a-coding-record-its-own-system-card-says-it-cheats/
+  - name: OpenAI News — ChatGPT Work
+    url: https://openai.com/index/chatgpt-for-your-most-ambitious-work/
+  - name: InfoWorld
+    url: https://www.infoworld.com/article/4195478/openai-launches-chatgpt-work-as-it-broadens-gpt-5-6-rollout.html
+  - name: CNBC
+    url: https://www.cnbc.com/2026/07/09/open-ai-sam-altman-chatgpt-5-6-sol.html
 claims:
   - text: "OpenAI, GPT-5.6 model ailesini — amiral gemisi Sol, Terra ve Luna — 26 Haziran 2026'da başlayan bir önizlemenin ardından 9 Temmuz 2026'da genel kullanıma sundu"
     type: announcement
@@ -44,7 +50,16 @@ claims:
     type: business
     verdict: single-source
     evidence: [3]
-updated: []
+  - text: "OpenAI, GPT-5.6 tarafından desteklenen ve daha uzun, çok adımlı görevler (araştırma, elektronik tablolar, sunumlar, raporlar) için tasarlanmış bir ajan olan ChatGPT Work'ü 9 Temmuz 2026'da Pro/Enterprise/Edu planlarına sunmaya başladı"
+    type: announcement
+    verdict: confirmed
+    evidence: [6, 7]
+  - text: "Sam Altman, CNBC'ye GPT-5.6 Sol'un ajan tabanlı kodlama görevlerinde bir önceki modele göre %54 daha token-verimli olduğunu söyledi"
+    type: capability
+    verdict: vendor-claim
+    evidence: [8]
+updated:
+  - "2026-07-10: ChatGPT Work lansmanı (bağımsız olarak doğrulandı) ve Altman'ın CNBC'ye verdiği token-verimliliği iddiası (üretici iddiası) eklendi"
 ---
 
 ## Ne oldu
@@ -80,6 +95,10 @@ Ayrıca OpenAI, GPT-5.6'nın artık Microsoft 365 Copilot'ın arkasındaki terci
 edilen model olduğunu söylüyor [3]. Bu spesifik iddia için Microsoft'tan veya
 başka bir yerden bağımsız bir doğrulama bulamadık; bu yüzden burada doğrulanmış
 bir gerçek olarak değil, bir OpenAI beyanı olarak yer alıyor.
+
+## Güncelleme, 10 Temmuz 2026
+
+GPT-5.6 lansmanının yanı sıra OpenAI, daha uzun ve çok adımlı görevleri hedefleyen bir ajan olan ChatGPT Work'ü de duyurdu — bağlı uygulamalar ve dosyalar arasında bağlam toplayarak belge, elektronik tablo, sunum ve rapor üretebiliyor, zamanlanmış veya tekrarlayan görevleri çalıştırabiliyor. Önce Pro, Enterprise ve Edu planlarına, birkaç gün içinde de Plus ve Business planlarına sunuluyor [6]. InfoWorld lansmanı bağımsız olarak doğruladı [7]. Ayrı bir konuda, OpenAI CEO'su Sam Altman CNBC'ye Sol'un ajan tabanlı kodlama görevlerinde bir önceki modele göre %54 daha token-verimli olduğunu söyledi — bu rakam Altman'ın CNBC'ye verdiği kişisel beyandan geliyor, bağımsız bir ölçümden değil; bu yüzden bunu bir üretici iddiası olarak yayınlıyoruz [8].
 
 ## Neden önemli
 

@@ -8,6 +8,8 @@
     "Independent (non-OpenAI) SWE-Bench Pro score for Sol, if OpenAI publishes one -> resolve the cherry-picked-benchmark caveat",
     "Any Microsoft-side confirmation of the M365 Copilot 'preferred model' claim -> upgrade from single-source",
     "Full METR report / OpenAI system card follow-up coverage of the reward-hacking finding -> track if this becomes a larger story",
-    "Unconfirmed reports of a pre-GA US government safety review (Axios/Tech Times/CryptoBriefing mentioned this but no citable URL was captured) -> verify and add if it recurs"
-  ]
+    "Unconfirmed reports of a pre-GA US government safety review (Axios/Tech Times/CryptoBriefing mentioned this but no citable URL was captured) -> verify and add if it recurs",
+    "Independent (non-Altman-self-reported) measurement of the 54% token-efficiency claim -> upgrade from vendor-claim"
+  ],
+  "cycle_2026-07-10_night_c2_note": "Actioned the update flagged by cycle 1: added ChatGPT Work launch (OpenAI Tier-0 + InfoWorld independent, confirmed announcement) and Altman's 54% token-efficiency claim to CNBC (single-origin Altman quote, published as vendor-claim) as a policy section 8 changelog entry to the existing article, EN+TR. 2 web searches."
 }

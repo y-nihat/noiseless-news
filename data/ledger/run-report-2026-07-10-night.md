@@ -262,3 +262,42 @@ rather than rushed.
    (cryptobriefing, qz.com, kucoin, unboxfuture, mlq.ai) were flagged for a
    possible discovery.yaml blocklist — not actioned this cycle (out of scope
    for a night cycle per the run brief, which says not to modify policy files).
+
+## Cycle 2 — 23:30-23:36 UTC
+
+Cycle window was tight (~30 minutes to the 00:00 UTC deadline) and no fresh
+ingest had run since cycle 1 (`data/raw/2026-07-10/` timestamps unchanged,
+22:52-22:55 UTC) — so no new triage material existed. Scoped this cycle to a
+minimal watching recheck plus one bounded, low-risk action: actioning a
+policy §8 update that cycle 1 had already verified-adjacent but not written up,
+rather than starting a full new-story verify+falsify+bilingual-write pipeline
+this close to the deadline.
+
+- **Watching: `meta-ai-chip-production`** — quick recheck (1 web search).
+  New outlets surfaced (yournews.com, a Threads repost, Yahoo Finance) but all
+  still re-report the same internal-memo/Reuters origin; no new independent
+  Tier ≤2 source, no Meta statement or filing. Gate still fails the
+  independence rule. Ledger note updated. Still watching.
+- Tier-0 sweep: skipped — no fresh ingest since cycle 1's full sweep 25
+  minutes earlier; nothing to re-check.
+- Triage: skipped — no new raw data since cycle 1 triaged the same ingest.
+- **Update (policy §8, not a new story):** actioned the `gpt-5-6-launch`
+  update cycle 1 flagged but didn't action. Verified two new claims with 2 web
+  searches: (1) OpenAI launched ChatGPT Work, a multi-step-task agent powered
+  by GPT-5.6 — confirmed via OpenAI's own announcement (Tier-0) plus
+  independent corroboration from InfoWorld; published as `confirmed`. (2)
+  Sam Altman told CNBC that GPT-5.6 Sol is 54% more token-efficient than its
+  predecessor on agentic coding — this is Altman's own statement to one
+  outlet, single-origin, so it's published as `vendor-claim`, not fact. Added
+  both claims, 3 new sources, a changelog entry, and an "Update, 10 July 2026"
+  section to the EN article and its TR mirror; ledger note added.
+- Discovery loop: no new evidence domains logged this cycle (no new
+  candidates were pursued — the watching recheck and the update both used
+  already-registered or already-logged sources).
+
+Budget note: 0 new stories this cycle (2/12 used for the night so far, 10
+remain) — deliberately did not start a new verify+falsify pipeline this close
+to the 00:00 UTC deadline; the GPT-5.6 update was chosen specifically because
+it was bounded (2 searches, edits to an existing article, no new EN/TR files)
+and low-risk to finish inside the remaining window. 3 web searches total this
+cycle, no usage-limit errors.

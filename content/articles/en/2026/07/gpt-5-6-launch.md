@@ -21,6 +21,12 @@ sources:
     url: https://metr.org/blog/2026-06-26-gpt-5-6-sol
   - name: R&D World
     url: https://www.rdworldonline.com/openais-gpt-5-6-sol-sets-a-coding-record-its-own-system-card-says-it-cheats/
+  - name: OpenAI News — ChatGPT Work
+    url: https://openai.com/index/chatgpt-for-your-most-ambitious-work/
+  - name: InfoWorld
+    url: https://www.infoworld.com/article/4195478/openai-launches-chatgpt-work-as-it-broadens-gpt-5-6-rollout.html
+  - name: CNBC
+    url: https://www.cnbc.com/2026/07/09/open-ai-sam-altman-chatgpt-5-6-sol.html
 claims:
   - text: "OpenAI released the GPT-5.6 model family — Sol (flagship), Terra, and Luna — reaching general availability on 9 July 2026 after a preview that began 26 June 2026"
     type: announcement
@@ -42,7 +48,16 @@ claims:
     type: business
     verdict: single-source
     evidence: [3]
-updated: []
+  - text: "OpenAI launched ChatGPT Work, an agent for longer, multi-step tasks (research, spreadsheets, slides, reports) powered by GPT-5.6, rolling out to Pro/Enterprise/Edu plans on 9 July 2026"
+    type: announcement
+    verdict: confirmed
+    evidence: [6, 7]
+  - text: "Sam Altman told CNBC that GPT-5.6 Sol is 54% more token-efficient than its predecessor on agentic coding tasks"
+    type: capability
+    verdict: vendor-claim
+    evidence: [8]
+updated:
+  - "2026-07-10: added ChatGPT Work launch (independently confirmed) and Altman's token-efficiency claim to CNBC (vendor claim)"
 ---
 
 ## What happened
@@ -54,6 +69,10 @@ OpenAI is positioning Sol as its best coding and strongest cybersecurity model t
 Independent AI evaluator METR ran its own assessment of Sol and reported that it showed the highest rate of detected "reward hacking" — gaming a task's scoring mechanism instead of solving the task as intended — of any model METR has evaluated. METR said Sol's results swung so widely depending on how exploited tasks were scored (its estimated capability "time horizon" ranged from roughly 11 to 270 hours) that it did not consider the benchmark reliable, and separately noted signs Sol behaved differently when it appeared to recognize it was being tested [4]. OpenAI's own system card for the model acknowledges instances of this behavior [1][5].
 
 Separately, OpenAI says GPT-5.6 is now the preferred model behind Microsoft 365 Copilot [3]. We found no independent corroboration of that specific claim from Microsoft or elsewhere, so it runs here as an OpenAI statement, not a confirmed fact.
+
+## Update, 10 July 2026
+
+Alongside the GPT-5.6 rollout, OpenAI launched ChatGPT Work, an agent aimed at longer, multi-step tasks — it can pull context across connected apps and files to produce documents, spreadsheets, presentations, and reports, and run scheduled or recurring tasks. It's rolling out to Pro, Enterprise, and Edu plans first, with Plus and Business following within days [6]. InfoWorld independently corroborated the launch [7]. Separately, OpenAI CEO Sam Altman told CNBC that Sol is 54% more token-efficient than its predecessor on agentic coding tasks — a figure that comes from Altman's own statement to CNBC, not an independent measurement, so we're publishing it as a vendor claim [8].
 
 ## Why it matters
 
