@@ -1,0 +1,49 @@
+{
+  "slug": "fidji-simo-steps-down-openai",
+  "checked_at": "2026-07-10T23:05:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); verifier corroborated Simo's own X post via TechCrunch, PYMNTS, Benzinga, CNBC, Bloomberg, Axios; falsifier independently checked the succession-detail claim's independence (traced it to a single WSJ origin relayed by TechCrunch/Fortune), verified quote consistency, and confirmed the April medical-leave and July step-down are correctly sequenced as two distinct events",
+  "origin_items": [
+    "data/raw/2026-07-10/techcrunch-ai.json — Fidji Simo steps down from OpenAI's no. 2 role",
+    "data/raw/2026-07-10/the-verge-ai.json — Fidji Simo steps down from leading OpenAI's AGI work due to illness",
+    "data/raw/2026-07-10/wired-ai.json — OpenAI's CEO of AGI Deployment, Fidji Simo, Is Stepping Down",
+    "data/raw/2026-07-10/cnbc-technology.json — OpenAI exec Fidji Simo says she's stepping down due to chronic illness, will transition to advisor"
+  ],
+  "claims": [
+    {
+      "text": "Fidji Simo announced on 9 July 2026 that she is stepping down from her full-time OpenAI role and transitioning to a part-time advisor",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Anchored by her own primary statement (X post), independently corroborated by differently-fetched outlets (TechCrunch, PYMNTS, Benzinga, CNBC) -- comfortably clears the >=2-independent-source bar even before counting the primary-statement route.",
+      "evidence": ["https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/", "https://www.pymnts.com/news/artificial-intelligence/2026/openai-applications-chief-fidji-simo-steps-down-due-to-illness/"]
+    },
+    {
+      "text": "Her role, CEO of Applications (later CEO of AGI Deployment), was OpenAI's second-highest-ranking executive position",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Original title confirmed via OpenAI's own May 2025 announcement blog post (Tier-0); title evolution across coverage explained, not contradictory.",
+      "evidence": ["https://openai.com/index/leadership-expansion-with-fidji-simo/", "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/"]
+    },
+    {
+      "text": "Simo attributed the decision to a severe flare-up of chronic illness (POTS, managed since 2019), medical leave began April 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Self-disclosed by Simo in her own words, quote consistency independently checked by the falsifier across multiple differently-fetched outlets (Fortune, CNBC, PYMNTS, Benzinga); April leave and July step-down confirmed as two distinct, correctly-sequenced events, not duplicate reporting.",
+      "evidence": ["https://www.pymnts.com/news/artificial-intelligence/2026/openai-applications-chief-fidji-simo-steps-down-due-to-illness/", "https://www.benzinga.com/markets/tech/26/07/60377452/openai-applications-chief-fidji-simo-steps-down-from-full-time-role-over-chronic-illness-recovery-says-i-failed-to-make-this-decision-many-times-before"]
+    },
+    {
+      "text": "Sam Altman responded publicly expressing sadness and gratitude",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Quote captured consistently across independent outlets.",
+      "evidence": ["https://www.benzinga.com/markets/tech/26/07/60377452/openai-applications-chief-fidji-simo-steps-down-from-full-time-role-over-chronic-illness-recovery-says-i-failed-to-make-this-decision-many-times-before", "https://www.cnbc.com/2026/07/09/openai-exec-fidji-simo-says-she-will-step-down-and-transition-to-part-time-advisor.html"]
+    },
+    {
+      "text": "Responsibilities to be split among Greg Brockman, Sarah Friar, and Jason Kwon (per WSJ, relayed by TechCrunch)",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Falsifier traced this detail to a single origin (Wall Street Journal reporting), relayed without independent confirmation by TechCrunch and Fortune -- per the independence rule, N outlets citing the same original report count as one source. No OpenAI statement or second independently-reporting outlet found. Kept single-source and explicitly attributed to WSJ/TechCrunch in the published text, not stated as OpenAI-confirmed fact.",
+      "evidence": ["https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/"]
+    }
+  ],
+  "notes": "No OpenAI blog post or newsroom statement specific to this departure was found (only the original May 2025 appointment post exists as background) -- this remains a primary-statement (her own post) plus independent-press story, not a Tier-0-company-statement story. No conflicting account of the departure reason was found in either pass; reporting is consistent that this is genuinely health-related per her own disclosure, not performance-related -- did not reach 'disputed'. CNBC, Axios, and Bloomberg direct fetches were blocked (403) for both agents; those claims rest on cross-corroboration via TechCrunch, PYMNTS, and Benzinga fetches plus search-index confirmation."
+}
