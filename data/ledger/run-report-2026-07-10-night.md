@@ -110,3 +110,10 @@ since it cost the night its entire triage/verify/publish capacity.
    wire content with no original reporting — worth an explicit blocklist
    entry in `policy/sources.yaml` discovery config so future cycles don't
    re-spend search budget triaging them each time?
+
+## Loop supervisor footer
+
+- Cycles run: 2 (successful: 2, max: 2)
+- Stories published tonight: 0 (cap: 2)
+- Usage-limit stop: no
+- Window closed: 2026-07-10T09:33Z
