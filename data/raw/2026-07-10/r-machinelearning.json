@@ -8,5 +8,75 @@
     "published": "2026-07-10T01:55:38+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I am doing some work with cell type classification, where I have 4.3 million cells and 512 features (condensed embeddings from the encoder of a transformer).</p> <p>The broader goal is to implement a contextual bandit for augmenting the training set of the dataset, as it is currently imbalanced, and rare cell type classification is poor when I tried a baseline logistic regression classifier.</p> <p>Dataset:<br /> Feature matrix shape: (4290471, 512)<br /> Labels shape: (4290471,) </p> <p>Class distribution:<br /> T cell 1966941<br /> DC 858451<br /> NK cell 561904<br /> Monocyte 411170<br /> B cell 375882<br /> Platelet 54576<br /> Progenitor cell 24689<br /> ILC 24254<br /> Erythrocyte 12604</p> <p>I didn't do any hyperparameter tuning for the LR classifier, but I want to try other ML models (LightGBM, XGBoost, SVM)</p> <p>However, I face a bottleneck with hyperparameter tuning. I want to do 80/10/10 train/validate/test split, but the training set is so large and takes a long time even on H100.</p> <p>What are some solutions to this? I tried optuna but still very long for each hyperparameter trial. I then tried optuna but instead of using the full 80% for training each time, only 15% of the 80% is used (subsampling from the training set). I'm not sure if this is robust or not. I also couldn't really find anything in the literature.</p> <p>Anyone been in a similar situation? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Beautiful-Expert-156\"> /u/Beautiful-Expert-156 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usa46w/hyperparameter_tuning_approach_question_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usa46w/hyperparameter_tuning_approach_question_r/\">[comments]</a></span>",
     "fetched_at": "2026-07-10T09:03:39.153730+00:00"
+  },
+  {
+    "id": "2c66d2d9c6e7018e",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Why doesn't the ML research community limit the number of submissions per author? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1usq43t/why_doesnt_the_ml_research_community_limit_the/",
+    "published": "2026-07-10T14:59:23+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I am currently working across multiple research communities, and I've noticed that the ML community is struggling with a massive volume of submissions, which is affecting review quality (as we are seeing in the recent ARR cycles).</p> <p>I am wondering what the reasoning is for not limiting the number of submissions per author?</p> <p>This practice has been successfully used in other research areas for years, such as Security (e.g., CCS) or Computer Architecture (e.g., DAC), to help keep workloads manageable. Is there a particular cultural reason why the ML community chooses a different approach?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/alafaya101\"> /u/alafaya101 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usq43t/why_doesnt_the_ml_research_community_limit_the/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usq43t/why_doesnt_the_ml_research_community_limit_the/\">[comments]</a></span>",
+    "fetched_at": "2026-07-10T22:52:26.514002+00:00"
+  },
+  {
+    "id": "b0fe77be8dc51791",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Please help me understand figure on subspace similarity in LoRA paper. [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uso667/please_help_me_understand_figure_on_subspace/",
+    "published": "2026-07-10T13:46:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1uso667/please_help_me_understand_figure_on_subspace/\"> <img alt=\"Please help me understand figure on subspace similarity in LoRA paper. [D]\" src=\"https://preview.redd.it/3l5qhbiroech1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=e5534631f23bcc8d8e89b7fd411120c2b7a84442\" title=\"Please help me understand figure on subspace similarity in LoRA paper. [D]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I am studying the LoRA paper and have trouble understanding this figure. The function essentially measures how much of the subspace spanned by the top i vectors is contained in the subspace spanned by the top j vectors in the higher rank matrix. Therefore, j can not be lower than i. So when they say the 3rd and 4th figure zoom in on the lower-left triangle of the 2 left-most figures, how are there values for j=1 and i equals 2 to 8? I dont understand what kind of y-axis the 2 right figures are supposed to be using. Thanks in advance!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BelzebubReincarnated\"> /u/BelzebubReincarnated </a> <br /> <span><a href=\"https://i.redd.it/3l5qhbiroech1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uso667/please_help_me_understand_figure_on_subspace/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-10T22:52:26.514002+00:00"
+  },
+  {
+    "id": "b2c47ecd0d6a2b83",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "multiple linear regression in scratch [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uszkri/multiple_linear_regression_in_scratch_p/",
+    "published": "2026-07-10T20:42:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>i made a multiple linear regression trainer that can be used with custom data in scratch</p> <p>nothing more to say, the impressive part is the scratch part</p> <p><a href=\"https://scratch.mit.edu/projects/1352102064/\">https://scratch.mit.edu/projects/1352102064/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mehmetflix_\"> /u/mehmetflix_ </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uszkri/multiple_linear_regression_in_scratch_p/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uszkri/multiple_linear_regression_in_scratch_p/\">[comments]</a></span>",
+    "fetched_at": "2026-07-10T22:52:26.514002+00:00"
+  },
+  {
+    "id": "bbce19bc3d1a178a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "On Adversarial RL [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1usx96p/on_adversarial_rl_r/",
+    "published": "2026-07-10T19:15:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Zhang et al. paper's introducing the SA-MDP framework (2020) (state adversarial MDP) argues that an attack using the critic network (V(s)) is expected and supposed to produce a weaker attack than an attack using the actor network (pi(s)) itself to generate perturbation on agent observations. A claim supported by their empirical results using different single-agent simulation environment.</p> <p>However, I'm consistently finding the opposite when comparing both attacks on multi-agent PPO policies trained on some scenarios from the VMAS library. Policies are IPPO (Independent PPO, to not confuse with MAPPO) and GPPO (Graph Independent PPO, see Bettini et al. 2023 arxiv) with their heterogeneous versions. The PGD attack is adapted to continuous policies using the KL divergence closed form.</p> <p>Am I doing something wrong or this is actually something that doesn't contradicts Zhang et al's findings given the difference of the context?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ham_bam0\"> /u/ham_bam0 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usx96p/on_adversarial_rl_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usx96p/on_adversarial_rl_r/\">[comments]</a></span>",
+    "fetched_at": "2026-07-10T22:52:26.514002+00:00"
+  },
+  {
+    "id": "0a6422bfbd600b0c",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Mapping world model taxonomy [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1usp482/mapping_world_model_taxonomy_p/",
+    "published": "2026-07-10T14:22:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey ML community! I’ve been exploring world models and wrote a short article aimed at making the concept easier to understand.</p> <p>I also propose a framework for classifying different approaches and highlight a few trends that emerge from that classification.</p> <p>I’d appreciate feedback on the framework, especially where it may be incomplete, unclear, or technically inaccurate.</p> <p>Article: <a href=\"https://x.com/srini_sunil_/status/2075577335076598194?s=20\">https://x.com/srini_sunil_/status/2075577335076598194?s=20</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ssrini125\"> /u/ssrini125 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usp482/mapping_world_model_taxonomy_p/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usp482/mapping_world_model_taxonomy_p/\">[comments]</a></span>",
+    "fetched_at": "2026-07-10T22:52:26.514002+00:00"
+  },
+  {
+    "id": "3661736081dd1cb8",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "How should I approach training this specific ML model for my startup project [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1usnuc0/how_should_i_approach_training_this_specific_ml/",
+    "published": "2026-07-10T13:33:11+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So, I am working on this startup project with pretty low budget and one of the features is sentiment analysis based on political news, x posts and Instagram hashtag trends in which will be in Indian languages. I've been suggested muRIL, an Indian language-based model fine-tuned on political data as the best long-term option. But our team does not have any ML engineer so we dont know how we should approach that. Also do tell me if you think there is a better alternative</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/OkRoyal9187\"> /u/OkRoyal9187 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usnuc0/how_should_i_approach_training_this_specific_ml/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usnuc0/how_should_i_approach_training_this_specific_ml/\">[comments]</a></span>",
+    "fetched_at": "2026-07-10T22:52:26.514002+00:00"
+  },
+  {
+    "id": "4f3d48c2a2adaa6d",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "ML Papers with hundreds of authors should just collapse down to the organization response instead of listing every author [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1usz695/ml_papers_with_hundreds_of_authors_should_just/",
+    "published": "2026-07-10T20:26:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've had this feeling for a while when reading the citation pages of ML papers and had to continuously scroll down for like 2+ pages because a citation with hundreds of authors, such as the Llama herd of model paper: <a href=\"https://arxiv.org/abs/2407.21783\">https://arxiv.org/abs/2407.21783</a> (no endorsement of this paper btw) or the Gemini paper with 3000 authors <a href=\"https://arxiv.org/abs/2507.06261\">https://arxiv.org/abs/2507.06261</a></p> <p>Now Chinese papers are catching up to this trend and let me remind you they have like 20-40 times the ML researchers compared to the US alone, which has resulted in some incredible sights <a href=\"https://arxiv.org/abs/2501.12948\">https://arxiv.org/abs/2501.12948</a> <a href=\"https://arxiv.org/abs/2605.26494\">https://arxiv.org/abs/2605.26494</a> (again, no endorsement, just examples).</p> <p><strong>Listing authors is a practice that carries utility,</strong> because the authors have real-world reputation to uphold, which give credence to the correctness or depth of the paper. I mean if Geoff Hinton published a paper tomorrow I'd take that more seriously than a paper published by 400 non-Geoff Hintons.</p> <p>Also I got the wind from a friend who works at one of these companies (Yes a Chinese company) that people who are <em>almost completely irrelevant</em> to the contributions of these papers are being listed as authors. For example, a person who was responsible for generating an Excel bar-chart from a row of data points [1.2, 2.4, 5.6, ...] was put on the paper. Another person did some double-checking of the reference page to make sure the format is month-year and not year-month. And apparently huge amount of office politics are involved as to who goes on the list of authors along with silly fights over the ordering of the authorships. It's just all completely meaningless at this point because you can't make sound attributions, it's all he said she said.</p> <p>Just list the organization that did the research as opposed to listing all the individual contributors (when it exceeds like 20+ people), it's not that hard.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NeighborhoodFatCat\"> /u/NeighborhoodFatCat </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usz695/ml_papers_with_hundreds_of_authors_should_just/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usz695/ml_papers_with_hundreds_of_authors_should_just/\">[comments]</a></span>",
+    "fetched_at": "2026-07-10T22:52:26.514002+00:00"
   }
 ]
