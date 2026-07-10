@@ -132,6 +132,51 @@
     "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) — worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
     "'{company} response OR denies OR disputes {allegation}' was essential for the NYT/OpenAI litigation story to surface OpenAI's on-record denial alongside the plaintiffs' claims -- worth adding as an explicit claim_check_template for any business/legal claim type, not just capability claims.",
     "For business claims sourced to a single wire/leak (Reuters exclusive on Meta's AI chip), tracing every outlet's citation back to one origin was decisive in correctly failing that story's gate -- a reminder that broad press pickup of a single leak is not multi-source confirmation.",
-    "Tier-0 html sweep (Anthropic, Meta, Mistral, Cohere, Ai2, NIST, EU Commission) via WebFetch worked well this run and surfaced 3 of the 7 published stories directly (Anthropic Reflect, Meta Muse Image, Meta Muse Spark, EU cybersecurity plan) that would otherwise have relied only on secondary press framing -- confirms this sweep is worth the run-time cost every night, not just when a Tier-2 story needs it."
+    "Tier-0 html sweep (Anthropic, Meta, Mistral, Cohere, Ai2, NIST, EU Commission) via WebFetch worked well this run and surfaced 3 of the 7 published stories directly (Anthropic Reflect, Meta Muse Image, Meta Muse Spark, EU cybersecurity plan) that would otherwise have relied only on secondary press framing -- confirms this sweep is worth the run-time cost every night, not just when a Tier-2 story needs it.",
+    "2026-07-10 night cycle 1: for a court-filing story (Apple v. OpenAI), 'site:courtlistener.com {case caption}' reliably located the actual docket (case number, court, parties) as a primary-ish anchor even when the full docket page itself 403'd on direct fetch -- search-index metadata was still usable to confirm case identity. Worth adding as a claim_check_template for litigation claims: '{plaintiff} v. {defendant} site:courtlistener.com'."
+  ],
+  "candidates_2026-07-10_night_c1": [
+    {
+      "domain": "courtlistener.com",
+      "first_seen": "2026-07-10",
+      "occurrences": 1,
+      "sample_urls": ["https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/"],
+      "context": "Free public court-record aggregator (RECAP/PACER mirror) -- used as the primary-document anchor for the Apple v. OpenAI trade-secrets filing (case number, court, parties). Direct full-page fetch 403'd for both verifier and falsifier agents, but the docket page's search-index metadata was independently usable to confirm case identity. Strong candidate for Tier 0/1 registration given how often AI litigation is recurring in coverage (this is the second litigation story this week after nyt-openai-copyright-evidence-dispute)."
+    },
+    {
+      "domain": "appleinsider.com",
+      "first_seen": "2026-07-10",
+      "occurrences": 1,
+      "sample_urls": ["https://appleinsider.com/articles/26/07/10/apple-sues-openai-previous-vp-of-product-design-over-mass-ip-theft"],
+      "context": "Apple-focused trade press with named authors; carried the most granular detail (metal-finishing technique, vendor-sourcing allegations) not found elsewhere in the Apple v. OpenAI coverage. Propose Tier 2."
+    },
+    {
+      "domain": "pymnts.com",
+      "first_seen": "2026-07-10",
+      "occurrences": 1,
+      "sample_urls": ["https://www.pymnts.com/news/artificial-intelligence/2026/openai-applications-chief-fidji-simo-steps-down-due-to-illness/"],
+      "context": "Business/fintech-adjacent trade press; directly quoted Fidji Simo's own post and Altman's reply, fetched cleanly when CNBC/Axios/Bloomberg were blocked. Propose Tier 2."
+    },
+    {
+      "domain": "benzinga.com",
+      "first_seen": "2026-07-10",
+      "occurrences": 1,
+      "sample_urls": ["https://www.benzinga.com/markets/tech/26/07/60377452/openai-applications-chief-fidji-simo-steps-down-from-full-time-role-over-chronic-illness-recovery-says-i-failed-to-make-this-decision-many-times-before"],
+      "context": "Markets/business news outlet; independently fetchable, quoted Simo's post directly and verbatim -- useful when other outlets are paywalled/blocked. Propose Tier 2."
+    },
+    {
+      "domain": "macrumors.com",
+      "first_seen": "2026-07-10",
+      "occurrences": 1,
+      "sample_urls": ["https://www.macrumors.com/2026/07/10/apple-sues-openai/"],
+      "context": "Apple-focused trade press, established editorial standards. Corroborated the Apple v. OpenAI filing. Propose Tier 2."
+    },
+    {
+      "domain": "axios.com",
+      "first_seen": "2026-07-10",
+      "occurrences": 1,
+      "sample_urls": ["https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"],
+      "context": "Major independent news outlet; corroborated the February 2026 warning-letter detail in the Apple v. OpenAI story via what reads as separate AP-wire-sourced reporting, not just a relay. Propose Tier 2."
+    }
   ]
 }

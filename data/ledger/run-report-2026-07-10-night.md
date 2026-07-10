@@ -117,3 +117,148 @@ since it cost the night its entire triage/verify/publish capacity.
 - Stories published tonight: 0 (cap: 2)
 - Usage-limit stop: no
 - Window closed: 2026-07-10T09:33Z
+
+---
+
+# Run report — 2026-07-10 night (second run this date)
+
+This is a separate, later night-loop invocation that also falls on UTC calendar
+date 2026-07-10 (run window ~22:55 UTC 2026-07-10 through the early hours of
+2026-07-11 UTC, i.e. 01:00-04:20 Istanbul as designed) — distinct from the
+~09:06-09:36 UTC run above, which already closed out its own 2-cycle night
+summary earlier the same UTC day. Continuing to append under this filename per
+this cycle's run brief; flagging the naming collision under "For the owner"
+below rather than silently overwriting the earlier report.
+
+## Cycle 1 — 22:55-23:07 UTC
+
+Fresh ingest was current as of cycle start (`data/raw/2026-07-10/` last updated
+by the "Night ingest 2026-07-10T22:55Z" commit). Ran the full work order this
+cycle: watching recheck, full Tier-0 sweep, triage, and verify+publish — unlike
+the two ~20-minute cycles earlier this UTC day, this cycle's ~30-minute window
+was enough to complete all steps without rushing the evidence bar.
+
+- **Watching: `meta-ai-chip-production`** — rechecked and the long-open
+  MTIA-3/Iris lead was finally reconciled (2 web searches + 1 live fetch, via a
+  dedicated sub-agent). Resolved: MTIA-3 (TrendForce, 2026-01-30, independent
+  Commercial Times sourcing) and "Iris" (the Reuters-memo chip) are the same
+  chip generation — TSMC 3nm node and Electronics Weekly's "third custom
+  datacentre chip" framing both corroborate this. That gives TrendForce as a
+  genuine second independent source for the narrower claim "Meta's next MTIA
+  chip enters production on TSMC 3nm in 2H26." It does **not** corroborate the
+  capacity (7GW→14GW) or Broadcom-through-2029 claims, which remain
+  single-origin (the Reuters memo). Also checked Meta's own official custom-
+  silicon blog post as a Tier-0 candidate — it doesn't mention Iris, MTIA-3, a
+  September date, or the capacity figures either. **Publishing gate still does
+  not pass** for the story as originally scoped; ledger note updated with full
+  detail and a flagged option (not acted on this cycle) for a narrower,
+  now-corroborated "Meta confirms next chip on TSMC 3nm for late 2026" story if
+  editorially desired. Still watching.
+- **Tier-0 sweep: performed in full.** WebFetched all 7 directly-fetchable
+  active Tier-0 html sources (Anthropic, Meta AI, Mistral, Cohere, Allen
+  Institute, NIST, EU Commission) plus the two documented-blocker fallbacks
+  (x.ai via site-scoped search, zhipuai.cn via site-scoped search — both per
+  the known-blocker procedure). Nothing from the sweep surfaced a story that
+  wasn't already published or already considered-and-passed in the earlier
+  2026-07-09 run (Bernanke, Robostral Navigate, Studio prompts/skills, Cohere's
+  speculative-decoding post, GLM-5.2/ZCode). No new unclaimed Tier-0 items this
+  cycle.
+- **Triage:** filtered `data/raw/2026-07-08/` through `2026-07-10/` press feeds
+  (TechCrunch, Verge, Wired, Ars Technica, CNBC, InfoWorld, r/LocalLLaMA, and
+  others) against the ledger's covered-slugs set. Two stories stood out as
+  fresh, multi-outlet, and clearly uncovered:
+  - **Apple sues OpenAI (trade secret theft)** — SELECTED, PUBLISHED. Major
+    litigation story, same-day filing (10 July), 4+ independent Tier-2 outlets
+    plus a primary court-docket match. Slug: `apple-openai-trade-secrets-lawsuit`.
+  - **Fidji Simo steps down from OpenAI** — SELECTED, PUBLISHED. Personnel
+    story anchored by her own primary statement (X post), independently
+    corroborated by 4 outlets. Slug: `fidji-simo-steps-down-openai`.
+  - Other candidates noted but not pursued this cycle (capacity permitting a
+    future cycle): SK Hynix's $26.5B Nasdaq IPO (chip/AI-infrastructure
+    angle, mostly finance-framed); "Meta found to breach EU laws with
+    'addictive' Instagram/Facebook designs" (EU Commission Tier-0 primary +
+    CNBC + Ars Technica corroborate it cleanly, but it's an algorithmic-design/
+    DSA story more than an AI story — borderline scope fit, deliberately not
+    tested this cycle); "OpenAI power consolidates under Greg Brockman ahead of
+    prospective IPO" (CNBC only so far, would need a second independent
+    source); "China warns about AI risks with Anthropic's Claude Code" (CNBC
+    only, single-source as triaged); GPT-5.6 "ChatGPT Work" launch and the
+    Altman 54%-token-efficiency claim (both look like updates to the already-
+    published `gpt-5-6-launch` story per policy §8 rather than new stories —
+    not actioned this cycle, flagged for a future cycle's update pass).
+- **Verify + publish (2 stories, full multi-agent protocol, run as two parallel
+  verify→falsify pipelines):**
+  - `apple-openai-trade-secrets-lawsuit`: verifier found the filing
+    independently confirmed via a direct CourtListener docket match (case
+    5:26-cv-07078, N.D. Cal.) plus TechCrunch/CNBC/Bloomberg/CNN/Axios/
+    AppleInsider/9to5Mac/MacRumors; the underlying conduct allegations
+    (Liu's laptop/cloud-access claims, Tan's recruiting conduct, the metal-
+    finishing/vendor claim) all trace to Apple's complaint as one origin, kept
+    `single-source` and attributed throughout, never stated as fact — correct
+    per the litigation policy. Falsifier ran a second independent check: could
+    not find any Wired coverage of this story (dropped a Wired citation the
+    triage pass had assumed existed), confirmed the OpenAI Pusateri quote
+    verbatim via an independently-fetched AP wire render, confirmed the case
+    caption/court/defendants via a direct CourtListener search hit, and
+    upgraded the February-2026-warning-letter claim from single-source to
+    confirmed after finding it independently corroborated by an AP wire
+    account distinct from TechCrunch's reporting chain. Final: GO, published
+    with the Wired citation dropped.
+  - `fidji-simo-steps-down-openai`: verifier anchored the story on Simo's own
+    X post, independently corroborated by TechCrunch/PYMNTS/Benzinga/CNBC/
+    Bloomberg/Axios; flagged the Brockman/Friar/Kwon succession-duties detail
+    as possibly single-source. Falsifier confirmed that flag — traced the
+    succession detail to one Wall Street Journal origin relayed by TechCrunch
+    and Fortune, no independent second source found — kept `single-source` and
+    rewrote that sentence to explicitly attribute it to WSJ rather than state
+    it as settled fact. Falsifier also independently verified quote accuracy
+    (Simo's illness-disclosure wording consistent across outlets), confirmed
+    April medical leave and July step-down are correctly sequenced as two
+    distinct events (not duplicate reporting), and found no OpenAI statement
+    and no conflicting/disputing account of the health-related reason for her
+    departure. Final: GO, published with the succession sentence hedged.
+- **Discovery loop:** logged 6 new evidence domains to
+  `data/ledger/source_candidates.json` (courtlistener.com, appleinsider.com,
+  pymnts.com, benzinga.com, macrumors.com, axios.com) with tier-2 registration
+  proposals and context; added one new query-pattern note (`site:courtlistener.com`
+  as a litigation-claim search template, effective even when the full docket
+  page itself returns 403 — search-index metadata alone was enough to confirm
+  case identity).
+
+Budget note: 2/4 stories published this cycle (2/12 used for the night, 10
+remain), well under the per-story 15-search/fetch cap (verifier+falsifier pairs
+used roughly 15, 10 searches/fetches for the Apple story and 16, 8 for the Simo
+story). No usage-limit errors encountered. Deliberately capped at 2 stories
+rather than the cycle's cap of 4 to keep the verify+falsify+bilingual-write
+pipeline unhurried inside the ~30-minute window — 2 more plausible candidates
+(SK Hynix IPO, EU/Meta DSA finding) were identified but explicitly deferred
+rather than rushed.
+
+## For the owner
+
+1. **Naming collision:** this file (`run-report-2026-07-10-night.md`) already
+   contained a complete, closed-out 2-cycle night report (window closed
+   2026-07-10T09:33Z) from an apparently separate, earlier invocation of the
+   night loop the same UTC calendar day, at a time (09:06-09:36 UTC) that
+   doesn't match the documented 01:00-04:20 Istanbul (22:00-01:20 UTC) window.
+   Rather than overwrite it, this cycle's section was appended below it with a
+   clear separator, mirroring the precedent in `run-report-2026-07-09.md` for
+   same-date double-runs. Worth checking whether that earlier 09:06 UTC
+   invocation was an intentional smoke test, a scheduling misfire, or expected
+   double-running during this tuning period — and whether the date-based
+   filename convention should instead key off the *Istanbul* calendar date (or
+   include a run-start timestamp) to avoid this collision going forward.
+2. The EU Commission's 2026-07-10 finding that Instagram/Facebook's "addictive
+   design" (autoplay, infinite scroll) breaches the Digital Services Act has
+   solid sourcing (Tier-0 EU Commission primary + CNBC + Ars Technica,
+   independent) but sits at the edge of this site's AI-news scope — it's about
+   algorithmic feed/engagement design generally, not AI specifically. Left
+   untested this cycle; worth a scope ruling from the owner for future cycles.
+3. Two update opportunities were flagged but not actioned: GPT-5.6's "ChatGPT
+   Work" launch and Altman's 54%-token-efficiency claim to CNBC both look like
+   policy §8 updates to the already-published `gpt-5-6-launch` article rather
+   than new stories. A future cycle should pick these up as changelog entries.
+4. Per the prior report in this file, low-quality aggregator sites
+   (cryptobriefing, qz.com, kucoin, unboxfuture, mlq.ai) were flagged for a
+   possible discovery.yaml blocklist — not actioned this cycle (out of scope
+   for a night cycle per the run brief, which says not to modify policy files).
