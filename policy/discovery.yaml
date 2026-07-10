@@ -28,3 +28,9 @@ claim_check_templates:
   - "{claim_subject} confirmed"
   - "{claim_subject} denied OR disputed OR debunked"
   - "{model_name} independent benchmark"
+  # Independent-evaluator pattern — proven decisive for capability claims
+  # (surfaces METR, Vals AI, Artificial Analysis instead of vendor charts):
+  - "{model_name} benchmark METR OR vals.ai OR artificialanalysis.ai"
+  - "{model_name} independent evaluation review"
+  # Mandatory for business/legal claims — the other side's account:
+  - "{company} denies OR disputes OR responds {allegation}"

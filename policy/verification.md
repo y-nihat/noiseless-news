@@ -23,6 +23,10 @@ recorded in the evidence log with a note; they must be proposed for registration
 - Multiple outlets repeating the same press release, wire story, paper, or tweet count
   as **one** source (the underlying one). Trace each piece of evidence to its origin
   before counting it.
+- **Wire-exclusive check (named, mandatory):** when coverage is broad but every
+  account traces to a single outlet's exclusive (e.g. one Reuters story citing a
+  leaked memo), the story has ONE source regardless of how many outlets relay it.
+  Run this check explicitly for every business/insider story before counting sources.
 - Always walk at least one hop toward the primary source (max depth 2). If a Tier-2
   article cites a paper, verify against the paper, not against another article citing it.
 - Two sources are independent only if neither derives its information from the other
@@ -38,6 +42,7 @@ Stories are decomposed into individual factual claims. Each claim is typed:
 | Capability ("Y outperforms Z") | Independent reproduction, **or** publish labeled as *vendor claim* |
 | Business (funding, acquisition, layoffs, lawsuits) | ≥2 independent sources of Tier ≤2, or a filing/court document |
 | Research finding | The paper itself; label *preprint — not peer-reviewed* where applicable |
+| Legal / litigation (filings, motions, allegations) | Publish at dispute stage, but every allegation strictly attributed to the filing party ("plaintiffs allege"), never stated as found fact; prefer docket/primary documents; update the article when rulings land |
 | Rumor / unnamed-sources | Never published as fact. May be held internally in `watching` state |
 
 Verdicts per claim: `confirmed` · `vendor-claim` · `single-source` · `disputed` · `unverifiable`.
@@ -67,6 +72,10 @@ must either be resolved or presented as a documented disagreement with both side
 - Cross-verification includes targeted keyword web searches, not only registered feeds.
 - Disagreement between agents downgrades the claim to `disputed` and blocks publication
   until resolved with additional evidence.
+- **Live-fetch rule for numbers:** any third-party numeric citation (benchmark ranking,
+  leaderboard position, score) must come from a fetch of the source performed at
+  publication time, and the evidence log must record the fetch timestamp. Leaderboards
+  drift; recalled or search-snippet figures are not citable.
 
 ## 6. Writing rules
 
