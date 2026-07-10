@@ -1,0 +1,12 @@
+[
+  {
+    "id": "901337e63ec6167d",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Hyperparameter tuning approach question [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1usa46w/hyperparameter_tuning_approach_question_r/",
+    "published": "2026-07-10T01:55:38+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I am doing some work with cell type classification, where I have 4.3 million cells and 512 features (condensed embeddings from the encoder of a transformer).</p> <p>The broader goal is to implement a contextual bandit for augmenting the training set of the dataset, as it is currently imbalanced, and rare cell type classification is poor when I tried a baseline logistic regression classifier.</p> <p>Dataset:<br /> Feature matrix shape: (4290471, 512)<br /> Labels shape: (4290471,) </p> <p>Class distribution:<br /> T cell 1966941<br /> DC 858451<br /> NK cell 561904<br /> Monocyte 411170<br /> B cell 375882<br /> Platelet 54576<br /> Progenitor cell 24689<br /> ILC 24254<br /> Erythrocyte 12604</p> <p>I didn't do any hyperparameter tuning for the LR classifier, but I want to try other ML models (LightGBM, XGBoost, SVM)</p> <p>However, I face a bottleneck with hyperparameter tuning. I want to do 80/10/10 train/validate/test split, but the training set is so large and takes a long time even on H100.</p> <p>What are some solutions to this? I tried optuna but still very long for each hyperparameter trial. I then tried optuna but instead of using the full 80% for training each time, only 15% of the 80% is used (subsampling from the training set). I'm not sure if this is robust or not. I also couldn't really find anything in the literature.</p> <p>Anyone been in a similar situation? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Beautiful-Expert-156\"> /u/Beautiful-Expert-156 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usa46w/hyperparameter_tuning_approach_question_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1usa46w/hyperparameter_tuning_approach_question_r/\">[comments]</a></span>",
+    "fetched_at": "2026-07-10T09:03:39.153730+00:00"
+  }
+]
