@@ -3,13 +3,13 @@ name: Nightly scan
 on:
   schedule:
     # 22:00 UTC = 01:00 Europe/Istanbul (Turkey is UTC+3 year-round, no DST).
-    # GitHub cron can fire up to ~1h late; the absolute deadline in the prompt
-    # and the job timeout keep the run inside the 01:00-05:00 Istanbul window.
+    # GitHub cron can fire up to ~1h late; the loop supervisor computes the
+    # remaining window and always ends by 01:20 UTC (04:20 Istanbul).
     - cron: "0 22 * * *"
   workflow_dispatch:
     inputs:
       smoke:
-        description: "Smoke test: cap at 1 story / 3 searches"
+        description: "Smoke test: 2 short cycles, 1 story each"
         type: boolean
         default: false
 
@@ -18,6 +18,7 @@ permissions:
   pages: write
   id-token: write
   issues: write
+  actions: write
 
 concurrency:
   group: nightly
@@ -26,7 +27,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 200
+    timeout-minutes: 215
     steps:
       - uses: actions/checkout@v4
 
@@ -35,69 +36,16 @@ jobs:
           python-version: "3.12"
       - run: pip install -r pipeline/requirements.txt
 
-      - name: Ingest registered sources
-        run: PYTHONPATH=pipeline python -m noiseless.run ingest
-
-      - name: Commit ingest artifacts
-        run: |
-          git config user.name "y-nihat"
-          git config user.email "nihat@yinovasyon.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "Nightly ingest $(date -u +%F)"
-          git push
-
-      - name: Set run parameters
-        id: params
-        run: |
-          if [ "${{ github.event.inputs.smoke }}" = "true" ]; then
-            echo "max_stories=1"  >> "$GITHUB_OUTPUT"
-            echo "max_searches=3" >> "$GITHUB_OUTPUT"
-            echo "max_turns=40"   >> "$GITHUB_OUTPUT"
-            echo "deadline=$(date -u -d '+40 minutes' '+%H:%M') UTC today (smoke test)" >> "$GITHUB_OUTPUT"
-          else
-            echo "max_stories=8"  >> "$GITHUB_OUTPUT"
-            echo "max_searches=15" >> "$GITHUB_OUTPUT"
-            echo "max_turns=250"  >> "$GITHUB_OUTPUT"
-            echo "deadline=01:30 UTC (04:30 Istanbul)" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Render prompt
-        run: |
-          sed -e "s/{{MAX_STORIES}}/${{ steps.params.outputs.max_stories }}/g" \
-              -e "s/{{MAX_SEARCHES}}/${{ steps.params.outputs.max_searches }}/g" \
-              -e "s/{{DEADLINE}}/${{ steps.params.outputs.deadline }}/g" \
-              .github/nightly-prompt.md > /tmp/prompt.md
-          echo "--- rendered prompt head ---"
-          head -8 /tmp/prompt.md
-
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
 
-      - name: Verify and write articles
-        timeout-minutes: 170
+      - name: Night loop
+        timeout-minutes: 205
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-        run: |
-          claude -p "$(cat /tmp/prompt.md)" \
-            --model claude-sonnet-5 \
-            --max-turns ${{ steps.params.outputs.max_turns }} \
-            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" \
-            --output-format stream-json --verbose \
-            | tee /tmp/claude-stream.jsonl \
-            | python3 .github/scripts/stream_summary.py
-
-      - name: Gate on agent result
-        if: always()
-        run: python3 .github/scripts/check_result.py /tmp/claude-stream.jsonl
-
-      - name: Fallback commit of any remaining artifacts
-        if: always()
-        run: |
-          git config user.name "y-nihat"
-          git config user.email "nihat@yinovasyon.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "Nightly run artifacts $(date -u +%F)"
-          git push || true
+          GH_TOKEN: ${{ github.token }}
+          SMOKE: ${{ inputs.smoke == true && 'true' || 'false' }}
+        run: bash .github/scripts/night_loop.sh
 
       - name: Open failure issue
         if: failure()
@@ -108,15 +56,15 @@ jobs:
             echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo
             echo '```'
-            tail -c 2500 /tmp/claude-stream.jsonl 2>/dev/null || echo "no agent output captured"
+            latest=$(ls -t /tmp/claude-stream-*.jsonl 2>/dev/null | head -1)
+            if [ -n "$latest" ]; then tail -c 2500 "$latest"; else echo "no agent output captured"; fi
             echo '```'
           } > /tmp/issue-body.md
           gh issue create \
             --title "Nightly run failed $(date -u +%F)" \
             --body-file /tmp/issue-body.md || true
 
-      # Pushes made with GITHUB_TOKEN do not trigger the deploy workflow,
-      # so the nightly job publishes the site itself.
+      # Final backstop deploy — per-cycle deploys are dispatched by the loop.
       - name: Build site
         if: always()
         run: PYTHONPATH=pipeline python -m noiseless.run publish

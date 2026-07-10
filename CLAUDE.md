@@ -23,8 +23,13 @@ filters clickbait, writes its own headlines/articles, lists sources under every 
 
 - Web research / verification agents: **Sonnet 5** (`claude-sonnet-5`), `effort: max`.
 - Cheap mechanical passes (triage, dedup assist) may use Haiku.
-- Batch runs happen **nightly** (~03:00 Europe/Istanbul = 00:00 UTC) to conserve credits.
-- Every agentic stage has hard budget caps (max stories per run, max tool calls per story).
+- Nightly runs are an **agent loop** (`.github/scripts/night_loop.sh`): up to 6 cycles
+  of ingest → fresh `claude -p` session → verify → publish, from 01:00 until 04:20
+  Istanbul. Each cycle re-ingests feeds (catches items published during the night)
+  and re-checks `watching` ledger stories first. Cycle prompt: `.github/cycle-prompt.md`.
+- Budget caps: 4 stories/cycle, 12 stories/night, 15 searches/story, 120 turns/cycle.
+  Any usage-limit error ends the whole night (check_result.py exit 3); one crashed
+  cycle skips to the next. The night fails (red job + issue) only if zero cycles succeed.
 
 ## Architecture (5 file-based stages)
 

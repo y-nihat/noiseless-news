@@ -1,13 +1,24 @@
-"""Gate the workflow on the agent's actual outcome.
+"""Gate a night cycle on the agent's actual outcome.
 
-Reads the stream-json file produced by the agent step, finds the final result
-event, and fails (exit 1) when the agent never finished or reported an error —
-so a dead agent turns the job red instead of silently passing.
+Reads the stream-json file from one cycle and classifies it:
+  exit 0 — cycle completed successfully
+  exit 1 — cycle failed (crash, timeout, generic error)
+  exit 3 — usage/credit/rate limit: the supervisor must end the night
+
+A dead agent must never look green, and a credit exhaustion must be
+distinguishable from an ordinary error so the loop stops instead of retrying.
 """
 
 import json
 import os
+import re
 import sys
+
+USAGE_LIMIT = re.compile(
+    r"usage limit|rate.?limit|credit balance|out of credits?|quota exceeded"
+    r"|limit reached|insufficient credit",
+    re.IGNORECASE,
+)
 
 
 def main() -> int:
@@ -30,7 +41,7 @@ def main() -> int:
         return 1
 
     if result is None:
-        print("FAIL: no result event — the agent died mid-run")
+        print("FAIL: no result event — the agent died mid-cycle (crash or timeout)")
         return 1
 
     summary = (
@@ -43,12 +54,20 @@ def main() -> int:
     step_summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if step_summary:
         with open(step_summary, "a", encoding="utf-8") as f:
-            f.write(f"### Nightly agent result\n\n`{summary}`\n")
+            f.write(f"- cycle result: `{summary}`\n")
 
     if result.get("is_error"):
+        # Only the result event's own fields — not article content — decide this.
+        result_text = json.dumps(
+            {k: result.get(k) for k in ("subtype", "result", "error", "message")}
+        )
+        if USAGE_LIMIT.search(result_text):
+            print("USAGE LIMIT: ending the night")
+            return 3
         print("FAIL: agent reported an error")
         return 1
-    print("agent completed OK")
+
+    print("cycle completed OK")
     return 0
 
 
