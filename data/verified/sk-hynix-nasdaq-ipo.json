@@ -1,0 +1,63 @@
+{
+  "slug": "sk-hynix-nasdaq-ipo",
+  "checked_at": "2026-07-11T00:45:00+00:00",
+  "method": "Fresh verifier sub-agent (web search + live fetch of stockanalysis.com for first-day trading data) followed by an independent adversarial falsifier sub-agent tasked with refuting the raise amount, the IPO superlatives, and the AI framing; both cross-checked separately and reconciled by this cycle's editor.",
+  "origin_items": [
+    "data/raw/2026-07-10/cnbc-technology.json / techcrunch-ai.json (SK Hynix Nasdaq listing coverage, surfaced via search rather than raw ingest -- triaged as a deferred candidate from an earlier cycle's SK Hynix IPO lead)"
+  ],
+  "claims": [
+    {
+      "text": "SK Hynix began trading on Nasdaq under ticker SKHY (via ADRs) on 10 July 2026, raising $26.5 billion -- the largest-ever US listing by a foreign company, surpassing Alibaba's $25 billion 2014 IPO",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed independently by Korea Herald, Al Jazeera, JoongAng Daily, CNBC, Tom's Hardware. Falsifier reconstructed the timeline of conflicting dollar figures: $29B (24 June filing target) and $28B (6 July roadshow estimate) were both pre-pricing marketing ranges superseded by the final $26.5B priced 9-10 July -- not reporting errors. Foreign-company-IPO superlative (beats Alibaba's $25B 2014 IPO) confirmed across 4+ independent outlets.",
+      "evidence": [
+        "https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html",
+        "https://www.koreaherald.com/article/10804650",
+        "https://www.aljazeera.com/economy/2026/7/10/south-koreas-sk-hynix-raises-26-5bn-in-record-breaking-us-ipo",
+        "https://www.tomshardware.com/tech-industry/semiconductors/sk-hynix-raises-a-record-usd26-5-billion-in-historic-u-s-ipo-south-korean-memory-giant-to-fund-massive-hbm-manufacturing-expansions"
+      ]
+    },
+    {
+      "text": "SK Hynix's ADRs closed their first trading day up about 13%, from the $149 offer price to $168.01",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Offer price ($149) confirmed as the company-disclosed primary figure across all sources. Close price and percentage independently verified via a live fetch of stockanalysis.com/stocks/skhy/ (timestamped 'At close: Jul 10, 2026': open $170, high $177, close $168.01, +12.76%), consistent with CNBC and Yahoo Finance/AP wire reporting. Falsifier confirmed this figure survives independent live-data cross-check.",
+      "evidence": [
+        "https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html",
+        "https://stockanalysis.com/stocks/skhy/"
+      ]
+    },
+    {
+      "text": "The listing is the second-largest IPO in US history overall, behind SpaceX's $85.7 billion Nasdaq debut in June 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier specifically hunted for a bigger US IPO that would falsify this superlative (checked Alibaba, Arm, Visa) and confirmed SpaceX's $85.7B Nasdaq debut (12 June 2026, post-over-allotment) is the only larger listing, per Nasdaq.com, Forbes and CNBC. Al Jazeera explicitly ranks SK Hynix second, naming SpaceX. Editorial requirement: SpaceX must be named whenever 'second-largest' is used, or readers will assume SK Hynix is the record holder outright.",
+      "evidence": [
+        "https://www.aljazeera.com/economy/2026/7/10/south-koreas-sk-hynix-raises-26-5bn-in-record-breaking-us-ipo",
+        "https://www.forbes.com/sites/tylerroush/2026/06/15/spacex-says-historic-ipo-raised-more-than-85-billion/"
+      ]
+    },
+    {
+      "text": "SK Hynix will use IPO proceeds to fund a new fab in Yongin and an advanced-packaging plant in Cheongju, expanding production of HBM (high-bandwidth memory), which supplies Nvidia's H100, H200 and Blackwell AI chips",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via two independent Korean financial-press outlets (Korea Herald, Seoul Economic Daily/en.sedaily.com) with company-disclosure-level investment-schedule detail (Yongin ~31tn won, Cheongju P&T7 ~19tn won, plus EUV equipment spend). SK Hynix's role as a primary HBM supplier for Nvidia's AI accelerators is well-established industry fact, consistent with trade press (Tom's Hardware) and the company's own investor materials.",
+      "evidence": [
+        "https://www.koreaherald.com/article/10804650",
+        "https://www.tomshardware.com/tech-industry/semiconductors/sk-hynix-raises-a-record-usd26-5-billion-in-historic-u-s-ipo-south-korean-memory-giant-to-fund-massive-hbm-manufacturing-expansions"
+      ]
+    },
+    {
+      "text": "SK Hynix describes itself as holding the majority of the global HBM market, though the precise share (reported anywhere from roughly 50% to 62% depending on quarter and shipment-vs-revenue basis) is the company's own framing rather than an independently agreed figure",
+      "type": "business",
+      "verdict": "vendor-claim",
+      "reasoning": "Falsifier found specific percentage figures (56.4%, 62%) traced only to lower-tier industry trackers (Astute Group, Presenc.ai), not a Tier-0/1 research source (TrendForce/Counterpoint were not directly confirmable within budget). Directionally correct (majority share, Nvidia's primary HBM3E supplier) per SK Hynix's own investor materials, but downgraded from 'confirmed' to 'vendor-claim' and hedged with a range per the falsifier's explicit recommendation rather than stating a bare unqualified percentage.",
+      "evidence": [
+        "https://www.tomshardware.com/tech-industry/semiconductors/sk-hynix-raises-a-record-usd26-5-billion-in-historic-u-s-ipo-south-korean-memory-giant-to-fund-massive-hbm-manufacturing-expansions",
+        "https://news.skhynix.com/2026-market-outlook-focus-on-the-hbm-led-memory-supercycle/"
+      ]
+    }
+  ],
+  "notes": "Adversarial pass specifically targeted (1) the conflicting $26.5B/$28B/$29B figures -- resolved as a pricing-timeline issue, not an error, (2) the 'biggest US IPO ever' superlative -- found false unqualified (SpaceX is larger) and required naming SpaceX whenever 'second-largest' is used, (3) stock performance -- confirmed via independent live fetch, (4) HBM market-share percentage -- downgraded to vendor-claim and hedged with a range since only lower-tier trackers offered a specific number, (5) AI-story framing -- both agents agreed this is a genuine AI-infrastructure story (HBM directly gates Nvidia GPU supply) but recommended leading with the memory/semiconductor-market framing rather than overselling an 'AI story' label, which the published article follows (title and lede lead with the IPO and memory-chip facts, with the AI-chip angle stated as the concrete use of proceeds). The ~7x oversubscription figure is a single-origin wire/company disclosure re-reported by multiple outlets -- stated in article prose as a factual disclosure, not given a separate claims-list entry with an inflated evidence count. 7 web searches (verifier) + 8 web searches/fetches (falsifier) used, both well under the 15-search per-story budget; no usage-limit errors."
+}

@@ -371,3 +371,157 @@ remain) — again deliberately scoped to a bounded update rather than a fresh
 verify+falsify pipeline, given ~30 minutes of runway. 8 web searches/fetches
 total this cycle (2 for the watching recheck, 6 for the update), no
 usage-limit errors.
+
+## Cycle 4 — 00:40-01:07 UTC
+
+Fresh ingest since cycle 3 was minimal (`data/raw/2026-07-11/`: TechCrunch,
+The Verge, r/LocalLLaMA, Apple ML Research — 4 items total; the TechCrunch and
+Verge items are the same Meta-Muse-removal story cycle 3 already actioned as
+an update). ~30 minutes of runway to the 01:10 UTC deadline, so this cycle ran
+one bounded but full verify+falsify+publish pass rather than several partial
+actions.
+
+- **Watching: `meta-ai-chip-production`** — quick recheck (1 site-scoped web
+  search excluding reuters.com, to surface anything genuinely independent).
+  Fifth recheck across tonight's two invocations with an unchanged result: all
+  coverage still traces to the single 9 July Reuters exclusive/internal memo,
+  no Meta statement or filing. Gate still fails. Ledger note updated. Given
+  five consecutive identical rechecks tonight, flagging in "For the owner"
+  below that further per-cycle rechecks are low-value until September 2026
+  (claimed production start) or a genuinely new source appears.
+- Tier-0 sweep: skipped — a full sweep already ran in the night's cycle 1, and
+  this cycle's fresh ingest was too small (4 items, none from directly-
+  fetchable Tier-0 html sources) to justify a re-fetch pass.
+- **Triage:** the fresh 2026-07-11 ingest had no new uncovered candidate (the
+  two press items duplicate cycle 3's already-actioned Meta Muse update; the
+  r/LocalLLaMA and Apple ML Research items are a hobbyist tool post and an
+  academic paper, neither a fit for this site). Rather than triage from raw
+  ingest alone, re-checked the four candidates earlier cycles had explicitly
+  deferred (SK Hynix IPO, OpenAI power-consolidation-under-Brockman, EU/Meta
+  DSA "addictive design" finding, China warns on Claude Code) to see if any
+  now clears the publishing gate with fresh sourcing:
+  - **SK Hynix's Nasdaq IPO** — now clearly cleared: the IPO priced and the
+    stock debuted on 9-10 July with strong, independent multi-outlet
+    confirmation (Korea Herald, Al Jazeera, CNBC, Tom's Hardware, Seoul
+    Economic Daily) plus live-fetchable trading data. SELECTED, VERIFIED,
+    PUBLISHED. Slug: `sk-hynix-nasdaq-ipo`.
+  - OpenAI power-consolidation-under-Brockman — re-checked briefly via search;
+    still primarily one CNBC-originated story re-reported by Yahoo/MSN/
+    techbuzz.ai/gadgetreview without a clearly separate reporting chain — left
+    deferred, not actioned this cycle (would need a dedicated verify pass to
+    confirm or rule out independence).
+  - EU/Meta DSA "addictive design" finding and China-warns-on-Claude-Code —
+    not re-checked this cycle (no time); status unchanged from cycle 1's
+    assessment (scope question and single-source respectively).
+- **Verify + publish (1 story, full multi-agent protocol):**
+  - `sk-hynix-nasdaq-ipo`: dispatched a verifier and an independent adversarial
+    falsifier in parallel (rather than sequentially) to fit the ~30-minute
+    window without rushing either pass. Verifier confirmed the listing, the
+    $26.5B raise, the "largest-ever foreign-company US IPO" superlative, the
+    first-day stock move (via a live fetch of stockanalysis.com), the Yongin/
+    Cheongju proceeds use, and the majority-HBM-share claim (as a vendor
+    claim). Falsifier's most consequential finds: (1) resolved conflicting
+    $26.5B/$28B/$29B figures across outlets as a pricing-timeline artifact
+    (pre-deal targets vs. final price), not an error — kept only $26.5B as the
+    headline figure; (2) caught that an unqualified "biggest US IPO ever"
+    claim would be **false** — SpaceX's $85.7B June 2026 Nasdaq debut is
+    larger — so the article states "second-largest ... behind SpaceX" rather
+    than an unqualified superlative; (3) downgraded the HBM-market-share
+    percentage from a bare confirmed figure to a hedged vendor-claim, since
+    the specific percentages traced only to lower-tier industry trackers, not
+    a Tier-0/1 research firm; (4) confirmed the stock-move figures via an
+    independent live-data fetch; (5) judged the AI framing genuine but
+    recommended leading with the memory/semiconductor-market framing rather
+    than an oversold "AI story" label, which the published article follows.
+    Final: GO, published EN + TR with the falsifier's corrections applied.
+- **Discovery loop:** logged 4 new evidence domains to
+  `data/ledger/source_candidates.json` (koreaherald.com, en.sedaily.com,
+  tomshardware.com, stockanalysis.com — the last as a live financial-data
+  source rather than an editorial one) with Tier-2 registration proposals and
+  context.
+
+Budget note: 1/4 stories published this cycle (3/12 used for the night, 9
+remain — night budget was never going to be exhausted; the binding constraint
+all night was runway per cycle, not the 12-story cap). Verifier used 8
+searches/fetches, falsifier used 11 (both within the 15/story cap; ran in
+parallel rather than sequentially to fit the ~30-minute window). No
+usage-limit errors encountered.
+
+## Night summary
+
+Across all cycles tonight (two separate night-loop invocations on the
+2026-07-10 UTC calendar date, per the naming-collision note in cycle 1's "For
+the owner" section): **5 stories published** —
+`apple-openai-trade-secrets-lawsuit`, `fidji-simo-steps-down-openai`,
+`sk-hynix-nasdaq-ipo` (new articles) plus two policy §8 updates to existing
+articles (`gpt-5-6-launch`: ChatGPT Work launch + Altman token-efficiency
+claim; `meta-muse-image-consent`: full feature removal, not just opt-in). Zero
+stories were published in the first, ~09:00 UTC invocation (both its cycles
+had only ~20-minute windows, leaving room only for the watching recheck).
+
+`meta-ai-chip-production` remains the only open watching entry, now rechecked
+five times tonight across both invocations with an unchanged result: every
+piece of coverage (dozens of outlets by this point) traces to one 9 July
+Reuters exclusive citing an unnamed internal Meta memo, and Meta has not
+commented. The TrendForce/Commercial-Times MTIA-3 lead was reconciled in the
+night's first cycle, confirming a narrower sub-claim (chip generation, TSMC
+3nm node, 2H26 timing) but not the full bundled claim set (Iris name,
+September date, 7GW→14GW capacity, Broadcom-through-2029 terms) — that
+narrower, publishable sub-story remains flagged but unactioned across the
+whole night.
+
+Coverage gaps: three candidates were repeatedly identified as plausible but
+never got a dedicated verify pass across six total cycles tonight — the EU/
+Meta DSA "addictive design" finding (solid sourcing, but borderline AI-news
+scope), OpenAI's power consolidation under Greg Brockman (single-CNBC-origin
+as far as every recheck tonight found, never given a dedicated
+independence-check pass), and China's warning about Claude Code (single-
+source as triaged, never rechecked). None of these were dropped for cause —
+they simply never reached the front of the queue in a cycle with enough
+runway.
+
+## For the owner
+
+1. Tonight ran across two separate night-loop invocations on the same UTC
+   calendar date (~09:06-09:36 UTC, then ~22:55 UTC-01:07 UTC) — see cycle 1's
+   note on the filename collision. Worth confirming whether double-running is
+   expected during this tuning period, and whether the run-report filename
+   should key off the Istanbul calendar date or a run-start timestamp to avoid
+   collisions going forward.
+2. `meta-ai-chip-production` has now been rechecked five times tonight with an
+   identical result every time — no independent source, no Meta comment. Is
+   it worth setting an explicit "stop rechecking every cycle" rule (e.g. only
+   recheck once per night, or only after N days) once a watching entry has
+   had this many consecutive no-change rechecks, so future cycles spend that
+   budget on triage/verification instead? Separately: is the owner interested
+   in the narrower, now-corroborated sub-story ("Meta's next MTIA chip enters
+   production on TSMC 3nm in 2H26," backed by TrendForce independent of the
+   Reuters memo) as its own smaller publishable piece?
+3. `sk-hynix-nasdaq-ipo` sits at the edge of "AI news" scope — it's
+   substantively a memory-chip/equity-markets story where AI demand is the
+   underlying driver rather than the story's core identity (both this cycle's
+   verifier and falsifier flagged this independently). Was this the right
+   call to publish, or should chip-supply-chain/financial stories like this
+   require a higher bar for "is this really AI news" before being triaged in
+   at all?
+4. OpenAI's power consolidation under Greg Brockman has now appeared in
+   triage notes across multiple cycles tonight without ever getting a
+   dedicated verify pass — every recheck found it re-reported from what looks
+   like one CNBC origin, but no cycle had the runway to confirm or rule out
+   independence properly. Worth prioritizing in a future cycle with more
+   runway, given the story's significance (a major executive-power shift
+   ahead of OpenAI's IPO)?
+5. Multiple low-quality aggregator sites (cryptobriefing, qz.com, kucoin,
+   unboxfuture.com, mlq.ai, yournews.com, letsdatascience.com) have now
+   recurred across nearly every cycle tonight purely as re-reports of wire
+   content with no original reporting, on both the Meta chip story and the SK
+   Hynix IPO. This was flagged in earlier cycles too — worth an explicit
+   discovery.yaml blocklist entry so future cycles stop re-spending search
+   budget triaging the same noise sources night after night?
+
+## Loop supervisor footer
+
+- Cycles run this invocation: 4 (successful: 4)
+- Stories published this invocation: 3 new + 2 updates (cap: 4/cycle, 12/night)
+- Usage-limit stop: no
+- Window closed: 2026-07-11T01:07Z (pending final commit/push)

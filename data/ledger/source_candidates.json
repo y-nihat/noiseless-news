@@ -25,41 +25,51 @@
       "sample_urls": [
         "https://www.infoworld.com/article/4194895/spacexai-launches-grok-4-5-touts-lower-coding-task-costs-than-ai-rivals.html"
       ],
-      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md §1) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
+      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md \u00a71) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
     },
     {
       "domain": "metr.org",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://metr.org/blog/2026-06-26-gpt-5-6-sol"],
-      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md §3) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
+      "sample_urls": [
+        "https://metr.org/blog/2026-06-26-gpt-5-6-sol"
+      ],
+      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md \u00a73) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
     },
     {
       "domain": "vals.ai",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://www.vals.ai/models/meta_muse_spark_1_1"],
+      "sample_urls": [
+        "https://www.vals.ai/models/meta_muse_spark_1_1"
+      ],
       "context": "Independent third-party AI benchmark/leaderboard org, confirmed real via direct fetch (not hallucinated). Used as the only genuinely independent capability evidence in meta-muse-spark-1-1. IMPORTANT: the leaderboard updates continuously -- a first-pass verifier cited stale/wrong figures from memory/search-snippet reconstruction, and only a direct live re-fetch during adversarial review caught the discrepancy. Recommend registering as Tier 2, but any future citation must re-fetch live rather than recall previous figures."
     },
     {
       "domain": "developer.meta.com",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://developer.meta.com/ai/resources/blog/build-with-muse-spark/"],
+      "sample_urls": [
+        "https://developer.meta.com/ai/resources/blog/build-with-muse-spark/"
+      ],
       "context": "Meta's own developer blog, same publisher as the already-registered ai.meta.com (Meta AI Blog), used for pricing/API details the main blog post omitted. Recommend adding as a second Tier-0 URL under Meta's entry rather than a new source, since it's the same institutional origin."
     },
     {
       "domain": "help.instagram.com",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://help.instagram.com/652943337035777"],
+      "sample_urls": [
+        "https://help.instagram.com/652943337035777"
+      ],
       "context": "Meta/Instagram's own help-center documentation, directly load-bearing for the Muse Image opt-out mechanism claim. Tier 0, same corporate origin as Meta AI Blog but a distinct product-documentation domain -- worth a registry note since it may recur for Meta product-behavior stories."
     },
     {
       "domain": "news.bloomberglaw.com",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://news.bloomberglaw.com/privacy-and-data-security/new-york-times-seeks-sanctions-against-openai-in-copyright-case"],
+      "sample_urls": [
+        "https://news.bloomberglaw.com/privacy-and-data-security/new-york-times-seeks-sanctions-against-openai-in-copyright-case"
+      ],
       "context": "Legal-specialty press with detailed, accurate court-filing coverage (case number, docket details) for the NYT v. OpenAI sanctions motion. Likely to be useful again for AI litigation stories, which are recurring (copyright suits, safety liability). Propose Tier 1-2 candidate."
     },
     {
@@ -76,7 +86,9 @@
       "domain": "euronews.com",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://www.euronews.com/my-europe/2026/07/07/brussels-pitches-ai-cybersecurity-plan-amid-dependence-on-us-models"],
+      "sample_urls": [
+        "https://www.euronews.com/my-europe/2026/07/07/brussels-pitches-ai-cybersecurity-plan-amid-dependence-on-us-models"
+      ],
       "context": "Independent quality press with strong EU policy/regulatory coverage including named MEP quotes and reaction framing. Useful for EU AI Act / regulatory stories going forward. Propose Tier 2."
     },
     {
@@ -103,7 +115,9 @@
       "domain": "9to5mac.com",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://9to5mac.com/2026/07/09/openai-is-discontinuing-chatgpt-atlas-its-standalone-desktop-browser/"],
+      "sample_urls": [
+        "https://9to5mac.com/2026/07/09/openai-is-discontinuing-chatgpt-atlas-its-standalone-desktop-browser/"
+      ],
       "context": "Apple/tech-focused outlet; independently corroborated the OpenAI Atlas shutdown (sourced from the same James Sun X post as Android Authority, but written independently). Propose Tier 2."
     },
     {
@@ -120,15 +134,55 @@
       "domain": "rdworldonline.com",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://www.rdworldonline.com/openais-gpt-5-6-sol-sets-a-coding-record-its-own-system-card-says-it-cheats/"],
+      "sample_urls": [
+        "https://www.rdworldonline.com/openais-gpt-5-6-sol-sets-a-coding-record-its-own-system-card-says-it-cheats/"
+      ],
       "context": "R&D World; long-running tech/science trade outlet, confirmed legitimate. Carried the METR reward-hacking finding accurately. Propose Tier 2."
     },
     {
       "domain": "artificialanalysis.ai",
       "first_seen": "2026-07-09",
       "occurrences": 1,
-      "sample_urls": ["https://artificialanalysis.ai/articles/gpt-5-6-has-landed"],
+      "sample_urls": [
+        "https://artificialanalysis.ai/articles/gpt-5-6-has-landed"
+      ],
       "context": "Independent AI benchmark tracker (distinct from vals.ai). Used for partial corroboration of GPT-5.6 coding benchmark claims. Propose Tier 2 alongside vals.ai as an independent-benchmark source, with the same live-recheck caveat."
+    },
+    {
+      "domain": "koreaherald.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.koreaherald.com/article/10804650"
+      ],
+      "context": "English-language South Korean daily with named reporters and company-disclosure-level financial detail (SK Hynix IPO use-of-proceeds breakdown). Used as an independent Tier-2 source for sk-hynix-nasdaq-ipo. Propose Tier 2, type html."
+    },
+    {
+      "domain": "en.sedaily.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://en.sedaily.com/finance/2026/07/10/sk-hynix-debuts-on-nasdaq-with-record-foreign-ipo-targets"
+      ],
+      "context": "English edition of Seoul Economic Daily, a Korean financial-press outlet with distinct investment-schedule detail (Yongin/Cheongju fab spend by year) not just a wire re-print. Used alongside Korea Herald as a second independent source for sk-hynix-nasdaq-ipo proceeds claims. Propose Tier 2, type html."
+    },
+    {
+      "domain": "tomshardware.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.tomshardware.com/tech-industry/semiconductors/sk-hynix-raises-a-record-usd26-5-billion-in-historic-u-s-ipo-south-korean-memory-giant-to-fund-massive-hbm-manufacturing-expansions"
+      ],
+      "context": "Established tech-hardware trade outlet with named authors and original semiconductor-industry framing (not a wire re-print). Used for sk-hynix-nasdaq-ipo. Propose Tier 2, type rss (feed likely available, unverified this run)."
+    },
+    {
+      "domain": "stockanalysis.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://stockanalysis.com/stocks/skhy/"
+      ],
+      "context": "Live financial-data source (not editorial), used for a direct timestamped live-fetch of first-day trading data per the live-fetch rule for third-party numbers (sk-hynix-nasdaq-ipo). Propose as a data-source reference rather than a Tier 2 editorial source -- useful for future stock/market claims needing a live check."
     }
   ],
   "flagged_not_recommended": [
@@ -146,8 +200,8 @@
     }
   ],
   "query_notes": [
-    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release — worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
-    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) — worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
+    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release \u2014 worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
+    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) \u2014 worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
     "'{company} response OR denies OR disputes {allegation}' was essential for the NYT/OpenAI litigation story to surface OpenAI's on-record denial alongside the plaintiffs' claims -- worth adding as an explicit claim_check_template for any business/legal claim type, not just capability claims.",
     "For business claims sourced to a single wire/leak (Reuters exclusive on Meta's AI chip), tracing every outlet's citation back to one origin was decisive in correctly failing that story's gate -- a reminder that broad press pickup of a single leak is not multi-source confirmation.",
     "Tier-0 html sweep (Anthropic, Meta, Mistral, Cohere, Ai2, NIST, EU Commission) via WebFetch worked well this run and surfaced 3 of the 7 published stories directly (Anthropic Reflect, Meta Muse Image, Meta Muse Spark, EU cybersecurity plan) that would otherwise have relied only on secondary press framing -- confirms this sweep is worth the run-time cost every night, not just when a Tier-2 story needs it.",
@@ -158,42 +212,54 @@
       "domain": "courtlistener.com",
       "first_seen": "2026-07-10",
       "occurrences": 1,
-      "sample_urls": ["https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/"],
+      "sample_urls": [
+        "https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/"
+      ],
       "context": "Free public court-record aggregator (RECAP/PACER mirror) -- used as the primary-document anchor for the Apple v. OpenAI trade-secrets filing (case number, court, parties). Direct full-page fetch 403'd for both verifier and falsifier agents, but the docket page's search-index metadata was independently usable to confirm case identity. Strong candidate for Tier 0/1 registration given how often AI litigation is recurring in coverage (this is the second litigation story this week after nyt-openai-copyright-evidence-dispute)."
     },
     {
       "domain": "appleinsider.com",
       "first_seen": "2026-07-10",
       "occurrences": 1,
-      "sample_urls": ["https://appleinsider.com/articles/26/07/10/apple-sues-openai-previous-vp-of-product-design-over-mass-ip-theft"],
+      "sample_urls": [
+        "https://appleinsider.com/articles/26/07/10/apple-sues-openai-previous-vp-of-product-design-over-mass-ip-theft"
+      ],
       "context": "Apple-focused trade press with named authors; carried the most granular detail (metal-finishing technique, vendor-sourcing allegations) not found elsewhere in the Apple v. OpenAI coverage. Propose Tier 2."
     },
     {
       "domain": "pymnts.com",
       "first_seen": "2026-07-10",
       "occurrences": 1,
-      "sample_urls": ["https://www.pymnts.com/news/artificial-intelligence/2026/openai-applications-chief-fidji-simo-steps-down-due-to-illness/"],
+      "sample_urls": [
+        "https://www.pymnts.com/news/artificial-intelligence/2026/openai-applications-chief-fidji-simo-steps-down-due-to-illness/"
+      ],
       "context": "Business/fintech-adjacent trade press; directly quoted Fidji Simo's own post and Altman's reply, fetched cleanly when CNBC/Axios/Bloomberg were blocked. Propose Tier 2."
     },
     {
       "domain": "benzinga.com",
       "first_seen": "2026-07-10",
       "occurrences": 1,
-      "sample_urls": ["https://www.benzinga.com/markets/tech/26/07/60377452/openai-applications-chief-fidji-simo-steps-down-from-full-time-role-over-chronic-illness-recovery-says-i-failed-to-make-this-decision-many-times-before"],
+      "sample_urls": [
+        "https://www.benzinga.com/markets/tech/26/07/60377452/openai-applications-chief-fidji-simo-steps-down-from-full-time-role-over-chronic-illness-recovery-says-i-failed-to-make-this-decision-many-times-before"
+      ],
       "context": "Markets/business news outlet; independently fetchable, quoted Simo's post directly and verbatim -- useful when other outlets are paywalled/blocked. Propose Tier 2."
     },
     {
       "domain": "macrumors.com",
       "first_seen": "2026-07-10",
       "occurrences": 1,
-      "sample_urls": ["https://www.macrumors.com/2026/07/10/apple-sues-openai/"],
+      "sample_urls": [
+        "https://www.macrumors.com/2026/07/10/apple-sues-openai/"
+      ],
       "context": "Apple-focused trade press, established editorial standards. Corroborated the Apple v. OpenAI filing. Propose Tier 2."
     },
     {
       "domain": "axios.com",
       "first_seen": "2026-07-10",
       "occurrences": 1,
-      "sample_urls": ["https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"],
+      "sample_urls": [
+        "https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft"
+      ],
       "context": "Major independent news outlet; corroborated the February 2026 warning-letter detail in the Apple v. OpenAI story via what reads as separate AP-wire-sourced reporting, not just a relay. Propose Tier 2."
     }
   ]
