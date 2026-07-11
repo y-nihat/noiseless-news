@@ -238,5 +238,25 @@
     "published": "2026-07-11T18:21:18+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm in a position to upgrade from the classic dual 3090 setup to something that can run the next step up, eg 100-110GB+ model files.</p> <p>I've got an asus x299 ws pro and a 1600w PSU, with 128GB ram, and I want to add to my 3090s, rather than replace them.</p> <p>I'm trying to weigh up modded 4090s (2x48GB), 2x A6000s, or 2x5090s.</p> <p>Anybody made similar hybrid setups with these? Any thoughts on what's going to get me to where I want to be (which is basically a useable quant of DeepSeek V4 flash, at this point).</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/youcloudsofdoom\"> /u/youcloudsofdoom </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1utrk7f/upgrading_from_2x_3090_what_should_i_add_2x/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1utrk7f/upgrading_from_2x_3090_what_should_i_add_2x/\">[comments]</a></span>",
     "fetched_at": "2026-07-11T22:29:11.677014+00:00"
+  },
+  {
+    "id": "bbc4a5b254f09f15",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Here's your recipes for models for the most popular hardware",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uty0i8/heres_your_recipes_for_models_for_the_most/",
+    "published": "2026-07-11T22:45:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I occasionally comment and people ask how do I run something, how fast the model x on hardware y.</p> <p>There you go. Added a separate website page for recipes.</p> <p>Filter by hardware you have and see all the recipes.</p> <p>No recipe you created or you run? Submit it.</p> <p>Running some recipe from the list? Press I run this recipe, so people would see which recipes are actually used.</p> <p>Cheers.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/totosse17\"> /u/totosse17 </a> <br /> <span><a href=\"https://llmrequirements.com/recipes\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uty0i8/heres_your_recipes_for_models_for_the_most/\">[comments]</a></span>",
+    "fetched_at": "2026-07-11T23:04:11.885298+00:00"
+  },
+  {
+    "id": "1afa234f4b7a659e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[not mine] costs",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1utybih/not_mine_costs/",
+    "published": "2026-07-11T22:59:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1utybih/not_mine_costs/\"> <img alt=\"[not mine] costs\" src=\"https://preview.redd.it/326a7bt8loch1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=11c764e5fdd9468308c3487920a38841e2996ca6\" title=\"[not mine] costs\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Saw this on a random social media post. I believe what we are seeing here is two sxm2 gpus, right? V100 or a100?</p> <p>Assuming two v100 with 32gb each, can you get nvlink working with these weird aftermarket base boards?</p> <p>Costs, experience, regrets?</p> <p>Not trying to build a similar case, but i am curious to compare the costs against a similar consumer/gaming setup.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SnowyOwl72\"> /u/SnowyOwl72 </a> <br /> <span><a href=\"https://i.redd.it/326a7bt8loch1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1utybih/not_mine_costs/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-11T23:04:11.885298+00:00"
   }
 ]
