@@ -9,7 +9,7 @@ from pathlib import Path
 import yaml
 
 VALID_TIERS = {0, 1, 2, 3}
-VALID_TYPES = {"rss", "arxiv_api", "html", "youtube_channel"}
+VALID_TYPES = {"rss", "arxiv_api", "html", "youtube_channel", "google_news_query"}
 # Lifecycle statuses — see policy/source-lifecycle.md. Only active sources are ingested.
 VALID_STATUSES = {"active", "candidate", "retired"}
 # Tier 3 is discovery-only and may never confirm a claim (policy/verification.md §1).

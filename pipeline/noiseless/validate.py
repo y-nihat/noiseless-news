@@ -12,10 +12,9 @@ from dataclasses import dataclass
 import feedparser
 import httpx
 
-from noiseless.ingest import _delay_for, polite_get
+from noiseless.ingest import FEED_TYPES, _delay_for, polite_get
 from noiseless.sources import Source
 
-FEED_TYPES = {"rss", "arxiv_api", "youtube_channel"}
 MIN_HTML_BYTES = 2048
 
 

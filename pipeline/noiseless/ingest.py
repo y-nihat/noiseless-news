@@ -22,6 +22,10 @@ USER_AGENT = "noiseless-news/0.1 (autonomous news verification; +https://github.
 ARXIV_DELAY_SECONDS = 3.0
 DEFAULT_DELAY_SECONDS = 1.0
 
+# Source types that serve feed XML the ingest stage can parse directly.
+# (google_news_query and youtube_channel URLs are ordinary RSS/Atom feeds.)
+FEED_TYPES = {"rss", "arxiv_api", "google_news_query", "youtube_channel"}
+
 _TRACKING_PARAMS = {"fbclid", "gclid", "mc_cid", "mc_eid"}
 
 
@@ -58,7 +62,7 @@ def normalize_entry(source: Source, entry, fetched_at: str) -> dict | None:
     # feedparser can synthesize a non-HTTP "link" from an Atom <id> (e.g. urn:uuid:...)
     if not link.startswith(("http://", "https://")) or not title:
         return None
-    return {
+    item = {
         "id": item_id(link),
         "source": source.name,
         "tier": source.tier,
@@ -68,6 +72,12 @@ def normalize_entry(source: Source, entry, fetched_at: str) -> dict | None:
         "summary": (entry.get("summary") or "").strip(),
         "fetched_at": fetched_at,
     }
+    # Aggregator feeds (Google News) name the origin outlet in <source> — keep it
+    # so triage can apply independence rules without fetching the redirect.
+    origin = entry.get("source")
+    if origin and origin.get("title"):
+        item["via_outlet"] = origin["title"]
+    return item
 
 
 def parse_feed_text(source: Source, text: str, fetched_at: str) -> list[dict]:
@@ -108,9 +118,9 @@ def polite_get(client: httpx.Client, url: str, retry_delay: float = 30.0) -> htt
 
 
 def fetch_source(source: Source, client: httpx.Client, fetched_at: str) -> list[dict]:
-    """Fetch one feed-like source. Non-feed types (html, youtube_channel) are skipped
-    here — they get dedicated fetchers in a later stage."""
-    if source.type not in {"rss", "arxiv_api"}:
+    """Fetch one feed-like source. html sources are the night agent's sweep targets,
+    not ingest's."""
+    if source.type not in FEED_TYPES:
         return []
     response = polite_get(client, source.url)
     response.raise_for_status()
@@ -154,7 +164,7 @@ def ingest_all(
                 continue
             if source.status != "active":
                 continue
-            if source.type not in {"rss", "arxiv_api"}:
+            if source.type not in FEED_TYPES:
                 continue
             try:
                 items = fetch_source(source, client, fetched_at)

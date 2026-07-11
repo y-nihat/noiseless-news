@@ -73,6 +73,29 @@ class TestIngestAll:
         assert summary == {}
 
 
+class TestAggregatorFeeds:
+    GNEWS_FIXTURE = """<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>AI - Google News</title>
+<item>
+  <title>Lab X ships model Y - Example Tribune</title>
+  <link>https://news.google.com/rss/articles/abc123</link>
+  <pubDate>Tue, 08 Jul 2026 10:00:00 GMT</pubDate>
+  <source url="https://tribune.example.com">Example Tribune</source>
+</item>
+</channel></rss>
+"""
+
+    def test_google_news_entry_keeps_origin_outlet(self):
+        source = Source(
+            name="GNews: model releases", tier=3, type="google_news_query",
+            url="https://news.google.com/rss/search?q=x",
+        )
+        items = parse_feed_text(source, self.GNEWS_FIXTURE, fetched_at="2026-07-11T00:00:00+00:00")
+        assert len(items) == 1
+        assert items[0]["via_outlet"] == "Example Tribune"
+        assert items[0]["tier"] == 3
+
+
 class TestDedupe:
     def test_filters_seen_and_in_run_duplicates(self):
         items = [
