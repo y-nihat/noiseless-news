@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5aadde2c2b774b28",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Withdraw from ACL ARR and resubmit to a workshop? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uth7j8/withdraw_from_acl_arr_and_resubmit_to_a_workshop_d/",
+    "published": "2026-07-11T11:09:15+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey guys,</p> <p>I received mediocre scores for my EMNLP paper during the May ACL ARR cycle: 2.5/3, 3/4, 2.5/4. The paper is in the Interpretability track. The reviewers had no larger issue with the methodology or the paper in general, but it seemed like they didn't fully get the so what of my paper. I've tried to clarify everything in my rebuttal, but I don't assume that the reviewers will engage in the discussion. With the current scores, I won't make it to the conference and likely not even into findings. Hence, I was thinking of withdrawing the paper, if scores don't improve, improve the presentation of my paper, and submit it to the BlackboxNLP workshop by the end of next week. </p> <p>As I'm a first year PhD student, I'm not so familiar with ACL ARR, and how best to approach this. Hence, I wanted to ask you guys. Should I keep the paper in the cycle and hope for the best (or switch to the conference at a later stage) or should I withdraw it directly, adjust it slightly, and head directly to the workshop?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/H4RZ3RK4S3\"> /u/H4RZ3RK4S3 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uth7j8/withdraw_from_acl_arr_and_resubmit_to_a_workshop_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uth7j8/withdraw_from_acl_arr_and_resubmit_to_a_workshop_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "d57ea5890721f249",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Predicting human preference for generated image pairs using HPSv3 [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1utdj1f/predicting_human_preference_for_generated_image/",
+    "published": "2026-07-11T07:36:36+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey! I'm looking for ways to predict human preference for a project I'm building. (imagebench.ai)</p> <p>I've tryed <strong>HPSv3</strong>, <a href=\"https://github.com/MizzenAI/HPSv3\">https://github.com/MizzenAI/HPSv3</a> and made post about it here:</p> <p><a href=\"https://imagebench.ai/blog/does-the-score-match-your-eye\">https://imagebench.ai/blog/does-the-score-match-your-eye</a></p> <p>It looks ok, but have many limitation as you can see in my post. </p> <p>My question. Have you tried other human preference model and found one that would be better then <strong>HPSv3?</strong> </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dh7net\"> /u/dh7net </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1utdj1f/predicting_human_preference_for_generated_image/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1utdj1f/predicting_human_preference_for_generated_image/\">[comments]</a></span>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "adc2a99ddcb65a7e",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "VultronRetriever family of models released on HuggingFace![R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1utmxq8/vultronretriever_family_of_models_released_on/",
+    "published": "2026-07-11T15:22:33+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Thrilled to announce the VultronRetriever family of models, which were announced during Raise Summit Paris and demonstrated running Q&amp;A and embedding documents on the iPhone, fully offline! 📱</p> <p>Some highlights from the VultronRetriever model family:<br /> 🥇 Each model ranks #1 in its respective class on the MTEB Leaderboard, with VultronRetrieverPrime-8B as the global #1<br /> 📦 VultronRetrieverPrime-8B has up to 16x smaller index storage footprint and 12x higher throughput versus previous 9B-class leaders<br /> 🎯 VultronRetrieverCore-4.5B ranks second only to Prime on the leaderboard, outperforming models twice its size<br /> ⚡ VultronRetrieverFlash-0.8B outperforms models up to 5x its size, runs cool on edge devices, and indexes up to 60 images per minute, fully offline!<br /> 🐍 Deploying the VultronRetriever models with the Hydra Architecture gives you late interaction retrieval at unparalleled precision, plus generation at up to half the memory of comparable models<br /> 🧪 All models were trained on datasets with 0% cross-dataset duplication and 0% eval contamination, and show no overfitting on privately run MTEB evals</p> <p>Grab them, break them, make them your own 🔧<br /> 🏆 Prime: <a href=\"https://huggingface.co/vultr/VultronRetrieverPrime-Qwen3.5-8B\">https://huggingface.co/vultr/VultronRetrieverPrime-Qwen3.5-8B</a><br /> ⚙️ Core: <a href=\"https://huggingface.co/vultr/VultronRetrieverCore-Qwen3.5-4.5B\">https://huggingface.co/vultr/VultronRetrieverCore-Qwen3.5-4.5B</a><br /> ⚡ Flash: <a href=\"https://huggingface.co/vultr/VultronRetrieverFlash-Qwen3.5-0.8B\">https://huggingface.co/vultr/VultronRetrieverFlash-Qwen3.5-0.8B</a><br /> 📊 MTEB Leaderboard: <a href=\"https://mteb-leaderboard.hf.space/benchmark/ViDoRe(v3\">https://mteb-leaderboard.hf.space/benchmark/ViDoRe(v3)</a>)<br /> 🐍 Hydra Architecture: <a href=\"https://arxiv.org/abs/2603.28554\">https://arxiv.org/abs/2603.28554</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/madkimchi\"> /u/madkimchi </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1utmxq8/vultronretriever_family_of_models_released_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1utmxq8/vultronretriever_family_of_models_released_on/\">[comments]</a></span>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "081b68b4ef2d4480",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "How does *ACL conferences acceptance work [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1ut5krb/how_does_acl_conferences_acceptance_work_d/",
+    "published": "2026-07-11T00:47:14+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Even after getting ARR reviews and a meta review, how is the acceptance decided at the *ACL venues, because I have seen meta review 3.5 getting to findings and 3 getting to main or even getting rejected. Then what is the purpose of the overall score and recommendation? What do the conferences see when deciding?</p> <p>Do they only care about the metareview and their comments, or the whole set of reviews as well as along with the track in which the paper was submitted.</p> <p>Anyone knowing the process please kindly tell.</p> <p>Thank you [D]</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Happy_Today_3288\"> /u/Happy_Today_3288 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1ut5krb/how_does_acl_conferences_acceptance_work_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1ut5krb/how_does_acl_conferences_acceptance_work_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  }
+]

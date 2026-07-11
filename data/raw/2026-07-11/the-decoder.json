@@ -1,0 +1,102 @@
+[
+  {
+    "id": "75f39902379de99c",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "China's Orca world model matches specialized robotics systems without ever seeing a single action label",
+    "url": "https://the-decoder.com/chinas-orca-world-model-matches-specialized-robotics-systems-without-ever-seeing-a-single-action-label/",
+    "published": "2026-07-11T09:03:26+00:00",
+    "summary": "<p><img alt=\"A stylized kitchen featuring Nano Banana Pro and arrow diagrams showing the automated flow of dishes, pots, and utensils.\" class=\"attachment-full size-full wp-post-image\" height=\"1047\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/autonomous-kitchen-system-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        The Beijing Academy of Artificial Intelligence has released Orca, a world model that predicts abstract world states instead of tokens or pixels. Trained on 125,000 hours of video without a single action label, Orca matches the specialized π0.5 on five robotics tasks and could help ease the field's chronic data shortage.</p>\n<p>The article <a href=\"https://the-decoder.com/chinas-orca-world-model-matches-specialized-robotics-systems-without-ever-seeing-a-single-action-label/\">China&#039;s Orca world model matches specialized robotics systems without ever seeing a single action label</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "8fff84acdb45d7bd",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Meta's Muse Spark 1.1 outperforms GLM-5.2 in coding and costs slightly less",
+    "url": "https://the-decoder.com/metas-muse-spark-1-1-outperforms-glm-5-2-in-coding-and-costs-slightly-less/",
+    "published": "2026-07-11T08:28:12+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/meta_AI_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Meta's Muse Spark 1.1 scored 51 on the Artificial Analysis Intelligence Index, up eight points in three months. In coding, it edges past GLM-5.2 with a score of 71.3 at a lower cost of $0.26 per task. The hallucination rate dropped from 73 to 38 percent.</p>\n<p>The article <a href=\"https://the-decoder.com/metas-muse-spark-1-1-outperforms-glm-5-2-in-coding-and-costs-slightly-less/\">Meta&#039;s Muse Spark 1.1 outperforms GLM-5.2 in coding and costs slightly less</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "0ba2a431db1d8146",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI admits it \"didn't get everything quite right\" with ChatGPT Work launch and scrambles to fix UX and costs",
+    "url": "https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/",
+    "published": "2026-07-11T08:01:09+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"816\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/chatgpt_at_work_gpt4_office.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1456\" /></p>\n<p>        Following the launch of ChatGPT Work and GPT-5.6 Sol, OpenAI has acknowledged significant issues: excessive compute usage, a confusing transition to the desktop interface for chats and projects, an unclear distinction between Codex and ChatGPT Work, and regressions in existing workflows. In some cases, GPT-5.6 Sol reportedly deleted data on its own that the user had not authorized.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/\">OpenAI admits it &quot;didn&#039;t get everything quite right&quot; with ChatGPT Work launch and scrambles to fix UX and costs</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "dcb9b52126836242",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Apple sues OpenAI for allegedly running a \"coordinated campaign\" to steal trade secrets through poached employees",
+    "url": "https://the-decoder.com/apple-sues-openai-for-allegedly-running-a-coordinated-campaign-to-steal-trade-secrets-through-poached-employees/",
+    "published": "2026-07-11T06:56:20+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/apple_logo_neon_green.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Apple is suing OpenAI over systematic employee poaching and the alleged theft of trade secrets tied to unreleased products. According to the complaint, more than 400 ex-Apple employees now work at OpenAI, including former iPhone design chief Tang Tan. The lawsuit hits OpenAI right as it's building out its own hardware division, with its first product not expected to ship until 2027 at the earliest.</p>\n<p>The article <a href=\"https://the-decoder.com/apple-sues-openai-for-allegedly-running-a-coordinated-campaign-to-steal-trade-secrets-through-poached-employees/\">Apple sues OpenAI for allegedly running a &quot;coordinated campaign&quot; to steal trade secrets through poached employees</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "9475fac4ce71b697",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI's GPT-5.6 Sol autonomously post-trained the smaller Luna model with a \"fairly underspecified prompt\"",
+    "url": "https://the-decoder.com/openais-gpt-5-6-sol-autonomously-post-trained-the-smaller-luna-model-with-a-fairly-underspecified-prompt/",
+    "published": "2026-07-10T21:12:47+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/gpt_56_sol.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        According to OpenAI, GPT-5.6 Sol independently fine-tuned the smaller Luna model, triggered by a single \"fairly under-specified prompt.\" In OpenAI's internal RSI benchmark for recursive self-improvement, Sol scores 16.2 points higher than GPT-5.5. OpenAI believes the \"automated researcher\" is within reach.</p>\n<p>The article <a href=\"https://the-decoder.com/openais-gpt-5-6-sol-autonomously-post-trained-the-smaller-luna-model-with-a-fairly-underspecified-prompt/\">OpenAI&#039;s GPT-5.6 Sol autonomously post-trained the smaller Luna model with a &quot;fairly underspecified prompt&quot;</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "cc42d7e3d1c835ea",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI staffer maps out which of GPT-5.6 Sol's five reasoning levels fits which task complexity",
+    "url": "https://the-decoder.com/openai-staffer-maps-out-which-of-gpt-5-6-sols-five-reasoning-levels-fits-which-task-complexity/",
+    "published": "2026-07-10T17:52:06+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_logo_vis-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        GPT-5.6 Sol ships with five reasoning levels from \"Light\" to \"xhigh,\" plus \"Max\" and \"Ultra\" modes that deploy multiple sub-agents in parallel. OpenAI's Vaibhav Srivastav recommends starting low and only scaling up when needed.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-staffer-maps-out-which-of-gpt-5-6-sols-five-reasoning-levels-fits-which-task-complexity/\">OpenAI staffer maps out which of GPT-5.6 Sol&#039;s five reasoning levels fits which task complexity</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "2d87cb6e2af0a001",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Tencent moves to buy majority stake in Manus after Beijing forced Meta to unwind its $2 billion deal",
+    "url": "https://the-decoder.com/tencent-moves-to-buy-majority-stake-in-manus-after-beijing-forced-meta-to-unwind-its-2-billion-deal/",
+    "published": "2026-07-10T16:48:05+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/manus_tencent_meta.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Tencent is in talks to buy a majority stake in AI agent startup Manus at the same $2 billion valuation, according to the Financial Times, after Beijing blocked Meta's acquisition. Tencent sees overlap with its own agent plans, including for WeChat. U.S. firm Benchmark is not expected to take part.</p>\n<p>The article <a href=\"https://the-decoder.com/tencent-moves-to-buy-majority-stake-in-manus-after-beijing-forced-meta-to-unwind-its-2-billion-deal/\">Tencent moves to buy majority stake in Manus after Beijing forced Meta to unwind its $2 billion deal</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "72a7fc6d20b48a74",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI kills its Atlas browser after just eight months and folds everything into ChatGPT",
+    "url": "https://the-decoder.com/openai-kills-its-atlas-browser-after-just-eight-months-and-folds-everything-into-chatgpt/",
+    "published": "2026-07-10T12:19:21+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1696\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_atlas.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2528\" /></p>\n<p>        OpenAI is killing its AI browser Atlas less than eight months after launch. Its features are moving into ChatGPT's updated Chrome extension, which will let users run ChatGPT directly in Chrome's sidebar. Atlas joins a growing list of scrapped OpenAI products.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-kills-its-atlas-browser-after-just-eight-months-and-folds-everything-into-chatgpt/\">OpenAI kills its Atlas browser after just eight months and folds everything into ChatGPT</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "b3622413200461d8",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "The Fed wants AI investor Marc Andreessen to help figure out if AI can tame inflation",
+    "url": "https://the-decoder.com/the-fed-wants-ai-investor-marc-andreessen-to-help-figure-out-if-ai-can-tame-inflation/",
+    "published": "2026-07-10T12:18:32+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1429\" src=\"https://the-decoder.com/wp-content/uploads/2026/02/Office-Work-AI-scaled.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"2560\" /></p>\n<p>        Fed Chair Kevin Warsh has appointed venture capitalist Marc Andreessen to advise the Federal Reserve on AI's economic impact. Warsh views AI as a \"significant disinflationary force,\" but Andreessen's firm Andreessen Horowitz is heavily invested in AI companies, raising conflict-of-interest questions.</p>\n<p>The article <a href=\"https://the-decoder.com/the-fed-wants-ai-investor-marc-andreessen-to-help-figure-out-if-ai-can-tame-inflation/\">The Fed wants AI investor Marc Andreessen to help figure out if AI can tame inflation</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "202d49c94b29ec7a",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Bun ditches Zig for Rust with help from Claude Fable 5, writes over a million lines of code in 11 days",
+    "url": "https://the-decoder.com/bun-ditches-zig-for-rust-with-help-from-claude-fable-5-writes-over-a-million-lines-of-code-in-11-days/",
+    "published": "2026-07-10T11:09:44+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/claude_logo_money.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        The JavaScript tool Bun has been fully rewritten from Zig to Rust, and Anthropic's Fable 5 did most of the work. </p>\n<p>The article <a href=\"https://the-decoder.com/bun-ditches-zig-for-rust-with-help-from-claude-fable-5-writes-over-a-million-lines-of-code-in-11-days/\">Bun ditches Zig for Rust with help from Claude Fable 5, writes over a million lines of code in 11 days</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  }
+]
