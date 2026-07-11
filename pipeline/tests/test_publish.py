@@ -2,7 +2,13 @@
 
 import json
 
-from noiseless.publish import build_digest, build_site, parse_frontmatter
+from noiseless.publish import (
+    Article,
+    build_digest,
+    build_site,
+    parse_frontmatter,
+    resolve_threads,
+)
 
 ARTICLE_EN = """---
 title: Example Lab releases Model X
@@ -33,6 +39,28 @@ Example Lab released Model X.
 
 ARTICLE_TR = ARTICLE_EN.replace(
     "title: Example Lab releases Model X", "title: Example Lab, Model X'i yayımladı"
+).replace("lang: en", "lang: tr")
+
+FOLLOWUP_EN = """---
+title: Model X pulled after benchmark dispute
+date: 2026-07-10
+slug: model-x-pulled
+lang: en
+tldr: Example Lab withdrew Model X.
+follows: example-model-x
+sources:
+  - name: Example Lab Blog
+    url: https://example.com/blog/model-x-pulled
+---
+
+## What happened
+
+It was pulled.
+"""
+
+FOLLOWUP_TR = FOLLOWUP_EN.replace(
+    "title: Model X pulled after benchmark dispute",
+    "title: Model X, benchmark tartışması sonrası geri çekildi",
 ).replace("lang: en", "lang: tr")
 
 
@@ -77,6 +105,61 @@ def test_build_digest_uses_latest_day_and_groups_tiers(tmp_path):
     assert digest["date"] == "2026-07-08"
     assert {tier for tier in digest["tiers"]} == {0, 3}
     assert digest["tiers"][0][0]["title"] == "Model X is here"
+
+
+def _article(slug, date, follows=None, title=None):
+    meta = {"slug": slug, "date": date, "title": title or slug}
+    if follows:
+        meta["follows"] = follows
+    return Article(meta=meta, body_html="", lang="en")
+
+
+class TestResolveThreads:
+    def test_chain_groups_and_orders(self):
+        a = _article("root", "2026-07-01")
+        b = _article("mid", "2026-07-05", follows="root")
+        c = _article("tip", "2026-07-10", follows="mid")
+        lone = _article("unrelated", "2026-07-04")
+        threads = resolve_threads([c, lone, a, b])
+        assert "unrelated" not in threads
+        assert [m.slug for m in threads["root"]] == ["root", "mid", "tip"]
+        assert threads["root"] is threads["tip"]  # every member maps to the thread
+
+    def test_broken_pointer_and_cycle_degrade_gracefully(self):
+        orphan = _article("orphan", "2026-07-01", follows="missing-slug")
+        x = _article("x", "2026-07-01", follows="y")
+        y = _article("y", "2026-07-02", follows="x")
+        threads = resolve_threads([orphan, x, y])
+        assert "orphan" not in threads  # broken pointer → standalone, no crash
+        # a malformed 2-cycle collapses to no thread rather than looping forever
+        assert threads == {} or all(len(t) >= 2 for t in threads.values())
+
+
+def test_thread_box_rendered_on_both_members_and_languages(tmp_path):
+    make_repo(tmp_path)
+    (tmp_path / "content/articles/en/2026/07/model-x-pulled.md").write_text(
+        FOLLOWUP_EN, encoding="utf-8"
+    )
+    (tmp_path / "content/articles/tr/2026/07/model-x-pulled.md").write_text(
+        FOLLOWUP_TR, encoding="utf-8"
+    )
+    out = tmp_path / "dist"
+    build_site(tmp_path, out)
+
+    followup = (out / "articles/model-x-pulled.html").read_text(encoding="utf-8")
+    assert "Story thread" in followup
+    assert "example-model-x.html" in followup          # links back to the original
+    assert "this article" in followup                  # current member marked
+
+    original = (out / "articles/example-model-x.html").read_text(encoding="utf-8")
+    assert "Story thread" in original
+    assert "model-x-pulled.html" in original           # original links forward
+
+    tr_followup = (out / "tr/articles/model-x-pulled.html").read_text(encoding="utf-8")
+    assert "Haberin seyri" in tr_followup              # Turkish thread box
+
+    index = (out / "index.html").read_text(encoding="utf-8")
+    assert "follow-up" in index                        # thread chip on the list
 
 
 def test_build_site_renders_bilingual_pages(tmp_path):

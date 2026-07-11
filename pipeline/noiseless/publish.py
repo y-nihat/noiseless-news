@@ -46,6 +46,9 @@ STRINGS = {
         "verification": "Verification",
         "sources": "Sources",
         "updated": "Updates",
+        "thread": "Story thread",
+        "thread_current": "this article",
+        "thread_chip": "follow-up",
         "back": "All articles",
         "min_read": "min read",
         "claims_chip": "{n} claims checked",
@@ -82,6 +85,9 @@ STRINGS = {
         "verification": "Doğrulama",
         "sources": "Kaynaklar",
         "updated": "Güncellemeler",
+        "thread": "Haberin seyri",
+        "thread_current": "bu haber",
+        "thread_chip": "devam haberi",
         "back": "Tüm haberler",
         "min_read": "dk okuma",
         "claims_chip": "{n} iddia denetlendi",
@@ -209,6 +215,15 @@ ol.sources .domain { color:var(--muted); font-size:.8rem; margin-left:.45rem; }
 ul.updates { list-style:none; margin:.4rem 0 0; padding:0; font-size:.88rem; color:var(--muted); }
 ul.updates li { padding:.25rem 0; }
 
+.thread { background:var(--accent-soft); border-radius:12px; padding:1rem 1.2rem; margin:0 0 1.7rem; }
+.thread h2 { font-size:.8rem; font-weight:650; text-transform:uppercase;
+             letter-spacing:.09em; color:var(--muted); margin:0 0 .55rem; }
+.thread ol { margin:0; padding-left:1.25rem; font-size:.9rem; }
+.thread li { padding:.22rem 0; }
+.thread .date { color:var(--muted); font-size:.78rem; margin-right:.5rem; }
+.thread .current { font-weight:700; }
+.thread .you { color:var(--muted); font-size:.78rem; margin-left:.4rem; }
+
 footer.site { margin:3rem 0 0; padding:1.3rem 0 2.6rem; border-top:1px solid var(--rule);
               font-size:.8rem; color:var(--muted); }
 """
@@ -251,6 +266,41 @@ def load_articles(content_dir: Path, lang: str) -> list[Article]:
         articles.append(Article(meta=meta, body_html=md.markdown(body), lang=lang))
     articles.sort(key=lambda a: a.date, reverse=True)
     return articles
+
+
+def resolve_threads(articles: list[Article]) -> dict[str, list[Article]]:
+    """Group articles into story threads via `follows` frontmatter pointers.
+
+    Each article may declare `follows: <slug>` pointing at the story it
+    continues. A thread is the transitive chain down to its root article.
+    Returns {member_slug: chronologically-ordered members} for every article in
+    a thread of size ≥ 2. Broken pointers and cycles degrade to "no thread" —
+    never an error.
+    """
+    by_slug = {a.slug: a for a in articles}
+
+    def root_of(article: Article) -> str:
+        seen = {article.slug}
+        current = article
+        while True:
+            nxt = current.meta.get("follows")
+            if not nxt or nxt not in by_slug or nxt in seen:
+                return current.slug
+            seen.add(nxt)
+            current = by_slug[nxt]
+
+    groups: dict[str, list[Article]] = {}
+    for article in articles:
+        groups.setdefault(root_of(article), []).append(article)
+
+    threads: dict[str, list[Article]] = {}
+    for members in groups.values():
+        if len(members) < 2:
+            continue
+        members.sort(key=lambda a: (a.date, a.slug))
+        for member in members:
+            threads[member.slug] = members
+    return threads
 
 
 def build_digest(data_dir: Path, max_per_tier: int = 5) -> dict:
@@ -325,6 +375,8 @@ def _chips_html(article: Article, lang: str) -> str:
     chips = []
     sources = article.meta.get("sources") or []
     claims = article.meta.get("claims") or []
+    if article.meta.get("follows"):
+        chips.append(s["thread_chip"])
     if sources:
         chips.append(s["sources_chip"].format(n=len(sources)))
     if claims:
@@ -375,7 +427,27 @@ def _digest_html(digest: dict, lang: str) -> str:
     return "\n".join(parts)
 
 
-def _article_html(article: Article, lang: str, home: str) -> str:
+def _thread_html(article: Article, thread: list[Article], lang: str) -> str:
+    s = STRINGS[lang]
+    items = []
+    for member in thread:
+        date = f"<span class='date'>{member.date}</span>"
+        if member.slug == article.slug:
+            items.append(
+                f"<li class='current'>{date}{html.escape(member.title)}"
+                f"<span class='you'>— {s['thread_current']}</span></li>"
+            )
+        else:
+            items.append(
+                f"<li>{date}<a href='{member.slug}.html'>"
+                f"{html.escape(member.title)}</a></li>"
+            )
+    return f"<div class='thread'><h2>{s['thread']}</h2><ol>{''.join(items)}</ol></div>"
+
+
+def _article_html(
+    article: Article, lang: str, home: str, thread: list[Article] | None = None
+) -> str:
     s = STRINGS[lang]
     meta = article.meta
     minutes = reading_minutes(article.body_html)
@@ -387,6 +459,8 @@ def _article_html(article: Article, lang: str, home: str) -> str:
     ]
     if meta.get("tldr"):
         parts.append(f"<div class='tldr-box'>{html.escape(str(meta['tldr']).strip())}</div>")
+    if thread:
+        parts.append(_thread_html(article, thread, lang))
     parts.append(f"<div class='prose'>{article.body_html}</div>")
 
     claims = meta.get("claims") or []
@@ -442,6 +516,7 @@ def build_site(repo_root: Path | str, out_dir: Path | str) -> dict[str, int]:
         ("tr", out_dir / "tr" / "index.html", "articles/", "index.html"),
     ):
         articles = load_articles(repo_root / "content", lang)
+        threads = resolve_threads(articles)
         counts[lang] = len(articles)
         other = "tr/index.html" if lang == "en" else "../index.html"
         index_body = _article_list_html(articles, lang, article_prefix) + _digest_html(
@@ -461,7 +536,8 @@ def build_site(repo_root: Path | str, out_dir: Path | str) -> dict[str, int]:
             )
             (article_dir / f"{article.slug}.html").write_text(
                 _page(lang=lang, title=f"{article.title} — noiseless.news",
-                      body=_article_html(article, lang, home="../index.html"),
+                      body=_article_html(article, lang, home="../index.html",
+                                         thread=threads.get(article.slug)),
                       home="../index.html",
                       other_lang_href=counterpart,
                       description=str(article.meta.get("tldr", "")).strip()),
