@@ -5,6 +5,31 @@ pipeline reads it at the start of a run and must follow it exactly. It is public
 readers can audit our standards here, and the git history of this file shows every
 change we have ever made to them.
 
+## 0. Scope
+
+The editorial scope is the **AI vertical**: models, research, labs, AI industry,
+AI policy/regulation, AI litigation, and AI compute/chips. Adjacent technology
+stories qualify only with an explicit AI angle (owner ruling, 2026-07-11 — e.g.
+general algorithmic-feed/social-platform regulation is out of scope; an AI-chip
+supply deal is in).
+
+## 0a. Duplicate prevention (archive-wide)
+
+We publish daily; the archive spans all dates. A story covered last week is a
+duplicate today, whatever the calendar folder says — date lives with each story
+in its frontmatter, ledger entry, and the story index.
+
+- **Before opening any story**, run the deterministic gate:
+  `python -m noiseless.run dedup-check --title "<working title>" --url "<primary url>"`
+  It checks title similarity and shared source URLs against every article and
+  ledger entry ever created.
+- Exit 2 (**strong match**): do NOT create a new article. Either apply a §8
+  update to the matched slug (only if genuinely new information exists) or skip.
+- **Moderate matches**: read the matched article before deciding new vs update;
+  justify the decision in the run report.
+- The dedup-check result (matches found, decision taken) is recorded in the
+  story's evidence log.
+
 ## 1. Source tiers
 
 Sources are registered by name in `sources.yaml`. Unregistered sources found during

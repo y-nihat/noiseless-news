@@ -34,3 +34,16 @@ claim_check_templates:
   - "{model_name} independent evaluation review"
   # Mandatory for business/legal claims — the other side's account:
   - "{company} denies OR disputes OR responds {allegation}"
+
+# Domains that may never be cited as evidence and should be skipped in search
+# results (source-lifecycle.md §3 rejections + night-run noise findings).
+# Reasons in data/ledger/source_rejections.json where applicable.
+blocked_evidence_domains:
+  - benchlm.ai
+  - indexbox.io
+  - techbuzz.ai
+  - cryptobriefing.com
+  - qz.com
+  - kucoin.com
+  - unboxfuture.com
+  - mlq.ai
