@@ -1,0 +1,19 @@
+{
+  "slug": "bytedance-edgebench-scaling-law",
+  "status": "published",
+  "first_seen": "2026-07-11",
+  "published_at": "2026-07-11",
+  "langs": ["en", "tr"],
+  "title": "ByteDance Seed releases EdgeBench, reports a new scaling law for AI agents learning from real-world environments",
+  "date": "2026-07-02",
+  "source_urls": [
+    "https://seed.bytedance.com/en/blog/edgebench-measuring-real-world-environment-learning-and-discovering-a-new-scaling-law",
+    "https://arxiv.org/abs/2607.05155",
+    "https://www.scmp.com/tech/big-tech/article/3359373/chinas-bytedance-discovers-new-scaling-law-could-sustain-ai-boom"
+  ],
+  "watch": [
+    "Peer review / venue acceptance of the arXiv preprint (2607.05155) -> update with peer-review status",
+    "Independent reproduction of the log-sigmoid scaling law by another lab -> would strengthen the research finding beyond single-team preprint",
+    "Any dispute or methodology critique of the 402-learning-curve analysis"
+  ]
+}

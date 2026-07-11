@@ -1,0 +1,32 @@
+{
+  "slug": "bytedance-edgebench-scaling-law",
+  "checked_at": "2026-07-11T23:46:00+00:00",
+  "method": "Direct fetch of primary source (seed.bytedance.com/en/blog/edgebench-...) and the arXiv preprint abstract (2607.05155) to confirm task counts, R2 fit, and the doubling-every-three-months claim match between the two; direct fetch of South China Morning Post coverage for independent confirmation the story is real and to check for skepticism/caveats not in the primary source. Dedup-check run before opening (title 'ByteDance EdgeBench' vs seed.bytedance.com/en/blog): no match.",
+  "origin_items": [
+    "Carried over from cycle 2's Tier-0 sweep flag (ByteDance Seed blog, item dated 2 July 2026) -- not yet triaged as of start of cycle 3"
+  ],
+  "claims": [
+    {
+      "text": "ByteDance Seed released EdgeBench on 2 July 2026, a benchmark of 134 real-world tasks across six domains, each requiring at least 12 hours of continuous agent operation; 51 of 134 tasks and the evaluation framework released publicly, rest held back to prevent contamination",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Primary source (ByteDance Seed's own blog post) fetched directly and quoted. Task count, domain breakdown, and public/held-back split cross-checked against the arXiv preprint abstract -- both match. South China Morning Post independently reported the same task count and structure on 4 July, two days after the primary announcement.",
+      "evidence": [
+        "https://seed.bytedance.com/en/blog/edgebench-measuring-real-world-environment-learning-and-discovering-a-new-scaling-law",
+        "https://arxiv.org/abs/2607.05155",
+        "https://www.scmp.com/tech/big-tech/article/3359373/chinas-bytedance-discovers-new-scaling-law-could-sustain-ai-boom"
+      ]
+    },
+    {
+      "text": "Analyzing ~38,000 hours of agent interaction (402 learning curves), performance in environment learning follows a log-sigmoid curve vs. interaction time (mean R2 = 0.998); agent learning speed from environment interaction has roughly doubled every three months across recent model generations",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Research-finding claim type per verification.md SS3 -- standard of proof is the paper itself, labeled preprint/not-peer-reviewed. Confirmed the arXiv preprint (2607.05155, submitted 6 July 2026, lead author Deyao Zhu + 46 co-authors, cs.CL/cs.LG) states this exact finding in its abstract, matching the blog post's framing. Confirmed via arXiv fetch that the paper has not been peer-reviewed or accepted at any venue -- this caveat is stated explicitly in the article body and frontmatter. No independent reproduction exists or is expected this soon after release; SCMP relayed the same figures without independent verification, which is noted in the article rather than presented as corroboration of the underlying science.",
+      "evidence": [
+        "https://arxiv.org/abs/2607.05155",
+        "https://seed.bytedance.com/en/blog/edgebench-measuring-real-world-environment-learning-and-discovering-a-new-scaling-law"
+      ]
+    }
+  ],
+  "notes": "Adversarial check: confirmed 2 July 2026 publish date is genuine (not recycled) via the arXiv submission date (6 July, i.e. after the blog announcement, consistent with a blog-then-paper release order) and SCMP's independent 4 July report referencing the same date. No dispute, fraud allegation, or contradicting report found. Noted explicitly in the article that this is one team's own preprint and self-selected task suite with no outside reproduction -- avoided overstating the R2=0.998 fit as validating the underlying trend rather than just the curve-fit to ByteDance's own data. SCMP (unregistered) logged to source_candidates.json rather than used as load-bearing evidence beyond confirming the story is real."
+}

@@ -284,5 +284,16 @@
       ],
       "context": "AI-product-tracking trade outlet; independently corroborated the Robostral Navigate description (mistral-robostral-navigate) alongside Bloomberg. Recurred already this run cycle as a same-day model-release tracker; worth watching for further recurrence before proposing Tier 2."
     }
+  ],
+  "candidates_2026-07-12_night_c3": [
+    {
+      "domain": "scmp.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.scmp.com/tech/big-tech/article/3359373/chinas-bytedance-discovers-new-scaling-law-could-sustain-ai-boom"
+      ],
+      "context": "South China Morning Post; major independent English-language outlet with named byline, used to independently confirm the EdgeBench/scaling-law story (bytedance-edgebench-scaling-law) is a genuine, real report and not fabricated -- did not independently verify the underlying figures, just relayed ByteDance's own numbers. Propose Tier 2, good general China-tech-industry coverage source."
+    }
   ]
 }
