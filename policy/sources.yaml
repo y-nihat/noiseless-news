@@ -97,7 +97,7 @@ sources:
     tier: 0
     type: html
     url: https://www.zhipuai.cn/en/news
-    verified: false
+    verified: true
     notes: Primary source for GLM model releases (owner-approved scope expansion,
       2026-07-10 — heavy community discovery volume with no registered primary).
       English newsroom of Zhipu/Z.ai; chat.z.ai/blog is a secondary mirror.
@@ -109,6 +109,59 @@ sources:
     url: https://www.nist.gov/artificial-intelligence
     verified: true
     notes: US standards body — policy/framework claims.
+  - name: UK AI Security Institute
+    tier: 0
+    type: html
+    url: https://www.aisi.gov.uk/work
+    verified: true
+    notes: UK government AI evaluation body — safety/eval claims.
+  - name: OECD.AI Policy Observatory
+    tier: 0
+    type: html
+    url: https://oecd.ai/en/
+    verified: true
+    notes: Intergovernmental AI policy tracker.
+  # -- Chinese labs (registry batch 2, 2026-07-11 — 2026 open-weight releases
+  #    are dominated by these labs; previously only Qwen + Zhipu were covered) --
+  - name: DeepSeek News
+    tier: 0
+    type: html
+    url: https://api-docs.deepseek.com/news
+    verified: true
+    notes: DeepSeek's release notes page (their main site is sparse).
+  - name: Moonshot AI (Kimi)
+    tier: 0
+    type: html
+    url: https://www.moonshot.ai
+    verified: true
+    notes: Kimi model releases; English site.
+  - name: MiniMax News
+    tier: 0
+    type: html
+    url: https://www.minimax.io/news
+    verified: true
+    notes: HKEX-listed (Jan 2026) — also produces filings/disclosures.
+  - name: StepFun
+    tier: 0
+    type: html
+    url: https://www.stepfun.com
+    verified: true
+  - name: ByteDance Seed
+    tier: 0
+    type: html
+    url: https://seed.bytedance.com/en/blog
+    verified: true
+  - name: Baidu Research
+    tier: 0
+    type: html
+    url: https://research.baidu.com/Blog
+    verified: true
+    notes: ERNIE model releases.
+  - name: Tencent AI Lab
+    tier: 0
+    type: html
+    url: https://ai.tencent.com/ailab/en/news
+    verified: true
   - name: European Commission Digital Strategy News
     tier: 0
     type: html
@@ -152,7 +205,7 @@ sources:
     tier: 1
     type: html
     url: https://metr.org/research
-    verified: false
+    verified: true
     notes: Independent AI safety/capability evaluator. Registered 2026-07-10 after
       being load-bearing for the GPT-5.6 reward-hacking finding. Primarily a
       verification target, not a scan source.
@@ -160,7 +213,7 @@ sources:
     tier: 1
     type: html
     url: https://www.vals.ai
-    verified: false
+    verified: true
     notes: Independent benchmark tracker — verification target for capability claims.
       Live leaderboard drifts; figures MUST be fetched live at publication time with
       timestamp recorded (verification.md §5).
@@ -168,9 +221,21 @@ sources:
     tier: 1
     type: html
     url: https://artificialanalysis.ai
-    verified: false
+    verified: true
     notes: Independent model benchmark/pricing tracker — verification target for
       capability claims. Same live-fetch rule as Vals AI.
+  - name: Epoch AI
+    tier: 1
+    type: html
+    url: https://epoch.ai/blog
+    verified: true
+    notes: Independent AI research/data org — compute trends, capability data.
+  - name: Berkeley BAIR Blog
+    tier: 1
+    type: rss
+    url: https://bair.berkeley.edu/blog/feed.xml
+    verified: true
+    notes: University lab blog — research findings.
 
   # ---- Tier 2: quality press ------------------------------------------------
   - name: MIT Technology Review AI
@@ -227,20 +292,36 @@ sources:
     tier: 2
     type: rss
     url: https://www.infoworld.com/feed/
-    verified: false
+    verified: true
     notes: Registered 2026-07-10 after repeated use as evidence (Grok 4.5 pricing).
   - name: CNBC Technology
     tier: 2
     type: rss
     url: https://www.cnbc.com/id/19854910/device/rss/rss.html
-    verified: false
+    verified: true
     notes: Business/funding claims. Registered from 2026-07-09 night-run candidates.
   - name: Euronews Next
     tier: 2
     type: html
     url: https://www.euronews.com/next
-    verified: false
+    verified: true
     notes: EU policy/tech coverage — useful for EU AI Act stories.
+  - name: The Decoder
+    tier: 2
+    type: rss
+    url: https://the-decoder.com/feed/
+    verified: true
+    notes: AI-only newsroom, named authors.
+  - name: MIT News AI
+    tier: 2
+    type: rss
+    url: https://news.mit.edu/rss/topic/artificial-intelligence2
+    verified: true
+  - name: Stanford HAI News
+    tier: 2
+    type: html
+    url: https://hai.stanford.edu/news
+    verified: true
   - name: MLex
     tier: 2
     type: html
@@ -324,6 +405,70 @@ sources:
     verified: true
     notes: Individual expert; excellent hands-on tool/model analysis. His direct
       experiments may be cited as expert commentary, not as independent confirmation.
+
+  - name: The Batch (DeepLearning.AI)
+    tier: 3
+    type: html
+    url: https://www.deeplearning.ai/the-batch/
+    verified: true
+    notes: Andrew Ng's weekly — analysis/curation, discovery only.
+  - name: MarkTechPost
+    tier: 3
+    type: rss
+    url: https://www.marktechpost.com/feed/
+    verified: true
+    notes: Very high cadence release/paper roundups — treat as discovery (roundup
+      style), always trace to primaries.
+  - name: Techmeme
+    tier: 3
+    type: rss
+    url: https://www.techmeme.com/feed.xml
+    verified: true
+    notes: Editor-curated tech front page — discovery only; always trace to the
+      origin outlet it links.
+  - name: Ben's Bites
+    tier: 3
+    type: html
+    url: https://www.bensbites.com
+    verified: true
+    notes: Daily AI newsletter — discovery only.
+
+  # -- Google News query feeds (registry batch 2, 2026-07-11): categorical
+  #    breadth beyond named sites. One pull ≈ 100 items from ~80 outlets.
+  #    STRICTLY Tier 3 discovery: items carry via_outlet (origin), and every
+  #    lead must be traced to its origin before any use as evidence.
+  #    Independence rules apply unchanged. Expect finance/listicle noise —
+  #    the triage residual-substance test is the filter. --
+  - name: "GNews: AI model releases"
+    tier: 3
+    type: google_news_query
+    url: "https://news.google.com/rss/search?q=%22AI%20model%22%20(release%20OR%20launch%20OR%20announces)%20when:1d&hl=en-US&gl=US&ceid=US:en"
+    verified: true
+  - name: "GNews: open-weight LLM releases"
+    tier: 3
+    type: google_news_query
+    url: "https://news.google.com/rss/search?q=(%22open%20source%22%20OR%20%22open%20weight%22)%20(LLM%20OR%20%22language%20model%22)%20when:1d&hl=en-US&gl=US&ceid=US:en"
+    verified: true
+  - name: "GNews: AI regulation and policy"
+    tier: 3
+    type: google_news_query
+    url: "https://news.google.com/rss/search?q=AI%20(regulation%20OR%20%22AI%20Act%22%20OR%20executive%20order%20OR%20antitrust)%20when:1d&hl=en-US&gl=US&ceid=US:en"
+    verified: true
+  - name: "GNews: AI litigation"
+    tier: 3
+    type: google_news_query
+    url: "https://news.google.com/rss/search?q=(OpenAI%20OR%20Anthropic%20OR%20Meta%20OR%20Google)%20(lawsuit%20OR%20court%20OR%20copyright)%20AI%20when:1d&hl=en-US&gl=US&ceid=US:en"
+    verified: true
+  - name: "GNews: AI chips and compute"
+    tier: 3
+    type: google_news_query
+    url: "https://news.google.com/rss/search?q=(Nvidia%20OR%20TSMC%20OR%20%22AI%20chip%22%20OR%20datacenter)%20AI%20when:1d&hl=en-US&gl=US&ceid=US:en"
+    verified: true
+  - name: "GNews: AI safety and evaluations"
+    tier: 3
+    type: google_news_query
+    url: "https://news.google.com/rss/search?q=(%22AI%20safety%22%20OR%20%22model%20evaluation%22%20OR%20jailbreak%20OR%20%22red%20team%22)%20when:1d&hl=en-US&gl=US&ceid=US:en"
+    verified: true
 
   # YouTube (transcripts) — discovery + verbatim interview quotes only (see
   # policy/source-lifecycle.md §6). Feed = videos.xml?channel_id=...
