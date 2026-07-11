@@ -20,6 +20,10 @@ sources:
     url: https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/
   - name: Meta/Instagram Help Center
     url: https://help.instagram.com/652943337035777
+  - name: TheWrap — Muse Image removal
+    url: https://www.thewrap.com/industry-news/tech/meta-removes-muse-ai-instagram-feature-backlash/
+  - name: Deadline — Muse Image removal
+    url: https://deadline.com/2026/07/meta-removes-muse-image-ai-feature-backlash-1236979605/
 claims:
   - text: "Meta announced and released Muse Image and Muse Video on 7 July 2026, available in the Meta AI app, meta.ai, Instagram Stories (US), and WhatsApp in limited countries, with Facebook availability to follow"
     type: announcement
@@ -37,7 +41,12 @@ claims:
     type: business
     verdict: confirmed
     evidence: [2]
-updated: []
+  - text: "Meta fully removed the Muse Image @-mention feature from Instagram on 10 July 2026, three days after launch, saying in a statement that the feature 'missed the mark'"
+    type: business
+    verdict: confirmed
+    evidence: [6, 7]
+updated:
+  - "2026-07-11: Meta removed the feature; see Update section"
 ---
 
 ## What happened
@@ -53,3 +62,7 @@ The opt-out (rather than opt-in) design has drawn criticism from within the ente
 ## Why it matters
 
 Because the feature is on by default and gives no notification, any public Instagram user's photos can be used by someone else to generate new AI images of them without that person's knowledge or active consent — unless they've already found and disabled the setting. That default is now the specific point of the industry pushback from CAA and SAG-AFTRA, and it puts Meta's design choice at odds with a growing expectation, pushed by talent representatives, that AI image tools should ask before using someone's likeness rather than after.
+
+## Update, 11 July 2026
+
+Meta has removed the Muse Image @-mention feature from Instagram entirely, three days after its 7 July launch, following the criticism from CAA, SAG-AFTRA, and users over its opt-out consent design [6][7]. A Meta spokesperson said the company had "heard the feedback that this feature missed the mark, so it's no longer available" [6][7]. Meta has not said whether a revised, opt-in version is planned.

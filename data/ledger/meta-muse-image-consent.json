@@ -5,8 +5,8 @@
   "published_at": "2026-07-09",
   "langs": ["en", "tr"],
   "watch": [
-    "Any policy change from Meta moving the feature to opt-in, or a formal response to CAA/SAG-AFTRA -> update in place",
     "Direct hands-on reproduction of the @-mention mechanic by a registered source, to move past documentation-relay corroboration",
     "Further industry/regulatory reaction (e.g. EU/state privacy regulators) -> possible follow-up story"
-  ]
+  ],
+  "cycle_3_2026-07-11_update": "Actioned the opt-in watch item, but overtaken by a bigger fact: Meta fully removed the Muse Image @-mention feature on 10 July 2026 (3 days post-launch), not converted it to opt-in. Verified via TheWrap, Deadline (independent Tier-2/candidate outlets, not yet registered -- flagged in source_candidates.json), plus Meta's own spokesperson statement ('missed the mark'). Added as a new confirmed claim + Update section to EN/TR articles, 6 web searches/fetches used."
 }

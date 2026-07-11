@@ -1,6 +1,24 @@
 {
   "candidates": [
     {
+      "domain": "thewrap.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.thewrap.com/industry-news/tech/meta-removes-muse-ai-instagram-feature-backlash/"
+      ],
+      "context": "Entertainment-trade outlet with editorial standards and named authors; used to independently confirm the Muse Image feature removal (meta-muse-image-consent update, cycle 3, 2026-07-11) alongside Deadline. Propose Tier 2, type html or rss (check for a feed)."
+    },
+    {
+      "domain": "deadline.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://deadline.com/2026/07/meta-removes-muse-image-ai-feature-backlash-1236979605/"
+      ],
+      "context": "Entertainment-trade outlet with editorial standards and named authors; used to independently confirm the Muse Image feature removal (meta-muse-image-consent update, cycle 3, 2026-07-11) alongside TheWrap. Also referenced (unlogged) in the original meta-muse-image-consent verify pass on 2026-07-09 for CAA/SAG-AFTRA reaction corroboration. Propose Tier 2, type html or rss (check for a feed)."
+    },
+    {
       "domain": "infoworld.com",
       "first_seen": "2026-07-09",
       "occurrences": 1,

@@ -22,6 +22,10 @@ sources:
     url: https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/
   - name: Meta/Instagram Yardım Merkezi
     url: https://help.instagram.com/652943337035777
+  - name: TheWrap — Muse Image kaldırılması
+    url: https://www.thewrap.com/industry-news/tech/meta-removes-muse-ai-instagram-feature-backlash/
+  - name: Deadline — Muse Image kaldırılması
+    url: https://deadline.com/2026/07/meta-removes-muse-image-ai-feature-backlash-1236979605/
 claims:
   - text: "Meta, Muse Image ve Muse Video'yu 7 Temmuz 2026'da duyurdu ve yayına aldı; Meta AI uygulamasında, meta.ai'de, ABD'de Instagram Hikayelerinde ve sınırlı sayıda ülkede WhatsApp'ta kullanılabiliyor; Facebook erişimi yakında geliyor"
     type: announcement
@@ -39,7 +43,12 @@ claims:
     type: business
     verdict: confirmed
     evidence: [2]
-updated: []
+  - text: "Meta, Muse Image @ etiketleme özelliğini lansmandan üç gün sonra, 10 Temmuz 2026'da Instagram'dan tamamen kaldırdı; yaptığı açıklamada özelliğin 'hedefi tutturamadığını' söyledi"
+    type: business
+    verdict: confirmed
+    evidence: [6, 7]
+updated:
+  - "2026-07-11: Meta özelliği kaldırdı; bkz. Güncelleme bölümü"
 ---
 
 ## Ne oldu
@@ -83,3 +92,12 @@ noktası ve Meta'nın tasarım tercihini, yetenek temsilcilerinin öne sürdüğ
 AI görsel araçlarının birinin görüntüsünü kullanmadan önce değil kullandıktan
 sonra izin istemesi gerektiği yönündeki büyüyen beklentiyle karşı karşıya
 getiriyor.
+
+## Güncelleme, 11 Temmuz 2026
+
+Meta, Muse Image @ etiketleme özelliğini, 7 Temmuz'daki lansmanından sadece üç
+gün sonra, CAA, SAG-AFTRA ve kullanıcılardan gelen opt-out rıza tasarımı
+eleştirisinin ardından Instagram'dan tamamen kaldırdı [6][7]. Bir Meta sözcüsü,
+şirketin "bu özelliğin hedefi tutturamadığına dair geri bildirimi duyduklarını,
+bu yüzden özelliğin artık kullanılamadığını" söyledi [6][7]. Meta, gözden
+geçirilmiş, opt-in bir sürümün planlanıp planlanmadığını belirtmedi.

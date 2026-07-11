@@ -301,3 +301,73 @@ to the 00:00 UTC deadline; the GPT-5.6 update was chosen specifically because
 it was bounded (2 searches, edits to an existing article, no new EN/TR files)
 and low-risk to finish inside the remaining window. 3 web searches total this
 cycle, no usage-limit errors.
+
+## Cycle 3 — 00:05-00:12 UTC
+
+Fresh ingest ran just before this cycle started (`data/raw/2026-07-11/`,
+00:02-00:04 UTC, 4 small feed files). Window was tight (~30 minutes to the
+00:35 UTC deadline), so this cycle stayed scoped to the watching recheck plus
+one bounded, clearly-signaled update rather than starting a new story
+verify+falsify pipeline.
+
+- **Watching: `meta-ai-chip-production`** — re-checked (2 web searches, via a
+  fresh subagent). Still no independent corroboration: all new coverage
+  (Yahoo, letsdatascience, MLQ, Android Headlines, cryptobriefing, qz.com, US
+  News, ITP.net, X/Threads reposts) traces to the same 9 July Reuters
+  exclusive/internal-memo origin. Meta still has not commented. Found one
+  older, genuinely independent data point predating the memo by ~3 months —
+  CNBC, 2026-04-14, "Meta commits to 1 gigawatt of custom chips with Broadcom
+  as Hock Tan decides to leave board" — but it only corroborates a general
+  Meta–Broadcom chip relationship at a different scale (1GW), not the bundled
+  claims this entry covers (Iris codename, September start, 7GW→14GW target,
+  2029 partnership term). Gate still fails. Ledger note updated. Still
+  watching.
+- Tier-0 sweep: skipped — a full sweep ran in cycle 1 and the fresh
+  2026-07-11 ingest was too small (4 items, 1 each from TechCrunch, Verge,
+  r/LocalLLaMA, Apple ML Research) to justify a re-fetch pass this close to
+  deadline.
+- **Triage:** scanned the fresh 2026-07-11 ingest plus a jq pass over
+  2026-07-10's TechCrunch/Verge/Wired/Ars/CNBC/InfoWorld/r-LocalLLaMA/
+  r-MachineLearning feeds against the ledger's covered-slugs set. Two fresh
+  items stood out immediately: TechCrunch's "Meta removes controversial AI
+  feature on Instagram after backlash" and The Verge's "Meta turns off the
+  Instagram feature that let users make AI deepfakes of public accounts"
+  (both ~23:50-23:55 UTC, 10 July) — both about the exact feature covered by
+  the already-published `meta-muse-image-consent` article, whose watch list
+  had explicitly flagged "any policy change from Meta moving the feature to
+  opt-in" as an update trigger. Actioned as a policy §8 update rather than a
+  new story (correct call: same feature, same slug). No other fresh candidate
+  looked both new and uncovered; the previously-flagged deferred candidates
+  (SK Hynix IPO, EU/Meta DSA "addictive design" finding, OpenAI power
+  consolidation under Brockman, China warns on Claude Code) reappeared in the
+  2026-07-10 feeds but are unchanged from cycle 1's assessment — still
+  deliberately not actioned, left for a cycle with more runway.
+- **Update (policy §8, not a new story): `meta-muse-image-consent`** — a
+  fresh verifier subagent found the removal is the *same* feature as
+  originally reported (not a different product): Meta fully removed the Muse
+  Image @-mention feature from Instagram on 10 July 2026, three days
+  post-launch, rather than converting it to opt-in as the ledger's watch item
+  anticipated — a bigger fact than the flagged trigger, actioned anyway.
+  Verified via TheWrap and Deadline (both independent Tier-2-equivalent
+  entertainment-trade outlets, not yet registered — logged to
+  `source_candidates.json`), corroborated by a Meta spokesperson statement
+  ("we've heard the feedback that this feature missed the mark, so it's no
+  longer available") that appears verbatim across outlets — treated as one
+  origin for the quote but as Meta's own primary confirmation that the
+  removal happened. Applied the residual-substance test to Verge's
+  "deepfakes" framing: stripped of that word, the underlying fact (AI images
+  referencing a public account's photos without consent/notice) stands
+  without needing it, so the update avoids the word. Added one new confirmed
+  claim, two new sources, a changelog entry, and an "Update, 11 July 2026"
+  section to both the EN article and its TR mirror; ledger note added. 6
+  searches/fetches used (well under the update's informal budget).
+- **Discovery loop:** logged 2 new evidence domains (thewrap.com,
+  deadline.com) to `data/ledger/source_candidates.json` with Tier-2
+  registration proposals; noted that Deadline had also been used unlogged in
+  the original 2026-07-09 verify pass for this same story.
+
+Budget note: 0 new stories this cycle (2/12 used for the night so far, 10
+remain) — again deliberately scoped to a bounded update rather than a fresh
+verify+falsify pipeline, given ~30 minutes of runway. 8 web searches/fetches
+total this cycle (2 for the watching recheck, 6 for the update), no
+usage-limit errors.

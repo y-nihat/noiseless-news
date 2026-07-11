@@ -36,6 +36,13 @@
       "verdict": "confirmed",
       "reasoning": "Initial verifier found only a single, paywalled Variety piece (relayed via an aggregator) -- flagged single-source. Adversarial falsification pass located independent reporting of the same CAA/SAG-AFTRA reaction from Deadline, The Hollywood Reporter, and TheWrap -- none derived from Variety or each other -- clearing the 2-independent-source bar for a business claim. Upgraded from single-source to confirmed.",
       "evidence": ["https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/"]
+    },
+    {
+      "text": "Meta fully removed the Muse Image @-mention feature from Instagram on 10 July 2026, three days after launch, saying in a statement that the feature 'missed the mark'",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Cycle 3 update (2026-07-11). Confirmed same feature as originally reported (not a different product). Meta spokesperson statement (verbatim identical across TheWrap, Deadline, Variety -- single origin for the quote itself, but Meta's own words count as primary confirmation of the announcement) plus 3 independent Tier-2/candidate outlets reporting the removal as fact. Feature is fully removed, not paused or converted to opt-in.",
+      "evidence": ["https://www.thewrap.com/industry-news/tech/meta-removes-muse-ai-instagram-feature-backlash/", "https://deadline.com/2026/07/meta-removes-muse-image-ai-feature-backlash-1236979605/"]
     }
   ],
   "notes": "Direct WebFetch of theverge.com and wired.com was blocked in the initial verify pass; the adversarial pass retried and got a direct TechCrunch fetch confirming the mechanic verbatim ('you will not be notified about content created using AI features at Meta'), plus corroboration from several additional outlets, so the core behavior claim rests on solid independent ground despite the Verge/Wired fetch block. Checked for an older/rehashed version of this controversy (Meta has had prior AI/photo controversies) -- found none predating July 2026 for this specific Muse Image mechanic. Candidate source additions: help.instagram.com (Tier 0, same publisher as ai.meta.com) and outlets used only for corroboration (Deadline, Hollywood Reporter, TheWrap) -- see source_candidates.json."
