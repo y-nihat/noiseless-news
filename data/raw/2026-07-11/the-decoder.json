@@ -98,5 +98,25 @@
     "published": "2026-07-10T11:09:44+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/claude_logo_money.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        The JavaScript tool Bun has been fully rewritten from Zig to Rust, and Anthropic's Fable 5 did most of the work. </p>\n<p>The article <a href=\"https://the-decoder.com/bun-ditches-zig-for-rust-with-help-from-claude-fable-5-writes-over-a-million-lines-of-code-in-11-days/\">Bun ditches Zig for Rust with help from Claude Fable 5, writes over a million lines of code in 11 days</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-07-11T17:01:41.362647+00:00"
+  },
+  {
+    "id": "5a67335f98e71e89",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI's GPT-5.6 Sol Ultra reportedly solves a 50-year-old math problem in under an hour",
+    "url": "https://the-decoder.com/openais-gpt-5-6-sol-ultra-reportedly-solves-a-50-year-old-math-problem-in-under-an-hour/",
+    "published": "2026-07-11T17:38:35+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/a_math_universe.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        OpenAI's GPT-5.6 Sol Ultra produced a proof of the Cycle Double Cover Conjecture in under an hour, using 64 subagents working in parallel. The conjecture had remained unsolved for 50 years. Mathematician Thomas Bloom calls the proof surprisingly elementary but criticizes the lack of citations for known prior work. The bigger question remains: Does AI just recombine existing knowledge, or does it create something new?</p>\n<p>The article <a href=\"https://the-decoder.com/openais-gpt-5-6-sol-ultra-reportedly-solves-a-50-year-old-math-problem-in-under-an-hour/\">OpenAI&#039;s GPT-5.6 Sol Ultra reportedly solves a 50-year-old math problem in under an hour</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T22:29:11.677014+00:00"
+  },
+  {
+    "id": "cf64416523f1910d",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Terrorist groups are using every major AI chatbot for attack planning and weapons development",
+    "url": "https://the-decoder.com/terrorist-groups-are-using-every-major-ai-chatbot-for-attack-planning-and-weapons-development/",
+    "published": "2026-07-11T17:04:28+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/llm_bomb.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        A Cambridge study found that Boko Haram uses AI chatbots like ChatGPT, Claude, and Gemini to plan attacks, build explosives, and maintain weapons. ISIS operatives have been training the group's commanders on how to bypass safety filters since 2023. Given that the study found safety filters repeatedly failed to prevent misuse, voluntary self-regulation by AI providers clearly isn't enough.</p>\n<p>The article <a href=\"https://the-decoder.com/terrorist-groups-are-using-every-major-ai-chatbot-for-attack-planning-and-weapons-development/\">Terrorist groups are using every major AI chatbot for attack planning and weapons development</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-11T22:29:11.677014+00:00"
   }
 ]
