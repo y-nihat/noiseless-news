@@ -1,0 +1,19 @@
+{
+  "slug": "mistral-robostral-navigate",
+  "status": "published",
+  "first_seen": "2026-07-11",
+  "published_at": "2026-07-11",
+  "langs": ["en", "tr"],
+  "title": "Mistral releases Robostral Navigate, its first robotics model, for single-camera robot navigation",
+  "date": "2026-07-08",
+  "source_urls": [
+    "https://mistral.ai/news/robostral-navigate",
+    "https://www.bloomberg.com/news/articles/2026-07-08/mistral-robostral-navigate",
+    "https://www.testingcatalog.com/mistral-robostral-navigate/"
+  ],
+  "watch": [
+    "Independent reproduction of the R2R-CE 79.4%/76.6% figures -> would upgrade capability claim from vendor-claim to confirmed",
+    "Any real-world (non-simulated) deployment reports -> sim-to-real gap follow-up",
+    "Open-weights or API availability announcement -> possible short update"
+  ]
+}

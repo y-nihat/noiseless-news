@@ -1,0 +1,50 @@
+{
+  "slug": "mistral-robostral-navigate",
+  "checked_at": "2026-07-11T23:10:00+00:00",
+  "method": "Direct fetch of primary source (mistral.ai/news/robostral-navigate) by verifier agent; independent web searches for third-party coverage, reproduction, and prior-art check on 'Robostral' branding; separate adversarial falsification pass by a second fresh agent (date/recycling check, R2R-CE benchmark legitimacy check, competitor-scoop check).",
+  "origin_items": [
+    "Tier-0 sweep this cycle (Mistral AI News page, https://mistral.ai/news) — item dated 2026-07-08"
+  ],
+  "claims": [
+    {
+      "text": "Mistral released Robostral Navigate on 8 July 2026, an 8B-parameter model that takes RGB images and a plain-language instruction and moves a robot through an environment using a single camera, no depth sensor or LiDAR required; runs on wheeled, legged, and flying robots",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Primary source (Mistral's own blog post) fetched directly and quoted verbatim by the verifier. Independently corroborated same-day by Bloomberg, TestingCatalog, Verdict, and Technology.org with descriptions matching the primary source.",
+      "evidence": [
+        "https://mistral.ai/news/robostral-navigate",
+        "https://www.bloomberg.com/news/articles/2026-07-08/mistral-robostral-navigate",
+        "https://www.testingcatalog.com/mistral-robostral-navigate/"
+      ]
+    },
+    {
+      "text": "On R2R-CE, Mistral reports 79.4% (seen) / 76.6% (unseen) success, beating the best single-camera approach by 9.7 points and the best depth/multi-camera system by 4.5 points",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figures traced to Mistral's own announcement only; no independent reproduction exists yet (expected for a same-week release). Adversarial pass confirmed R2R-CE is a real, established indoor-navigation benchmark (Room-to-Room Continuous Environments) and that recent published single-camera SOTA sits near 65%, so the claimed jump is large but plausible, not a fabricated record. Labeled vendor-claim per verification.md §3.",
+      "evidence": [
+        "https://mistral.ai/news/robostral-navigate"
+      ]
+    },
+    {
+      "text": "Trained on ~400,000 simulated trajectories across 6,000 scenes; a prefix-caching technique cut training tokens by 22x, compressing training time from months to days",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Infrastructure/methodology claim, self-reported, not externally testable pre-open-source-release. No independent source found or expected.",
+      "evidence": [
+        "https://mistral.ai/news/robostral-navigate"
+      ]
+    },
+    {
+      "text": "This is Mistral's first robotics model",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Primary source itself frames this as Mistral's own first embodied-navigation model (company-scoped 'first', not an industry-first claim). Independently corroborated by multiple outlets (Yahoo/Tech, Digital Today, GlobalBanking&Finance, TipRanks) explicitly calling it Mistral's first robotics model. Checked for a prior 'Robostral'-branded release — none found (a differently-named March 2026 teaser, 'WMa1', and a May 2026 Emmi AI acquisition are background, not a prior Robostral product)."
+      ,
+      "evidence": [
+        "https://mistral.ai/news/robostral-navigate"
+      ]
+    }
+  ],
+  "notes": "Adversarial falsification pass (fresh agent): confirmed the 8 July 2026 date is genuine (not recycled), cross-checked via Bloomberg and Mistral's own X post. No fraud/fabrication allegations found; legitimate technical caveats exist (monocular vision struggles with textureless/reflective surfaces, sim-to-real gap since training was 100% simulated, 76.6% unseen-env success rate implies roughly 1-in-4 failure rate) and are reflected in the article's 'why it matters' section rather than hidden. NVIDIA had a broader, concurrent robotics announcement week (Cosmos 3, Isaac GR00T N1.6) but in a different category (general world-foundation models vs. Mistral's narrower navigation model) — does not contradict or scoop Mistral's company-scoped 'first' claim; not included as a load-bearing comparison in the article. R2R-CE is confirmed as a real benchmark via arXiv cross-reference (CorrectNav 65.1%, Efficient-VLN 64.2%, RynnBrain-Nav-8B 58.6%, BudVLN 57.6% for recent single-camera systems)."
+}
