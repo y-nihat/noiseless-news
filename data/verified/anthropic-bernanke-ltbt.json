@@ -1,0 +1,32 @@
+{
+  "slug": "anthropic-bernanke-ltbt",
+  "checked_at": "2026-07-11T22:40:00+00:00",
+  "method": "verifier pass (fresh context, Tier-0 direct fetch + independent-press search) plus adversarial falsification pass (fresh context, checked for dispute/conflict-of-interest coverage and confirmed no contradicting account); Tier-0 sweep surfaced this item directly on anthropic.com/news",
+  "origin_items": [
+    "Tier-0 sweep, cycle 1 2026-07-11 -- https://www.anthropic.com/news (WebFetch), item: Ben Bernanke appointed to Anthropic's Long-Term Benefit Trust"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic announced on 9 July 2026 that Ben Bernanke, former Federal Reserve Chair (2006-2014) and 2022 Nobel laureate in economics, has been appointed to its Long-Term Benefit Trust",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (Anthropic's own news post) is sufficient alone for an announcement claim per verification.md §3; independently corroborated by CNBC (registered Tier-2), which reported the same appointment and trust structure without citing Anthropic's post as its sole basis.",
+      "evidence": ["https://www.anthropic.com/news/ben-bernanke", "https://www.cnbc.com/2026/07/09/anthropic-fed-chair-bernanke-independent-trust.html"]
+    },
+    {
+      "text": "The Long-Term Benefit Trust is an independent oversight body holding Class T shares that lets trustees elect a growing proportion of Anthropic's board over time, aiming for majority board control within four years of the trust's formation; Bernanke joins existing trustees Neil Buddy Shah (chair), Richard Fontaine, and Mariano-Florentino Cuellar",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Structural/governance detail sourced directly from Anthropic's own post describing its own trust; no third party is better positioned to state this, and no contradicting account found by the falsifier.",
+      "evidence": ["https://www.anthropic.com/news/ben-bernanke"]
+    },
+    {
+      "text": "Anthropic said the appointment draws on Bernanke's expertise in economics and how AI affects labor markets, including his experience steering the Federal Reserve through the 2008 financial crisis, and that he will contribute to the company's economic research",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Directly attributed to Anthropic's own stated rationale in its announcement; presented as Anthropic's stated reasoning, not as independently-verified fact about Bernanke's future output.",
+      "evidence": ["https://www.anthropic.com/news/ben-bernanke"]
+    }
+  ],
+  "notes": "Falsifier searched for any dispute, controversy, or conflict-of-interest coverage of the appointment (e.g. criticism of a former Fed chair joining an AI company's oversight body) -- found none; press coverage (CNBC, Bloomberg, Seattle Times/AP, Yahoo Finance, Seeking Alpha) is uniformly descriptive, no contradicting account of the trust's structure or Bernanke's role. Bloomberg coverage exists but was not fetched directly (video/paywall-style page); not used as a listed source, logged as an unregistered-domain candidate instead. This is a governance/personnel announcement, not a business claim (funding/acquisition/layoffs/lawsuit) -- treated as announcement type per verification.md §3, one Tier-0 source would have sufficed on its own; CNBC corroboration is additional strength, not a requirement."
+}

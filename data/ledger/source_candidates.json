@@ -262,5 +262,16 @@
       ],
       "context": "Major independent news outlet; corroborated the February 2026 warning-letter detail in the Apple v. OpenAI story via what reads as separate AP-wire-sourced reporting, not just a relay. Propose Tier 2."
     }
+  ],
+  "candidates_2026-07-12_night_c1": [
+    {
+      "domain": "bloomberg.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.bloomberg.com/news/articles/2026-07-09/former-fed-chairman-ben-bernanke-joins-anthropic-oversight-trust"
+      ],
+      "context": "Major wire/business outlet; appeared independently reporting the Bernanke/Anthropic LTBT appointment (anthropic-bernanke-ltbt) alongside CNBC. Not fetched directly this cycle (paywall/video-style page) so not used as a listed source, but recurring enough across nights to warrant Tier 2 registration consideration."
+    }
   ]
 }
