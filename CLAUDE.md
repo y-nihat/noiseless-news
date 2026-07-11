@@ -73,8 +73,11 @@ from raw sources. Same slug, parallel trees under `content/articles/en/` and `/t
 - **Scope (§0):** AI vertical only; adjacent tech needs an explicit AI angle.
 - **Duplicate gate (§0a):** before opening ANY story, run
   `python -m noiseless.run dedup-check --title "..." --url "..."` — checks the
-  whole archive (all dates); exit 2 = strong match → §8 update or skip, never a
-  new article. Ledger entries must carry title/date/state/source_urls.
+  whole archive (all dates). On a match, §8 gives three outcomes: in-place update
+  (same event) · **follow-up article with `follows: <slug>`** (new event, same
+  saga — site renders the thread on every member) · standalone (justified).
+  Never an unlinked duplicate. Ledger entries carry title/date/state/source_urls
+  and mirror `follows`.
 - **Editor gate:** every article passes policy/style.md (headline falsifiability,
   TL;DR standalone, padding scan, Turkish parity) in BOTH languages before commit.
 - Verify **claims**, not articles. Claim types have different standards of proof.

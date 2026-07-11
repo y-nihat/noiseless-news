@@ -116,9 +116,21 @@ English articles are canonical. The Turkish version is generated from the finish
 English article — identical structure, same sources, same labels — never from raw
 source material. Both versions share a slug and are updated together.
 
-## 8. Updates and corrections
+## 8. Updates, follow-ups, and corrections
 
-- Developing stories are updated in place with a dated changelog entry, not duplicated.
+When the duplicate gate (§0a) links a new development to an existing story, pick
+one of three outcomes — never an unlinked duplicate:
+
+| Situation | Action |
+|---|---|
+| Same event, new details (extra confirmation, minor development) | **In-place update**: edit the existing article, add a dated `updated:` changelog entry |
+| A NEW event in the same saga (ruling in a covered lawsuit, launch of a previewed product, follow-through or reversal of a covered announcement) | **Follow-up article**: new slug, frontmatter `follows: <original-slug>` — the site renders the whole thread ("story so far") on every member article |
+| Unrelated despite surface similarity | New standalone article; note the dedup decision in the report |
+
+- The follow-up test: could a reader who missed the original still need that
+  context? If yes, it's a follow-up (`follows`), not an in-place update.
+- `follows` points at the immediate predecessor; chains are allowed
+  (original ← follow-up ← follow-up). The ledger entry mirrors the `follows` field.
 - Errors are corrected visibly: the correction is noted in the article and logged on a
   public corrections page. The original wrong text remains available via git history.
 

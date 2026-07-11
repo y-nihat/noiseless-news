@@ -27,6 +27,9 @@ claims:
     verdict: vendor-claim
     evidence: [1, 2]
 updated: []                      # changelog entries, e.g. "2026-07-10: added independent confirmation"
+follows: earlier-story-slug      # OPTIONAL — only on follow-up articles (verification.md §8):
+                                 # slug of the immediate predecessor in the same story thread.
+                                 # Same value in both language versions; mirror it in the ledger entry.
 ---
 
 ## What happened

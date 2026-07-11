@@ -44,11 +44,13 @@ Work order:
    candidate BEFORE opening it:
      PYTHONPATH=pipeline python -m noiseless.run dedup-check \
        --title "<working title>" --url "<primary source url>"
-   - Exit 2 (strong match): do NOT create a new article — apply a §8 update to
-     the matched slug if there is genuinely new information, else skip. Log
-     which, with the matched slug, in the report.
-   - Moderate matches: read the matched article first; justify new-vs-update
-     in the report. Record the dedup result in the story's evidence log.
+   - Any match: pick one of the three §8 outcomes — (a) same event, new details
+     → in-place update with changelog; (b) NEW event in the same saga → follow-up
+     article with `follows: <matched-slug>` in frontmatter AND ledger entry;
+     (c) unrelated → standalone. Exit 2 (strong match) forbids outcome (c)
+     unless you can justify in the report why the match is coincidental.
+   - Moderate matches: read the matched article first. Record the dedup result
+     and the chosen outcome in the story's evidence log and the report.
 6. VERIFY AND PUBLISH up to {{MAX_STORIES}} stories this cycle
    ({{REMAINING_NIGHT}} remaining in tonight's overall budget), in rank order:
    - Extract typed factual claims (verification.md §3 — note legal/litigation
