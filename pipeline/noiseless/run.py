@@ -43,6 +43,15 @@ def main(argv: list[str] | None = None) -> int:
     )
     publish_parser.add_argument("--out", default="site/dist")
 
+    dedup_parser = subparsers.add_parser(
+        "dedup-check",
+        help="check a candidate story against the whole archive (exit 2 = strong match)",
+    )
+    dedup_parser.add_argument("--title", required=True)
+    dedup_parser.add_argument(
+        "--url", action="append", default=[], help="candidate source URL(s); repeatable"
+    )
+
     args = parser.parse_args(argv)
 
     try:
@@ -81,6 +90,17 @@ def main(argv: list[str] | None = None) -> int:
 
         counts = build_site(Path("."), args.out)
         print(f"site built at {args.out} — articles: en={counts['en']}, tr={counts['tr']}")
+        return 0
+
+    if args.command == "dedup-check":
+        import json as _json
+
+        from noiseless.dedup import check, load_index
+
+        matches = check(args.title, args.url, load_index(Path(".")))
+        print(_json.dumps({"matches": matches}, ensure_ascii=False, indent=2))
+        if any(m["strength"] == "strong" for m in matches):
+            return 2
         return 0
 
     return 1
