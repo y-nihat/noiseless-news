@@ -20,9 +20,26 @@ else
   NIGHT_SECONDS=$((TARGET - NOW))
 fi
 
+# Scheduled runs are cron'd at 21:40 UTC to absorb GitHub's cron delay; hold
+# the actual start until the window opens at 22:00 UTC (01:00 Istanbul).
+if [ "${EVENT_NAME:-}" = "schedule" ] && [ "$SMOKE" != "true" ]; then
+  WINDOW_START=$(date -u -d "today 22:00" +%s); NOW=$(date -u +%s)
+  if [ "$NOW" -lt "$WINDOW_START" ]; then
+    log "holding $((WINDOW_START - NOW))s until the 22:00 UTC window opens"
+    sleep $((WINDOW_START - NOW))
+    # recompute the window from the true start
+    TARGET=$(date -u -d "tomorrow 01:20" +%s); NOW=$(date -u +%s)
+    [ $((TARGET - NOW)) -gt 14400 ] && TARGET=$(date -u -d "today 01:20" +%s)
+    NIGHT_SECONDS=$((TARGET - NOW))
+  fi
+fi
+
 START=$(date -u +%s)
+NIGHT_START_ISO=$(date -u -d "@$START" +%FT%H:%M:%SZ)
 NIGHT_END=$((START + NIGHT_SECONDS))
-REPORT_FILE="data/ledger/run-report-$(date -u +%F)-night.md"
+# Report is named for the Istanbul morning it will be reviewed on, plus the
+# run's start time so same-day runs (smoke tests) never collide.
+REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H%M)Z.md"
 touch /tmp/night-start-marker
 ok_cycles=0; ran_cycles=0; usage_stop=0
 
@@ -65,6 +82,11 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   else
     sweep="light sweep — re-fetch only Tier-0 html sources that had fresh content earlier tonight or that a candidate story points to."
   fi
+  if [ "$cycle" -eq 1 ] || [ "$is_final" -eq 1 ]; then
+    watching="re-check EVERY ledger entry in watching state (1-3 searches each) for its missing evidence; publish if the gate now passes, else update the entry's notes."
+  else
+    watching="only re-check a watching-state ledger entry if this cycle's fresh ingest or sweep mentions it — otherwise leave watching stories alone (they were checked in cycle 1 and will be re-checked in the final cycle)."
+  fi
 
   if [ "$stories" -eq 0 ] && [ "$is_final" -eq 0 ]; then
     log "night story cap reached — skipping agent cycle $cycle"
@@ -82,8 +104,13 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
       -e "s/{{MAX_SEARCHES}}/$MAX_SEARCHES/g" \
       -e "s|{{REPORT_FILE}}|$REPORT_FILE|g" \
       -e "s|{{SWEEP_INSTRUCTION}}|$sweep|g" \
+      -e "s|{{WATCHING_INSTRUCTION}}|$watching|g" \
       -e "s|{{FINAL_NOTE}}|$final_note|g" \
       .github/cycle-prompt.md > "/tmp/prompt-$cycle.md"
+  if grep -q '{{' "/tmp/prompt-$cycle.md"; then
+    log "ERROR: unrendered placeholder in cycle prompt"; grep -o '{{[A-Z_]*}}' "/tmp/prompt-$cycle.md" | sort -u
+    exit 1
+  fi
 
   CYCLE_TIMEOUT=$((SLOT_END - $(date -u +%s) - 60))
   [ "$CYCLE_TIMEOUT" -lt 300 ] && CYCLE_TIMEOUT=300
@@ -124,15 +151,16 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   fi
 done
 
-published_total=$(find content/articles/en -name '*.md' -newer /tmp/night-start-marker | wc -l)
+new_articles=$(git log --since="$NIGHT_START_ISO" --diff-filter=A --name-only --pretty=format: -- 'content/articles/en/*' | grep -c '\.md$' || true)
+updated_articles=$(git log --since="$NIGHT_START_ISO" --diff-filter=M --name-only --pretty=format: -- 'content/articles/en/*' | grep -c '\.md$' || true)
 {
   echo ""
   echo "## Loop supervisor footer"
   echo ""
   echo "- Cycles run: $ran_cycles (successful: $ok_cycles, max: $MAX_CYCLES)"
-  echo "- Stories published tonight: $published_total (cap: $NIGHT_STORY_CAP)"
+  echo "- New articles: $new_articles · updated articles: $updated_articles (night cap: $NIGHT_STORY_CAP new)"
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
-  echo "- Window closed: $(date -u +%FT%H:%MZ)"
+  echo "- Window: $NIGHT_START_ISO → $(date -u +%FT%H:%MZ)"
 } >> "$REPORT_FILE"
 commit_push "Night loop footer $(date -u +%F)"
 

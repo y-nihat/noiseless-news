@@ -1,0 +1,44 @@
+name: Daytime ingest
+
+# Deterministic feed capture only — no LLM, no credits. Keeps raw data close to
+# publication time so the night loop triages fresher material; dedup by seen_ids
+# means the night ingest cost is unchanged.
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # 13:00 Istanbul
+    - cron: "0 16 * * *"   # 19:00 Istanbul
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+# Shares the nightly group so pushes never race the night loop.
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r pipeline/requirements.txt
+      - name: Ingest registered sources
+        run: PYTHONPATH=pipeline python -m noiseless.run ingest
+      - name: Commit
+        run: |
+          git config user.name "y-nihat"
+          git config user.email "nihat@yinovasyon.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Daytime ingest $(date -u +%FT%H:%MZ)"
+          git push
+      - name: Refresh site scanner feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Deploy site" --ref main || true

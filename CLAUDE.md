@@ -30,6 +30,8 @@ filters clickbait, writes its own headlines/articles, lists sources under every 
 - Budget caps: 4 stories/cycle, 12 stories/night, 15 searches/story, 120 turns/cycle.
   Any usage-limit error ends the whole night (check_result.py exit 3); one crashed
   cycle skips to the next. The night fails (red job + issue) only if zero cycles succeed.
+- Daytime ingest crons (13:00/19:00 Istanbul, `.github/workflows/ingest.yml`) are
+  deterministic feed capture only — no LLM, no credits.
 
 ## Architecture (5 file-based stages)
 
@@ -68,6 +70,13 @@ from raw sources. Same slug, parallel trees under `content/articles/en/` and `/t
 
 ## Verification principles (summary — full rules in policy/verification.md)
 
+- **Scope (§0):** AI vertical only; adjacent tech needs an explicit AI angle.
+- **Duplicate gate (§0a):** before opening ANY story, run
+  `python -m noiseless.run dedup-check --title "..." --url "..."` — checks the
+  whole archive (all dates); exit 2 = strong match → §8 update or skip, never a
+  new article. Ledger entries must carry title/date/state/source_urls.
+- **Editor gate:** every article passes policy/style.md (headline falsifiability,
+  TL;DR standalone, padding scan, Turkish parity) in BOTH languages before commit.
 - Verify **claims**, not articles. Claim types have different standards of proof.
 - Tier 3 sources (YouTube transcripts, HN, X, newsletters) are discovery only — never confirmation.
 - Independence rule: N outlets citing the same press release/tweet = 1 source.

@@ -2,10 +2,10 @@ name: Nightly scan
 
 on:
   schedule:
-    # 22:00 UTC = 01:00 Europe/Istanbul (Turkey is UTC+3 year-round, no DST).
-    # GitHub cron can fire up to ~1h late; the loop supervisor computes the
-    # remaining window and always ends by 01:20 UTC (04:20 Istanbul).
-    - cron: "0 22 * * *"
+    # Cron'd 20 min EARLY (21:40 UTC) to absorb GitHub's typical cron delay;
+    # the loop supervisor holds until exactly 22:00 UTC (01:00 Istanbul) and
+    # always ends by 01:20 UTC (04:20 Istanbul). Turkey is UTC+3, no DST.
+    - cron: "40 21 * * *"
   workflow_dispatch:
     inputs:
       smoke:
@@ -27,7 +27,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 215
+    timeout-minutes: 245   # up-to-20min window hold + 200min night + deploys
     steps:
       - uses: actions/checkout@v4
 
@@ -40,11 +40,12 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: Night loop
-        timeout-minutes: 205
+        timeout-minutes: 235
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GH_TOKEN: ${{ github.token }}
           SMOKE: ${{ inputs.smoke == true && 'true' || 'false' }}
+          EVENT_NAME: ${{ github.event_name }}
         run: bash .github/scripts/night_loop.sh
 
       - name: Open failure issue
