@@ -273,5 +273,16 @@
       ],
       "context": "Major wire/business outlet; appeared independently reporting the Bernanke/Anthropic LTBT appointment (anthropic-bernanke-ltbt) alongside CNBC. Not fetched directly this cycle (paywall/video-style page) so not used as a listed source, but recurring enough across nights to warrant Tier 2 registration consideration."
     }
+  ],
+  "candidates_2026-07-12_night_c2": [
+    {
+      "domain": "testingcatalog.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.testingcatalog.com/mistral-robostral-navigate/"
+      ],
+      "context": "AI-product-tracking trade outlet; independently corroborated the Robostral Navigate description (mistral-robostral-navigate) alongside Bloomberg. Recurred already this run cycle as a same-day model-release tracker; worth watching for further recurrence before proposing Tier 2."
+    }
   ]
 }
