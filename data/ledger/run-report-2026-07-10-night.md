@@ -525,3 +525,10 @@ runway.
 - Stories published this invocation: 3 new + 2 updates (cap: 4/cycle, 12/night)
 - Usage-limit stop: no
 - Window closed: 2026-07-11T01:07Z (pending final commit/push)
+
+## Loop supervisor footer
+
+- Cycles run: 4 (successful: 4, max: 6)
+- Stories published tonight: 5 (cap: 12)
+- Usage-limit stop: no
+- Window closed: 2026-07-11T00:48Z
