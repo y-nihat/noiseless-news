@@ -268,5 +268,15 @@
     "published": "2026-07-12T23:03:21+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://github.com/ggml-org/llama.cpp/releases/tag/b9978\">b9978</a></p> <p>Claude in one sentence what does this fix </p> <blockquote> <p>llama.cpp b9978 fixes a checkpoint bug that hit agentic workloads hardest: every agent turn created a new checkpoint (bypassing min-step spacing), collapsing the coverage window so that context rewinds — common in tool-calling loops — erased all checkpoints and forced a full reprocess; now closely-spaced checkpoints from prior tasks are evicted, keeping the window wide and long agent sessions fast.</p> </blockquote> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Bulky-Priority6824\"> /u/Bulky-Priority6824 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuue5p/llamacpp_agentic_workflows_ctx_checkpoints_fix/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuue5p/llamacpp_agentic_workflows_ctx_checkpoints_fix/\">[comments]</a></span>",
     "fetched_at": "2026-07-12T23:03:51.476592+00:00"
+  },
+  {
+    "id": "0cce0810ad4abde2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What will you do?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uuuwtd/what_will_you_do/",
+    "published": "2026-07-12T23:25:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey guys. Just a curious and maybe been feeling a little burn out on this whole experiencing local AI and stuff. I own a rig with quad RTX3090s and 96GB for ddr5. But its on am5 platform so the pcie lanes aren't max but I have it running in pairs of nvlinks as well so cross gpu pair is fine. Pair 1 runs at gen 4 x8 and pair 2 at gen 4 x4. I wanted to know was , what would you do with this setup? </p> <p>Specs:</p> <p>9900x </p> <p>48GB ×2 Ddr5 5600 mhz cl 30 ram</p> <p>Asus X870e Proart </p> <p>RTX 3090 ×4</p> <p>nvlink ×2</p> <p>Gen 5 nvme 2TB</p> <p>psu 1600w + 1200w </p> <p>What models or anything you would run/build on this config? For me I've been using it to build up my software products , one of it was a tool i did for my dermatologist since I have psoriasis; I visit them almost every month. Made them a transcriptions AI tool that turns appointment recordings into doctor notes that later they can edit and upload to their main software. So yea, let me know your thoughts , happy to discuss or read through them. Have a nice day everyone :D </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/whity2773\"> /u/whity2773 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuuwtd/what_will_you_do/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuuwtd/what_will_you_do/\">[comments]</a></span>",
+    "fetched_at": "2026-07-12T23:38:51.580088+00:00"
   }
 ]
