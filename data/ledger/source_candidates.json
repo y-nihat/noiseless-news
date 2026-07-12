@@ -295,5 +295,34 @@
       ],
       "context": "South China Morning Post; major independent English-language outlet with named byline, used to independently confirm the EdgeBench/scaling-law story (bytedance-edgebench-scaling-law) is a genuine, real report and not fabricated -- did not independently verify the underlying figures, just relayed ByteDance's own numbers. Propose Tier 2, good general China-tech-industry coverage source."
     }
+  ],
+  "candidates_2026-07-13_night2_c2": [
+    {
+      "domain": "engadget.com",
+      "first_seen": "2026-07-12",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.engadget.com/2212941/openai-head-of-safety-leaving-company-reorganization/"
+      ],
+      "context": "Established tech outlet; used in the openai-safety-heidecke-departure verify pass, but note it (like every other outlet checked) relays Wired's exclusive rather than reporting independently -- does not itself add source independence. Propose Tier 2 for future use where it does have its own reporting."
+    },
+    {
+      "domain": "gizmodo.com",
+      "first_seen": "2026-07-12",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://gizmodo.com/yet-another-safety-leader-at-openai-has-left-2000784403"
+      ],
+      "context": "Established tech outlet; same caveat as engadget.com in this run -- relays Wired's exclusive on the Heidecke departure, not independent reporting. Propose Tier 2 for future use."
+    },
+    {
+      "domain": "techtimes.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.techtimes.com/articles/320191/20260711/openai-loses-sixth-safety-leader-two-years-folds-team-research.htm"
+      ],
+      "context": "Tech news outlet; relays Wired's exclusive on the Heidecke/OpenAI safety reorg (openai-safety-heidecke-departure), same independence caveat. Propose Tier 2 candidate, evaluate against its other reporting first."
+    }
   ]
 }

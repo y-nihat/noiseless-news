@@ -1,0 +1,21 @@
+{
+  "slug": "openai-safety-heidecke-departure",
+  "status": "watching",
+  "first_seen": "2026-07-12",
+  "published_at": null,
+  "langs": [],
+  "title": "OpenAI's head of safety systems, Johannes Heidecke, is departing amid a reorganization that folds safety into research",
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-07-11/openai-safety-head-heidecke-to-leave-firm-after-reshuffle-wired",
+    "https://www.engadget.com/2212941/openai-head-of-safety-leaving-company-reorganization/",
+    "https://gizmodo.com/yet-another-safety-leader-at-openai-has-left-2000784403",
+    "https://www.techtimes.com/articles/320191/20260711/openai-loses-sixth-safety-leader-two-years-folds-team-research.htm"
+  ],
+  "reason": "Failed publishing gate: wire-exclusive (policy/verification.md §2). Every outlet (Bloomberg, Engadget, Gizmodo, TechTimes, TheNextWeb, Technobezz, ThePrint, Investing.com, CryptoBriefing, AIWeekly) traces to one origin -- Wired's account of an internal memo -- despite broad relay. Core departure fact (a) has a Tier-0-adjacent element (OpenAI CRO Mark Chen gave Wired an on-record, named quote confirming Heidecke's departure), but that confirmation reached the public through only Wired, so it doesn't by itself clear the >=2-independent-source business-claim bar. The reorg texture -- safety reporting to a new 'VP of Research and Safety' Mia Glaese, Saachi Jain as interim head of safety systems -- is single-sourced to Wired's characterization of the memo, no independent outlet or OpenAI page confirms the specific titles/reporting lines. The 'sixth safety leader in two years' framing is a characterization/count (five priors: Jan Leike, Miles Brundage, Steven Adler, Andrea Vallone, Joshua Achiam -- each independently well-documented at the time) rather than our own verified tally, and 'safety-focused' is a categorization judgment for at least one name (Achiam, Chief Futurist/Mission Alignment).",
+  "watch": [
+    "A second outlet independently reaching OpenAI or Heidecke (not relaying Wired's exclusive) with corroborating or conflicting detail",
+    "An OpenAI.com/careers-page, LinkedIn, or X update reflecting Glaese's 'VP of Research and Safety' title or Jain's interim role",
+    "Heidecke's own public statement on departure"
+  ],
+  "cycle_2026-07-13_night2_c2_note": "Opened this cycle from discovery-sweep-adjacent triage (raw ingest + web search), fresh verifier sub-agent run. Verdict: (a) departure fact confirmed (Tier-0-adjacent, on-record Mark Chen quote to Wired), (b) org-structure details (Glaese title, Jain interim role) single-source, (c) 'sixth leader' framing is reporting's characterization not our own tally. Wire-exclusive check applies -- does not clear §3's business-claim bar. Not published; opened as watching rather than dropped because the underlying departure is well-attested and a second independent source is plausible within days (departure reportedly effective by 2026-07-24)."
+}
