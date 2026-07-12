@@ -98,5 +98,15 @@
     "published": "2026-07-09T19:31:25+00:00",
     "summary": "<p>NVIDIA has released Nemotron-Labs-3-Puzzle-75B-A9B, a compressed variant of Nemotron-3-Super. Iterative Puzzle alternates hardware-aware structural compression with short knowledge distillation recovery phases. The model drops from 120.7B total / 12.8B active parameters to 75.3B / 9.3B. On a single 8xB200 node it delivers 2.03x Super's total throughput at 100 tok/s per user. On one H100, 1M-token concurrency rises from 1 request to 8.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/09/meet-nemotron-labs-3-puzzle-75b-a9b/\">Meet Nemotron Labs 3 Puzzle 75B A9B: A Compressed Hybrid MoE LLM Delivering 2.03x Server Throughput</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-07-12T11:12:37.322005+00:00"
+  },
+  {
+    "id": "1e24a6854b4104e4",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Guide to Loop Engineering: How ‘autoresearch’ and ‘Bilevel Autoresearch’ Turn AI Agents Into Autonomous Machine Learning ML Research Loops",
+    "url": "https://www.marktechpost.com/2026/07/12/guide-to-loop-engineering/",
+    "published": "2026-07-12T20:07:02+00:00",
+    "summary": "<p>Most people still use AI like a 2015 search box. You type, you read, you type again. A newer pattern replaces that manual back-and-forth with a loop. This guide explains loop engineering using two verified artifacts. The sources are Andrej Karpathy&#8217;s autoresearch repository and the Bilevel Autoresearch paper. The framing follows a write-up by @0xCodila. [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/12/guide-to-loop-engineering/\">Guide to Loop Engineering: How &#8216;autoresearch&#8217; and &#8216;Bilevel Autoresearch&#8217; Turn AI Agents Into Autonomous Machine Learning ML Research Loops</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-12T22:28:51.626029+00:00"
   }
 ]
