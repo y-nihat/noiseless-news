@@ -1,0 +1,22 @@
+[
+  {
+    "id": "45701910a387be87",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why do people keep fine-tuning on summarized/censored SOTA CoT traces?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uuvkw9/why_do_people_keep_finetuning_on/",
+    "published": "2026-07-12T23:54:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Am I missing something? It seems like some people think distillation is magic and will raise the quality of output above what the base model is actually capable of. It's especially weird to me to see all these Fable fine-tunes, because as far as I understand it, they miss the fact that the reasoning traces you get from Anthropic's models are completely different from the actual chain of thought the model outputs, which makes it pretty much a guarantee that the result will be worse than before.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/wombweed\"> /u/wombweed </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuvkw9/why_do_people_keep_finetuning_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuvkw9/why_do_people_keep_finetuning_on/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T00:13:51.734036+00:00"
+  },
+  {
+    "id": "fcbdba1ce70d540a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.6 35b 3a Fable fine tune",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uuvdzc/qwen_36_35b_3a_fable_fine_tune/",
+    "published": "2026-07-12T23:46:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey friends,</p> <p>I started a project i think we can all benefit from. I rented a few h200's and am fine tuning a hui Qwen 35b 3.6 3a on as much coherent fable data as possible. So far the benchmarks are amazingly motivating. I am being really picky about the data I ran fable pretty much as long as I have had it just making builds and justifying why it made each move it did. I will publish the metrics when I open source it after a few more runs but +5% jumps in human eval and SWE so far. With that being said I thought to myself &quot;who is a group that can help me get a ton of fable data&quot; i know we are local but im certain a ton of you guys have used fable ALOT. That data is already on your hard drive waiting to pump QWEN if you will give me it.</p> <p>So if your comfortable sending a stranger online a bunch of fable data ask claude to package it up for me and shoot me a dm! The more examples i get the stronger we can make Local LLMs</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/habachilles\"> /u/habachilles </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuvdzc/qwen_36_35b_3a_fable_fine_tune/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uuvdzc/qwen_36_35b_3a_fable_fine_tune/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T00:13:51.734036+00:00"
+  }
+]
