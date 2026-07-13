@@ -1,0 +1,41 @@
+{
+  "slug": "sf-stop-the-ai-race-protest",
+  "checked_at": "2026-07-13T00:24:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts, both via web search); dedup-check run first (no archive match)",
+  "origin_items": [
+    "data/raw/2026-07-13/gnews-ai-safety-and-evaluations.json -- MSN: 'Over 200 protesters march to OpenAI, Google DeepMind offices demanding AI regulation and pause in AI race'"
+  ],
+  "claims": [
+    {
+      "text": "On Saturday, 11 July 2026, a crowd organized by Stop the AI Race marched in San Francisco from OpenAI's Mission Bay office to Anthropic's office to Google DeepMind's Embarcadero office, with a detour past a16z, calling for a joint pause on frontier AI training",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Independently confirmed by three separately-bylined outlets with their own photos/reporting: SF Standard, Mission Local, and the AP wire report (via Yahoo). None derive from a shared press release; all three name the same route and organizer independently.",
+      "evidence": [
+        "https://sfstandard.com/2026/07/11/anti-ai-protest-openai-anthropic-google-san-francisco/",
+        "https://missionlocal.org/2026/07/san-francisco-protest-ai-openai-anthropic-google/",
+        "https://www.yahoo.com/news/us/articles/f-protesters-march-openai-anthropic-002748244.html"
+      ]
+    },
+    {
+      "text": "Crowd-size estimates varied by outlet (100+ to ~350, ~200 most cited); the Daily Californian's 'largest AI protest in American history' framing is that single outlet's characterization, not independently corroborated",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Reported transparently as a range rather than asserting one figure. The superlative claim was checked specifically in the adversarial pass and found to be single-sourced (Daily Cal only) -- kept out of the headline and TL;DR per the editor gate's ban on unsupported superlatives, mentioned in body only as an attributed outlet characterization.",
+      "evidence": [
+        "https://www.dailycal.org/news/largest-ai-protest-in-american-history-sees-hundreds-march-on-downtown-san-francisco/article_8253b059-e793-4de4-a012-cc20ddc5ad69.html"
+      ]
+    },
+    {
+      "text": "OpenAI, Anthropic, and Google DeepMind did not respond to requests for comment on the protest",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly by SF Standard and the AP wire report.",
+      "evidence": [
+        "https://sfstandard.com/2026/07/11/anti-ai-protest-openai-anthropic-google-san-francisco/",
+        "https://www.yahoo.com/news/us/articles/f-protesters-march-openai-anthropic-002748244.html"
+      ]
+    }
+  ],
+  "notes": "Adversarial falsification pass caught an important landmine: several outlets (Decrypt, ABC7, one Yahoo syndication, ZeroHedge) carry a superficially similar story about a march past OpenAI/Anthropic/xAI offices with only 'dozens' of attendees -- verified via direct fetch that those pieces are dated 22 March 2026 and describe an earlier, smaller, distinct Stop the AI Race event. Excluded those sources entirely from this story to avoid conflating the two protests. Route/date/organizer for the 11 July event confirmed independently by SF Standard, Mission Local, and AP -- no contradicting report found for the July date. sfstandard.com, missionlocal.org, and dailycal.org are not yet registered in sources.yaml; logged to source_candidates.json this cycle."
+}

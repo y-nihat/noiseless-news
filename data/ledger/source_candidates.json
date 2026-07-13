@@ -324,5 +324,34 @@
       ],
       "context": "Tech news outlet; relays Wired's exclusive on the Heidecke/OpenAI safety reorg (openai-safety-heidecke-departure), same independence caveat. Propose Tier 2 candidate, evaluate against its other reporting first."
     }
+  ],
+  "candidates_2026-07-13_night2_c4": [
+    {
+      "domain": "sfstandard.com",
+      "first_seen": "2026-07-13",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://sfstandard.com/2026/07/11/anti-ai-protest-openai-anthropic-google-san-francisco/"
+      ],
+      "context": "Independent San Francisco local news outlet with named bylines; primary independent source for the sf-stop-the-ai-race-protest story, own reporting/photos not derived from wire. Propose Tier 2."
+    },
+    {
+      "domain": "missionlocal.org",
+      "first_seen": "2026-07-13",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://missionlocal.org/2026/07/san-francisco-protest-ai-openai-anthropic-google/"
+      ],
+      "context": "Independent San Francisco local nonprofit newsroom; independently corroborated sf-stop-the-ai-race-protest alongside SF Standard and AP. Propose Tier 2."
+    },
+    {
+      "domain": "dailycal.org",
+      "first_seen": "2026-07-13",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.dailycal.org/news/largest-ai-protest-in-american-history-sees-hundreds-march-on-downtown-san-francisco/article_8253b059-e793-4de4-a012-cc20ddc5ad69.html"
+      ],
+      "context": "UC Berkeley student paper; used only as the (single-outlet) source of the 'largest AI protest in American history' characterization, explicitly not treated as independent confirmation of that superlative. Lower priority for registration than the other two this cycle."
+    }
   ]
 }

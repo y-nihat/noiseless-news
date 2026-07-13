@@ -1,0 +1,20 @@
+{
+  "slug": "sf-stop-the-ai-race-protest",
+  "status": "published",
+  "first_seen": "2026-07-13",
+  "published_at": "2026-07-13",
+  "langs": ["en", "tr"],
+  "title": "Hundreds march from OpenAI to Anthropic to Google DeepMind in San Francisco to demand a pause on AI development",
+  "date": "2026-07-11",
+  "source_urls": [
+    "https://sfstandard.com/2026/07/11/anti-ai-protest-openai-anthropic-google-san-francisco/",
+    "https://missionlocal.org/2026/07/san-francisco-protest-ai-openai-anthropic-google/",
+    "https://www.yahoo.com/news/us/articles/f-protesters-march-openai-anthropic-002748244.html",
+    "https://www.dailycal.org/news/largest-ai-protest-in-american-history-sees-hundreds-march-on-downtown-san-francisco/article_8253b059-e793-4de4-a012-cc20ddc5ad69.html"
+  ],
+  "watch": [
+    "Any statement from OpenAI, Anthropic, or Google DeepMind in response to the protest's demand",
+    "A future Stop the AI Race event -- do not conflate with the distinct, smaller 22 March 2026 protest by the same group"
+  ],
+  "cycle_2026-07-13_night2_c4_note": "Dedup-check: no archive match. Full verify + adversarial falsification pass (fresh contexts). Falsifier caught a landmine: several outlets' coverage of an earlier, smaller 22 March 2026 Stop the AI Race protest (different route including xAI, 'dozens' of attendees) was excluded to avoid conflating it with this 11 July event. Attendance reported as a range (100-350, ~200 most-cited); the Daily Cal's 'largest in American history' framing kept out of headline/TL;DR as single-outlet superlative, mentioned in body only as an attributed characterization. Published."
+}
