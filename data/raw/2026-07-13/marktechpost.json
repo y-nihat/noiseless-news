@@ -8,5 +8,25 @@
     "published": "2026-07-13T00:35:36+00:00",
     "summary": "<p>NeuroVFM is a generalist neuroimaging foundation model from the University of Michigan, trained on 5.24M clinical MRI and CT volumes. Its Vol-JEPA base extends I-JEPA and V-JEPA to volumetric medical imaging, learning brain anatomy and pathology without radiology-report labels.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/12/meet-neurovfm-a-new-neuroimaging-foundation-model-trained-with-vol-jepa-on-uncurated-clinical-mri-and-ct-volumes/\">Meet NeuroVFM: A New Neuroimaging Foundation Model Trained With Vol-JEPA on Uncurated Clinical MRI and CT Volumes</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-07-13T00:48:51.841167+00:00"
+  },
+  {
+    "id": "6edb7d5851558eb6",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Stanford Researchers Introduce TRACE: A Capability-Targeted Agentic Training System That Turns Recurrent Agent Failures Into Synthetic RL Environment",
+    "url": "https://www.marktechpost.com/2026/07/13/stanford-researchers-introduce-trace/",
+    "published": "2026-07-13T08:45:12+00:00",
+    "summary": "<p>Agentic LLMs keep failing the same way because they lack specific, reusable capabilities. Stanford's TRACE diagnoses those gaps from an agent's own trajectories, synthesizes one verifiable training environment per capability, trains a LoRA adapter for each, and routes tokens across experts—improving τ²-Bench by +15.3 points and reaching 73.2% Pass@1 on SWE-bench Verified.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/13/stanford-researchers-introduce-trace/\">Stanford Researchers Introduce TRACE: A Capability-Targeted Agentic Training System That Turns Recurrent Agent Failures Into Synthetic RL Environment</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "855417012e505f97",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Prime Intellect Releases Verifiers v1: Composable Tasksets, Harnesses, and Runtimes for Agentic RL Training and Evaluations",
+    "url": "https://www.marktechpost.com/2026/07/13/prime-intellect-releases-verifiers-v1/",
+    "published": "2026-07-13T07:40:18+00:00",
+    "summary": "<p>Prime Intellect launched verifiers 0.2.0, previewing a rewritten \"v1\" core under the verifiers.v1 namespace. It splits an environment into a taskset (what), a harness (how), and a runtime (where), with an interception server that proxies requests and records training-ready traces. Any taskset runs under any compatible harness, with full prime-rl training support at launch.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/13/prime-intellect-releases-verifiers-v1/\">Prime Intellect Releases Verifiers v1: Composable Tasksets, Harnesses, and Runtimes for Agentic RL Training and Evaluations</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
   }
 ]

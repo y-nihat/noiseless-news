@@ -1,0 +1,32 @@
+[
+  {
+    "id": "305cb4207176fb02",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "The brain is a diverse place, why not computing?",
+    "url": "https://www.nature.com/articles/s42256-026-01273-1",
+    "published": "2026-07-13T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 13 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01273-1\">doi:10.1038/s42256-026-01273-1</a></p>The brain’s architecture exhibits diversity across many temporal and spatial scales, yet our computing architectures remain largely homogeneous. Low-powered neuromorphic hardware offers a path towards energy-efficient AI, but could these approaches be improved with heterogeneous computing architectures?",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "0abae965ebfa423b",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Towards shared embodied intelligence in humanoid robots through optimization, development and testing of the human-aware ergoCub robot",
+    "url": "https://www.nature.com/articles/s42256-026-01272-2",
+    "published": "2026-07-13T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 13 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01272-2\">doi:10.1038/s42256-026-01272-2</a></p>Sartore et al. present ergoCub, a humanoid robot that prioritizes human safety at hardware and motion levels. Using a shared embodied intelligence framework, design and control are jointly optimized with human-related metrics such as back stress alongside locomotion objectives, reducing spinal load and improving walking robustness.",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "09520155820fb3dd",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "A manifesto for Sustainability Robotics",
+    "url": "https://www.nature.com/articles/s42256-026-01260-6",
+    "published": "2026-07-13T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 13 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01260-6\">doi:10.1038/s42256-026-01260-6</a></p>Song et al. propose Sustainability Robotics as a new discipline to overcome fragmentation and enhance societal and environmental impact. They define three guiding principles, alongside two dimensions spanning sustainable design and robotics for sustainability.",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  }
+]

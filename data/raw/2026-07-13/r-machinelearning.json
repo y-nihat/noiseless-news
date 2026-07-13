@@ -1,0 +1,52 @@
+[
+  {
+    "id": "714a8bc1adc930d3",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Prompt-engineering paper accepted to ICML [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uv1xb3/promptengineering_paper_accepted_to_icml_r/",
+    "published": "2026-07-13T05:00:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>&quot;<a href=\"https://arxiv.org/abs/2510.01171\">Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity</a>&quot;</p> <p>This paper was accepted to ICML this year. Its main idea is a very simple prompt-engineering trick: &quot;changing the prompt this way led to more diverse sampling&quot;. Naturally, it is difficult to provide a rigorous theoretical analysis for something like this.</p> <p>Even if it works, I’m not sure this kind of prompt engineering belongs at a top-tier machine learning conference. Some people seems to call this kind of work “modern machine learning”, but I think it should be categorized as less technical venues.</p> <p>How do you think? Am I being too rigid?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Mean_Revolution1490\"> /u/Mean_Revolution1490 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv1xb3/promptengineering_paper_accepted_to_icml_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv1xb3/promptengineering_paper_accepted_to_icml_r/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "384afaa35e73922c",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Evaluating J-space entropy as an error predictor across 7 datasets on Qwen3-4B [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uv5l75/evaluating_jspace_entropy_as_an_error_predictor/",
+    "published": "2026-07-13T08:27:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Anthropic’s Jacobian Lens work introduced a way to inspect verbalizable representations inside language models. Follow-up experiments suggested that entropy in this internal “workspace” might help identify confidently incorrect answers.</p> <p>I tested that hypothesis on Qwen3-4B across ~11,400 examples from seven distinct datasets, including TriviaQA, PopQA, NQ-Open, TruthfulQA, HotpotQA, GSM8K, and CommonSenseQA.</p> <p>Three main findings:</p> <ol> <li>It can complement output confidence on factual retrieval. </li> </ol> <p>On datasets such as PopQA, workspace entropy sometimes improved error-routing precision at low review budgets, particularly among answers that were already high-confidence.</p> <ol> <li>It does not reliably detect internalized misconceptions. </li> </ol> <p>On TruthfulQA, workspace entropy was substantially weaker than output confidence. Incorrect answers could still have a clean, low-entropy internal representation.</p> <ol> <li>Its calibration is highly task-dependent. </li> </ol> <p>A threshold calibrated on TriviaQA failed on GSM8K because correct mathematical reasoning had much higher baseline entropy. Multiple-choice formatting also weakened the signal substantially on CommonSenseQA.</p> <p>The overall result is narrower than “internal entropy detects hallucinations”: it may be a useful complementary routing signal for confidently incorrect factual answers, but it does not behave like a task-general error detector.</p> <p>This is currently a single-model study, so cross-model validation is the most important next step. The repository contains the full methodology, limitations, raw data, metrics, plots, and reproducible notebook:</p> <p><a href=\"https://github.com/dasjoms/jspace-hallucination-eval\">https://github.com/dasjoms/jspace-hallucination-eval</a></p> <p>I‘d be interested in feedback on the experimental design if anyone feels like giving their thoughts.</p> <p>Note: I already posted this to <a href=\"/r/LocalLLaMa\">r/LocalLLaMa</a> yesterday but think this might also fit here.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dasjomsyeet\"> /u/dasjomsyeet </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv5l75/evaluating_jspace_entropy_as_an_error_predictor/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv5l75/evaluating_jspace_entropy_as_an_error_predictor/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "16c238a48fdafe18",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Doubt regarding TMLR[R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uv86op/doubt_regarding_tmlrr/",
+    "published": "2026-07-13T10:53:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>My TMLR paper was assigned to reviewers on <strong>April 23</strong>, and as of <strong>July 13</strong> I've received <strong>2 reviews</strong>, but the third is still pending. The discussion phase hasn't opened yet, so I can't respond to the existing reviews.</p> <p>Is this normal for TMLR, or is it reasonable to send the Action Editor a polite status email? asking for the 3rd review, apprecite the suggestions</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok_Ant_4311\"> /u/Ok_Ant_4311 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv86op/doubt_regarding_tmlrr/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv86op/doubt_regarding_tmlrr/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "74aee6ac98657c8d",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "[ECCV 2026] Meaning of \"Authorized Delegate\" & Registration Advice [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uv31uj/eccv_2026_meaning_of_authorized_delegate/",
+    "published": "2026-07-13T06:00:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone,Our paper was recently provisionally accepted to ECCV 2026! However, our team is facing an issue regarding attendance and the ECCV 2026 Submission Policies. The official guidelines state: &quot;We expect each paper to be presented in person by an author (or an authorized delegate).&quot;None of the listed co-authors can travel to present the paper in-person due to pending immigration status (USA). </p> <p>I need some advice on what exactly counts as an authorized delegate and how to handle this safely without getting our paper pulled from the Springer proceedings.Who qualifies? Can it be anyone, a colleague from my lab who is already going to ECCV, or does it have to be someone specifically registered under our paper's ID?</p> <p>Registration policy: According to the ECCV 2026 Registration Info, every paper must be covered by a full (non-student, non-virtual) author registration by July 17, 2026. If we pay for the full author registration but a &quot;delegate&quot; presents it, does that delegate also need their own separate registration?</p> <p>How to notify: What is the formal process to authorize a delegate? Do we need to email the Program Chairs in advance? </p> <p>If anyone has designated a delegate for ECCV or similar computer vision conferences (CVPR/ICCV) in the past, how did you handle it?</p> <p>TL;DR: No authors can attend ECCV 2026 in-person. Need to know how to legally assign an &quot;authorized delegate&quot; to present our paper so it doesn't get removed from the proceedings.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Latter-Sympathy7767\"> /u/Latter-Sympathy7767 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv31uj/eccv_2026_meaning_of_authorized_delegate/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv31uj/eccv_2026_meaning_of_authorized_delegate/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "10d34df48b2a87ba",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Look for a team to join ML/AI competition [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uv0crm/look_for_a_team_to_join_mlai_competition_d/",
+    "published": "2026-07-13T03:39:04+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi folks,</p> <p>I am looking for research group or individuals that are interested in joining this competition. </p> <p>We can form a team.</p> <p><a href=\"https://aiboost-project.eu/ai-challenge-competition/\">https://aiboost-project.eu/ai-challenge-competition/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Tony-Me1998\"> /u/Tony-Me1998 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv0crm/look_for_a_team_to_join_mlai_competition_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uv0crm/look_for_a_team_to_join_mlai_competition_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  }
+]

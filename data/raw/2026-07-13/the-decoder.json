@@ -1,0 +1,32 @@
+[
+  {
+    "id": "9722fd2e960cec23",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "German AI consortium releases Soofi S, an open 30B model that tops benchmarks in both English and German",
+    "url": "https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/",
+    "published": "2026-07-13T11:41:01+00:00",
+    "summary": "<p><img alt=\"Abstract illustration: Server data streams flow into cubes, symbolizing the LLM Nano Banana Pro against the silhouette of Munich.\" class=\"attachment-full size-full wp-post-image\" height=\"1025\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/soofi-s-german-llm-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        A German research consortium has released Soofi S 30B-A3B, an open language model trained entirely on Deutsche Telekom's cloud infrastructure in Munich. The model uses an efficient hybrid architecture that activates only a fraction of its 31.6 billion parameters per token, keeping throughput steady even at very long contexts. With a training dataset deliberately weighted toward German, Soofi S tops all fully open competitors on both German and English benchmarks.</p>\n<p>The article <a href=\"https://the-decoder.com/german-ai-consortium-releases-soofi-s-an-open-30b-model-that-tops-benchmarks-in-both-english-and-german/\">German AI consortium releases Soofi S, an open 30B model that tops benchmarks in both English and German</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "cd7daa91dc470fc6",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Google’s SensorFM turns messy wearable sensor data into a general-purpose health intelligence layer",
+    "url": "https://the-decoder.com/sensorfm/",
+    "published": "2026-07-13T09:16:48+00:00",
+    "summary": "<p><img alt=\"Collage on SensorFM: Wearables send sensor data to an AI model, which uses it to derive information about the heart, sleep, movement, and temperature.\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/Sensor-FM.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Google Research's SensorFM is a foundation model trained on more than a trillion minutes of wearable data from five million Fitbit and Pixel Watch users. It beats existing benchmarks on 34 of 35 health and behavioral tasks. SensorFM could eventually power Google's AI health coach, but the company hasn't announced any integration plans yet.</p>\n<p>The article <a href=\"https://the-decoder.com/sensorfm/\">Google’s SensorFM turns messy wearable sensor data into a general-purpose health intelligence layer</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  },
+  {
+    "id": "54a1510c507f57d8",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Anthropic extends free Fable 5 access for subscribers as OpenAI's GPT-5.6 Sol heats up the pricing war",
+    "url": "https://the-decoder.com/anthropic-extends-free-fable-5-access-for-subscribers-as-openais-gpt-5-6-sol-heats-up-the-pricing-war/",
+    "published": "2026-07-13T07:54:34+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/claude_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Anthropic is keeping Claude Fable 5 in its subscription plans through July 19, 2026. The model was supposed to switch to pay-per-use today. Subscribers can use up to 50 percent of their weekly limit for Fable 5. The extension is likely a response to pricing pressure from OpenAI's GPT-5.6 Sol and cheaper competing models.</p>\n<p>The article <a href=\"https://the-decoder.com/anthropic-extends-free-fable-5-access-for-subscribers-as-openais-gpt-5-6-sol-heats-up-the-pricing-war/\">Anthropic extends free Fable 5 access for subscribers as OpenAI&#039;s GPT-5.6 Sol heats up the pricing war</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-13T12:33:44.069887+00:00"
+  }
+]
