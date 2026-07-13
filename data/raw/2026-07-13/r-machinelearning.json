@@ -78,5 +78,25 @@
     "published": "2026-07-13T17:15:17+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>LLM's seem to make it so much easier to run experiments, write papers, etc. As a result, are we seeing phd students finish their phds sooner than ever before specifically in CS? If not, why not?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Alone_Reality3726\"> /u/Alone_Reality3726 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uvhr7a/fast_track_through_a_cs_phd_using_llms_for_paper/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uvhr7a/fast_track_through_a_cs_phd_using_llms_for_paper/\">[comments]</a></span>",
     "fetched_at": "2026-07-13T17:58:00.216031+00:00"
+  },
+  {
+    "id": "2837dc67b612abe1",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "What's your take on continual learning? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uvm2p4/whats_your_take_on_continual_learning_d/",
+    "published": "2026-07-13T19:47:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Everyone suddenly seems to be an expert in continual learning. Dario Amodei claimed on the Dwarkesh Patel podcast that continual learning will be achieved by 2026, and Demis Hassabis has called it the most important unsolved breakthrough on the path to more general AI. Two of the most prominent people in the field, and yet I don't think there's even a consensus on what continual learning actually means.</p> <p>I see researchers and startups approaching it in fundamentally different ways. Some frame it as solving catastrophic forgetting. Others treat it as online learning, lifelong learning, or meta-learning. The goalposts keep shifting depending on who's talking.</p> <p>What I'm trying to wrap my head around is: what does continual learning actually require, and why is it so central to AGI? Is the bottleneck architectural, is it a data problem, or is it something more fundamental about how we evaluate and benchmark it?</p> <p>Would genuinely appreciate different perspectives, whether you think it's overhyped, underappreciated, or just poorly defined. Pointers to papers or frameworks that cut through the noise would also be welcome.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/watercolorer2024\"> /u/watercolorer2024 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uvm2p4/whats_your_take_on_continual_learning_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uvm2p4/whats_your_take_on_continual_learning_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "422eac45811c2a00",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "GPUHedge: Hedging serverless GPU providers improves cold start p95 latency from 117s to 30s [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uvlb6h/gpuhedge_hedging_serverless_gpu_providers/",
+    "published": "2026-07-13T19:20:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Disclosure: I built it, it is open source, Apache-2.0 licensed, and currently alpha. Repository: <a href=\"https://github.com/mireklzicar/gpuhedge\">https://github.com/mireklzicar/gpuhedge</a></p> <p>I started working on it after benchmarking a 17 GB AI model across several serverless GPU providers.</p> <p>On the primary provider, requests usually either completed in roughly 6–8 seconds or took around 90–122 seconds after a fresh GPU cold start. Simply switching to another provider did not remove the problem because every provider had its own tail.</p> <p>GPUHedge treats this as a speculative-execution problem.</p> <p>It starts a request on a primary provider, watches the job’s lifecycle state, and conditionally launches or switches to a backup. The first result that passes a validator wins, and the losing job is cancelled through the provider’s native API.</p> <p>You can try the policy engines without creating provider accounts or spending money:</p> <p><code>pip install gpuhedge</code></p> <p>In the initial benchmark, a fixed RunPod → Cerebrium hedge launched after 10 seconds. On the 36-request evaluation portion, it changed:</p> <ul> <li>observed p95 latency from 116.6 s to 29.4 s;</li> <li>requests over 60 seconds from 11/36 to 0/36;</li> <li>modeled active-compute cost from $0.0114 to $0.0083 per request.</li> </ul> <p>What is your experience with cold start latency? Which provider to add next? Can something like this help what you are building?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Putrid_Construction3\"> /u/Putrid_Construction3 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uvlb6h/gpuhedge_hedging_serverless_gpu_providers/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uvlb6h/gpuhedge_hedging_serverless_gpu_providers/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
   }
 ]

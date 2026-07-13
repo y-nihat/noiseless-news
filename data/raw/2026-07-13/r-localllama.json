@@ -198,5 +198,85 @@
     "published": "2026-07-13T12:54:23+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>So like many of you I realized I was creating custom tools for each one of my AI based applications and then realized alright I guess I should go forth and build a local MCP server.</p> <p>SOMEONE TELL ME IF IM DOING SOMETHING WRONG but it seems like permissions control for an agent has to be managed by the MCP service.</p> <p>This honestly leads to an annoying amount of config on both the service and the client app. (Different token for different levels of access of control).</p> <p>This lead me to the obvious conclusion: model tools should simply be a package library not a service. Yes every programming language would need its own package. Well guess what? That’s true for everything. I don’t have a web service running to figure out the current time. I simply call the time library for whatever programming language I’m using.</p> <p>Let me know if I missed something critical here otherwise I’m hopping off this MCP service train and I’ll catch you on the next hype 🫡</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/No_Cartographer3953\"> /u/No_Cartographer3953 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvaqxp/mcp_is_bad/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvaqxp/mcp_is_bad/\">[comments]</a></span>",
     "fetched_at": "2026-07-13T17:58:00.216031+00:00"
+  },
+  {
+    "id": "2b58a7e02cc00371",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "This is why we need local models and opensource harnesses",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvlwz0/this_is_why_we_need_local_models_and_opensource/",
+    "published": "2026-07-13T19:41:33+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvlwz0/this_is_why_we_need_local_models_and_opensource/\"> <img alt=\"This is why we need local models and opensource harnesses\" src=\"https://preview.redd.it/4o8n4hjmv1dh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=1e39fd9fcdb436fd4d0760c942176ede35f788b5\" title=\"This is why we need local models and opensource harnesses\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Comfortable-Rock-498\"> /u/Comfortable-Rock-498 </a> <br /> <span><a href=\"https://i.redd.it/4o8n4hjmv1dh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvlwz0/this_is_why_we_need_local_models_and_opensource/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "4a3d30bb7737fb4d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Joined the Dual RTX 6000 club",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvmon5/joined_the_dual_rtx_6000_club/",
+    "published": "2026-07-13T20:08:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvmon5/joined_the_dual_rtx_6000_club/\"> <img alt=\"Joined the Dual RTX 6000 club\" src=\"https://preview.redd.it/e3tta4bl02dh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=49ead0c5bf7a7472f09bf64cfe85420bb4463bb4\" title=\"Joined the Dual RTX 6000 club\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I only spent 2 hours making the bios accept the dual gpus, only 5 hours configuring VLLM to run deepseek v4 flash dspark, but totally worth it.</p> <p>I truly believe in the near future we will have to rely on ourselves.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BitXorBit\"> /u/BitXorBit </a> <br /> <span><a href=\"https://i.redd.it/e3tta4bl02dh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvmon5/joined_the_dual_rtx_6000_club/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "3745321dc5e6bfbd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "If Frontier AI is so Dangerous, Why should private companies be allowed to develop it?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvll20/if_frontier_ai_is_so_dangerous_why_should_private/",
+    "published": "2026-07-13T19:29:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>There's a push by openAI and anthropic primarily. Well more than a push just straight fear mongering about open source ai and its dangers. If it's so dangerous why would the US gov. in particular continue to allow private industry to develop and release.</p> <p>If I had a company OpenNuke and started making bomb I'm pretty sure that would get shutdown. Or maybe OpenGene is a better analogy. Human embryo augmentation could technically be done but it's not allowed.</p> <p>Tech companies should not be allowed to have it both ways. Either it's too dangerous to develop period, including anthropic, openai, etc. Or It's not and they just have to deal with the fact that the technology moat they assumed they had doesn't exist and they should compete in other ways.</p> <p>Attempting to Fear monger open models out of existence to prevent a colapse of business value is reprehensible. Especially considering all of humanities data copywrite or not was used for training, that just adds a special kinda F'd up to the whole thing.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Strange_Test7665\"> /u/Strange_Test7665 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvll20/if_frontier_ai_is_so_dangerous_why_should_private/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvll20/if_frontier_ai_is_so_dangerous_why_should_private/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "42bce9f61269a42f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM 5.2 running on MacBook Pro M5 48 GB Ram at between 2 - 2.8t/s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvlhxl/glm_52_running_on_macbook_pro_m5_48_gb_ram_at/",
+    "published": "2026-07-13T19:26:45+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvlhxl/glm_52_running_on_macbook_pro_m5_48_gb_ram_at/\"> <img alt=\"GLM 5.2 running on MacBook Pro M5 48 GB Ram at between 2 - 2.8t/s\" src=\"https://preview.redd.it/td1ow57rs1dh1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=7639eefd04ae28bfcc213e145281fcec1f7b0c86\" title=\"GLM 5.2 running on MacBook Pro M5 48 GB Ram at between 2 - 2.8t/s\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I started reading about Flash MOE I have my own built Claude Desktop style app using Pi as the harness. Qwen3.6 27B is good but sometimes it falls short on some of the large codebases I work on so I wanted to see if I could get GLM 5.2 working on my machine with Flash MOE.</p> <p>Got to work with Claude and current benchmarks are 4.4k pre prompt with tools etc took 6m38s and push the 4.4k in and get 501 tokens out running at 2t/s</p> <p>When I use no pre prompt 400 tokens in and 337 out taking 3m17s.</p> <p>I have also seen 2.8t/s but it depends on what I am doing on my machine at the time.</p> <p>I might try and get it to plan tasks at night time and then try and run the plan with Qwen in the day. This is just an experiment but happy with the results so far.</p> <p>Using pipenetwork/GLM-5.2-MLX-mixed-3_6bit model which is 332 GB</p> <p><a href=\"https://preview.redd.it/td1ow57rs1dh1.png?width=1592&amp;format=png&amp;auto=webp&amp;s=157e94f4fc1030314db4dc2f1db5c85520fac089\">https://preview.redd.it/td1ow57rs1dh1.png?width=1592&amp;format=png&amp;auto=webp&amp;s=157e94f4fc1030314db4dc2f1db5c85520fac089</a></p> <p><a href=\"https://preview.redd.it/pea4777rs1dh1.png?width=1632&amp;format=png&amp;auto=webp&amp;s=7c646d7584d52200929d1ac344c5833169542c88\">https://preview.redd.it/pea4777rs1dh1.png?width=1632&amp;format=png&amp;auto=webp&amp;s=7c646d7584d52200929d1ac344c5833169542c88</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/gutard\"> /u/gutard </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvlhxl/glm_52_running_on_macbook_pro_m5_48_gb_ram_at/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvlhxl/glm_52_running_on_macbook_pro_m5_48_gb_ram_at/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "6c7697986158cd82",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Mistral Community Feedback Survey",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvlhii/mistral_community_feedback_survey/",
+    "published": "2026-07-13T19:26:20+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvlhii/mistral_community_feedback_survey/\"> <img alt=\"Mistral Community Feedback Survey\" src=\"https://external-preview.redd.it/7uWecef4bVJEJwurhtNFATUvctBPWob3WOLeZg9wEZ4.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8759adfe993a8ebfa6a87a296b79485fd2f27058\" title=\"Mistral Community Feedback Survey\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>This survey also includes various questions about running models locally and what kind of model sizes they should focus on in the future.</p> <p>As there are many requests for more open weight ~30-120B models here that people can actually run locally, it's probably worth giving feedback about that.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sdroege_\"> /u/sdroege_ </a> <br /> <span><a href=\"https://www.reddit.com/r/MistralAI/comments/1ujplks/survey_community_feedback/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvlhii/mistral_community_feedback_survey/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "b57faf82ed3771ee",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V2-GGUF",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvk1if/qwen3635ba3buncensoredgenesishermesv2gguf/",
+    "published": "2026-07-13T18:35:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><strong>Here model:</strong> <a href=\"https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V2-GGUF\">https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V2-GGUF</a></p> <p><strong>Settings:</strong> <code>temperature=0.6, top_p=0.95, top_k=20, min_p=0, presence_penalty=disabled, repeat_penalty=disabled, seed=42, thinking=enabled</code></p> <p><strong>System Prompt:</strong> <code>You are Qwen, a large language model created by Tongyi Lab team from Alibaba Group. You are a helpful assistant.</code></p> <p><strong>Recommended quant:</strong> APEX</p> <p><strong>Quick tests done in one shot on APEX (Q6_K) quant:</strong> </p> <p>1) Prompt: <code>Generate an SVG of a pelican riding a bicycle</code>. Result: <a href=\"https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V2-GGUF/blob/main/pelikan.svg\">pelican.svg</a></p> <p>2) Arcanoid HTML5 game. <a href=\"https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V2-GGUF/blob/main/test_prompt.txt\">Prompt</a> . <a href=\"https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-Hermes-V2-GGUF/blob/main/tron-arcanoid.html\">Result</a></p> <p><strong>Bonus features:</strong></p> <p>1) Better language understanding and natural communication with user.</p> <p>2) Structured clean thinking process with self correction and original enhanced thinking logic.</p> <p>3) Better System Prompt understanding.</p> <p>4) Stable inference and agentic capabilities for Hermes agent on Qwen3.6-35B-A3B base.</p> <p>5) A lot less thinking loops and better long context handling.</p> <p>Enjoy ^_^</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/EvilEnginer\"> /u/EvilEnginer </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvk1if/qwen3635ba3buncensoredgenesishermesv2gguf/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvk1if/qwen3635ba3buncensoredgenesishermesv2gguf/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "6283652216ffe15e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "J-Wash: A novel way to brainwash and customize large language models based on Anthropic's Jacobian-Lens!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvq1i3/jwash_a_novel_way_to_brainwash_and_customize/",
+    "published": "2026-07-13T22:12:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvq1i3/jwash_a_novel_way_to_brainwash_and_customize/\"> <img alt=\"J-Wash: A novel way to brainwash and customize large language models based on Anthropic's Jacobian-Lens!\" src=\"https://external-preview.redd.it/7toPRgFRhqs4axyiw_ah5zqRykLyGPG5ihmD4tErkSQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=433ffd9bab479b9c3d26d3d9170cdad1aa3aef05\" title=\"J-Wash: A novel way to brainwash and customize large language models based on Anthropic's Jacobian-Lens!\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Extraaltodeus\"> /u/Extraaltodeus </a> <br /> <span><a href=\"https://github.com/Extraltodeus/J-Wash\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvq1i3/jwash_a_novel_way_to_brainwash_and_customize/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
+  },
+  {
+    "id": "4e4c9e58d29765b4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Best Llm Models for 2D retro gaming creation?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvnv92/best_llm_models_for_2d_retro_gaming_creation/",
+    "published": "2026-07-13T20:51:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I am interested to create old 8-bit perhaps 16-bit looking graphics mini games. I am curious if any models particularly excel at it?</p> <p>Edit: Run locally and size of model is not an issue including GLM's</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Hannibalj2ca\"> /u/Hannibalj2ca </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvnv92/best_llm_models_for_2d_retro_gaming_creation/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvnv92/best_llm_models_for_2d_retro_gaming_creation/\">[comments]</a></span>",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
   }
 ]

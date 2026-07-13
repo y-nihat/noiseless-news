@@ -38,5 +38,15 @@
     "published": "2026-07-13T16:42:15+00:00",
     "summary": "In this post, we introduce the UI for optimized generative AI inference recommendations in Amazon SageMaker AI Studio, a low-code no-code (LCNC) experience. The API already gives you programmatic access to recommendations, but it assumes you know which parameters to set and how to interpret raw benchmark output. The UI removes that assumption. It guides you through preset use-case profiles, visual comparisons of results, and one-click deployment, so teams without deep infrastructure expertise can get a validated configuration on their own.",
     "fetched_at": "2026-07-13T17:58:00.216031+00:00"
+  },
+  {
+    "id": "b1648634e46181df",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/openai-gpt-5-6-sol-terra-and-luna-are-now-generally-available-on-amazon-bedrock/",
+    "published": "2026-07-13T21:01:20+00:00",
+    "summary": "Today, GPT-5.6 Sol, Terra, and Luna from OpenAI are generally available on Amazon Bedrock, bringing the smartest family of models from OpenAI yet to Amazon Bedrock’s next-generation inference engine built for high-performance, security and reliability.",
+    "fetched_at": "2026-07-13T22:33:34.341109+00:00"
   }
 ]
