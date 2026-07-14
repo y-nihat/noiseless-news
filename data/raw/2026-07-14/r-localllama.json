@@ -378,5 +378,15 @@
     "published": "2026-07-14T19:27:22+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I can how run 60 tk/s with two slot now, quality seems good, tool call is very stable. I haven't done any coding yet.<br /> 2 slot each have 100k KV cache allocated and it took around 21GB of VRAM</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Top_Outlandishness78\"> /u/Top_Outlandishness78 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwio0k/ternary_qwen36_27b_tested_on_3090/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwio0k/ternary_qwen36_27b_tested_on_3090/\">[comments]</a></span>",
     "fetched_at": "2026-07-14T22:36:38.945397+00:00"
+  },
+  {
+    "id": "c1881bbf8f1896b5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "So what's the consensus on 1bit models? Is it still a pipe dream?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uwnhlv/so_whats_the_consensus_on_1bit_models_is_it_still/",
+    "published": "2026-07-14T22:28:56+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>With Bonsai 8b at 1bit being 1gb~ size while being functional and the 27b being dropped also at 1bit while only being 5~gb, is the future for 1bit models looking bright? What will their primary use be? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AnimalPuzzleheaded71\"> /u/AnimalPuzzleheaded71 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwnhlv/so_whats_the_consensus_on_1bit_models_is_it_still/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwnhlv/so_whats_the_consensus_on_1bit_models_is_it_still/\">[comments]</a></span>",
+    "fetched_at": "2026-07-14T23:11:38.262996+00:00"
   }
 ]
