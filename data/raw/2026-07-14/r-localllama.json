@@ -18,5 +18,115 @@
     "published": "2026-07-14T00:35:13+00:00",
     "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/tuananh_org\"> /u/tuananh_org </a> <br /> <span><a href=\"https://x.com/haoailab/status/2074244199143362925\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvtf7h/new_set_of_fp4_attention_kernels_for_b300/\">[comments]</a></span>",
     "fetched_at": "2026-07-14T00:53:34.396694+00:00"
+  },
+  {
+    "id": "93831dda7ce147b4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I just don't get it. These big tech companies can illegally scrape the entire internet and gatekeep their better models behind higher prices. So it's natural that people look for affordable options, and there will be providers who apparently distill models from them.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvwn9q/i_just_dont_get_it_these_big_tech_companies_can/",
+    "published": "2026-07-14T03:01:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvwn9q/i_just_dont_get_it_these_big_tech_companies_can/\"> <img alt=\"I just don't get it. These big tech companies can illegally scrape the entire internet and gatekeep their better models behind higher prices. So it's natural that people look for affordable options, and there will be providers who apparently distill models from them.\" src=\"https://preview.redd.it/ixx9zxu924dh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=0c571bf8c2cf16d34aeed160d8aeb93b1580441e\" title=\"I just don't get it. These big tech companies can illegally scrape the entire internet and gatekeep their better models behind higher prices. So it's natural that people look for affordable options, and there will be providers who apparently distill models from them.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>The irony? They cry existential threat when they were the ones who made us feel that way first.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Blue-Sea2255\"> /u/Blue-Sea2255 </a> <br /> <span><a href=\"https://i.redd.it/ixx9zxu924dh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvwn9q/i_just_dont_get_it_these_big_tech_companies_can/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "1528ce79eff0a626",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "FOSS NotebookLM connected to Reddit,YT,Google,IG,Tiktok etc",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uw214g/foss_notebooklm_connected_to/",
+    "published": "2026-07-14T07:47:51+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw214g/foss_notebooklm_connected_to/\"> <img alt=\"FOSS NotebookLM connected to Reddit,YT,Google,IG,Tiktok etc\" src=\"https://external-preview.redd.it/xo9rPWm0a38ezpMnJuRVXLwevdv0uxhwtB0qYd_kcrw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=ef7c1d8b4fae00eba0b5a7c35267f6db93121404\" title=\"FOSS NotebookLM connected to Reddit,YT,Google,IG,Tiktok etc\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>NotebookLM is one of the best and most useful AI platforms out there, but once you start using it regularly you also feel its limitations leaving something to be desired more.</p> <ol> <li>There are limits on the amount of sources you can add in a notebook.</li> <li>There are limits on the number of notebooks you can have.</li> <li>You cannot have sources that exceed 500,000 words and are more than 200MB.</li> <li>You are vendor locked in to Google services (LLMs, usage models, etc.) with no option to configure them.</li> <li>No live data, so you can't monitor competitors, search results, or social platforms in real time.</li> <li>No file sorting support</li> <li>NotebookLM Agent is specifically optimised for just studying and researching, but you can do so much more with the source data.</li> <li>Lack of multiplayer support.</li> <li>No API or MCP access, so you can't plug it into your own agents or automate anything.</li> </ol> <p>...and more.</p> <p>SurfSense is specifically made to solve these problems. For those who dont know, SurfSense is the open source, privacy focused alternative to NotebookLM for teams with no data limits, and now also a competitive intelligence platform for AI agents with live scraping connectors. It currently empowers you to:</p> <ul> <li><strong>Live Data Connectors</strong> - Scrape <strong>Reddit, YouTube, Instagram, TikTok, Google Maps, Google Search, and the open web</strong> without the official APIs' rate limits.</li> <li><strong>REST API + MCP Server</strong> - Expose every connector as a native tool to Claude, Cursor, or any agent framework.</li> <li><strong>AI Agents &amp; Automations</strong> - Run research on a schedule or on events, then get cited briefs and alerts written back to Notion, Slack, Linear, and Jira.</li> <li><strong>Control Your Data Flow</strong> - Keep your data private and secure.</li> <li><strong>No Data Limits</strong> - Add an unlimited amount of sources and notebooks.</li> <li><strong>No Vendor Lock-in</strong> - Configure any LLM, image, TTS, and STT models to use.</li> <li><strong>25+ External Data Sources</strong> - Add your sources from Google Drive, OneDrive, Dropbox, Notion, and many other external services.</li> <li><strong>Real-Time Multiplayer Support</strong> - Work easily with your team members in a shared notebook.</li> <li><strong>Desktop App</strong> - Get assistance in your OS.</li> </ul> <p>Check us out if this interests you or if you want to contribute to a open source software</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Uiqueblhats\"> /u/Uiqueblhats </a> <br /> <span><a href=\"https://github.com/MODSetter/SurfSense\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw214g/foss_notebooklm_connected_to/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "b4b9970801a5e65c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Google DeepMind's Demis Hassabis calls for U.S.-led global AI watchdog",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uw4vg1/google_deepminds_demis_hassabis_calls_for_usled/",
+    "published": "2026-07-14T10:31:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw4vg1/google_deepminds_demis_hassabis_calls_for_usled/\"> <img alt=\"Google DeepMind's Demis Hassabis calls for U.S.-led global AI watchdog\" src=\"https://preview.redd.it/m4eeydm7a6dh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=89e2db611f483e916b035ff1c79a4c8432072bdc\" title=\"Google DeepMind's Demis Hassabis calls for U.S.-led global AI watchdog\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>From Demis Hassabis on Substack: A Framework for Frontier AI and the Dawning of a New Age: <a href=\"https://demishassabis.substack.com/p/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age\">https://demishassabis.substack.com/p/a-framework-for-frontier-ai-and-the-dawning-of-a-new-age</a><br /> Article on 𝕏: <a href=\"https://x.com/demishassabis/status/2076957440109625718\">https://x.com/demishassabis/status/2076957440109625718</a></p> <p>Axios: <a href=\"https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind?mrfcid=202607146a4b28424486741cce8ae26d\">https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind?mrfcid=202607146a4b28424486741cce8ae26d</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://i.redd.it/m4eeydm7a6dh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw4vg1/google_deepminds_demis_hassabis_calls_for_usled/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "0a18e034757148d9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why aren't any American open-source AI labs even close to Chinese ones on benchmarks yet?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvw2b3/why_arent_any_american_opensource_ai_labs_even/",
+    "published": "2026-07-14T02:34:56+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know there are a few american labs working on open-source AI but none of them show up in the benchmarks like Chinese open source does, why haven't any American labs been able to reach top open source benchmarks yet?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Lost_Foot_6301\"> /u/Lost_Foot_6301 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvw2b3/why_arent_any_american_opensource_ai_labs_even/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvw2b3/why_arent_any_american_opensource_ai_labs_even/\">[comments]</a></span>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "0009e4af1df42212",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "llama.cpp milestone",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uw5p73/llamacpp_milestone/",
+    "published": "2026-07-14T11:14:17+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw5p73/llamacpp_milestone/\"> <img alt=\"llama.cpp milestone\" src=\"https://preview.redd.it/ktbcljtnh6dh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=0ed17c2da2fd7c39b4d07ed515c584dd4264b87f\" title=\"llama.cpp milestone\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Thanks to all contributors for our local inference!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sergeysi\"> /u/sergeysi </a> <br /> <span><a href=\"https://i.redd.it/ktbcljtnh6dh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw5p73/llamacpp_milestone/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "9bdc4b6f53a62b9a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "model: add Hy3 (hy_v3) support with MTP speculative decoding by satindergrewal · Pull Request #25395 · ggml-org/llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvwbb2/model_add_hy3_hy_v3_support_with_mtp_speculative/",
+    "published": "2026-07-14T02:46:34+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvwbb2/model_add_hy3_hy_v3_support_with_mtp_speculative/\"> <img alt=\"model: add Hy3 (hy_v3) support with MTP speculative decoding by satindergrewal · Pull Request #25395 · ggml-org/llama.cpp\" src=\"https://external-preview.redd.it/G2jNnfzK27ZTXrG6Y-0EB93m36H972oatYe_gbB26M0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f063c3ac0a0efb096da3e1247c7868728667c94a\" title=\"model: add Hy3 (hy_v3) support with MTP speculative decoding by satindergrewal · Pull Request #25395 · ggml-org/llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Adds support for Tencent's Hy3 (<code>hy_v3</code> / <code>HYV3ForCausalLM</code>, 299B MoE, 80 layers + 1 MTP layer), including its multi-token-prediction head as a <code>draft-mtp</code> speculative target.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/25395\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvwbb2/model_add_hy3_hy_v3_support_with_mtp_speculative/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "347cdf73d131bd0a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why does preserve thinking flag exist?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvzsvn/why_does_preserve_thinking_flag_exist/",
+    "published": "2026-07-14T05:41:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Isn't it something that the harness should manage? Why bake it into the lower levels?</p> <p>I'm talking about Qwen3.6 27B</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Glad_Claim_6287\"> /u/Glad_Claim_6287 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvzsvn/why_does_preserve_thinking_flag_exist/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvzsvn/why_does_preserve_thinking_flag_exist/\">[comments]</a></span>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "bbcdeaf60da3f661",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "My Frankenbox: I mounted 3 GPUs in and on-top of my case only fits only one GPU. 9070xt + 1080 ti + 5700xt",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvws08/my_frankenbox_i_mounted_3_gpus_in_and_ontop_of_my/",
+    "published": "2026-07-14T03:07:54+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvws08/my_frankenbox_i_mounted_3_gpus_in_and_ontop_of_my/\"> <img alt=\"My Frankenbox: I mounted 3 GPUs in and on-top of my case only fits only one GPU. 9070xt + 1080 ti + 5700xt\" src=\"https://preview.redd.it/b2ytskic24dh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=d34ad98d5ff3dea71ffbb873fb4e1ab176b525e9\" title=\"My Frankenbox: I mounted 3 GPUs in and on-top of my case only fits only one GPU. 9070xt + 1080 ti + 5700xt\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>...I have no explanation why I did this, I don't even use my Local AI 🤷🏽‍♂️. But I did a lot of 3d printing to get it set up. Yes it runs off one 1400W PSU. The external card is using Oculink via m.2. The CPU is a 9850x3d, RAM is 64 GB 6000 at CAS36 (🥲) I honestly wish I could afford better cards, but I'm in Canada and it's usually over a grand for anything with over 16gb.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Vaguswarrior\"> /u/Vaguswarrior </a> <br /> <span><a href=\"https://i.redd.it/b2ytskic24dh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvws08/my_frankenbox_i_mounted_3_gpus_in_and_ontop_of_my/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "fe5910148ae624ae",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Hermes Agent with local LLMs",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvypn9/hermes_agent_with_local_llms/",
+    "published": "2026-07-14T04:44:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey all, I have a 4090 + 5060ti setup with 64gb ram. I have been using opencode with MiMoV2 pro and its great but I don't think spending $20 daily is financially sound decision. I heard that using qwen3.6-27b with hermes goes into loops, have any of you successfully used any open source LLM (something that could run on my setup) at decent tps and meaningfully complete tasks? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dry_Long3157\"> /u/Dry_Long3157 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvypn9/hermes_agent_with_local_llms/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvypn9/hermes_agent_with_local_llms/\">[comments]</a></span>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "744117bca0bb425a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Good podcasts",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uw5mfu/good_podcasts/",
+    "published": "2026-07-14T11:10:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm heading on vacation soon and want to download a few good podcasts about local LLMs, open-weight models, inference, tooling and the broader open-source AI ecosystem.</p> <p>Which podcasts or specific episodes do you genuinely recommend? I'm especially interested in technical discussions, practical experiences and staying up to date, but beginner friendly suggestions are welcome too.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/gevezex\"> /u/gevezex </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw5mfu/good_podcasts/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uw5mfu/good_podcasts/\">[comments]</a></span>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
+  },
+  {
+    "id": "a270967a639e0b84",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "CPTR is wonderful! open-webui/computer: Your Computer. Anywhere.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvwlym/cptr_is_wonderful_openwebuicomputer_your_computer/",
+    "published": "2026-07-14T03:00:07+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvwlym/cptr_is_wonderful_openwebuicomputer_your_computer/\"> <img alt=\"CPTR is wonderful! open-webui/computer: Your Computer. Anywhere.\" src=\"https://external-preview.redd.it/3LoWi4ufB_CN6RczZ27q-mY_JSC2n_ORi93nf59ZCJc.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=1222fde0083eb86d0e4a5105e1e014cd6e67cf56\" title=\"CPTR is wonderful! open-webui/computer: Your Computer. Anywhere.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/6jarjar6\"> /u/6jarjar6 </a> <br /> <span><a href=\"https://github.com/open-webui/computer\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvwlym/cptr_is_wonderful_openwebuicomputer_your_computer/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-14T11:26:55.104372+00:00"
   }
 ]
