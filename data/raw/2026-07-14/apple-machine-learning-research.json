@@ -1,0 +1,12 @@
+[
+  {
+    "id": "2fc66bfe32ffb2d1",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Proactive Agent Research Environment: Simulating Active Users to Evaluate Proactive Assistants",
+    "url": "https://machinelearning.apple.com/research/proactive-agent-research-environment",
+    "published": "2026-07-14T00:00:00+00:00",
+    "summary": "Proactive agents that anticipate user needs and autonomously execute tasks hold great promise as digital assistants, yet the lack of realistic user simulation frameworks hinders their development. Existing approaches model apps as flat tool-calling APIs, failing to capture the stateful and sequential nature of user interaction in digital environments and making realistic user simulation infeasible. We introduce Proactive Agent Research Environment (Pare), a framework for building and evaluating proactive agents in digital environments. Pare models applications as finite state machines with…",
+    "fetched_at": "2026-07-14T17:18:18.599400+00:00"
+  }
+]
