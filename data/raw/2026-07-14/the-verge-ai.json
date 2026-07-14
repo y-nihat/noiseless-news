@@ -58,5 +58,25 @@
     "published": "2026-07-14T11:43:29+00:00",
     "summary": "Demis Hassabis thinks the world needs an AI watchdog with the power to hit the brakes if frontier models become too dangerous. Writing in a blog post, the Google DeepMind CEO and cofounder said the US should lead the initiative, arguing that the country is the best place to set global standards \"given its economic [&#8230;]",
     "fetched_at": "2026-07-14T17:18:18.599400+00:00"
+  },
+  {
+    "id": "89990dc19e6326f5",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "OpenAI may announce a ChatGPT smart speaker this year",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/965670/openai-chatgpt-ai-smart-speaker-hardware-device",
+    "published": "2026-07-14T21:26:32+00:00",
+    "summary": "OpenAI's first device is set to be a smart speaker that lets you talk with ChatGPT, according to a report from Bloomberg. The device apparently won't have a screen, but will use a camera and additional sensors to \"understand\" your environment. The report comes just days after Apple filed a lawsuit against OpenAI that accused [&#8230;]",
+    "fetched_at": "2026-07-14T22:36:38.945397+00:00"
+  },
+  {
+    "id": "07637df8cbed9afb",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "SpaceXAI&#8217;s Grok programming tool was uploading its users&#8217; entire codebase to cloud storage",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+    "published": "2026-07-14T19:25:00+00:00",
+    "summary": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that Cereblab published findings on Monday showing how the Grok Build CLI was packaging and uploading entire code repositories, \"including files it was told not to open [&#8230;]",
+    "fetched_at": "2026-07-14T22:36:38.945397+00:00"
   }
 ]

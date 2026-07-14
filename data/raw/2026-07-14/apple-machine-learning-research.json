@@ -8,5 +8,15 @@
     "published": "2026-07-14T00:00:00+00:00",
     "summary": "Proactive agents that anticipate user needs and autonomously execute tasks hold great promise as digital assistants, yet the lack of realistic user simulation frameworks hinders their development. Existing approaches model apps as flat tool-calling APIs, failing to capture the stateful and sequential nature of user interaction in digital environments and making realistic user simulation infeasible. We introduce Proactive Agent Research Environment (Pare), a framework for building and evaluating proactive agents in digital environments. Pare models applications as finite state machines with…",
     "fetched_at": "2026-07-14T17:18:18.599400+00:00"
+  },
+  {
+    "id": "208f07ccbca66601",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Multilingual Semantic Retrieval for Apple Music Search",
+    "url": "https://machinelearning.apple.com/research/multilingual-semantic-retrieval",
+    "published": "2026-07-14T00:00:00+00:00",
+    "summary": "Apple Music serves listeners across 150+ storefronts in dozens of languages, with a catalog that grows by hundreds of thousands of new tracks daily. At this scale, search recall on misspelled, transliterated, and cross-lingual queries becomes a dominant driver of session quality, particularly for tail queries that account for the majority of unique queries. We present a multilingual semantic retrieval system built on a 305M-parameter Siamese bi-encoder fine-tuned from GTE-multilingual-base with curriculum-scheduled multi-objective training. The model is integrated into the search stack via a…",
+    "fetched_at": "2026-07-14T22:36:38.945397+00:00"
   }
 ]
