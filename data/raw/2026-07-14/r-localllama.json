@@ -388,5 +388,15 @@
     "published": "2026-07-14T22:28:56+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>With Bonsai 8b at 1bit being 1gb~ size while being functional and the 27b being dropped also at 1bit while only being 5~gb, is the future for 1bit models looking bright? What will their primary use be? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AnimalPuzzleheaded71\"> /u/AnimalPuzzleheaded71 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwnhlv/so_whats_the_consensus_on_1bit_models_is_it_still/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwnhlv/so_whats_the_consensus_on_1bit_models_is_it_still/\">[comments]</a></span>",
     "fetched_at": "2026-07-14T23:11:38.262996+00:00"
+  },
+  {
+    "id": "23ad988fbb3ce816",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "PrismML Bonsai 27B is surprisingly usable on the Jetson Orin Nano 8GB",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uwoemt/prismml_bonsai_27b_is_surprisingly_usable_on_the/",
+    "published": "2026-07-14T23:04:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Ctx Size: 48k</p> <p>Prompt processing: 27t/s</p> <p>Token/s: 4.31 t/s</p> <p>RAM Usage (on cold start): 6.2GB with model loaded (no-mmap)</p> <p>Yes it is not very fast but it is a good AI setup consuming roughly 25W and it can do complex tasks pretty well now.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BoogerheadCult\"> /u/BoogerheadCult </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwoemt/prismml_bonsai_27b_is_surprisingly_usable_on_the/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uwoemt/prismml_bonsai_27b_is_surprisingly_usable_on_the/\">[comments]</a></span>",
+    "fetched_at": "2026-07-14T23:46:38.631951+00:00"
   }
 ]
