@@ -1,0 +1,44 @@
+{
+  "slug": "illinois-ai-safety-measures-act",
+  "checked_at": "2026-07-14T23:58:00+00:00",
+  "method": "multi-agent verify + adversarial falsification: fresh verifier sub-agent located the Tier-0 primary sources (bill text, governor's press release) and secondary corroboration; fresh adversarial falsifier sub-agent fetched the enrolled bill text directly and caught a factual error in the verifier's effective-date summary before publish",
+  "origin_items": [
+    "data/raw/2026-07-14/gnews-ai-safety-and-evaluations.json -- items: 'Illinois Enacts First US Law Mandating AI Safety Audits - BankInfoSecurity' and 'Illinois Gov. JB Pritzker signed the Artificial Intelligence Safety Measures Act - Beinsure' (both Tier-3 aggregator leads relaying an 8-day-old event)"
+  ],
+  "primary_source_note": "The event itself (bill signing) is dated 6 July 2026 -- tonight's Tier-3 aggregator items are late relays, not fresh news. Verified against the actual event date rather than treated as breaking; dedup-check confirmed no prior coverage exists in the archive, so publishing now (as a standalone, dated to the real event) rather than skipping was the judgment call. Neither ilga.gov nor the governor's office press-release domain (gov-pritzker-newsroom.prezly.com) is currently registered in policy/sources.yaml; both qualify as Tier 0 (government/legal texts) per verification.md and are flagged in the cycle report for registration review.",
+  "claims": [
+    {
+      "text": "Illinois Gov. JB Pritzker signed SB 315 (Public Act 104-0538), the Artificial Intelligence Safety Measures Act, on 6 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=315&DocTypeID=SB&LegId=0&SessionID=114", "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law"]
+    },
+    {
+      "text": "Applies to 'large frontier developers': >$500M annual revenue AND models trained with >10^26 operations of compute",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=315&DocTypeID=SB&LegId=0&SessionID=114", "https://capitolnewsillinois.com/news/pritzker-signs-landmark-ai-regulation-bill-that-aims-to-mitigate-risks/"]
+    },
+    {
+      "text": "Disclosure-statement filing requirement (Sec. 18(a)) begins 1 Jan 2027; safety-framework publication and independent-audit requirements (Sec. 10) begin 1 Jan 2028",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "This split date is the critical fact the adversarial falsifier caught: the verifier's first pass, following ilga.gov's bill-status summary and the governor's press release, reported a single Jan 2027 effective date for everything including the audits. The falsifier fetched the enrolled bill's full text directly and found Section 99 (general effective date, Jan 2027) governs only the Sec. 18(a) disclosure filing, while Sec. 10's framework/audit mandates carry their own Jan 2028 date. Article corrected to reflect the split before publish.",
+      "evidence": ["https://www.ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=315&DocTypeID=SB&LegId=0&SessionID=114"]
+    },
+    {
+      "text": "Incident reporting within 72hrs (24hrs if imminent death/injury risk) to state agency + AG; penalties $1M first violation / $3M subsequent, AG enforcement, no private right of action",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law", "https://capitolnewsillinois.com/news/pritzker-signs-landmark-ai-regulation-bill-that-aims-to-mitigate-risks/"]
+    },
+    {
+      "text": "Illinois is the first US state to enact a recurring/annual independent third-party AI safety audit mandate",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier ran a targeted counterexample search rather than accepting the governor's office framing: New York's RAISE Act dropped a similar recurring-audit provision before signing; California SB 53 and Colorado's AI Act have no equivalent third-party audit mandate. No counterexample found -- treated as our own verified claim, not just an attributed quote.",
+      "evidence": ["https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law", "https://www.nbcchicago.com/news/local/illinois-new-ai-safety-law-is-the-nations-strongest-advocate-says/3958692/"]
+    }
+  ],
+  "notes": "Adversarial check caught and fixed a real factual error (effective-date conflation) before publish -- see claim 3 reasoning. Staleness: event is 8 days old at publish time; framed with the real event date (2026-07-06) rather than implied as breaking, per editorial honesty concern raised by the verifier. Dedup-check clean (no archive matches). Two unregistered Tier-0 government domains used (ilga.gov, gov-pritzker-newsroom.prezly.com) -- flagged for source-registry review, not added to sources.yaml this run (policy files off-limits)."
+}

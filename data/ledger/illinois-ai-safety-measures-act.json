@@ -1,0 +1,19 @@
+{
+  "slug": "illinois-ai-safety-measures-act",
+  "title": "Illinois enacts first state law requiring recurring independent audits of frontier AI systems",
+  "status": "published",
+  "first_seen": "2026-07-14",
+  "published_at": "2026-07-14",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.ilga.gov/Legislation/BillStatus/FullText?GAID=18&DocNum=315&DocTypeID=SB&LegId=0&SessionID=114",
+    "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law",
+    "https://capitolnewsillinois.com/news/pritzker-signs-landmark-ai-regulation-bill-that-aims-to-mitigate-risks/",
+    "https://www.nbcchicago.com/news/local/illinois-new-ai-safety-law-is-the-nations-strongest-advocate-says/3958692/"
+  ],
+  "watch": [
+    "Any amendment, legal challenge, or federal preemption effort before the Jan 2028 framework/audit deadline",
+    "Which third-party auditors qualify as 'conflict-free' under the law -- rules/guidance not yet issued",
+    "Whether other states (NY, CA, CO) revisit their own audit provisions in response"
+  ]
+}
