@@ -8,5 +8,15 @@
     "published": "2026-07-13T23:45:39+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve been testing various local models for excel tasks related to my job. So far, Deepseek v4 Flash using DS4 has been best. Gets 30-40 tk/s with medium context and generally produces good results. However, looking to see what others may have had good experiences with. </p> <p>Need to be able to run on Mac studio 256gb ram. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rtk85\"> /u/rtk85 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvs9vp/excel_work_best_model/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvs9vp/excel_work_best_model/\">[comments]</a></span>",
     "fetched_at": "2026-07-14T00:18:34.330657+00:00"
+  },
+  {
+    "id": "c719f12730d03e2c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New set of FP4 attention kernels for B300, achieving up to 1.69x speedup over FA4",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uvtf7h/new_set_of_fp4_attention_kernels_for_b300/",
+    "published": "2026-07-14T00:35:13+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/tuananh_org\"> /u/tuananh_org </a> <br /> <span><a href=\"https://x.com/haoailab/status/2074244199143362925\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uvtf7h/new_set_of_fp4_attention_kernels_for_b300/\">[comments]</a></span>",
+    "fetched_at": "2026-07-14T00:53:34.396694+00:00"
   }
 ]
