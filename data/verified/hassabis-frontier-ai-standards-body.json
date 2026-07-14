@@ -1,0 +1,43 @@
+{
+  "slug": "hassabis-frontier-ai-standards-body",
+  "checked_at": "2026-07-14T22:48:00+00:00",
+  "method": "multi-agent verify + adversarial falsification within one session for time; three independent Tier-2 outlets (Axios, TechCrunch, CNBC) each read and paraphrased the same public primary document independently -- cross-checked their accounts against each other and against two further outlets (The Decoder, TheNextWeb) for consistency",
+  "origin_items": [
+    "data/raw/2026-07-14/techmeme.json -- item: 'Demis Hassabis proposes a US-based Standards Body for \"Frontier-class\" AI, modeled after the FINRA; labs would voluntarily share models 30 days before release (Demis Hassabis/@demishassabis)'"
+  ],
+  "primary_source_note": "The proposal's primary text is Hassabis's own post, 'A Framework for Frontier AI and the Dawning of a New Age', published on his personal Substack (demishassabis.substack.com) and cross-posted to X. Substack returned HTTP 403 on direct WebFetch (blocked, same pattern as openai.com/theverge.com/x.ai) -- used site-scoped web search as fallback, same procedure as those known blockers. Neither demishassabis.substack.com nor x.com/demishassabis is a registered source in policy/sources.yaml; used per verification.md §1 (unregistered source usable if it would qualify Tier 0-2, recorded here, proposed for registration) -- flagged in the cycle report rather than editing sources.yaml this run (policy files off-limits this cycle).",
+  "claims": [
+    {
+      "text": "Hassabis published the proposal on 14 July 2026 calling for a new independent standards body to test frontier AI models",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed independently by three named-author quality-press outlets (Axios, TechCrunch, CNBC) that each read the public post directly -- not a wire-exclusive relay chain, since the underlying document is public and each outlet's coverage carries independent framing/detail choices.",
+      "evidence": ["https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind", "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/", "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html"]
+    },
+    {
+      "text": "FINRA-style model, voluntary 30-day pre-release sharing, tests for cyber/bio/deception risk",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind", "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/"]
+    },
+    {
+      "text": "Formalization to mandatory-testing 'could quickly follow' once the voluntary regime proves effective",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind", "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/"]
+    },
+    {
+      "text": "Board composition (majority-independent, Turing Award winners, industry/govt/open-source reps) and scope (all frontier-class models regardless of origin/license)",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind", "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/"]
+    },
+    {
+      "text": "Hassabis wants the body operational before end of 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.axios.com/2026/07/14/demis-hassabis-ai-regulation-google-deepmind", "https://www.cnbc.com/2026/07/14/google-deepmind-demis-hassabis-us-led-ai-standards-body.html"]
+    }
+  ],
+  "notes": "Adversarial check: this is a proposal, not an adopted policy -- the article explicitly frames it as such in 'Why it matters' and does not overstate it as regulation taking effect. No contradicting report found; no government agency or rival lab statement endorsing or rejecting it yet (would be a natural follow-up). Distinct from existing OpenAI/EU/NIST policy coverage already in the archive -- dedup-check returned no matches."
+}
