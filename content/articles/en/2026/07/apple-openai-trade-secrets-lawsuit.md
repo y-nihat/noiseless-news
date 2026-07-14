@@ -22,6 +22,10 @@ sources:
     url: https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/
   - name: Axios
     url: https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft
+  - name: Bloomberg — OpenAI's response
+    url: https://www.bloomberg.com/news/articles/2026-07-14/openai-says-it-s-not-aware-of-any-evidence-that-apple-lawsuit-has-merit
+  - name: TechCrunch — OpenAI's response
+    url: https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/
 claims:
   - text: "Apple filed suit against OpenAI, its Chief Hardware Officer Tang Tan, engineer Chang Liu, and io Products LLC in the U.S. District Court for the Northern District of California on 10 July 2026 (Apple Inc. v. Liu, No. 5:26-cv-07078), alleging trade secret misappropriation and breach of contract"
     type: business
@@ -47,7 +51,12 @@ claims:
     type: business
     verdict: confirmed
     evidence: [1, 2, 3]
-updated: []
+  - text: "On 14 July 2026, OpenAI issued its first direct comment on the substance of Apple's allegations, saying: 'While we take these allegations seriously, we're not aware of any evidence that this complaint has merit,' and adding that it believes in fair competition and letting people work wherever they choose"
+    type: business
+    verdict: confirmed
+    evidence: [7, 8]
+updated:
+  - "2026-07-14: added OpenAI's first substantive response to the allegations; see Update section"
 ---
 
 ## What happened
@@ -88,3 +97,14 @@ Products. No court has ruled on any of Apple's claims, and OpenAI disputes
 having any interest in stolen trade secrets; how the case proceeds could shape
 how aggressively AI labs can recruit hardware talent from established device
 makers.
+
+## Update, 14 July 2026
+
+OpenAI issued its first direct comment on the substance of Apple's
+allegations: "While we take these allegations seriously, we're not aware of
+any evidence that this complaint has merit," the company said, adding that it
+believes in fair competition and in "allowing people the freedom to work
+wherever they choose" [7][8]. This goes further than OpenAI's initial 10 July
+statement, which addressed only its general interest in trade secrets — but
+OpenAI still has not responded to the specific allegations about Liu's or
+Tan's conduct.

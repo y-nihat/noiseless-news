@@ -23,6 +23,10 @@ sources:
     url: https://www.courtlistener.com/docket/73602437/apple-inc-v-liu/
   - name: Axios
     url: https://www.axios.com/2026/07/10/apple-sues-openai-trade-secret-theft
+  - name: Bloomberg — OpenAI'nin yanıtı
+    url: https://www.bloomberg.com/news/articles/2026-07-14/openai-says-it-s-not-aware-of-any-evidence-that-apple-lawsuit-has-merit
+  - name: TechCrunch — OpenAI'nin yanıtı
+    url: https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/
 claims:
   - text: "Apple, 10 Temmuz 2026'da OpenAI'ye, Donanımdan Sorumlu Başkanı Tang Tan'a, mühendis Chang Liu'ya ve io Products LLC'ye karşı Kuzey Kaliforniya Bölge Mahkemesi'nde dava açtı (Apple Inc. v. Liu, No. 5:26-cv-07078); ticari sır ihlali ve sözleşme ihlali iddia ediyor"
     type: business
@@ -48,7 +52,12 @@ claims:
     type: business
     verdict: confirmed
     evidence: [1, 2, 3]
-updated: []
+  - text: "14 Temmuz 2026'da OpenAI, Apple'ın iddialarının esasına ilişkin ilk doğrudan yorumunu yaptı: 'Bu iddiaları ciddiye alıyoruz, ancak bu şikayetin haklı olduğuna dair herhangi bir kanıttan haberdar değiliz' dedi ve adil rekabete ve insanların istedikleri yerde çalışma özgürlüğüne inandığını ekledi"
+    type: business
+    verdict: confirmed
+    evidence: [7, 8]
+updated:
+  - "2026-07-14: OpenAI'nin iddialara ilişkin ilk esaslı yanıtı eklendi; Güncelleme bölümüne bakın"
 ---
 
 ## Ne oldu
@@ -91,3 +100,13 @@ iddialarına dair henüz karar vermedi ve OpenAI çalınmış ticari sırlarla
 hiçbir ilgisi olmadığını söylüyor; davanın nasıl ilerleyeceği, yapay zeka
 laboratuvarlarının yerleşik cihaz üreticilerinden donanım yeteneği devşirme
 konusunda ne kadar agresif davranabileceğini şekillendirebilir.
+
+## Güncelleme, 14 Temmuz 2026
+
+OpenAI, Apple'ın iddialarının esasına ilişkin ilk doğrudan yorumunu yaptı:
+"Bu iddiaları ciddiye alıyoruz, ancak bu şikayetin haklı olduğuna dair
+herhangi bir kanıttan haberdar değiliz" dedi ve adil rekabete, "insanların
+istedikleri yerde çalışma özgürlüğüne" inandığını ekledi [7][8]. Bu, OpenAI'nin
+yalnızca ticari sırlara genel ilgisizliğini ele alan 10 Temmuz'daki ilk
+açıklamasından daha ileri gidiyor — ancak OpenAI, Liu veya Tan'ın davranışına
+ilişkin somut iddialara hâlâ yanıt vermedi.
