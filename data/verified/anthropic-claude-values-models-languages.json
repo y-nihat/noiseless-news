@@ -1,0 +1,42 @@
+{
+  "slug": "anthropic-claude-values-models-languages",
+  "checked_at": "2026-07-14T22:43:00+00:00",
+  "method": "direct WebFetch of the Anthropic primary research post; adversarial pass via targeted web search for secondary coverage, critique, and confirmation that the described dataset/findings are not a hallucination or mis-transcription of the source",
+  "origin_items": [
+    "data/raw/2026-07-14/techmeme.json — item: 'Anthropic research based on ~310K anonymized Claude conversations shows how Claude's expressed values and behaviors vary across models and languages (Jason Nelson/Decrypt)'"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic published a study on 13 July 2026 analyzing 309,815 Claude.ai conversations to measure how Claude's expressed values vary across models and languages",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (Anthropic's own research page), directly fetched. Sample size and publication framing confirmed verbatim.",
+      "evidence": ["https://www.anthropic.com/research/claude-values-models-languages"]
+    },
+    {
+      "text": "Dataset sampled evenly across Sonnet 4.6, Opus 4.6, Opus 4.7 and the top 20 Claude.ai languages, ~5,000 conversations per model-language pair, collected over two weeks in May 2026",
+      "type": "research",
+      "verdict": "confirmed",
+      "evidence": ["https://www.anthropic.com/research/claude-values-models-languages"]
+    },
+    {
+      "text": "Four value axes identified (Deference vs. Caution, Warmth vs. Rigor, Depth vs. Brevity, Candor vs. Execution), capturing ~15% of variation",
+      "type": "research",
+      "verdict": "confirmed",
+      "evidence": ["https://www.anthropic.com/research/claude-values-models-languages"]
+    },
+    {
+      "text": "Per-model and per-language leanings (Sonnet 4.6/Opus 4.6/Opus 4.7 axis leanings; Hindi warmth, Russian rigor, Arabic deference, English caution)",
+      "type": "research",
+      "verdict": "confirmed",
+      "evidence": ["https://www.anthropic.com/research/claude-values-models-languages"]
+    },
+    {
+      "text": "Anthropic frames the cultural-adaptation-vs-alignment-gap question as unresolved in its own post",
+      "type": "research",
+      "verdict": "confirmed",
+      "evidence": ["https://www.anthropic.com/research/claude-values-models-languages"]
+    }
+  ],
+  "notes": "Research-finding claim type; standard of proof is the paper/post itself (policy/verification.md §3), satisfied by direct Tier-0 fetch. Adversarial pass searched for critique/dispute: found independent secondary coverage (Gizmodo, officechai, Brave New Coin, cryptonomist, techbooky) all consistent with the primary source's own numbers and framing, no contradicting reports. One outlet (Brave New Coin) flagged that the three studied models are superseded by Anthropic's current lineup and the underlying data is from May 2026 -- a genuine temporal-scope caveat, not a factual dispute, so it is reflected in the article's 'why it matters' framing (snapshot of that period) rather than treated as disputed. Not a duplicate of anthropic-claude-reflect (that story is about the Reflect usage-history feature, a different Anthropic announcement from 9 July)."
+}

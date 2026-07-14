@@ -1,0 +1,14 @@
+{
+  "slug": "anthropic-claude-values-models-languages",
+  "title": "Anthropic study finds Claude's expressed values shift by model and by language",
+  "status": "published",
+  "first_seen": "2026-07-14",
+  "published_at": "2026-07-14",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/research/claude-values-models-languages"
+  ],
+  "watch": [
+    "Any follow-up Anthropic post applying this methodology to its current model lineup (post Opus 4.8/Sonnet 5)"
+  ]
+}
