@@ -8,5 +8,95 @@
     "published": "2026-07-15T00:27:04+00:00",
     "summary": "The funding discussions point to investor interest in applying AI to make breakthroughs in life sciences.",
     "fetched_at": "2026-07-15T00:56:38.701827+00:00"
+  },
+  {
+    "id": "29f4ab98d1ecdbdf",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Hack suggests AI music generator Suno scraped YouTube for training data",
+    "url": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/",
+    "published": "2026-07-15T17:00:34+00:00",
+    "summary": "The hacker used an employee's credentials to access source code, which revealed how Suno scraped decades of audio.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "734a71b8830555fa",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Whatnot acquires Shaped to power real-time live shopping recommendations",
+    "url": "https://techcrunch.com/2026/07/15/whatnot-acquires-shaped-to-power-real-time-live-shopping-recommendations/",
+    "published": "2026-07-15T17:00:00+00:00",
+    "summary": "Livestream shopping platform Whatnot has acquired AI startup Shaped, a machine learning company focused on real-time recommendations and search. The deal will bolster Whatnot’s personalization and discovery features as it expands into new product categories.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "9fe6b6cefcefa5fe",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Microsoft patches record number of security vulnerabilities, citing its use of AI",
+    "url": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/",
+    "published": "2026-07-15T16:20:18+00:00",
+    "summary": "Microsoft's monthly release of security fixes, dubbed Patch Tuesday, resolved a record 570 security vulnerabilities across the company's product line, thanks to discoveries with AI.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "d1ceca30ec934226",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Apple Intelligence approved for launch in China with Alibaba’s Qwen AI",
+    "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+    "published": "2026-07-15T15:29:33+00:00",
+    "summary": "Apple Intelligence is headed to China after regulators approved Apple’s AI services through a partnership with Alibaba. The long-rumored deal will bring Alibaba’s Qwen AI models to Apple’s operating systems, marking a major expansion of the company’s generative AI platform into one of its most important markets.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "b933130748567eb8",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models",
+    "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
+    "published": "2026-07-15T13:10:47+00:00",
+    "summary": "Anthropic-backed Ode launches as AI labs bet that embedding forward-deployed engineers inside enterprises is the key to accelerating enterprise AI adoption.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "e4526c18c3bb1d34",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Reelful’s AI turns your camera roll into short-form videos for social media",
+    "url": "https://techcrunch.com/2026/07/15/reelfuls-ai-turns-your-camera-roll-into-short-form-videos-for-social-media/",
+    "published": "2026-07-15T13:00:00+00:00",
+    "summary": "The app is designed for people who want to create social content, but find traditional video editing tools too complex or time-consuming.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "182bd9af334a696e",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Rime picks up $24M Series A to help enterprises field customer calls",
+    "url": "https://techcrunch.com/2026/07/15/rime-picks-up-24m-series-a-to-help-enterprises-field-customer-calls/",
+    "published": "2026-07-15T13:00:00+00:00",
+    "summary": "Rime is handling over 100 million calls each month across multiple companies.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "0069ac994440e1d3",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Indian AI coding startup Emergent becomes a unicorn with $130M Series C",
+    "url": "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/",
+    "published": "2026-07-15T12:00:00+00:00",
+    "summary": "The startup has reached a $120 million annualized revenue run rate and more than 200,000 paying customers.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "63ab2ff3d1ff9c94",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Vint Cerf is working on a plan to unleash AI agents on the open internet",
+    "url": "https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/",
+    "published": "2026-07-15T12:00:00+00:00",
+    "summary": "The guy behind TCP/IP is working on a standard for identifying AI agents in the wild.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
   }
 ]

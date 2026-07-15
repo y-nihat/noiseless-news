@@ -1,0 +1,22 @@
+[
+  {
+    "id": "23b1197c74335456",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "The US is advancing AI safety through state and federal action",
+    "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+    "published": "2026-07-15T12:00:00+00:00",
+    "summary": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "f8df3e0d3cc81402",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+    "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+    "published": "2026-07-15T10:00:00+00:00",
+    "summary": "Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
+    "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  }
+]
