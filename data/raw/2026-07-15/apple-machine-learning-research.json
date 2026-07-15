@@ -1,0 +1,32 @@
+[
+  {
+    "id": "716279c103619a54",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "One Layer Is Enough: Adapting Pretrained Visual Encoders for Image Generation",
+    "url": "https://machinelearning.apple.com/research/adapting-pretrained-visual-encoders",
+    "published": "2026-07-15T00:00:00+00:00",
+    "summary": "Visual generative models (e.g., diffusion models) typically operate in compressed latent spaces to balance training efficiency and sample quality. In parallel, there has been growing interest in leveraging high-quality pre-trained visual representations—either by aligning them inside VAEs or directly within the generative model. However, adapting such representations remains challenging due to fundamental mismatches between understanding-oriented features and generation-friendly latent spaces. Representation encoders benefit from high-dimensional latents that capture diverse hypotheses for…",
+    "fetched_at": "2026-07-15T22:37:45.819036+00:00"
+  },
+  {
+    "id": "26906dc17b8e3fda",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning",
+    "url": "https://machinelearning.apple.com/research/clara-latent-reasoning",
+    "published": "2026-07-15T00:00:00+00:00",
+    "summary": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) with external knowledge but still suffers from long contexts and disjoint retrieval–generation optimization. In this work, we propose CLaRa (Continuous Latent Reasoning), a unified framework that performs embedding-based compression and joint optimization in a shared continuous space. To obtain semantically rich and retrievable compressed vectors, thereby reducing the document length fed into the generator, we introduce SCP, a key-preserving data synthesis framework based on question-answering and paraphrase…",
+    "fetched_at": "2026-07-15T22:37:45.819036+00:00"
+  },
+  {
+    "id": "b9b79334269c6492",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Uncertainty Quantification for LLM Function-Calling",
+    "url": "https://machinelearning.apple.com/research/uncertainty-quantification-function-calling",
+    "published": "2026-07-15T00:00:00+00:00",
+    "summary": "Large Language Models (LLMs) are increasingly deployed to autonomously solve real-world tasks. A key ingredient for this is the LLM Function-Calling paradigm, a widely used approach for equipping LLMs with tool-use capabilities. However, an LLM calling functions incorrectly can have severe implications, especially when their effects are irreversible, e.g., transferring money or deleting data. Hence, it is of paramount importance to consider the LLM’s confidence that a function call solves the task correctly prior to executing it. Uncertainty Quantification (UQ) methods can be used to quantify…",
+    "fetched_at": "2026-07-15T22:37:45.819036+00:00"
+  }
+]

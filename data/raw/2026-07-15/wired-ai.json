@@ -28,5 +28,25 @@
     "published": "2026-07-15T12:00:00+00:00",
     "summary": "Gidi Littwin’s new AI startup, Hemispheric, makes diagnostic brain scans for conditions like depression, PTSD, and Parkinson’s. He wants the technology to be as cheap and easy as for a blood test.",
     "fetched_at": "2026-07-15T17:21:04.594631+00:00"
+  },
+  {
+    "id": "3994116477182f62",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "AI Isn’t Smarter Than a Baby—Yet",
+    "url": "https://www.wired.com/story/ai-isnt-smarter-than-a-baby-yet/",
+    "published": "2026-07-15T18:30:00+00:00",
+    "summary": "Babies are tremendous learning machines, and key advances for AI may soon be found in the architecture of their little brains.",
+    "fetched_at": "2026-07-15T22:37:45.819036+00:00"
+  },
+  {
+    "id": "09cee401aa812cba",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "Thinking Machines Lab Drops Its First Model",
+    "url": "https://www.wired.com/story/thinking-machines-lab-releases-its-first-model-inkling/",
+    "published": "2026-07-15T18:05:00+00:00",
+    "summary": "Inkling, a 975-billion-parameter open source model, was trained to understand video and audio. It could help Thinking Machines establish itself among competitors like Anthropic and OpenAI.",
+    "fetched_at": "2026-07-15T22:37:45.819036+00:00"
   }
 ]
