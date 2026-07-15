@@ -1,0 +1,22 @@
+[
+  {
+    "id": "4cc51817f52283e5",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Google Releases LiteRT.js: A JavaScript Binding of LiteRT That Runs .tflite Models in Browsers via WebGPU",
+    "url": "https://www.marktechpost.com/2026/07/15/google-releases-litert-js-a-javascript-binding-of-litert-that-runs-tflite-models-in-browsers-via-webgpu/",
+    "published": "2026-07-15T07:36:17+00:00",
+    "summary": "<p>Google released LiteRT.js on July 9, 2026. It is a JavaScript binding of LiteRT, Google's on-device inference library. The runtime executes .tflite models directly in the browser through WebAssembly, with XNNPACK on CPU, ML Drift over WebGPU, and experimental WebNN for NPUs. Google reports up to 3x gains over other web runtimes, and 5–60x for GPU or NPU over its own CPU path. One detail the announcement omits: tensors are manually managed and must be deleted.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/15/google-releases-litert-js-a-javascript-binding-of-litert-that-runs-tflite-models-in-browsers-via-webgpu/\">Google Releases LiteRT.js: A JavaScript Binding of LiteRT That Runs .tflite Models in Browsers via WebGPU</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-15T11:37:28.187317+00:00"
+  },
+  {
+    "id": "6ff596f13813c5af",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "PrismML Releases Bonsai 27B: 1-bit and Ternary Builds of Qwen3.6-27B That Run on Laptops and Phones",
+    "url": "https://www.marktechpost.com/2026/07/14/prismml-releases-bonsai-27b-1-bit-and-ternary-builds-of-qwen3-6-27b-that-run-on-laptops-and-phones/",
+    "published": "2026-07-14T22:51:34+00:00",
+    "summary": "<p>PrismML just released Bonsai 27B. It is a low-bit representation of Qwen3.6-27B, not a new pretrain. The architecture is unchanged. Two variants ship under Apache 2.0. Ternary Bonsai 27B uses {−1, 0, +1} weights at a true 1.71 bits per weight. Its ideal size is 5.9GB. 1-bit Bonsai 27B uses binary {−1, +1} weights at [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/14/prismml-releases-bonsai-27b-1-bit-and-ternary-builds-of-qwen3-6-27b-that-run-on-laptops-and-phones/\">PrismML Releases Bonsai 27B: 1-bit and Ternary Builds of Qwen3.6-27B That Run on Laptops and Phones</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-15T11:37:28.187317+00:00"
+  }
+]

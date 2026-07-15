@@ -1,0 +1,42 @@
+[
+  {
+    "id": "868f1cab16a8e192",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Mechanistic interpretability: a first paper on disentangling a convolutional neuron [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uwya70/mechanistic_interpretability_a_first_paper_on/",
+    "published": "2026-07-15T06:59:41+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have recently started working in mechanistic interpretability independently, starting with distill circuits thread</p> <p>My work is on disentangling and closely studying a single neuron, a 1x1 convolution in inceptionv1 model (and applying the method to other neurons in the same layer).</p> <p>The key insight was that the hadamard product of the receptive field and the weight of a neuron is what the neuron is 'seeing' or detecting. We can cluster the hadamard product to get all the patterns a neuron detects. It gave clean monosemantic clusters (cars, cats, dogs which it was known to activate on). We also get more clusters however, letters, human faces, and many more low valued activations.</p> <p>This gave me a new technique to analyse the neuron very closely. </p> <p>On close analysis the most peculiar thing I found was that the low valued clusters (like letters) had all its dependent neurons also firing on the same concept (letter), and the positive and negative weights were evenly distributed between them to bring down the sum. An evidence of gradient descent working deliberately to put patterns and concepts in a noisy range.</p> <p>I've tried to keep it very distill like with good visualisations. I hope you give it a read.</p> <p><a href=\"https://pages.narang99.in/posts/2026-07-12-disentangling-mixed4e-55/\">https://pages.narang99.in/posts/2026-07-12-disentangling-mixed4e-55/</a></p> <p>I made a mistake honestly by starting with convolutions, nobody seems to care about it. I'll start working on language soon, but it would be good if anyone can read this, it would be good to have some feedback on whether I've actually found anything useful.</p> <p>Thank you :)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/narang_27\"> /u/narang_27 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uwya70/mechanistic_interpretability_a_first_paper_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uwya70/mechanistic_interpretability_a_first_paper_on/\">[comments]</a></span>",
+    "fetched_at": "2026-07-15T11:37:28.187317+00:00"
+  },
+  {
+    "id": "3e6f933d06c30cbf",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Does anyone else miss the old conference ecosystem? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uwy25k/does_anyone_else_miss_the_old_conference/",
+    "published": "2026-07-15T06:47:28+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Does anyone else miss when conferences like BMVC, ACCV, FG, ICIP, and ICASSP had much bigger communities?<br /> FG was <em>the</em> place for face analysis, ICASSP for signal processing, and BMVC/ACCV regularly featured strong papers.<br /> Now it feels like everything is concentrated into a handful of flagship conferences. With exploding submission numbers, limited capacity, and inconsistent reviews, I wonder how many good papers end up as non-archival submissions, arXiv-only, or never get shared at all.<br /> I also miss the focused communities. Is it just nostalgia, or has the research ecosystem become too concentrated?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sep29493919\"> /u/Sep29493919 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uwy25k/does_anyone_else_miss_the_old_conference/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uwy25k/does_anyone_else_miss_the_old_conference/\">[comments]</a></span>",
+    "fetched_at": "2026-07-15T11:37:28.187317+00:00"
+  },
+  {
+    "id": "59689752fc537850",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "If your model finds edge against closing lines, does that edge transfer to earlier bets? [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1ux1n0v/if_your_model_finds_edge_against_closing_lines/",
+    "published": "2026-07-15T10:11:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Building a sports prediction model ,I found consistent edge when backtesting against closing lines.<br /> At inference time tho, I predict 12-24 hours before the event where closing lines don't exist yet. I use the current line instead.</p> <p>My strongest feature is line movement (opening to closing implied probability). At prediction time this feature is incomplete as the market hasn't fully moved yet.</p> <p>This creates a paradox:</p> <p>Closing lines are considered nearly impossible to beat because they contain all available information : sharp money, injury news, everything. Yet the backtest shows consistent edge against them.</p> <p>If closing lines are truly efficient, beating them implies genuine model signal. But at inference time we're betting against earlier, less efficient lines with an incomplete version of our strongest feature.</p> <p>The question: does edge against closing lines transfer to earlier bets where lines are less efficient ? Or does the incomplete line movement signal hurt prediction enough that the edge disappears before close?</p> <p>My intuition is the edge is smaller earlier because the market is less efficient but the model signal is also weaker. These two effects might cancel out or one might dominate. Curious if anyone has studied this tradeoff in sports or financial prediction.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MrProbability101\"> /u/MrProbability101 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1ux1n0v/if_your_model_finds_edge_against_closing_lines/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1ux1n0v/if_your_model_finds_edge_against_closing_lines/\">[comments]</a></span>",
+    "fetched_at": "2026-07-15T11:37:28.187317+00:00"
+  },
+  {
+    "id": "08a6229e8052f2f1",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Infinities, impossibilities, and the man in the white linen suit [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1uwxveq/infinities_impossibilities_and_the_man_in_the/",
+    "published": "2026-07-15T06:36:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So I was belatedly reading Matthew Colbrook’s paper on unstable neural networks <a href=\"https://www.pnas.org/doi/10.1073/pnas.2107151119\">https://www.pnas.org/doi/10.1073/pnas.2107151119</a>, and the paradox therein sent me back to my university days and reminded me of Kurt Godel.</p> <p>It kind of amazes me that so few people have heard of him given Einstein clearly thought he was more than an equal.</p> <p>Anyway, with the default assumption currently being that any problem will yield to more data and compute, it was timely to revisit this. It’s a long read and I’m not sure it’s fully coherent but if you like logic then you might enjoy this and I‘d welcome your thoughts and feedback. </p> <p><a href=\"https://iain.so/infinities-impossibilities-and-the-man-in-the-white-linen-suit\">https://iain.so/infinities-impossibilities-and-the-man-in-the-white-linen-suit</a> </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/iainrfharper\"> /u/iainrfharper </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uwxveq/infinities_impossibilities_and_the_man_in_the/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1uwxveq/infinities_impossibilities_and_the_man_in_the/\">[comments]</a></span>",
+    "fetched_at": "2026-07-15T11:37:28.187317+00:00"
+  }
+]
