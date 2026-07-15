@@ -1,0 +1,38 @@
+{
+  "slug": "meta-ai-layoffs-discrimination-lawsuit",
+  "checked_at": "2026-07-15T00:30:00+00:00",
+  "method": "multi-agent verify + adversarial falsification: primary research (this session) gathered the story across CNBC, Fast Company/Reuters, Courthouse News Service, and the filed complaint PDF; fresh adversarial falsifier sub-agent independently re-searched all four claims, checked for a fabricated docket number, checked source independence (collapsed wire-republished outlets to their two wire origins -- AP and Reuters -- plus Courthouse News as a third, independent leg that obtained/published the complaint directly), and confirmed no dismissal/retraction/update exists",
+  "origin_items": [
+    "data/raw/2026-07-15/gnews-ai-litigation.json -- multiple aggregator relays of the same 14 July 2026 AP/Reuters wire coverage (USA Today, NBC10 Philadelphia, Insurance Journal, Seattle P-I, Briefs Finance, NewsCord, Deccan Herald, 95 KQDS)"
+  ],
+  "primary_source_note": "Courthouse News Service independently obtained and published the 71-page complaint (https://www.courthousenews.com/wp-content/uploads/2026/07/meta-employee-complaint.pdf) rather than relaying a press release -- treated as the closest available primary document; direct WebFetch of both the Courthouse News article and the complaint PDF returned HTTP 403 (same blocked-direct-fetch pattern as openai.com/theverge.com/x.ai this run), so evidence was gathered via targeted web search snippets instead, per that precedent. CNBC (registered Tier source) has its own byline and independently quotes Meta's on-record denial. Fast Company's account is Reuters wire copy (byline Daniel Wiessner) -- cited as 'Fast Company (Reuters)' to be transparent that it is wire content, not independent Fast Company reporting.",
+  "claims": [
+    {
+      "text": "26 current/former Meta employees filed a federal lawsuit in N.D. Cal. (Oakland) on 13 July 2026 alleging Meta's internal AI systems (Metamate, 'second-brain' agents, activity-monitoring data, token-usage dashboards, algorithmic performance ranking) were used to select employees for the May 2026 layoffs (~10% of headcount) in a way that disadvantaged workers on protected leave or with disabilities",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Three independent legs: Courthouse News (obtained/published the complaint directly), CNBC (own byline, own reporting), AP/Reuters wire (via multiple syndication outlets, collapsed to one origin per independence rule). Falsifier flagged that one AI-search summary invented a specific docket number ('4:26-cv-07122') not present in any actual outlet's coverage -- deliberately omitted from the published article to avoid citing a fabricated detail.",
+      "evidence": ["https://www.courthousenews.com/meta-employees-sue-over-use-of-ai-in-workforce-reduction/", "https://www.cnbc.com/2026/07/14/meta-lawsuit-layoffs-ai.html", "https://www.fastcompany.com/91573521/meta-faces-discrimination-lawsuit-over-ai-use-in-mass-layoffs"]
+    },
+    {
+      "text": "Plaintiffs allege violations of the ADA, FMLA, Pregnancy Discrimination Act, and California/NYC automated-employment-decision-tool bias-testing laws",
+      "type": "statement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.courthousenews.com/meta-employees-sue-over-use-of-ai-in-workforce-reduction/"]
+    },
+    {
+      "text": "Plaintiffs seek a preliminary injunction maintaining employment status quo pending an independent audit of the selection process and resolution of claims in private arbitration; layoffs otherwise take effect 22 July 2026",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier corrected an imprecise first-pass summary ('block the layoffs') to the filing's actual, narrower relief request -- status quo pending arbitration, not a blanket injunction against the reduction in force.",
+      "evidence": ["https://www.courthousenews.com/meta-employees-sue-over-use-of-ai-in-workforce-reduction/"]
+    },
+    {
+      "text": "Meta spokesperson: 'These claims lack merit and are not based on facts. Workforce management and organizational decisions were and are made by people, not AI.'",
+      "type": "statement",
+      "verdict": "confirmed",
+      "evidence": ["https://www.courthousenews.com/meta-employees-sue-over-use-of-ai-in-workforce-reduction/", "https://www.cnbc.com/2026/07/14/meta-lawsuit-layoffs-ai.html"]
+    }
+  ],
+  "notes": "Legal/litigation claim type per verification.md SS3: all allegations attributed strictly to plaintiffs/the filing in the article body, never stated as established fact; Meta's denial included for balance. Adversarial pass caught a fabricated-looking docket number (not used) and an imprecise relief-sought summary (corrected). Dedup-check clean (no archive matches) -- this is a new, standalone story, not a follow-up to any existing Meta ledger entry (meta-ai-chip-production is an unrelated chip-supply story; no other Meta employment/layoff story exists in the archive). blocked_evidence_domains qz.com and cryptobriefing.com both carried this story but were excluded from citation per policy/discovery.yaml."
+}
