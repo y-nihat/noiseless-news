@@ -1,0 +1,63 @@
+{
+  "slug": "anthropic-claude-for-teachers",
+  "checked_at": "2026-07-16T23:53:00+00:00",
+  "method": "Fresh verifier sub-agent (fetched Anthropic's own announcement page directly, plus 6 web searches for independent press) and an independent adversarial falsifier sub-agent (7 web searches: date check, quote authenticity, backlash/retraction search, partner confirmations). Both ran in parallel, time-boxed for a tight cycle window; both concluded independently. Editor reconciled both notes into the claim set below.",
+  "origin_items": [
+    "Found via Tier-0 sweep of Anthropic News (https://www.anthropic.com/news) earlier tonight (cycle 1); carried forward to cycle 3 triage as an un-dedup-checked candidate. dedup-check: no match."
+  ],
+  "claims": [
+    {
+      "text": "On 14 July 2026, Anthropic launched Claude for Teachers, giving verified K-12 educators in the US free access to premium Claude features, a library of teaching skills, and curricula mapped to academic standards in all 50 states",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against Anthropic's own page and independently reported in the same terms by Chalkbeat and EdSurge (both also covered by the falsifier pass, which confirmed the 14 July date across Chalkbeat, Forbes, The 74, EdSurge, TechTimes, 9to5Mac, Benzinga -- ruling out a recirculated older story).",
+      "evidence": [
+        "https://www.anthropic.com/news/claude-for-teachers",
+        "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/",
+        "https://www.edsurge.com/news/anthropic-introduces-claude-for-teachers"
+      ]
+    },
+    {
+      "text": "Educators who sign up by 30 June 2027 get a year of free access; the product is US-only and, for now, limited to individual educators, with a school/district-wide version described as 'coming soon'",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed against Anthropic's primary page; verifier found EdSurge and Chalkbeat corroborate the free/US-only/individual-educator framing. Falsifier specifically flagged the exact phrasing risk (avoid implying indefinite free access) -- article states the 30 June 2027 signup deadline explicitly rather than describing it as permanently free.",
+      "evidence": [
+        "https://www.anthropic.com/news/claude-for-teachers",
+        "https://www.edsurge.com/news/anthropic-introduces-claude-for-teachers"
+      ]
+    },
+    {
+      "text": "Anthropic says it does not train its models on conversations from verified teacher accounts, and worked with the American Federation of Teachers (AFT) on privacy and safety safeguards for the product",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Both Chalkbeat and EdSurge independently reported the no-training/FERPA-oriented claim and the AFT collaboration in their own reporting, not merely quoting Anthropic's page -- verifier flagged this as independently confirmed rather than single-source.",
+      "evidence": [
+        "https://www.anthropic.com/news/claude-for-teachers",
+        "https://www.edsurge.com/news/anthropic-introduces-claude-for-teachers"
+      ]
+    },
+    {
+      "text": "Randi Weingarten, president of the AFT, said Claude for Teachers was 'a tool designed by and for educators'",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Quote confirmed on Anthropic's page and independently carried by Chalkbeat and Forbes. Falsifier searched specifically for a fabricated-quote or context-stripping problem and found none -- Chalkbeat adds useful independent context that Weingarten has separately called for restricting student-facing AI in early grades, which the article notes as a nuance, not a contradiction.",
+      "evidence": [
+        "https://www.anthropic.com/news/claude-for-teachers",
+        "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/"
+      ]
+    },
+    {
+      "text": "Claude for Teachers will be piloted in Detroit Public Schools Community District as part of a study on educator well-being and practice",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Chalkbeat reports this pilot in its own reporting voice, not solely relaying Anthropic's page, so treated as independently confirmed. Falsifier could not find a statement issued directly by Detroit Public Schools Community District itself endorsing the pilot -- noted as a residual sourcing gap (Anthropic + Chalkbeat, not the district's own voice) but sufficient for a 'business' claim under the 2-independent-source bar.",
+      "evidence": [
+        "https://www.anthropic.com/news/claude-for-teachers",
+        "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH. No union backlash, partner denial, or retraction found; one AEI academic op-ed found predates this launch by months and is generic prior commentary, not a reaction to this announcement -- not included in the article. Two items excluded from the article's claim list as self-reported/single-source and flagged instead as attributed-to-Anthropic prose: the nine named ed-tech integration partners (no independent outlet verified the specific list) and the Teach For America 'AI Fluency' course (found only on Anthropic's own page). The Gates Foundation tie-in is correctly framed as an existing partnership (announced 14 May 2026, per Forbes/Slashdot/TechFundingNews), not new news from this launch.",
+  "gaps_closed_from_watching_state": []
+}

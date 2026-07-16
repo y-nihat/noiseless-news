@@ -376,5 +376,25 @@
       ],
       "context": "Mira Murati's Thinking Machines Lab -- own blog + model-card hub, Tier-0 primary for the Inkling model release (975B/41B MoE, Apache 2.0). Load-bearing for thinking-machines-inkling-release. First model release from this lab; likely to recur. Propose Tier 0 registration, type html."
     }
+  ],
+  "candidates_2026-07-17_night_c3": [
+    {
+      "domain": "chalkbeat.org",
+      "first_seen": "2026-07-16",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/"
+      ],
+      "context": "Nonprofit education-news outlet with named bylines and its own reporting (not a wire relay) -- independently confirmed the Detroit Public Schools Community District pilot and added context Anthropic's own page omitted (Weingarten's separate calls to restrict AI in early grades). Load-bearing for anthropic-claude-for-teachers. Propose Tier 2, education-vertical AI stories likely to recur."
+    },
+    {
+      "domain": "edsurge.com",
+      "first_seen": "2026-07-16",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.edsurge.com/news/anthropic-introduces-claude-for-teachers"
+      ],
+      "context": "Ed-tech trade press with named authors; independently corroborated the FERPA/no-training privacy claim and the free/US-only/individual-educator scope in its own reporting. Load-bearing for anthropic-claude-for-teachers. Propose Tier 2."
+    }
   ]
 }

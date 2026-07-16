@@ -1,0 +1,19 @@
+{
+  "slug": "anthropic-claude-for-teachers",
+  "title": "Anthropic launches free Claude for Teachers for US K-12 educators",
+  "status": "published",
+  "first_seen": "2026-07-16",
+  "published_at": "2026-07-16",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/news/claude-for-teachers",
+    "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/",
+    "https://www.edsurge.com/news/anthropic-introduces-claude-for-teachers"
+  ],
+  "watch": [
+    "A school/district-wide version of Claude for Teachers, once it launches",
+    "Independent (non-Anthropic-sourced) confirmation of the nine named ed-tech integrations, or of the Teach For America 'AI Fluency' course",
+    "A statement issued directly by Detroit Public Schools Community District itself about the pilot, rather than via Anthropic/Chalkbeat"
+  ],
+  "cycle_2026-07-17_night_c3_note": "New standalone story (dedup-check: no match). Candidate first surfaced in cycle 1's Tier-0 sweep of Anthropic News; carried forward untouched through cycle 2 given time spent on the EU/Google story. Fresh verifier sub-agent (primary-page fetch + 6 web searches) and an independent adversarial falsifier sub-agent (7 web searches) ran in parallel, both time-boxed. Both independently concluded CLEAR TO PUBLISH. Two self-reported/single-source elements (the nine-partner integration list, the Teach For America course) were kept out of the frontmatter claim set and instead mentioned in body prose attributed plainly to Anthropic. The Gates Foundation tie-in is framed as an existing (14 May 2026) partnership, not new news. Style gates run on both languages: pass (see report)."
+}
