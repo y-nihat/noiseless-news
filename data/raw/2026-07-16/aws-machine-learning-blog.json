@@ -8,5 +8,25 @@
     "published": "2026-07-16T15:50:52+00:00",
     "summary": "In this post, we show you how to build a voice ordering system that answers a phone number and takes the order from greeting to confirmation. The system uses Amazon Bedrock AgentCore to host and run the agent and Amazon Nova 2 Sonic for real-time speech, connected to a restaurant backend through the Model Context Protocol (MCP). The walkthrough covers deploying the full stack with AWS Cloud Development Kit (AWS CDK) and bridging a phone call into the agent through a Session Initiation Protocol (SIP) gateway on Amazon Elastic Container Service (Amazon ECS) and AWS Fargate. It also warms the agent session while the phone is still ringing, so the caller never hears dead air.",
     "fetched_at": "2026-07-16T17:22:13.723887+00:00"
+  },
+  {
+    "id": "d51cc55decb3a435",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-enterprise-search-for-agents-with-amazon-bedrock-managed-knowledge-base/",
+    "published": "2026-07-16T21:29:14+00:00",
+    "summary": "In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you code examples for setting up a knowledge base and retrieving from it.",
+    "fetched_at": "2026-07-16T22:35:00.789915+00:00"
+  },
+  {
+    "id": "613ea85e9a4dd68e",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Introducing Grok on Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-grok-on-amazon-bedrock/",
+    "published": "2026-07-16T19:29:26+00:00",
+    "summary": "This post covers what makes Grok 4.3 a great fit for agentic and enterprise workloads, how you access it through Amazon Bedrock, and how to use the capabilities most teams reach for first: a basic chat request, configurable reasoning effort, tool calling, structured output, image input, and stateful multi-turn conversations.",
+    "fetched_at": "2026-07-16T22:35:00.789915+00:00"
   }
 ]
