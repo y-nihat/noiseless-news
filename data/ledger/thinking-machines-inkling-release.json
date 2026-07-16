@@ -1,0 +1,20 @@
+{
+  "slug": "thinking-machines-inkling-release",
+  "title": "Thinking Machines Lab releases Inkling, its first open-weight model",
+  "status": "published",
+  "first_seen": "2026-07-16",
+  "published_at": "2026-07-16",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://thinkingmachines.ai/news/introducing-inkling/",
+    "https://thinkingmachines.ai/model-card/inkling/",
+    "https://huggingface.co/thinkingmachines",
+    "https://huggingface.co/blog/thinkingmachines-inkling"
+  ],
+  "watch": [
+    "Independent evaluator results (METR, Vals AI, Artificial Analysis) once published with a live-fetch timestamp -> could upgrade benchmark claims from vendor-claim",
+    "Inkling-Small weight release, once testing completes",
+    "Any independent technical critique disputing the vendor benchmark numbers"
+  ],
+  "cycle_2026-07-16_night_c4_note": "New standalone story (dedup-check: no match). Fresh verifier located Thinking Machines Lab's own primary announcement + model card + Hugging Face org (Tier-0, unregistered source), cross-confirmed by independent Tier-2 press. Fresh adversarial falsifier re-fetched both primary pages, checked for staleness/open-washing/numeric inconsistency, and confirmed no conflation with the unrelated 1980s 'Thinking Machines Corporation' -- found one caveat (acceptable-use policy layered on Apache 2.0) and one ambiguity (Inkling-Small weights not yet public), both incorporated into the published claims. Announcement/spec claims confirmed; benchmark claims labeled vendor-claim, not independently reproduced. Style gates run on both languages: pass."
+}

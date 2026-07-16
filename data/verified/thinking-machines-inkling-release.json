@@ -1,0 +1,47 @@
+{
+  "slug": "thinking-machines-inkling-release",
+  "checked_at": "2026-07-16T00:33:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); verifier located Thinking Machines Lab's own announcement, model card, and Hugging Face org page directly, cross-checked against TechCrunch/Bloomberg/Fortune/Axios/SiliconANGLE/VentureBeat coverage; falsifier independently re-fetched the primary announcement and model card, checked for staleness, open-washing, and numeric inconsistencies, and confirmed no conflation with the unrelated 1980s 'Thinking Machines Corporation'",
+  "origin_items": [
+    "data/raw/2026-07-16/gnews-open-weight-llm-releases.json — Thinking Machines Lab Releases Inkling (MarkTechPost)",
+    "data/raw/2026-07-16/gnews-ai-model-releases.json — Former OpenAI CTO does what Altman won't (The Register)"
+  ],
+  "claims": [
+    {
+      "text": "Thinking Machines Lab announced Inkling on 15 July 2026: 975B total/41B active parameter sparse MoE (66-layer decoder-only transformer, 256 routed + 2 shared experts, 6 active/token), up to 1M token context, trained on 45T multimodal tokens, text-only output",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against Thinking Machines Lab's own announcement and model card (Tier-0 primary, unregistered), cross-confirmed by independent Tier-2 press (TechCrunch, Bloomberg, Fortune, Axios, SiliconANGLE, VentureBeat) all reporting the same figures on 15-16 July 2026. Falsifier independently re-fetched both primary pages and confirmed exact match; one search-snippet discrepancy (GPQA 87.9%) traced to summarizer noise, not a real vendor figure -- resolved to 87.2% per direct model-card fetch.",
+      "evidence": ["https://thinkingmachines.ai/news/introducing-inkling/", "https://thinkingmachines.ai/model-card/inkling/"]
+    },
+    {
+      "text": "Weights released under Apache 2.0, downloadable on Hugging Face (BF16 + NVFP4), day-0 support in transformers/SGLang/vLLM, hosted access via Tinker/Together AI/Fireworks/Modal/Databricks/Baseten; additionally subject to an acceptable-use policy barring surveillance, deception, and high-stakes automated decisions",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via primary source and live Hugging Face org page (thinkingmachines org, Inkling and Inkling-NVFP4 repos). Falsifier specifically checked for open-washing (gated access, restrictive license) and found the AUP is real but layered on top of -- not replacing -- Apache 2.0; flagged as a required caveat, now reflected in the claim text rather than an unqualified 'Apache 2.0, no restrictions' framing.",
+      "evidence": ["https://thinkingmachines.ai/news/introducing-inkling/", "https://thinkingmachines.ai/model-card/inkling/", "https://huggingface.co/thinkingmachines"]
+    },
+    {
+      "text": "Inkling-Small (276B total/12B active) released as a preview; weights not yet published at announcement, pending completion of testing",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Per primary source and HF blog post; falsifier flagged that the original draft phrasing was ambiguous about which model's weights were live today -- corrected to explicitly state Inkling-Small's weights were not yet published.",
+      "evidence": ["https://thinkingmachines.ai/news/introducing-inkling/", "https://huggingface.co/blog/thinkingmachines-inkling"]
+    },
+    {
+      "text": "Vendor-reported benchmarks at effort=0.99: AIME 2026 97.1%, GPQA Diamond 87.2%, SWE-bench Verified 77.6%, HLE-with-tools 46.0%, VoiceBench 91.4%",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "All figures traced to Thinking Machines' own model card; not independently reproduced by METR, Vals AI, or Artificial Analysis as of publication (release is one day old). Artificial Analysis reportedly scored Inkling as the new leading open-weight model on its Intelligence Index, a genuine third-party data point, but not cited in the article body since it could not be independently confirmed with a live fetch/timestamp within this cycle's budget -- held back per the live-fetch rule (verification.md §5) rather than cited from a secondhand mention.",
+      "evidence": ["https://thinkingmachines.ai/model-card/inkling/"]
+    },
+    {
+      "text": "Thinking Machines Lab states Inkling is 'not the strongest overall model available today, open or closed'",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Direct quote confirmed on the primary announcement page by both the verifier and the falsifier independently.",
+      "evidence": ["https://thinkingmachines.ai/news/introducing-inkling/"]
+    }
+  ],
+  "notes": "Thinking Machines Lab (thinkingmachines.ai) is not a registered source in policy/sources.yaml; qualifies as Tier-0 primary (official company blog + model card + verified Hugging Face org). Falsifier confirmed no conflation with the unrelated, defunct 1980s 'Thinking Machines Corporation'. Logged to source_candidates.json for Tier-0 registration proposal, same as deploymentsafety.openai.com in cycle 1."
+}
