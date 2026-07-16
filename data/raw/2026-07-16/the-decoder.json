@@ -1,0 +1,32 @@
+[
+  {
+    "id": "e835e06c4aa61ce1",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Ex-OpenAI CTO Murati's Thinking Machines drops Inkling, a 975B parameter model that leads US labs but trails China",
+    "url": "https://the-decoder.com/ex-openai-cto-muratis-thinking-machines-drops-inkling-a-975b-parameter-model-that-leads-us-labs-but-trails-china/",
+    "published": "2026-07-16T09:55:28+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"801\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/thinking_machines_inkling_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1256\" /></p>\n<p>        Thinking Machines Lab, founded by former OpenAI CTO Mira Murati, has released Inkling, a multimodal open-weights model with 975 billion parameters. It leads U.S. open-weights models on the Artificial Analysis Intelligence Index, though top Chinese open models still beat it on some tasks. Pricing starts at $1.87 per million input tokens, and Thinking Machines is pitching Inkling as a base for fine-tuning rather than the most powerful model available.</p>\n<p>The article <a href=\"https://the-decoder.com/ex-openai-cto-muratis-thinking-machines-drops-inkling-a-975b-parameter-model-that-leads-us-labs-but-trails-china/\">Ex-OpenAI CTO Murati&#039;s Thinking Machines drops Inkling, a 975B parameter model that leads US labs but trails China</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "b106d648f2f5c884",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Gemma 4 gets a stealth update that fixes tool calling bugs and truncated responses under the same name",
+    "url": "https://the-decoder.com/gemma-4-gets-a-stealth-update-that-fixes-tool-calling-bugs-and-truncated-responses-under-the-same-name/",
+    "published": "2026-07-16T09:07:58+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"676\" src=\"https://the-decoder.com/wp-content/uploads/2026/04/gemma_4-logo.webp\" style=\"height: auto; margin-bottom: 10px;\" width=\"1200\" /></p>\n<p>        Google shipped an update to its open AI model Gemma 4 that speeds up performance on Nvidia Hopper GPUs, fixes tool calling bugs, and addresses problems with truncated responses.</p>\n<p>The article <a href=\"https://the-decoder.com/gemma-4-gets-a-stealth-update-that-fixes-tool-calling-bugs-and-truncated-responses-under-the-same-name/\">Gemma 4 gets a stealth update that fixes tool calling bugs and truncated responses under the same name</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "309e4f171ab9cb84",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "xAI open-sources \"Grok-Build\" on GitHub after massive data breach",
+    "url": "https://the-decoder.com/xai-open-sources-grok-build-on-github-after-massive-data-breach/",
+    "published": "2026-07-16T07:56:21+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"608\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/xai_logo_wall-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1088\" /></p>\n<p>        xAI's command-line tool \"Grok Build\" silently uploaded entire directories to Google Cloud servers, including SSH keys and password databases. After the backlash, Elon Musk promised to delete all uploaded user data, and xAI open-sourced the full 844,530-line Rust codebase under the Apache 2.0 license.</p>\n<p>The article <a href=\"https://the-decoder.com/xai-open-sources-grok-build-on-github-after-massive-data-breach/\">xAI open-sources &quot;Grok-Build&quot; on GitHub after massive data breach</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  }
+]

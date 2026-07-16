@@ -8,5 +8,115 @@
     "published": "2026-07-15T23:54:26+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxmo20/arenaai_kimi_k3_comparison_to_fable_and_sol/\"> <img alt=\"ArenaAI Kimi K3 comparison to Fable and Sol\" src=\"https://external-preview.redd.it/Gs6gnFRz2hKoOsFJeO3XVc6zNZy40tAvbR8oCbIaZFg.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=cd507c58577127a61d82044445ee4221994a8340\" title=\"ArenaAI Kimi K3 comparison to Fable and Sol\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Swimming_Gain_4989\"> /u/Swimming_Gain_4989 </a> <br /> <span><a href=\"https://www.youtube.com/watch?v=LSlV206xPqM\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxmo20/arenaai_kimi_k3_comparison_to_fable_and_sol/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-07-16T00:22:45.773889+00:00"
+  },
+  {
+    "id": "999bf99d4269671c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Looks like Hugging face is down",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxwjl9/looks_like_hugging_face_is_down/",
+    "published": "2026-07-16T08:10:41+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Kerub88\"> /u/Kerub88 </a> <br /> <span><a href=\"https://downdetector.com/status/hugging-face/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxwjl9/looks_like_hugging_face_is_down/\">[comments]</a></span>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "f4fd05f42188f02c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.6 35B A3B Q8_0 \"Create an SVG of a Darth Vader.\" at various expert counts.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxyjw3/qwen_36_35b_a3b_q8_0_create_an_svg_of_a_darth/",
+    "published": "2026-07-16T10:05:53+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxyjw3/qwen_36_35b_a3b_q8_0_create_an_svg_of_a_darth/\"> <img alt=\"Qwen 3.6 35B A3B Q8_0 &quot;Create an SVG of a Darth Vader.&quot; at various expert counts.\" src=\"https://preview.redd.it/9v4y7o1abkdh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=16ba6e0e4cfdc8e4d9bd6e954cc89d84fcf15999\" title=\"Qwen 3.6 35B A3B Q8_0 &quot;Create an SVG of a Darth Vader.&quot; at various expert counts.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Specifically Qwen3.6-35B-A3B-uncensored-heretic-Q8_0.gguf, temp 0.0, &quot;Create an SVG of a Darth Vader.&quot; (In general text use, anything 4 experts or less seems to seriously break down. (8 is the default for this model).</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/temperature_5\"> /u/temperature_5 </a> <br /> <span><a href=\"https://i.redd.it/9v4y7o1abkdh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxyjw3/qwen_36_35b_a3b_q8_0_create_an_svg_of_a_darth/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "687e21db81895019",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "PSA: Nvidia's CMP 170HX Full Compute and Memory(80GB) may be unlockable via exploit",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxqccx/psa_nvidias_cmp_170hx_full_compute_and_memory80gb/",
+    "published": "2026-07-16T02:40:10+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxqccx/psa_nvidias_cmp_170hx_full_compute_and_memory80gb/\"> <img alt=\"PSA: Nvidia's CMP 170HX Full Compute and Memory(80GB) may be unlockable via exploit\" src=\"https://preview.redd.it/6lbe88w9fidh1.png?width=140&amp;height=45&amp;auto=webp&amp;s=d975181a1dc2190c0e4bb25ce08bbd6926c2a3d8\" title=\"PSA: Nvidia's CMP 170HX Full Compute and Memory(80GB) may be unlockable via exploit\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>If you don't know, the CMP 170HX is essentially a A100 that has had it's compute and memory crippled so it can only mine crypto. It was a product of the crypto craze, and was released shortly before the crypto crash.</p> <p>Well, I was scrolling around and found out, apparently, it can be reverted back to an A100 using an exploit in Nvidia's Falcon security processor.</p> <p><a href=\"https://www.researchgate.net/publication/408132536_A_Canary_in_the_Crypto_Mine_Defeating_Stack_Protection_in_a_GPU_Secure_Coprocessor\">https://www.researchgate.net/publication/408132536_A_Canary_in_the_Crypto_Mine_Defeating_Stack_Protection_in_a_GPU_Secure_Coprocessor</a></p> <p><a href=\"https://preview.redd.it/6lbe88w9fidh1.png?width=1249&amp;format=png&amp;auto=webp&amp;s=32a738b4bb742f803388447a26214c43448d3154\">https://preview.redd.it/6lbe88w9fidh1.png?width=1249&amp;format=png&amp;auto=webp&amp;s=32a738b4bb742f803388447a26214c43448d3154</a></p> <p>The details are in this paper published last month. </p> <p>There was a PoC repo that verified the compute unlock(<a href=\"https://github.com/arabel1a/cmpunlocker\">https://github.com/arabel1a/cmpunlocker</a>), but it seems to be down now. The memory unlock has yet to be replicated.</p> <p>For reference, the A100 goes for over $5000, while a 170HX went for under $200(before all the sellers found out about the news).</p> <p>TL:DR: We may be able to buy essentially a A100 80GB for under $1000 soon, if this is legit.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/invisibleman42\"> /u/invisibleman42 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxqccx/psa_nvidias_cmp_170hx_full_compute_and_memory80gb/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxqccx/psa_nvidias_cmp_170hx_full_compute_and_memory80gb/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "76e5d9986060a021",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.5 122B-A10B · ROCmFP4 iMatrix",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxqgke/qwen35_122ba10b_rocmfp4_imatrix/",
+    "published": "2026-07-16T02:45:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxqgke/qwen35_122ba10b_rocmfp4_imatrix/\"> <img alt=\"Qwen3.5 122B-A10B · ROCmFP4 iMatrix\" src=\"https://external-preview.redd.it/ZsQ_oZPwDooHQBEezFxzVMx6hoV0k-R6aKCK1uBgaUk.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=740559fbc44062267c441bd93230ced9b8786646\" title=\"Qwen3.5 122B-A10B · ROCmFP4 iMatrix\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hola Strix and AMD stacker frendios. Read the Lineage and Credits, this uses charlie12345/ROCmFPX, won't work on native llama.cpp yet.</p> <p><strong>122B total · 10B active · 60.70 GiB · 28.50 tok/s MTP-off · BF16 KLD 0.041366 · Decode</strong> 28.505</p> <p>Decode speed + 36.89% faster</p> <p>Size - 13.47gb smaller</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RedParaglider\"> /u/RedParaglider </a> <br /> <span><a href=\"https://huggingface.co/vmlinux/Qwen3.5-122B-A10B-ROCmFP4-iMatrix-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxqgke/qwen35_122ba10b_rocmfp4_imatrix/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "83d7d8104ce51d25",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B on 2x3090s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxuf99/nvidianemotronlabs3puzzle75ba9b_on_2x3090s/",
+    "published": "2026-07-16T06:09:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I managed to get this model working on 2x 3090s with full 262k ctx and N=4, if anyone is interested to try it, thanks to this quant:<br /> <a href=\"https://huggingface.co/danielrmay/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-W4A16\">https://huggingface.co/danielrmay/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-W4A16</a></p> <p>Nemotron-Labs-3-Puzzle-75B-A9B (W4A16) on 2× RTX 3090 — vLLM, no CPU offload, full 262K, N=4</p> <p>Hardware: 2× RTX 3090 (SM 8.6), PCIe Gen4 ×8, no NVLink, aikitoria BAR1-P2P patched driver active.</p> <p>Engine: vllm/vllm-openai:cu129-nightly dev1060 (9e57de71).</p> <p>Model: danielrmay/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-W4A16 (<a href=\"https://huggingface.co/danielrmay/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-W4A16\">https://huggingface.co/danielrmay/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-W4A16</a>) (compressed-tensors: INT4 experts / INT8 shared+mamba / BF16 attn+latent+router+embed+lm_head, MTP stripped, 41.48 GiB).</p> <pre><code>docker run -d --name vllm-puzzle --gpus '&quot;device=0,1&quot;' --ipc=host --network=host --ulimit memlock=-1 --ulimit stack=67108864 -e CUDA_DEVICE_ORDER=PCI_BUS_ID -e VLLM_NO_USAGE_STATS=1 -e VLLM_USE_FLASHINFER_SAMPLER=0 -e VLLM_ATTENTION_BACKEND=TRITON_ATTN -e VLLM_SKIP_P2P_CHECK=1 -e PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.6,max_split_size_mb:128 -v /path/to/puzzle-w4a16:/model:ro --entrypoint vllm vllm/vllm-openai:cu129-nightly-x86_64 serve /model --served-model-name puzzle-w4a16 --host 0.0.0.0 --port 8000 --trust-remote-code --tensor-parallel-size 2 --enable-expert-parallel --kv-cache-dtype int8_per_token_head --mamba-backend triton --kv-cache-memory-bytes 680000000 --gpu-memory-utilization 0.965 --max-num-seqs 4 --max-num-batched-tokens 1024 --max-model-len 262144 --compilation-config '{&quot;cudagraph_mode&quot;:&quot;PIECEWISE&quot;,&quot;cudagraph_capture_sizes&quot;:[1,2,4]}' --reasoning-parser nemotron_v3 --tool-call-parser qwen3_coder --enable-auto-tool-choice </code></pre> <ol> <li>PYTORCH_CUDA_ALLOC_CONF=garbage_collection_threshold:0.6,max_split_size_mb:128 — the breakthrough. Reclaims a ~1.07 GiB reserved-but-unallocated fragmentation that expandable_segments:True could not, and rebalances the two ranks. Prerequisite for everything else. (Also makes custom-all-reduce IPC handles work, unlike expandable_segments.)</li> <li>PIECEWISE CUDA graphs — biggest decode lever (27.9 eager → 88+ tok/s). Eager Python dispatch over the 88-layer hybrid was the real N=1 bottleneck, not TP all-reduce. splitting_ops keeps mamba/attention eager; only MoE/MLP subgraphs are captured (~tens of MiB). FULL graphs do NOT fit real 24 GB — PIECEWISE does. Capture sizes must cover max-num-seqs ([1,2,4] for N=4) or N≥3 decode silently degrades to eager.</li> <li>custom-all-reduce ON (default, via aikitoria BAR1 P2P + the GC allocator): +8% N=1 / +6% N=4. Note it accelerates only the TP all-reduce (8 attn + 40 mamba layers) — the EP MoE all-to-all stays PyNCCL.</li> </ol> <p>Measured (real 3090s, not simulated):</p> <ul> <li>N=1 decode 93.8 tok/s, prefill ~3660 tok/s <a href=\"/u/4-8K\">u/4-8K</a></li> <li>N=4 aggregate 255 tok/s (per-stream 69), TTFT p50 0.61s, 0 preempt/0 OOM</li> <li>Full 262K context (int8 KV pool 278K tokens), GPU floor 267/287 MiB</li> <li>52K needle recall PASS; 847×293=248171, &quot;all but 9&quot;=9, clean qwen3_coder tool call</li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/_ballzdeep_\"> /u/_ballzdeep_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxuf99/nvidianemotronlabs3puzzle75ba9b_on_2x3090s/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxuf99/nvidianemotronlabs3puzzle75ba9b_on_2x3090s/\">[comments]</a></span>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "515ae13ff69de535",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.6 27B is solid up to 262K context. How high have you guys gone above that using Rope/Yarn scaling?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxstxs/qwen_36_27b_is_solid_up_to_262k_context_how_high/",
+    "published": "2026-07-16T04:44:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Stack:</p> <ul> <li>i7 12700K | RTX 3090 TI | 96GB RAM</li> <li>Qwen 3.6 27B Q3/Q5 KXL UD</li> </ul> <p>I've been pushing Qwen 3.6 27B above 200K ctx all week, and it handles it like a champ. I'm impressed. Today I hit the ceiling at 262K and it's still functioning well and coherent. I'm planning on trying out Yarn to see if I can push it higher.</p> <p>How high have you guys pushed it and how has the quality held up?</p> <blockquote> <p>NOTE: If you're wondering why the context is so high, it's mcp tool and memory/summary bloat (40-50K) on session start, which we're actively working on resolving using an mcp broker server, among a couple of other optimizations.</p> <p>MODEL SWAPPING: Since a couple of people have asked: I start out with Q5 kv 8/8 until 115K, then I drop to kv 4/4 until 200k, then drop to Q3 kv 4/4 until 262K. Works every time and solid speeds on my RTX 3090 TI. </p> </blockquote> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/GrungeWerX\"> /u/GrungeWerX </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxstxs/qwen_36_27b_is_solid_up_to_262k_context_how_high/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxstxs/qwen_36_27b_is_solid_up_to_262k_context_how_high/\">[comments]</a></span>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "edabc08acbcde6b4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How do you visualise agent tool use?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxxsio/how_do_you_visualise_agent_tool_use/",
+    "published": "2026-07-16T09:22:43+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxxsio/how_do_you_visualise_agent_tool_use/\"> <img alt=\"How do you visualise agent tool use?\" src=\"https://preview.redd.it/lr83cmjp7kdh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6f8dc0de1de20046a788b929ddcc1cf86b47571c\" title=\"How do you visualise agent tool use?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>For those who look at tool use across multiple runs.</p> <p>I am personally quite fond of sankey charts.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SnooPeripherals5313\"> /u/SnooPeripherals5313 </a> <br /> <span><a href=\"https://i.redd.it/lr83cmjp7kdh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxxsio/how_do_you_visualise_agent_tool_use/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "772a6ccea502f2bf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Filings: Dario Amodei gave $1M in May to Public First, a super PAC advocating for AI safety regulations, seemingly his first seven-figure political donation",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uy06cd/filings_dario_amodei_gave_1m_in_may_to_public/",
+    "published": "2026-07-16T11:30:13+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pscoutou\"> /u/pscoutou </a> <br /> <span><a href=\"https://www.politico.com/news/2026/07/16/anthropics-ceo-gives-1-million-to-super-pac-amid-feud-of-ai-big-money-groups-01000461\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uy06cd/filings_dario_amodei_gave_1m_in_may_to_public/\">[comments]</a></span>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "933241d7abb3a52c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Major Open-Weight Model Releases grouped by license and benchmarks (as of July 2026)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxzflo/major_openweight_model_releases_grouped_by/",
+    "published": "2026-07-16T10:53:17+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxzflo/major_openweight_model_releases_grouped_by/\"> <img alt=\"Major Open-Weight Model Releases grouped by license and benchmarks (as of July 2026)\" src=\"https://preview.redd.it/gc7ctkz4okdh1.png?width=140&amp;height=39&amp;auto=webp&amp;s=f9132eaf1a98f0fa12db68d01309fe7e7136c4f7\" title=\"Major Open-Weight Model Releases grouped by license and benchmarks (as of July 2026)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/gc7ctkz4okdh1.png?width=1722&amp;format=png&amp;auto=webp&amp;s=1483cacd281b744d782d51d0ea1d3e07808d6057\">benchmarks as of july 16 2026</a></p> <p><em>-- Apache 2.0</em></p> <p><strong>Thinking Machines Lab: Inkling</strong>, July 15, 2026 </p> <p><em>-- MIT</em></p> <p><strong>DeepSeek V4 Pro,</strong> April 24, 2026 </p> <p><strong>Xiaomi</strong> <strong>MiMo-V2.5-Pro</strong>, April 22, 2026 </p> <p><strong>GLM-5.2</strong>, June 13, 2026 </p> <p><em>-- Custom / restricted license</em></p> <p><strong>MiniMax M3</strong>, June 1, 2026 </p> <p><strong>Kimi K2.7 Code</strong>, June 12, 2026 </p> <p><em>-- Modified MIT license</em></p> <p><strong>NVIDIA: Nemotron 3 Ultra</strong></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Atagor\"> /u/Atagor </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxzflo/major_openweight_model_releases_grouped_by/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxzflo/major_openweight_model_releases_grouped_by/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "5af2c992dbaea13f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is Hugging Face down for anyone else right now?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxwspz/is_hugging_face_down_for_anyone_else_right_now/",
+    "published": "2026-07-16T08:25:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxwspz/is_hugging_face_down_for_anyone_else_right_now/\"> <img alt=\"Is Hugging Face down for anyone else right now?\" src=\"https://preview.redd.it/xyr44pmrxjdh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=713bf15619e872ea8d3ed11c7c360b5aba7dd5f0\" title=\"Is Hugging Face down for anyone else right now?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hugging Face seems to be down right now. I’m getting <strong>504 Gateway Timeout / CloudFront errors</strong> when trying to access the Hub and download datasets.</p> <p>Their status page is also showing <strong>“Some services are down”</strong> with the <strong>Hugging Face Hub</strong> marked as having downtime.</p> <p>Is anyone else experiencing the same issue, especially with large dataset/model downloads?</p> <p>Was in the middle of preparing training data 😭 perfect timing.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Murky-Sign37\"> /u/Murky-Sign37 </a> <br /> <span><a href=\"https://i.redd.it/xyr44pmrxjdh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxwspz/is_hugging_face_down_for_anyone_else_right_now/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "c828645f95d9be8d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AMD ROCm 7.14 \"TheRock\" tech preview tagged for latest AMD GPU compute stack",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uxq4kb/amd_rocm_714_therock_tech_preview_tagged_for/",
+    "published": "2026-07-16T02:30:00+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxq4kb/amd_rocm_714_therock_tech_preview_tagged_for/\"> <img alt=\"AMD ROCm 7.14 &quot;TheRock&quot; tech preview tagged for latest AMD GPU compute stack\" src=\"https://external-preview.redd.it/cs2YzGmhXFVqexQfA-qKBvPmzE-WVROkhW5fvNJ52r8.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=65cb8948051270bb8e8331cdfb5395070e53111c\" title=\"AMD ROCm 7.14 &quot;TheRock&quot; tech preview tagged for latest AMD GPU compute stack\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fcking_Chuck\"> /u/Fcking_Chuck </a> <br /> <span><a href=\"https://www.phoronix.com/news/AMD-ROCm-TheRock-7.14\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1uxq4kb/amd_rocm_714_therock_tech_preview_tagged_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-16T11:42:14.916773+00:00"
   }
 ]
