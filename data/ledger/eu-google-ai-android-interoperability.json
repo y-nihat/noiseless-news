@@ -1,0 +1,20 @@
+{
+  "slug": "eu-google-ai-android-interoperability",
+  "status": "watching",
+  "first_seen": "2026-07-16",
+  "published_at": null,
+  "langs": [],
+  "title": "European Commission moves to force Google to open Android and Search data to rival AI assistants under the DMA",
+  "source_urls": [
+    "https://digital-strategy.ec.europa.eu/en/news/commission-provides-guidance-google-ai-interoperability-android",
+    "https://arstechnica.com/tech-policy/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/",
+    "https://www.theregister.com/2026/07/16/eu_google_dma_ai/",
+    "https://www.theverge.com/2026/07/16/google-android-search-eu-dma-ruling"
+  ],
+  "reason": "Not yet published this cycle -- discovered via Tier-0 sweep (EC Digital Strategy News) plus triage of today's press coverage, dedup-check clear (no match, new story). Fresh verifier (time-boxed) confirmed an explicit, central AI angle (AI chatbots named as eligible recipients of shared search data; Android interoperability remedy targets third-party AI assistants competing with Gemini) -- in scope per policy/verification.md Sec.0. But: (1) verifier's only clean primary fetch was an April 16 2026 proposal/consultation-stage EC document, not a July 16 final decision -- the Tier-0 sweep separately found a same-day EC Digital Strategy News item ('Commission provides guidance...') that looks like the actual primary for today's news but was not yet cross-read against the press claims; (2) Ars Technica/Register/Verge coverage appears to derive from one EC press release, so under the independence rule that is ONE source, not three, for any claim beyond the EC's own text; (3) Google's (Kent Walker) objection quote has not been confirmed against a Google-controlled source. Did not have remaining cycle time (hard 23:08 UTC deadline) to close these gaps, draft, or run the adversarial falsification pass. No claim has been rejected -- this looks likely publishable once the EC primary text is read directly and the Google response is sourced.",
+  "watch": [
+    "Read the EC Digital Strategy News primary directly (digital-strategy.ec.europa.eu/en/news/commission-provides-guidance-google-ai-interoperability-android) and reconcile its exact legal status (guidance vs. binding decision) and effective dates against the press framing of 'official'/'forces'",
+    "Source Google's rebuttal/Kent Walker quote against a Google-controlled statement (Google Blog, press statement), not press paraphrase",
+    "Confirm whether Ars Technica/Register/Verge add any reporting independent of the EC press release (interviews, analyst reaction) that would count toward the independence bar for non-EC-sourced claims (e.g. the specific Jan 2027 / July 2027 compliance dates)"
+  ]
+}
