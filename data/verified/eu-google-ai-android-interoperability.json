@@ -1,0 +1,56 @@
+{
+  "slug": "eu-google-ai-android-interoperability",
+  "checked_at": "2026-07-16T23:23:00+00:00",
+  "method": "Fresh verifier sub-agent (web search + live fetch of Google's own statement, EC presscorner and DMA case-register pages, 9to5Google, Android Authority) followed by an independent adversarial falsifier sub-agent tasked with proving the decision was recycled from an earlier proposal stage, that dates were swapped, or that Kent Walker's title/quote were misattributed. Both cross-checked and reconciled by this cycle's editor. Direct EC presscorner body text could not be retrieved (JS-rendered shell only); legal-status and remedy-detail claims are corroborated instead via Google's own reactive statement plus two independently-written outlet accounts.",
+  "origin_items": [
+    "Opened in cycle 1 of tonight's run via Tier-0 sweep of EC Digital Strategy News plus triage of same-day press coverage (Ars Technica, The Register, The Verge); carried into cycle 2 as a watching-state ledger entry with three specific evidence gaps to close."
+  ],
+  "claims": [
+    {
+      "text": "On 16 July 2026, the European Commission issued two decisions under the EU Digital Markets Act ordering Google to open core Android capabilities to third-party AI assistants and to share anonymized Google Search query data with competing providers",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Direct EC presscorner text was not retrievable this session (JS shell only, 3 attempts). Confirmed instead via: Google's own reactive statement referring to 'today's decisions' as already-issued rulings, not a still-open proposal; 9to5Google and Android Authority, both independently written (distinct emphasis and detail, not a shared wire template), describing this as a final decision/mandate rather than a consultation; and the adversarial falsifier separately finding GSMArena explicitly calling these 'two legally binding Digital Markets Act (DMA) decisions' and tracing the case's prior stages (proceedings opened, proposal, consultation) as distinct, earlier EC press releases from the same Article 8 specification process, ruling out the hypothesis that 16 July coverage is a recycled restatement of an earlier stage.",
+      "evidence": [
+        "https://blog.google/company-news/inside-google/around-the-globe/google-europe/the-dma-should-not-undercut-security-privacy-for-europeans/",
+        "https://9to5google.com/2026/07/16/eu-dma-google-search-data-android-access-decisions/",
+        "https://www.androidauthority.com/eu-android-ai-google-search-mandates-3688186/"
+      ]
+    },
+    {
+      "text": "The Android remedy requires Google to let users invoke and use rival AI assistants, including ChatGPT and Claude, with system-level access comparable to what Gemini has today -- voice activation, on-screen context, and the ability to perform actions inside other apps -- effective July 2027",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Functional description (voice trigger parity with 'Hey Google', on-screen context awareness, in-app action execution) confirmed consistently across 9to5Google and Android Authority. Declined to cite a precise feature count ('11 features') since no source directly quoted EC document text with that figure -- verifier flagged it as unconfirmed, so the article uses the functional description only. July 2027 effective date (tied to next Android release) confirmed by 9to5Google and corroborated by the falsifier's independent pass (Android Authority, GSMArena).",
+      "evidence": [
+        "https://9to5google.com/2026/07/16/eu-dma-google-search-data-android-access-decisions/",
+        "https://www.androidauthority.com/eu-android-ai-google-search-mandates-3688186/"
+      ]
+    },
+    {
+      "text": "Google must begin sharing anonymized Google Search query data with competing search engines and AI chatbot providers from January 2027",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "January 2027 date confirmed by 9to5Google and independently corroborated by the falsifier's pass (CNBC, GSMArena, and a BigGo Finance headline stating 'Starting January Next Year'). Falsifier specifically checked for a date swap between the two obligations (Jan 2027 vs July 2027) and found no inconsistency -- search-data sharing is consistently the earlier deadline. Google's own statement corroborates the substance of the obligation (objecting to search data exposure) without independently giving the date.",
+      "evidence": [
+        "https://blog.google/company-news/inside-google/around-the-globe/google-europe/the-dma-should-not-undercut-security-privacy-for-europeans/",
+        "https://9to5google.com/2026/07/16/eu-dma-google-search-data-android-access-decisions/"
+      ]
+    },
+    {
+      "text": "Google publicly objected; Kent Walker, President of Global Affairs at Google and Alphabet, said the decisions 'risk undermining vital privacy and security guardrails for millions of Europeans' and warned the Android ruling would let external apps bypass device security safeguards",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Quote and title confirmed directly from a live fetch of Google's own blog.google statement (Google-controlled primary source, published 16 July 2026). Falsifier independently confirmed the title against Crunchbase and other reporting, noting some secondary outlets loosely label him 'Chief Legal Officer' -- an outlet shorthand error, not a contradiction of the article's (correct) title.",
+      "evidence": [
+        "https://blog.google/company-news/inside-google/around-the-globe/google-europe/the-dma-should-not-undercut-security-privacy-for-europeans/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict from adversarial pass: CLEAR TO PUBLISH. One caution noted and checked against the draft: a separate, concurrent Google/EU Android story is running the same week -- a Court of Justice ruling upholding an older EUR4.1B antitrust abuse-of-dominance fine (distinct from this DMA Article 8 specification decision). Confirmed the article does not conflate the two cases.",
+  "gaps_closed_from_watching_state": [
+    "EC primary text was still not directly retrievable, but legal status (final decision, not proposal) is now corroborated via Google's own reactive statement plus two independently-written outlet accounts and the falsifier's independent pass, rather than resting on a single ambiguous fetch.",
+    "Google's Kent Walker quote is now sourced directly to blog.google (Google-controlled), not press paraphrase.",
+    "Independence: identified 9to5Google and Android Authority as two outlets with distinct, independently-written coverage (not a shared wire template), plus the AFP-style wire cluster (France24/RTE/Washington Times/etc.) correctly treated as one source, not several, per the site's independence rule."
+  ]
+}
