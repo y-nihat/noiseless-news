@@ -28,5 +28,35 @@
     "published": "2026-07-16T07:56:21+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"608\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/xai_logo_wall-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1088\" /></p>\n<p>        xAI's command-line tool \"Grok Build\" silently uploaded entire directories to Google Cloud servers, including SSH keys and password databases. After the backlash, Elon Musk promised to delete all uploaded user data, and xAI open-sourced the full 844,530-line Rust codebase under the Apache 2.0 license.</p>\n<p>The article <a href=\"https://the-decoder.com/xai-open-sources-grok-build-on-github-after-massive-data-breach/\">xAI open-sources &quot;Grok-Build&quot; on GitHub after massive data breach</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-07-16T11:42:14.916773+00:00"
+  },
+  {
+    "id": "e6d2c6e140715eb0",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Germany puts Google's AI Overviews and Perplexity under media law in first-of-its-kind ruling",
+    "url": "https://the-decoder.com/germany-puts-googles-ai-overviews-and-perplexity-under-media-law-in-first-of-its-kind-ruling/",
+    "published": "2026-07-16T16:12:26+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/google_ai_overviews_germany.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        German media regulators say Google's AI Overviews are Google's own content, not neutral search results, and that they crowd out regular links. The regulators have issued their first rulings against Google and Perplexity under the country's State Media Treaty. Both companies have one month to appeal.</p>\n<p>The article <a href=\"https://the-decoder.com/germany-puts-googles-ai-overviews-and-perplexity-under-media-law-in-first-of-its-kind-ruling/\">Germany puts Google&#039;s AI Overviews and Perplexity under media law in first-of-its-kind ruling</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-16T17:22:13.723887+00:00"
+  },
+  {
+    "id": "a5d9f6dbfc068753",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI wants developers to stop typing commands and start using a joystick to control their AI agents",
+    "url": "https://the-decoder.com/openai-wants-developers-to-stop-typing-commands-and-start-using-a-joystick-to-control-their-ai-agents/",
+    "published": "2026-07-16T14:31:34+00:00",
+    "summary": "<p><img alt=\"Modular OpenAI WorkLouder Codex Micro with programmable buttons, a rotary knob, and multicolored LEDs.\" class=\"attachment-full size-full wp-post-image\" height=\"1080\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai-worklouder-codex-micro-02-overview-rgb.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        OpenAI and keyboard manufacturer Work Louder have unveiled the Codex Micro, a compact hardware controller designed for working with AI agents.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-wants-developers-to-stop-typing-commands-and-start-using-a-joystick-to-control-their-ai-agents/\">OpenAI wants developers to stop typing commands and start using a joystick to control their AI agents</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-16T17:22:13.723887+00:00"
+  },
+  {
+    "id": "1dbafb5e8a7abb3a",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Sakana AI's orchestrator adds Nvidia Nemotron to prove \"collective intelligence\" can rival single frontier models",
+    "url": "https://the-decoder.com/sakana-ais-fugu-adds-nvidia-nemotron-to-prove-collective-intelligence-can-rival-single-frontier-models/",
+    "published": "2026-07-16T14:02:13+00:00",
+    "summary": "<p><img alt=\"The NVIDIA logo next to the sakana.ai logo, reflecting a shared commitment to open-model innovation in AI.\" class=\"attachment-full size-full wp-post-image\" height=\"1260\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/sakana-ai-nvidia-open-model-innovation.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1900\" /></p>\n<p>        Sakana AI is integrating Nvidia's open-source Nemotron models into its Fugu orchestrator, which dynamically combines multiple language models for specific tasks. The core argument: Open models only become competitive with Frontier systems when used in a coordinated manner. However, the announcement does not yet provide specific benchmark figures for the new combination.</p>\n<p>The article <a href=\"https://the-decoder.com/sakana-ais-fugu-adds-nvidia-nemotron-to-prove-collective-intelligence-can-rival-single-frontier-models/\">Sakana AI&#039;s orchestrator adds Nvidia Nemotron to prove &quot;collective intelligence&quot; can rival single frontier models</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-16T17:22:13.723887+00:00"
   }
 ]
