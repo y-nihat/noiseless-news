@@ -26,6 +26,8 @@ sources:
     url: https://www.bloomberg.com/news/articles/2026-07-14/openai-says-it-s-not-aware-of-any-evidence-that-apple-lawsuit-has-merit
   - name: TechCrunch — OpenAI's response
     url: https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/
+  - name: NBC News
+    url: https://www.nbcnews.com/tech/apple/apple-openai-lawsuit-suit-trade-product-hardware-email-sam-altman-rcna587376
 claims:
   - text: "Apple filed suit against OpenAI, its Chief Hardware Officer Tang Tan, engineer Chang Liu, and io Products LLC in the U.S. District Court for the Northern District of California on 10 July 2026 (Apple Inc. v. Liu, No. 5:26-cv-07078), alleging trade secret misappropriation and breach of contract"
     type: business
@@ -55,8 +57,13 @@ claims:
     type: business
     verdict: confirmed
     evidence: [7, 8]
+  - text: "NBC News reported, citing emails it reviewed, that Apple's outside counsel Gabriel Gross emailed OpenAI general counsel Che Chang in February 2026 and that Chang responded — appearing to qualify Apple's account that OpenAI never responded to its warning. A follow-up email thanking Chang for a phone call actually referred to a call with a different OpenAI employee (surnamed Wang); believing Gross had fabricated the call, Chang complained to Apple's in-house counsel and asked that Gross be removed from the matter. OpenAI told NBC it has no record of further outreach from Apple's lawyers until the lawsuit was filed on 10 July"
+    type: business
+    verdict: single-source
+    evidence: [9]
 updated:
   - "2026-07-14: added OpenAI's first substantive response to the allegations; see Update section"
+  - "2026-07-16: added NBC News reporting on a February email exchange between counsel; see Update section"
 ---
 
 ## What happened
@@ -108,3 +115,19 @@ wherever they choose" [7][8]. This goes further than OpenAI's initial 10 July
 statement, which addressed only its general interest in trade secrets — but
 OpenAI still has not responded to the specific allegations about Liu's or
 Tan's conduct.
+
+## Update, 16 July 2026
+
+NBC News reported, citing emails it reviewed, that Apple's outside counsel
+Gabriel Gross (Weil Gotshal & Manges) emailed OpenAI general counsel Che
+Chang in February 2026 — and that Chang responded, which would qualify
+Apple's account that OpenAI never answered its warning [9]. Roughly 13
+minutes later, per NBC, Gross sent a second email thanking Chang for a phone
+call — but that call had actually taken place with a different OpenAI
+employee, surnamed Wang. Believing Gross had fabricated a conversation,
+Chang contacted Apple's in-house counsel to complain and asked that Gross be
+removed from the matter; Gross apologized, and Apple kept the firm on the
+case [9]. OpenAI told NBC it has no record of any further outreach from
+Apple's lawyers after that point until the lawsuit was filed on 10 July [9].
+This account is single-source: every other outlet covering it attributes
+the emails to NBC's own review, and no party has publicly disputed it.
