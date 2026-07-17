@@ -1,0 +1,60 @@
+{
+  "slug": "xai-sues-user-grok-csam",
+  "checked_at": "2026-07-17T22:40:00+00:00",
+  "method": "Fresh verifier sub-agent (docket/primary-document lookup, independent-outlet cross-check) and an independent adversarial falsifier sub-agent (date verification, conflation-risk check against xAI's separate defendant-side CSAM litigation, criminal-charge disambiguation, self-reported-statistics check, sensitivity constraint for drafting), run in parallel. Legal/litigation claim type per policy/verification.md §3 -- every allegation attributed to xAI's complaint, never stated as fact.",
+  "origin_items": [
+    "Carried forward from a prior night's run-report as a dedup-cleared, not-yet-verified candidate (Ars Technica lead, 2026-07-16). dedup-check re-run this cycle: no match."
+  ],
+  "claims": [
+    {
+      "text": "On 14 July 2026, X.AI LLC filed a civil lawsuit against Terry Wayne Harwood in the U.S. District Court for the Northern District of Texas, case No. 7:26-cv-00078",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "The fact of filing is confirmed via a primary docket record (PacerMonitor listing plus a hosted copy of the complaint, filename dated 7-14-26) and independently reported by CNN Business and PetaPixel, each with distinct bylines. The verifier and falsifier disagreed on the exact weekday/date framing (Tuesday 14th vs Tuesday 15th in their prose); resolved in favor of 14 July since it is both a real Tuesday on the calendar and matches the docket filename, the stronger primary evidence.",
+      "evidence": [
+        "https://www.cnn.com/2026/07/15/business/xai-sues-user-alleged-child-sexual-abuse-materials",
+        "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/"
+      ]
+    },
+    {
+      "text": "xAI's complaint alleges Harwood opened multiple Grok accounts and used 'misleading prompts' to circumvent Grok's safety guardrails, converting non-sexual photographs of both adults and minors into sexually explicit images, including CSAM, without the subjects' knowledge or consent",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed as an allegation from the complaint itself, consistently reported by CNN and PetaPixel with matching substance. Attributed throughout the article to xAI's filing per the legal-claim standard -- never asserted as an established fact.",
+      "evidence": [
+        "https://www.cnn.com/2026/07/15/business/xai-sues-user-alleged-child-sexual-abuse-materials",
+        "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/"
+      ]
+    },
+    {
+      "text": "xAI's complaint states the company suspended 52,222 accounts and made 73,604 NCMEC reports in 2026, leading to at least 244 arrests",
+      "type": "business",
+      "verdict": "vendor-claim",
+      "reasoning": "Both verifier and falsifier independently confirmed these figures appear only in xAI's own complaint, with no independent (NCMEC or otherwise) corroboration found in any outlet checked. Labeled vendor-claim/self-reported rather than confirmed.",
+      "evidence": [
+        "https://www.cnn.com/2026/07/15/business/xai-sues-user-alleged-child-sexual-abuse-materials",
+        "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/"
+      ]
+    },
+    {
+      "text": "Harwood, 67, of Gray Court, South Carolina, was separately arrested on 26 February 2026 on state charges of sexual exploitation of a minor (three counts second-degree, five counts third-degree), independent of xAI's civil suit",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via a primary government source, the South Carolina Attorney General's own press release, independent of and predating xAI's civil complaint. Both sub-agents independently verified this is a genuinely separate criminal proceeding, not double-counted with the civil suit.",
+      "evidence": [
+        "https://www.scag.gov/about-the-office/news/four-upstate-men-arrested-on-child-sexual-abuse-material-charges/"
+      ]
+    },
+    {
+      "text": "As SpaceXAI, xAI is separately a defendant, not plaintiff, in an unrelated class action originally brought by three Tennessee minors in March 2026 alleging its own models generated CSAM, amended in July 2026 to add Wyoming/Wisconsin plaintiffs and Stability AI as a co-defendant",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via NPR's own reporting. The falsifier specifically checked for conflation risk between this case and the Harwood suit and confirmed they are genuinely distinct matters with different courts, different plaintiffs, and opposite roles for xAI -- the article keeps the two clearly separated.",
+      "evidence": [
+        "https://www.npr.org/2026/07/09/nx-s1-5885052/spacexai-stabilityai-deepfake-csam-class-action"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH, subject to attribution and sensitivity constraints, all applied in the draft. Falsifier confirmed: (1) no re-reported old filing -- this is a new July 2026 suit; (2) critical conflation risk between this suit (xAI as plaintiff) and xAI's separate defendant-side CSAM litigation (Tennessee/Wyoming/Wisconsin class action, also naming Stability AI) is real and must be kept clearly demarcated in the article -- done; (3) defendant name/identity consistent across all sources, no discrepancy; (4) enforcement statistics are self-reported PR figures from xAI's own complaint, not independently audited -- labeled vendor-claim; (5) no response from Harwood or an attorney found in any source -- not fabricated; (6) Harwood's South Carolina criminal arrest is a confirmed, separate, non-duplicative proceeding via a primary government source; (7) no cross-outlet contradiction on court, date, defendant identity, or core allegations; (8) sensitivity constraint -- all outlets reviewed describe the allegations in strictly clinical/legal terms with zero graphic detail, and the article matches that, attributing every substantive allegation to xAI's complaint and stating explicitly that a court has not ruled on them.",
+  "gaps_closed_from_watching_state": []
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "xai-sues-user-grok-csam",
+  "title": "xAI sues user, alleging he used Grok to generate child sexual abuse material",
+  "status": "published",
+  "state": "published",
+  "date": "2026-07-14",
+  "first_seen": "2026-07-17",
+  "published_at": "2026-07-17",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.cnn.com/2026/07/15/business/xai-sues-user-alleged-child-sexual-abuse-materials",
+    "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/",
+    "https://www.scag.gov/about-the-office/news/four-upstate-men-arrested-on-child-sexual-abuse-material-charges/",
+    "https://www.npr.org/2026/07/09/nx-s1-5885052/spacexai-stabilityai-deepfake-csam-class-action"
+  ],
+  "watch": [
+    "Any response filed by Harwood or an attorney on his behalf",
+    "Developments in the separate Tennessee/Wyoming/Wisconsin class action where xAI/SpaceXAI is a defendant (this is a DIFFERENT case from the one this article covers -- do not merge)",
+    "Any independent audit or third-party corroboration of xAI's self-reported enforcement statistics (52,222 suspensions / 73,604 NCMEC reports / 244+ arrests)"
+  ],
+  "cycle_2026-07-18_night_c1_note": "New standalone story (dedup-check: no match). Carried forward dedup-cleared from a prior night's report. Legal/litigation claim type -- verified via parallel fresh verifier + adversarial falsifier sub-agents. Verifier located the primary docket record (case No. 7:26-cv-00078, N.D. Tex.) and confirmed at least 3 independently-bylined outlets. Falsifier's key finding: real conflation risk between this suit (xAI as plaintiff against an individual user) and a separate, unrelated class action where xAI/SpaceXAI is a defendant over its own models' alleged CSAM output -- kept clearly demarcated in the article per the falsifier's explicit instruction. Enforcement statistics labeled vendor-claim (self-reported, not independently audited). Sensitivity constraint applied: allegations described only in clinical/legal terms, matching how every source outlet handles it, with explicit attribution to xAI's complaint throughout and a plain statement that no court has ruled on the allegations. Style gates run on both languages: pass, no cuts needed."
+}
