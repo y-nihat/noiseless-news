@@ -396,5 +396,25 @@
       ],
       "context": "Ed-tech trade press with named authors; independently corroborated the FERPA/no-training privacy claim and the free/US-only/individual-educator scope in its own reporting. Load-bearing for anthropic-claude-for-teachers. Propose Tier 2."
     }
+  ],
+  "candidates_2026-07-17_night_c4": [
+    {
+      "domain": "betakit.com",
+      "first_seen": "2026-07-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://betakit.com/anthropic-commits-10-million-to-canadian-institutions-for-ai-research/"
+      ],
+      "context": "Canadian tech-industry trade press with named authors and its own reporting; independently confirmed the full eight-institution list and figures for anthropic-canada-ai-research-funding, not merely relaying Anthropic's page. Likely to recur for Canadian AI-industry stories. Propose Tier 2."
+    },
+    {
+      "domain": "utoronto.ca",
+      "first_seen": "2026-07-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.utoronto.ca/news/u-t-data-sciences-institute-lead-initiative-awarding-1m-claude-credits-ai-powered-research"
+      ],
+      "context": "University of Toronto's own institutional newsroom -- confirmed its Data Sciences Institute's $1M portion of the Anthropic Canada funding in its own voice. Treated as a one-off institutional primary for anthropic-canada-ai-research-funding rather than a recurring scan source; not proposing for the general registry, noting here for the record."
+    }
   ]
 }

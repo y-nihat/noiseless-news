@@ -1,0 +1,20 @@
+{
+  "slug": "anthropic-canada-ai-research-funding",
+  "title": "Anthropic commits $10 million CAD in Claude credits to eight Canadian research institutions",
+  "status": "published",
+  "state": "published",
+  "date": "2026-07-14",
+  "first_seen": "2026-07-15",
+  "published_at": "2026-07-17",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/news/canadian-ai-research",
+    "https://betakit.com/anthropic-commits-10-million-to-canadian-institutions-for-ai-research/",
+    "https://www.utoronto.ca/news/u-t-data-sciences-institute-lead-initiative-awarding-1m-claude-credits-ai-powered-research"
+  ],
+  "watch": [
+    "A future Anthropic-for-Startups rollout announcement naming the specific Canadian startups that receive credits",
+    "Whether the mid-June 2026 US export-control action disabling Fable 5/Mythos 5 for foreign nationals (including Canadians) becomes a standalone story -- found as tangential context during falsification, not yet triaged"
+  ],
+  "cycle_2026-07-17_night_c4_note": "New standalone story (dedup-check: no match, re-run this cycle). Candidate surfaced from Anthropic News listing, carried forward dedup-cleared from cycle 3. Verified via direct primary-page fetch plus independent web-search corroboration (BetaKit, University of Toronto's own page) and a separate adversarial search for disputes/criticism. One self-reported usage statistic kept as vendor-claim rather than confirmed. Style gates run on both languages: pass, no cuts needed."
+}
