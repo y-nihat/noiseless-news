@@ -28,5 +28,25 @@
     "published": "2026-07-16T18:48:04+00:00",
     "summary": "<p>OpenAI trained GPT-Red, an internal-only attacker model, using self-play reinforcement learning against a population of defender LLMs. It beat human red-teamers 84% to 13% on a replicated indirect prompt injection arena, found a novel \"Fake Chain-of-Thought\" attack class, and cut GPT-5.6 Sol's failures 6x on OpenAI's hardest direct injection benchmark. OpenAI concedes it still struggles with multi-turn and image-based attacks.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/16/openai-details-gpt-red-an-internal-automated-red-teaming-model-that-beat-human-red-teamers-84-to-13-on-prompt-injection/\">OpenAI Details GPT-Red: An Internal Automated Red-Teaming Model That Beat Human Red-Teamers 84% To 13% On Prompt Injection</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-07-17T11:23:31.122272+00:00"
+  },
+  {
+    "id": "0eb0831af989c545",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Build an Agentic Event Venue Operator with MongoDB Atlas, Voyage, and LangGraph",
+    "url": "https://www.marktechpost.com/2026/07/17/build-an-agentic-event-venue-operator-with-mongodb-atlas-voyage-and-langgraph/",
+    "published": "2026-07-17T22:12:57+00:00",
+    "summary": "<p>Introduction This tutorial starts where most agent demos stop: giving the agent persistent memory, operational context, and a place to write back what happened. An event operator does not just need an agent that can summarize a weather report or generate a generic plan. The operator needs an agent that can remember what happened at [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/17/build-an-agentic-event-venue-operator-with-mongodb-atlas-voyage-and-langgraph/\">Build an Agentic Event Venue Operator with MongoDB Atlas, Voyage, and LangGraph</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-17T22:28:51.709865+00:00"
+  },
+  {
+    "id": "35f0290883148378",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Zyphra Releases ZUNA1.1: An Apache 2.0 EEG Foundation Model With Variable-Length Inputs From 0.5 To 30 Seconds",
+    "url": "https://www.marktechpost.com/2026/07/17/zyphra-releases-zuna1-1-an-apache-2-0-eeg-foundation-model-with-variable-length-inputs-from-0-5-to-30-seconds/",
+    "published": "2026-07-17T21:35:27+00:00",
+    "summary": "<p>Zyphra released ZUNA1.1 on July 16, 2026, under the Apache 2.0 license. The 380M masked diffusion autoencoder reconstructs, denoises, and upsamples scalp-EEG across arbitrary channel layouts. It accepts variable-length inputs from 0.5 to 30 seconds, against ZUNA1's fixed five seconds. Reported NMSE holds or improves while the input range widens.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/17/zyphra-releases-zuna1-1-an-apache-2-0-eeg-foundation-model-with-variable-length-inputs-from-0-5-to-30-seconds/\">Zyphra Releases ZUNA1.1: An Apache 2.0 EEG Foundation Model With Variable-Length Inputs From 0.5 To 30 Seconds</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-17T22:28:51.709865+00:00"
   }
 ]

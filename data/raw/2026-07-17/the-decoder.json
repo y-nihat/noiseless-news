@@ -18,5 +18,35 @@
     "published": "2026-07-17T08:53:31+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/netflix_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Netflix now uses AI in about 300 productions, mostly in post-production. Co-CEO Ted Sarandos put specific numbers to the effort: the docuseries \"The American Experiment\" includes 17 minutes of AI-assisted footage, produced twice as fast at half the cost. The savings will \"likely\" fund more content rather than shrink the $20 billion budget.</p>\n<p>The article <a href=\"https://the-decoder.com/netflixs-300-ai-productions-show-how-fast-the-technology-is-spreading-through-entertainment/\">Netflix&#039;s 300 AI productions show how fast the technology is spreading through entertainment</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-07-17T11:23:31.122272+00:00"
+  },
+  {
+    "id": "b7968c58be6fc64f",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Zuckerberg's plan to sell excess AI compute could finds its first big customer in Anthropic",
+    "url": "https://the-decoder.com/zuckerbergs-plan-to-sell-excess-ai-compute-could-finds-its-first-big-customer-in-anthropic/",
+    "published": "2026-07-17T21:16:00+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/03/meta_data_center.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Meta is reportedly in talks with Anthropic to rent out compute capacity from its data centers.</p>\n<p>The article <a href=\"https://the-decoder.com/zuckerbergs-plan-to-sell-excess-ai-compute-could-finds-its-first-big-customer-in-anthropic/\">Zuckerberg&#039;s plan to sell excess AI compute could finds its first big customer in Anthropic</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-17T22:28:51.709865+00:00"
+  },
+  {
+    "id": "5dc193efd976a728",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "GPT-5.6 is deleting user files when given full access, and OpenAI says it shouldn't but did",
+    "url": "https://the-decoder.com/gpt-5-6-is-deleting-user-files-when-given-full-access-and-openai-says-it-shouldnt-but-did/",
+    "published": "2026-07-17T19:35:52+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/openai_glitchy_blip.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        OpenAI's GPT-5.6 has accidentally wiped users' entire home directories in several cases, mostly in the unprotected \"Full Access Mode.\" The model overwrites a temporary directory variable and carries out destructive actions on its own instead of asking for confirmation. OpenAI has announced extra safeguards and a detailed post-mortem.</p>\n<p>The article <a href=\"https://the-decoder.com/gpt-5-6-is-deleting-user-files-when-given-full-access-and-openai-says-it-shouldnt-but-did/\">GPT-5.6 is deleting user files when given full access, and OpenAI says it shouldn&#039;t but did</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-17T22:28:51.709865+00:00"
+  },
+  {
+    "id": "166cadfd763f9f6f",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Just like Deepseek, China's Kimi K3 is forcing Western AI labs to question their compute advantage",
+    "url": "https://the-decoder.com/just-like-deepseek-chinas-kimi-k3-is-forcing-western-ai-labs-to-question-their-compute-advantage/",
+    "published": "2026-07-17T19:16:07+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/moonshot_ai_logos.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Moonshot AI has released Kimi K3, a model that by early assessments matches Anthropic's Opus 4.8, built by a team of just 300 people. Even OpenAI strategist Dean W. Ball calls it \"very good,\" but, of course, warns that a world dominated by open-weight models would amount to \"AI communism.\" The release is reigniting the debate over how much computing power actually matters and whether U.S. export controls are working.</p>\n<p>The article <a href=\"https://the-decoder.com/just-like-deepseek-chinas-kimi-k3-is-forcing-western-ai-labs-to-question-their-compute-advantage/\">Just like Deepseek, China&#039;s Kimi K3 is forcing Western AI labs to question their compute advantage</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-17T22:28:51.709865+00:00"
   }
 ]
