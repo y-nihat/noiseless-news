@@ -416,5 +416,34 @@
       ],
       "context": "University of Toronto's own institutional newsroom -- confirmed its Data Sciences Institute's $1M portion of the Anthropic Canada funding in its own voice. Treated as a one-off institutional primary for anthropic-canada-ai-research-funding rather than a recurring scan source; not proposing for the general registry, noting here for the record."
     }
+  ],
+  "candidates_2026-07-17_night_c3": [
+    {
+      "domain": "governor.ny.gov",
+      "first_seen": "2026-07-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops"
+      ],
+      "context": "Official NY State governor's office -- Tier-0 primary, load-bearing for ny-hochul-data-center-moratorium (full Executive Order 62 text). Likely to recur for future NY state AI/tech policy actions. Propose Tier 0 registration, type html."
+    },
+    {
+      "domain": "wxxinews.org",
+      "first_seen": "2026-07-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.wxxinews.org/new-york-public-news-network/2026-07-16/hochul-pushes-back-as-trump-blasts-her-data-center-moratorium"
+      ],
+      "context": "NY public radio/news network; independently corroborated Hochul's public response to Trump's criticism for ny-hochul-data-center-moratorium. Propose Tier 2."
+    },
+    {
+      "domain": "thehill.com",
+      "first_seen": "2026-07-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://thehill.com/policy/technology/5966562-new-york-ai-data-center-moratorium/"
+      ],
+      "context": "National policy/politics outlet; carried the Data Center Coalition's on-record industry-reaction statement, added for balance per the falsifier's instruction on ny-hochul-data-center-moratorium. Propose Tier 2."
+    }
   ]
 }

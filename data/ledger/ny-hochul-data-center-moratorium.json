@@ -1,0 +1,20 @@
+{
+  "slug": "ny-hochul-data-center-moratorium",
+  "status": "published",
+  "first_seen": "2026-07-17",
+  "published_at": "2026-07-17",
+  "langs": ["en", "tr"],
+  "title": "New York Governor Hochul signs first statewide moratorium on hyperscale AI data centers",
+  "date": "2026-07-14",
+  "source_urls": [
+    "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops",
+    "https://www.governor.ny.gov/news/first-statewide-moratorium-new-hyperscale-data-centers-launched-governor-kathy-hochul",
+    "https://www.axios.com/2026/07/14/ny-gov-kathy-hochul-data-center-moratorium-executive-order",
+    "https://www.cnbc.com/2026/07/15/trump-blasts-new-york-gov-hochul-over-ai-data-center-moratorium.html",
+    "https://www.cbsnews.com/newyork/news/new-york-data-center-moratorium-kathy-hochul/",
+    "https://www.wxxinews.org/new-york-public-news-network/2026-07-16/hochul-pushes-back-as-trump-blasts-her-data-center-moratorium",
+    "https://thehill.com/policy/technology/5966562-new-york-ai-data-center-moratorium/"
+  ],
+  "follows": null,
+  "reason": "Cycle 3: surfaced by fresh ingest (gnews-ai-regulation-and-policy.json) covering Governor Hochul's Executive Order 62, a statewide pause on new hyperscale (>=50MW) data-center permits explicitly citing AI demand and grid interconnection strain, plus Trump's public criticism. Dedup-check returned no match. Full multi-agent protocol run: fresh verifier sub-agent (direct fetch of the primary EO text) and independent adversarial falsifier sub-agent (re-fetched primary, checked for conflation with same-week local/municipal data-center actions, checked industry reaction, checked the 'first state' superlative) -- verdict PUBLISH, with the falsifier's required addition of Data Center Coalition industry reaction for balance. Editor gate passed EN and TR. Published this cycle."
+}
