@@ -1,0 +1,19 @@
+{
+  "slug": "kimi-k3-release",
+  "title": "Moonshot AI launches Kimi K3 via API, holds back model weights until 27 July",
+  "status": "published",
+  "first_seen": "2026-07-17",
+  "published_at": "2026-07-17",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.kimi.com/blog/kimi-k3",
+    "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems",
+    "https://www.axios.com/2026/07/17/china-ai-kimi-k3-open-source-anthropic-opus",
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3"
+  ],
+  "watch": [
+    "27 July 2026 weight release -> confirms/denies parameter count and enables independent benchmark reproduction; upgrade capability claims from vendor-claim to confirmed if reproduced",
+    "Any independent, same-harness benchmark run comparing K3 to rival models",
+    "Whether 'largest open-weight model' holds up once weights and independent size analysis are public"
+  ]
+}

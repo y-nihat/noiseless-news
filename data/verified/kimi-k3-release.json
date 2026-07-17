@@ -1,0 +1,54 @@
+{
+  "slug": "kimi-k3-release",
+  "checked_at": "2026-07-17T23:12:00+00:00",
+  "method": "Fresh verifier sub-agent (direct fetch of Moonshot's own kimi.com/blog/kimi-k3 announcement plus independent-outlet cross-check) and independent adversarial falsifier sub-agent, run sequentially with a tight time budget (deadline-constrained cycle).",
+  "origin_items": [
+    "data/raw/2026-07-17/gnews-ai-model-releases.json and prior nights' gnews-ai-model-releases.json items on the Kimi K3 leak/launch",
+    "dedup-check run before opening: --title \"Moonshot AI releases Kimi K3\" — only a low-score (0.4) moderate match against the unrelated bytedance-edgebench-scaling-law story, no genuine conflict, cleared as standalone"
+  ],
+  "claims": [
+    {
+      "text": "Moonshot AI launched Kimi K3 on 16 July 2026, with API access available immediately",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 self-report (kimi.com/blog/kimi-k3, fetched directly) confirms the launch and immediate API availability. Falsifier resolved an apparent date discrepancy (a July 14 leaked promo page vs. the live blog post) as leak-then-launch: the promo leaked July 14, actual launch landed July 16, with press (Axios, VentureBeat, Forbes, Tom's Hardware) independently reporting July 16-17. Independently bylined outlets confirm the fact of launch, not just Moonshot's own claim.",
+      "evidence": [
+        "https://www.kimi.com/blog/kimi-k3",
+        "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems",
+        "https://www.axios.com/2026/07/17/china-ai-kimi-k3-open-source-anthropic-opus"
+      ]
+    },
+    {
+      "text": "Full model weights are due 27 July 2026; K3 is API-only until then, not yet an open-weight download",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly on Moonshot's own blog and corroborated by press. This distinction matters editorially: falsifier flagged that calling K3 an 'open-weight model' in the present tense, before weights ship, would be premature framing -- article uses future/conditional framing ('once weights ship') throughout rather than present-tense open-weight claims.",
+      "evidence": [
+        "https://www.kimi.com/blog/kimi-k3",
+        "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems"
+      ]
+    },
+    {
+      "text": "2.8-trillion-parameter Mixture-of-Experts model, 16-of-896 experts active, 1M-token context window",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "All figures trace to Moonshot's own blog post; press (VentureBeat, Tom's Hardware, SCMP, SiliconANGLE) repeats the same numbers without independent verification -- classic independence collapse per verification.md, especially since weights (the only way to independently confirm parameter count) are not public until 27 July. Labeled vendor-claim, not confirmed.",
+      "evidence": [
+        "https://www.kimi.com/blog/kimi-k3",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3"
+      ]
+    },
+    {
+      "text": "\"Largest open-weight model\" superlative and internal benchmark comparisons vs. rival models",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Superlative traces to Moonshot's own comparison chart; falsifier found benchmark comparisons reportedly use different agent harnesses for Kimi vs. rivals (apples-to-oranges), and no independent, same-harness reproduction exists yet. Kept as vendor-claim, attributed explicitly to Moonshot and press repetition, not stated as fact.",
+      "evidence": [
+        "https://www.kimi.com/blog/kimi-k3",
+        "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3"
+      ]
+    }
+  ],
+  "notes": "Adversarial falsifier pass explicitly recommended PUBLISH with narrow framing: attribute all specs/benchmarks/superlatives to Moonshot, avoid unqualified present-tense 'open-weight' framing until 27 July weights ship, and omit the separate/unrelated 2026-02 Anthropic-Moonshot distillation dispute as a conflation risk out of scope for a release story (omitted from the article). Exact API pricing was left out of the article entirely: sources disagreed on the precise figure (draft brief cited $0.30/MTok cached input vs. VentureBeat's $3/$15 per MTok) and reconciling it was not load-bearing for the story, so it was dropped rather than published unreconciled. Anthropic-Moonshot distillation history noted here for future reference only, not included in the article."
+}
