@@ -1,0 +1,20 @@
+{
+  "slug": "cohere-university-of-toronto-partnership",
+  "title": "Cohere and University of Toronto announce multi-year AI partnership",
+  "status": "published",
+  "state": "published",
+  "date": "2026-07-16",
+  "first_seen": "2026-07-17",
+  "published_at": "2026-07-17",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://cohere.com/blog/cohere-university-of-toronto-announcement",
+    "https://www.utoronto.ca/news/u-t-partnership-cohere-sets-stage-responsible-ai-adoption-scale"
+  ],
+  "watch": [
+    "Any independent (non-reprint) outlet coverage of the deal, which would let a future update cite third-party confirmation rather than the two parties' own announcements",
+    "Launch of U of T's enterprise AI platform and AI Kitchen (both pre-launch as of this writing) -- worth a follow-up once either goes live",
+    "Cohere's separate 2025 federal-government North deployment (Government of Canada/ISED MOU) -- a distinct, not-yet-verified story surfaced during falsification; not folded into this article"
+  ],
+  "cycle_2026-07-18_night_c1_note": "New standalone story (dedup-check: no match). Candidate surfaced from cycle-1 Tier-0 sweep, verified via parallel fresh verifier + adversarial falsifier sub-agents. Falsifier flagged framing risk (platform/AI Kitchen described as forthcoming, not live) and independence caveat (joint self-announcement, no third-party coverage found) -- both resolved by rewriting rather than holding, since neither was a fact dispute. Style gates run on both languages: pass, no cuts needed."
+}
