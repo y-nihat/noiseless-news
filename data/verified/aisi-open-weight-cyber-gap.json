@@ -1,0 +1,39 @@
+{
+  "slug": "aisi-open-weight-cyber-gap",
+  "checked_at": "2026-07-18T23:14:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); verifier fetched AISI's primary blog post directly and cross-checked against The Decoder's independent write-up; falsifier independently re-fetched the primary AISI post twice, confirmed exact wording of all disputed sub-claims against primary text, checked for stale/mismatched model versions, corrected a cost-attribution imprecision, and flagged that Opus 4.7/4.8 are absent from AISI's comparison set",
+  "origin_items": [
+    "data/ledger/run-report-2026-07-19-2229Z.md — cycle 1 Tier-0 sweep candidate (UK AI Security Institute)"
+  ],
+  "claims": [
+    {
+      "text": "AISI's evaluation found recent open-weight models GLM-5.2 and DeepSeek V4-Pro perform similarly on cyber tasks to frontier closed models released 4 to 7 months before them, narrower than the 6-to-10-month gap AISI measured internally through most of 2025",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed verbatim against AISI's primary blog post by both verifier and falsifier (independent fetches); corroborated the next day by The Decoder's independent write-up with matching figures.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber", "https://the-decoder.com/open-weight-models-now-match-frontier-cyber-performance-from-just-four-months-ago-at-a-fraction-of-the-cost/"]
+    },
+    {
+      "text": "On a 70-task narrow cyber benchmark across four difficulty levels, GLM-5.2 performed comparably to the most cyber-capable models released about 4 months earlier; DeepSeek V4-Pro performed comparably to Opus 4.5, released 5 months earlier",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Direct quotes confirmed against AISI primary text by both agents.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber"]
+    },
+    {
+      "text": "On multi-step autonomous cyber-range scenarios, GLM-5.2 reached as far as Opus 4.5 (released under 7 months earlier), while DeepSeek V4-Pro fell below Sonnet 4.5 on the same ranges",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Verifier flagged the DeepSeek-vs-Sonnet-4.5 detail as sourced only from The Decoder; falsifier independently re-fetched the AISI primary page and confirmed this exact detail is stated verbatim in AISI's own text, not an addition by the secondary source. Upgraded from single-source-secondary to confirmed-primary.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber"]
+    },
+    {
+      "text": "Running a 100-million-token cyber-range task cost roughly $85 on Opus 4.5/4.6, versus about $46 on GLM-5.2 and $1.19 on DeepSeek V4-Pro",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier corrected the verifier's initial attribution ('$85 for Opus') -- primary text specifies the $85 figure covers both Opus 4.5 and 4.6, not a single model. Corrected wording used in the published article. Figures match The Decoder's independent write-up.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber", "https://the-decoder.com/open-weight-models-now-match-frontier-cyber-performance-from-just-four-months-ago-at-a-fraction-of-the-cost/"]
+    }
+  ],
+  "notes": "AISI is Tier-0 (registered, 'UK AI Security Institute'); The Decoder is Tier-2 (registered). This is a research-finding claim type confirmed by AISI's own primary evaluation (not peer-reviewed -- noted as a caveat in the article body). Falsifier's new finding, not in the original verifier report: AISI's comparison set omits Anthropic's more recent Opus 4.7/4.8 (both released before GLM-5.2 shipped), so the measured gap is against an earlier Opus generation, not Anthropic's most recent model at test time -- surfaced as a caveat in the article body rather than a load-bearing claim. Kimi K3 testing is explicitly future-tense in the source ('AISI intends to test... once its weights are publicly released') and was deliberately excluded from claims. No contradicting reports or evidence of spin found by the falsifier."
+}

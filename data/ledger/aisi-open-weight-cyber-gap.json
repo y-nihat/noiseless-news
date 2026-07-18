@@ -1,0 +1,18 @@
+{
+  "slug": "aisi-open-weight-cyber-gap",
+  "title": "UK AI Security Institute finds open-weight models now trail frontier cyber capability by 4-7 months, down from 6-10",
+  "status": "published",
+  "first_seen": "2026-07-18",
+  "published_at": "2026-07-18",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber",
+    "https://the-decoder.com/open-weight-models-now-match-frontier-cyber-performance-from-just-four-months-ago-at-a-fraction-of-the-cost/"
+  ],
+  "watch": [
+    "AISI's planned Kimi K3 evaluation, once Kimi K3's weights are publicly released",
+    "Any independent critique or walk-back of AISI's methodology",
+    "Whether AISI includes Opus 4.7/4.8 in a future comparison round"
+  ],
+  "cycle_2026-07-19_night_c2_note": "New standalone story (dedup-check: no match), sourced from cycle 1's Tier-0 sweep. Fresh verifier fetched AISI's primary blog post directly (Tier-0), cross-checked against The Decoder's independent write-up (Tier-2). Fresh adversarial falsifier independently re-fetched AISI's primary text twice, confirmed the DeepSeek-vs-Sonnet-4.5 cyber-range detail is stated verbatim in the primary source (not a secondary-source addition, as the verifier had cautiously flagged), corrected a cost-attribution imprecision ($85 covers both Opus 4.5 and 4.6, not one model), and surfaced a new caveat: AISI's comparison set omits Anthropic's more recent Opus 4.7/4.8. No contradicting reports found. Research-finding claims confirmed against AISI's own primary evaluation; article notes it is a blog post, not peer-reviewed. Style gates run on both languages: pass (no padding, headline falsifiable and supported by confirmed claims, TL;DR standalone, Turkish mirrors structure natively)."
+}
