@@ -1,0 +1,60 @@
+{
+  "slug": "xai-spacexai-rebrand",
+  "checked_at": "2026-07-18T00:56:00+00:00",
+  "method": "Fresh verifier sub-agent (primary-source and financial-press cross-check) and an independent adversarial falsifier sub-agent (IPO-valuation skepticism check, date-discrepancy check, source-quality filter, corporate-chain verification), run in parallel.",
+  "origin_items": [
+    "Carried forward from cycle 1's triage as a dedup-cleared, not-yet-verified candidate."
+  ],
+  "claims": [
+    {
+      "text": "On 6 July 2026, xAI announced via a post on X, accompanied by a new logo, that it has renamed itself 'SpaceXAI'",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via independently-bylined tech press (Engadget, Dataconomy, Gizmodo, Stocktwits) covering the company's own X post; falsifier resolved a minor date discrepancy in favor of the single consistent date, 6 July, found across sources.",
+      "evidence": [
+        "https://www.engadget.com/2209300/xai-now-officially-spacexai/",
+        "https://dataconomy.com/2026/07/07/elon-musk-rebrands-merged-xai-and-spacex-as-spacexai/"
+      ]
+    },
+    {
+      "text": "The rebrand is the final step of SpaceX's acquisition of xAI, an all-stock merger completed 2 February 2026 at a combined valuation of roughly $1.25 trillion (SpaceX ~$1T, xAI ~$250B)",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed independently by CNBC and Bloomberg (Tier-1 financial press, distinct bylines) at the time of the February merger. Falsifier flagged and the draft avoids conflating this $1.25T February merger valuation with the separate $2.1T June IPO market cap.",
+      "evidence": [
+        "https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html",
+        "https://www.bloomberg.com/news/articles/2026-02-02/elon-musk-s-spacex-said-to-combine-with-xai-ahead-of-mega-ipo"
+      ]
+    },
+    {
+      "text": "SpaceXAI is a subsidiary of SpaceX, not a merger of equals; the Grok product/API name is unchanged",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": [
+        "https://www.engadget.com/2209300/xai-now-officially-spacexai/",
+        "https://dataconomy.com/2026/07/07/elon-musk-rebrands-merged-xai-and-spacex-as-spacexai/"
+      ]
+    },
+    {
+      "text": "X (formerly Twitter), which merged into xAI in March 2025, is now an indirect SpaceX subsidiary via SpaceXAI",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Corporate chain (X -> xAI, March 2025; xAI -> SpaceX, February 2026) verified by both sub-agents; article phrases X as an indirect, not direct, SpaceX subsidiary per the falsifier's correction.",
+      "evidence": [
+        "https://www.engadget.com/2209300/xai-now-officially-spacexai/"
+      ]
+    },
+    {
+      "text": "SpaceX went public on Nasdaq on 12 June 2026, priced at $135/share, closed the first trading day at about $161 (up 19%), putting its market cap at roughly $2.1 trillion",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both sub-agents independently confirmed this via CNBC's live IPO coverage -- genuine Tier-1 financial-press confirmation, not a tech-blog-only claim. Falsifier's key correction: $2.1T is the first-day closing market cap after a 19% pop, not the IPO's priced valuation ($1.77T at the $135 offer price) -- draft phrases this precisely and notes the stock has since traded down from that peak, per the falsifier's instruction not to present it as a fixed current value.",
+      "evidence": [
+        "https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html",
+        "https://www.cnbc.com/2026/06/12/spacex-stock-jumps-2-trillion.html"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict: PUBLISH WITH SPECIFIC CHANGES, all applied in the draft. Key findings: (1) $2.1T IPO market-cap claim is real and independently confirmed by CNBC, but must be worded as a first-day closing figure, not a fixed valuation, and must not be conflated with the separate $1.25T February merger valuation; (2) rebrand date tightened to a single date, 6 July, not a range; (3) low-quality SEO/aggregator sources (aitoolsrecap.com, coursiv.io, theplanettools.ai, pulse2.com and similar) identified in search results were excluded from sourcing in favor of Engadget/Dataconomy/CNBC/Bloomberg; (4) X's position in the corporate chain stated precisely as an indirect, not direct, SpaceX subsidiary; (5) no dispute, walkback, or satire found from any party regarding the rebrand itself.",
+  "gaps_closed_from_watching_state": []
+}

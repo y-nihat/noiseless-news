@@ -445,5 +445,26 @@
       ],
       "context": "National policy/politics outlet; carried the Data Center Coalition's on-record industry-reaction statement, added for balance per the falsifier's instruction on ny-hochul-data-center-moratorium. Propose Tier 2."
     }
+  ],
+  "candidates_2026-07-18_night_c5": [
+    {
+      "domain": "engadget.com",
+      "first_seen": "2026-07-18",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.engadget.com/2209300/xai-now-officially-spacexai/"
+      ],
+      "context": "Established tech-news outlet, independently bylined; used as a corroborating source for xai-spacexai-rebrand. Likely to recur. Propose Tier 2."
+    },
+    {
+      "domain": "dataconomy.com",
+      "first_seen": "2026-07-18",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://dataconomy.com/2026/07/07/elon-musk-rebrands-merged-xai-and-spacex-as-spacexai/"
+      ]
+      ,
+      "context": "AI-industry news site, independently bylined; used as a corroborating source for xai-spacexai-rebrand. Moderate recurrence in AI-news searches this week -- propose Tier 2, revisit if quality dips."
+    }
   ]
 }
