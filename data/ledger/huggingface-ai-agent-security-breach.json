@@ -1,0 +1,17 @@
+{
+  "slug": "huggingface-ai-agent-security-breach",
+  "title": "Hugging Face says an autonomous AI agent drove a breach of its production infrastructure",
+  "status": "published",
+  "first_seen": "2026-07-18",
+  "published_at": "2026-07-16",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://huggingface.co/blog/security-incident-july-2026",
+    "https://www.techrepublic.com/article/news-hugging-face-ai-agent-cyberattack-production-systems/"
+  ],
+  "watch": [
+    "Whether Hugging Face's completed assessment finds partner or customer data was affected",
+    "Any independent security-researcher analysis, attacker attribution, or named agent framework",
+    "Any follow-up statement or correction from Hugging Face"
+  ]
+}
