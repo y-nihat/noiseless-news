@@ -1,0 +1,51 @@
+{
+  "slug": "anthropic-amodei-pac-donation",
+  "checked_at": "2026-07-18T00:22:00+00:00",
+  "method": "Fresh verifier sub-agent (independent web research, direct fetch of Washington Examiner and The Deep Dive) followed by an independent adversarial falsifier sub-agent (checked for entity conflation between Public First and Public First Action, checked framing neutrality, checked for denials/disputes) -- both time-boxed to fit the cycle deadline.",
+  "origin_items": [
+    "Surfaced via this cycle's fresh ingest (gnews-ai-safety-and-evaluations.json: MSN item 'Anthropic CEO gave $1M to AI safety super PAC', 2026-07-17). dedup-check run before opening: no match."
+  ],
+  "claims": [
+    {
+      "text": "Dario Amodei personally donated $1 million to Public First, a super PAC backing candidates who favor stronger AI regulation, in May 2026; the donation became public via an FEC filing disclosed on 16 July 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed by two independently-bylined, non-reprint outlets (Washington Examiner, byline Victoria Baeza Garcia; The Deep Dive, byline ER Velasco), both fetched directly by the verifier, and corroborated by search-visible Bloomberg and The Hill coverage with the same figures. cryptobriefing.com's conflicting '$2M+ personal' figure was identified by the falsifier as a conflation of Amodei's $1M with the separate employee total, and excluded per the blocked_evidence_domains list.",
+      "evidence": [
+        "https://www.washingtonexaminer.com/policy/technology/4652035/anthropic-ceo-dario-amodei-donated-1-million-ai-regulation-super-pac/",
+        "https://thedeepdive.ca/anthropic-amodei-super-pac-donation/",
+        "https://thehill.com/policy/technology/5972753-anthropic-ceo-gave-1m-to-ai-safety-super-pac/"
+      ]
+    },
+    {
+      "text": "Five other Anthropic employees donated a combined total of over $2 million to the same PAC in the same period",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both fetched independent outlets report 'five other employees, over $2 million combined' -- consistent with the original Axios (Teddy Schleifer) reporting. The precise $2.15M figure seen in one unattributed snippet was not independently pinned down, so the article uses the corroborated 'over $2 million' framing instead.",
+      "evidence": [
+        "https://www.washingtonexaminer.com/policy/technology/4652035/anthropic-ceo-dario-amodei-donated-1-million-ai-regulation-super-pac/",
+        "https://thedeepdive.ca/anthropic-amodei-super-pac-donation/"
+      ]
+    },
+    {
+      "text": "Anthropic, the company, separately pledged $20 million in February 2026 to Public First Action, a related but distinct 501(c)(4) group",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against Anthropic's own announcement. The falsifier verified Public First and Public First Action are distinct entities (super PAC vs. 501(c)(4)) and confirmed the article does not conflate them. The 'restricted to public education, not political spending' characterization comes from Anthropic's own description.",
+      "evidence": [
+        "https://www.anthropic.com/news/donate-public-first-action"
+      ]
+    },
+    {
+      "text": "Leading the Future spent more than $8 million opposing New York Assemblyman Alex Bores in a Democratic primary; Anthropic backed a different PAC, Jobs and Democracy PAC, which spent nearly $7 million supporting Bores; Bores lost the primary to Micah Lasher",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via NBC News reporting on the primary result and PAC spending figures on both sides. Falsifier flagged this as necessary context to avoid a one-sided 'AI industry money beat Bores' framing -- both pro- and anti-regulation money were active in the race.",
+      "evidence": [
+        "https://www.nbcnews.com/politics/2026-election/new-york-house-district-12-democrat-primary-winner-lasher-rcna351424"
+      ]
+    }
+  ],
+  "falsifier_notes": "No denial or dispute found from Anthropic, Amodei, or Public First. Confirmed Public First (super PAC) and Public First Action (501(c)(4)) are distinct entities and the draft keeps them separate. Reframed PAC descriptions neutrally (favors/opposes stronger regulation, rather than 'AI safety' vs 'anti-regulation' advocacy language). cryptobriefing.com figure excluded as a conflation error and a blocked evidence domain. Added the Jobs and Democracy PAC / Bores-lost-to-Lasher context for balance rather than implying the AI industry simply bought the race.",
+  "verdict": "PUBLISH"
+}
