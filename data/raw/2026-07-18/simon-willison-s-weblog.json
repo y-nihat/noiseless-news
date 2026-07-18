@@ -1,0 +1,22 @@
+[
+  {
+    "id": "b414f856b5da58ae",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Claude make Fable 5 permanent",
+    "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/",
+    "published": "2026-07-18T06:00:13+00:00",
+    "summary": "<p><strong><a href=\"https://twitter.com/claudeai/status/2078302415804379218\">Claude make Fable 5 permanent</a></strong></p>\nAn update from the <code>@claudeai</code> account on Twitter:</p>\n<blockquote>\n<p>Beginning July 20, Claude Fable 5 will be included in all Max and Team Premium plans, at 50% of limits.</p>\n<p>Pro and Team Standard users will continue to have access to Fable via usage credits, and will receive a one-time $100 credit.</p>\n</blockquote>\n<p>As I was saying <a href=\"https://simonwillison.net/2026/Jul/12/bump/\">last week</a>, the competition from <a href=\"https://simonwillison.net/2026/Jul/9/gpt-5-6/\">GPT-5.6 Sol</a> (and maybe to a lesser extent <a href=\"https://simonwillison.net/2026/Jul/16/kimi-k3/\">Kimi 3</a>) made untenable Anthropic's plan to remove Fable 5 from their subscription accounts and make it available exclusively through API pricing.</p>\n<p>Why pay $100 or $200/month for a subscription plan that <em>doesn't</em> include Anthropic's best model?</p>\n<p>Their original plan was driven by concerns over compute capacity. I wonder if they'll have to dial back their training efforts in order to make more GPUs available to help serve the model.</p>\n<p>A lot of people were losing sleep over trying to make the most of Fable 5 before subscriber access was withdrawn. It's nice not to have to worry about the Fablepocalypse any more.\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a>, <a href=\"https://simonwillison.net/tags/llm-pricing\">llm-pricing</a>, <a href=\"https://simonwillison.net/tags/claude-mythos-fable\">claude-mythos-fable</a></p>",
+    "fetched_at": "2026-07-18T11:06:24.693810+00:00"
+  },
+  {
+    "id": "22814cb2d9b68768",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "nascheme/quixote",
+    "url": "https://simonwillison.net/2026/Jul/18/quixote/",
+    "published": "2026-07-18T05:27:49+00:00",
+    "summary": "<p><strong><a href=\"https://github.com/nascheme/quixote\">nascheme/quixote</a></strong></p>\nA certain vintage if Python web nerd might be delighted to learn that the most recent commit to the Quixote web framework was <a href=\"(https://github.com/nascheme/quixote/commit/7f775cf9d1e7e80fcbb2706b4a1d971e55ca74a3)\">six hours ago</a>.</p>\n<p>The <a href=\"https://github.com/nascheme/quixote/commit/d6b73c5768c2d041b68b54cc71863604249abc18\">oldest commit</a> in that repo is from 21 years ago, and that was the initial import of Quixote 2.4 from Subversion into Git.\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/computer-history\">computer-history</a>, <a href=\"https://simonwillison.net/tags/python\">python</a>, <a href=\"https://simonwillison.net/tags/web-frameworks\">web-frameworks</a></p>",
+    "fetched_at": "2026-07-18T11:06:24.693810+00:00"
+  }
+]
