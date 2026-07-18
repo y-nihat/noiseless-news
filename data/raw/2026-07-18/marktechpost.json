@@ -28,5 +28,15 @@
     "published": "2026-07-18T06:32:43+00:00",
     "summary": "<p>Backpropagation relies on weight transport, which biological circuits likely cannot implement. Sakana AI's Error Diffusion sidesteps that constraint, training dual-stream excitatory/inhibitory networks that obey Dale's principle. This piece breaks down how modulo error routing scales the rule from MNIST to CIFAR-10 and reinforcement learning, and what its task-dependent ablations reveal.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/17/sakana-ais-error-diffusion-trains-dale-compliant-dual-stream-networks-reaching-96-7-mnist-and-61-7-cifar-10-without-backpropagation/\">Sakana AI&#8217;s Error Diffusion Trains Dale-Compliant Dual-Stream Networks, Reaching 96.7% MNIST and 61.7% CIFAR-10 Without Backpropagation</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-07-18T17:01:34.488588+00:00"
+  },
+  {
+    "id": "d0f865c4b70e053a",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "NVIDIA Released DeepStream 9.1: Bringing Agentic AI to Vision AI With 13 Skills and Multi-View 3D Tracking",
+    "url": "https://www.marktechpost.com/2026/07/18/nvidia-released-deepstream-9-1-bringing-agentic-ai-to-vision-ai-with-13-skills-and-multi-view-3d-tracking/",
+    "published": "2026-07-18T19:16:22+00:00",
+    "summary": "<p>NVIDIA DeepStream 9.1 introduces 13 agentic skills that let coding agents like Claude Code and Codex build multi-camera video analytics pipelines from natural-language prompts. Multi-View 3D Tracking (MV3DT) fuses per-camera detections into one shared 3D world with a globally consistent object ID, while AutoMagicCalib (AMC) removes manual camera calibration. The release also adds JetPack 7.2 support and a unified open-source GitHub monorepo.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/18/nvidia-released-deepstream-9-1-bringing-agentic-ai-to-vision-ai-with-13-skills-and-multi-view-3d-tracking/\">NVIDIA Released DeepStream 9.1: Bringing Agentic AI to Vision AI With 13 Skills and Multi-View 3D Tracking</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-18T22:29:40.550556+00:00"
   }
 ]
