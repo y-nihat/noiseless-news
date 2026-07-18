@@ -466,5 +466,25 @@
       ,
       "context": "AI-industry news site, independently bylined; used as a corroborating source for xai-spacexai-rebrand. Moderate recurrence in AI-news searches this week -- propose Tier 2, revisit if quality dips."
     }
+  ],
+  "candidates_2026-07-19_night_c3": [
+    {
+      "domain": "gist.github.com (researcher: cereblab)",
+      "first_seen": "2026-07-18",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547"
+      ],
+      "context": "Independent individual security researcher; published a reproducible wire-level analysis (mitmproxy capture, canary-file proof) of grok-build's data-upload behavior -- load-bearing primary technical evidence for xai-grok-build-privacy-incident, directly fetched and confirmed by both verifier and falsifier passes. Not a staffed newsroom, so not a typical Tier-2 candidate, but the technical rigor (reproducible proof, not just a claim) argues for a narrower policy note on when individual security-research writeups qualify as Tier 1-2 evidence rather than blanket Tier-3 discovery-only treatment. Flagging for source-lifecycle review rather than a straight registration proposal."
+    },
+    {
+      "domain": "techtimes.com (recurrence)",
+      "first_seen": "2026-07-16",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.techtimes.com/articles/320671/20260716/grok-build-open-sourced-after-covert-upload-code-exfiltrate-repos-stays.htm"
+      ],
+      "context": "Third occurrence logged for techtimes.com (see also candidates_2026-07-13_night2_c2) -- this time reporting that the grok-build upload code path remains present in the newly open-sourced repo, merely disabled by a server-side flag. Found via search only this cycle, not independently re-fetched, so NOT used as evidence in xai-grok-build-privacy-incident; the claim was dropped as a watch item instead. Recurrence across three separate stories now strengthens the case for Tier 2 registration."
+    }
   ]
 }

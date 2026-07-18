@@ -1,0 +1,21 @@
+{
+  "slug": "xai-grok-build-privacy-incident",
+  "title": "SpaceXAI open-sources Grok Build coding agent days after data-upload privacy incident",
+  "status": "published",
+  "first_seen": "2026-07-18",
+  "published_at": "2026-07-18",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://github.com/xai-org/grok-build",
+    "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123",
+    "https://the-decoder.com/xai-open-sources-grok-build-on-github-after-massive-data-breach/",
+    "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
+    "https://oecd.ai/en/incidents/2026-07-13-acb3"
+  ],
+  "watch": [
+    "Whether xAI publishes an official written postmortem on x.ai/docs.x.ai (currently 403-blocked to direct fetch) confirming the deletion claim in more detail than the X post",
+    "Whether cereblab or another independent researcher publishes confirmation (or further contradiction) of the data-deletion claim",
+    "Press reports (TechTimes, byteiota, Winbuzzer) that the upload code path remains present in the open-sourced repo, merely disabled by a server-side flag rather than removed -- not independently re-fetched/confirmed this cycle, worth a dedicated check"
+  ],
+  "cycle_2026-07-19_night_c3_note": "New standalone story (dedup-check: no match, re-run with refined title before publish). Sourced from cycle 1's Tier-0 sweep candidate queue (xAI News fetch blocked, site-scoped search fallback found 'Grok Build open source'). Fresh verifier corrected cycle 1's framing: this is NOT a self-disclosed remediation -- the underlying privacy incident (grok-build uploading full user repos, including secrets, to xAI's cloud regardless of a privacy toggle) was independently discovered and published by security researcher cereblab, three days before xAI's open-source release. Fresh adversarial falsifier independently re-fetched the GitHub repo and cereblab's gist directly, corroborated The Register's coverage, confirmed the SpaceXAI rebrand (6 July 2026) and timeline consistency, and confirmed cereblab's dispute of xAI's remediation framing is genuine (not just outlet noise). xAI's deletion/remediation claim is published as an attributed single-source statement, not as our own confirmed fact, with cereblab's dispute presented as a documented disagreement per verification.md Sec.8. One claim (upload code still present in the open-sourced repo) was deliberately dropped rather than rushed to citation -- sourcing (TechTimes/byteiota/Winbuzzer) was found via search only this cycle, not independently re-fetched, and those outlets are unregistered; logged as a watch item instead. Style gates run on both languages: pass (headline states two confirmed facts -- open-source release + the incident -- not the disputed remediation claim; TL;DR standalone; no padding; Turkish mirrors structure with natural phrasing)."
+}

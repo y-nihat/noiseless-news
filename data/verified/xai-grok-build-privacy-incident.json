@@ -1,0 +1,39 @@
+{
+  "slug": "xai-grok-build-privacy-incident",
+  "checked_at": "2026-07-18T23:50:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); verifier fetched the GitHub repo directly and traced the privacy-incident origin to an independent researcher rather than a self-disclosure; falsifier independently re-fetched the GitHub repo and cereblab's gist directly, checked The Register/Axios/Neowin corroboration, confirmed the SpaceXAI rebrand, and checked timeline consistency",
+  "origin_items": [
+    "data/ledger/run-report-2026-07-19-2229Z.md — cycle 1 Tier-0 sweep candidate (xAI News, x.ai fetch blocked, site-scoped search fallback)"
+  ],
+  "claims": [
+    {
+      "text": "SpaceXAI (renamed from xAI on 6 July 2026) published the Grok Build coding-agent harness and terminal UI as open source under an Apache 2.0 license on GitHub on 15 July 2026; the underlying grok-build-0.1 model itself remains closed and paid",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against the GitHub repo (Tier-0, self-published primary evidence -- LICENSE and README fetched directly by both verifier and falsifier), corroborated by The Decoder's independent write-up.",
+      "evidence": ["https://github.com/xai-org/grok-build", "https://the-decoder.com/xai-open-sources-grok-build-on-github-after-massive-data-breach/"]
+    },
+    {
+      "text": "Independent security researcher cereblab published a wire-level analysis on 12 July 2026 showing grok-build v0.2.93 uploaded complete git repository bundles -- including a canary file proving full commit-history capture, and separately .env secret files -- to an xAI Google Cloud Storage bucket, regardless of the tool's 'Improve the model' toggle state",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "cereblab's gist fetched directly by both verifier and falsifier; falsifier confirmed the technical detail (version 0.2.93, mitmproxy wire capture, canary file, gs://grok-code-session-traces destination, server returning trace_upload_enabled:true regardless of toggle) matches the gist's own text, not an exaggeration by secondary outlets. The Register independently corroborated the core findings.",
+      "evidence": ["https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547", "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123"]
+    },
+    {
+      "text": "xAI said, via a post from Elon Musk, that previously uploaded user data was deleted, the upload path was disabled server-side, and data retention was set off by default, effective 12 July 2026",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Reported independently by The Register (and, per falsifier's search, Axios/Neowin, not independently re-fetched this cycle). The underlying claim traces to a single origin -- an X post from Musk/xAI -- not an official written postmortem on x.ai or docs.x.ai (x.ai returned 403 to direct fetch on every attempt this cycle, a known blocker). Labeled single-source/attributed rather than confirmed because the deletion itself is not independently verifiable by us or, per cereblab, by anyone outside xAI.",
+      "evidence": ["https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123"]
+    },
+    {
+      "text": "cereblab disputes xAI's account of the fix, saying xAI publicly pointed to its existing per-session '/privacy' retention toggle rather than the separate, previously undocumented server-side flag that actually stopped uploads, and says independent confirmation that all previously uploaded data was deleted is not yet available",
+      "type": "business",
+      "verdict": "disputed",
+      "reasoning": "Direct from cereblab's gist (updated commentary), corroborated by The Register's framing of the same dispute. Presented in the article as an attributed, documented disagreement per verification.md Sec.3, not resolved either way.",
+      "evidence": ["https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547", "https://www.theregister.com/ai-and-ml/2026/07/14/musk-promises-purge-after-grok-build-caught-sending-entire-repos-to-the-cloud/5271123"]
+    }
+  ],
+  "notes": "cereblab is an unregistered individual security researcher; used as evidence per policy/verification.md Sec.1 allowance (qualifies as Tier 1-2 technical primary evidence -- direct wire-level analysis with reproducible canary-file proof, independently fetched and confirmed by two separate agent passes) with a note, and flagged in data/ledger/source_candidates.json for registration review. GitHub repo treated as Tier-0 self-published primary per verification.md Sec.1's explicit 'GitHub releases' example. The Register and The Decoder are both registered Tier-2. OECD.AI (registered Tier-0) logs the incident but was not independently re-fetched this cycle -- listed as a source for the incident-tracking fact only, not load-bearing for any claim above. Dropped a fifth potential claim (press reports that the upload code path remains present in the newly open-sourced repo, merely gated by a server-side flag rather than removed) because the only outlets covering it (TechTimes, byteiota, Winbuzzer) were found via search only, not independently re-fetched/confirmed this cycle, and are unregistered -- did not meet the evidence bar in the time available; flagged as a watch item instead of forcing a rushed citation. Benchmark comparison numbers (Grok Build vs Claude Code/Codex/Cursor) found only on low-authority SEO/content-mill sites -- excluded entirely, not even as a labeled vendor-claim, since sourcing did not clear Tier 0-2."
+}
