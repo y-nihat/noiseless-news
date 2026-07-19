@@ -1,0 +1,16 @@
+{
+  "slug": "china-waico-ai-cooperation-body",
+  "title": "China and 29 countries launch World AI Cooperation Organization; US, EU, UK, Japan absent",
+  "status": "published",
+  "first_seen": "2026-07-19",
+  "published_at": "2026-07-19",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://english.news.cn/20260717/ce32e833ab5d47f883ad44e1f73cb634/c.html",
+    "https://news.cgtn.com/news/2026-07-17/Full-text-Xi-s-keynote-speech-at-the-2026-WAIC-opening-ceremony-1OQSfeoRvUs/p.html",
+    "https://www.computerworld.com/article/4198354/china-russia-and-27-others-create-world-ai-body-without-us.html",
+    "https://www.eweek.com/news/china-waico-global-ai-governance-organization/"
+  ],
+  "cycle_2026-07-19_night_c1_note": "Flagged as strong candidate during discovery/Tier-0 sweep (broad multi-outlet coverage 2026-07-17 through 07-19). dedup-check clean, no match. Queued for cycle 2 -- cycle 1 lacked time to run the full verify+falsify+editor-gate pass.",
+  "cycle_2026-07-19_night_c2_note": "Re-ran dedup-check (still clean). Fresh verifier sub-agent + independent adversarial falsifier sub-agent both run. Falsifier required the headline avoid implying universal 'global' buy-in (confirmed China-aligned/Global South bloc, US/EU/UK/Japan/South Korea absent) and flagged that WAICO currently has no published charter/secretariat/budget -- both incorporated into the published article. Editor gate passed EN and TR. Published."
+}

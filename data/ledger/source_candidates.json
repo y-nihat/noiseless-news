@@ -25,7 +25,7 @@
       "sample_urls": [
         "https://www.infoworld.com/article/4194895/spacexai-launches-grok-4-5-touts-lower-coding-task-costs-than-ai-rivals.html"
       ],
-      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md §1) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
+      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md \u00a71) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
     },
     {
       "domain": "metr.org",
@@ -34,7 +34,7 @@
       "sample_urls": [
         "https://metr.org/blog/2026-06-26-gpt-5-6-sol"
       ],
-      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md §3) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
+      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md \u00a73) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
     },
     {
       "domain": "vals.ai",
@@ -183,6 +183,51 @@
         "https://stockanalysis.com/stocks/skhy/"
       ],
       "context": "Live financial-data source (not editorial), used for a direct timestamped live-fetch of first-day trading data per the live-fetch rule for third-party numbers (sk-hynix-nasdaq-ipo). Propose as a data-source reference rather than a Tier 2 editorial source -- useful for future stock/market claims needing a live check."
+    },
+    {
+      "domain": "english.news.cn",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://english.news.cn/20260717/ce32e833ab5d47f883ad44e1f73cb634/c.html"
+      ],
+      "context": "Xinhua (PRC state news agency) English site. Used as Tier-0-equivalent primary source for Xi Jinping's WAIC 2026 full-text keynote and the WAICO founding announcement (china-waico-ai-cooperation-body) -- appropriate for reporting the verbatim content of an official PRC statement/speech, but note it is state media, not independent-confirmation-eligible for business/business-adjacent claims. Propose Tier 0 (official-statement-only use), flagged as state-affiliated."
+    },
+    {
+      "domain": "news.cgtn.com",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://news.cgtn.com/news/2026-07-17/Full-text-Xi-s-keynote-speech-at-the-2026-WAIC-opening-ceremony-1OQSfeoRvUs/p.html"
+      ],
+      "context": "CGTN (PRC state broadcaster) English site, used alongside Xinhua as a second full-text transcript source for the same WAIC 2026 keynote. Same state-affiliation caveat as english.news.cn -- propose Tier 0 for official-statement transcripts only."
+    },
+    {
+      "domain": "english.scio.gov.cn",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "http://english.scio.gov.cn/topnews/2026-07/18/content_118605937.html"
+      ],
+      "context": "PRC State Council Information Office. Republishes official government/speech content. Used as a government-primary corroboration in china-waico-ai-cooperation-body. Propose Tier 0, official-statement-only, state-affiliated."
+    },
+    {
+      "domain": "computerworld.com",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.computerworld.com/article/4198354/china-russia-and-27-others-create-world-ai-body-without-us.html"
+      ],
+      "context": "Established enterprise-tech outlet with editorial standards and named authors; provided independent (non-Chinese-state) confirmation of WAICO membership composition and the absence of the US/EU/UK/Japan/South Korea in china-waico-ai-cooperation-body. Propose Tier 2."
+    },
+    {
+      "domain": "eweek.com",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.eweek.com/news/china-waico-global-ai-governance-organization/"
+      ],
+      "context": "Established enterprise-tech outlet; independent confirmation of WAICO country count and Western-absence framing in china-waico-ai-cooperation-body. Propose Tier 2."
     }
   ],
   "flagged_not_recommended": [
@@ -200,8 +245,8 @@
     }
   ],
   "query_notes": [
-    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release — worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
-    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) — worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
+    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release \u2014 worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
+    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) \u2014 worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
     "'{company} response OR denies OR disputes {allegation}' was essential for the NYT/OpenAI litigation story to surface OpenAI's on-record denial alongside the plaintiffs' claims -- worth adding as an explicit claim_check_template for any business/legal claim type, not just capability claims.",
     "For business claims sourced to a single wire/leak (Reuters exclusive on Meta's AI chip), tracing every outlet's citation back to one origin was decisive in correctly failing that story's gate -- a reminder that broad press pickup of a single leak is not multi-source confirmation.",
     "Tier-0 html sweep (Anthropic, Meta, Mistral, Cohere, Ai2, NIST, EU Commission) via WebFetch worked well this run and surfaced 3 of the 7 published stories directly (Anthropic Reflect, Meta Muse Image, Meta Muse Spark, EU cybersecurity plan) that would otherwise have relied only on secondary press framing -- confirms this sweep is worth the run-time cost every night, not just when a Tier-2 story needs it.",
@@ -379,46 +424,6 @@
   ],
   "candidates_2026-07-17_night_c3": [
     {
-      "domain": "chalkbeat.org",
-      "first_seen": "2026-07-16",
-      "occurrences": 1,
-      "sample_urls": [
-        "https://www.chalkbeat.org/2026/07/14/anthropic-launches-claude-for-teachers-as-ai-companies-battle-for-classrooms/"
-      ],
-      "context": "Nonprofit education-news outlet with named bylines and its own reporting (not a wire relay) -- independently confirmed the Detroit Public Schools Community District pilot and added context Anthropic's own page omitted (Weingarten's separate calls to restrict AI in early grades). Load-bearing for anthropic-claude-for-teachers. Propose Tier 2, education-vertical AI stories likely to recur."
-    },
-    {
-      "domain": "edsurge.com",
-      "first_seen": "2026-07-16",
-      "occurrences": 1,
-      "sample_urls": [
-        "https://www.edsurge.com/news/anthropic-introduces-claude-for-teachers"
-      ],
-      "context": "Ed-tech trade press with named authors; independently corroborated the FERPA/no-training privacy claim and the free/US-only/individual-educator scope in its own reporting. Load-bearing for anthropic-claude-for-teachers. Propose Tier 2."
-    }
-  ],
-  "candidates_2026-07-17_night_c4": [
-    {
-      "domain": "betakit.com",
-      "first_seen": "2026-07-17",
-      "occurrences": 1,
-      "sample_urls": [
-        "https://betakit.com/anthropic-commits-10-million-to-canadian-institutions-for-ai-research/"
-      ],
-      "context": "Canadian tech-industry trade press with named authors and its own reporting; independently confirmed the full eight-institution list and figures for anthropic-canada-ai-research-funding, not merely relaying Anthropic's page. Likely to recur for Canadian AI-industry stories. Propose Tier 2."
-    },
-    {
-      "domain": "utoronto.ca",
-      "first_seen": "2026-07-17",
-      "occurrences": 1,
-      "sample_urls": [
-        "https://www.utoronto.ca/news/u-t-data-sciences-institute-lead-initiative-awarding-1m-claude-credits-ai-powered-research"
-      ],
-      "context": "University of Toronto's own institutional newsroom -- confirmed its Data Sciences Institute's $1M portion of the Anthropic Canada funding in its own voice. Treated as a one-off institutional primary for anthropic-canada-ai-research-funding rather than a recurring scan source; not proposing for the general registry, noting here for the record."
-    }
-  ],
-  "candidates_2026-07-17_night_c3": [
-    {
       "domain": "governor.ny.gov",
       "first_seen": "2026-07-17",
       "occurrences": 1,
@@ -446,6 +451,26 @@
       "context": "National policy/politics outlet; carried the Data Center Coalition's on-record industry-reaction statement, added for balance per the falsifier's instruction on ny-hochul-data-center-moratorium. Propose Tier 2."
     }
   ],
+  "candidates_2026-07-17_night_c4": [
+    {
+      "domain": "betakit.com",
+      "first_seen": "2026-07-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://betakit.com/anthropic-commits-10-million-to-canadian-institutions-for-ai-research/"
+      ],
+      "context": "Canadian tech-industry trade press with named authors and its own reporting; independently confirmed the full eight-institution list and figures for anthropic-canada-ai-research-funding, not merely relaying Anthropic's page. Likely to recur for Canadian AI-industry stories. Propose Tier 2."
+    },
+    {
+      "domain": "utoronto.ca",
+      "first_seen": "2026-07-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.utoronto.ca/news/u-t-data-sciences-institute-lead-initiative-awarding-1m-claude-credits-ai-powered-research"
+      ],
+      "context": "University of Toronto's own institutional newsroom -- confirmed its Data Sciences Institute's $1M portion of the Anthropic Canada funding in its own voice. Treated as a one-off institutional primary for anthropic-canada-ai-research-funding rather than a recurring scan source; not proposing for the general registry, noting here for the record."
+    }
+  ],
   "candidates_2026-07-18_night_c5": [
     {
       "domain": "engadget.com",
@@ -462,8 +487,7 @@
       "occurrences": 1,
       "sample_urls": [
         "https://dataconomy.com/2026/07/07/elon-musk-rebrands-merged-xai-and-spacex-as-spacexai/"
-      ]
-      ,
+      ],
       "context": "AI-industry news site, independently bylined; used as a corroborating source for xai-spacexai-rebrand. Moderate recurrence in AI-news searches this week -- propose Tier 2, revisit if quality dips."
     }
   ],

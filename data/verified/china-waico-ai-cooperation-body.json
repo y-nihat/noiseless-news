@@ -1,0 +1,52 @@
+{
+  "slug": "china-waico-ai-cooperation-body",
+  "checked_at": "2026-07-19T23:17:00+00:00",
+  "method": "Fresh verifier sub-agent (web search + direct fetch of Xinhua/CGTN full-text transcripts, plus independent-outlet cross-check) followed by an independent adversarial falsifier sub-agent tasked with disputing the country count, checking for stale/recycled framing, checking institutional substance, checking whether 'global' framing overstates a China-aligned bloc, and surfacing Western pushback. Both reconciled by this cycle's editor.",
+  "origin_items": [
+    "Flagged as a queued candidate in cycle 1's discovery/Tier-0 sweep (multi-outlet coverage 2026-07-17 through 07-19); dedup-check run clean (no match) in both cycle 1 and cycle 2 before opening."
+  ],
+  "claims": [
+    {
+      "text": "On 16 July 2026, China and 29 countries in total signed an agreement in Shanghai establishing the World AI Cooperation Organization, headquartered in Shanghai",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via direct fetch of Xinhua's full-text transcript and wrap-up ('WAICO has come into being in Shanghai'), independently corroborated by CGTN, China's State Council Information Office, and non-Chinese-state outlets (Reuters via Investing.com, Al Jazeera with an outside Carnegie Endowment analyst quote, Bloomberg, France24, Computerworld, CIO, eWeek, US News, Caixin Global) -- the '29 countries' figure is consistent across every outlet checked with no credible discrepancy found by either the verifier or falsifier.",
+      "evidence": [
+        "https://english.news.cn/20260717/ce32e833ab5d47f883ad44e1f73cb634/c.html",
+        "https://www.computerworld.com/article/4198354/china-russia-and-27-others-create-world-ai-body-without-us.html",
+        "https://www.eweek.com/news/china-waico-global-ai-governance-organization/"
+      ]
+    },
+    {
+      "text": "The United States, the European Union and its member states, the United Kingdom, Japan, and South Korea did not join WAICO as founding members",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Independently confirmed by multiple non-Chinese, non-wire-relay outlets: Computerworld ('without US'), CIO, eWeek ('as West Stays Out'), US News. The falsifier explicitly checked this to prevent an overstated 'global' framing and confirmed founding members are a China-aligned/Global South bloc (Russia, Brazil, Belarus, Cuba, Venezuela, Pakistan, Indonesia, Kazakhstan, Laos plus additional African/Asian states), not a body with broad Western participation.",
+      "evidence": [
+        "https://www.computerworld.com/article/4198354/china-russia-and-27-others-create-world-ai-body-without-us.html",
+        "https://www.eweek.com/news/china-waico-global-ai-governance-organization/"
+      ]
+    },
+    {
+      "text": "Speaking at the WAIC 2026 opening ceremony in Shanghai on 17 July 2026, Xi Jinping said 'AI development should not be a solo performance by a single country, but a symphony of international cooperation' and pledged 5,000 AI training and seminar opportunities for developing countries over five years",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Checked directly against the full-text primary transcript (Xinhua and CGTN both publish the complete speech) -- the highest available standard, not a relayed paraphrase. Quote and the 5,000-opportunity pledge both present verbatim in the transcript, independently corroborated by Reuters/Al Jazeera/Bloomberg reporting on the same speech.",
+      "evidence": [
+        "https://news.cgtn.com/news/2026-07-17/Full-text-Xi-s-keynote-speech-at-the-2026-WAIC-opening-ceremony-1OQSfeoRvUs/p.html"
+      ]
+    },
+    {
+      "text": "As of publication, neither the primary announcements nor independent press coverage describe a published WAICO charter, secretariat, or operating budget",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "The falsifier specifically checked institutional substance and found (via an institutional-mapping analysis) that WAICO currently has a name, host city, and stated purpose but no published charter, secretariat, or budget -- ranking at the bottom of comparable AI-governance bodies on formalization. None of the primary or corroborating sources reviewed describe these operational details, so the absence is affirmatively checked, not merely unaddressed.",
+      "evidence": [
+        "https://english.news.cn/20260717/ce32e833ab5d47f883ad44e1f73cb634/c.html",
+        "https://news.cgtn.com/news/2026-07-17/Full-text-Xi-s-keynote-speech-at-the-2026-WAIC-opening-ceremony-1OQSfeoRvUs/p.html"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH WITH CHANGES (applied). Country count (29) holds under independent scrutiny -- no discrepancy found. WAICO's concept was first previewed by Premier Li Qiang at WAIC 2025, but the 16 July 2026 signing is the first binding commitment, so this is not recycled old news. Required the headline/lede to avoid implying universal/global buy-in given the confirmed absence of the US, EU, UK, Japan and South Korea -- applied. Noted specific on-record US government criticism of WAICO (an OSTP official) and a competing US 'AI Opportunity' initiative as available context for a future update, but the exact source URL for that quote was not independently re-fetched this cycle under time pressure, so it was left out of the published claim set rather than publishing it unverified.",
+  "gaps_closed_from_watching_state": []
+}
