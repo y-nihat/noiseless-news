@@ -1,0 +1,42 @@
+[
+  {
+    "id": "8b0e60c64c7e7e96",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Perplexity AI Releases WANDR: An Open Benchmark Evaluating Research Agents That Must Search Wide And Deep",
+    "url": "https://www.marktechpost.com/2026/07/19/perplexity-ai-releases-wandr-an-open-benchmark-evaluating-research-agents-that-must-search-wide-and-deep/",
+    "published": "2026-07-19T07:19:14+00:00",
+    "summary": "<p>Perplexity's WANDR is an open benchmark and evaluation harness with 500 evidence-heavy tasks. It tests whether research agents can discover many qualifying entities and back each one with cited, re-verifiable evidence. Perplexity Search as Code leads at 0.363 soft F1 and 0.133 hard F1.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/19/perplexity-ai-releases-wandr-an-open-benchmark-evaluating-research-agents-that-must-search-wide-and-deep/\">Perplexity AI Releases WANDR: An Open Benchmark Evaluating Research Agents That Must Search Wide And Deep</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-19T17:01:40.382541+00:00"
+  },
+  {
+    "id": "b30c6468ea3470c6",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "10 Open-Source No-Code AI Platforms for Building LLM Apps, RAG Systems, and AI Agents",
+    "url": "https://www.marktechpost.com/2026/07/18/10-open-source-no-code-ai-platforms-for-building-llm-apps-rag-systems-and-ai-agents/",
+    "published": "2026-07-19T05:53:19+00:00",
+    "summary": "<p>Retrieval, agents, and workflows now ship as visual and plain-English tools. This roundup covers 10 open-source no-code and low-code platforms for building LLM apps, RAG systems, and AI agents, each with its verified license, repository, and best-fit use case.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/18/10-open-source-no-code-ai-platforms-for-building-llm-apps-rag-systems-and-ai-agents/\">10 Open-Source No-Code AI Platforms for Building LLM Apps, RAG Systems, and AI Agents</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-19T17:01:40.382541+00:00"
+  },
+  {
+    "id": "6950319ec4b8e935",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Kimi K3 vs DeepSeek V4 Pro vs GLM-5.2: Open Trillion-Scale MoE Models Compared on Benchmarks, License, and Serving Cost",
+    "url": "https://www.marktechpost.com/2026/07/18/kimi-k3-vs-deepseek-v4-pro-vs-glm-5-2-open-trillion-scale-moe-models-compared-on-benchmarks-license-and-serving-cost/",
+    "published": "2026-07-19T01:41:33+00:00",
+    "summary": "<p>Three open MoE flagships face off on measured intelligence, MIT versus Modified MIT weights, and real serving cost</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/18/kimi-k3-vs-deepseek-v4-pro-vs-glm-5-2-open-trillion-scale-moe-models-compared-on-benchmarks-license-and-serving-cost/\">Kimi K3 vs DeepSeek V4 Pro vs GLM-5.2: Open Trillion-Scale MoE Models Compared on Benchmarks, License, and Serving Cost</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-19T17:01:40.382541+00:00"
+  },
+  {
+    "id": "9e43bf02d5ff1f07",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Fine-Tuning Qwen3 with LoRA Using NVIDIA NeMo AutoModel: A Complete Single-GPU Google Colab Workflow Tutorial",
+    "url": "https://www.marktechpost.com/2026/07/18/fine-tuning-qwen3-with-lora-using-nvidia-nemo-automodel-a-complete-single-gpu-google-colab-workflow-tutorial/",
+    "published": "2026-07-19T01:08:52+00:00",
+    "summary": "<p>We build an end-to-end NVIDIA NeMo AutoModel workflow in Google Colab using a single GPU. We verify CUDA hardware and precision support, install NeMo AutoModel from source, and load an official Qwen3-0.6B LoRA recipe. We then adapt its precision, batch size, checkpointing, and scheduler settings for a constrained runtime. We launch fine-tuning through the automodel CLI, reload the LoRA checkpoint, and compare base versus fine-tuned outputs. We finish with the NeMoAutoModelForCausalLM Python API.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/18/fine-tuning-qwen3-with-lora-using-nvidia-nemo-automodel-a-complete-single-gpu-google-colab-workflow-tutorial/\">Fine-Tuning Qwen3 with LoRA Using NVIDIA NeMo AutoModel: A Complete Single-GPU Google Colab Workflow Tutorial</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-19T17:01:40.382541+00:00"
+  }
+]
