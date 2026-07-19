@@ -148,5 +148,15 @@
     "published": "2026-07-19T17:30:01+00:00",
     "summary": "<a href=\"https://www.nytimes.com/2026/07/18/business/world-cup-kalshi-polymarket.html?unlocked_article_code=1.y1A.plT-.cD3kDKUGV_iF&amp;smid=nytcore-ios-share\"><img align=\"RIGHT\" border=\"0\" hspace=\"4\" src=\"http://www.techmeme.com/260719/i9.jpg\" vspace=\"4\" /></a>\n<p><a href=\"https://www.techmeme.com/260719/p9#a260719p9\" title=\"Techmeme permalink\"><img height=\"12\" src=\"http://www.techmeme.com/img/pml.png\" style=\"border: none; padding: 0; margin: 0;\" width=\"11\" /></a> Lauren McCarthy / <a href=\"https://www.nytimes.com/\">New York Times</a>:<br />\n<span style=\"font-size: 1.3em;\"><b><a href=\"https://www.nytimes.com/2026/07/18/business/world-cup-kalshi-polymarket.html?unlocked_article_code=1.y1A.plT-.cD3kDKUGV_iF&amp;smid=nytcore-ios-share\">Kalshi and Polymarket bets on the FIFA World Cup final top $5.69B; Dune Analytics says total wagers on the platforms surpassed $50B for the first time in June</a></b></span>&nbsp; &mdash;&nbsp; When Argentina and Spain take the field on Sunday for the World Cup final, more than $5.69 billion will be riding on the winner &hellip; </p>",
     "fetched_at": "2026-07-19T22:31:18.682676+00:00"
+  },
+  {
+    "id": "b681c629aea6f1dd",
+    "source": "Techmeme",
+    "tier": 3,
+    "title": "Hugging Face says it used the open-weight GLM-5.2 hosted on its own compute for breach forensics, after US frontier model safety guardrails blocked the requests (Edward Targett/The Stack)",
+    "url": "https://www.techmeme.com/260719/p13",
+    "published": "2026-07-19T23:05:02+00:00",
+    "summary": "<a href=\"https://www.thestack.technology/hugging-face-hacked-turned-to-chinese-llm-for-help-after-us-models-blocked-blue-team/\"><img align=\"RIGHT\" border=\"0\" hspace=\"4\" src=\"http://www.techmeme.com/260719/i13.jpg\" vspace=\"4\" /></a>\n<p><a href=\"https://www.techmeme.com/260719/p13#a260719p13\" title=\"Techmeme permalink\"><img height=\"12\" src=\"http://www.techmeme.com/img/pml.png\" style=\"border: none; padding: 0; margin: 0;\" width=\"11\" /></a> Edward Targett / <a href=\"https://www.thestack.technology/\">The Stack</a>:<br />\n<span style=\"font-size: 1.3em;\"><b><a href=\"https://www.thestack.technology/hugging-face-hacked-turned-to-chinese-llm-for-help-after-us-models-blocked-blue-team/\">Hugging Face says it used the open-weight GLM-5.2 hosted on its own compute for breach forensics, after US frontier model safety guardrails blocked the requests</a></b></span>&nbsp; &mdash;&nbsp; The unknown attacker &ldquo;abused two code-execution paths in our dataset processing (a remote-code dataset loader and a template-injection &hellip; </p>",
+    "fetched_at": "2026-07-19T23:06:18.882099+00:00"
   }
 ]
