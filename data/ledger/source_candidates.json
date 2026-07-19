@@ -509,5 +509,25 @@
       ],
       "context": "Third occurrence logged for techtimes.com (see also candidates_2026-07-13_night2_c2) -- this time reporting that the grok-build upload code path remains present in the newly open-sourced repo, merely disabled by a server-side flag. Found via search only this cycle, not independently re-fetched, so NOT used as evidence in xai-grok-build-privacy-incident; the claim was dropped as a watch item instead. Recurrence across three separate stories now strengthens the case for Tier 2 registration."
     }
+  ],
+  "candidates_2026-07-19_night_c5": [
+    {
+      "domain": "macrumors.com",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.macrumors.com/2026/07/17/apple-sends-legal-letters-openai/"
+      ],
+      "context": "Used as the most authoritative direct syndicator of a paywalled Financial Times scoop (Apple preservation letters to ~40 ex-employees now at OpenAI) for an in-place update to apple-openai-trade-secrets-lawsuit -- both verifier and falsifier independently re-fetched. Established Apple-beat outlet, editorial standards, named authors; recurs across multiple Apple/OpenAI-lawsuit nights this month. Propose Tier 2."
+    },
+    {
+      "domain": "9to5mac.com",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://9to5mac.com/2026/07/17/apple-sends-legal-letters-to-former-employees-now-at-openai/"
+      ],
+      "context": "Same story and rationale as macrumors.com above -- second direct syndicator of the FT scoop, independently re-fetched by both verifier and falsifier. Established Apple-beat outlet; also recurs across multiple Apple/OpenAI-lawsuit nights this month. Propose Tier 2."
+    }
   ]
 }

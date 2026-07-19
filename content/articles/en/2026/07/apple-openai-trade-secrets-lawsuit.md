@@ -28,6 +28,10 @@ sources:
     url: https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/
   - name: NBC News
     url: https://www.nbcnews.com/tech/apple/apple-openai-lawsuit-suit-trade-product-hardware-email-sam-altman-rcna587376
+  - name: MacRumors
+    url: https://www.macrumors.com/2026/07/17/apple-sends-legal-letters-openai/
+  - name: 9to5Mac
+    url: https://9to5mac.com/2026/07/17/apple-sends-legal-letters-to-former-employees-now-at-openai/
 claims:
   - text: "Apple filed suit against OpenAI, its Chief Hardware Officer Tang Tan, engineer Chang Liu, and io Products LLC in the U.S. District Court for the Northern District of California on 10 July 2026 (Apple Inc. v. Liu, No. 5:26-cv-07078), alleging trade secret misappropriation and breach of contract"
     type: business
@@ -61,9 +65,14 @@ claims:
     type: business
     verdict: single-source
     evidence: [9]
+  - text: "Apple sent preservation letters to roughly 40 former Apple employees now working at OpenAI, instructing them to retain documents and communications potentially relevant to the Apple v. Liu case — extending its evidence-preservation effort beyond the two named defendants. The report originates with the Financial Times (paywalled, citing unnamed sources); no independent second source or court filing confirms the ~40 figure, and OpenAI has not issued a fresh comment specific to the letters"
+    type: business
+    verdict: single-source
+    evidence: [10, 11]
 updated:
   - "2026-07-14: added OpenAI's first substantive response to the allegations; see Update section"
   - "2026-07-16: added NBC News reporting on a February email exchange between counsel; see Update section"
+  - "2026-07-19: added report that Apple sent preservation letters to ~40 former employees now at OpenAI; see Update section"
 ---
 
 ## What happened
@@ -131,3 +140,17 @@ case [9]. OpenAI told NBC it has no record of any further outreach from
 Apple's lawyers after that point until the lawsuit was filed on 10 July [9].
 This account is single-source: every other outlet covering it attributes
 the emails to NBC's own review, and no party has publicly disputed it.
+
+## Update, 19 July 2026
+
+Apple has sent preservation letters — formal notices to retain documents and
+communications that could be relevant to litigation — to roughly 40 former
+Apple employees now working at OpenAI, extending its evidence-preservation
+effort beyond Tang Tan and Chang Liu, the two individuals named in the
+original complaint [10][11]. The report originates with the Financial Times,
+citing unnamed sources; every outlet reporting the ~40 figure and the
+preservation-letter characterization, including MacRumors and 9to5Mac, traces
+back to that single FT account, with no independent second source or court
+filing confirming the number. OpenAI has not issued a fresh statement about
+the letters specifically — only its earlier general denial that it is "not
+aware of any evidence that this complaint has merit."

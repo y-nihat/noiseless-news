@@ -29,6 +29,10 @@ sources:
     url: https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/
   - name: NBC News
     url: https://www.nbcnews.com/tech/apple/apple-openai-lawsuit-suit-trade-product-hardware-email-sam-altman-rcna587376
+  - name: MacRumors
+    url: https://www.macrumors.com/2026/07/17/apple-sends-legal-letters-openai/
+  - name: 9to5Mac
+    url: https://9to5mac.com/2026/07/17/apple-sends-legal-letters-to-former-employees-now-at-openai/
 claims:
   - text: "Apple, 10 Temmuz 2026'da OpenAI'ye, Donanımdan Sorumlu Başkanı Tang Tan'a, mühendis Chang Liu'ya ve io Products LLC'ye karşı Kuzey Kaliforniya Bölge Mahkemesi'nde dava açtı (Apple Inc. v. Liu, No. 5:26-cv-07078); ticari sır ihlali ve sözleşme ihlali iddia ediyor"
     type: business
@@ -62,9 +66,14 @@ claims:
     type: business
     verdict: single-source
     evidence: [9]
+  - text: "Apple, Apple v. Liu davasıyla ilgili olası kanıtları saklamaları için, şu anda OpenAI'de çalışan yaklaşık 40 eski Apple çalışanına bildirim gönderdi — davanın kanıt saklama çalışmasını ismen geçen iki sanığın ötesine genişletiyor. Haberin kaynağı Financial Times (ücretli üyelik gerektiriyor, isimsiz kaynaklara dayanıyor); ~40 rakamını bağımsız bir ikinci kaynak veya mahkeme dosyası doğrulamıyor, OpenAI da bildirimlere özgü yeni bir açıklama yapmadı"
+    type: business
+    verdict: single-source
+    evidence: [10, 11]
 updated:
   - "2026-07-14: OpenAI'nin iddialara ilişkin ilk esaslı yanıtı eklendi; Güncelleme bölümüne bakın"
   - "2026-07-16: avukatlar arasındaki Şubat e-posta yazışmasına dair NBC News haberi eklendi; Güncelleme bölümüne bakın"
+  - "2026-07-19: Apple'ın OpenAI'de çalışan ~40 eski çalışana kanıt saklama bildirimi gönderdiğine dair haber eklendi; Güncelleme bölümüne bakın"
 ---
 
 ## Ne oldu
@@ -97,24 +106,6 @@ bir uyarı mektubu gönderdiğini söylüyor [1][6]. OpenAI sözcüsü Drew Pusa
 ediyoruz" — şirketin dilekçeyi hâlâ incelediğini de ekledi [1][2][3]. OpenAI,
 Liu veya Tan'a yönelik somut iddialara henüz değinmedi.
 
-## Güncelleme, 16 Temmuz 2026
-
-NBC News, incelediği e-postalara dayanarak, Apple'ın dış avukatı Gabriel
-Gross'un (Weil Gotshal & Manges) Şubat 2026'da OpenAI'nin baş hukuk
-müşaviri Che Chang'a e-posta gönderdiğini bildirdi — ve Chang'in yanıt
-verdiğini, ki bu Apple'ın "OpenAI hiç yanıt vermedi" anlatısını
-nitelendiriyor [9]. NBC'ye göre, yaklaşık 13 dakika sonra Gross, Chang'e bir
-telefon görüşmesi için teşekkür eden ikinci bir e-posta gönderdi — ama bu
-görüşme aslında farklı bir OpenAI çalışanıyla, soyadı Wang olan biriyle
-yapılmıştı. Gross'un bir görüşmeyi uydurduğunu düşünen Chang, Apple'ın
-kurum içi hukuk müşavirine şikayette bulunarak Gross'un davadan
-çıkarılmasını istedi; Gross özür diledi ve Apple firmayı davada tuttu [9].
-OpenAI, NBC'ye, bu noktadan sonra dava 10 Temmuz'da açılana kadar Apple'ın
-avukatlarından başka bir temas kaydı olmadığını söyledi [9]. Bu anlatı tek
-kaynağa dayanıyor: konuyu aktaran diğer tüm yayın organları e-postaları
-NBC'nin kendi incelemesine dayandırıyor ve hiçbir taraf bunu kamuya açık
-şekilde yalanlamadı.
-
 ## Neden önemli
 
 Dava, iki yıl önce yapay zeka ortağı olan — ChatGPT iOS'a entegre — şimdiyse
@@ -135,3 +126,34 @@ istedikleri yerde çalışma özgürlüğüne" inandığını ekledi [7][8]. Bu,
 yalnızca ticari sırlara genel ilgisizliğini ele alan 10 Temmuz'daki ilk
 açıklamasından daha ileri gidiyor — ancak OpenAI, Liu veya Tan'ın davranışına
 ilişkin somut iddialara hâlâ yanıt vermedi.
+
+## Güncelleme, 16 Temmuz 2026
+
+NBC News, incelediği e-postalara dayanarak, Apple'ın dış avukatı Gabriel
+Gross'un (Weil Gotshal & Manges) Şubat 2026'da OpenAI'nin baş hukuk
+müşaviri Che Chang'a e-posta gönderdiğini bildirdi — ve Chang'in yanıt
+verdiğini, ki bu Apple'ın "OpenAI hiç yanıt vermedi" anlatısını
+nitelendiriyor [9]. NBC'ye göre, yaklaşık 13 dakika sonra Gross, Chang'e bir
+telefon görüşmesi için teşekkür eden ikinci bir e-posta gönderdi — ama bu
+görüşme aslında farklı bir OpenAI çalışanıyla, soyadı Wang olan biriyle
+yapılmıştı. Gross'un bir görüşmeyi uydurduğunu düşünen Chang, Apple'ın
+kurum içi hukuk müşavirine şikayette bulunarak Gross'un davadan
+çıkarılmasını istedi; Gross özür diledi ve Apple firmayı davada tuttu [9].
+OpenAI, NBC'ye, bu noktadan sonra dava 10 Temmuz'da açılana kadar Apple'ın
+avukatlarından başka bir temas kaydı olmadığını söyledi [9]. Bu anlatı tek
+kaynağa dayanıyor: konuyu aktaran diğer tüm yayın organları e-postaları
+NBC'nin kendi incelemesine dayandırıyor ve hiçbir taraf bunu kamuya açık
+şekilde yalanlamadı.
+
+## Güncelleme, 19 Temmuz 2026
+
+Apple, dava dilekçesinde ismen geçen iki kişi olan Tang Tan ve Chang Liu'nun
+ötesine geçerek, şu anda OpenAI'de çalışan yaklaşık 40 eski Apple
+çalışanına, olası davayla ilgili belge ve yazışmaları saklamalarını isteyen
+resmi bildirimler (preservation letter) gönderdi [10][11]. Haberin kaynağı
+Financial Times — isimsiz kaynaklara dayanarak; ~40 rakamını ve bildirim
+niteliğini aktaran MacRumors ve 9to5Mac dahil tüm yayın organları bu tek FT
+haberine dayanıyor, bağımsız bir ikinci kaynak veya mahkeme dosyası rakamı
+doğrulamıyor. OpenAI, bildirimlere özgü yeni bir açıklama yapmadı — yalnızca
+"bu şikayetin haklı olduğuna dair herhangi bir kanıttan haberdar değiliz"
+şeklindeki önceki genel yanıtını yineledi.
