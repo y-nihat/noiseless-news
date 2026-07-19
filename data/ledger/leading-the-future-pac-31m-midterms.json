@@ -1,0 +1,22 @@
+{
+  "slug": "leading-the-future-pac-31m-midterms",
+  "title": "Pro-AI super PAC Leading the Future held $31 million in cash after spending over $24 million on primary races",
+  "status": "published",
+  "first_seen": "2026-07-19",
+  "published_at": "2026-07-19",
+  "follows": "anthropic-amodei-pac-donation",
+  "langs": [
+    "en",
+    "tr"
+  ],
+  "source_urls": [
+    "https://www.axios.com/2026/07/17/pro-ai-super-pac-ready-midterms",
+    "https://elections.transformernews.ai/pacs/C00916114",
+    "https://www.cnbc.com/2026/07/09/ai-companies-election-spending.html"
+  ],
+  "watch": [
+    "Any subsequent FEC filing (Q3 2026) showing further Leading the Future fundraising or spending ahead of November",
+    "Individual donor amounts (Andreessen, Horowitz, Brockman) for this specific Q2 period, properly dated and sourced -- deliberately excluded from this article, see data/verified/leading-the-future-pac-31m-midterms.json notes",
+    "Any further spending by Think Big PAC or American Mission PAC using the $20 million transferred from Leading the Future"
+  ]
+}

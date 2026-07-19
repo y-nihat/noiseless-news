@@ -467,6 +467,29 @@
       "context": "AI-industry news site, independently bylined; used as a corroborating source for xai-spacexai-rebrand. Moderate recurrence in AI-news searches this week -- propose Tier 2, revisit if quality dips."
     }
   ],
+  "candidates_2026-07-19_night_c4": [
+    {
+      "domain": "axios.com",
+      "first_seen": "2026-07-10",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.axios.com/2026/07/17/pro-ai-super-pac-ready-midterms"
+      ],
+      "context": "Second recurrence (see also base 'candidates' list, first seen 2026-07-10 on Apple v. OpenAI). Direct fetch of axios.com returned HTTP 403 for both verifier and falsifier this cycle; both used a reader-proxy to get the actual article text rather than relying on search snippets. Original source for the PAC's Q2 FEC cash-on-hand figure in leading-the-future-pac-31m-midterms, independently corroborated against Transformer News and CNBC. Note: this outlet issued a correction on the cited article ($31.5M -> $31M) after initial publication -- worth flagging that Axios pieces on fast-moving filings may need a re-check for corrections. Recurrence across two separate nights strengthens the case for Tier 2 registration.",
+      "outlets_checked_but_not_used_this_run": {
+        "note": "Andreessen/Horowitz/Brockman donor-amount figures were found via two OTHER Axios pieces (30 Jan and 16 Apr 2026) but excluded from the published article as stale/conflated with the Q2 disclosure -- see data/verified/leading-the-future-pac-31m-midterms.json notes."
+      }
+    },
+    {
+      "domain": "elections.transformernews.ai",
+      "first_seen": "2026-07-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://elections.transformernews.ai/pacs/C00916114"
+      ],
+      "context": "Independent FEC-filing tracker specifically for AI-industry-linked political committees (pulls directly from FEC.gov, not editorial commentary). Used to independently corroborate Leading the Future's $31M cash-on-hand figure for leading-the-future-pac-31m-midterms without relying on Axios's framing of the same underlying filing. Likely to recur for future AI-industry PAC/election-spending stories this cycle (Public First, Jobs and Democracy PAC, Think Big PAC, American Mission PAC are all trackable via the same tool). Propose as a data-source reference (like stockanalysis.com), useful for the live-fetch rule on any future PAC financial claim."
+    }
+  ],
   "candidates_2026-07-19_night_c3": [
     {
       "domain": "gist.github.com (researcher: cereblab)",

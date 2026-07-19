@@ -1,0 +1,32 @@
+{
+  "slug": "leading-the-future-pac-31m-midterms",
+  "checked_at": "2026-07-19T00:24:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts, run in parallel); both independently fetched the primary Axios article (via reader-proxy, direct WebFetch to axios.com returned 403), cross-checked figures against Transformer News's independent FEC-filing tracker for the same committee and against CNBC's independent (July 9, predates Axios) FEC-based reporting",
+  "origin_items": [
+    "discovery sweep (cycle 4) dedup-check against anthropic-amodei-pac-donation -- moderate match, read predecessor article, decided follow-up per verification.md Sec.8"
+  ],
+  "claims": [
+    {
+      "text": "Leading the Future closed the second quarter of 2026 (period ending 30 June 2026) with $31 million in cash on hand",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Axios states this verbatim, citing the PAC's FEC filing. Independently corroborated by Transformer News's FEC-filing tracker for the same committee (FEC ID C00916114), which lists $31,032,443.45 cash on hand as of 30 June 2026 -- a primary-document-sourced figure from a source other than Axios.",
+      "evidence": ["https://www.axios.com/2026/07/17/pro-ai-super-pac-ready-midterms", "https://elections.transformernews.ai/pacs/C00916114"]
+    },
+    {
+      "text": "Leading the Future had spent more than $24 million on primary-election races through the end of June 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "This figure does not appear in the 17 July Axios article itself (falsifier confirmed by re-fetching the full text). It is independently reported by CNBC on 9 July 2026 -- eight days before the Axios piece, so not derived from it -- as its own FEC-filing analysis ('more than $24 million on primary races through the end of June'). Cited to CNBC, not Axios, for this reason.",
+      "evidence": ["https://www.cnbc.com/2026/07/09/ai-companies-election-spending.html"]
+    },
+    {
+      "text": "In the second quarter, Leading the Future transferred $20 million to two affiliated groups -- $10 million each to Think Big PAC and American Mission PAC -- according to its FEC filing",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Only the Axios article reports this specific breakdown; we did not independently pull Think Big PAC's or American Mission PAC's own FEC filings to corroborate the transfer amounts. Axios states it is sourced to 'its latest FEC filing.' Not load-bearing for the headline (which rests on the two confirmed figures above); included as attributed single-source detail per the precedent in xai-grok-build-privacy-incident.",
+      "evidence": ["https://www.axios.com/2026/07/17/pro-ai-super-pac-ready-midterms"]
+    }
+  ],
+  "notes": "Deliberately EXCLUDED from this article: donor-amount figures (Andreessen/Horowitz/Brockman). The original candidate framing (found via raw ingest of a streamlinefeed.co.ke relay of the Axios piece) implied ~$25M each from Andreessen and Horowitz as part of this Q2 disclosure. Both fresh agents independently found this is wrong: the 17 July Axios article names no individual donors at all. The $25M figure traces to an earlier (16 April 2026) Axios piece and describes a COMBINED Q1 tranche from the firm (a16z) and its two co-founders together, not $25M per person; the best-supported per-person figure across other outlets (NOTUS/Bloomberg, citing the PAC's original January 2026 filing) is $12.5M each, from the PAC's original 2025 launch funding -- a different reporting period entirely. Rather than force a citation with conflated/stale figures under this cycle's time budget, the donor breakdown was cut entirely; it is not load-bearing for the story (PAC has $31M for the midterms, has already spent $24M on primaries) and can be revisited as its own properly-dated story later if warranted. Axios also issued a correction on the cited article changing the headline figure from $31.5M to $31M -- final number used here is the corrected $31M, matching Transformer News independently. axios.com and elections.transformernews.ai are both unregistered; logged in source_candidates.json. cnbc.com is already Tier-2 registered."
+}
