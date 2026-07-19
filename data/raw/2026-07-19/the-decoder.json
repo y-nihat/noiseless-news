@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a8c67c08e035c4dd",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Google Deepmind argues video generators already contain the world models computer vision has been missing",
+    "url": "https://the-decoder.com/google-deepmind-argues-video-generators-already-contain-the-world-models-computer-vision-has-been-missing/",
+    "published": "2026-07-19T10:17:49+00:00",
+    "summary": "<p><img alt=\"Digital artwork: an urban street scene featuring buildings and a sidewalk, overlaid with colorful geometric AI overlays.\" class=\"attachment-full size-full wp-post-image\" height=\"1047\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/google-deepmind-genception-generated-image-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        Google Deepmind's GenCeption repurposes a video generator for classic vision tasks such as depth estimation and segmentation, matching state-of-the-art systems with far less training data. The model trained almost entirely on synthetic videos. Its results add to the debate over whether video generators already contain a kind of universal world model.</p>\n<p>The article <a href=\"https://the-decoder.com/google-deepmind-argues-video-generators-already-contain-the-world-models-computer-vision-has-been-missing/\">Google Deepmind argues video generators already contain the world models computer vision has been missing</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-19T11:10:19.474057+00:00"
+  },
+  {
+    "id": "36c43ea6e9746dd0",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Moonshot's Kimi K3 outperforms Fable 5 in frontend code but lags far behind in complex math",
+    "url": "https://the-decoder.com/moonshots-kimi-k3-outperforms-fable-5-in-frontend-code-but-lags-far-behind-in-complex-math/",
+    "published": "2026-07-19T09:32:19+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/kimi_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Moonshot's Kimi K3 is the first Chinese model to top the Code Arena: Frontend rankings, beating Claude Fable 5 and GPT-5.6 Sol by a wide margin. But on advanced math, the gap is stark: Kimi K3 scores only about 39 percent on FrontierMath Tier 4, while models from OpenAI and Anthropic hit close to 90.</p>\n<p>The article <a href=\"https://the-decoder.com/moonshots-kimi-k3-outperforms-fable-5-in-frontend-code-but-lags-far-behind-in-complex-math/\">Moonshot&#039;s Kimi K3 outperforms Fable 5 in frontend code but lags far behind in complex math</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-19T11:10:19.474057+00:00"
+  },
+  {
+    "id": "682c69612bc3c8a1",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AI text detectors struggle when language models mimic an author's style",
+    "url": "https://the-decoder.com/ai-text-detectors-struggle-when-language-models-mimic-an-authors-style/",
+    "published": "2026-07-19T08:35:26+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/ai_tet_detector.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Epoch AI tested three leading AI text detectors (Pangram, GPTZero, and Originality.ai) using style-imitated texts. Up to 18 percent of AI-generated passages went undetected. For scientific writing, the miss rate climbed as high as 48 percent, the very genre where these detectors likely see the most real-world use.</p>\n<p>The article <a href=\"https://the-decoder.com/ai-text-detectors-struggle-when-language-models-mimic-an-authors-style/\">AI text detectors struggle when language models mimic an author&#039;s style</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-19T11:10:19.474057+00:00"
+  },
+  {
+    "id": "7a82410524c4d284",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AI chatbots reading X-rays can be dangerously confident even when they're wrong",
+    "url": "https://the-decoder.com/ai-chatbots-reading-x-rays-can-be-dangerously-confident-even-when-theyre-wrong/",
+    "published": "2026-07-19T07:35:20+00:00",
+    "summary": "<p><img alt=\"Stylized computer display showing an AI-assisted chest X-ray; a color graphic highlights a suspicious area of the lung and displays an alert.\" class=\"attachment-full size-full wp-post-image\" height=\"1025\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/ai-radiology-model-generated-image-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        The RadLE 2.0 benchmark tests whether AI models in radiology can tell when they should leave a diagnosis to a human. Many models deliver wrong findings with full confidence, and human radiologists are still well ahead. Before AI can diagnose on its own, it needs to learn when it's better to say nothing.</p>\n<p>The article <a href=\"https://the-decoder.com/ai-chatbots-reading-x-rays-can-be-dangerously-confident-even-when-theyre-wrong/\">AI chatbots reading X-rays can be dangerously confident even when they&#039;re wrong</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-19T11:10:19.474057+00:00"
+  }
+]
