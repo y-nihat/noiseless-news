@@ -1,0 +1,42 @@
+[
+  {
+    "id": "d52d1b94ab922c69",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "given the increasing likelihood of an open source AI ban, what are the alternative channels for downloading models?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v15oi3/given_the_increasing_likelihood_of_an_open_source/",
+    "published": "2026-07-19T23:52:46+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>the open ai exec in his &quot;ai communism&quot; post suggested a fraudulent FUD campaign and trump executice order against open source / chinese models. unfortunately that seems pretty likely to happen. </p> <p>i have always use huggingface for downloading models and they would be forced to comply. are there any established alternatives or mirrors that aren't us-based?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RegarDamus\"> /u/RegarDamus </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v15oi3/given_the_increasing_likelihood_of_an_open_source/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v15oi3/given_the_increasing_likelihood_of_an_open_source/\">[comments]</a></span>",
+    "fetched_at": "2026-07-20T00:16:18.338983+00:00"
+  },
+  {
+    "id": "d800ab86ed14bc9d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Don't want to be that guy, but... Bonsai (1-bit and Ternary) vs ThinkingCap (@2.5-bit) - Pareto of generated tokens vs accuracy, model size vs accuracy.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v164ee/dont_want_to_be_that_guy_but_bonsai_1bit_and/",
+    "published": "2026-07-20T00:10:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v164ee/dont_want_to_be_that_guy_but_bonsai_1bit_and/\"> <img alt=\"Don't want to be that guy, but... Bonsai (1-bit and Ternary) vs ThinkingCap (@2.5-bit) - Pareto of generated tokens vs accuracy, model size vs accuracy.\" src=\"https://preview.redd.it/v6mhoelo0aeh1.png?width=140&amp;height=92&amp;auto=webp&amp;s=f13f2cf65e3d2455b9582a8e1cc046c19a68dd24\" title=\"Don't want to be that guy, but... Bonsai (1-bit and Ternary) vs ThinkingCap (@2.5-bit) - Pareto of generated tokens vs accuracy, model size vs accuracy.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>as long as you use Instruct it won't matter... once you need to plug reasoning in you'll feel the lobotomy. Tiny sample since nobody pays my electricity bill. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JLeonsarmiento\"> /u/JLeonsarmiento </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v164ee\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v164ee/dont_want_to_be_that_guy_but_bonsai_1bit_and/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-20T00:16:18.338983+00:00"
+  },
+  {
+    "id": "9646bc05b04ffe81",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Eider: an inference runtime for the DGX Spark",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v15jyv/eider_an_inference_runtime_for_the_dgx_spark/",
+    "published": "2026-07-19T23:47:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So ... I've made this little inference and serving runtime for NVIDIA DGX Spark (GB10, Grace Blackwell) and variants thereof. Maybe others will find it curious or interesting.</p> <p><a href=\"https://github.com/rdaum/eider/\">https://github.com/rdaum/eider/</a></p> <p>It is built from scratch (in Rust and CUDA) specifically to take advantage of the NVFP4 capabilities of the SM121 GPU.</p> <p>It is not built on top of any existing tensor or inference library, and does not use llama.cpp or vLLM.</p> <p>It is capable of running Qwen3.6 dense and MoE, Agents-A1, StepFun's Step-3.7-Flash, Gemma 4 26B-A4B, and NVIDIA's Nemotron 3 Puzzle hybrid model. Mainly these because that's what I was interested in getting to work.</p> <p>One of the more interesting features is its ability to page experts in and out off disk, so it's able to fit e.g. Step 3.7 Flash in memory while vLLM is not (and llama.cpp can only do in lower quality quants).</p> <p>It includes an OpenAI-compatible Responses and Chat Completions server with continuous multi-session scheduling and a compact NVFP4 KV cache for the Qwen, Step, and Gemma attention paths. Nemotron combines backbone attention with Mamba recurrent state.</p> <p>This started as a personal research project and is crawling towards more of a production engine -- and yes most parts of the kernel layer are agent-written. I'm not that smart or good at math. But it does work. Most of the time. Try it out and report its bugs and/or inadequacies.</p> <p>The main thrust of this at this point (beyond me learning) is to have a more focused fasting startup runtime to do local coding etc and that doesn't have to wait for llama.cpp or vLLM to get around to NVFP4 or other SM121 optimizations.</p> <p>Be gentle with me.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Comrade-Porcupine\"> /u/Comrade-Porcupine </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v15jyv/eider_an_inference_runtime_for_the_dgx_spark/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v15jyv/eider_an_inference_runtime_for_the_dgx_spark/\">[comments]</a></span>",
+    "fetched_at": "2026-07-20T00:16:18.338983+00:00"
+  },
+  {
+    "id": "42c45edfc3c57aa3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Hardware question? xeon gold/6 channel vs epyc rome/8 channel?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v15jmm/hardware_question_xeon_gold6_channel_vs_epyc/",
+    "published": "2026-07-19T23:46:59+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>xeon gold with AVX-512 and 6 mem DDR4 channels vs epyc rome with 8 mem channel DDR4 channels?</p> <p>Anyone have practical experience?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/segmond\"> /u/segmond </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v15jmm/hardware_question_xeon_gold6_channel_vs_epyc/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v15jmm/hardware_question_xeon_gold6_channel_vs_epyc/\">[comments]</a></span>",
+    "fetched_at": "2026-07-20T00:16:18.338983+00:00"
+  }
+]
