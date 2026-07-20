@@ -1,0 +1,22 @@
+[
+  {
+    "id": "7632a5b8a0946935",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "RayRoPE: Projective Ray Positional Encoding for Multi-View Attention",
+    "url": "https://machinelearning.apple.com/research/rayrope-projective-ray",
+    "published": "2026-07-20T00:00:00+00:00",
+    "summary": "We study positional encodings for multi-view transformers that process tokens from a set of posed input images, and seek a mechanism that encodes patches uniquely, allows SE(3)-invariant attention with multi-frequency similarity, and can be adaptive to the geometry of the underlying scene. We find that prior (absolute or relative) encoding schemes for multi-view attention do not meet the above desiderata, and present RayRoPE to address this gap. RayRoPE represents patch positions based on associated rays but leverages a predicted point along the ray instead of the direction for a…",
+    "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  },
+  {
+    "id": "726ce8a467edbe23",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "LVSum: A Benchmark for Timestamp-Aware Long Video Summarization",
+    "url": "https://machinelearning.apple.com/research/lvsum-video-summarization",
+    "published": "2026-07-20T00:00:00+00:00",
+    "summary": "Long video summarization presents significant challenges for multimodal large language models (MLLMs), particularly in maintaining temporal fidelity over extended durations and producing summaries that are both semantically and temporally grounded. We introduce LVSum, a human-annotated benchmark for evaluating long-form video summarization with fine-grained temporal alignment. LVSum comprises 72 diverse videos spanning 13 domains with an average duration of 16 minutes, each annotated with up to 10 human-generated summaries containing temporal references. We conduct a comprehensive evaluation…",
+    "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  }
+]

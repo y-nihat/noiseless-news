@@ -1,0 +1,42 @@
+[
+  {
+    "id": "72b25fd15e353d86",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Custom OS installation now available on AWS DeepRacer devices",
+    "url": "https://aws.amazon.com/blogs/machine-learning/custom-os-installation-now-available-on-aws-deepracer-devices/",
+    "published": "2026-07-20T17:25:24+00:00",
+    "summary": "With the stock firmware and software, developers couldn't modify their AWS DeepRacer devices to use the latest operating systems. Now, developers can upgrade or install a custom operating system (OS) by using a newly released bootloader, which extends the life of these hardware devices. In this post, we introduce the bootloader, discuss how to use it, and share links to a community distribution that uses it.",
+    "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  },
+  {
+    "id": "c5a957fca16cac0e",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Build specialized agent workflows for your business with Amazon Quick and NVIDIA NeMo Agent Toolkit",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-specialized-agent-workflows-for-your-business-with-amazon-quick-and-nvidia-nemo-agent-toolkit/",
+    "published": "2026-07-20T17:01:32+00:00",
+    "summary": "In this post, we show how Amazon Quick can serve as the business-user front door for specialized agent workflows. We use the NVIDIA NeMo Agent Toolkit to build a supply-chain risk example that helps a planner move from an Amazon Quick dashboard and knowledge context to a guided mitigation recommendation.",
+    "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  },
+  {
+    "id": "32feb51d0e509944",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How Couchbase built a multi-model AI architecture for Capella iQ with Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-couchbase-built-a-multi-model-ai-architecture-for-capella-iq-with-amazon-bedrock/",
+    "published": "2026-07-20T16:58:52+00:00",
+    "summary": "This post describes how Couchbase adopted Amazon Bedrock to power Capella iQ with Anthropic’s Claude family of models, the architectural decisions behind their multi-model approach, and the operational benefits realized in production.",
+    "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  },
+  {
+    "id": "725cafa06e0c6f37",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Evolving from legacy BI to agentic AI at Tradeshift with Amazon Quick",
+    "url": "https://aws.amazon.com/blogs/machine-learning/evolving-from-legacy-bi-to-agentic-ai-at-tradeshift-with-amazon-quick/",
+    "published": "2026-07-20T16:56:48+00:00",
+    "summary": "In this post, we describe how Tradeshift deployed Amazon Quick with agentic AI capabilities to replace our legacy BI tool, resulting in query response times up to 30 times faster, a 40 percent reduction in total cost of ownership, and turned embedded analytics into a product that generates revenue.",
+    "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  }
+]
