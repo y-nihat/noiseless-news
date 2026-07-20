@@ -18,5 +18,15 @@
     "published": "2026-07-20T00:00:00+00:00",
     "summary": "Long video summarization presents significant challenges for multimodal large language models (MLLMs), particularly in maintaining temporal fidelity over extended durations and producing summaries that are both semantically and temporally grounded. We introduce LVSum, a human-annotated benchmark for evaluating long-form video summarization with fine-grained temporal alignment. LVSum comprises 72 diverse videos spanning 13 domains with an average duration of 16 minutes, each annotated with up to 10 human-generated summaries containing temporal references. We conduct a comprehensive evaluation…",
     "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  },
+  {
+    "id": "8a353a7753d5a6dc",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Length Value Model: Scalable Value Pretraining for Token-Level Length Modeling",
+    "url": "https://machinelearning.apple.com/research/length-value-model",
+    "published": "2026-07-20T00:00:00+00:00",
+    "summary": "Token serves as the fundamental unit of computation in modern autoregressive models, and generation length directly influences both inference cost and reasoning performance. Despite its importance, existing approaches lack fine-grained length modeling, operating primarily at the coarse-grained sequence level. In this paper, we introduce the Length Value Model (LenVM), a token-level framework that models the remaining generation length at each decoding step. By formulating length modeling as a value estimation problem and assigning a constant negative reward to each generated token, LenVM…",
+    "fetched_at": "2026-07-20T23:09:47.059553+00:00"
   }
 ]

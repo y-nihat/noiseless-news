@@ -358,5 +358,15 @@
     "published": "2026-07-20T21:19:23+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’m genuinely trying to wrap my mind around how these things work, and using either hermes or openclaw feels like it abstracts away too much, so I’m tempted to build my own local agent and in order to gain a better understanding of how it works. </p> <p>I’d love to hear from anyone who is trying to roll their own as well!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/michaelthatsit\"> /u/michaelthatsit </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1ydyf/have_you_built_your_own_agent_instead_of_using/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1ydyf/have_you_built_your_own_agent_instead_of_using/\">[comments]</a></span>",
     "fetched_at": "2026-07-20T22:34:46.592609+00:00"
+  },
+  {
+    "id": "1a06495f19c31ca9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Kimi-K3 isn’t quite better than Fable yet, but it’s definitely getting closer.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v20g29/kimik3_isnt_quite_better_than_fable_yet_but_its/",
+    "published": "2026-07-20T22:41:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v20g29/kimik3_isnt_quite_better_than_fable_yet_but_its/\"> <img alt=\"Kimi-K3 isn’t quite better than Fable yet, but it’s definitely getting closer.\" src=\"https://preview.redd.it/azdylhf5qgeh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b3c3c21c51760dd69101ad5c66476b94d63c89c5\" title=\"Kimi-K3 isn’t quite better than Fable yet, but it’s definitely getting closer.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Kimi-K3’s release, while impressive, is still months behind the closed-source frontier, so all the “it’s over for Anthropic” talk feels overblown. According to Artificial Analysis, though, Kimi-K3 has brought the open-source frontier to just 1.5 months behind closed-source, putting it right on the heels of OpenAI and Anthropic. </p> <p>Also worth noting from the graph: where has Google been since Gemini 3 Pro last November? The top open-source models keep getting bigger, proving scaling laws still hold. And with Kimi-K3 nearing 3T parameters, it’s definitely not running on your MacBook.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ImaginaryRea1ity\"> /u/ImaginaryRea1ity </a> <br /> <span><a href=\"https://i.redd.it/azdylhf5qgeh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v20g29/kimik3_isnt_quite_better_than_fable_yet_but_its/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-20T23:09:47.059553+00:00"
   }
 ]
