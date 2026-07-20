@@ -1,0 +1,14 @@
+{
+  "slug": "anthropic-meta-compute-deal",
+  "status": "watching",
+  "first_seen": "2026-07-20",
+  "published_at": null,
+  "langs": [],
+  "reason": "Failed publishing gate on the deal-size claim (policy/verification.md §2 independence rule). Origin is a New York Times exclusive (2026-07-17, paywalled, exact time-of-day unconfirmed) reporting Anthropic and Meta are in early talks for Meta to lease AI datacenter compute to Anthropic, worth roughly $10B over ~2 years with monthly payments and an early-exit clause, proposed in June. CNBC (2026-07-17) has its own separate source confirming the bare fact that talks exist and the general subject (Meta compute for Anthropic), which gives that narrower claim 2 independent Tier<=2 sources. But CNBC explicitly attributes the $10B figure, payment structure, and June proposal date to NYT's reporting rather than confirming them independently -- every other outlet (Reuters, CNN, Yahoo, Techmeme, the-decoder, aggregators) also relays NYT for those specifics; Reuters' own syndication states it 'could not independently verify the report.' The $10B figure is the single most newsworthy element and is single-sourced. Meta and Anthropic both declined to comment -- no company confirmation, denial, or filing. Per policy, business claims need >=2 independent sources or a document/filing; the deal-size claim does not clear that bar. Also borderline on the 72-hour freshness gate given the unconfirmed NYT publish time-of-day.",
+  "watch": [
+    "A second, independently-sourced outlet (not relaying NYT) confirming the ~$10B figure, payment structure, or deal terms",
+    "A Meta or Anthropic statement/filing confirming, denying, or detailing the talks",
+    "Progress toward a signed agreement, which would itself be the news event"
+  ],
+  "cycle_2026-07-20_night_c5_note": "Opened this cycle after CLAUDE-driven discovery flagged it in cycles 3-4 (dedup-check clean). Ran a fresh verifier sub-agent (12 web searches/fetches): confirmed 'talks exist' and 'subject is Meta compute for Anthropic' clear the 2-independent-source bar (NYT's own sourcing + CNBC's separate source), but the ~$10B/2-year figure -- the headline-worthy detail -- is single-sourced to NYT, with CNBC and all other outlets explicitly relaying NYT for that specific figure rather than confirming it themselves. No company comment beyond declines, no filing, no progression since 2026-07-17. Did not proceed to a falsifier pass or drafting given remaining cycle time; holding as watching rather than rushing a publish. A narrower story (bare fact of talks, without the $10B figure stated as verified) could pass the gate if the owner wants that framing -- flagging for next cycle's consideration alongside the current framing."
+}
