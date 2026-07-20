@@ -23,6 +23,8 @@ sources:
     url: https://www.fastcompany.com/91573521/meta-faces-discrimination-lawsuit-over-ai-use-in-mass-layoffs
   - name: Meta employee complaint (filed 13 July 2026, N.D. Cal.)
     url: https://www.courthousenews.com/wp-content/uploads/2026/07/meta-employee-complaint.pdf
+  - name: Reuters (via Investing.com)
+    url: https://www.investing.com/news/stock-market-news/us-judge-wont-block-meta-from-laying-off-workers-who-filed-ai-discrimination-lawsuit-4798876
 claims:
   - text: "On 13 July 2026, 26 current and former Meta employees filed a lawsuit in the U.S. District Court for the Northern District of California (Oakland), alleging Meta used a 'constellation' of internal AI systems -- including an assistant called 'Metamate,' employee-trained 'second-brain' agents, keystroke/screen/browser/email monitoring data, AI-token-usage dashboards, and algorithmic performance ranking -- to select employees for its May 2026 layoffs (about 10% of its workforce) in a way that disadvantaged workers who had taken or requested protected medical or family leave, or who had disabilities"
     type: statement
@@ -40,7 +42,16 @@ claims:
     type: statement
     verdict: confirmed
     evidence: [1, 2]
-updated: []
+  - text: "On 17 July 2026, Judge William Orrick denied plaintiffs' request for a temporary restraining order, ruling they had not shown the 'irreparable harm' required for emergency relief, though his written order acknowledged the case raises 'serious questions going to the merits'; the layoffs remained on track to take effect 22 July"
+    type: statement
+    verdict: single-source
+    evidence: [5]
+  - text: "Plaintiffs' broader request for a preliminary injunction -- which would pause the layoffs through arbitration rather than just short-term -- remains pending; Meta must respond by 10 August and Orrick set a hearing for 24 August"
+    type: statement
+    verdict: single-source
+    evidence: [5]
+updated:
+  - "2026-07-20: added TRO ruling -- judge declined to pause the layoffs, preliminary injunction request still pending"
 ---
 
 ## What happened
@@ -56,3 +67,9 @@ A Meta spokesperson disputed the lawsuit's premise: "These claims lack merit and
 ## Why it matters
 
 This is among the first major lawsuits to test whether AI-assisted workforce-reduction tools can create disability- and leave-discrimination liability for a large employer, as companies increasingly fold algorithmic scoring into layoff decisions. Because the claims are freshly filed and contested by Meta, none of the underlying factual allegations are established — the case's outcome, including whether a court grants the requested injunction, will determine how much scrutiny this kind of AI-assisted personnel process draws going forward.
+
+## Update — 20 July 2026
+
+Judge Orrick denied the plaintiffs' request for a temporary restraining order on 17 July, finding they had not shown the "irreparable harm" needed for emergency relief — though his written order noted the case raises "serious questions going to the merits" and left the door open to revisiting the decision as more evidence on Meta's AI use comes in [5]. The layoffs proceeded on schedule from 22 July [5].
+
+The broader preliminary injunction motion, which would pause the layoffs through arbitration rather than just short-term, is still pending: Meta must respond by 10 August, and Orrick has set a hearing for 24 August [5]. Meta declined to comment on this specific ruling [5]. This update is sourced from a single wire report (Reuters); other outlets republished the same copy, so it is treated as single-source pending independent confirmation such as the court docket.

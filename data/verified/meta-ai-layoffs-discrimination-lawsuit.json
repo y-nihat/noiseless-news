@@ -34,5 +34,24 @@
       "evidence": ["https://www.courthousenews.com/meta-employees-sue-over-use-of-ai-in-workforce-reduction/", "https://www.cnbc.com/2026/07/14/meta-lawsuit-layoffs-ai.html"]
     }
   ],
-  "notes": "Legal/litigation claim type per verification.md SS3: all allegations attributed strictly to plaintiffs/the filing in the article body, never stated as established fact; Meta's denial included for balance. Adversarial pass caught a fabricated-looking docket number (not used) and an imprecise relief-sought summary (corrected). Dedup-check clean (no archive matches) -- this is a new, standalone story, not a follow-up to any existing Meta ledger entry (meta-ai-chip-production is an unrelated chip-supply story; no other Meta employment/layoff story exists in the archive). blocked_evidence_domains qz.com and cryptobriefing.com both carried this story but were excluded from citation per policy/discovery.yaml."
+  "notes": "Legal/litigation claim type per verification.md SS3: all allegations attributed strictly to plaintiffs/the filing in the article body, never stated as established fact; Meta's denial included for balance. Adversarial pass caught a fabricated-looking docket number (not used) and an imprecise relief-sought summary (corrected). Dedup-check clean (no archive matches) -- this is a new, standalone story, not a follow-up to any existing Meta ledger entry (meta-ai-chip-production is an unrelated chip-supply story; no other Meta employment/layoff story exists in the archive). blocked_evidence_domains qz.com and cryptobriefing.com both carried this story but were excluded from citation per policy/discovery.yaml.",
+  "cycle_2026-07-21_night_c2_update": {
+    "checked_at": "2026-07-20T23:19:00+00:00",
+    "method": "in-place update, not a follow-up article -- although this is a new event (a ruling) in the same saga, the only reporting found is a single Reuters wire story (byline Daniel Wiessner), so treating it as a new standalone/follow-up headline would violate style.md Gate 1 (headline must rest on confirmed, not single-source, claims). Added within the existing article's Update section instead, where the headline is unaffected. Fresh verifier sub-agent + fresh adversarial falsifier sub-agent both ran independently; falsifier found no contradicting ruling, no correction, and confirmed every other outlet (Yahoo Finance, Investing.com, GV Wire, Spokesman-Review, Insurance Journal, HCAmag, Inkl) republishes the same Reuters copy -- searched specifically for a CourtListener/PACER docket entry as a possible primary-document upgrade; none found within budget.",
+    "claims": [
+      {
+        "text": "On 17 July 2026, Judge William Orrick denied plaintiffs' TRO request (irreparable-harm standard not met), written order acknowledged 'serious questions going to the merits', layoffs proceeded 22 July",
+        "type": "statement",
+        "verdict": "single-source",
+        "evidence": ["https://www.investing.com/news/stock-market-news/us-judge-wont-block-meta-from-laying-off-workers-who-filed-ai-discrimination-lawsuit-4798876"]
+      },
+      {
+        "text": "Preliminary injunction motion still pending; Meta must respond by 10 August, hearing set for 24 August",
+        "type": "statement",
+        "verdict": "single-source",
+        "evidence": ["https://www.investing.com/news/stock-market-news/us-judge-wont-block-meta-from-laying-off-workers-who-filed-ai-discrimination-lawsuit-4798876"]
+      }
+    ],
+    "notes": "Wire-exclusive check run explicitly: Reuters is the sole origin, no second wire (AP/Bloomberg Law) or docket document found -- both claims stay single-source, style gates re-run and pass on the amended EN/TR articles."
+  }
 }

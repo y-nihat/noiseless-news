@@ -13,7 +13,8 @@
   ],
   "watch": [
     "Meta's formal answer or motion to the complaint",
-    "Whether the court grants or denies the preliminary injunction request",
+    "Whether the court grants or denies the preliminary injunction request -- hearing set 24 August, Meta response due 10 August",
     "Any ruling or settlement in the private arbitration proceedings"
-  ]
+  ],
+  "cycle_2026-07-21_night_c2_note": "In-place update (dedup-check: no title/URL match found by the automated tool, manually identified as the same case; outcome (a) per policy S8, chosen over a follow-up article specifically because the only available reporting is a single Reuters wire story -- a new-headline follow-up would fail style.md Gate 1, which requires confirmed not single-source claims behind a headline). Judge Orrick denied plaintiffs' 17 July TRO request on the irreparable-harm standard; PI motion still pending (hearing 24 August). Fresh verifier + fresh adversarial falsifier both ran; falsifier confirmed single-Reuters-source status and found no contradicting account. Added as single-source claims + Update section, 1 new source entry, both EN/TR. Style gates re-run post-edit: pass both languages (headline/TL;DR untouched, so Gate 1 unaffected by the single-source addition)."
 }
