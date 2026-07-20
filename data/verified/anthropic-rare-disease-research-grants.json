@@ -1,0 +1,36 @@
+{
+  "slug": "anthropic-rare-disease-research-grants",
+  "checked_at": "2026-07-20T22:44:00+00:00",
+  "method": "Tier-0 sweep WebFetch of primary Anthropic page, adversarial search pass for independent corroboration and to check for disputes/errors in figures or deadline",
+  "origin_items": [
+    "Anthropic News (Tier 0 html sweep) -- AI for Science rare disease research grants"
+  ],
+  "dedup_check": {
+    "query": "Anthropic launches AI for Science grants for rare disease research",
+    "result": "no matches -- standalone"
+  },
+  "claims": [
+    {
+      "text": "On 20 July 2026 Anthropic opened applications for AI for Science rare disease research grants",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary page, dated 20 July 2026.",
+      "evidence": ["https://www.anthropic.com/news/rare-disease-research-grants"]
+    },
+    {
+      "text": "Up to $50,000 in Claude credits over six months, plus access to Claude Opus and other approved models",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly on the Tier-0 page; the $50,000/six-month figure was independently echoed in search-result summaries of the same announcement (no contradicting figure found -- one unrelated result referenced a separate, earlier $30K/50-team general AI for Science call from a different, non-evidence source, not this rare-disease-specific track).",
+      "evidence": ["https://www.anthropic.com/news/rare-disease-research-grants"]
+    },
+    {
+      "text": "Two eligibility tracks and application deadline of 2 August 2026, 11:59 PM PST",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly on the Tier-0 page.",
+      "evidence": ["https://www.anthropic.com/news/rare-disease-research-grants"]
+    }
+  ],
+  "notes": "Adversarial search pass surfaced a broader Anthropic 'Claude Science' / preclinical drug-discovery initiative (CNBC, WTOP, ~30 June 2026) that this grants call is part of -- left out of the published article since it is a distinct, earlier announcement outside this story's scope, not a claim of this article. One search result (cryptobriefing.com) is on the blocked_evidence_domains list (policy/discovery.yaml) and was not used as evidence. No disputing coverage found for the figures or deadline in this announcement."
+}
