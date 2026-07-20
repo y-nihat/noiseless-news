@@ -38,5 +38,15 @@
     "published": "2026-07-19T21:42:50+00:00",
     "summary": "<p>Alibaba's Qwen team previewed Qwen3.8-Max-Preview, a 2.4 trillion-parameter multimodal MoE model it calls \"second only to Fable 5.\" The preview is live on Token Plan, Qoder, and QoderWork at 10% of standard pricing. What is not live: any benchmark table, model card, license, per-token price, or active-parameter count. This breakdown separates what Alibaba confirmed from what it only claimed.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/\">Alibaba Previews Qwen3.8-Max, a 2.4 Trillion-Parameter Multimodal Model, Days After Moonshot&#8217;s Kimi K3 Open-Weight Launch</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-07-20T12:18:47.721958+00:00"
+  },
+  {
+    "id": "e459bf8667f2420d",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Alibaba’s Tongyi Lab Releases Qwen-Audio-3.0-TTS, a Hosted Text-to-Speech Model in Flash and Plus Tiers Across 16 Languages",
+    "url": "https://www.marktechpost.com/2026/07/20/alibabas-tongyi-lab-releases-qwen-audio-3-0-tts-a-hosted-text-to-speech-model-in-flash-and-plus-tiers-across-16-languages/",
+    "published": "2026-07-20T21:14:19+00:00",
+    "summary": "<p>Alibaba&#8217;s Tongyi Lab has released Qwen-Audio-3.0-TTS, a production-oriented text-to-speech (TTS) system. The model ships in two variants from the same lineage. Flash targets real-time interaction. Plus targets high-quality generation. Both are delivered as hosted models through Alibaba Cloud Model Studio, not as downloadable weights. The release focuses on four things developers hit in production: broader [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/20/alibabas-tongyi-lab-releases-qwen-audio-3-0-tts-a-hosted-text-to-speech-model-in-flash-and-plus-tiers-across-16-languages/\">Alibaba&#8217;s Tongyi Lab Releases Qwen-Audio-3.0-TTS, a Hosted Text-to-Speech Model in Flash and Plus Tiers Across 16 Languages</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-20T22:34:46.592609+00:00"
   }
 ]

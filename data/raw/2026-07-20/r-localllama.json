@@ -298,5 +298,65 @@
     "published": "2026-07-20T13:12:27+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>EDIT: I MEANT 3.8 MAX PREVIEW</p> <p>All 3 receives the same prompt injections or per turn system instructions.</p> <p>Both Minimax M3 and OpenAI 5.6 series (Luna on High and Sol on X High) when given a prompt that isnt quite clear or not as detailed, when they delegate tasks to subagents, its not long or detailed enough and requires more turns. Now im quite surprised when I see sol working like that but in the end, it did complete a task I gave in one prompt and didnt require me to steer it or anything.</p> <p>For qwen 3.8 from my initial impressions, it really follows the per turn system instructions I give. Like when giving tasks to subagents its super detailed. The same applies when the subagent reports back to the orchestrator/head agent.</p> <p>Im only using 3.8 Max now because Qwen Cloud is super generous during the preview promo but if its less than 2 weeks, I'd feel kinda sad. Minimax is quite generous with their plan with me being able to get 1b tokens a week from the 20usd plan.</p> <p>I know I'm not exactly using local equivalents but Minimax M3 is already out locally, Qwen 3.8 (unsure if Max would be fully open) is gonna be out soon. So, it's a good early comparison for you guys.</p> <p>As for code quality, since I'm a vibe coder and don't really have my own benchmarks, I can't really give you guys a detailed explanation since it would just be bs. So the above is just info on its interaction between subagents and head agents.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Saifl\"> /u/Saifl </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1l6cq/thoughts_on_qwen_37_max_preview_vs_minimax_m3_and/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1l6cq/thoughts_on_qwen_37_max_preview_vs_minimax_m3_and/\">[comments]</a></span>",
     "fetched_at": "2026-07-20T18:08:00.545864+00:00"
+  },
+  {
+    "id": "f88d564635dd55db",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "American AI is locked down and proprietary. It's losing.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v1xse3/american_ai_is_locked_down_and_proprietary_its/",
+    "published": "2026-07-20T20:56:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1xse3/american_ai_is_locked_down_and_proprietary_its/\"> <img alt=\"American AI is locked down and proprietary. It's losing.\" src=\"https://external-preview.redd.it/M9hG-ydtrp-V7dX2CyN1ap5gD_5EN0DrlajgLOXhP3E.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=33a9cb5671d861248b29a2a942fc47f0e270d78b\" title=\"American AI is locked down and proprietary. It's losing.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Kerub88\"> /u/Kerub88 </a> <br /> <span><a href=\"https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1xse3/american_ai_is_locked_down_and_proprietary_its/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-20T22:34:46.592609+00:00"
+  },
+  {
+    "id": "edc3bc1cf3849a6b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I ran Ternary-Bonsai-27B (2-bit) and Bonsai-27B (1-bit) on Terminal-Bench 2.0, in 8GB VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v1ya97/i_ran_ternarybonsai27b_2bit_and_bonsai27b_1bit_on/",
+    "published": "2026-07-20T21:15:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1ya97/i_ran_ternarybonsai27b_2bit_and_bonsai27b_1bit_on/\"> <img alt=\"I ran Ternary-Bonsai-27B (2-bit) and Bonsai-27B (1-bit) on Terminal-Bench 2.0, in 8GB VRAM\" src=\"https://preview.redd.it/315dccgwageh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=41134a3d652538bee354ce25a5dc52e0cddb889c\" title=\"I ran Ternary-Bonsai-27B (2-bit) and Bonsai-27B (1-bit) on Terminal-Bench 2.0, in 8GB VRAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I asked myself where the Bonsai models actually land, so I ran them and compared to the results I already have for qwen-3.6-35b-a3b and qwen-3.5-9b on the same harness. Thought it might interest more people.</p> <p>Setup: little-coder harness via the harbor adapter, all 89 tasks of terminal-bench 2.0, single attempt (k=1), 40-turn cap, temp 0.2. RTX 5070 Laptop 8GB, i9-14900HX, 32GB RAM, CUDA 13.1. Runtime is PrismML's llama.cpp fork (stock llama.cpp can't load the 2-bit kernels).</p> <p>Results: Ternary-Bonsai-27B at 2-bit scored 7.9%, Qwen3.5-9B gets 9.2% and Qwen3.6-35B-A3B gets 24.3%, both as per-trial means from their k=5 runs. The 1-bit Bonsai never produced a number.</p> <p>The good part is that it genuinely all fits on the GPU. Tool calling was also clean, zero parse errors across the whole run. The bad part is the accuracy: 7.9% is below the 9B that also fits entirely on the same card, so the whole pitch costs you accuracy versus just running a smaller dense model at normal quant (Q4). Of the 7 tasks the 2-bit solved, the 35B solved 6. </p> <p>The 1-bit model isn't usable in an agent harness. It's fine on simple prompts thuogh. 12*12 gives 144, a correct is_prime in 1007 tokens, clean stop. Under an agentic loop it produced a single 14,000+ token completion on the first task that never emitted a stop token, just rambling until it exhausted 32k context. Its traces show a self-validation tic even on trivial prompts that snowballs into non-termination as difficulty rises. I aborted the run once that was clear.</p> <p>Happy to share some more figures or numbers if anybody wants them!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Creative-Regular6799\"> /u/Creative-Regular6799 </a> <br /> <span><a href=\"https://i.redd.it/315dccgwageh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1ya97/i_ran_ternarybonsai27b_2bit_and_bonsai27b_1bit_on/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-20T22:34:46.592609+00:00"
+  },
+  {
+    "id": "015b015f067e2351",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Head of US AI safety agency resigns",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v1tmyz/head_of_us_ai_safety_agency_resigns/",
+    "published": "2026-07-20T18:25:05+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fallingdowndizzyvr\"> /u/fallingdowndizzyvr </a> <br /> <span><a href=\"https://www.reuters.com/world/us/head-us-ai-safety-agency-resigns-2026-07-20/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1tmyz/head_of_us_ai_safety_agency_resigns/\">[comments]</a></span>",
+    "fetched_at": "2026-07-20T22:34:46.592609+00:00"
+  },
+  {
+    "id": "88e5fb5b7cd874b8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I gave Kimi K3 a shot at auditing my post-quantum crypto project, it found 5 real bugs Fable/Opus 4.8 and GPT-5.6 Sol had all missed",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v1z4f0/i_gave_kimi_k3_a_shot_at_auditing_my_postquantum/",
+    "published": "2026-07-20T21:48:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1z4f0/i_gave_kimi_k3_a_shot_at_auditing_my_postquantum/\"> <img alt=\"I gave Kimi K3 a shot at auditing my post-quantum crypto project, it found 5 real bugs Fable/Opus 4.8 and GPT-5.6 Sol had all missed\" src=\"https://preview.redd.it/pnq90zn9fgeh1.jpg?width=140&amp;height=78&amp;auto=webp&amp;s=dd2bae642851497baf1cb1fabf82a08789427374\" title=\"I gave Kimi K3 a shot at auditing my post-quantum crypto project, it found 5 real bugs Fable/Opus 4.8 and GPT-5.6 Sol had all missed\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>(Slides because why not)</p> <p>I've been building a serverless post-quantum group-encryption protocol for the last few weeks, mostly with Opus 4.8 and Fable, with GPT-5.6 Sol running adversarial review on the most challenging part (a recovery/finality mechanism). It went through four rounds of review: each round found something, Claude fixed it, and by the end the formal model was solid. I was trusting the process...</p> <p>But then Kimi K3 comes along and I figured I'd give it a shot. No guardrails on a cryptography project? Yes please. So I wired it up through OpenRouter and pi, and pointed it at the exact same model as an independent auditor.</p> <p>It found five real bugs the others had missed. It ran its own sweep and confirmed the core was sound, but I reproduced every one myself to make sure. </p> <p>Kimi K3 caught blind spots the other models couldn't see (or weren't allowed to). Very impressive!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DeliciousGorilla\"> /u/DeliciousGorilla </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v1z4f0\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1z4f0/i_gave_kimi_k3_a_shot_at_auditing_my_postquantum/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-20T22:34:46.592609+00:00"
+  },
+  {
+    "id": "ac300ea9d90ebd9d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "According to Agent Arena Kimi K3 ranks at same level as opus thinking",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v1xh6h/according_to_agent_arena_kimi_k3_ranks_at_same/",
+    "published": "2026-07-20T20:44:43+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1xh6h/according_to_agent_arena_kimi_k3_ranks_at_same/\"> <img alt=\"According to Agent Arena Kimi K3 ranks at same level as opus thinking\" src=\"https://external-preview.redd.it/KkecJGlgV3lNUW05QSHUUeHJ-z4cae52VZBu-mW5PD0.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=a940dff0a4dcc9b5f0e92783d8b38f499b45771d\" title=\"According to Agent Arena Kimi K3 ranks at same level as opus thinking\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>My testing with android suggest it is below that. Vision on Opus is the reason. But I don't doubt that for non vision tasks Kimi k3 is on par.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Terminator857\"> /u/Terminator857 </a> <br /> <span><a href=\"https://arena.ai/leaderboard/agent\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1xh6h/according_to_agent_arena_kimi_k3_ranks_at_same/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-20T22:34:46.592609+00:00"
+  },
+  {
+    "id": "ae06bbbb4262061c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Have you built your own agent instead of using openclaw or Hermes, how’s it going for you?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v1ydyf/have_you_built_your_own_agent_instead_of_using/",
+    "published": "2026-07-20T21:19:23+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’m genuinely trying to wrap my mind around how these things work, and using either hermes or openclaw feels like it abstracts away too much, so I’m tempted to build my own local agent and in order to gain a better understanding of how it works. </p> <p>I’d love to hear from anyone who is trying to roll their own as well!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/michaelthatsit\"> /u/michaelthatsit </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1ydyf/have_you_built_your_own_agent_instead_of_using/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v1ydyf/have_you_built_your_own_agent_instead_of_using/\">[comments]</a></span>",
+    "fetched_at": "2026-07-20T22:34:46.592609+00:00"
   }
 ]
