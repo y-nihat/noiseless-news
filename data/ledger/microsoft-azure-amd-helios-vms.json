@@ -1,0 +1,18 @@
+{
+  "slug": "microsoft-azure-amd-helios-vms",
+  "title": "Microsoft announces three new Azure VM families built on AMD chips",
+  "status": "published",
+  "first_seen": "2026-07-20",
+  "published_at": "2026-07-20",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+    "https://newsroom.amd.com/news/microsoft-azure-ai-infrastructure/",
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-will-deploy-amds-helios-rack-scale-ai-accelerator-at-scale-on-azure-radeon-instinct-mi455x-and-epyc-venice-power-will-be-available-through-redmonds-cloud-infrastructure"
+  ],
+  "watch": [
+    "Whether Azure publishes pricing/region availability for HDv2, HXv2, or ND MI455X v7",
+    "Whether AMD's H2 2026 Helios/MI455X shipment timeline holds or slips, given the SemiAnalysis-vs-AMD dispute over production timing",
+    "Any customer-reported performance benchmarks once VMs become available"
+  ]
+}

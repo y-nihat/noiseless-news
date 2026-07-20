@@ -1,0 +1,47 @@
+{
+  "slug": "microsoft-azure-amd-helios-vms",
+  "checked_at": "2026-07-20T23:53:00+00:00",
+  "method": "Fresh verifier sub-agent fetched Microsoft's primary blog post directly and cross-checked figures, ran independent web searches for corroboration/dispute and AMD's own release; fresh adversarial falsifier sub-agent independently searched for contradicting reports, checked for a recycled-announcement pattern, and checked whether the underlying AMD chips are genuinely shipping.",
+  "origin_items": [
+    "Microsoft Source AI (Tier 0 feed, fresh re-ingest this cycle) -- 'Microsoft expands Azure AI and HPC infrastructure with AMD', published 2026-07-20T18:20:47Z"
+  ],
+  "dedup_check": {
+    "query": "Microsoft expands Azure AI and HPC infrastructure with new AMD-based VMs / https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+    "result": "no matches -- standalone new story"
+  },
+  "claims": [
+    {
+      "text": "On 20 July 2026 Microsoft announced three new Azure VM families on AMD hardware: HDv2, HXv2, and ND MI455X v7, with the specs listed in the article",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against Microsoft's own blog post (Tier 0); independently corroborated same-day by AMD's own press release and by Tom's Hardware, CNBC, SiliconANGLE, and StorageReview, all reporting matching specifications.",
+      "evidence": [
+        "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+        "https://newsroom.amd.com/news/microsoft-azure-ai-infrastructure/",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-will-deploy-amds-helios-rack-scale-ai-accelerator-at-scale-on-azure-radeon-instinct-mi455x-and-epyc-venice-power-will-be-available-through-redmonds-cloud-infrastructure"
+      ]
+    },
+    {
+      "text": "AMD's Helios platform combines Instinct MI455X GPUs with upcoming EPYC 'Venice' CPUs; shipments to customers including Microsoft begin H2 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly in AMD's own newsroom/IR press release, matching Microsoft's blog framing.",
+      "evidence": [
+        "https://newsroom.amd.com/news/microsoft-azure-ai-infrastructure/",
+        "https://ir.amd.com/news-events/press-releases/detail/1291/microsoft-to-deploy-next-gen-amd-instinct-and-amd-epyc-processors-as-the-companies-expand-their-long-term-strategic-partnership"
+      ]
+    },
+    {
+      "text": "None of the three VM families are available to provision yet -- no pricing or region rollout published, only H2 2026 hardware shipment timing",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Both primary sources frame this as a roadmap/capacity announcement rather than general availability; no independent outlet found pricing or availability dates either.",
+      "evidence": [
+        "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+        "https://newsroom.amd.com/news/microsoft-azure-ai-infrastructure/"
+      ]
+    }
+  ],
+  "adversarial_notes": "Falsifier pass found this is not a recycled announcement (earlier 2026 activity was only a CES hardware preview, not this VM-family announcement). Found a real, named dispute over AMD's shipment timeline: SemiAnalysis reported in Feb 2026 that MI455X mass production could slip to 2027; AMD CVP Anush Elangovan publicly disputed this, saying Helios remained on track for H2 2026 (covered by Tom's Hardware, VideoCardz, NextPlatform, HotHardware, TechPowerUp). This dispute is about the shipment timeline, not the authenticity of the announcement itself, so it is reflected as a caveat sentence in the article rather than a 'disputed' verdict on the core announcement claims. No claim needed downgrading.",
+  "notes": "Announcement-type claims sufficient on Microsoft's own Tier-0 blog per verification.md Sec.3; this story in fact has stronger-than-required corroboration (AMD's own matching release plus four independent Tier-2 outlets)."
+}
