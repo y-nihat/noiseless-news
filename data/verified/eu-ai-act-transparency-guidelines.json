@@ -1,0 +1,49 @@
+{
+  "slug": "eu-ai-act-transparency-guidelines",
+  "checked_at": "2026-07-20T22:50:00+00:00",
+  "method": "Tier-0 sweep WebFetch of primary Commission page, cross-check WebFetch of the Commission's guidelines library page, adversarial search pass for independent corroboration and to check for disputes/errors in dates or scope",
+  "origin_items": [
+    "European Commission Digital Strategy News (Tier 0 html sweep) -- guidelines on transparency obligations for providers and deployers of certain AI systems"
+  ],
+  "dedup_check": {
+    "query": "European Commission publishes AI transparency obligation guidelines",
+    "result": "one moderate match: eu-ai-cybersecurity-action-plan (2026-07-09), a different Commission action (cybersecurity, not Article 50 transparency) -- read before deciding; not the same event or saga, so treated as standalone rather than update/follow-up"
+  },
+  "claims": [
+    {
+      "text": "On 20 July 2026 the Commission published guidelines on transparency obligations for providers and deployers of certain AI systems under Article 50 of the AI Act",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly by the Commission's own news page (Tier 0) and its guidelines library page (Tier 0, same institutional origin, independently indexed by web search).",
+      "evidence": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
+        "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"
+      ]
+    },
+    {
+      "text": "Guidelines are non-binding practical guidance, not new legislation",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 self-description; consistent with the AI Act's general framework for Commission guidelines under Art. 96.",
+      "evidence": ["https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"]
+    },
+    {
+      "text": "Provider and deployer obligations as described (informing users, machine-readable marks, deepfake/public-interest-content/emotion-biometric disclosure)",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Directly stated on the Tier-0 primary page; matches the general text of AI Act Article 50, which the adversarial search pass located independently (artificialintelligenceact.eu reference text for Article 50).",
+      "evidence": ["https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"]
+    },
+    {
+      "text": "Article 50 transparency obligations begin applying on 2 August 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated on the Tier-0 page and independently corroborated by the adversarial search pass, which found the same 2 August 2026 date on the Commission's guidelines library page.",
+      "evidence": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems",
+        "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"
+      ]
+    }
+  ],
+  "notes": "Single-topic announcement covered entirely by Commission-owned Tier-0 pages, which is sufficient per verification.md Sec.3 for announcement-type claims. Adversarial pass also surfaced a companion Code of Practice on Transparency of AI-Generated Content and a stakeholder signatory deadline of 18:00 CET 22 July 2026 -- left out of the published article as tangential detail, not core to the guidelines announcement itself. No disputing or contradicting coverage found."
+}
