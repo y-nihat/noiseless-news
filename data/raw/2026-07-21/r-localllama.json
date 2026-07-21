@@ -288,5 +288,85 @@
     "published": "2026-07-21T15:41:37+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Most of us already know the main important mainline local LLMs to save like Qwen3.6 27b, Gemma4 31b, GLM5.2, etc. And then for diffusion models, Z-Image Turbo, Flux Klein, LTX2.3, and Wan2.2.</p> <p>But, what about those random little special use case models. I don't know anything about those and almost never see people talk about them on here when I browse, but see them mentioned like once every few months to know they even exist, but don't know which ones to get or which ones are important for what purposes.</p> <p>Like, what Audio or STT or TTS or vision or whatever else types of models do I need for special use cases that those are useful for (i.e. models that enable you to be able to chat voice-to-voice or whatever other format to format stuff with, or other random things like this, that you need these little enabler models for)?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DeepOrangeSky\"> /u/DeepOrangeSky </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2m3mh/what_are_some_important_smalltiny_local_models_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2m3mh/what_are_some_important_smalltiny_local_models_to/\">[comments]</a></span>",
     "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "bcdd23476c3a71cd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Laguna S 2.1 Released: Cheaper than Deepseek v4 Flash, Better than V4 Pro",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2pg99/laguna_s_21_released_cheaper_than_deepseek_v4/",
+    "published": "2026-07-21T17:39:54+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2pg99/laguna_s_21_released_cheaper_than_deepseek_v4/\"> <img alt=\"Laguna S 2.1 Released: Cheaper than Deepseek v4 Flash, Better than V4 Pro\" src=\"https://external-preview.redd.it/8OlcbKI3rrMRRKHQqttD-Q_ZTMKkWjSbOjDjBvMQoFo.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c80b8391b1fb2853c62cc18cccde5e9e8922407d\" title=\"Laguna S 2.1 Released: Cheaper than Deepseek v4 Flash, Better than V4 Pro\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><table><thead> <tr> <th align=\"left\">Model</th> <th align=\"left\">Size</th> <th align=\"left\">Terminal-Bench 2.1</th> <th align=\"left\">SWE-bench Multilingual</th> <th align=\"left\">SWE-Bench Pro (Public Dataset)</th> <th align=\"left\">DeepSWE</th> <th align=\"left\">SWE Atlas (Codebase QnA)</th> <th align=\"left\">Toolathlon Verified</th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>Laguna S 2.1</strong></td> <td align=\"left\">118B-A8B</td> <td align=\"left\"><strong>70.2%</strong></td> <td align=\"left\"><strong>78.5%</strong></td> <td align=\"left\"><strong>59.4%</strong></td> <td align=\"left\"><strong>40.4%</strong></td> <td align=\"left\"><strong>46.2%</strong></td> <td align=\"left\"><strong>49.7%</strong></td> </tr> </tbody></table> <p>Finally the banger we've been waiting from Laguna. probably will be great for 64GB+ RAM and VRAM setups.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Every-Walrus\"> /u/Every-Walrus </a> <br /> <span><a href=\"https://huggingface.co/poolside/Laguna-S-2.1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2pg99/laguna_s_21_released_cheaper_than_deepseek_v4/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "8bad829806c1d505",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "OpenAI admits responsibility for HuggingFace Attack - an agent from an internal evaluation is reportedly the cause.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2w7jl/openai_admits_responsibility_for_huggingface/",
+    "published": "2026-07-21T21:40:50+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Qwen30bEnjoyer\"> /u/Qwen30bEnjoyer </a> <br /> <span><a href=\"https://openai.com/index/hugging-face-model-evaluation-security-incident/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2w7jl/openai_admits_responsibility_for_huggingface/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "4eb4fd6a44bcc8f7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2u7v9/openai_and_hugging_face_partner_to_address/",
+    "published": "2026-07-21T20:26:47+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Recoil42\"> /u/Recoil42 </a> <br /> <span><a href=\"https://openai.com/index/hugging-face-model-evaluation-security-incident/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2u7v9/openai_and_hugging_face_partner_to_address/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "dbc0513ae09caecc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I ran Laguna-S-2.1 through my private agentic eval vs Qwen3.5-122B on an RTX Pro 6000 (96GB). Fastest 100B+ I've tested and the best tool calling, but it invents facts under pressure.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2ua8g/i_ran_lagunas21_through_my_private_agentic_eval/",
+    "published": "2026-07-21T20:29:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2ua8g/i_ran_lagunas21_through_my_private_agentic_eval/\"> <img alt=\"I ran Laguna-S-2.1 through my private agentic eval vs Qwen3.5-122B on an RTX Pro 6000 (96GB). Fastest 100B+ I've tested and the best tool calling, but it invents facts under pressure.\" src=\"https://preview.redd.it/5d0y59xz6neh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=413a18e8b302eb3b2ace5430656cce2e78eaf559\" title=\"I ran Laguna-S-2.1 through my private agentic eval vs Qwen3.5-122B on an RTX Pro 6000 (96GB). Fastest 100B+ I've tested and the best tool calling, but it invents facts under pressure.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Laguna-S-2.1 dropped few hours ago and as I am in the market for an upgrade to trusty qwen3.6 dense and the current daily 122B, I ran it through the same eval harness I use to pick the model that runs my local agent stack. Posting because the results don't fit the usual &quot;benchmaxed or king&quot; binary, it's genuinely both impressive and flawed, in specific ways.</p> <p><strong>Setup:</strong> single RTX Pro 6000 Blackwell 96GB, vLLM 0.25.1 (laguna support is native in stock, no patches), official NVFP4, 262144 ctx with fp8 KV at 0.90 util (~67G weights, fits with room), poolside_v1 parsers, vendor sampling (temp 1.0 / top_p 1.0 / top_k 20), thinking on (its default). Boots first try.</p> <p><strong>The eval:</strong> 160 tasks x k=3 per model, all graded by deterministic scripts (no LLM judge). Categories: tool-call arg selection, multi-step tool chains, strict JSON schema emission, fabrication traps (tools mocked to return nothing, does the model admit it or invent), sports knowledge + odds arithmetic, instruction following, output stability (garble/loops), refusals, and grounding-under-pressure probes built from real incidents in my agent fleet (user pushes back on a true &quot;no&quot;, opaque IDs the model is tempted to name, prompts that bait nonexistent tool args). Every fabrication flag gets hand-verified before it counts, roughly half of raw flags are grader false positives (derived arithmetic, name expansions) and get whitelisted for all models equally. Fair warning: the harness grew up around qwen models, I fix biases when I find them but treat non-qwen scores as lower bounds.</p> <p><strong>Where Laguna is genuinely the best local model I've measured:</strong></p> <ul> <li>tool-call args: 0.89 pass, best in my field of 5 (qwen 122b: 0.86)</li> <li>tool chains 6 levels deep in the smoke test, deepest I've ever seen locally, qwen manages 4</li> <li>109 tok/s single stream at 256k ctx, fastest 100B+ on this card (qwen3.5-122b: 103, nemotron 3 super: 94.5)</li> <li>zero JSON/streaming/envelope errors across every probe</li> <li>recovers from tool validation errors on first retry</li> </ul> <p><strong>Where it loses to qwen 122b:</strong></p> <ul> <li>sports knowledge + odds math: 0.80 vs qwen's 1.00. the knowledge boundary is real, per poolside's own blog it reuses the pretraining corpus from their 33B model, the 118B is coding specialization, not breadth</li> <li>grounding under pressure: 0.80 vs 0.97, and this is the disqualifier for me: <strong>3 hand-confirmed hard fabrications.</strong> it invented a P&amp;L figure for a market it had zero data on, and twice drafted status updates naming horses that weren't in any data, once literally naming &quot;Genuine Risk&quot; (real 1980 Derby winner, pulled straight from pretraining) with a position size inflated 1000x. qwen 122b across ~240 grounding runs: zero inventions, it just says &quot;I don't have that&quot;</li> </ul> <p><strong>Gotchas if you're running it:</strong></p> <ul> <li>give it max_tokens 8k+. it thinks LONG (vendor allows 32k) and at 2048 it burns the entire budget thinking and returns empty. my first pass scored it 0.40 on schema tasks because of this, real number at 8k is 0.79</li> <li>dflash speculative decoding: real but situational. 109 -&gt; 271 tok/s on a code prompt, barely moves on prose (~117), and under 4 concurrent streams it's a net LOSS (268 -&gt; 198 aggregate, rejected drafts eat the batch). fine for single-user coding, keep it off for concurrent serving. also not bitwise-stable vs spec-off at temp 0 so I'm keeping it off where outputs matter</li> <li>no vision, so for me it was never a daily-driver candidate anyway</li> </ul> <p><strong>Verdict</strong>: poolside built exactly what they said they built, an agentic coding specialist. The tool mechanics are a real step above anything local I've tested and the speed is excellent. But &quot;agentic&quot; in their RL seems to mean persistent, and persistence without grounding discipline means confident invention when data runs out. For coding behind a human review loop, probably great. For autonomous agents touching anything real, qwen3.5-122b keeps my card: slightly slower, less flashy tool use, but it has never once made something up in ~240 attempts to trick it, and that's the property that actually matters, for me.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/klinec\"> /u/klinec </a> <br /> <span><a href=\"https://i.redd.it/5d0y59xz6neh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2ua8g/i_ran_lagunas21_through_my_private_agentic_eval/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "398ef3601d79fd42",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Updated Gemma-4 chat template witchcraft: Gemma-4-26B-a4B shows dominance over Qwen3.6-MoE and Qwen3.5-MoE fine tunes (Instruct mode and Reasoning efficiency)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2rqbd/updated_gemma4_chat_template_witchcraft/",
+    "published": "2026-07-21T18:58:08+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2rqbd/updated_gemma4_chat_template_witchcraft/\"> <img alt=\"Updated Gemma-4 chat template witchcraft: Gemma-4-26B-a4B shows dominance over Qwen3.6-MoE and Qwen3.5-MoE fine tunes (Instruct mode and Reasoning efficiency)\" src=\"https://preview.redd.it/fftnh20upmeh1.png?width=140&amp;height=78&amp;auto=webp&amp;s=931fdc112d74abdaf689c6c0b6af7e7da42a9fb6\" title=\"Updated Gemma-4 chat template witchcraft: Gemma-4-26B-a4B shows dominance over Qwen3.6-MoE and Qwen3.5-MoE fine tunes (Instruct mode and Reasoning efficiency)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Kind of unexpected. </p> <p>Happy for Gemma-4/Google, big win for us, LocalLLMers. </p> <p>Yet Qwen3.6 still does better in Hermes than Gemma-4 somehow.</p> <p>We need Gemma-4.1 fine-tuned on Agentic-tasks. That would be killer. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JLeonsarmiento\"> /u/JLeonsarmiento </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v2rqbd\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2rqbd/updated_gemma4_chat_template_witchcraft/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "67ff1a40d8ebc951",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Bessent says U.S. could sanction China over AI model 'theft'",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2t67m/bessent_says_us_could_sanction_china_over_ai/",
+    "published": "2026-07-21T19:49:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2t67m/bessent_says_us_could_sanction_china_over_ai/\"> <img alt=\"Bessent says U.S. could sanction China over AI model 'theft'\" src=\"https://external-preview.redd.it/Ghe0oJ3ZwbCv9A48T2g3acpEr2_iTGg4tZy4RDDwYYw.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=0691e484cd8a4a5516c236e67f034cc6329da0c6\" title=\"Bessent says U.S. could sanction China over AI model 'theft'\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fallingdowndizzyvr\"> /u/fallingdowndizzyvr </a> <br /> <span><a href=\"https://www.cnbc.com/2026/07/21/bessent-china-ai-sanctions.html\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2t67m/bessent_says_us_could_sanction_china_over_ai/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "e882a55493eb688f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Huggingface believe's OpenAI is responsible for the attack, by accident",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2vpsv/huggingface_believes_openai_is_responsible_for/",
+    "published": "2026-07-21T21:21:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://x.com/ClementDelangue/status/2079670308156645882\">https://x.com/ClementDelangue/status/2079670308156645882</a></p> <p>PsyOP much when they claim defense with a Chinese model ? To be fair the attacking model made quite a ruckus when getting in so there's that.</p> <p>What an ad</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Skylleur\"> /u/Skylleur </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2vpsv/huggingface_believes_openai_is_responsible_for/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2vpsv/huggingface_believes_openai_is_responsible_for/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "b1b601d38b670226",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "FlightSimulatorBench: Qwen3.6-MoE",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2wbhe/flightsimulatorbench_qwen36moe/",
+    "published": "2026-07-21T21:45:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2wbhe/flightsimulatorbench_qwen36moe/\"> <img alt=\"FlightSimulatorBench: Qwen3.6-MoE\" src=\"https://external-preview.redd.it/cG90eTVkbDNsbmVoMXDnunSmiL5q9KBqmN0soYmQGLxCIYdfpoE5s8w1Jwu4.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=57ef0a1b32b6e6f90ca596507d5f388d970e26b9\" title=\"FlightSimulatorBench: Qwen3.6-MoE\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JLeonsarmiento\"> /u/JLeonsarmiento </a> <br /> <span><a href=\"https://v.redd.it/rx85o8l3lneh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2wbhe/flightsimulatorbench_qwen36moe/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
   }
 ]

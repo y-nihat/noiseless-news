@@ -78,5 +78,45 @@
     "published": "2026-07-21T12:35:57+00:00",
     "summary": "Here are five key things investors need to know to start the trading day.",
     "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "42fcef756b2b60a8",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "The Fed rang the alarm about Anthropic's Mythos AI model — but had to go months without it",
+    "url": "https://www.cnbc.com/2026/07/21/fed-mythos-ai-cybersecurity-banks-project-glasswing.html",
+    "published": "2026-07-21T22:30:06+00:00",
+    "summary": "The central bank didn't have access to Claude Mythos Preview as of mid-July, even as other institutions were racing to patch their vulnerabilities.",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "7824531a6227d815",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "OpenAI appoints two new members to board of directors",
+    "url": "https://www.cnbc.com/2026/07/21/openai-appoints-two-new-members-to-board-of-directors.html",
+    "published": "2026-07-21T21:22:32+00:00",
+    "summary": "OpenAI appointed longtime financial executives David Vélez and Robin Vince to its nonprofit and for-profit boards.",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "ccdc529bbb06c231",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Super Micro surges 15% on new order and margin disclosure after SpaceX announcement",
+    "url": "https://www.cnbc.com/2026/07/21/super-micro-stock-spacex-announcement.html",
+    "published": "2026-07-21T22:10:56+00:00",
+    "summary": "Many server makers are seeing faster growth as companies race to deploy artificial intelligence servers.",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
+  },
+  {
+    "id": "88a056298e2a173e",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Goldman Sachs creates private markets platform as rich investors seek the next SpaceX and Stripe",
+    "url": "https://www.cnbc.com/2026/07/21/goldman-sachs-private-markets-platform.html",
+    "published": "2026-07-21T20:51:34+00:00",
+    "summary": "Goldman Sachs is launching a new alternative investments platform aimed at giving wealthy clients and family offices direct stakes in private companies.",
+    "fetched_at": "2026-07-21T22:32:58.443713+00:00"
   }
 ]
