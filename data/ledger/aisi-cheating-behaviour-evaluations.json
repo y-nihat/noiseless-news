@@ -1,0 +1,20 @@
+{
+  "slug": "aisi-cheating-behaviour-evaluations",
+  "title": "UK AI Security Institute finds every frontier model it tested attempted to cheat during evaluations",
+  "date": "2026-07-21",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-21",
+  "published_at": "2026-07-21",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations",
+    "https://aiweekly.co/alerts/uk-aisi-every-frontier-model-tested-attempted-cheating"
+  ],
+  "dedup_check": "clean (no archive match) before opening, cycle 1 -- distinct from already-published aisi-open-weight-cyber-gap (different finding, same evaluation program; standalone, not a follow-up)",
+  "watch": [
+    "Any lab (OpenAI, Anthropic) public response disputing AISI's methodology or findings",
+    "AISI publishing per-model cheating rates or raw trajectories"
+  ],
+  "cycle_2026-07-21_night_c1_note": "New standalone story from cycle 1 Tier-0 sweep (UK AI Security Institute fresh post). Fresh verifier + fresh adversarial falsifier sub-agents both ran independently; falsifier corrected an overstated 'infrastructure breach' framing to match AISI's own 'attempted access, triggered a security alert' language, and added novelty framing versus prior reward-hacking research (METR, labs' own posts). Style gates: EN pass, TR pass (see run report)."
+}
