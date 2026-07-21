@@ -28,5 +28,35 @@
     "published": "2026-07-21T09:00:00+00:00",
     "summary": "Once a quirky bastion of amateur vulva jewelry and pet portraits, Etsy is now deluged with mass-produced goods and AI knockoffs. Some customers don’t seem to mind.",
     "fetched_at": "2026-07-21T11:48:27.816342+00:00"
+  },
+  {
+    "id": "0e47c50f298f7129",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "A Sneaky Hacking Tool Targeting AI Infrastructure Is Lurking in Victims’ Blind Spots",
+    "url": "https://www.wired.com/story/a-sneaky-hacking-tool-targeting-ai-infrastructure-is-lurking-in-victims-blind-spots/",
+    "published": "2026-07-21T16:08:44+00:00",
+    "summary": "A new type of malware can worm deep into AI coding systems to steal data and logins—and can flip a “death switch” to destroy files and keep out real users.",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "e4b99d721a7a9c46",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "Nvidia Wants to Own Every Chip Inside AI Data Centers",
+    "url": "https://www.wired.com/story/nvidia-wants-to-own-every-chip-inside-an-ai-data-center/",
+    "published": "2026-07-21T15:00:00+00:00",
+    "summary": "Nvidia’s Vera Rubin platform combines CPUs and GPUs into a single system, reflecting the company’s growing ambition to power every layer of AI infrastructure.",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "07bfce3f4ac71247",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "Halliday’s New Smart Glasses Skip the Camera",
+    "url": "https://www.wired.com/story/halliday-new-smart-glasses-skip-the-camera/",
+    "published": "2026-07-21T13:00:00+00:00",
+    "summary": "Halliday’s G2 glasses can listen to and summarize your workplace meetings—with no video involved.",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
   }
 ]

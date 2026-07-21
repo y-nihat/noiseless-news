@@ -1,0 +1,22 @@
+[
+  {
+    "id": "c7c1420c0d1c13e3",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Environment-free Synthetic Data Generation for API-Calling Agents",
+    "url": "https://machinelearning.apple.com/research/environment-free",
+    "published": "2026-07-21T00:00:00+00:00",
+    "summary": "Training API-calling large language model (LLM) agents demands massive amounts of high-quality trajectories. However, collecting such data at scale typically requires fully implemented environments with executable APIs and realistic, pre-populated backend databases, creating a major bottleneck for scalability. To overcome this, we propose an environment-free synthetic data generation approach that leverages LLMs as on-the-fly digital world models. Given only API specifications, our method generates trajectories mimicking interactions between an agent and a stateful environment. Specifically…",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "1ba92525f7907afb",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Accelerating Text-to-Video Generation with Calibrated Sparse Attention",
+    "url": "https://machinelearning.apple.com/research/calibrated-sparse-attention",
+    "published": "2026-07-21T00:00:00+00:00",
+    "summary": "Recent diffusion models enable high-quality video generation, but suffer from slow runtimes. The large transformer-based backbones used in these models are bottlenecked by spatiotemporal attention. In this paper, we identify that a significant fraction of token-to-token connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the attention computation in these cases can be skipped with little to no effect on the result. This observation continues to hold for connections among local token blocks. Motivated by this, we…",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  }
+]

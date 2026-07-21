@@ -158,5 +158,135 @@
     "published": "2026-07-21T05:35:39+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://github.com/woct0rdho/transformers5-qwen3.5-recipe\">https://github.com/woct0rdho/transformers5-qwen3.5-recipe</a></p> <p>It's time for GGUF to replace bitsandbytes as the base model format for low-VRAM LoRA training. It's actively supporting new model types such as MoE, linear attentions, and DeepSeek WTF attentions, and new quant types such as 1-bit quants.</p> <p>Thanks to APEX quant which makes Qwen3.6-35B-A3B as small as 13.3 GiB, and with fused dequant-matmul/MoE kernels, it's possible to train Qwen3.6-35B-A3B with batch size 1, context chunk length 2048, LoRA rank 4, in 16 GiB VRAM without CPU offloading.</p> <p>I've tested it on Strix Halo and it runs at 6.5 s/it. Arguably VRAM size is not the biggest problem on Strix Halo, but it should just work on RDNA3 GPUs, and not too hard to port to other GPUs.</p> <p>A byproduct is <a href=\"https://github.com/woct0rdho/torch-ggml-ops\">https://github.com/woct0rdho/torch-ggml-ops</a> , which provides PyTorch bindings of the GGUF fused dequant-matmul/MoE kernels.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/woct0rdho\"> /u/woct0rdho </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v29d4s/lora_over_gguf_train_qwen3635ba3b_in_16g_vram/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v29d4s/lora_over_gguf_train_qwen3635ba3b_in_16g_vram/\">[comments]</a></span>",
     "fetched_at": "2026-07-21T11:48:27.816342+00:00"
+  },
+  {
+    "id": "e3eb850e5f469e54",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "CEO of Hugging Face: Banning open-source AI would hurt defenders 10x more than attackers, which would make the world 10x more dangerous and this is a good example why!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2g9bc/ceo_of_hugging_face_banning_opensource_ai_would/",
+    "published": "2026-07-21T11:55:30+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2g9bc/ceo_of_hugging_face_banning_opensource_ai_would/\"> <img alt=\"CEO of Hugging Face: Banning open-source AI would hurt defenders 10x more than attackers, which would make the world 10x more dangerous and this is a good example why!\" src=\"https://preview.redd.it/6f0yaje2nkeh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=ec6a8584661e6211c6805ca5dd54e6853d65370d\" title=\"CEO of Hugging Face: Banning open-source AI would hurt defenders 10x more than attackers, which would make the world 10x more dangerous and this is a good example why!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>From clem 🤗 on 𝕏: <a href=\"https://x.com/ClementDelangue/status/2079301434357456931\">https://x.com/ClementDelangue/status/2079301434357456931</a></p> <p>Fortune: Hugging Face says it resorted to a Chinese AI model to battle a fully autonomous cyberattack because U.S. model guardrails stymied its defense: <a href=\"https://fortune.com/2026/07/20/hugging-face-turns-to-chinese-open-source-ai-to-fend-off-autonomous-ai-cyber-attack-after-american-ai-guardrails-stymie-defense/\">https://fortune.com/2026/07/20/hugging-face-turns-to-chinese-open-source-ai-to-fend-off-autonomous-ai-cyber-attack-after-american-ai-guardrails-stymie-defense/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://i.redd.it/6f0yaje2nkeh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2g9bc/ceo_of_hugging_face_banning_opensource_ai_would/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "269eab9dc449ae2a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anthropic claims local models are stealing from it, meanwhile it pays $1.5B for theft",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2ky1e/anthropic_claims_local_models_are_stealing_from/",
+    "published": "2026-07-21T15:00:56+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><ul> <li>$1.5 billion settlement largest known payout in U.S. copyright case</li> <li>Case part of a wave of lawsuits from copyright holders against AI companies</li> <li>Some authors and publishers opted out and continue separate ​cases against Anthropic</li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Terminator857\"> /u/Terminator857 </a> <br /> <span><a href=\"https://www.reuters.com/world/us-judge-approves-anthropics-15-billion-settlement-copyright-lawsuit-2026-07-20/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2ky1e/anthropic_claims_local_models_are_stealing_from/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "ebf38144a37f5465",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New Model: Nanbeige4.2-3B (Looped Transformer, outperforms 4x size)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2n7l6/new_model_nanbeige423b_looped_transformer/",
+    "published": "2026-07-21T16:21:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2n7l6/new_model_nanbeige423b_looped_transformer/\"> <img alt=\"New Model: Nanbeige4.2-3B (Looped Transformer, outperforms 4x size)\" src=\"https://preview.redd.it/wfyg74h2zleh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6cda73b93004e973112aa02c91d9112132cc38e9\" title=\"New Model: Nanbeige4.2-3B (Looped Transformer, outperforms 4x size)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/Nanbeige/Nanbeige4.2-3B\">https://huggingface.co/Nanbeige/Nanbeige4.2-3B</a></p> <p>Nanbeige4.2-3B is a compact agentic model built on <a href=\"https://huggingface.co/Nanbeige/Nanbeige4.2-3B-Base\">Nanbeige4.2-3B-Base</a>, designed to combine strong agentic behavior with broad reasoning and alignment capabilities. Its Looped Transformer architecture reuses the transformer layers to increase model capacity without adding parameters. With only 3B non-embedding parameters, the model delivers solid performance on general-agent and code-agent tasks.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Wooden-Deer-1276\"> /u/Wooden-Deer-1276 </a> <br /> <span><a href=\"https://i.redd.it/wfyg74h2zleh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2n7l6/new_model_nanbeige423b_looped_transformer/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "2718085d2f62e1df",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Mistral is a Fish - It always swim against current",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2gqnf/mistral_is_a_fish_it_always_swim_against_current/",
+    "published": "2026-07-21T12:16:23+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2gqnf/mistral_is_a_fish_it_always_swim_against_current/\"> <img alt=\"Mistral is a Fish - It always swim against current\" src=\"https://preview.redd.it/9wggdoecrkeh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9c597e4d6bda425e59d2a7c48acc92c8d11b9aa9\" title=\"Mistral is a Fish - It always swim against current\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/VolkoTheWorst\"> /u/VolkoTheWorst </a> <br /> <span><a href=\"https://i.redd.it/9wggdoecrkeh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2gqnf/mistral_is_a_fish_it_always_swim_against_current/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "9cee55174058ebdd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "There is no need to worry about Trump banning China‘s open source model at all.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2huar/there_is_no_need_to_worry_about_trump_banning/",
+    "published": "2026-07-21T13:03:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve seen many people worrying that if Trump moves to block Chinese AI models, aggregators like OpenRouter will no longer be able to host them. As someone from China, let me reassure you: there is really no need for such concern.</p> <p>China has been locked in trade conflicts with Trump for years. <strong>Nobody understands better than us Chinese how to deal with him.</strong></p> <p>We can connect with local business partners in Vietnam 🇻🇳 willing to act as distributors. We will fork the model repository and hand it over to them. Vietnamese companies can then market it as a locally developed Vietnamese model, making it accessible to everyone. OpenRouter can list and promote it as a Vietnamese-origin model, and all problems will be resolved. Everyone wins.<br /> Trump stokes tensions to win votes, people keep gaining access to affordable models, and open-source survives.</p> <p>🤓☝️</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Reasonable-Impact789\"> /u/Reasonable-Impact789 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2huar/there_is_no_need_to_worry_about_trump_banning/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2huar/there_is_no_need_to_worry_about_trump_banning/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "c7935c312212953b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "pi 0.81.0 adds support for llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2lszl/pi_0810_adds_support_for_llamacpp/",
+    "published": "2026-07-21T15:31:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2lszl/pi_0810_adds_support_for_llamacpp/\"> <img alt=\"pi 0.81.0 adds support for llama.cpp\" src=\"https://external-preview.redd.it/jsGZM7k9qC4HBAPtW3FFOehHlObpWGetSdzY91hzySo.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=74ffd231c55c82e496dfef16a2bce0c94e069708\" title=\"pi 0.81.0 adds support for llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>pi 0.81.0 now has integrated support for llama.cpp (llama-server router).</p> <p><a href=\"https://pi.dev/docs/latest/llama-cpp\">https://pi.dev/docs/latest/llama-cpp</a></p> <p>This seems to be able to replace the <a href=\"https://github.com/huggingface/pi-llama\">huggingface/pi-llama</a> extension and/or manually managing models in the config.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/popoppypoppylovelove\"> /u/popoppypoppylovelove </a> <br /> <span><a href=\"https://github.com/earendil-works/pi/releases/tag/v0.81.0\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2lszl/pi_0810_adds_support_for_llamacpp/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "b0e55c0bc408f287",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Torrents arrived",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2glcx/torrents_arrived/",
+    "published": "2026-07-21T12:10:03+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been working on this project that makes LLM distributions decentralized and fast using torrents.</p> <p>Read more about tech on <a href=\"https://github.com/etemiz/llama.garden\">Github</a>.</p> <p>Website: <a href=\"https://llama.garden\">https://llama.garden</a></p> <p>Suggested client: Transmission</p> <p>News:</p> <p>- Added more web seed URLs that go through our API that will increase speeds thanks to HTTP being faster than UDP. This is just for initial seeding, then we can rely on peers becoming seeders for broader distribution</p> <p>- Wrote an API that resolves HF CDN to actual URLs and caches those for faster response and also made web seeds work a little bit better with qBittorrent. Still, transmission client is faster because it handles web seeds much better.</p> <p>- As requested, we made torrent names in clients equal to actual repo name (in the past they were hashes of folders to make the webseeds work.)</p> <p>- Open sourced more scripts that manage several of our seed boxes remotely (a.k.a pumps). These are our seed boxes, their traffic gifted to community.</p> <p>- Did actual speed tests</p> <p>- Just made a torrent for one of unsloth's 10TB repo, seems to be working. This means we are ready for K3 once it is open weighted.</p> <p>If you want to download faster, you can start seeding and building some reputation (Torrent clients give priority to seeders).</p> <p>All the LLM files are exactly matching HF's certain commits. If the model is updated after the torrent is built, need to rebuild the torrent. This has two meanings.</p> <ol> <li>Once the torrent is validated by community, nobody can tamper with the files.</li> <li>One can disable the peers and other web seeds and rely on HF web seeds and independently verify that the LLM files matches HF 100%.</li> </ol> <p>Enjoy!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/de4dee\"> /u/de4dee </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2glcx/torrents_arrived/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2glcx/torrents_arrived/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "275608ba48f8d11e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "poolside/Laguna-S-2.1 released! Finally an interesting 120B contender!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2orhb/poolsidelagunas21_released_finally_an_interesting/",
+    "published": "2026-07-21T17:16:11+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2orhb/poolsidelagunas21_released_finally_an_interesting/\"> <img alt=\"poolside/Laguna-S-2.1 released! Finally an interesting 120B contender!\" src=\"https://preview.redd.it/rpiflkvx8meh1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=ad9133b22018f817395d05cd158a393464bb2ab2\" title=\"poolside/Laguna-S-2.1 released! Finally an interesting 120B contender!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>HF: <a href=\"https://huggingface.co/poolside/Laguna-S-2.1\">https://huggingface.co/poolside/Laguna-S-2.1</a><br /> GGUFs available for use with llama.cpp custom fork: <a href=\"https://huggingface.co/poolside/Laguna-S-2.1-GGUF\">https://huggingface.co/poolside/Laguna-S-2.1-GGUF</a></p> <p>Posted on X: <a href=\"https://x.com/poolsideai/status/2079613777343848465?s=20\">https://x.com/poolsideai/status/2079613777343848465?s=20</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Lowkey_LokiSN\"> /u/Lowkey_LokiSN </a> <br /> <span><a href=\"https://i.redd.it/rpiflkvx8meh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2orhb/poolsidelagunas21_released_finally_an_interesting/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "ca656240884d9ce6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "20B Looping model (paper) matches or beats Qwen3 Coder 30B at 10% of pre-training tokens",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2mhmi/20b_looping_model_paper_matches_or_beats_qwen3/",
+    "published": "2026-07-21T15:55:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>No weights yet. I feel sad for them, that training run cost maybe 100s of thousands of dollars and they didn't even beat GPT-OSS 20B in every regard</p> <p>But the ability to train a model from scratch on 3.5 trillion tokens instead of 35 trillion sure gives me hope. They only spent 100s of thousands of $ instead of millions, so maybe soon enough hobbyists will be able to pretrain true LLMs at home</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dany0\"> /u/Dany0 </a> <br /> <span><a href=\"https://arxiv.org/html/2607.16051\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2mhmi/20b_looping_model_paper_matches_or_beats_qwen3/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "1ea91da28aa5117a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "SenseNova-U1-8b-MoT-Infographic-V3 has been released (2 weeks after V2)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2mszh/sensenovau18bmotinfographicv3_has_been_released_2/",
+    "published": "2026-07-21T16:06:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2mszh/sensenovau18bmotinfographicv3_has_been_released_2/\"> <img alt=\"SenseNova-U1-8b-MoT-Infographic-V3 has been released (2 weeks after V2)\" src=\"https://preview.redd.it/w3yswe30wleh1.png?width=140&amp;height=46&amp;auto=webp&amp;s=111d631e0ac157659ad9bfd401a13303cbca2c55\" title=\"SenseNova-U1-8b-MoT-Infographic-V3 has been released (2 weeks after V2)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Four things it does:</p> <ul> <li><strong>Local text editing</strong>: mark a region (or just say it in natural language) and replace specific text. Fixes typos, swaps numbers, changes titles — keeps everything else intact</li> <li><strong>Local content editing</strong>: add/remove/replace stuff like charts, icons, objects in specific spots</li> <li><strong>Global style editing</strong>: swap the whole visual style (Lego, cyberpunk, traditional Chinese, vintage map...) while keeping content and layout</li> <li><strong>Global layout editing</strong>: rearrange and beautify the layout without losing information</li> </ul> <p>The &quot;fix one typo without nuking the whole image&quot; part alone is huge for me. Used to waste so many rerolls on dumb text errors.</p> <p>Also: 8B params, Apache 2.0, and generation quality didn't drop from V2 — actually went up slightly on Qwen-Image-Bench (50.23 vs 48.00). They went back to the MT stage and jointly trained T2I + editing instead of just slapping editing on top, which probably explains why both work decently.</p> <p>GitHub: <a href=\"https://github.com/OpenSenseNova/SenseNova-U1\">GitHub - OpenSenseNova/SenseNova-U1: SenseNova-U series: Native Unified Paradigm with NEO-unify from</a></p> <p>HF: <a href=\"https://huggingface.co/sensenova/SenseNova-U1-8B-MoT-Infographic-V3\">https://huggingface.co/sensenova/SenseNova-U1-8B-MoT-Infographic-V3</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SandyL925\"> /u/SandyL925 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v2mszh\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2mszh/sensenovau18bmotinfographicv3_has_been_released_2/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "92e2303ad2f9ed33",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "mindlab-research/Macaron-V1-Venti • HuggingFace",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2k5hv/mindlabresearchmacaronv1venti_huggingface/",
+    "published": "2026-07-21T14:31:36+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2k5hv/mindlabresearchmacaronv1venti_huggingface/\"> <img alt=\"mindlab-research/Macaron-V1-Venti • HuggingFace\" src=\"https://external-preview.redd.it/1A-pPEPR7dteQbwB3_vjvoEXGnYvyPFGC7AaMLLL98M.png?width=140&amp;height=75&amp;auto=webp&amp;s=bdad16f3c257f0eaf8db5cbdceb0ea167b605cfd\" title=\"mindlab-research/Macaron-V1-Venti • HuggingFace\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/67lb9m0pfleh1.jpg?width=2048&amp;format=pjpg&amp;auto=webp&amp;s=9cebf34a2b3b98815fe3aa525ebe412eedcf225f\">https://preview.redd.it/67lb9m0pfleh1.jpg?width=2048&amp;format=pjpg&amp;auto=webp&amp;s=9cebf34a2b3b98815fe3aa525ebe412eedcf225f</a></p> <p><a href=\"https://huggingface.co/mindlab-research/Macaron-V1-Venti\">https://huggingface.co/mindlab-research/Macaron-V1-Venti</a></p> <p><a href=\"https://macaron.im/zh/mindlab/research/introducing-macaron-v1\">https://macaron.im/zh/mindlab/research/introducing-macaron-v1</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/External_Mood4719\"> /u/External_Mood4719 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2k5hv/mindlabresearchmacaronv1venti_huggingface/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2k5hv/mindlabresearchmacaronv1venti_huggingface/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "cabe9444b620e603",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Models to get before any political disruption",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2hiyf/models_to_get_before_any_political_disruption/",
+    "published": "2026-07-21T12:50:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>What are the actually good models to download for systems up to 256GB of unified ram? Some are good for creative, others for coding, agentic, general chat, etc.</p> <p>Qwen3.5/6</p> <p>Gemma 4</p> <p>Hy3</p> <p>Mimo 2.5 Flash</p> <p>Minimax M3</p> <p>DS4 Flash</p> <p>Mistral Medium 128B</p> <p>Step3.7 Flash</p> <p>GLM5.2 IQ2</p> <p>All in GGUF/MLX, between IQ2-Q9</p> <p>What else? I didn't add Kimi because its too large.​​</p> <p>Edit: for those that want to take time our of their day to bring 0 value, you'll just get blocked. Thank you everyone else for helping however, its hard enough keeping up with everything (especially when certain news​ deem even quicker movement) while working a job and caring for family. Is that not all of us to some degree anyway?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/200206487\"> /u/200206487 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2hiyf/models_to_get_before_any_political_disruption/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2hiyf/models_to_get_before_any_political_disruption/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "3ede293905a8e7f6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What are some important small/tiny local models to download that aren't the main chatbot LLMs, but are things for like audio, TTS, STT, vision, or whatever random important miscellaneous things like that which might be useful to get before the bans and shutdowns come in?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v2m3mh/what_are_some_important_smalltiny_local_models_to/",
+    "published": "2026-07-21T15:41:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Most of us already know the main important mainline local LLMs to save like Qwen3.6 27b, Gemma4 31b, GLM5.2, etc. And then for diffusion models, Z-Image Turbo, Flux Klein, LTX2.3, and Wan2.2.</p> <p>But, what about those random little special use case models. I don't know anything about those and almost never see people talk about them on here when I browse, but see them mentioned like once every few months to know they even exist, but don't know which ones to get or which ones are important for what purposes.</p> <p>Like, what Audio or STT or TTS or vision or whatever else types of models do I need for special use cases that those are useful for (i.e. models that enable you to be able to chat voice-to-voice or whatever other format to format stuff with, or other random things like this, that you need these little enabler models for)?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DeepOrangeSky\"> /u/DeepOrangeSky </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2m3mh/what_are_some_important_smalltiny_local_models_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v2m3mh/what_are_some_important_smalltiny_local_models_to/\">[comments]</a></span>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
   }
 ]

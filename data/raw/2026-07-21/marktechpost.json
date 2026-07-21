@@ -18,5 +18,15 @@
     "published": "2026-07-21T07:48:28+00:00",
     "summary": "<p>NVIDIA has released Cosmos 3 Edge, a 4-billion-parameter open world model built to run on-device. It helps robots and vision AI agents understand surroundings, reason in real time, and generate robot actions locally. The Cosmos 3 family included Cosmos 3 Nano (16B) and Cosmos 3 Super (64B) shipped on May 31, 2026 at GTC Taipei. [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/21/nvidia-releases-cosmos-3-edge-a-4b-parameter-open-world-model-that-reasons-and-generates-robot-actions-on-device/\">NVIDIA Releases Cosmos 3 Edge: A 4B-Parameter Open World Model That Reasons and Generates Robot Actions On-Device</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-07-21T11:48:27.816342+00:00"
+  },
+  {
+    "id": "e3a234f6c0288f96",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Validating Distributed LLM Serving Benchmarks with NVIDIA srt-slurm, SLURM Recipes, Parameter Sweeps, and Pareto Analysis",
+    "url": "https://www.marktechpost.com/2026/07/21/validating-distributed-llm-serving-benchmarks-with-nvidia-srt-slurm-slurm-recipes-parameter-sweeps-and-pareto-analysis/",
+    "published": "2026-07-21T16:29:36+00:00",
+    "summary": "<p>In this tutorial, we explore NVIDIA’s srt-slurm framework and learn how we use srtctl to convert declarative YAML configurations into reproducible SLURM benchmark workflows for distributed LLM serving. We set up the project in Google Colab, inspect its internal architecture, define a cluster configuration, dry-run built-in and custom recipes, and model a disaggregated prefill-and-decode deployment [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/21/validating-distributed-llm-serving-benchmarks-with-nvidia-srt-slurm-slurm-recipes-parameter-sweeps-and-pareto-analysis/\">Validating Distributed LLM Serving Benchmarks with NVIDIA srt-slurm, SLURM Recipes, Parameter Sweeps, and Pareto Analysis</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-21T17:25:04.540606+00:00"
   }
 ]
