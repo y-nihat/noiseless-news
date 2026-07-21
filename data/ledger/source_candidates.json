@@ -1,4 +1,24 @@
 {
+  "candidates_2026-07-22_night_c2": [
+    {
+      "domain": "blogs.cisco.com",
+      "first_seen": "2026-07-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization"
+      ],
+      "context": "Cisco's official corporate/product blog, used as the Tier-0 primary source for the Antares open-weight model announcement (cisco-antares-vulnerability-models). Propose Tier 0 html, matching how other lab/vendor blogs are registered."
+    },
+    {
+      "domain": "axios.com",
+      "first_seen": "2026-07-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.axios.com/2026/07/21/cisco-open-source-ai-models-cybersecurity"
+      ],
+      "context": "Established outlet with editorial standards and named authors; independently sourced an on-record exec quote (Cisco chief AI scientist Amin Karbasi on Hugging Face gating) that was load-bearing for the cisco-antares-vulnerability-models article. Propose Tier 2."
+    }
+  ],
   "candidates": [
     {
       "domain": "thewrap.com",
