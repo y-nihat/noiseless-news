@@ -38,5 +38,35 @@
     "published": "2026-07-21T13:00:00+00:00",
     "summary": "I first slipped on Halliday's original smart glasses at CES 2025. I was not a fan. The glasses had a tiny, movable display window embedded into the frame that was incredibly finicky to see, and my 30-minute demo left me with achy eyeballs. It was an interesting concept with terrible execution, especially compared to the [&#8230;]",
     "fetched_at": "2026-07-21T17:25:04.540606+00:00"
+  },
+  {
+    "id": "dd5bcdfa5d12d743",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "Neill Blomkamp’s new zombie AI ‘film’ is just slop warmed over",
+    "url": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance",
+    "published": "2026-07-21T22:06:43+00:00",
+    "summary": "On Monday, District 9 and Gran Turismo director Neill Blomkamp unveiled his latest project: a 13-minute sci-fi short titled Nightborne that's loosely based on Peter Watts' 2014 novel Echopraxia. The short comes from Blomkamp's new AI startup / production company, Barley Studios, and features characters whose voices and faces are modeled after human actors. But [&#8230;]",
+    "fetched_at": "2026-07-21T23:07:58.948795+00:00"
+  },
+  {
+    "id": "f4f1718676d02b1f",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "OpenAI says it accidentally hacked Hugging Face with a new AI system",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/968988/openai-hugging-face-hack-ai",
+    "published": "2026-07-21T21:48:54+00:00",
+    "summary": "OpenAI says its AI models mistakenly breached open-source AI platform Hugging Face during internal testing. In a blog post on Tuesday, OpenAI writes that GPT-5.6 Sol and \"an even more capable pre-release model\" discovered vulnerabilities within their sandboxed testing environment, allowing them to gain access to the internet and target Hugging Face. On July 16th, [&#8230;]",
+    "fetched_at": "2026-07-21T23:07:58.948795+00:00"
+  },
+  {
+    "id": "6deae87e629a1695",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "Substack adds an AI detector to help spot blogs written by no one",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/968855/substack-pangram-ai-detecting-tool",
+    "published": "2026-07-21T19:22:28+00:00",
+    "summary": "Substack will now help users determine whether what they're reading may have been written by AI. A new tool coming to the platform can scan posts, notes, replies, and comments to provide an estimate of how much text could be AI-generated or written with AI assistance, according to a blog post published on Tuesday. The [&#8230;]",
+    "fetched_at": "2026-07-21T23:07:58.948795+00:00"
   }
 ]
