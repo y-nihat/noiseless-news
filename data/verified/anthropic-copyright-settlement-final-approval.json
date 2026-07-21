@@ -1,0 +1,62 @@
+{
+  "slug": "anthropic-copyright-settlement-final-approval",
+  "checked_at": "2026-07-21T00:27:00+00:00",
+  "method": "Verified directly in this session (fresh context vs. any prior cycle) via WebSearch/WebFetch: cross-checked the wire account (Reuters, byline Blake Brittain) against an independently-reported Bloomberg Law legal-press piece and Courthouse News Service coverage, plus the Authors Guild's own party-side settlement page for case background. Adversarial checks run: (1) resolved a $1.9B-vs-$1.5B headline discrepancy (Straits Times outlier) -- confirmed $1.5B is correct against dozens of independent figures across Reuters, Bloomberg Law, NPR/Authors Guild historical coverage, and Susman Godfrey (plaintiffs' counsel); (2) checked for wire-exclusivity risk (per verification.md §2) given most outlets carrying identical Reuters text -- found genuine independent confirmation in Bloomberg Law's own reporting (separate byline/organization, matching figures) and Courthouse News Service, so the two-independent-source bar is cleared without relying on Reuters-relay volume; (3) searched for any dispute/appeal of today's ruling -- none found; objectors' arguments were raised and overruled, some class members already opted out into separate pending suits (a real, disclosed caveat, not a live challenge to today's order).",
+  "origin_items": [
+    "GNews: AI litigation (Tier 3 aggregator) -- 'US judge approves Anthropic's $1.9 billion settlement of copyright lawsuit - The Straits Times', published 2026-07-20T23:58Z, and 'Anthropic's landmark $1.5B copyright settlement is approved - Yahoo Finance UK', published 2026-07-21T00:12Z (both traced to origin before use, per Tier-3 rule)"
+  ],
+  "dedup_check": {
+    "query": "Judge approves Anthropic's 1.5 billion dollar copyright settlement / https://www.straitstimes.com",
+    "result": "no matches -- standalone new story; no prior article or ledger entry on the Bartz v. Anthropic settlement"
+  },
+  "claims": [
+    {
+      "text": "On 20 July 2026, US District Judge Araceli Martinez-Olguin granted final approval to Anthropic's $1.5 billion settlement of the Bartz v. Anthropic author copyright class action, the largest known copyright class-action settlement in US history",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed by Reuters (wire, byline Blake Brittain, via Yahoo Finance) and independently by Bloomberg Law's own legal-press reporting, both naming the judge, amount, and date consistently. This is a public-record court ruling, not an unverifiable exclusive.",
+      "evidence": [
+        "https://finance.yahoo.com/news/us-judge-approves-anthropics-1-205152567.html",
+        "https://news.bloomberglaw.com/ip-law/anthropic-authors-1-5-billion-deal-receives-final-approval"
+      ]
+    },
+    {
+      "text": "The judge overruled objections that the settlement was too small, overcompensated plaintiffs' attorneys, or wrongly excluded some copyright owners",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": [
+        "https://finance.yahoo.com/news/us-judge-approves-anthropics-1-205152567.html",
+        "https://news.bloomberglaw.com/ip-law/anthropic-authors-1-5-billion-deal-receives-final-approval"
+      ]
+    },
+    {
+      "text": "The settlement covers more than 480,000 works; roughly $122 million goes to attorneys' fees and litigation costs, leaving about $3,000-3,100 per claimed work",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": [
+        "https://news.bloomberglaw.com/ip-law/anthropic-authors-1-5-billion-deal-receives-final-approval"
+      ]
+    },
+    {
+      "text": "The case (filed 2024) centered on Anthropic downloading pirated books from shadow libraries; Judge William Alsup ruled in 2025 that training Claude on the books was fair use but that retaining over 7 million pirated copies in a 'central library' was not, leading to the settlement",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": [
+        "https://finance.yahoo.com/news/us-judge-approves-anthropics-1-205152567.html",
+        "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/"
+      ]
+    },
+    {
+      "text": "Some authors and rights holders opted out of the class settlement and are pursuing separate, ongoing lawsuits against Anthropic",
+      "type": "business",
+      "verdict": "confirmed",
+      "evidence": [
+        "https://www.courthousenews.com/authors-publishers-near-final-approval-of-1-5-billion-anthropic-copyright-settlement/",
+        "https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/"
+      ]
+    }
+  ],
+  "not_used": {
+    "straits_times_1.9B_figure": "Discarded as an outlier/likely reporting error -- every other outlet checked (Reuters wire, Bloomberg Law, NPR/Authors Guild historical figures, Susman Godfrey) states $1.5 billion."
+  }
+}
