@@ -1,0 +1,60 @@
+{
+    "slug": "utrf-anthropic-patent-lawsuit",
+    "checked_at": "2026-07-21T23:16:00+00:00",
+    "method": "Fresh verifier sub-agent (independence/wire-exclusive check, docket lookup) and independent adversarial falsifier sub-agent (Anthropic-response search, prior-suit check, conflation-risk check against the unrelated Bartz v. Anthropic copyright settlement, staleness check), run in parallel. Legal/litigation claim type per policy/verification.md §3 -- every allegation attributed to UTRF's complaint, never stated as fact.",
+    "origin_items": [
+        "Surfaced via Techmeme (2026-07-21), byline Blake Brittain/Reuters. dedup-check run before opening: no match."
+    ],
+    "claims": [
+        {
+            "text": "UTRF filed a lawsuit against Anthropic in Delaware federal court alleging infringement of two neural-network patents; filed Monday 20 July 2026, made public Tuesday 21 July 2026",
+            "type": "business",
+            "verdict": "single-source",
+            "reasoning": "Every outlet found (Yahoo Finance/Reuters, KFGO, WHTC, News.az, TradingView, devdiscourse, wiky, WABX, US News) carries the identical Reuters wire text bylined Blake Brittain. No docket tracker (CourtListener, UniCourt, DocketBird, Stanford NPE tracker) has the case indexed yet -- too fresh. Wire-exclusive rule applied: treated as ONE source despite wide syndication.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/university-tennessee-sues-anthropic-over-154109605.html",
+                "https://kfgo.com/2026/07/21/university-of-tennessee-sues-anthropic-over-neural-network-technology/"
+            ]
+        },
+        {
+            "text": "UTRF alleges the infringed patents cover neuroscience-inspired neural-network/machine-learning technology invented by University of Tennessee professors",
+            "type": "business",
+            "verdict": "single-source",
+            "reasoning": "Consistent wording across all wire relays ('significant contributions to the fields of artificial intelligence, machine learning, neuromorphic computing, and neuroscience-inspired computing'). Neither patent numbers nor inventor names are disclosed in any secondary reporting; verifier found a plausible but unconfirmed circumstantial link to UTRF's TENNLab neuromorphic-computing group -- explicitly excluded from the article since it is not confirmed to be this suit's inventors.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/university-tennessee-sues-anthropic-over-154109605.html",
+                "https://kfgo.com/2026/07/21/university-of-tennessee-sues-anthropic-over-neural-network-technology/"
+            ]
+        },
+        {
+            "text": "Reuters reports the case is believed to be the first patent-infringement suit against Anthropic",
+            "type": "business",
+            "verdict": "single-source",
+            "reasoning": "This is Reuters' own hedged framing ('believed to be'), not an independently verified legal-database fact -- kept hedged in the article rather than stated flatly. Falsifier searched specifically for any prior patent suit against Anthropic and found none.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/university-tennessee-sues-anthropic-over-154109605.html"
+            ]
+        },
+        {
+            "text": "UTRF seeks unspecified monetary damages and an injunction against further infringement",
+            "type": "business",
+            "verdict": "single-source",
+            "reasoning": "Confirmed verbatim across all wire relays checked.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/university-tennessee-sues-anthropic-over-154109605.html"
+            ]
+        },
+        {
+            "text": "An Anthropic spokesperson said: 'We disagree with the allegations and intend to defend this case vigorously'",
+            "type": "statement",
+            "verdict": "single-source",
+            "reasoning": "Surfaced independently by both the verifier and the falsifier from the Yahoo/Reuters and KFGO full text -- Anthropic did not decline to comment. Added to the article; absent from the initial triage summary.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/university-tennessee-sues-anthropic-over-154109605.html",
+                "https://kfgo.com/2026/07/21/university-of-tennessee-sues-anthropic-over-neural-network-technology/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH as single-source litigation with strict attribution. Falsifier confirmed: (1) no prior patent suit against Anthropic found -- 'first' framing is accurate as reported and correctly hedged; (2) no conflation with the separate, already-settled Bartz v. Anthropic copyright case -- UTRF's own complaint explicitly distinguishes the two, and the article notes the timing (one day after the copyright settlement's final approval) only as context, not as related litigation; (3) story is same-day breaking news, not stale/recycled; (4) Anthropic's on-record denial should be included for balance -- done; (5) no case/docket number found by either agent -- article does not invent one.",
+    "gaps_closed_from_watching_state": []
+}

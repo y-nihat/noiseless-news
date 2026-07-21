@@ -1,0 +1,23 @@
+{
+    "slug": "utrf-anthropic-patent-lawsuit",
+    "title": "University of Tennessee Research Foundation sues Anthropic over neural-network patents",
+    "status": "published",
+    "state": "published",
+    "date": "2026-07-21",
+    "first_seen": "2026-07-21",
+    "published_at": "2026-07-21",
+    "langs": [
+        "en",
+        "tr"
+    ],
+    "source_urls": [
+        "https://finance.yahoo.com/technology/ai/articles/university-tennessee-sues-anthropic-over-154109605.html",
+        "https://kfgo.com/2026/07/21/university-of-tennessee-sues-anthropic-over-neural-network-technology/"
+    ],
+    "watch": [
+        "Whether independent (non-Reuters-derived) reporting or a docket/case-number record surfaces",
+        "Any Anthropic response beyond the initial denial (motion to dismiss, answer, settlement)",
+        "Patent numbers or named inventors, if disclosed"
+    ],
+    "cycle_2026-07-22_night_c2_note": "New standalone story, surfaced via Techmeme (Reuters wire), dedup-check clean. Legal/litigation claim type -- verified via parallel fresh verifier + adversarial falsifier sub-agents. Confirmed wire-exclusive (all outlets relay one Reuters story, byline Blake Brittain); no docket indexed yet. Falsifier's key addition: Anthropic's on-record denial ('We disagree with the allegations and intend to defend this case vigorously'), missing from the initial triage summary, added to the article. All claims labeled single-source per the wire-exclusive rule; every allegation attributed to UTRF's complaint, no court ruling implied. Style gates run on both languages: pass."
+}
