@@ -1,0 +1,53 @@
+{
+  "slug": "meta-synaps-genesis-mission",
+  "checked_at": "2026-07-21T23:00:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh sub-agent contexts); verifier cross-checked Meta's blog against whitehouse.gov, energy.gov, and Berkeley Lab (newscenter.lbl.gov, elements.lbl.gov) sources; falsifier re-fetched Meta's primary post to pin exact quote wording, checked the Dario Gil quote's actual subject, and checked SYNAPS-I partner-lab completeness",
+  "origin_items": [
+    "data/ledger/run-report-2026-07-22-2232Z.md — cycle 1 Tier-0 sweep candidate (Meta AI Blog)"
+  ],
+  "claims": [
+    {
+      "text": "Genesis Mission: DOE-led national AI-for-science initiative, launched via White House executive order 24 November 2025, Dario Gil as mission director",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Independently confirmed against whitehouse.gov and energy.gov primary sources, not dependent on Meta's account.",
+      "evidence": ["https://www.energy.gov/articles/energy-department-launches-genesis-mission-transform-american-science-and-innovation"]
+    },
+    {
+      "text": "SYNAPS-I: Berkeley Lab-led multi-lab initiative with partners Argonne, Brookhaven, Oak Ridge and SLAC, across seven DOE user facilities",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Independently confirmed against Berkeley Lab's own materials, which additionally named SLAC as a fifth partner lab that Meta's own post omitted -- added to the published article on the falsifier's correction.",
+      "evidence": ["https://elements.lbl.gov/news/supporting-does-genesis-mission/"]
+    },
+    {
+      "text": "Meta fine-tuned SAM 3 and DINOv3 on scientific imaging data, deployed across 300 A100 GPUs at NERSC for SYNAPS-I's segmentation pipeline",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Stated only in Meta's own post; no DOE or Berkeley Lab material names Meta, SAM, or DINOv3, or confirms the GPU count. Labeled vendor-claim in the article.",
+      "evidence": ["https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/"]
+    },
+    {
+      "text": "Claimed speedup: a month of expert annotation per time step down to 15 minutes, for grapevine/xylem micro-CT imaging",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Falsifier re-fetched the primary source and pinned the exact quote ('What previously required a month of expert annotation per time step now takes 15 minutes'); this exact wording is used in the article rather than a looser paraphrase. Uncorroborated by any independent DOE/lab source.",
+      "evidence": ["https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/"]
+    },
+    {
+      "text": "Dario Gil quote in Meta's post, given at the Trillion Parameter Consortium, addresses SYNAPS-I generally",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier confirmed the quote is Gil's general commentary on SYNAPS-I's approach, not a specific endorsement of Meta's tools -- the article makes this distinction explicit to avoid implying an endorsement that wasn't given.",
+      "evidence": ["https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/"]
+    },
+    {
+      "text": "~60 researchers across five national labs; data-generation rate figures (1 image/6s to 100,000 images/s)",
+      "type": "research",
+      "verdict": "vendor-claim",
+      "reasoning": "Researcher count and detector-rate figures appear only in Meta's account. Petabyte-scale data volume is independently corroborated by Berkeley Lab in general terms, without Meta's specific annual figure.",
+      "evidence": ["https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/", "https://elements.lbl.gov/news/supporting-does-genesis-mission/"]
+    }
+  ],
+  "notes": "In scope: AI vision models applied to national-lab science, explicit AI angle. Falsifier found no independent source contradicting Meta's role within SYNAPS-I's segmentation pipeline specifically, though DOE/Berkeley Lab remain the initiative's leaders. No staleness issue -- Meta's post dated 21 July 2026 matches story date. Dedup-check clean before opening."
+}

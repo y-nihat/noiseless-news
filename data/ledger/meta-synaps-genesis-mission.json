@@ -1,0 +1,21 @@
+{
+  "slug": "meta-synaps-genesis-mission",
+  "title": "Meta's SAM 3 and DINOv3 vision models deployed in DOE's Genesis Mission science initiative",
+  "date": "2026-07-21",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-21",
+  "published_at": "2026-07-21",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/",
+    "https://www.energy.gov/articles/energy-department-launches-genesis-mission-transform-american-science-and-innovation",
+    "https://elements.lbl.gov/news/supporting-does-genesis-mission/"
+  ],
+  "dedup_check": "clean (no archive match) before opening, cycle 1",
+  "watch": [
+    "Any DOE or Berkeley Lab material naming Meta's specific role, GPU count, or the claimed speedup figure",
+    "Other Genesis Mission / SYNAPS-I coverage naming additional AI vendors"
+  ],
+  "cycle_2026-07-21_night_c1_note": "New standalone story from cycle 1 Tier-0 sweep (Meta AI Blog fresh post). Fresh verifier + fresh adversarial falsifier sub-agents both ran independently; falsifier added SLAC as a fifth SYNAPS-I partner lab (omitted by Meta's own post but independently confirmed via Berkeley Lab), pinned the exact 'month of expert annotation per time step -> 15 minutes' quote wording, and clarified the Dario Gil quote addresses SYNAPS-I generally rather than endorsing Meta's tools specifically. Style gates: EN pass, TR pass (see run report)."
+}
