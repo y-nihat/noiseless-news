@@ -1,0 +1,21 @@
+{
+  "slug": "google-gemini-3-6-flash-launch",
+  "title": "Google launches Gemini 3.6 Flash and 3.5 Flash-Lite, holds back its 3.5 Pro flagship",
+  "date": "2026-07-21",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-21",
+  "published_at": "2026-07-21",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+    "https://artificialanalysis.ai/articles/gemini-3-6-flash-3-5-flash-lite-halving-time",
+    "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/"
+  ],
+  "dedup_check": "clean (no archive match) before opening, cycle 1",
+  "watch": [
+    "Gemini 3.5 Pro launch itself, once/if it ships -- would be a follow-up",
+    "Any independent reproduction of the vendor benchmark figures"
+  ],
+  "cycle_2026-07-21_night_c1_note": "New standalone story from cycle 1 Tier-0 sweep (Google DeepMind Blog fresh ingest item). Fresh verifier + fresh adversarial falsifier sub-agents both ran independently; falsifier confirmed no factual errors, recommended two framing tightenings (flat Intelligence Index score, not an improvement; 3.5 Pro delay framed as single-source attributed report) which were applied. Style gates: EN pass, TR pass (see run report)."
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "google-gemini-3-6-flash-launch",
+  "checked_at": "2026-07-21T22:50:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh sub-agent contexts); verifier re-fetched Google's primary announcement and cross-checked vendor benchmark numbers against Artificial Analysis's independent measurement; falsifier re-fetched the primary source, checked for corrections/errors, and confirmed the Bloomberg-sourced 3.5 Pro delay detail across multiple relaying outlets",
+  "origin_items": [
+    "data/ledger/run-report-2026-07-22-2232Z.md — cycle 1 Tier-0 sweep candidate (Google DeepMind Blog)"
+  ],
+  "claims": [
+    {
+      "text": "Google introduced three new Gemini models on 21 July 2026: Gemini 3.6 Flash, Gemini 3.5 Flash-Lite, and Gemini 3.5 Flash Cyber",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed against Google's own blog post by both verifier and falsifier, and independently reported by TechCrunch, 9to5Google, MarkTechPost, The Hacker News.",
+      "evidence": ["https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"]
+    },
+    {
+      "text": "3.6 Flash and 3.5 Flash-Lite are available immediately; 3.5 Flash Cyber is restricted to a limited-access pilot for governments and trusted partners",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim match on primary source, confirmed by both agents.",
+      "evidence": ["https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"]
+    },
+    {
+      "text": "Pricing: 3.6 Flash $1.50/$7.50 per million input/output tokens; 3.5 Flash-Lite $0.30/$2.50; Flash Cyber pricing undisclosed",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed on primary source and independently by OpenRouter, Artificial Analysis, and other pricing trackers per falsifier check.",
+      "evidence": ["https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"]
+    },
+    {
+      "text": "Google's own benchmark comparisons (MLE-Bench, OSWorld-Verified, output-token reduction) versus 3.5 Flash",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Vendor-reported figures, transcribed accurately from the primary source but not independently reproduced task-by-task; labeled vendor-claim per policy.",
+      "evidence": ["https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"]
+    },
+    {
+      "text": "Independent Artificial Analysis measurement: flat Intelligence Index score, >50% time-per-task reduction, ~18% cost-per-task reduction",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Independent evaluator directly measured the release; both verifier and falsifier confirmed these figures against Artificial Analysis's own published article, fetched live this cycle.",
+      "evidence": ["https://artificialanalysis.ai/articles/gemini-3-6-flash-3-5-flash-lite-halving-time"]
+    },
+    {
+      "text": "Multiple outlets, citing Bloomberg, report Gemini 3.5 Pro was held back after missing internal performance targets",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "All relaying outlets (TechCrunch, The Information, PCWorld, Yahoo Finance) trace to one Bloomberg report per the independence rule (verification.md §2); presented in the article as an attributed, unconfirmed report, not stated as our own confirmed fact.",
+      "evidence": ["https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/"]
+    }
+  ],
+  "notes": "Falsifier flagged two tightenings applied in the published article: (1) the Artificial Analysis Intelligence Index result is a plateau, not an improvement, so the article does not imply capability gains where only efficiency gains are supported; (2) the 3.5 Pro delay is presented as an attributed single-source report. No factual errors or corrections found. Dedup-check clean (no archive match) before opening."
+}
