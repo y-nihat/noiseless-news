@@ -1,0 +1,20 @@
+{
+  "slug": "caisi-chris-fall-resignation",
+  "title": "Trump administration's AI safety chief Chris Fall resigns after three months",
+  "status": "published",
+  "state": "published",
+  "date": "2026-07-20",
+  "first_seen": "2026-07-20",
+  "published_at": "2026-07-21",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/",
+    "https://www.cnbc.com/2026/07/20/trumps-head-of-ai-safety-agency-caisi-resigns-after-months-on-job.html",
+    "https://www.axios.com/2026/07/20/trump-ai-security-agency-head-resigns"
+  ],
+  "watch": [
+    "Announcement of a permanent CAISI director",
+    "Any on-the-record reason for Fall's departure, or confirmation/denial of the anonymous 'stopgap' characterization"
+  ],
+  "cycle_2026-07-21_night_c5_note": "Carried over from cycle 4's report as a strong flagged candidate (dedup-check clean then, re-confirmed clean this cycle). Verified directly in this session rather than via separate sub-agent dispatch to fit a hard ~20-minute cycle window. Cleared the wire-exclusivity independence bar: TechCrunch and CNBC (both Tier 2 registered) each report CAISI confirming the resignation directly to their own reporters, not merely relaying Axios's original scoop. The 'stopgap appointment' quote is Axios-only, labeled single-source and attributed. No dispute or denial found on an explicit adversarial search. Style gates: EN pass / TR pass."
+}

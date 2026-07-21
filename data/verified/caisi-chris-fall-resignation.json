@@ -1,0 +1,69 @@
+{
+  "slug": "caisi-chris-fall-resignation",
+  "checked_at": "2026-07-21T01:05:00+00:00",
+  "method": "Verified directly in this session (fresh context, no prior draft) to fit a hard ~20-minute cycle deadline rather than dispatching separate verifier/falsifier sub-agents. Cross-checked TechCrunch and CNBC (both Tier 2, registered) against the Axios scoop and a Reuters mention (via search snippet); each of TechCrunch and CNBC reports CAISI confirming the resignation directly to its own reporters, not merely relaying Axios, clearing the wire-exclusivity independence bar. Ran an explicit adversarial search for denial/dispute -- none found.",
+  "origin_items": [
+    "GNews: AI safety and evaluations feed, 2026-07-21 cycle -- PYMNTS.com (23:58Z) and InnovationAus.com (00:22Z) leads; GNews: AI regulation and policy feed -- TechCrunch lead (22:21Z). All Tier-3 aggregator leads traced to origin outlets."
+  ],
+  "claims": [
+    {
+      "text": "Chris Fall resigned as director of the Commerce Department's Center for AI Standards and Innovation (CAISI) on 20 July 2026, roughly three months after being appointed in late April 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed independently by TechCrunch (byline Julie Bort) and CNBC, both Tier 2 registered sources, plus the original Axios scoop. TechCrunch and CNBC each report CAISI confirmed the departure directly to their own reporters.",
+      "evidence": [
+        "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/",
+        "https://www.cnbc.com/2026/07/20/trumps-head-of-ai-safety-agency-caisi-resigns-after-months-on-job.html",
+        "https://www.axios.com/2026/07/20/trump-ai-security-agency-head-resigns"
+      ]
+    },
+    {
+      "text": "CAISI confirmed the resignation directly to multiple outlets; no public reason was given, and a White House spokesperson declined to comment",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Consistent across TechCrunch, CNBC, and Axios; a Reuters mention (via search snippet) separately notes the Trump spokesperson decline-to-comment detail.",
+      "evidence": [
+        "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/",
+        "https://www.cnbc.com/2026/07/20/trumps-head-of-ai-safety-agency-caisi-resigns-after-months-on-job.html"
+      ]
+    },
+    {
+      "text": "NIST Director Dr. Arvind Raman will serve as acting CAISI director while Commerce evaluates candidates for a permanent replacement",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Reported consistently by TechCrunch and Axios.",
+      "evidence": [
+        "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/",
+        "https://www.axios.com/2026/07/20/trump-ai-security-agency-head-resigns"
+      ]
+    },
+    {
+      "text": "A Commerce official told Axios that Fall's appointment had always been intended as a short-term, stopgap arrangement",
+      "type": "statement",
+      "verdict": "single-source",
+      "reasoning": "This specific attribution traces only to Axios's anonymous Commerce official; no independent corroboration found. Labeled single-source and attributed in the article text.",
+      "evidence": [
+        "https://www.axios.com/2026/07/20/trump-ai-security-agency-head-resigns"
+      ]
+    },
+    {
+      "text": "Fall is the second CAISI director to depart in months: predecessor Collin Burns left after less than a week in April 2026, reportedly pushed out over his prior work for Anthropic amid administration tensions with the company",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Reported by TechCrunch as established background context on CAISI's leadership churn.",
+      "evidence": [
+        "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/"
+      ]
+    }
+  ],
+  "adversarial_checks": [
+    "Searched explicitly for denial/dispute of the resignation or its framing -- none found; all outlets (TechCrunch, CNBC, Axios, Reuters snippet, PYMNTS, Daily Signal, Cryptopolitan) consistent on the core facts.",
+    "Checked for wire-exclusivity collapse: TechCrunch and CNBC both report CAISI confirming to their own reporters directly, not solely relaying Axios's scoop -- independence holds."
+  ],
+  "unregistered_sources_used": [
+    {
+      "name": "Axios",
+      "note": "Quality press, would qualify Tier 2; not currently in sources.yaml. Used for the acting-director and stopgap-quote claims. Proposed for registration (not added this cycle per instruction not to modify policy files)."
+    }
+  ]
+}
