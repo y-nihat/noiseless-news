@@ -38,5 +38,25 @@
     "published": "2026-07-21T17:45:08+00:00",
     "summary": "<p>Google released Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber on July 21, 2026. The Flash tier gets cheaper and more token-efficient, with 3.6 Flash cutting output tokens 17% and dropping its output price to $7.50 per 1M. Flash-Lite runs at 350 tokens/sec, while gated Flash Cyber powers CodeMender for vulnerability finding. The flagship 3.5 Pro remains delayed.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/21/google-releases-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber-a-cheaper-more-token-efficient-flash-tier-built-for-agentic-workloads/\">Google Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber: A Cheaper, More Token-Efficient Flash Tier Built for Agentic Workloads</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-07-22T11:49:18.331336+00:00"
+  },
+  {
+    "id": "eda225bbd33f5c13",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Cursor Releases Cursor Router: A Request-Level Classifier Delivering Frontier Coding Quality at 30–50% Lower Cost",
+    "url": "https://www.marktechpost.com/2026/07/22/cursor-releases-cursor-router-a-request-level-classifier/",
+    "published": "2026-07-22T22:37:44+00:00",
+    "summary": "<p>Cursor has made Cursor Router generally available for Teams and Enterprise plans. The system classifies each request on query, context, task complexity and domain, then routes it to the most suitable model. Cursor reports frontier-quality output at 60% savings in online A/B tests, and 30–50% savings for three early-access enterprise accounts measured against Opus 4.8 rates.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/22/cursor-releases-cursor-router-a-request-level-classifier/\">Cursor Releases Cursor Router: A Request-Level Classifier Delivering Frontier Coding Quality at 30–50% Lower Cost</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-22T22:39:03.486214+00:00"
+  },
+  {
+    "id": "e1b5d94ee7bab257",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Research-Grade EdgeBench Analysis: AI Agent Benchmarking, Leaderboard Analytics, Scaling Laws, and Evaluation Metrics",
+    "url": "https://www.marktechpost.com/2026/07/22/research-grade-edgebench-analysis-ai-agent-benchmarking-leaderboard-analytics-scaling-laws-and-evaluation-metrics/",
+    "published": "2026-07-22T21:53:58+00:00",
+    "summary": "<p>In this tutorial, we explore EdgeBench as a practical benchmark for evaluating advanced AI agents across diverse task categories, runtime environments, and interaction-time budgets. We begin by downloading the dataset snapshot from Hugging Face, parsing the released task specifications, and examining the benchmark taxonomy, execution settings, internet requirements, judging logic, and scoring metadata. We then [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/22/research-grade-edgebench-analysis-ai-agent-benchmarking-leaderboard-analytics-scaling-laws-and-evaluation-metrics/\">Research-Grade EdgeBench Analysis: AI Agent Benchmarking, Leaderboard Analytics, Scaling Laws, and Evaluation Metrics</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-22T22:39:03.486214+00:00"
   }
 ]
