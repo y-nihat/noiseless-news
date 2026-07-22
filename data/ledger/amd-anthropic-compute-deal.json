@@ -1,0 +1,23 @@
+{
+  "slug": "amd-anthropic-compute-deal",
+  "title": "AMD commits up to $5 billion to Anthropic in AI chip partnership",
+  "date": "2026-07-22",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-22",
+  "published_at": "2026-07-22",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus",
+    "https://www.cnbc.com/2026/07/22/amd-anthropic-ai-chip-investment.html",
+    "https://www.tomshardware.com/tech-industry/amd-to-supply-anthropic-with-2-gigawatts-of-instinct-mi450-gpus",
+    "https://www.bloomberg.com/news/articles/2026-07-22/amd-to-invest-up-to-5-billion-in-anthropic-chip-deal-wsj-says"
+  ],
+  "dedup_check": "clean (no archive match) before opening, cycle 1 -- distinct from the still-watching anthropic-meta-compute-deal entry (that one is a separate, unconfirmed Meta-leases-compute-to-Anthropic story) and from meta-ai-chip-production (Meta's own custom chip, unrelated company)",
+  "watch": [
+    "Any Anthropic-side (anthropic.com/news) confirmation or additional detail mirroring the AMD announcement",
+    "Reporting on the separate, unverified 'tens of billions' hardware-purchase-commitment detail referenced by some secondary outlets -- follow up if a citable, fetchable source surfaces",
+    "Progress against the H1 2027 first-gigawatt deployment timeline"
+  ],
+  "cycle_2026-07-23_night_c1_note": "New standalone story from cycle 1 Tier-0 sweep of fresh ingest (gnews-ai-chips-and-compute.json, techmeme.json). Dedup-check clean. Fresh verifier sub-agent found the story originates from an official joint AMD/Anthropic press release (Tier-0, ir.amd.com) -- stronger than the minimum bar since all load-bearing figures are confirmed directly against the primary source, not merely corroborated secondary reporting. Fresh adversarial falsifier independently re-fetched the primary release and found no contradictions; flagged (a) no Anthropic-side mirror of the announcement (acceptable per policy, noted as caveat) and (b) an unverified secondary claim about a separate large hardware-purchase commitment, which was deliberately excluded from the published claim set for lack of a citable source. Style gates: EN pass, TR pass (see run report)."
+}

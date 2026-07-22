@@ -1,0 +1,47 @@
+{
+  "slug": "amd-anthropic-compute-deal",
+  "checked_at": "2026-07-22T22:48:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts), primary WebFetch of ir.amd.com plus independent web search/fetch corroboration",
+  "origin_items": [
+    "data/raw/2026-07-22/gnews-ai-chips-and-compute.json — AMD/Anthropic partnership coverage",
+    "data/raw/2026-07-22/techmeme.json — AMD/Anthropic partnership coverage"
+  ],
+  "claims": [
+    {
+      "text": "AMD and Anthropic announced a strategic partnership on 22 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (AMD investor-relations press release) alone suffices for an announcement claim.",
+      "evidence": ["https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"]
+    },
+    {
+      "text": "AMD committed to a strategic equity investment of up to $5 billion in Anthropic",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Exact figure and 'up to' qualifier confirmed verbatim in the Tier-0 press release via direct live fetch by both the verifier and the adversarial falsifier; independently corroborated (no contradiction) by CNBC and Bloomberg/WSJ-sourced reporting.",
+      "evidence": ["https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus", "https://www.cnbc.com/2026/07/22/amd-anthropic-ai-chip-investment.html", "https://www.bloomberg.com/news/articles/2026-07-22/amd-to-invest-up-to-5-billion-in-anthropic-chip-deal-wsj-says"]
+    },
+    {
+      "text": "The companies plan to deploy up to 2 gigawatts of AMD Instinct MI450-series (MI455X) GPUs, in AMD Helios rack-scale systems, for Anthropic's Claude models",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly from the primary release text; Tom's Hardware and TechPowerUp independently corroborate the technical detail (EPYC 'Venice' CPUs, Pensando networking, ROCm) with no discrepancy.",
+      "evidence": ["https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus", "https://www.tomshardware.com/tech-industry/amd-to-supply-anthropic-with-2-gigawatts-of-instinct-mi450-gpus"]
+    },
+    {
+      "text": "Deployment of the first gigawatt is planned to begin in the first half of 2027",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated verbatim in the primary release; confirmed via direct live fetch of ir.amd.com by both the verifier and falsifier passes.",
+      "evidence": ["https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"]
+    },
+    {
+      "text": "Anthropic already runs production workloads on AMD Instinct MI355X GPUs; the new deal expands that existing relationship",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated in the primary release framing this as an expansion; corroborated independently by Tom's Hardware.",
+      "evidence": ["https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus", "https://www.tomshardware.com/tech-industry/amd-to-supply-anthropic-with-2-gigawatts-of-instinct-mi450-gpus"]
+    }
+  ],
+  "notes": "Adversarial falsifier separately fetched the AMD IR press release directly and confirmed all four load-bearing figures verbatim; found no contradicting reports, corrections, or retractions across CNBC, Bloomberg/WSJ, Tom's Hardware, TechPowerUp, StockTitan, and GlobeNewswire. No Anthropic-side (anthropic.com/news) mirror of the announcement was found — acceptable per policy since one Tier-0 primary suffices for an announcement claim, but noted as a one-sided-announcement caveat. Secondary reporting (e.g. a Yahoo Finance headline referencing AMD also selling Anthropic 'tens of billions' in AI servers as a separate hardware-purchase commitment distinct from the $5B equity stake) could not be independently verified firsthand within this cycle's budget (source page 403'd) and was deliberately left out of the published claim set rather than cited on an unverified figure -- candidate for a follow-up if it recurs with a citable source. Blocked-evidence domains (mlq.ai, cryptobriefing.com) appeared in raw search results and were excluded."
+}
