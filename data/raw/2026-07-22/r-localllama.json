@@ -378,5 +378,15 @@
     "published": "2026-07-22T17:30:27+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>GLM-5.2 UD-Q4_K_XL GGUF @ 12.2 tok/s output // 30.9 tok/s input on a real 10.7k-token document using llama.cpp RPC - At 10.7k context: 10.2 tok/s output with coherent long-form generation</p> <ul> <li>Two parallel requests: 14.5 tok/s aggregate</li> </ul> <p>Context: 2x 16,384-token slots</p> <ul> <li>Model size: 436 GiB</li> </ul> <p>Hardware: 16x AMD MI50 32GB, 512GB total, 100w cap each</p> <p>VRAM, split across two 8-GPU nodes</p> <ul> <li>Interconnect: direct 10 GbE DAC, MTU 9000</li> </ul> <p>Before llama.cpp, spent a lot of time integrating GLM-5.2 AWQ INT4 into a custom vLLM-gfx906 v19 Moby Dick build using TP=8 and PP=2. Hit 14t/s decode and 50 t/s prefill but inference degraded after 10k. Didn't get around to MTP things yet. Here's hoping someone figures out getting the Moby Dick repo going with it</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Legal-Ad-3901\"> /u/Legal-Ad-3901 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v3myq9/16x_amd_mi50_32gb_glm52_q4_at_122_toks_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v3myq9/16x_amd_mi50_32gb_glm52_q4_at_122_toks_with/\">[comments]</a></span>",
     "fetched_at": "2026-07-22T22:39:03.486214+00:00"
+  },
+  {
+    "id": "1ddda7aa97b25454",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Introducing Antares: Highly Efficient Open Weight AI Models for Vulnerability Localization",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v3tlpr/introducing_antares_highly_efficient_open_weight/",
+    "published": "2026-07-22T21:22:25+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v3tlpr/introducing_antares_highly_efficient_open_weight/\"> <img alt=\"Introducing Antares: Highly Efficient Open Weight AI Models for Vulnerability Localization\" src=\"https://external-preview.redd.it/aPRoVqWcnmv0CBRxYt2ZIolX1fqHIludWEEMUeoXs-g.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=267153eea7f5545a895bb04f6496e64f41203c62\" title=\"Introducing Antares: Highly Efficient Open Weight AI Models for Vulnerability Localization\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Seems pretty impressive for its size! </p> <p>That's the kind of thing I want to see more of, really small models that excel at specific fields.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/suamai\"> /u/suamai </a> <br /> <span><a href=\"https://blogs.cisco.com/ai/introducing-antares-the-most-efficient-open-weight-ai-models-for-vulnerability-localization\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v3tlpr/introducing_antares_highly_efficient_open_weight/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-22T23:14:03.647279+00:00"
   }
 ]
