@@ -1,0 +1,40 @@
+{
+  "slug": "samsung-mistral-ai-stake",
+  "checked_at": "2026-07-22T23:26:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts), web search/fetch corroboration including direct fetch of sifted.eu and mistral.ai/news",
+  "origin_items": [
+    "data/raw/2026-07-22/techmeme.json — Techmeme relay of Financial Times exclusive",
+    "data/raw/2026-07-22/gnews-ai-chips-and-compute.json — secondary market-reaction coverage"
+  ],
+  "claims": [
+    {
+      "text": "Samsung is in talks to take an equity stake in Mistral AI's Series D funding round",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Two independently sourced reports: Financial Times ('people familiar with the matter') and Sifted (own separate source with direct knowledge, confirmed by direct fetch of the Sifted article — its sourcing is explicitly distinct from, not a relay of, FT's). Clears the >=2-independent-sources bar for a business claim.",
+      "evidence": ["https://www.ft.com/content/67a5d255-c6e9-4269-b8a0-3105db69c1ec", "https://sifted.eu/articles/samsung-mistral-series-d"]
+    },
+    {
+      "text": "The Financial Times reports the investment could be worth roughly €1 billion",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Every outlet checked (Reuters, Yahoo Finance, Investing.com, TradingView, techfundingnews, the-decoder, PYMNTS, TechStartups, thenextweb, Silicon Republic, Manila Times, etc.) attributes this figure explicitly to FT; Reuters' own wire text states it 'could not immediately verify the report.' Sifted's independent source confirmed only that talks exist, not the amount. No independent corroboration found by either the verifier or the adversarial falsifier.",
+      "evidence": ["https://www.ft.com/content/67a5d255-c6e9-4269-b8a0-3105db69c1ec"]
+    },
+    {
+      "text": "The Financial Times reports the round would value Mistral at roughly €20 billion",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Same pattern as the €1B figure: single-origin cascade from FT, no independent outlet has its own sourcing for this specific number. USD conversions cited elsewhere are currency-conversion noise on the same underlying euro figure, not corroboration.",
+      "evidence": ["https://www.ft.com/content/67a5d255-c6e9-4269-b8a0-3105db69c1ec"]
+    },
+    {
+      "text": "Samsung and Mistral both declined to comment on the talks",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated consistently across FT-derived wire coverage and independently confirmed in Sifted's own reporting.",
+      "evidence": ["https://www.ft.com/content/67a5d255-c6e9-4269-b8a0-3105db69c1ec", "https://sifted.eu/articles/samsung-mistral-series-d"]
+    }
+  ],
+  "notes": "Checked mistral.ai/news directly: no official announcement of a Samsung stake or new valuation exists there (most recent official funding news is the Sept 2025 €1.7B round) -- no Tier-0 primary confirmation, story rests entirely on the two Tier-2 press reports. Adversarial falsifier independently re-fetched sifted.eu and confirmed its sourcing is genuinely separate from FT (own confidential source, explicitly distinguished in the article's own text from the FT-attributed sentence). No denial, contradiction, or evidence of a company/deal mixup found. FT's report and all syndicated coverage are same-day (2026-07-22), not stale. Headline and load-bearing claim (talks exist) rest only on the confirmed claim per the editor gate; the €1B/€20B figures are included but explicitly labeled single-source and attributed, not stated as fact."
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "samsung-mistral-ai-stake",
+  "title": "Samsung in talks to take a stake in Mistral AI's Series D",
+  "date": "2026-07-22",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-22",
+  "published_at": "2026-07-22",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.ft.com/content/67a5d255-c6e9-4269-b8a0-3105db69c1ec",
+    "https://sifted.eu/articles/samsung-mistral-series-d"
+  ],
+  "dedup_check": "clean (no archive match) before opening, cycle 2",
+  "watch": [
+    "A second, independently-sourced outlet (not relaying FT) confirming the €1B investment size or €20B valuation",
+    "Any official Samsung or Mistral statement/filing confirming, denying, or detailing the talks",
+    "Progress toward a signed/closed Series D round, which would itself be a follow-up news event"
+  ],
+  "cycle_2026-07-23_night_c2_note": "Carried forward from cycle 1's report as a promising, not-yet-verified candidate (dedup-check clean, two leads noted: FT via Techmeme + Sifted). Fresh verifier sub-agent (11 searches/fetches) found the 'talks exist' claim clears the business-claim bar via two genuinely independent sourcing chains (FT's own sourcing + Sifted's own separate confidential source, confirmed by direct fetch of sifted.eu). The €1B/€20B figures trace to FT only -- every other outlet relays FT for these specific numbers, and Reuters explicitly could not verify them independently -- so these stayed single-source and were kept out of the headline/TL;DR per the editor gate (Gate 1: headline must rest on confirmed claims only). Fresh adversarial falsifier independently re-checked Sifted's independence, searched for denials/contradictions (none found), confirmed same-day freshness, and re-searched for independent corroboration of the figures (none found) -- story survived adversarial review unchanged. Style gates: EN pass, TR pass (see run report)."
+}
