@@ -563,6 +563,18 @@
       "context": "Third occurrence logged for techtimes.com (see also candidates_2026-07-13_night2_c2) -- this time reporting that the grok-build upload code path remains present in the newly open-sourced repo, merely disabled by a server-side flag. Found via search only this cycle, not independently re-fetched, so NOT used as evidence in xai-grok-build-privacy-incident; the claim was dropped as a watch item instead. Recurrence across three separate stories now strengthens the case for Tier 2 registration."
     }
   ],
+  "candidates_2026-07-23_night_c3": [
+    {
+      "domain": "thenextweb.com",
+      "first_seen": "2026-07-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://thenextweb.com/news/z-ai-data-centre-chinese-made-chips-nvidia"
+      ],
+      "context": "Established European tech outlet; used in zai-1gw-domestic-chip-datacenter for the 'no comment from Z.AI' detail and the capacity-vs-capability caveat -- own framing, not a pure relay. Propose Tier 2.",
+      "recurrence_note": "bloomberg.com and scmp.com were both used again this cycle (zai-1gw-domestic-chip-datacenter) -- see prior entries under candidates_2026-07-12_night_c1 and candidates_2026-07-12_night_c3; recurrence across multiple nights now strengthens both for Tier 2 registration."
+    }
+  ],
   "candidates_2026-07-19_night_c5": [
     {
       "domain": "macrumors.com",

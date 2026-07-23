@@ -1,0 +1,31 @@
+{
+  "slug": "zai-1gw-domestic-chip-datacenter",
+  "checked_at": "2026-07-23T00:01:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts), web search/fetch corroboration across English and Chinese-language press",
+  "origin_items": [
+    "cycle 2 report carryover (Z.AI/Zhipu 1GW datacenter, flagged as strong Tier-0/press lead, not opened in cycle 2)"
+  ],
+  "claims": [
+    {
+      "text": "Z.AI (Zhipu AI) completed and partially activated a roughly 1-gigawatt data center that runs entirely on Chinese-made AI chips, with no Nvidia hardware",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Bloomberg's exclusive (anonymous source) and South China Morning Post's separately-sourced report (own 'people familiar with the matter', does not cite Bloomberg) are editorially independent under the wire-exclusive check. Falsifier pass found no denials/retractions and broad corroboration across English and Chinese financial press (Tom's Hardware, DataCenterDynamics, TechNode, Sina Finance, 163.com, Beijing News, Caixin-adjacent 财联社, 10jqka) with no contradictions. Confirmed not stale: no pre-July-2026 reporting of this specific facility found.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai",
+        "https://www.scmp.com/tech/big-tech/article/3361374/zai-shares-surge-37-firm-builds-giant-data-centre-powered-chinese-chips"
+      ]
+    },
+    {
+      "text": "Z.AI has not itself confirmed the report and did not respond to a request for comment",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly in Bloomberg's reporting and explicitly noted by TheNextWeb.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai",
+        "https://thenextweb.com/news/z-ai-data-centre-chinese-made-chips-nvidia"
+      ]
+    }
+  ],
+  "notes": "Deliberately excluded from the published claim set (verifier flagged as not clearing the bar or out of scope for a tight article): (1) the specific '10,000+ chip cluster' magnitude -- single-source, traces only to Bloomberg's anonymous source; (2) the identity of the domestic chip vendor (Huawei/Cambricon speculation) -- unconfirmed for this facility by any source, only inferred from an unrelated claim about a different model (GLM-5.2 training provenance), which is itself a vendor-claim not independently audited; (3) the Zhongke Jiahe/XCore Sigma acquisition -- corroborated by SCMP plus several unregistered Chinese-language outlets, but time did not allow pulling a second citable URL from a registered/qualifying Tier<=2 source this cycle, so it was left out rather than published single-sourced; candidate for a follow-up; (4) the stock-move percentage (~37% close per SCMP, intraday figures varied 20-41% across outlets) -- single-outlet-anchored figure, dropped rather than hedged given time budget. Falsifier independently re-fetched SCMP directly and confirmed its sourcing language does not cite Bloomberg, validating the independence claim. Bloomberg and SCMP are not yet in policy/sources.yaml -- flagged to data/ledger/source_candidates.json for registration (Bloomberg already used as evidence in amd-anthropic-compute-deal without apparent prior registration; consistent precedent)."
+}

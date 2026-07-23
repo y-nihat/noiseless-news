@@ -1,0 +1,23 @@
+{
+  "slug": "zai-1gw-domestic-chip-datacenter",
+  "title": "Z.AI completes a roughly 1-gigawatt data center built entirely on Chinese-made AI chips",
+  "date": "2026-07-22",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-22",
+  "published_at": "2026-07-22",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-07-20/z-ai-completes-giant-data-center-with-chinese-chips-to-train-ai",
+    "https://www.scmp.com/tech/big-tech/article/3361374/zai-shares-surge-37-firm-builds-giant-data-centre-powered-chinese-chips",
+    "https://thenextweb.com/news/z-ai-data-centre-chinese-made-chips-nvidia"
+  ],
+  "dedup_check": "clean (no archive match), cycle 3 -- distinct from all other Zhipu/Z.AI-adjacent items in the archive (none existed prior)",
+  "watch": [
+    "Identity of the domestic chip vendor used in the facility, if it becomes citable",
+    "Independent confirmation (or denial) directly from Z.AI/Zhipu itself",
+    "Whether the cluster is used to train and demonstrably ships a frontier-scale model (capacity vs. capability)",
+    "The Zhongke Jiahe/XCore Sigma acquisition, if a second qualifying Tier<=2 source becomes available"
+  ],
+  "cycle_2026-07-23_night_c3_note": "Carried forward from cycle 2's report as the strongest of several flagged Tier-0/press leads ('clears the independence bar easily'). Fresh verifier sub-agent (17 tool calls) found the core claim -- 1GW datacenter, all-domestic chips -- independently confirmed by Bloomberg's exclusive and SCMP's separately-sourced report (SCMP does not cite Bloomberg), satisfying the wire-exclusive independence check; flagged several supporting specifics (chip vendor identity, cluster chip count, GLM-5.2 training-provenance claim, exact stock-move percentage) as single-source or unconfirmed and recommended excluding them. Fresh adversarial falsifier (11 tool calls) found no denials/retractions, broad corroboration across English and Chinese-language press, confirmed the story is not stale/recycled, and independently re-fetched SCMP to validate its sourcing is genuinely separate from Bloomberg. Published claim set deliberately narrowed to the two claims that cleared the bar cleanly; chip vendor, cluster-size, acquisition, and stock-move details all held back per verifier/falsifier recommendation rather than published on thin sourcing. Style gates: EN pass, TR pass."
+}
