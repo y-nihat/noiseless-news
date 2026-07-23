@@ -1,0 +1,20 @@
+{
+  "slug": "anthropic-public-first-action-40m",
+  "title": "Anthropic gives a second $20 million to Public First Action, bringing its total to $40 million",
+  "status": "published",
+  "first_seen": "2026-07-23",
+  "published_at": "2026-07-21",
+  "langs": ["en", "tr"],
+  "follows": "anthropic-amodei-pac-donation",
+  "source_urls": [
+    "https://www.anthropic.com/news/donation-public-first-action",
+    "https://wtvbam.com/2026/07/22/anthropic-to-donate-20-million-to-us-political-group-that-supports-ai-regulation/",
+    "https://thehill.com/homenews/5982007-anthropic-pours-millions-midterms/"
+  ],
+  "watch": [
+    "Any FEC/501(c)(4) disclosure detailing further Public First Action spending",
+    "Whether the election-influence-restriction disclosure (only surfaced after press questions, per Transformer News) develops into a dispute",
+    "Further escalation between Public First Action and the rival Leading the Future PAC ahead of the 2026 midterms"
+  ],
+  "cycle_2026-07-24_night_c2_note": "Surfaced by cycle 1's Tier-0 sweep of Anthropic News; dedup-check clean (no match despite covering the same 501(c)(4) as the published anthropic-amodei-pac-donation article -- different Anthropic URL slug). Fresh verifier sub-agent confirmed via direct primary fetch + Reuters/Hill cross-check. Fresh adversarial falsifier independently re-fetched the primary, verified Claude Mythos Preview/Project Glasswing are real prior Anthropic initiatives (not hallucinated), softened an unconfirmed Reuters byline attribution, and recommended follows: anthropic-amodei-pac-donation per SS8. Style gate: EN pass, TR pass (no padding, falsifiable headline, standalone TL;DR, natural Turkish mirror)."
+}

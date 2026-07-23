@@ -1,0 +1,32 @@
+{
+  "slug": "anthropic-public-first-action-40m",
+  "checked_at": "2026-07-23T23:20:00+00:00",
+  "method": "multi-agent verify (fresh Sonnet 5 verifier sub-agent, direct primary fetch + independent-press cross-check) + adversarial falsification pass (fresh Sonnet 5 sub-agent, re-fetched primary independently, checked byline authenticity, checked Claude Mythos Preview/Project Glasswing for hallucination, checked for denial/dispute)",
+  "origin_items": [
+    "Cycle 1 Tier-0 sweep of Anthropic News (2026-07-24 night, cycle 1) surfaced https://www.anthropic.com/news/donation-public-first-action"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic donated an additional $20 million to Public First Action on 21 July 2026, bringing cumulative giving to the group to $40 million",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary (Anthropic's own announcement) independently confirmed by Reuters wire (via wtvbam.com syndication) and The Hill, both of which add reporting beyond the press release (named context on rival PACs, prior donation history). Falsifier independently re-fetched the primary and confirmed date/figures verbatim.",
+      "evidence": ["https://www.anthropic.com/news/donation-public-first-action", "https://wtvbam.com/2026/07/22/anthropic-to-donate-20-million-to-us-political-group-that-supports-ai-regulation/", "https://thehill.com/homenews/5982007-anthropic-pours-millions-midterms/"]
+    },
+    {
+      "text": "Anthropic states the donation is driven by Claude Mythos Preview's discovery of thousands of high-severity software vulnerabilities via 'Project Glasswing', and calls for government authority to slow or block deployment of catastrophic-risk AI models",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Anthropic's own stated rationale, quoted directly from the primary source; labeled in the article as Anthropic's position, not an independently verified capability claim. Falsifier independently confirmed Claude Mythos Preview and Project Glasswing are real, previously-reported Anthropic initiatives (dating to April 2026), not fabricated.",
+      "evidence": ["https://www.anthropic.com/news/donation-public-first-action"]
+    },
+    {
+      "text": "Anthropic states the funds cannot be used to influence the election of any candidate",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated in the primary source, repeated consistently by Reuters and The Hill coverage.",
+      "evidence": ["https://www.anthropic.com/news/donation-public-first-action", "https://wtvbam.com/2026/07/22/anthropic-to-donate-20-million-to-us-political-group-that-supports-ai-regulation/"]
+    }
+  ],
+  "notes": "Follow-up to already-published anthropic-amodei-pac-donation (2026-07-16), which covered Amodei's personal $1M donation and mentioned the Feb 2026 $20M Public First Action pledge as background. dedup-check returned no match (different Anthropic URL slug: donation-public-first-action vs donate-public-first-action) -- confirmed by both verifier and falsifier as a genuinely new, second tranche five months later, not a stale resurface; this is a same-saga new event (§8), hence follows: anthropic-amodei-pac-donation rather than an in-place update. Falsifier flagged that a specific Reuters byline (Courtney Rozen) could not be independently confirmed for this piece -- the wire syndication carries a generic 'Thomson Reuters' byline -- so the article cites the outlet/wire rather than a named reporter. Falsifier also surfaced a Transformer News nuance (the election-influence restriction wasn't disclosed with the Feb donation, only after press questions) as optional critical context; not included in the article body as it is not load-bearing and risks padding, but noted here for a future update if it develops into a dispute."
+}
