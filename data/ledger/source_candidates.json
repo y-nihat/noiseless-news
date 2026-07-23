@@ -45,7 +45,7 @@
       "sample_urls": [
         "https://www.infoworld.com/article/4194895/spacexai-launches-grok-4-5-touts-lower-coding-task-costs-than-ai-rivals.html"
       ],
-      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md §1) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
+      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md \u00a71) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
     },
     {
       "domain": "metr.org",
@@ -54,7 +54,7 @@
       "sample_urls": [
         "https://metr.org/blog/2026-06-26-gpt-5-6-sol"
       ],
-      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md §3) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
+      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md \u00a73) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
     },
     {
       "domain": "vals.ai",
@@ -274,8 +274,8 @@
     }
   ],
   "query_notes": [
-    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release — worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
-    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) — worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
+    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release \u2014 worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
+    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) \u2014 worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
     "'{company} response OR denies OR disputes {allegation}' was essential for the NYT/OpenAI litigation story to surface OpenAI's on-record denial alongside the plaintiffs' claims -- worth adding as an explicit claim_check_template for any business/legal claim type, not just capability claims.",
     "For business claims sourced to a single wire/leak (Reuters exclusive on Meta's AI chip), tracing every outlet's citation back to one origin was decisive in correctly failing that story's gate -- a reminder that broad press pickup of a single leak is not multi-source confirmation.",
     "Tier-0 html sweep (Anthropic, Meta, Mistral, Cohere, Ai2, NIST, EU Commission) via WebFetch worked well this run and surfaced 3 of the 7 published stories directly (Anthropic Reflect, Meta Muse Image, Meta Muse Spark, EU cybersecurity plan) that would otherwise have relied only on secondary press framing -- confirms this sweep is worth the run-time cost every night, not just when a Tier-2 story needs it.",
@@ -593,6 +593,26 @@
         "https://9to5mac.com/2026/07/17/apple-sends-legal-letters-to-former-employees-now-at-openai/"
       ],
       "context": "Same story and rationale as macrumors.com above -- second direct syndicator of the FT scoop, independently re-fetched by both verifier and falsifier. Established Apple-beat outlet; also recurs across multiple Apple/OpenAI-lawsuit nights this month. Propose Tier 2."
+    }
+  ],
+  "candidates_2026-07-23_night_c4": [
+    {
+      "domain": "sec.gov",
+      "first_seen": "2026-07-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm"
+      ],
+      "context": "SEC EDGAR filing (8-K Exhibit 99.1) used as the Tier-0 primary source for Alphabet Q2 2026 earnings figures (alphabet-q2-negative-free-cash-flow). Propose Tier 0, type filing/html -- regulatory filings already qualify per verification.md Tier 0 examples; registering the domain formalizes it for future earnings-driven stories."
+    },
+    {
+      "domain": "finance.yahoo.com",
+      "first_seen": "2026-07-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/alphabet-q2-2026-earnings-revenue-203058727.html"
+      ],
+      "context": "Used this cycle as a syndication route carrying a Reuters byline (Deborah Mary Sophia and Kenrick Cai) in Reuters own voice, independently corroborating the Alphabet FCF first-negative-quarter claim. Reuters itself is already Tier 2 registered; yahoo finance is a relay/syndication surface, not a distinct newsroom -- propose logging as a relay-only surface (not independently Tier-worthy) rather than promoting the domain itself."
     }
   ]
 }

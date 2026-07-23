@@ -1,0 +1,46 @@
+{
+  "slug": "alphabet-q2-negative-free-cash-flow",
+  "checked_at": "2026-07-23T00:35:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts), primary source Alphabet Q2 2026 SEC Form 8-K Exhibit 99.1 plus independent Reuters corroboration",
+  "origin_items": [
+    "data/raw/2026-07-23/techmeme.json — \"Google reports Q2 free cash flow at negative $5.9B amid increased AI spending, marking its first cash burn since going public decades ago (Ryan McMorrow/Financial Times)\""
+  ],
+  "claims": [
+    {
+      "text": "Alphabet reported Q2 2026 free cash flow of −$5,855 million, from operating cash flow of $39,069 million minus capital expenditure of $44,924 million",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (Alphabet's own SEC Form 8-K, Exhibit 99.1) gives the exact figures; arithmetic verified independently by both the verifier and adversarial falsifier (39,069 - 44,924 = -5,855), and cross-checked against Yahoo/Reuters syndication and stockanalysis.com's parsed table with no discrepancy.",
+      "evidence": ["https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm", "https://finance.yahoo.com/markets/stocks/articles/alphabet-q2-2026-earnings-revenue-203058727.html"]
+    },
+    {
+      "text": "Capital expenditure rose from $22,446 million in Q2 2025 to $44,924 million in Q2 2026, an increase of just over 100%",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both quarters' figures confirmed directly from the primary SEC filing's cash-flow reconciliation table; independently re-checked by the falsifier via a second route (stockanalysis.com's SEC-sourced data).",
+      "evidence": ["https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm"]
+    },
+    {
+      "text": "Reuters and the Financial Times both reported this is the first negative free-cash-flow quarter in Alphabet's history as a public company, since its 2004 IPO",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Initial verifier found this framing traced only to the FT (paywalled, not directly fetchable) plus Tier-3 social posts -- flagged single-source. Adversarial falsifier independently located a Reuters piece (byline Deborah Mary Sophia and Kenrick Cai, via Yahoo Finance syndication) stating in Reuters' own voice: \"the company reported negative free cash flow for the first time in its history, burning $5.9 billion this quarter.\" This is a second, independent Tier<=2 outlet not merely relaying FT, clearing the >=2-independent-source business-claim bar (§2). No contradicting historical data point (e.g. a prior negative-FCF quarter) was found by either pass, though pre-2012 quarterly data was not independently verifiable within budget.",
+      "evidence": ["https://finance.yahoo.com/markets/stocks/articles/alphabet-q2-2026-earnings-revenue-203058727.html"]
+    },
+    {
+      "text": "Alphabet attributes the capex increase to scaling AI infrastructure and compute, citing AI- and Cloud-driven demand; Google Cloud revenue grew 82% year-over-year",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Directly stated in Alphabet's own earnings release (Cloud revenue growth attributed to enterprise AI Solutions/Infrastructure demand; equity-raise language ties net proceeds to scaling AI infrastructure and global compute) and in CEO Pichai's quoted remarks. Not press inference.",
+      "evidence": ["https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm"]
+    },
+    {
+      "text": "Alphabet raised its full-year 2026 capital expenditure guidance to $195–205 billion, up from a prior $180–190 billion",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed in the primary earnings release and independently corroborated by Reuters/Yahoo reporting, both attributing the raise to AI and Cloud demand.",
+      "evidence": ["https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm", "https://finance.yahoo.com/markets/stocks/articles/alphabet-q2-2026-earnings-revenue-203058727.html"]
+    }
+  ],
+  "notes": "Verifier flagged that Alphabet's release discloses no separate 'AI-specific capex' dollar figure -- only total company-wide capex -- so the published article deliberately does not state an AI-capex number, only total capex plus Alphabet's own qualitative AI/Cloud attribution. Falsifier independently re-fetched the SEC filing (direct SEC/Q4CDN fetch returned 403/binary for both agents; both cross-verified via syndicated re-publications of the release text plus stockanalysis.com's SEC-sourced parsed table, which agreed exactly) and confirmed the 8-K was filed 2026-07-22, signed by CFO Anat Ashkenazi, covering the quarter ended 2026-06-30 -- ruling out a stale/re-reported quarter. No denial, correction, or restatement of the figures found anywhere. Financial Times not currently in policy/sources.yaml; not cited directly in the published claim set since Reuters independently carries the same claim -- FT domain logged to source_candidates.json for evaluation."
+}

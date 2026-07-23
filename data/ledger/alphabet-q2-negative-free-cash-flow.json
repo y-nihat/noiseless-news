@@ -1,0 +1,21 @@
+{
+  "slug": "alphabet-q2-negative-free-cash-flow",
+  "title": "Alphabet posts its first negative free cash flow since going public, as AI capex nearly doubles",
+  "date": "2026-07-23",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-23",
+  "published_at": "2026-07-23",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000066/googexhibit991q22026.htm",
+    "https://finance.yahoo.com/markets/stocks/articles/alphabet-q2-2026-earnings-revenue-203058727.html"
+  ],
+  "dedup_check": "clean (no archive match) before opening, cycle 4",
+  "watch": [
+    "Any further quality-press corroboration or dispute of the 'first negative FCF since IPO' framing",
+    "Whether Alphabet ever breaks out an AI-specific capex figure in future disclosures",
+    "Q3 2026 results, to see if negative FCF continues or reverses"
+  ],
+  "cycle_2026-07-23_night_c4_note": "New standalone story from cycle 4 raw-ingest triage (techmeme.json Google/FT lead). Dedup-check clean. Fresh verifier fetched Alphabet's own SEC Form 8-K (Tier-0) for the exact FCF/opex/capex figures and flagged the 'first negative FCF since IPO' framing as FT-only/single-source. Fresh adversarial falsifier independently re-verified the arithmetic, confirmed the filing date/quarter authenticity, and found an independent Reuters account (not merely relaying FT) making the same historical claim in its own voice, upgrading it to confirmed per the >=2-independent-source business bar. No AI-specific capex figure was published since Alphabet discloses none. Style gates: EN pass, TR pass (see run report)."
+}
