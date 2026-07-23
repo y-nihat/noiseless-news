@@ -1,0 +1,15 @@
+{
+  "slug": "bytedance-seed-audio-1-0",
+  "title": "ByteDance's Doubao-Seed-Audio 1.0 unified audio-creation model",
+  "status": "watching",
+  "first_seen": "2026-07-23",
+  "published_at": null,
+  "langs": [],
+  "reason": "Fresh verifier confirmed the English seed.bytedance.com blog post (dated 2026-07-20, 'Seed Audio 1.0') describes a real, in-scope unified speech/SFX/ambience audio-creation model with a genuine feature set. But the adversarial falsifier found the actual product -- 'Doubao-Seed-Audio 1.0' -- launched in China on 2026-06-23 at the Volcano Engine FORCE conference, independently corroborated by Sina Tech, ITHome, DoNews, 163.com, Sohu and Eastmoney with matching specs; the July 20 English post is an international/BytePlus-console rollout of a month-old product, not a new unveiling. Publishing it as a fresh 'ByteDance announces' story would misdate the actual news event. Capability/benchmark figures (A/B preference gains, >90% usability, MOS>4.0) are vendor-reported only, no independent reproduction found in either English or Chinese coverage. A $0.18/min pricing figure found only on unregistered SEO-aggregator sites should not be used regardless of framing.",
+  "watch": [
+    "Whether the international/BytePlus rollout itself becomes a distinct newsworthy event (e.g. adoption, integration deals, or independent benchmark of the English-market version)",
+    "Any independent (non-vendor) benchmark or hands-on review of Doubao-Seed-Audio 1.0's actual audio quality",
+    "Registering ithome.com/finance.sina.com.cn as sources per source_candidates.json if Chinese-lab launches keep needing this cross-check"
+  ],
+  "cycle_2026-07-24_night_c2_note": "dedup-check clean in our archive (moderate 0.5 match against bytedance-edgebench-scaling-law confirmed coincidental -- different subject). Fresh verifier sub-agent confirmed the primary source's content accurately (no hallucination) but only searched English-language press and found none, incorrectly concluding no independent coverage existed. Fresh adversarial falsifier searched Chinese trade press and found the actual June 23 China launch, catching the dating error before publication -- exactly the kind of catch the falsification pass exists for. Holding as watching rather than publishing a mis-dated story or rushing a re-framed version before the cycle deadline; well-scoped for cycle 3 to draft as an 'international expansion of a China-launched model' story if judged newsworthy enough on its own, or continue watching."
+}

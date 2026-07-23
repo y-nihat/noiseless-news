@@ -614,5 +614,25 @@
       ],
       "context": "Used this cycle as a syndication route carrying a Reuters byline (Deborah Mary Sophia and Kenrick Cai) in Reuters own voice, independently corroborating the Alphabet FCF first-negative-quarter claim. Reuters itself is already Tier 2 registered; yahoo finance is a relay/syndication surface, not a distinct newsroom -- propose logging as a relay-only surface (not independently Tier-worthy) rather than promoting the domain itself."
     }
+  ],
+  "candidates_2026-07-24_night_c2": [
+    {
+      "domain": "ithome.com",
+      "first_seen": "2026-07-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.ithome.com"
+      ],
+      "context": "Chinese tech trade press; independently corroborated (alongside Sina Tech/DoNews/163.com/Sohu/Eastmoney) that Doubao-Seed-Audio 1.0 actually launched in China on 2026-06-23 at the Volcano Engine FORCE conference, a month before the English seed.bytedance.com blog post -- caught a stale-dating error before publication. Propose Tier 2 for Chinese-lab launch stories, pending an editorial call on language/paywall handling."
+    },
+    {
+      "domain": "finance.sina.com.cn",
+      "first_seen": "2026-07-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://finance.sina.com.cn"
+      ],
+      "context": "Same Doubao-Seed-Audio 1.0 dating correction as ithome.com above; useful for catching China-first launches that later get a delayed English/international blog post."
+    }
   ]
 }
