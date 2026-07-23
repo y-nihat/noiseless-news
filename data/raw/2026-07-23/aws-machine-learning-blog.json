@@ -1,0 +1,52 @@
+[
+  {
+    "id": "06383fb4fe247024",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Evaluating AI Agents: A production blueprint with Strands and AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/",
+    "published": "2026-07-23T17:00:20+00:00",
+    "summary": "Together, Motorway and AWS built an end-to-end evaluation pipeline that reduced incorrect results from 1 in 8 queries to 1 in 50 and cut issue detection time from few hours to few minutes. The pipeline combines the Strands Agents SDK with Amazon Bedrock AgentCore, a fully managed service for deploying and operating AI agents at scale. In this post, you will learn how to build this pipeline for your own agents.",
+    "fetched_at": "2026-07-23T17:26:51.703888+00:00"
+  },
+  {
+    "id": "62f2b88c5bde7806",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Building trade assistant: How Jefferies optimized front office trading operations with AI",
+    "url": "https://aws.amazon.com/blogs/machine-learning/building-trade-assistant-how-jefferies-optimized-front-office-trading-operations-with-ai/",
+    "published": "2026-07-23T16:42:54+00:00",
+    "summary": "In this post, we explore how Jefferies overcame these challenges with a solution built on Strands Agents, an agent harness SDK for building AI agents that can reason, plan, and act by orchestrating calls to foundation models (FMs) and external tools. The solution uses large language models (LLMs), Amazon Bedrock, and Amazon Bedrock Knowledge Bases. It also uses Model Context Protocol (MCP), an open standard that helps AI agents securely connect to diverse data sources and tools through a unified interface. We cover the solution overview, the rationale for selecting the underlying technology stack, lessons learned, and the business impact the solution created at Jefferies.",
+    "fetched_at": "2026-07-23T17:26:51.703888+00:00"
+  },
+  {
+    "id": "3b27c5e46e1daca9",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Building multi-Region visualizations with Highcharts in Amazon Quick",
+    "url": "https://aws.amazon.com/blogs/machine-learning/building-multi-region-visualizations-with-highcharts-in-amazon-quick/",
+    "published": "2026-07-23T16:40:59+00:00",
+    "summary": "This post shows you how to build multi-Region carrier performance dashboards in Quick Sight using Highcharts custom visualizations to overcome native chart limitations. You will learn how to maintain data sovereignty across AWS Regions while creating unified visualizations through the Quick Sight federated dataset capability. The solution includes production-ready chart configurations and addresses security, compliance, and scalability requirements.",
+    "fetched_at": "2026-07-23T17:26:51.703888+00:00"
+  },
+  {
+    "id": "80f219889c5bdf90",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Detecting silent agent failures with Amazon Bedrock AgentCore optimization",
+    "url": "https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/",
+    "published": "2026-07-23T16:38:34+00:00",
+    "summary": "Amazon Bedrock AgentCore optimization surfaces silent behavioral failures in production AI agents: the ones that pass every health check but still deliver wrong outcomes. Learn how insights discovers, explains, and ranks failure patterns across sessions so you can fix the highest-impact issues first.",
+    "fetched_at": "2026-07-23T17:26:51.703888+00:00"
+  },
+  {
+    "id": "5b2e0d0919d6982d",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Agentic retrieval for Amazon Bedrock Managed Knowledge Base",
+    "url": "https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base/",
+    "published": "2026-07-23T16:30:20+00:00",
+    "summary": "This post focuses on why classic retrieval falls short on multi-part questions, how the AgenticRetrieveStream API works (including request construction and trace parsing), and when to choose it over the standard Retrieve API.",
+    "fetched_at": "2026-07-23T17:26:51.703888+00:00"
+  }
+]
