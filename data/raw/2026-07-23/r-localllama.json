@@ -328,5 +328,15 @@
     "published": "2026-07-23T22:16:54+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Gemma 4 was updated (mostly chat templates) and I took it for a test.</p> <p>On a local llama.cpp server running on M5 Pro with 48GB, 26B A4B (Q6) has about 60t/s and works well with OpenCode.</p> <p>It works quite well (given it's size) for backend work, but UI/UX is unacceptable.</p> <p>Watch the testing <a href=\"https://www.youtube.com/watch?v=m4KR_3E_7Uk\">https://www.youtube.com/watch?v=m4KR_3E_7Uk</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/curiousily_\"> /u/curiousily_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4sm2m/tested_the_updated_gemma_4_locally_on_coding_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4sm2m/tested_the_updated_gemma_4_locally_on_coding_with/\">[comments]</a></span>",
     "fetched_at": "2026-07-23T23:10:22.601652+00:00"
+  },
+  {
+    "id": "d126ba60f0111600",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I Made a Local Huggingface On My NAS",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4lpxe/i_made_a_local_huggingface_on_my_nas/",
+    "published": "2026-07-23T18:08:27+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4lpxe/i_made_a_local_huggingface_on_my_nas/\"> <img alt=\"I Made a Local Huggingface On My NAS\" src=\"https://preview.redd.it/u8alj38wr0fh1.png?width=140&amp;height=72&amp;auto=webp&amp;s=50de4b734657fb660c2f31d909d2a0733f2caf51\" title=\"I Made a Local Huggingface On My NAS\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/u8alj38wr0fh1.png?width=1860&amp;format=png&amp;auto=webp&amp;s=3578776c60d9548a135a018702f44d0fddedd4b0\">https://preview.redd.it/u8alj38wr0fh1.png?width=1860&amp;format=png&amp;auto=webp&amp;s=3578776c60d9548a135a018702f44d0fddedd4b0</a></p> <p>Little side project I'm doing so I can easily transfer any model I want fast to my AI Rig from my NAS.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TyedalWaves\"> /u/TyedalWaves </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4lpxe/i_made_a_local_huggingface_on_my_nas/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4lpxe/i_made_a_local_huggingface_on_my_nas/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-23T23:45:22.263679+00:00"
   }
 ]
