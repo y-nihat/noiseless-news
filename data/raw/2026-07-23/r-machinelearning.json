@@ -68,5 +68,25 @@
     "published": "2026-07-23T12:10:44+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><h1>Hi everyone,</h1> <h1>I recently received an interview offer for ML position at Adyen, and the first round will be a live coding round on HackerRank. I scheduled it for the end of August because that was the last available slot.</h1> <h1>The thing is, I’ve never had a live coding interview before. In all my previous interviews, the process was mostly verbal, answering technical questions, discussing projects, and explaining my work in detail. I’m aware of LeetCode and have started looking into it, but I’m not sure what level or type of coding questions typically asks for ML roles.</h1> <h1>If anyone here has interviewed with adyen and gone through a HackerRank coding round, could you please share:</h1> <h1>What kind of questions were asked?</h1> <h1>Were they mainly LeetCode-style DSA problems, or more ML/data-focused coding questions?</h1> <h1>What difficulty level should I expect?</h1> <h1>Any preparation tips or resources that helped you?</h1> <h1>Since this will be my first live coding experience, I want to prepare in the right direction rather than randomly solving problems. I’d really appreciate any advice or insights from this community.</h1> <h1>PS : I have six year in industry experience in machine learning, I can code for a big project end to end but I really suck at dynamic programming on the go.</h1> <h1>Thank you!</h1> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MonthLatter7031\"> /u/MonthLatter7031 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4c3tz/first_ml_coding_round_hackerrank_at_adyen_what/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4c3tz/first_ml_coding_round_hackerrank_at_adyen_what/\">[comments]</a></span>",
     "fetched_at": "2026-07-23T17:26:51.703888+00:00"
+  },
+  {
+    "id": "ec0fa748494c7aaa",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "GPT-5.5 Scores 10.6% on ActiveVision, Humans Hit 96.1% [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v4ns8l/gpt55_scores_106_on_activevision_humans_hit_961_r/",
+    "published": "2026-07-23T19:20:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The interesting finding from a new [arXiv paper](<a href=\"https://arxiv.org/abs/2607.16165\">https://arxiv.org/abs/2607.16165</a>) isn't that a frontier vision model failed a new benchmark, that happens weekly, but the specific shape of the failure and the fact that the models cannot patch it by writing their own code.</p> <p>The benchmark, called ActiveVision, contains 17 tasks across 3 categories designed, in the authors' words, to &quot;force repeated visual perception rather than a single static description.&quot; GPT-5.5 at the highest exposed reasoning-effort tier solves 10.6% of items and scores zero on 11 of the 17 tasks. Claude Fable 5, which the authors note tops most reasoning and coding leaderboards, manages 3.5%. Three human participants averaged 96.1%.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Justgototheeffinmoon\"> /u/Justgototheeffinmoon </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4ns8l/gpt55_scores_106_on_activevision_humans_hit_961_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4ns8l/gpt55_scores_106_on_activevision_humans_hit_961_r/\">[comments]</a></span>",
+    "fetched_at": "2026-07-23T22:35:23.167421+00:00"
+  },
+  {
+    "id": "6bd3a39e6a23e9aa",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS E and D, Average rating 3 and average confidence 4, I can rebuttal and address all their concerns? Do I still have a decent shot or unlikely ?[R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v4qrv9/neurips_e_and_d_average_rating_3_and_average/",
+    "published": "2026-07-23T21:07:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>NeurIPS E and D track review are out today and the average rating I received is a 3 and confidence is a 4. I can correct and address all their concerns. Do I still have a genuine shot of getting in or is it basically impossible at this point since none of my scores are a 4 or 5? Should I withdraw? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-Ball-2546\"> /u/Ok-Ball-2546 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4qrv9/neurips_e_and_d_average_rating_3_and_average/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4qrv9/neurips_e_and_d_average_rating_3_and_average/\">[comments]</a></span>",
+    "fetched_at": "2026-07-23T22:35:23.167421+00:00"
   }
 ]

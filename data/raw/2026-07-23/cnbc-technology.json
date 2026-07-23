@@ -108,5 +108,55 @@
     "published": "2026-07-23T12:40:42+00:00",
     "summary": "Here are five key things investors need to know to start the trading day.",
     "fetched_at": "2026-07-23T17:26:51.703888+00:00"
+  },
+  {
+    "id": "65ae2851f5eb1f19",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
+    "url": "https://www.cnbc.com/2026/07/23/oracle-wins-10-year-pentagon-software-contract-worth-up-to-7-billion.html",
+    "published": "2026-07-23T21:56:31+00:00",
+    "summary": "Oracle will supply on-premises software to the U.S. Department of Defense.",
+    "fetched_at": "2026-07-23T22:35:23.167421+00:00"
+  },
+  {
+    "id": "f80f4445f9a49f0e",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Intel's stock jumps as chipmaker rides AI boom to fastest revenue growth in almost 15 years",
+    "url": "https://www.cnbc.com/2026/07/23/intel-intc-earnings-report-q2-2026.html",
+    "published": "2026-07-23T22:17:09+00:00",
+    "summary": "Intel rallied after the company reported blowout earnings and guidance.",
+    "fetched_at": "2026-07-23T22:35:23.167421+00:00"
+  },
+  {
+    "id": "1b78863513ace6cf",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "OpenAI's Hugging Face hack triggers 'AI Kill Switch' bill in Congress",
+    "url": "https://www.cnbc.com/2026/07/23/open-ai-hugging-face-hack-kill-switch-bill-congress.html",
+    "published": "2026-07-23T21:09:48+00:00",
+    "summary": "OpenAI disclosed this week that some of its AI models went rogue and hacked into open-source developer platform Hugging Face.",
+    "fetched_at": "2026-07-23T22:35:23.167421+00:00"
+  },
+  {
+    "id": "774a7becd5c90607",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "IBM's Krishna tries to reassure investors that AI won't disrupt company's software unit",
+    "url": "https://www.cnbc.com/2026/07/23/ibms-krishna-argues-that-ai-wont-disrupt-software-unit.html",
+    "published": "2026-07-23T19:19:26+00:00",
+    "summary": "IBM's CEO highlighted growing mainframe hardware capacity, and said software should \"catch back up\" within a year.",
+    "fetched_at": "2026-07-23T22:35:23.167421+00:00"
+  },
+  {
+    "id": "1d5b4a75e97259dd",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Cerebras stock gains on AMD partnership",
+    "url": "https://www.cnbc.com/2026/07/23/cerebras-stock-gains-on-amd-partnership.html",
+    "published": "2026-07-23T20:33:12+00:00",
+    "summary": "Cerebras and AMD agreed to work together, pairing their technology for AI systems.",
+    "fetched_at": "2026-07-23T22:35:23.167421+00:00"
   }
 ]
