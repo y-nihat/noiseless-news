@@ -634,5 +634,25 @@
       ],
       "context": "Same Doubao-Seed-Audio 1.0 dating correction as ithome.com above; useful for catching China-first launches that later get a delayed English/international blog post."
     }
+  ],
+  "candidates_2026-07-24_night_c4": [
+    {
+      "domain": "businesswire.com",
+      "first_seen": "2026-07-24",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.businesswire.com/news/home/20260723873230/en/"
+      ],
+      "context": "Wire distribution service used by Amkor Technology to issue its own press release (Tier-0 primary source for amkor-nvidia-packaging-partnership). Propose Tier 0 for company-issued press releases distributed via this wire, similar to PR Newswire/GlobeNewswire treatment."
+    },
+    {
+      "domain": "stocktitan.net",
+      "first_seen": "2026-07-24",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.stocktitan.net/"
+      ],
+      "context": "Financial-news aggregator that syndicates verbatim company press releases with clear issuer attribution; used this cycle only as a mirror to confirm Amkor Business Wire release content when direct fetch of businesswire.com/ir.amkor.com timed out. Not proposing registration -- used as a corroborating mirror of a Tier-0 primary, not as an independent source in its own right."
+    }
   ]
 }

@@ -1,0 +1,50 @@
+{
+    "slug": "etched-series-c-10-3b-valuation",
+    "checked_at": "2026-07-24T00:32:00+00:00",
+    "method": "Fresh verifier sub-agent and independent adversarial falsifier sub-agent, run in parallel per policy/verification.md §5. Business claim type (>=2 independent Tier<=2 sources required); explicit wire-exclusive check run against the swarm of GlobeNewswire-relay outlets.",
+    "origin_items": [
+        "Surfaced via this cycle's gnews-ai-chips-and-compute feed (101net aggregator, ~2026-07-23T20:00 UTC). dedup-check before opening: clean on the techcrunch.com URL; an earlier check against etched.com produced a moderate/coincidental match to amd-anthropic-compute-deal on generic 'AI chip' title phrasing -- read and dismissed as unrelated (different company, different deal type), consistent with the same false-positive pattern seen on the Amkor story this cycle."
+    ],
+    "claims": [
+        {
+            "text": "Etched closed a $300 million Series C funding round at a $10.3 billion valuation, announced 23 July 2026",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via two independent sources: (1) Etched's own GlobeNewswire press release, and (2) TechCrunch's independently reported story containing an on-record confirmation from co-founder Robert Wachen that the round 'has closed' -- satisfying the >=2 independent sources bar. The swarm of other outlets (Pulse2, Manila Times, 93.3 The Drive, Y100 WNCY, etc.) all verbatim-relay the same press release and were not counted as separate sources (wire-exclusive check applied).",
+            "evidence": [
+                "https://techcrunch.com/",
+                "https://www.globenewswire.com/"
+            ]
+        },
+        {
+            "text": "The round was led by Sequoia Capital, with Andreessen Horowitz, SK Hynix, Jane Street, and Diffusion Capital also participating",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Consistent investor list independently reported by both TechCrunch and the company's own press release.",
+            "evidence": [
+                "https://techcrunch.com/",
+                "https://www.globenewswire.com/"
+            ]
+        },
+        {
+            "text": "Etched was valued at $5 billion in a $500 million round in December 2025, meaning its valuation roughly doubled in about seven months",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Reported by TechCrunch as established prior context; not disputed by the falsifier.",
+            "evidence": [
+                "https://techcrunch.com/"
+            ]
+        },
+        {
+            "text": "Etched plans to use the funds to scale manufacturing, including facilities in Taiwan and a new site in Milpitas, California",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Stated in Etched's own press release.",
+            "evidence": [
+                "https://www.globenewswire.com/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH as confirmed. Falsifier independently found the same $300M/$10.3B figures with no discrepancy across sources, confirmed the round is CLOSED (not merely 'in talks') via TechCrunch's on-record co-founder confirmation, and flagged a critical distinction: a separate, much larger ~$20B Jane Street-led round reported by WSJ in mid-July remains unclosed/in-talks and must NOT be conflated with this $300M round -- the published article explicitly keeps the two separate. mlq.ai appeared in search results (blocked domain) and was excluded by both agents. No contradicting reports found on the core figures.",
+    "gaps_closed_from_watching_state": []
+}

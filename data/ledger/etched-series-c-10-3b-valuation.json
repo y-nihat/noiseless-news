@@ -1,0 +1,17 @@
+{
+  "slug": "etched-series-c-10-3b-valuation",
+  "title": "AI chip startup Etched closes $300 million round at $10.3 billion valuation",
+  "status": "published",
+  "first_seen": "2026-07-24",
+  "published_at": "2026-07-23",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://techcrunch.com/",
+    "https://www.globenewswire.com/"
+  ],
+  "watch": [
+    "Whether the separate, larger ~$20B Jane Street-led round (reported in talks by WSJ, mid-July 2026) closes -- would be a follow-up (follows: etched-series-c-10-3b-valuation), not an update to this entry",
+    "EE Times' reported $1B in pre-orders detail, not independently confirmed this cycle -- could strengthen a future update if corroborated"
+  ],
+  "cycle_2026-07-24_night_c4_note": "New standalone story, surfaced via this cycle's gnews-ai-chips-and-compute sweep. dedup-check: clean against techcrunch.com URL; an earlier check against etched.com surfaced the same generic 'AI chip' coincidental moderate match to amd-anthropic-compute-deal seen on this cycle's Amkor story -- dismissed, unrelated. Fresh verifier + fresh adversarial falsifier run in parallel (business claim type, >=2 independent sources bar): both independently applied the wire-exclusive check, correctly separating Etched's own GlobeNewswire release + TechCrunch's independently reported on-record founder confirmation (2 independent sources) from the swarm of outlets merely relaying the same press release (not counted). Falsifier specifically flagged and the article explicitly excludes a separate, unclosed ~$20B Jane Street-led round WSJ reported as 'in talks' in mid-July -- not conflated with this closed $300M round. Style gates run on both languages: pass (falsifiable headline, standalone TL;DR, no padding, Turkish mirrors structure)."
+}
