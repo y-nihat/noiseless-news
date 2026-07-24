@@ -1,0 +1,54 @@
+{
+  "slug": "anthropic-claude-opus-5-launch",
+  "checked_at": "2026-07-24T22:49:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); direct WebFetch/WebSearch of anthropic.com primary announcement plus independent outlets and third-party benchmark leaderboard",
+  "origin_items": [
+    "Anthropic News (Tier 0 html sweep) — Introducing Claude Opus 5",
+    "Cross-checked against Bloomberg, Fortune, 9to5Mac, VentureBeat, GitHub Changelog, the-decoder, Techzine, Sunday Guardian Live"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic released Claude Opus 5 on 24 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary confirms; independently corroborated same-day by Bloomberg, Fortune, 9to5Mac, VentureBeat, GitHub's own changelog. Falsifier checked for date discrepancies (e.g. prediction-market mispricing of a July 23 debut) and confirmed July 24 is correct.",
+      "evidence": ["https://www.anthropic.com/news/claude-opus-5"]
+    },
+    {
+      "text": "Day-one availability across Claude API, claude.ai, Claude Code, Cowork, Pro/Max, Bedrock, Google Cloud, Microsoft Foundry; GitHub Copilot rollout gradual",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Anthropic primary + GitHub's own changelog independently confirms Copilot availability but explicitly frames it as a gradual rollout by plan tier, not instant-for-all -- article language softened accordingly per falsifier note.",
+      "evidence": ["https://www.anthropic.com/news/claude-opus-5", "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/"]
+    },
+    {
+      "text": "Pricing $5/M input, $25/M output, unchanged from Opus 4.8; fast mode ~2x",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Anthropic primary + independently corroborated by CNBC (unchanged from predecessor) and Sunday Guardian Live.",
+      "evidence": ["https://www.anthropic.com/news/claude-opus-5"]
+    },
+    {
+      "text": "Anthropic's own Frontier-Bench v0.1 and ARC-AGI-3 comparisons vs Fable 5 / GPT-5.6 Sol",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "All outlets citing these figures trace to Anthropic's own benchmark table (independence rule: one source cluster). ARC Prize org has not published its own Opus 5 verification. Labeled vendor-claim per policy, not published as fact.",
+      "evidence": ["https://www.anthropic.com/news/claude-opus-5"]
+    },
+    {
+      "text": "Artificial Analysis Intelligence Index score 61 (max-effort), #1 ranked, live-fetched 2026-07-24",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Independent third-party leaderboard, live-fetched at publication time per live-fetch rule. Falsifier notes score is specific to max-effort configuration (xhigh=60, high=59); exact denominator of tracked-model count unverified, omitted from article.",
+      "evidence": ["https://artificialanalysis.ai/models/claude-opus-5"]
+    },
+    {
+      "text": "CodeRabbit independent evaluation: higher precision but lower recall and more nitpicks than baseline reviewer; not recommended as sole reviewer",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Independent, adversarial data point contradicting Anthropic's uniformly positive framing -- retained in full including CodeRabbit's own negative conclusion, per falsifier recommendation not to cherry-pick the favorable precision figure alone.",
+      "evidence": ["https://www.coderabbit.ai/blog"]
+    }
+  ],
+  "adversarial_notes": "Falsifier found all core claims survive; two required softening (Copilot 'day-one' framing to reflect gradual rollout; CodeRabbit finding needed its negative conclusion retained rather than only the favorable precision stat). No contradicting reports on release date or existence found beyond one disregarded SEO-clone site."
+}

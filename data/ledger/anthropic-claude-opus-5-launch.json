@@ -1,0 +1,20 @@
+{
+  "slug": "anthropic-claude-opus-5-launch",
+  "title": "Anthropic releases Claude Opus 5, keeping pricing flat at $5/$25 per million tokens",
+  "date": "2026-07-24",
+  "status": "published",
+  "first_seen": "2026-07-24",
+  "published_at": "2026-07-24",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/news/claude-opus-5",
+    "https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/",
+    "https://artificialanalysis.ai/models/claude-opus-5",
+    "https://www.coderabbit.ai/blog"
+  ],
+  "watch": [
+    "ARC Prize org's own verification of the ARC-AGI-3 figure -> would upgrade that claim from vendor-claim to confirmed",
+    "Further independent benchmark reproductions (Frontier-Bench-style comparisons) as more evaluators publish results",
+    "Full GitHub Copilot rollout completion across all tiers"
+  ]
+}
