@@ -18,5 +18,95 @@
     "published": "2026-07-24T00:29:01+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello guys, hoping you're doing fine!</p> <p>On the last 2-3 months, price of the RTX 6000 PRO seem to have gone insane.</p> <p>I will start on the price here on my country, Chile:</p> <ul> <li>RTX 6000 PRO Workstation Edition: <strong>21382 USD</strong> post 19% tax.</li> <li>RTX 6000 PRO MaxQ Workstation Edition: <strong>20669 USD</strong> post 19% tax.</li> <li>RTX 6000 PRO Server Edition: N/A (not in stock)</li> </ul> <p>For reference, when I bought my ones, they were at ~11000USD post tax, just 3 months ago.</p> <p>How it is going on your country/state? If I had to guess, a ton better lol.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/panchovix\"> /u/panchovix </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4vsiq/how_much_are_rtx_pro_6000s_going_for_in_your/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4vsiq/how_much_are_rtx_pro_6000s_going_for_in_your/\">[comments]</a></span>",
     "fetched_at": "2026-07-24T00:55:22.995253+00:00"
+  },
+  {
+    "id": "38cbd95ee4cc66c7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The \"distillation\" claim is just ridiculous in nature",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v52t2d/the_distillation_claim_is_just_ridiculous_in/",
+    "published": "2026-07-24T06:04:25+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Even if China was distilling from US models (assuming all accusations are true), nothing about it makes it illegal.</p> <p>It is like saying you distilled knowledge from your professor in colleges and now he can sue you to shut down your careers for IP thefts. Never mind that you paid the tuitions to be taught and the professor is supposed to teach what you want to learn.</p> <p>IP theft happens if China somehow stole the entire model architecture, the weights and just fine tune it then release under their own. In reality, nothing of that kinds ever happened.</p> <p>Basically, just more US Propaganda to save upcoming disastrous IPOs from overpriced garbage AI companies.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BoogerheadCult\"> /u/BoogerheadCult </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v52t2d/the_distillation_claim_is_just_ridiculous_in/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v52t2d/the_distillation_claim_is_just_ridiculous_in/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "e4ae54dfc63ab560",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "swiss-ai/Apertus-v1.5 70B/8B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v539p8/swissaiapertusv15_70b8b/",
+    "published": "2026-07-24T06:29:11+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/swiss-ai/Apertus-v1.5-70B\">https://huggingface.co/swiss-ai/Apertus-v1.5-70B</a></p> <p><a href=\"https://huggingface.co/swiss-ai/Apertus-v1.5-8B\">https://huggingface.co/swiss-ai/Apertus-v1.5-8B</a></p> <p>Apertus 1.5 is a family of 8B and 70B parameter language models designed to advance the state of multilingual, multimodal, fully open, and transparent AI. The models support a wide range of languages, handle contexts of up to 262,144 tokens, and it uses only fully open training data whilst delivering performance comparable to other models of similar size.</p> <p>The released models are the result of continued pretraining of Apertus 1.0, adding a multimodal mix of 4T tokens to the 8B model and 2T tokens to the 70B model. Apertus 1.5 thus uses the same architecture as the original release, a decoder-only transformer with the xIELU activation function trained with the AdEMAMix optimizer. Our improved post-training recipe enhances the models' instruction-following and tool-use capabilities and, for the first time, allows developers to enable a thinking mode to improve the models' performance on reasoning tasks.</p> <p>As a first in the Apertus family, the Apertus 1.5 models support multimodal inputs. The model takes images, audio, and text as input and generates text. This enables many new exciting use cases for our developers.</p> <h1><a href=\"https://huggingface.co/swiss-ai/Apertus-v1.5-8B#key-features\"></a>Key Features</h1> <ul> <li><strong>Fully Open Model:</strong> Open weights + open data + full training details including all data and training recipes.</li> <li><strong>Massively Multilingual:</strong> Supporting a large variety of languages.</li> <li><strong>Responsible Development:</strong> Apertus is trained while respecting opt-out consent of data owners (even retroactively) where possible and with methods to prevent memorization of training data.</li> <li><strong>Native Audio &amp; Image Understanding:</strong> Apertus 1.5 introduces multimodal support for processing audio and image inputs, enabling more intuitive and versatile interaction beyond text.</li> <li><strong>Reasoning:</strong> The models can be switched to <em>thinking mode</em> to reason on the input before generating responses.</li> <li><strong>Long Context:</strong> Apertus 1.5 by default supports a context length up to 262,144 tokens, a four-fold increase from our initial Apertus 1.0 release.</li> <li><strong>Improved Instruction-Following:</strong> Significant improvements in instruction adherence ensure more predictable and accurate responses to user prompts.</li> <li><strong>Improved Tool Use:</strong> Apertus 1.5 has been trained for better tool integration, allowing for more effective use of external tools and APIs.</li> </ul> <p>The technical report with further details along with benchmark results, training pipelines, and intermediate checkpoints will be published in the coming weeks.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v539p8/swissaiapertusv15_70b8b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v539p8/swissaiapertusv15_70b8b/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "22475a864066b845",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "FLUX 3 - Real World Models: Towards Multimodal Flow Models as the Backbone of Visual Intelligence",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v56kja/flux_3_real_world_models_towards_multimodal_flow/",
+    "published": "2026-07-24T09:35:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v56kja/flux_3_real_world_models_towards_multimodal_flow/\"> <img alt=\"FLUX 3 - Real World Models: Towards Multimodal Flow Models as the Backbone of Visual Intelligence\" src=\"https://preview.redd.it/lqko8sr2d5fh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6ae651c34b1f78a0d6bc199c19db06206a79264f\" title=\"FLUX 3 - Real World Models: Towards Multimodal Flow Models as the Backbone of Visual Intelligence\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><blockquote> <p><strong>Introducing FLUX 3.</strong><br /> One multi-modal model for Image, Video, Audio and Action-Prediction. Creations are truer to life in every kind of style.</p> </blockquote> <p><strong>Blog Post</strong> : <a href=\"https://bfl.ai/blog/flux-3\">https://bfl.ai/blog/flux-3</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://i.redd.it/lqko8sr2d5fh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v56kja/flux_3_real_world_models_towards_multimodal_flow/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "b79040e9e92f80af",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Never forget the promises of June!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v52im7/never_forget_the_promises_of_june/",
+    "published": "2026-07-24T05:49:33+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v52im7/never_forget_the_promises_of_june/\"> <img alt=\"Never forget the promises of June!\" src=\"https://preview.redd.it/a1e6ralc94fh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=2ce73264ccba3b7f16d5a5577a17d565e4b7744b\" title=\"Never forget the promises of June!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Good morning to everyone that didn't fall for the trap of waiting since March of 2025 for a good local machine to your favorite localllm. For all the others, just &quot;morning&quot;!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Turbulent_Pin7635\"> /u/Turbulent_Pin7635 </a> <br /> <span><a href=\"https://i.redd.it/a1e6ralc94fh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v52im7/never_forget_the_promises_of_june/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "4f17f8462355e84e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "UPDATE - HuggingHack Is Now On Github",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4yljf/update_hugginghack_is_now_on_github/",
+    "published": "2026-07-24T02:37:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Due to encouragement to move my local huggingface project, it is now available on Github! Let me know your thoughts!</p> <p>Repo: <a href=\"https://github.com/tyedalwaves/HuggingHack/\">https://github.com/tyedalwaves/HuggingHack/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TyedalWaves\"> /u/TyedalWaves </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4yljf/update_hugginghack_is_now_on_github/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4yljf/update_hugginghack_is_now_on_github/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "a4afdfd766d652a1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Extened garlic to run Qwen3.5 35B A3B float8 at 55 tok/s on RTX 5060 Ti",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v53ymz/extened_garlic_to_run_qwen35_35b_a3b_float8_at_55/",
+    "published": "2026-07-24T07:06:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v53ymz/extened_garlic_to_run_qwen35_35b_a3b_float8_at_55/\"> <img alt=\"Extened garlic to run Qwen3.5 35B A3B float8 at 55 tok/s on RTX 5060 Ti\" src=\"https://external-preview.redd.it/cmU5cDAyMHRtNGZoMfvZj5R1nvAxQ6vn2PVIa_yKxbp50XqIS3nxOEywfXmn.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=eeec2b0a47673cd754e035628063be78b159c602\" title=\"Extened garlic to run Qwen3.5 35B A3B float8 at 55 tok/s on RTX 5060 Ti\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In a previous post (<a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1utefpr/running%5C_qwen3%5C_30b%5C_a3b%5C_at%5C_50%5C_toks%5C_on%5C_rtx%5C_5060%5C_ti/\">https://www.reddit.com/r/LocalLLaMA/comments/1utefpr/running\\_qwen3\\_30b\\_a3b\\_at\\_50\\_toks\\_on\\_rtx\\_5060\\_ti/</a>) there seemed to be great demand for bringing in Qwen3.5 35B. Some Gated Delta Network kernels later and here it is. It runs at 55 tok/s (61 when not recording - since the recording eats cpu and gpu capacity), significantly outperfroming llama.cpp running qwen3.5 35B at Q8 quant.</p> <p>Mind you - this is without MTP. MTP can speed up the generation even further, for a few cool reasons beyond the basic multiple tokens produced.</p> <p>Working on a blog post documenting the trick used to get this high speed up.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Azazelionide\"> /u/Azazelionide </a> <br /> <span><a href=\"https://v.redd.it/cwn24qzsm4fh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v53ymz/extened_garlic_to_run_qwen35_35b_a3b_float8_at_55/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "3ecb1fa8943b920a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[BIG DATASET RELEASE] - SupraLabs/reasoning-corpus-4K-5M-v1 - Train your tiny SLMs to think!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v58oni/big_dataset_release/",
+    "published": "2026-07-24T11:28:14+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v58oni/big_dataset_release/\"> <img alt=\"[BIG DATASET RELEASE] - SupraLabs/reasoning-corpus-4K-5M-v1 - Train your tiny SLMs to think!\" src=\"https://preview.redd.it/b7ybs7nqx5fh1.png?width=140&amp;height=58&amp;auto=webp&amp;s=8a629744b46c32894ab96b23f01e5271ad26e268\" title=\"[BIG DATASET RELEASE] - SupraLabs/reasoning-corpus-4K-5M-v1 - Train your tiny SLMs to think!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/b7ybs7nqx5fh1.png?width=3440&amp;format=png&amp;auto=webp&amp;s=e6aaaa15cbe59debaae1ebb7fcd708167e86dc35\">https://preview.redd.it/b7ybs7nqx5fh1.png?width=3440&amp;format=png&amp;auto=webp&amp;s=e6aaaa15cbe59debaae1ebb7fcd708167e86dc35</a></p> <p>Hey <a href=\"/r/LocalLLaMA\">r/LocalLLaMA</a> !</p> <p>We are back and we have something really amazing today.</p> <p>Our big 5M samples Reasoning Corpus dataset.</p> <p>This dataset features 5 million rows of:</p> <p>- repo_id --&gt; where it's from<br /> - tok_len --&gt; how many tokens it is in total<br /> - user --&gt; the user promot<br /> - thought_trace --&gt; the exact chain-of-thought of the model<br /> - assistant --&gt; the final AI models' answer<br /> - ChatML --&gt; the user, thought_trace and assistant in ChatML format</p> <p>All samples are within a 5k sequence length to make it fit perfectly for SFT/finetuning a tiny model.</p> <p>Link to the dataset on Hugging Face 🤗:<br /> <a href=\"https://huggingface.co/datasets/SupraLabs/reasoning-corpus-4K-5M-v1\">https://huggingface.co/datasets/SupraLabs/reasoning-corpus-4K-5M-v1</a></p> <p>Link to the SupraLabs Hugging Face org 🤗:<br /> <a href=\"https://huggingface.co/SupraLabs\">https://huggingface.co/SupraLabs</a></p> <p>Also, if you want to support our work, give us a follow on Hugging Face, share and review our work, and give us as much feedback as you want ❤️🔥🤗 Already more 250 people are trusting in us and our work!</p> <p>We hope, this dataset is useful for you all and we'd love to see your creations upon this.</p> <p>This dataset has already &gt;1k downloads and over 80 likes - be the next one to use it 🔥🎉 </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LH-Tech_AI\"> /u/LH-Tech_AI </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v58oni/big_dataset_release/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v58oni/big_dataset_release/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "1816dd55c7f562cd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "If MOEs have small experts (3B/4B/9B etc), then why can’t we have small expert models as a whole rather than one large model with multiple experts? Like Qwen3.6-3B Coding Expert or something",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4x3k0/if_moes_have_small_experts_3b4b9b_etc_then_why/",
+    "published": "2026-07-24T01:27:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Forgive me naiveness, I’m a little lost. Why must a model be jack of all trades? Why can’t we have a model expert in a single thing?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/exaknight21\"> /u/exaknight21 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4x3k0/if_moes_have_small_experts_3b4b9b_etc_then_why/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4x3k0/if_moes_have_small_experts_3b4b9b_etc_then_why/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "08e3a1d813f962ac",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "If you're running Laguna S 2.1 and it feels \"stupid\" or isn't reasoning properly, are you using quantization worse than Q8?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v56o1h/if_youre_running_laguna_s_21_and_it_feels_stupid/",
+    "published": "2026-07-24T09:41:27+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I can fit the whole thing in RAM in Q8, and it seems to be outperforming qwen 3.5 122B-A10B Q8 for some things. I've been seeing reports for the last couple days of people saying it feels stupid, but it doesn't seem that way to me.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/burritoresearch\"> /u/burritoresearch </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v56o1h/if_youre_running_laguna_s_21_and_it_feels_stupid/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v56o1h/if_youre_running_laguna_s_21_and_it_feels_stupid/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T11:43:48.704526+00:00"
   }
 ]
