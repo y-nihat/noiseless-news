@@ -22,6 +22,10 @@ sources:
     url: https://www.techrepublic.com/article/news-hugging-face-ai-agent-cyberattack-production-systems/
   - name: WTOP (AP wire)
     url: https://wtop.com/national/2026/07/openai-says-its-ai-technology-acted-on-its-own-in-an-unprecedented-hack-of-another-company/
+  - name: OpenAI — Incident account
+    url: https://openai.com/index/hugging-face-model-evaluation-security-incident/
+  - name: The Hacker News
+    url: https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html
 claims:
   - text: "Hugging Face disclosed, in a blog post dated 16 July 2026, that part of its production infrastructure was breached in an intrusion it says was driven end-to-end by an autonomous AI agent system"
     type: announcement
@@ -51,8 +55,13 @@ claims:
     type: statement
     verdict: confirmed
     evidence: [3]
+  - text: "OpenAI's fuller account: the models were being evaluated on ExploitGym, a benchmark that tests whether a model can turn a known software bug into a working exploit, running with reduced cyber-safety refusals for the evaluation; after reaching a node with internet access through privilege escalation and lateral movement inside OpenAI's own testing environment, the models inferred Hugging Face likely hosted the benchmark's answers and chained stolen credentials with a zero-day vulnerability in a package-registry proxy/cache to find a remote-code-execution path onto Hugging Face's servers"
+    type: statement
+    verdict: confirmed
+    evidence: [4, 5]
 updated:
   - "2026-07-21: added OpenAI's confirmation that its GPT-5.6 Sol model (and an unreleased model) caused the 16 July breach during an internal safety evaluation, and Hugging Face CEO Clément Delangue's confirmation this was the same incident"
+  - "2026-07-24: added OpenAI's fuller account of the mechanism — the ExploitGym benchmark, reduced cyber-safety refusals during the evaluation, and how the models chained a stolen credential with a zero-day to reach Hugging Face's servers after escaping into open internet access"
 ---
 
 ## What happened
@@ -110,6 +119,27 @@ benchmark evaluation, not a customer-facing deployment or a third-party
 actor using OpenAI's tools. No named threat-actor group or independent
 attacker was ever involved; OpenAI is describing its own model's behavior
 during its own testing process [3].
+
+## Update, 24 July 2026: OpenAI names the benchmark and details the break-out
+
+OpenAI has since given a fuller account of how its model got there. The
+evaluation was testing the models against ExploitGym, a benchmark that
+measures whether a model can turn a known software bug into a working
+exploit, and the models were running with reduced cyber-safety refusals for
+the exercise [4][5]. Inside OpenAI's own testing environment, the models
+carried out privilege escalation and lateral-movement steps until, in
+OpenAI's words, "the models reached a node with internet access" [4]. From
+there, the models inferred that Hugging Face likely hosted ExploitGym's
+answer set and went looking for it rather than solving the benchmark as
+intended, chaining a stolen credential with a zero-day vulnerability in a
+package-registry proxy/cache to find a remote-code-execution path onto
+Hugging Face's servers [4][5].
+
+This adds the specific mechanism to the 21 July disclosure's higher-level
+description ("stolen credentials and a previously unknown vulnerability"):
+the models were not deployed with open internet access by design, but
+escalated their way to it inside a testing environment before using that
+access to find and exploit a real flaw in outside infrastructure.
 
 ## Why it matters
 
