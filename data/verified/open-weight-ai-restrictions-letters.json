@@ -1,0 +1,39 @@
+{
+  "slug": "open-weight-ai-restrictions-letters",
+  "checked_at": "2026-07-24T23:26:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); direct fetch of Microsoft's primary statement plus independent outlets",
+  "origin_items": [
+    "CNBC Technology (Tier-0 feed, cycle 2 fresh ingest) — Nvidia, Microsoft, Meta warn against 'premature restrictions' of open-weight models",
+    "TechCrunch AI (Tier-0 feed) — As US weighs response to Chinese AI, industry urges against broad open-weight restrictions",
+    "Google News aggregator lead (via_outlet The Standard HK) — traced to origin: Politico obtained the Little Tech Association letter"
+  ],
+  "claims": [
+    {
+      "text": "Nvidia, Microsoft, Meta, and 22 other companies (25 signatories total) published an 'Open Weights and American AI Leadership' statement on 24 July 2026 opposing premature restrictions on open-weight AI models",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier independently fetched the primary document at microsoft.com and confirmed all 25 named signatories and the 'premature restrictions' quote verbatim, not just headline paraphrase. Independently corroborated by TechCrunch, Bloomberg, and Tom's Hardware.",
+      "evidence": [
+        "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/",
+        "https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/",
+        "https://www.bloomberg.com/news/articles/2026-07-24/nvidia-microsoft-lead-call-for-open-weight-ai-models-after-kimi",
+        "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban"
+      ]
+    },
+    {
+      "text": "OpenAI, Anthropic, and Google are absent from the list of signatories",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated as fact by Tom's Hardware's own reporting, not verifier inference from an incomplete list. Falsifier flagged and removed an initial draft claim that SpaceX was also a notable absentee -- no outlet reported that; cut before publish.",
+      "evidence": ["https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban"]
+    },
+    {
+      "text": "A separate coalition of nearly 200 US startups, organized as the Little Tech Association, sent letters around 22 July 2026 to Trump administration officials urging them not to impose a blanket ban on downloading Chinese open-weight models such as Moonshot AI's Kimi K3 and Alibaba's models",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Original reporting traces to Politico, which obtained the letter and quoted named individuals (Little Tech Association exec director Harry Godfrey; Particle founder Suhail Doshi) on the record. Multiple downstream outlets (TechStartups.com, ChinaTechNews, TheNextWeb, AI Weekly, Slashdot) all cite Politico as the source -- per the site's independence rule that is one source cluster, not multiple independent confirmations, so this is attributed to Politico's scoop rather than presented as separately-confirmed by each outlet. Verifier/falsifier could not locate the Little Tech Association's own hosted copy of the letter text; treated as a residual sourcing gap, not a blocker, given Politico's on-record quotes.",
+      "evidence": ["https://techstartups.com/2026/07/22/nearly-200-silicon-valley-startups-urge-trump-not-to-ban-chinese-ai-models-warn-it-could-kill-innovation/"]
+    }
+  ],
+  "adversarial_notes": "Falsifier confirmed the Microsoft primary document and the 25-signatory count directly by fetch; found no dispute, retraction, or count correction. Cut an unsupported draft claim naming SpaceX as a notable non-signatory. Re-flagged the Little Tech Association claim's apparent multi-outlet corroboration as actually a single Politico-sourced story relayed by several outlets, and the article/verified-log wording was adjusted to attribute it correctly rather than overstate independence. Explicitly kept the AI Kill Switch Act (a same-week but unrelated DHS shutdown-authority bill tied to the OpenAI/Hugging Face hack) out of this story to avoid conflating two separate policy threads."
+}
