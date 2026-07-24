@@ -1,0 +1,19 @@
+{
+  "slug": "amkor-nvidia-packaging-partnership",
+  "title": "Amkor and Nvidia sign $1.5 billion deal to build US advanced chip packaging capacity",
+  "status": "published",
+  "first_seen": "2026-07-24",
+  "published_at": "2026-07-23",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.businesswire.com/news/home/20260723873230/en/",
+    "https://www.reuters.com/",
+    "https://www.stocktitan.net/"
+  ],
+  "watch": [
+    "A direct fetch of Amkor's own ir.amkor.com press-release page to firm up the exact citation URL (both verifier and falsifier were blocked/timed out on direct access this cycle)",
+    "Any named executive quote or capacity/unit figures (wafer starts, floor space) disclosed later -- omitted this cycle as unconfirmed",
+    "Progress on the Arizona buildout timeline"
+  ],
+  "cycle_2026-07-24_night_c4_note": "New standalone story, surfaced via this cycle's gnews-ai-chips-and-compute sweep (01net aggregator relaying Amkor's own press release). dedup-check: moderate match against amd-anthropic-compute-deal on generic 'AI chip partnership' title similarity -- read and confirmed unrelated (different companies, different deal type: OSAT packaging capacity vs. compute-credit deal) -- standalone justified. Fresh verifier + fresh adversarial falsifier run in parallel (announcement claim type, single Tier-0 primary source bar): both independently traced Amkor's Business Wire release via syndicated copy plus independent Reuters wire pickup, confirming the $1.5B prepayment for Arizona advanced-packaging/test capacity expansion. Falsifier ruled out MOU/non-binding framing and confirmed genuine freshness (distinct from an unrelated, smaller Nov 2025 DigiTimes item). One unverified detail (CEO name/quote) omitted rather than risk misattribution. Style gates run on both languages: pass (falsifiable headline, standalone TL;DR, no padding, Turkish mirrors structure)."
+}

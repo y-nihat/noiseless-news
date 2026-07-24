@@ -1,0 +1,43 @@
+{
+    "slug": "amkor-nvidia-packaging-partnership",
+    "checked_at": "2026-07-24T00:29:00+00:00",
+    "method": "Fresh verifier sub-agent (primary-source trace via Business Wire/StockTitan syndication + independent Reuters wire pickup) and independent adversarial falsifier sub-agent (direct search for the Amkor IR release, market-reaction cross-check, staleness check against an unrelated Nov 2025 DigiTimes item), run in parallel per policy/verification.md §5. Announcement claim type.",
+    "origin_items": [
+        "Surfaced via this cycle's gnews-ai-chips-and-compute feed (01net/Google News aggregator, ~2026-07-24T00:00 UTC, via_outlet: Amkor Technology press release). dedup-check before opening: moderate match against amd-anthropic-compute-deal (title-similarity false positive on generic 'AI chip partnership' phrasing -- unrelated companies and deal types -- standalone justified)."
+    ],
+    "claims": [
+        {
+            "text": "Amkor Technology and Nvidia announced a multi-year strategic partnership on 23 July 2026 for advanced semiconductor packaging and test technology",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via Amkor's own Business Wire press release (traced through StockTitan's verbatim syndicated copy, which explicitly attributes issuance to Amkor Technology, Inc.), independently corroborated by Reuters' own wire pickup (newsML ID L4N43P2K8) and consistent coverage from Yahoo Finance and Investing.com.",
+            "evidence": [
+                "https://www.businesswire.com/news/home/20260723873230/en/",
+                "https://www.reuters.com/",
+                "https://www.stocktitan.net/"
+            ]
+        },
+        {
+            "text": "Nvidia will make a $1.5 billion prepayment to Amkor to fund expansion of advanced packaging and test capacity at Amkor's Arizona campus",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Both verifier and falsifier independently found the same $1.5B figure and Arizona location across the primary-source syndication and independent wire/financial coverage (Reuters, TradingView, Yahoo Finance, Stocktwits). Falsifier confirmed the language is a firm agreement, not a non-binding MOU. Market reaction (AMKR shares up ~12-17% after-hours) is consistent with a real, material announcement.",
+            "evidence": [
+                "https://www.businesswire.com/news/home/20260723873230/en/",
+                "https://www.reuters.com/"
+            ]
+        },
+        {
+            "text": "The partnership covers high-density interconnect and heterogeneous integration packaging for Nvidia's data-center GPUs, networking hardware, and other accelerated-computing platforms",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via the primary-source syndicated text; no specific branded process name (e.g. a CoWoS-equivalent) or exact capacity unit figures were disclosed by either company, so the article does not claim more specificity than the sources support.",
+            "evidence": [
+                "https://www.businesswire.com/news/home/20260723873230/en/",
+                "https://www.stocktitan.net/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH. Falsifier independently located the same primary release and confirmed the aggregator headline matches the primary source word-for-word, with no MOU/non-binding hedging language. Confirmed genuine freshness: this is a new, larger, formally announced $1.5B deal, distinct from a smaller/earlier Nov 2025 DigiTimes report on Nvidia-Amkor-SPIL-Menlo Micro US backend capacity. One secondary source (ainvest.com) returned a 403 and could not be checked -- treated as inconclusive, not used as evidence. Neither agent could directly render Amkor's own IR page or the Business Wire page (both timed out); confirmation rests on syndicated verbatim copy plus independent Reuters wire pickup, which meets the announcement-claim bar (one Tier-0 primary source, corroborated). CEO quote/name surfaced by the verifier (\"Kevin Engel\") was not independently confirmed against the primary text by either agent, so it was omitted from the published article rather than risk a misattributed quote.",
+    "gaps_closed_from_watching_state": []
+}
