@@ -1,0 +1,12 @@
+[
+  {
+    "id": "fd071e74a0d3a9e8",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "LEAD: Breaking the No-Recovery Bottleneck in Long-Horizon Reasoning",
+    "url": "https://machinelearning.apple.com/research/lead-no-recovery-bottleneck",
+    "published": "2026-07-24T00:00:00+00:00",
+    "summary": "Long-horizon execution in Large Language Models (LLMs) remains unstable even when high-level strategies are provided. Evaluating on controlled algorithmic puzzles, we demonstrate that while decomposition is essential for stability, extreme decomposition creates a “no-recovery bottleneck”. We show that this bottleneck becomes critical due to highly non-uniform error distribution, where consistent errors on a few “hard” steps become irreversible. To address this, we propose Lookahead-Enhanced Atomic Decomposition (LEAD). By incorporating short-horizon future validation and aggregating…",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
+  }
+]

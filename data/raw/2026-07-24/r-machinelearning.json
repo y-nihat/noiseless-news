@@ -18,5 +18,45 @@
     "published": "2026-07-24T07:37:17+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi, I'm new with ACM conferences. I have 2 papers at workshops and the conference website says: &quot;Each workshop paper needs to be associated with one workshop-only (non-student) or full (non-student) author registration at either ACM Member rate, or non-member rate. One workshop-only or full registration can cover only one accepted workshop paper.&quot;</p> <p>Does that mean that I have to register twice with &quot;Workshop-only Author registration&quot; paying 500USD per paper!?</p> <p>Second question, I really do not understand the APC fees listed here: <a href=\"https://2026.acmmm.org/site/author-instructions.html\">ACM Multimedia 2026 Conference — Author Instructions</a> .. does that means that in addition to the registrations I have to pay 350USD per paper?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rokk07\"> /u/rokk07 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v54i9j/acm_mm_26_registration_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v54i9j/acm_mm_26_registration_d/\">[comments]</a></span>",
     "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "101291b90020a0cd",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "I built a compiler that turns computation graphs into the weights of a vanilla transformer — no training anywhere [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v5fxbe/i_built_a_compiler_that_turns_computation_graphs/",
+    "published": "2026-07-24T16:15:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been chasing the question of what algorithms a transformer can actually express -- separate from what it can learn. So I built a compiler: define a computation graph in ordinary Python, and it produces the weights of a transformer that executes the graph. The result is a standard Phi-3-architecture checkpoint that vanilla huggingface loads with no custom code and no trust_remote_code. Zero training in the pipeline.</p> <p>Write-up (origin + how the constructions work): <a href=\"https://ood.dev/posts/torchwright-intro/\">https://ood.dev/posts/torchwright-intro/</a></p> <p>Repo (twelve runnable examples): <a href=\"https://github.com/physicsrob/torchwright\">https://github.com/physicsrob/torchwright</a></p> <p>Hand-built transformer weights aren't a new idea. RASP defines a language whose primitives map onto transformer sublayers, and Tracr compiles RASP programs into actual weights. I wanted two things they don't aim for: expressing a computation graph in ordinary Python, and targeting a stock architecture, so the output loads in vanilla huggingface with no custom code. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/notforrob\"> /u/notforrob </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v5fxbe/i_built_a_compiler_that_turns_computation_graphs/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v5fxbe/i_built_a_compiler_that_turns_computation_graphs/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
+  },
+  {
+    "id": "8702c4a253625deb",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "I built an open-source multi-agent SDLC harness that beats a cold Claude Code run on large repos, by learning the repo once. Real benchmarks (incl. where it loses) inside. [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v59pal/i_built_an_opensource_multiagent_sdlc_harness/",
+    "published": "2026-07-24T12:15:31+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Built an open-source AI coding agent that was 7%–75% cheaper than a cold &quot;claude -p&quot; run on 6/6 well-localized tasks across repositories up to ~82k LOC.</p> <p>The biggest difference:</p> <ul> <li>Cold agent: $6.83, 207 turns</li> <li>AutoDev Studio: ~$1.70 for the same bug</li> </ul> <p>The full benchmark (including cases where it loses) is in the README.</p> <p>So what's different?</p> <p>Most AI coding agents re-explore a repository from scratch on every task just to figure out where the change belongs.</p> <p>AutoDev Studio pays that localization cost once.</p> <p>It ingests a repository and builds a persistent knowledge base using static analysis and a local embedding index. Every future task reuses that knowledge, turning localization into a lookup instead of another cold search.</p> <p>What it does:</p> <ul> <li>PM agent asks clarifying questions and drafts tickets</li> <li>Dev agent writes code on an isolated branch</li> <li>QA runs tests</li> <li>A different model family reviews the diff (author ≠ reviewer)</li> <li>If needed, it goes through a bounded revise loop</li> <li>Opens a real GitHub PR</li> </ul> <p>It also includes a live Kanban board and tracks token usage and cost per ticket/agent.</p> <p>Where it doesn't win:</p> <ul> <li>Tiny, easy-to-find edits can be cheaper with a single-shot agent because of the pipeline overhead.</li> <li>On one complex cross-cutting bug, it produced a cheaper but narrower fix than the baseline.</li> </ul> <p>Other features:</p> <ul> <li>Provider agnostic (Anthropic, Claude Code, OpenAI-compatible APIs, Groq, Gemini, xAI, OpenRouter, Ollama, etc.)</li> <li>Runs completely free/offline by default using Groq's free tier + local embeddings</li> <li>FastAPI + SQLite</li> <li>Hand-rolled UI</li> <li>Tests + CI</li> <li>MIT licensed</li> </ul> <p>Repo (screenshots + full benchmark): <a href=\"https://github.com/krishagarwal314/autodev-studio\">https://github.com/krishagarwal314/autodev-studio</a></p> <p>I'd love any feedback, criticism, or contributions. Happy to answer questions about the architecture or benchmarking.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NeighborhoodOwn8510\"> /u/NeighborhoodOwn8510 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v59pal/i_built_an_opensource_multiagent_sdlc_harness/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v59pal/i_built_an_opensource_multiagent_sdlc_harness/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
+  },
+  {
+    "id": "9d1d1f27fc33502a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "DocLayout, MinerU, Marker, Unlimited-OCR [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v4d6yu/doclayout_mineru_marker_unlimitedocr_d/",
+    "published": "2026-07-23T12:58:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi all,</p> <p>So I have been working on document layout analysis for some time now. I have tried the models like Doclayout, Docling, Miner U, marker. I am working with Journals.</p> <p>Overall Docling performs well, but the problem is that it over performs. And mineru u misses some content like the corresponding author on the page-footer. And it is also missing the masthead mark, and the article-type label. </p> <p>In my opinion unlimited OCR performs well in all the tasks, but in general it is failing to recognise any style at all. And it is bad at recognising logos. </p> <p>So I am wondering are there any state of the art models (SOTA) that are good at PDF text extraction and layout extraction ? </p> <p>Thanks </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fickle-Aide9279\"> /u/Fickle-Aide9279 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4d6yu/doclayout_mineru_marker_unlimitedocr_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4d6yu/doclayout_mineru_marker_unlimitedocr_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
+  },
+  {
+    "id": "9fdc26dacf4a88c5",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS Reviews out for me [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v4ifp1/neurips_reviews_out_for_me_r/",
+    "published": "2026-07-23T16:12:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know it might be because we have an earlier number (in the 600's) but we got all 4 of our reviews. Even the harshest ones were very insightful and honestly I'm very happy with how this all turned out. Best of luck to everyone else in getting their reviews and good luck to you all in the rebuttal!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RepulsivePlastic4665\"> /u/RepulsivePlastic4665 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4ifp1/neurips_reviews_out_for_me_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v4ifp1/neurips_reviews_out_for_me_r/\">[comments]</a></span>",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
   }
 ]

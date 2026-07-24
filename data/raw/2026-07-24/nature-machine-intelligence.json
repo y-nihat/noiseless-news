@@ -8,5 +8,15 @@
     "published": "2026-07-24T00:00:00+00:00",
     "summary": "<p>Nature Machine Intelligence, Published online: 24 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01268-y\">doi:10.1038/s42256-026-01268-y</a></p>A controlled study of large language model agents across 260 configurations shows when multi-agent collaboration helps or hurts performance, and introduces a predictive model that selects the best architecture in 87% of held-out within-domain configurations.",
     "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "c823f368bda22943",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Thinking and rethinking data AI readiness",
+    "url": "https://www.nature.com/articles/s42256-026-01288-8",
+    "published": "2026-07-24T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 24 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01288-8\">doi:10.1038/s42256-026-01288-8</a></p>Training machine learning models on high-quality biological datasets can quickly produce abundant results. But as datasets often evolve over time, further work is required to update models and maintain alignment between models and datasets.",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
   }
 ]

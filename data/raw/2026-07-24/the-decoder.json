@@ -18,5 +18,25 @@
     "published": "2026-07-24T09:48:32+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/aisi_logo_pattern.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        The British AI Security Institute and the U.S. Center for AI Standards and Innovation tested Moonshot AI's Kimi K3 on offensive cyber tasks. Kimi K3 scored 32 percent on ExploitBench, compared with 76 percent for leading U.S. models, while its safeguards failed to block exploit development or simulated attacks. The gap between its strong general benchmark scores and weaker cyber performance also fits allegations that Moonshot AI distilled Anthropic's models.</p>\n<p>The article <a href=\"https://the-decoder.com/kimi-k3-trails-frontier-us-models-by-a-wide-margin-on-cyber-exploits-and-distillation-may-explain-why/\">Kimi K3 trails frontier US models by a wide margin on cyber exploits, and distillation may explain why</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-07-24T11:43:48.704526+00:00"
+  },
+  {
+    "id": "8f7ad88328945153",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Microsoft's open-weight AI push is so obviously an Azure play it hurts",
+    "url": "https://the-decoder.com/microsofts-open-weight-ai-push-is-so-obviously-an-azure-play-it-hurts/",
+    "published": "2026-07-24T16:06:02+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/microsoft_glitch_robot.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Microsoft, along with Meta, Nvidia, and more than 20 other companies, is pushing for open-weight AI models in an open letter. The strategic logic is simple: the more models running on Azure, the less Microsoft depends on expensive OpenAI and Anthropic models. The company is also swapping external models in products like Copilot for its in-house MAI family, which performs significantly worse in independent benchmarks.</p>\n<p>The article <a href=\"https://the-decoder.com/microsofts-open-weight-ai-push-is-so-obviously-an-azure-play-it-hurts/\">Microsoft&#039;s open-weight AI push is so obviously an Azure play it hurts</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
+  },
+  {
+    "id": "f97cb1164887542d",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Sakana claims its AI model router Fugu Ultra v1.1 now beats Fable 5 without even including it in the pool",
+    "url": "https://the-decoder.com/sakana-claims-its-ai-model-router-fugu-ultra-v1-1-now-beats-fable-5-without-even-including-it-in-the-pool/",
+    "published": "2026-07-24T14:37:57+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/sakana_fugu_ai.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Sakana AI has updated its Fugu Ultra AI router to version 1.1, claiming gains of up to 7.9 points over v1.0. Independent verification doesn't exist yet. The update adds a Claude Code-compatible endpoint. The service remains unavailable in the EU.</p>\n<p>The article <a href=\"https://the-decoder.com/sakana-claims-its-ai-model-router-fugu-ultra-v1-1-now-beats-fable-5-without-even-including-it-in-the-pool/\">Sakana claims its AI model router Fugu Ultra v1.1 now beats Fable 5 without even including it in the pool</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-24T17:40:58.945909+00:00"
   }
 ]
