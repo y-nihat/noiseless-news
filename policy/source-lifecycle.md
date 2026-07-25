@@ -42,8 +42,10 @@ domain is not re-evaluated every cycle).
 
 ## 4. Track record and demotion (active → demoted/retired)
 
-- Every run appends per-source stats to `data/ledger/source_stats.json`:
-  items ingested, stories contributed, claims confirmed, claims contradicted.
+- Every ingest run appends one line to `data/ledger/source_stats.jsonl`:
+  `{run_at, counts: {source_name: new_items}}`, where `-1` means the fetch failed
+  (as distinct from `0`, a healthy feed with nothing new). Written by
+  `noiseless.run.write_ingest_stats`.
 - A source whose claims are repeatedly falsified (guideline: ≥3 contradicted claims in
   a rolling 90 days) is demoted one tier, or retired if already Tier 3.
 - Dead feeds (fail live validation for 14 consecutive days) are flagged for repair or

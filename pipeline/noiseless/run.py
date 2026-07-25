@@ -8,13 +8,39 @@ Usage (inside the pipeline container):
 from __future__ import annotations
 
 import argparse
+import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from noiseless.ingest import ingest_all
 from noiseless.sources import SourceRegistryError, load_sources
 
 REGISTRY_PATH = Path("policy/sources.yaml")
+# policy/source-lifecycle.md §4 builds two governance rules on a per-run source
+# track record — demote a repeatedly-contradicted source, retire a feed that has
+# been dead 14 days. ingest_all has always returned the numbers; nothing ever
+# wrote them down, so neither rule could run.
+STATS_FILENAME = "source_stats.jsonl"
+
+
+def write_ingest_stats(data_dir: Path, summary: dict[str, int]) -> Path | None:
+    """Append one line per ingest run: {run_at, counts}. -1 means the fetch failed.
+
+    Line-oriented and append-only so the committed diff is one added line per
+    run, the same property that keeps seen_ids.json cheap in git.
+    """
+    if not summary:
+        return None
+    stats_path = data_dir / "ledger" / STATS_FILENAME
+    stats_path.parent.mkdir(parents=True, exist_ok=True)
+    record = {
+        "run_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "counts": dict(sorted(summary.items())),
+    }
+    with stats_path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return stats_path
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -82,7 +108,13 @@ def main(argv: list[str] | None = None) -> int:
         summary = ingest_all(sources, args.data_dir, only_sources=args.source)
         failures = [name for name, count in summary.items() if count < 0]
         total_new = sum(count for count in summary.values() if count > 0)
+        write_ingest_stats(Path(args.data_dir), summary)
         print(f"done — {total_new} new items, {len(failures)} failed sources")
+        if failures:
+            # Named, not just counted: "3 failed sources" in a three-hour log is
+            # not something anyone finds. The committed stats file is the durable
+            # record; this line is for whoever is watching the run.
+            print(f"failed sources: {', '.join(sorted(failures))}", file=sys.stderr)
         return 0
 
     if args.command == "publish":
