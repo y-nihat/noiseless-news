@@ -1,0 +1,36 @@
+name: Tests
+
+# The pipeline's only automated safety net. Runs on every push and pull request
+# so a broken build or a regressed duplicate gate is caught before it reaches
+# main — and therefore before the deploy workflow ships it to the live site.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+      - 'content/**'
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r pipeline/requirements.txt
+      - name: Unit tests
+        run: pytest -q
+      - name: Source registry parses
+        run: PYTHONPATH=pipeline python -m noiseless.run validate-sources
+      - name: Site builds from the real archive
+        run: PYTHONPATH=pipeline python -m noiseless.run publish --out /tmp/site-check
