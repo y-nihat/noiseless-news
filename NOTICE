@@ -1,0 +1,40 @@
+# Third-party material in this repository
+
+## What is retained, and why
+
+`data/raw/` holds items captured from the public feeds registered in
+`policy/sources.yaml`. Each item is stored as JSON with the fields the feed
+supplied: `title`, `url`, `published`, `source`, and `summary`.
+
+It is committed rather than discarded because the whole claim of this project is
+that a reader can check why an article says what it says. Verdicts in
+`data/verified/` cite evidence; the raw capture is what the pipeline actually saw
+at the time, timestamped, before anything was written about it. Deleting it would
+make the audit trail unverifiable a week later.
+
+Copyright in that material belongs to the publishers who produced it. It is not
+relicensed by this repository (see LICENSE §3).
+
+## Known limitation
+
+Some publishers put a full article body in the feed's `summary` field rather than
+a lede. Where that happens, the retained item is longer than a citation needs to
+be. Truncation at ingest is planned; it does not change the position below.
+
+## Removal requests
+
+If you publish a feed represented here and want items removed or truncated, open
+an issue at https://github.com/y-nihat/noiseless-news/issues naming the source,
+and it will be removed from the working tree and the source retired or capped in
+`policy/sources.yaml`.
+
+Note that this repository's history is public and append-only, so removal from
+the current tree does not by itself erase earlier commits. If a request requires
+history rewriting, say so in the issue and it will be handled.
+
+## Robots and crawling
+
+Ingest fetches only registered feed URLs, at most once per scheduled run, rate
+limited per source (3s for arXiv per its API terms; 60s for the Reddit feeds;
+1s otherwise), and identifies itself as `noiseless-news/0.1` with a link to this
+repository. It does not crawl beyond the registered URLs.

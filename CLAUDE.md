@@ -33,19 +33,29 @@ filters clickbait, writes its own headlines/articles, lists sources under every 
 - Daytime ingest crons (13:00/19:00 Istanbul, `.github/workflows/ingest.yml`) are
   deterministic feed capture only — no LLM, no credits.
 
-## Architecture (5 file-based stages)
+## Architecture (4 file-based stages)
 
 ```
-ingest (deterministic Python, no LLM)  → data/raw/YYYY-MM-DD/*.json
-triage/cluster (LLM, cheap)            → data/clusters/
-verify (Agent SDK: claims+evidence)    → data/verified/<story>.json
-synthesize (EN article, then TR)       → content/articles/{en,tr}/YYYY/MM/slug.md
-publish (Astro → GitHub Pages)         → static site
+ingest      deterministic Python, no LLM   → data/raw/YYYY-MM-DD/<source>.json
+triage +
+verify +    one headless `claude -p` cycle → data/verified/<slug>.json
+synthesize  reading policy/ at run start   → content/articles/{en,tr}/YYYY/MM/<slug>.md
+                                           → data/ledger/<slug>.json
+publish     hand-rolled Python, no Node    → site/dist → GitHub Pages
 ```
+
+Triage, verification and synthesis are not separate programs: they are steps in
+one agent cycle driven by `.github/cycle-prompt.md`. There is no clustering
+stage and no `data/clusters/` output — the agent greps the raw JSON directly.
+The publisher is `pipeline/noiseless/publish.py`, ~600 lines of markdown +
+hand-written templates; there is no Astro and no Node anywhere in the project.
 
 - `data/` is committed: git history is the public audit trail.
 - Story lifecycle lives in `data/ledger/` (candidate → verifying → published/watching/dropped);
   nightly runs reconcile new items against open stories before creating new ones.
+  Schema in `policy/article-template.md` — `dedup.load_index` reads these files,
+  so an entry missing `title`/`source_urls` is invisible to the duplicate gate.
+  In practice only `published` and `watching` have ever been written.
 - All editorial behavior is defined in `policy/verification.md` and `policy/sources.yaml` —
   agents read these at run start. Tune the documents, not the code.
 
