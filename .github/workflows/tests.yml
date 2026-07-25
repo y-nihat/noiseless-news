@@ -32,5 +32,7 @@ jobs:
         run: pytest -q
       - name: Source registry parses
         run: PYTHONPATH=pipeline python -m noiseless.run validate-sources
+      - name: Published content holds its invariants
+        run: PYTHONPATH=pipeline python -m noiseless.run validate-content --strict
       - name: Site builds from the real archive
         run: PYTHONPATH=pipeline python -m noiseless.run publish --out /tmp/site-check

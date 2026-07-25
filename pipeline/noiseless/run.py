@@ -69,6 +69,19 @@ def main(argv: list[str] | None = None) -> int:
     )
     publish_parser.add_argument("--out", default="site/dist")
 
+    content_parser = subparsers.add_parser(
+        "validate-content",
+        help="check published articles against the invariants (exit 2 with --strict)",
+    )
+    content_parser.add_argument(
+        "--strict", action="store_true", help="exit 2 when a blocking finding exists"
+    )
+    content_parser.add_argument(
+        "--warn-as-error",
+        action="store_true",
+        help="treat warnings as blocking too (once the known ones are cleared)",
+    )
+
     dedup_parser = subparsers.add_parser(
         "dedup-check",
         help="check a candidate story against the whole archive (exit 2 = strong match)",
@@ -123,6 +136,13 @@ def main(argv: list[str] | None = None) -> int:
         counts = build_site(Path("."), args.out)
         print(f"site built at {args.out} — articles: en={counts['en']}, tr={counts['tr']}")
         return 0
+
+    if args.command == "validate-content":
+        from noiseless.validate_content import main as validate_content_main
+
+        return validate_content_main(
+            Path("."), strict=args.strict, warn_as_error=args.warn_as_error
+        )
 
     if args.command == "dedup-check":
         import json as _json
