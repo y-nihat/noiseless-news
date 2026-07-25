@@ -19,6 +19,11 @@ import markdown as md
 import yaml
 
 REPO_URL = "https://github.com/y-nihat/noiseless-news"
+# The one place the canonical origin is written down. Canonical links, feed
+# entry ids, the sitemap and the Open Graph tags all derive from it, so pointing
+# a custom domain at the site is a one-line change here.
+SITE_URL = "https://y-nihat.github.io/noiseless-news"
+FEED_LIMIT = 30
 
 FAVICON = (
     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E"
@@ -43,6 +48,9 @@ STRINGS = {
             "listed only to show what the pipeline watches."
         ),
         "methodology": "Methodology",
+        "site_title": "noiseless.news — verified AI news",
+        "feed_title": "noiseless.news",
+        "feed_link": "Feed",
         "about": "About",
         "corrections": "Corrections",
         "footer": "Built in the open — every verdict's evidence trail is public.",
@@ -158,6 +166,9 @@ STRINGS = {
             "doğrulanmamıştır; yalnızca hattın neyi izlediğini göstermek içindir."
         ),
         "methodology": "Yöntem",
+        "site_title": "noiseless.news — doğrulanmış yapay zekâ haberleri",
+        "feed_title": "noiseless.news (Türkçe)",
+        "feed_link": "Akış",
         "about": "Hakkında",
         "corrections": "Düzeltmeler",
         "footer": "Açık inşa ediliyor — her hükmün kanıt zinciri kamuya açık.",
@@ -307,8 +318,9 @@ nav.top a:hover { color:var(--accent); text-decoration:none; }
 .rule { border:0; border-top:1px solid var(--rule); margin:0; }
 
 main { padding:1.2rem 0 2rem; }
-h2.section { font-size:.8rem; font-weight:650; text-transform:uppercase;
-             letter-spacing:.09em; color:var(--muted); margin:2.4rem 0 .4rem; }
+.section { font-size:.8rem; font-weight:650; text-transform:uppercase;
+           letter-spacing:.09em; color:var(--muted); margin:2.4rem 0 .4rem; }
+h1.section { margin-top:1.4rem; }
 .note { color:var(--muted); font-size:.85rem; margin:.1rem 0 .9rem; }
 .empty { color:var(--muted); font-size:.95rem; }
 
@@ -610,9 +622,24 @@ def _domain(url: str) -> str:
 
 
 def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
-          description: str = "", prefix: str = "", last_run: str = "") -> str:
+          description: str = "", prefix: str = "", last_run: str = "",
+          path: str = "", alternate_path: str | None = None) -> str:
     s = STRINGS[lang]
     desc = html.escape(description or s["tagline"])
+    canonical = f"{SITE_URL}/{path}"
+    # Reciprocal hreflang, plus x-default pointing at the canonical English
+    # edition. Both index pages previously shipped the identical <title>, so a
+    # bookmark or a search result could not tell the two editions apart.
+    alternates = ""
+    if alternate_path is not None:
+        other_lang = "tr" if lang == "en" else "en"
+        en_path = path if lang == "en" else alternate_path
+        alternates = (
+            f'<link rel="alternate" hreflang="{lang}" href="{SITE_URL}/{path}">\n'
+            f'<link rel="alternate" hreflang="{other_lang}" href="{SITE_URL}/{alternate_path}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{SITE_URL}/{en_path}">\n'
+        )
+    feed_path = "feed.xml" if lang == "en" else "tr/feed.xml"
     # The footer carries the three things a reader needs and the site did not
     # say anywhere: who runs it, that no person edits an article before it is
     # published, and how to report an error.
@@ -634,6 +661,15 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{desc}">
 <title>{html.escape(title)}</title>
+<link rel="canonical" href="{canonical}">
+{alternates}<link rel="alternate" type="application/atom+xml" title="{html.escape(s['feed_title'])}" href="{SITE_URL}/{feed_path}">
+<meta property="og:type" content="{'article' if path.count('articles/') else 'website'}">
+<meta property="og:site_name" content="noiseless.news">
+<meta property="og:locale" content="{'en_US' if lang == 'en' else 'tr_TR'}">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{canonical}">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="{FAVICON}">
 <style>{CSS}</style>
 </head>
@@ -643,9 +679,10 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
     <div class="bar">
       <a class="wordmark" href="{home}">noiseless<em>.</em>news</a>
       <nav class="top">
-        <a href="{other_lang_href}">{s['other_lang']}</a>
+        <a href="{other_lang_href}" hreflang="{'tr' if lang == 'en' else 'en'}" lang="{'tr' if lang == 'en' else 'en'}">{s['other_lang']}</a>
         <a href="{prefix}about.html">{s['about']}</a>
         <a href="{prefix}corrections.html">{s['corrections']}</a>
+        <a href="{prefix}feed.xml">{s['feed_link']}</a>
         <a href="{REPO_URL}/blob/main/policy/verification.md">{s['methodology']}</a>
       </nav>
     </div>
@@ -700,12 +737,13 @@ def _chips_html(article: Article, lang: str) -> str:
 def _article_list_html(articles: list[Article], lang: str, article_prefix: str) -> str:
     s = STRINGS[lang]
     if not articles:
-        return f"<h2 class='section'>{s['articles']}</h2><p class='empty'>{s['no_articles']}</p>"
-    parts = [f"<h2 class='section'>{s['articles']}</h2><ul class='posts'>"]
+        return f"<h1 class='section'>{s['articles']}</h1><p class='empty'>{s['no_articles']}</p>"
+    parts = [f"<h1 class='section'>{s['articles']}</h1><ul class='posts'>"]
     for article in articles:
         tldr = html.escape(str(article.meta.get("tldr", "")).strip())
         parts.append(
-            f"<li><span class='date'>{article.published}</span>"
+            f"<li><time class='date' datetime='{article.published}'>"
+            f"{article.published}</time>"
             f"<h3><a href='{article_prefix}{article.slug}.html'>"
             f"{html.escape(article.title)}</a></h3>"
             f"{f'<p class=tldr>{tldr}</p>' if tldr else ''}"
@@ -865,6 +903,64 @@ def _corrections_html(corrections: list[dict], lang: str, article_prefix: str) -
     return f"<div class='page'><h1>{s['corrections']}</h1>{body}</div>"
 
 
+def _feed_xml(articles: list[Article], lang: str) -> str:
+    """Atom feed of the newest articles.
+
+    The site ingests 48 feeds every night and published none, so a reader who
+    found it had no way to be told about the next article. Entries are ordered
+    and timestamped by publication rather than by event date — a feed built on
+    the event date would have been wrong for 22 of 57 articles and would land in
+    subscribers' readers sorted below things they had already seen.
+    """
+    s = STRINGS[lang]
+    base = f"{SITE_URL}/" if lang == "en" else f"{SITE_URL}/tr/"
+    feed_url = f"{base}feed.xml"
+    recent = articles[:FEED_LIMIT]
+    updated = f"{recent[0].last_touched}T00:00:00Z" if recent else "1970-01-01T00:00:00Z"
+
+    entries = []
+    for article in recent:
+        url = f"{base}articles/{article.slug}.html"
+        summary = str(article.meta.get("tldr", "")).strip()
+        entries.append(
+            "<entry>"
+            f"<title>{html.escape(article.title)}</title>"
+            f"<link href='{url}'/>"
+            f"<id>{url}</id>"
+            f"<published>{article.published}T00:00:00Z</published>"
+            f"<updated>{article.last_touched}T00:00:00Z</updated>"
+            f"<summary>{html.escape(summary)}</summary>"
+            "</entry>"
+        )
+    return (
+        "<?xml version='1.0' encoding='utf-8'?>\n"
+        f"<feed xmlns='http://www.w3.org/2005/Atom' xml:lang='{lang}'>"
+        f"<title>{html.escape(s['feed_title'])}</title>"
+        f"<subtitle>{html.escape(s['tagline'])}</subtitle>"
+        f"<link href='{base}'/>"
+        f"<link rel='self' href='{feed_url}'/>"
+        f"<id>{feed_url}</id>"
+        f"<updated>{updated}</updated>"
+        f"<author><name>noiseless.news</name><uri>{SITE_URL}/about.html</uri></author>"
+        f"<rights>CC BY 4.0</rights>"
+        + "".join(entries)
+        + "</feed>\n"
+    )
+
+
+def _sitemap_xml(paths: list[str]) -> str:
+    urls = "".join(f"<url><loc>{SITE_URL}/{path}</loc></url>" for path in paths)
+    return (
+        "<?xml version='1.0' encoding='utf-8'?>\n"
+        "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>"
+        f"{urls}</urlset>\n"
+    )
+
+
+def _robots_txt() -> str:
+    return f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n"
+
+
 def build_site(repo_root: Path | str, out_dir: Path | str) -> dict[str, int]:
     """Render the whole site, then swap it into place.
 
@@ -891,28 +987,36 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
     digest = build_digest(repo_root / "data")
     last_run = latest_run_date(repo_root / "data")
     counts = {}
-    for lang, lang_root, home in (
-        ("en", out_dir, "index.html"),
-        ("tr", out_dir / "tr", "index.html"),
+    sitemap_paths: list[str] = []
+    for lang, lang_root, home, base in (
+        ("en", out_dir, "index.html", ""),
+        ("tr", out_dir / "tr", "index.html", "tr/"),
     ):
+        other_base = "tr/" if lang == "en" else ""
         articles = load_articles(repo_root / "content", lang)
         threads = resolve_threads(articles)
         counts[lang] = len(articles)
         other = "tr/index.html" if lang == "en" else "../index.html"
 
-        def page(title, body, *, home=home, other=other, prefix="", description=""):
+        def page(title, body, *, path, alternate, home=home, other=other,
+                 prefix="", description=""):
+            sitemap_paths.append(path)
             return _page(lang=lang, title=title, body=body, home=home,
                          other_lang_href=other, description=description,
-                         prefix=prefix, last_run=last_run)
+                         prefix=prefix, last_run=last_run, path=path,
+                         alternate_path=alternate)
 
         index_body = _article_list_html(articles, lang, "articles/") + _digest_html(
             digest, lang
         )
         (lang_root / "index.html").write_text(
-            page("noiseless.news", index_body), encoding="utf-8"
+            page(STRINGS[lang]["site_title"], index_body,
+                 path=base, alternate=other_base),
+            encoding="utf-8",
         )
         (lang_root / "about.html").write_text(
             page(f"{STRINGS[lang]['about']} — noiseless.news", _about_html(lang),
+                 path=f"{base}about.html", alternate=f"{other_base}about.html",
                  other="tr/about.html" if lang == "en" else "../about.html",
                  description=STRINGS[lang]["disclosure"]),
             encoding="utf-8",
@@ -920,6 +1024,8 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
         (lang_root / "corrections.html").write_text(
             page(f"{STRINGS[lang]['corrections']} — noiseless.news",
                  _corrections_html(collect_corrections(articles), lang, "articles/"),
+                 path=f"{base}corrections.html",
+                 alternate=f"{other_base}corrections.html",
                  other="tr/corrections.html" if lang == "en" else "../corrections.html",
                  description=STRINGS[lang]["corrections_note"]),
             encoding="utf-8",
@@ -935,10 +1041,16 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
                 page(f"{article.title} — noiseless.news",
                      _article_html(article, lang, home="../index.html",
                                    thread=threads.get(article.slug)),
+                     path=f"{base}articles/{article.slug}.html",
+                     alternate=f"{other_base}articles/{article.slug}.html",
                      home="../index.html", other=counterpart, prefix="../",
                      description=str(article.meta.get("tldr", "")).strip()),
                 encoding="utf-8",
             )
 
+        (lang_root / "feed.xml").write_text(_feed_xml(articles, lang), encoding="utf-8")
+
+    (out_dir / "sitemap.xml").write_text(_sitemap_xml(sitemap_paths), encoding="utf-8")
+    (out_dir / "robots.txt").write_text(_robots_txt(), encoding="utf-8")
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
     return counts

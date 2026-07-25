@@ -117,7 +117,8 @@ class TestRendering:
         write(tmp_path, "delayed", "2026-07-06", published="2026-07-14")
         build_site(tmp_path, tmp_path / "site")
         index = (tmp_path / "site" / "index.html").read_text("utf-8")
-        assert "<span class='date'>2026-07-14</span>" in index
+        assert "<time class='date' datetime='2026-07-14'>2026-07-14</time>" in index
+        assert "2026-07-06" not in index, "index must not show the event date"
 
     def test_updated_articles_get_a_chip_in_both_languages(self, tmp_path):
         write(tmp_path, "revised", "2026-07-10", updated='["2026-07-19: new reporting"]')
