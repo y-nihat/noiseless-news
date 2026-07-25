@@ -1,6 +1,7 @@
 ---
 title: Yargıç, Anthropic'in 1,5 milyar dolarlık telif hakkı uzlaşmasına kesin onay verdi
 date: 2026-07-20
+published: 2026-07-21
 slug: anthropic-copyright-settlement-final-approval
 lang: tr
 tldr: >

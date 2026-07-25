@@ -1,6 +1,7 @@
 ---
 title: AI chip startup Etched closes $300 million round at $10.3 billion valuation
 date: 2026-07-23
+published: 2026-07-24
 slug: etched-series-c-10-3b-valuation
 lang: en
 tldr: >

@@ -1,6 +1,7 @@
 ---
 title: Judge grants final approval to Anthropic's $1.5 billion author copyright settlement
 date: 2026-07-20
+published: 2026-07-21
 slug: anthropic-copyright-settlement-final-approval
 lang: en
 tldr: >

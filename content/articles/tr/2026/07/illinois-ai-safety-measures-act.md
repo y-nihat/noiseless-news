@@ -1,6 +1,7 @@
 ---
 title: Illinois, sınır ötesi yapay zeka sistemleri için düzenli bağımsız denetim şartı getiren ilk eyalet yasasını çıkardı
 date: 2026-07-06
+published: 2026-07-14
 slug: illinois-ai-safety-measures-act
 lang: tr
 tldr: >

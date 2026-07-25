@@ -1,6 +1,7 @@
 ---
 title: ByteDance Seed, EdgeBench'i yayınladı; AI ajanlarının gerçek dünya ortamlarından öğrenmesi için yeni bir ölçeklendirme yasası bildiriyor
 date: 2026-07-02
+published: 2026-07-11
 slug: bytedance-edgebench-scaling-law
 lang: tr
 tldr: >

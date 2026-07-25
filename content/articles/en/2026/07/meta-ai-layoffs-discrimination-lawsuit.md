@@ -1,6 +1,7 @@
 ---
 title: 26 Meta employees sue, alleging AI layoff-selection system disadvantaged workers on medical leave and with disabilities
 date: 2026-07-14
+published: 2026-07-15
 slug: meta-ai-layoffs-discrimination-lawsuit
 lang: en
 tldr: >

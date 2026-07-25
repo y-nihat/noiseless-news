@@ -1,6 +1,7 @@
 ---
 title: Çin ve 29 ülke Dünya Yapay Zeka İşbirliği Örgütü'nü kurdu; ABD, AB, İngiltere, Japonya katılmadı
 date: 2026-07-17
+published: 2026-07-19
 slug: china-waico-ai-cooperation-body
 lang: tr
 tldr: >

@@ -126,6 +126,9 @@ STRINGS = {
         "min_read": "min read",
         "claims_chip": "{n} claims checked",
         "sources_chip": "{n} sources",
+        "updated_chip": "updated {date}",
+        "event_date": "Event {date}",
+        "published_date": "published {date}",
         "tiers": {
             0: "Primary / official",
             1: "Literature",
@@ -238,6 +241,9 @@ STRINGS = {
         "min_read": "dk okuma",
         "claims_chip": "{n} iddia denetlendi",
         "sources_chip": "{n} kaynak",
+        "updated_chip": "güncellendi {date}",
+        "event_date": "Olay {date}",
+        "published_date": "yayım {date}",
         "tiers": {
             0: "Birincil / resmî",
             1: "Literatür",
@@ -409,7 +415,33 @@ class Article:
 
     @property
     def date(self) -> str:
+        """When the event happened. This is what the byline states."""
         return str(self.meta.get("date", ""))
+
+    @property
+    def published(self) -> str:
+        """When we published it. This is what the reader's ordering follows.
+
+        The two diverge whenever verification takes longer than the news cycle,
+        which is often: a story confirmed tonight about an event nine days ago
+        used to appear halfway down the homepage, below things the reader had
+        already seen, on its own launch day.
+        """
+        return str(self.meta.get("published") or self.date)
+
+    @property
+    def last_touched(self) -> str:
+        """Newest of published and any dated `updated:` entry.
+
+        An article that gained material new reporting three times over nine days
+        never moved on the index, so a returning reader had no way to see it.
+        """
+        dates = [self.published]
+        for entry in self.meta.get("updated") or []:
+            parsed = parse_update_entry(entry)
+            if parsed["date"]:
+                dates.append(parsed["date"])
+        return max(dates)
 
 
 def parse_frontmatter(text: str) -> tuple[dict, str]:
@@ -450,7 +482,10 @@ def load_articles(content_dir: Path, lang: str) -> list[Article]:
         if not meta.get("title") or not meta.get("slug"):
             continue
         articles.append(Article(meta=meta, body_html=md.markdown(body), lang=lang))
-    articles.sort(key=lambda a: a.date, reverse=True)
+    # Newest first by when the reader could first have seen it, then by slug so
+    # same-day ordering is deterministic rather than alphabetical-by-filename
+    # falling out of a stable sort.
+    articles.sort(key=lambda a: (a.last_touched, a.published, a.slug), reverse=True)
     return articles
 
 
@@ -627,6 +662,19 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
 """
 
 
+def _byline_dates(article: Article, lang: str) -> str:
+    """Event date alone when they agree; both, labelled, when they do not."""
+    s = STRINGS[lang]
+    if article.published == article.date:
+        return f"<time datetime='{article.date}'>{article.date}</time>"
+    return (
+        f"{s['event_date'].format(date=article.date)}"
+        f"<span class='dot'>·</span>"
+        f"<time datetime='{article.published}'>"
+        f"{s['published_date'].format(date=article.published)}</time>"
+    )
+
+
 def _chips_html(article: Article, lang: str) -> str:
     s = STRINGS[lang]
     chips = []
@@ -634,6 +682,10 @@ def _chips_html(article: Article, lang: str) -> str:
     claims = article.meta.get("claims") or []
     if article.meta.get("follows"):
         chips.append(s["thread_chip"])
+    if article.last_touched != article.published:
+        # "What changed since I last looked" is the question a returning reader
+        # actually has, and the index answered it nowhere.
+        chips.append(s["updated_chip"].format(date=article.last_touched))
     if sources:
         chips.append(s["sources_chip"].format(n=len(sources)))
     if claims:
@@ -653,7 +705,7 @@ def _article_list_html(articles: list[Article], lang: str, article_prefix: str) 
     for article in articles:
         tldr = html.escape(str(article.meta.get("tldr", "")).strip())
         parts.append(
-            f"<li><span class='date'>{article.date}</span>"
+            f"<li><span class='date'>{article.published}</span>"
             f"<h3><a href='{article_prefix}{article.slug}.html'>"
             f"{html.escape(article.title)}</a></h3>"
             f"{f'<p class=tldr>{tldr}</p>' if tldr else ''}"
@@ -715,7 +767,8 @@ def _article_html(
         f"<p class='crumb'><a href='{home}'>← {s['back']}</a></p>",
         "<article>",
         f"<h1>{html.escape(article.title)}</h1>",
-        f"<p class='byline'>{article.date}<span class='dot'>·</span>{minutes} {s['min_read']}</p>",
+        f"<p class='byline'>{_byline_dates(article, lang)}"
+        f"<span class='dot'>·</span>{minutes} {s['min_read']}</p>",
     ]
     if meta.get("tldr"):
         parts.append(f"<div class='tldr-box'>{html.escape(str(meta['tldr']).strip())}</div>")

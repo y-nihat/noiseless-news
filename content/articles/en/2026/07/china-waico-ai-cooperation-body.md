@@ -1,6 +1,7 @@
 ---
 title: China and 29 countries launch World AI Cooperation Organization; US, EU, UK, Japan absent
 date: 2026-07-17
+published: 2026-07-19
 slug: china-waico-ai-cooperation-body
 lang: en
 tldr: >

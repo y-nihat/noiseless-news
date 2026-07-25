@@ -1,6 +1,7 @@
 ---
 title: New York Governor Hochul signs first statewide moratorium on hyperscale AI data centers
 date: 2026-07-14
+published: 2026-07-17
 slug: ny-hochul-data-center-moratorium
 lang: en
 tldr: >

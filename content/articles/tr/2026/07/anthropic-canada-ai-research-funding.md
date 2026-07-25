@@ -1,6 +1,7 @@
 ---
 title: Anthropic, sekiz Kanadalı araştırma kurumuna 10 milyon CAD değerinde Claude kredisi verdi
 date: 2026-07-14
+published: 2026-07-17
 slug: anthropic-canada-ai-research-funding
 lang: tr
 tldr: >

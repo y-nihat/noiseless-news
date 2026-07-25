@@ -1,6 +1,7 @@
 ---
 title: Hugging Face, üretim altyapısındaki bir ihlale otonom bir yapay zekâ ajanının yol açtığını söylüyor
 date: 2026-07-16
+published: 2026-07-18
 slug: huggingface-ai-agent-security-breach
 lang: tr
 tldr: >

@@ -1,6 +1,7 @@
 ---
 title: Fidji Simo steps down as OpenAI's applications chief, citing chronic illness
 date: 2026-07-09
+published: 2026-07-10
 slug: fidji-simo-steps-down-openai
 lang: en
 tldr: >

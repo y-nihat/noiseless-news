@@ -1,6 +1,7 @@
 ---
 title: Amkor ve Nvidia, ABD'de gelişmiş çip paketleme kapasitesi kurmak için 1,5 milyar dolarlık anlaşma imzaladı
 date: 2026-07-23
+published: 2026-07-24
 slug: amkor-nvidia-packaging-partnership
 lang: tr
 tldr: >

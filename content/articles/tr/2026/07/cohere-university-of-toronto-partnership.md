@@ -1,6 +1,7 @@
 ---
 title: Cohere ve Toronto Üniversitesi çok yıllı bir yapay zekâ ortaklığı duyurdu
 date: 2026-07-16
+published: 2026-07-17
 slug: cohere-university-of-toronto-partnership
 lang: tr
 tldr: >

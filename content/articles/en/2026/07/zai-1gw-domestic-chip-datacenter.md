@@ -1,6 +1,7 @@
 ---
 title: Z.AI completes a roughly 1-gigawatt data center built entirely on Chinese-made AI chips
 date: 2026-07-22
+published: 2026-07-23
 slug: zai-1gw-domestic-chip-datacenter
 lang: en
 tldr: >

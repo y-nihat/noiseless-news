@@ -1,6 +1,7 @@
 ---
 title: New York Valisi Hochul, büyük ölçekli yapay zekâ veri merkezlerine ülkenin ilk eyalet çapındaki moratoryumunu imzaladı
 date: 2026-07-14
+published: 2026-07-17
 slug: ny-hochul-data-center-moratorium
 lang: tr
 tldr: >

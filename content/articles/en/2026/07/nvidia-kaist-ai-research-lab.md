@@ -1,6 +1,7 @@
 ---
 title: Nvidia and KAIST launch joint AI research lab in South Korea, $300 million over five years
 date: 2026-07-23
+published: 2026-07-25
 slug: nvidia-kaist-ai-research-lab
 lang: en
 tldr: >

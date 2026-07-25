@@ -1,6 +1,7 @@
 ---
 title: San Francisco'da yüzlerce kişi OpenAI'dan Anthropic'e, oradan Google DeepMind'a yürüyerek yapay zeka gelişiminin durdurulmasını istedi
 date: 2026-07-11
+published: 2026-07-13
 slug: sf-stop-the-ai-race-protest
 lang: tr
 tldr: >

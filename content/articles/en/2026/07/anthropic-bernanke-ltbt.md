@@ -1,6 +1,7 @@
 ---
 title: Anthropic appoints former Fed Chair Ben Bernanke to its Long-Term Benefit Trust
 date: 2026-07-09
+published: 2026-07-11
 slug: anthropic-bernanke-ltbt
 lang: en
 tldr: >

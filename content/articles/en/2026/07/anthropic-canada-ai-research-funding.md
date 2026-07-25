@@ -1,6 +1,7 @@
 ---
 title: Anthropic commits $10 million CAD in Claude credits to eight Canadian research institutions
 date: 2026-07-14
+published: 2026-07-17
 slug: anthropic-canada-ai-research-funding
 lang: en
 tldr: >

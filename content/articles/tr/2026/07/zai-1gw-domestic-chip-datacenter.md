@@ -1,6 +1,7 @@
 ---
 title: "Z.AI, tamamen Çin yapımı yapay zeka çipleriyle çalışan yaklaşık 1 gigawatt'lık veri merkezini tamamladı"
 date: 2026-07-22
+published: 2026-07-23
 slug: zai-1gw-domestic-chip-datacenter
 lang: tr
 tldr: >

@@ -7,7 +7,13 @@ Published articles are markdown files with YAML frontmatter, one per language:
 ```markdown
 ---
 title: Plain factual headline written by us — never a source headline
-date: 2026-07-09
+date: 2026-07-09              # when the EVENT happened — used in the byline
+published: 2026-07-11         # OPTIONAL — when WE published it. Omit when it is the
+                              # same day as `date`. Set it whenever verification ran
+                              # past the event: the index is ordered by this, so an
+                              # article dated three days ago would otherwise appear
+                              # below stories the reader has already seen, on its
+                              # own launch day.
 slug: example-story
 lang: en
 tldr: >

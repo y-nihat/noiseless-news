@@ -1,6 +1,7 @@
 ---
 title: Mistral releases Robostral Navigate, its first robotics model, for single-camera robot navigation
 date: 2026-07-08
+published: 2026-07-11
 slug: mistral-robostral-navigate
 lang: en
 tldr: >

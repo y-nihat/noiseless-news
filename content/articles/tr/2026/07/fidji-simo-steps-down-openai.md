@@ -1,6 +1,7 @@
 ---
 title: Fidji Simo, kronik hastalığını gerekçe göstererek OpenAI'nin uygulamalardan sorumlu başkanlığından ayrılıyor
 date: 2026-07-09
+published: 2026-07-10
 slug: fidji-simo-steps-down-openai
 lang: tr
 tldr: >
