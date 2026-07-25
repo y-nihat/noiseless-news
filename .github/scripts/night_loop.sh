@@ -41,13 +41,35 @@ NIGHT_END=$((START + NIGHT_SECONDS))
 # run's start time so same-day runs (smoke tests) never collide.
 REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H%M)Z.md"
 touch /tmp/night-start-marker
-ok_cycles=0; ran_cycles=0; usage_stop=0
+ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0
 
 git config user.name "y-nihat"
 git config user.email "nihat@yinovasyon.com"
 
+# The agent session runs unattended with unrestricted Write/Edit over the whole
+# checkout, and it reads thousands of third-party feed items and fetched pages
+# every night. Its only legitimate output is content/ and data/. Everything else
+# — the supervisor script, the result gate, the cycle prompt, the pipeline, the
+# policy documents — is read back and EXECUTED by the next cycle, so a stray
+# edit that reached main would run tomorrow with both tokens in scope.
+# The prompt already forbids this; the allowlist is what enforces it.
+OWNED_PATHS=(content data)
+
+guard_paths() {
+  local stray
+  stray=$(git status --porcelain -- . ':(exclude)content' ':(exclude)data')
+  [ -z "$stray" ] && return 0
+  guard_trips=$((guard_trips + 1))
+  log "GUARD TRIPPED: changes outside content/ and data/ — refusing to commit them:"
+  printf '%s\n' "$stray" | while IFS= read -r line; do log "  $line"; done
+  # Restore tracked files so the next cycle runs the real scripts, not edited
+  # ones. Untracked strays are left on the runner and simply never staged.
+  git checkout -- . ':(exclude)content' ':(exclude)data' 2>/dev/null || true
+}
+
 commit_push() {
-  git add -A
+  guard_paths
+  git add "${OWNED_PATHS[@]}"
   git diff --cached --quiet || git commit -m "$1"
   if ! git push; then
     git pull --rebase || true
@@ -161,6 +183,7 @@ published_total=$new_articles
   echo "- Cycles run: $ran_cycles (successful: $ok_cycles, max: $MAX_CYCLES)"
   echo "- New articles: $new_articles · updated articles: $updated_articles (night cap: $NIGHT_STORY_CAP new)"
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
+  echo "- Out-of-scope write attempts blocked: $guard_trips"
   echo "- Window: $NIGHT_START_ISO → $(date -u +%FT%H:%MZ)"
 } >> "$REPORT_FILE"
 commit_push "Night loop footer $(date -u +%F)"
