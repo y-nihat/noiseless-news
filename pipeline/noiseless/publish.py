@@ -125,6 +125,10 @@ STRINGS = {
             "4.0; the code is MIT."
         ),
         "verification": "Verification",
+        "why": "Why this verdict",
+        "checked_at": "Verified",
+        "evidence_log": "Full evidence log for this story",
+        "evidence_lang_note": "",
         "sources": "Sources",
         "updated": "Updates",
         "thread": "Story thread",
@@ -243,6 +247,10 @@ STRINGS = {
             "ve kanıt dosyaları CC BY 4.0, kod MIT lisanslıdır."
         ),
         "verification": "Doğrulama",
+        "why": "Bu hüküm neden verildi",
+        "checked_at": "Doğrulandığı tarih",
+        "evidence_log": "Bu haberin tam kanıt dosyası",
+        "evidence_lang_note": "kanıt notları İngilizcedir",
         "sources": "Kaynaklar",
         "updated": "Güncellemeler",
         "thread": "Haberin seyri",
@@ -366,6 +374,25 @@ article h1 { font-size:1.85rem; line-height:1.2; letter-spacing:-.022em;
          border-top:1px solid var(--rule); font-size:.9rem; line-height:1.5; }
 .claim:first-of-type { border-top:0; }
 .claim .refs { margin-left:auto; color:var(--muted); font-size:.78rem; white-space:nowrap; }
+.claim .refs a { color:var(--muted); }
+.claim .refs a:hover { color:var(--accent); text-decoration:none; }
+details.why { margin:0 0 .3rem 0; padding:0 0 .2rem; }
+details.why summary { cursor:pointer; font-size:.78rem; color:var(--muted);
+                      list-style:none; padding:.15rem 0; }
+details.why summary::-webkit-details-marker { display:none; }
+details.why summary::before { content:'\203A'; display:inline-block; margin-right:.4rem;
+                              transition:transform .15s ease; }
+details.why[open] summary::before { transform:rotate(90deg); }
+details.why summary:hover { color:var(--accent); }
+details.why p { margin:.2rem 0 .5rem 1rem; font-size:.86rem; line-height:1.6;
+                color:var(--muted); }
+.verify-meta { font-size:.78rem; color:var(--muted); margin:0 0 .6rem; }
+.verify-meta:last-child { margin:.8rem 0 0; }
+ol.sources li:target { background:var(--accent-soft); border-radius:6px;
+                       padding-left:.4rem; margin-left:-.4rem; }
+@media (prefers-reduced-motion: reduce) {
+  details.why summary::before { transition:none; }
+}
 .badge { flex:none; font-size:.7rem; font-weight:700; letter-spacing:.02em;
          padding:.26rem .6rem; border-radius:999px; margin-top:.1rem; }
 .v-ok { color:var(--ok); background:var(--ok-bg); }
@@ -699,6 +726,60 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
 """
 
 
+def load_evidence(data_dir: Path, slug: str) -> dict:
+    """The committed evidence log for a story, or {} if it is missing or broken.
+
+    These files hold the per-claim reasoning, the wire-exclusive independence
+    checks and the adversarial falsifier's findings — the work that makes this
+    site different from an aggregator. They were committed for all 57 stories
+    and linked from nowhere; the reader got a coloured badge and a bare [1] [2].
+
+    Read defensively: the file is agent-written and its schema is looser than
+    article frontmatter, and the site build must never fail because one night's
+    evidence log was sloppy.
+    """
+    path = data_dir / "verified" / f"{slug}.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, UnicodeDecodeError, OSError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _normalize_claim(text: str) -> str:
+    return " ".join(str(text).lower().split())
+
+
+def claim_reasoning(evidence: dict, claims: list[dict]) -> dict[int, str]:
+    """Map article claim position to the verifier's reasoning for that claim.
+
+    Matched on claim text first, because the evidence log and the article are
+    written in the same cycle and the wording agrees; position is the fallback
+    when it does not. Turkish claims are translations, so they never match by
+    text and always fall back to position — which is why the counts must agree
+    for the fallback to be used at all.
+    """
+    logged = evidence.get("claims") if isinstance(evidence, dict) else None
+    if not isinstance(logged, list) or not logged:
+        return {}
+
+    by_text = {}
+    for entry in logged:
+        if isinstance(entry, dict) and entry.get("reasoning"):
+            by_text[_normalize_claim(entry.get("text", ""))] = str(entry["reasoning"])
+
+    reasons: dict[int, str] = {}
+    for position, claim in enumerate(claims):
+        matched = by_text.get(_normalize_claim(claim.get("text", "")))
+        if matched:
+            reasons[position] = matched
+        elif len(logged) == len(claims):
+            entry = logged[position]
+            if isinstance(entry, dict) and entry.get("reasoning"):
+                reasons[position] = str(entry["reasoning"])
+    return reasons
+
+
 def _byline_dates(article: Article, lang: str) -> str:
     """Event date alone when they agree; both, labelled, when they do not."""
     s = STRINGS[lang]
@@ -796,10 +877,12 @@ def _thread_html(article: Article, thread: list[Article], lang: str) -> str:
 
 
 def _article_html(
-    article: Article, lang: str, home: str, thread: list[Article] | None = None
+    article: Article, lang: str, home: str, thread: list[Article] | None = None,
+    evidence: dict | None = None,
 ) -> str:
     s = STRINGS[lang]
     meta = article.meta
+    evidence = evidence or {}
     minutes = reading_minutes(article.body_html)
     parts = [
         f"<p class='crumb'><a href='{home}'>← {s['back']}</a></p>",
@@ -816,27 +899,58 @@ def _article_html(
 
     claims = meta.get("claims") or []
     if claims:
+        reasons = claim_reasoning(evidence, claims)
         rows = []
-        for claim in claims:
+        for position, claim in enumerate(claims):
             verdict_key = claim.get("verdict", "")
             verdict = s["verdicts"].get(verdict_key, verdict_key)
             css = VERDICT_CLASS.get(verdict_key, "v-single")
-            refs = " ".join(f"[{i}]" for i in (claim.get("evidence") or []))
-            rows.append(
+            # The [n] markers were plain text next to a source list with no
+            # anchors, so a reader could not get from a verdict to the source
+            # that supports it.
+            refs = " ".join(
+                f"<a href='#s{i}'>[{i}]</a>" for i in (claim.get("evidence") or [])
+            )
+            reasoning = reasons.get(position)
+            row = (
                 f"<div class='claim'><span class='badge {css}'>{html.escape(verdict)}</span>"
                 f"<span>{html.escape(claim.get('text', ''))}</span>"
                 f"<span class='refs'>{refs}</span></div>"
             )
+            if reasoning:
+                # Collapsed: the verdict is the answer, the reasoning is for the
+                # reader who wants to check it.
+                row += (
+                    f"<details class='why'><summary>{s['why']}</summary>"
+                    f"<p>{html.escape(reasoning)}</p></details>"
+                )
+            rows.append(row)
+        checked = evidence.get("checked_at") if isinstance(evidence, dict) else None
+        meta_line = (
+            f"<p class='verify-meta'>{s['checked_at']} "
+            f"{html.escape(str(checked)[:10])}</p>"
+            if checked
+            else ""
+        )
+        log_link = (
+            f"<p class='verify-meta'><a href='{REPO_URL}/blob/main/data/verified/"
+            f"{article.slug}.json'>{s['evidence_log']}</a>"
+            f"{'' if lang == 'en' else ' — ' + s['evidence_lang_note']}</p>"
+            if evidence
+            else ""
+        )
         parts.append(
-            f"<div class='verify'><h2>{s['verification']}</h2>{''.join(rows)}</div>"
+            f"<div class='verify'><h2>{s['verification']}</h2>{meta_line}"
+            f"{''.join(rows)}{log_link}</div>"
         )
 
     sources = meta.get("sources") or []
     if sources:
         items = "".join(
-            f"<li><a href='{html.escape(src['url'])}'>{html.escape(src['name'])}</a>"
+            f"<li id='s{i}'><a href='{html.escape(src['url'])}'>"
+            f"{html.escape(src['name'])}</a>"
             f"<span class='domain'>{html.escape(_domain(src['url']))}</span></li>"
-            for src in sources
+            for i, src in enumerate(sources, start=1)
         )
         parts.append(
             f"<h2 class='section'>{s['sources']}</h2><ol class='sources'>{items}</ol>"
@@ -1040,7 +1154,9 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
             (lang_root / "articles" / f"{article.slug}.html").write_text(
                 page(f"{article.title} — noiseless.news",
                      _article_html(article, lang, home="../index.html",
-                                   thread=threads.get(article.slug)),
+                                   thread=threads.get(article.slug),
+                                   evidence=load_evidence(repo_root / "data",
+                                                          article.slug)),
                      path=f"{base}articles/{article.slug}.html",
                      alternate=f"{other_base}articles/{article.slug}.html",
                      home="../index.html", other=counterpart, prefix="../",
