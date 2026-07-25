@@ -128,9 +128,20 @@ def fetch_source(source: Source, client: httpx.Client, fetched_at: str) -> list[
 
 
 def _load_seen_ids(state_path: Path) -> set[str]:
-    if state_path.exists():
+    if not state_path.exists():
+        return set()
+    try:
         return set(json.loads(state_path.read_text(encoding="utf-8")))
-    return set()
+    except (json.JSONDecodeError, UnicodeDecodeError, TypeError) as exc:
+        # Refuse rather than silently starting from an empty set: that would
+        # re-ingest the entire 14,000-item history into today's raw files. The
+        # realistic cause is a rebase conflict left in the file after a failed
+        # push, and the fix is to restore it from git, not to plough on.
+        raise RuntimeError(
+            f"{state_path} is unreadable ({type(exc).__name__}: {exc}). "
+            "Ingest stopped so it cannot re-ingest the whole archive. "
+            f"Restore it with: git checkout -- {state_path}"
+        ) from exc
 
 
 def _save_seen_ids(state_path: Path, seen_ids: set[str]) -> None:
