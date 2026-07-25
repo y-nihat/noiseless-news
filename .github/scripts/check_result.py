@@ -1,4 +1,4 @@
-"""Gate a night cycle on the agent's actual outcome.
+"""Gate a night cycle on the agent's actual outcome, and record what it cost.
 
 Reads the stream-json file from one cycle and classifies it:
   exit 0 — cycle completed successfully
@@ -7,12 +7,17 @@ Reads the stream-json file from one cycle and classifies it:
 
 A dead agent must never look green, and a credit exhaustion must be
 distinguishable from an ordinary error so the loop stops instead of retrying.
+
+With --stats-file, one record per cycle is appended as JSON Lines so cost, turns
+and duration become measurable instead of being estimated in prose. Only the
+numeric and enum fields in STAT_FIELDS are written: the result event also carries
+the agent's own free text, and that must never be copied into a committed file.
 """
 
+import argparse
 import json
 import os
 import re
-import sys
 
 USAGE_LIMIT = re.compile(
     r"usage limit|rate.?limit|credit balance|out of credits?|quota exceeded"
@@ -20,41 +25,33 @@ USAGE_LIMIT = re.compile(
     re.IGNORECASE,
 )
 
+# Numeric fields only — never `result`, `error` or `message`, which carry
+# agent-authored text and would leak article drafts or fetched page content into
+# the public audit trail.
+STAT_FIELDS = ("num_turns", "duration_ms", "duration_api_ms", "total_cost_usd")
 
-def main() -> int:
-    path = sys.argv[1]
+
+def read_result(path: str) -> dict | None:
+    """Return the last `result` event in the stream, or None if there is none."""
     result = None
-    try:
-        with open(path, encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    event = json.loads(line)
-                except json.JSONDecodeError:
-                    continue
-                if event.get("type") == "result":
-                    result = event
-    except FileNotFoundError:
-        print("FAIL: no agent output file — the agent never started")
-        return 1
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                event = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if event.get("type") == "result":
+                result = event
+    return result
 
+
+def classify(result: dict | None) -> tuple[int, str]:
+    """Map a result event to (exit code, human-readable reason)."""
     if result is None:
-        print("FAIL: no result event — the agent died mid-cycle (crash or timeout)")
-        return 1
-
-    summary = (
-        f"subtype={result.get('subtype')} is_error={result.get('is_error')} "
-        f"turns={result.get('num_turns')} "
-        f"duration_min={round((result.get('duration_ms') or 0) / 60000, 1)}"
-    )
-    print(summary)
-
-    step_summary = os.environ.get("GITHUB_STEP_SUMMARY")
-    if step_summary:
-        with open(step_summary, "a", encoding="utf-8") as f:
-            f.write(f"- cycle result: `{summary}`\n")
+        return 1, "FAIL: no result event — the agent died mid-cycle (crash or timeout)"
 
     if result.get("is_error"):
         # Only the result event's own fields — not article content — decide this.
@@ -62,13 +59,85 @@ def main() -> int:
             {k: result.get(k) for k in ("subtype", "result", "error", "message")}
         )
         if USAGE_LIMIT.search(result_text):
-            print("USAGE LIMIT: ending the night")
-            return 3
-        print("FAIL: agent reported an error")
+            return 3, "USAGE LIMIT: ending the night"
+        return 1, "FAIL: agent reported an error"
+
+    return 0, "cycle completed OK"
+
+
+def stat_record(result: dict | None, night: str, cycle: str, gate: int) -> dict:
+    """Build the committed telemetry record. Numeric fields only, by design."""
+    record: dict = {"night": night, "cycle": cycle, "gate": gate}
+    if result is None:
+        record["subtype"] = "no-result-event"
+        return record
+    record["subtype"] = result.get("subtype")
+    record["is_error"] = bool(result.get("is_error"))
+    for field in STAT_FIELDS:
+        value = result.get(field)
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            record["cost_usd" if field == "total_cost_usd" else field] = value
+    usage = result.get("usage")
+    if isinstance(usage, dict):
+        tokens = {k: v for k, v in usage.items() if isinstance(v, int)}
+        if tokens:
+            record["tokens"] = tokens
+    return record
+
+
+def append_stats(path: str, record: dict) -> None:
+    directory = os.path.dirname(path)
+    if directory:
+        os.makedirs(directory, exist_ok=True)
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(prog="check_result")
+    parser.add_argument("stream_file")
+    parser.add_argument("--stats-file", help="append one JSONL telemetry record here")
+    parser.add_argument("--night", default="", help="night start ISO timestamp")
+    parser.add_argument("--cycle", default="", help="cycle number")
+    args = parser.parse_args(argv)
+
+    try:
+        result = read_result(args.stream_file)
+    except FileNotFoundError:
+        print("FAIL: no agent output file — the agent never started")
+        if args.stats_file:
+            append_stats(
+                args.stats_file,
+                {
+                    "night": args.night,
+                    "cycle": args.cycle,
+                    "gate": 1,
+                    "subtype": "no-output-file",
+                },
+            )
         return 1
 
-    print("cycle completed OK")
-    return 0
+    code, reason = classify(result)
+
+    if result is not None:
+        cost = result.get("total_cost_usd")
+        summary = (
+            f"subtype={result.get('subtype')} is_error={result.get('is_error')} "
+            f"turns={result.get('num_turns')} "
+            f"duration_min={round((result.get('duration_ms') or 0) / 60000, 1)}"
+            + (f" cost_usd={cost}" if isinstance(cost, (int, float)) else "")
+        )
+        print(summary)
+        step_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if step_summary:
+            with open(step_summary, "a", encoding="utf-8") as f:
+                f.write(f"- cycle result: `{summary}`\n")
+
+    if args.stats_file:
+        append_stats(args.stats_file, stat_record(result, args.night, args.cycle, code))
+
+    print(reason)
+    return code
 
 
 if __name__ == "__main__":

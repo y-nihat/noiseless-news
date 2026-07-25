@@ -41,7 +41,8 @@ NIGHT_END=$((START + NIGHT_SECONDS))
 # run's start time so same-day runs (smoke tests) never collide.
 REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H%M)Z.md"
 touch /tmp/night-start-marker
-ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0
+ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0; push_failed=0
+NIGHT_STATS="data/ledger/night-stats.jsonl"
 
 git config user.name "y-nihat"
 git config user.email "nihat@yinovasyon.com"
@@ -71,10 +72,21 @@ commit_push() {
   guard_paths
   git add "${OWNED_PATHS[@]}"
   git diff --cached --quiet || git commit -m "$1"
-  if ! git push; then
-    git pull --rebase || true
-    git push || true
+  if git push; then
+    return 0
   fi
+  log "push rejected — pulling and retrying once"
+  git pull --rebase || log "rebase failed (likely a conflict left in the tree)"
+  if git push; then
+    return 0
+  fi
+  # A night whose work never reached origin is the worst outcome the loop can
+  # produce and the one the operator is least likely to notice: the runner is
+  # destroyed at the end of the job, and the footer's article counts come from
+  # the LOCAL branch, so they would still read "New articles: N". Record it and
+  # fail the job at the end.
+  push_failed=1
+  log "PUSH FAILED — work is committed locally but has NOT reached origin"
 }
 
 for cycle in $(seq 1 "$MAX_CYCLES"); do
@@ -148,7 +160,8 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
     | python3 .github/scripts/stream_summary.py
   claude_exit=${PIPESTATUS[0]}
 
-  python3 .github/scripts/check_result.py "/tmp/claude-stream-$cycle.jsonl"
+  python3 .github/scripts/check_result.py "/tmp/claude-stream-$cycle.jsonl" \
+    --stats-file "$NIGHT_STATS" --night "$NIGHT_START_ISO" --cycle "$cycle"
   gate=$?
   log "cycle $cycle: claude_exit=$claude_exit gate=$gate"
 
@@ -176,6 +189,31 @@ done
 new_articles=$(git log --since="$NIGHT_START_ISO" --diff-filter=A --name-only --pretty=format: -- 'content/articles/en/*' | grep -c '\.md$' || true)
 updated_articles=$(git log --since="$NIGHT_START_ISO" --diff-filter=M --name-only --pretty=format: -- 'content/articles/en/*' | grep -c '\.md$' || true)
 published_total=$new_articles
+# Sum tonight's per-cycle costs. check_result.py writes one record per cycle;
+# older nights have no records, so an empty result is reported as "unknown"
+# rather than a misleading 0.
+night_cost=$(python3 - "$NIGHT_STATS" "$NIGHT_START_ISO" <<'PY' 2>/dev/null || echo unknown
+import json, sys
+path, night = sys.argv[1], sys.argv[2]
+total, seen = 0.0, False
+try:
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if rec.get("night") == night and isinstance(rec.get("cost_usd"), (int, float)):
+                total += rec["cost_usd"]
+                seen = True
+except FileNotFoundError:
+    pass
+print(f"{total:.2f}" if seen else "unknown")
+PY
+)
 {
   echo ""
   echo "## Loop supervisor footer"
@@ -184,6 +222,8 @@ published_total=$new_articles
   echo "- New articles: $new_articles · updated articles: $updated_articles (night cap: $NIGHT_STORY_CAP new)"
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
   echo "- Out-of-scope write attempts blocked: $guard_trips"
+  echo "- Push to origin: $([ "$push_failed" -eq 1 ] && echo FAILED || echo ok)"
+  echo "- Night cost (USD): $night_cost"
   echo "- Window: $NIGHT_START_ISO → $(date -u +%FT%H:%MZ)"
 } >> "$REPORT_FILE"
 commit_push "Night loop footer $(date -u +%F)"
@@ -191,9 +231,40 @@ commit_push "Night loop footer $(date -u +%F)"
 {
   echo "### Night loop"
   echo ""
-  echo "cycles=$ran_cycles ok=$ok_cycles published=$published_total usage_stop=$usage_stop"
+  echo "cycles=$ran_cycles ok=$ok_cycles new=$new_articles updated=$updated_articles"
+  echo "usage_stop=$usage_stop push_failed=$push_failed guard_trips=$guard_trips cost_usd=$night_cost"
 } >> "${GITHUB_STEP_SUMMARY:-/dev/null}"
 
+# Warning tier. A green check has meant three different things — "worked, quiet
+# news night", "worked, but something upstream is broken" and "flailed for three
+# hours" — and the operator could only tell them apart by reading a 40 KB report.
+# These conditions do not fail the job; they raise a hand.
+warnings=()
+[ "$((new_articles + updated_articles))" -eq 0 ] && warnings+=("published nothing tonight")
+[ "$ok_cycles" -lt "$ran_cycles" ] && warnings+=("$((ran_cycles - ok_cycles)) of $ran_cycles cycles did not complete cleanly")
+[ "$guard_trips" -gt 0 ] && warnings+=("$guard_trips out-of-scope write attempt(s) blocked")
+[ "$usage_stop" -eq 1 ] && warnings+=("night ended early on a usage limit")
+if [ "${#warnings[@]}" -gt 0 ]; then
+  log "review needed: ${warnings[*]}"
+  {
+    echo "Automated night review flag. The job itself did not fail."
+    echo
+    for w in "${warnings[@]}"; do echo "- $w"; done
+    echo
+    echo "- Cycles: $ran_cycles run, $ok_cycles clean"
+    echo "- Articles: $new_articles new, $updated_articles updated"
+    echo "- Report: \`$REPORT_FILE\`"
+    echo "- Run: ${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY:-y-nihat/noiseless-news}/actions/runs/${GITHUB_RUN_ID:-unknown}"
+  } > /tmp/night-review.md
+  gh issue create --title "Night review needed $(TZ=Europe/Istanbul date +%F)" \
+    --body-file /tmp/night-review.md >/dev/null 2>&1 \
+    && log "review issue opened" || log "could not open review issue (non-fatal)"
+fi
+
+if [ "$push_failed" -eq 1 ]; then
+  log "work did not reach origin — failing the job"
+  exit 1
+fi
 if [ "$ok_cycles" -lt 1 ]; then
   log "no successful cycles tonight — failing the job"
   exit 1
