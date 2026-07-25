@@ -1,0 +1,62 @@
+# Licensing
+
+This repository holds three different kinds of thing, and they are licensed
+differently. The point of the split is that the editorial output should be as
+reusable as the pitch implies — a site that asks readers to audit its verdicts
+should let them quote and mirror those verdicts — while the third-party material
+retained for that audit is not ours to relicense.
+
+## 1. Software — MIT
+
+Applies to `pipeline/`, `.github/`, and any other source code in this
+repository.
+
+Copyright (c) 2026 the noiseless-news maintainers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## 2. Editorial output and policy — CC BY 4.0
+
+Applies to `content/`, `policy/`, `data/verified/` and `data/ledger/`: the
+articles in both languages, the editorial constitution, the per-claim evidence
+logs and the story ledger.
+
+Licensed under the Creative Commons Attribution 4.0 International License.
+You may share and adapt this material for any purpose, including commercially,
+provided you give appropriate credit, link to the licence, and indicate whether
+changes were made.
+
+Licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+Attribution should name noiseless-news and link to the article or file used.
+
+## 3. Third-party feed material — not ours to license
+
+`data/raw/` contains metadata captured from public RSS, Atom and API feeds:
+headlines, links, publication timestamps and publisher-supplied summaries. It is
+retained unmodified so that every verdict in `data/verified/` can be traced back
+to what the pipeline actually saw at the time, which is the audit trail this
+project exists to provide.
+
+Copyright in that material remains with the original publishers. It is not
+covered by the licences above and is not offered for redistribution here. If you
+publish a feed represented in this repository and want an item removed or
+truncated, open an issue and it will be removed.
+
+See NOTICE for details on retention and how to request removal.
