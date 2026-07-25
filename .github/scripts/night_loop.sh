@@ -165,6 +165,14 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   gate=$?
   log "cycle $cycle: claude_exit=$claude_exit gate=$gate"
 
+  # Advisory for now: the report goes into the cycle log and the agent can act
+  # on it next cycle, but a finding does not block the commit. Promote to
+  # --strict once the style.md gate-1 / §3 litigation conflict is settled.
+  PYTHONPATH=pipeline python -m noiseless.run validate-content 2>&1 | while IFS= read -r line
+  do
+    log "content: $line"
+  done
+
   commit_push "Night cycle $cycle artifacts $(date -u +%FT%H:%MZ)"
 
   # Per-cycle site deploy so articles appear through the night (best effort).
