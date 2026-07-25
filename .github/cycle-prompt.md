@@ -82,10 +82,12 @@ Work order:
      Turkish versions as the last step before committing; record the one-line
      gate note per article in the report.
    - Gate passes → EN article per policy/article-template.md, TR semantic
-     mirror, data/verified/<slug>.json, data/ledger/<slug>.json (include title,
-     date, state, and source_urls so the dedup index stays sharp), commit, push.
-   - Gate fails → ledger entry as watching/dropped with reasons (also with
-     title/date/source_urls).
+     mirror, data/verified/<slug>.json, data/ledger/<slug>.json exactly per the
+     "Ledger entry format" section of policy/article-template.md, commit, push.
+   - Gate fails → ledger entry as watching/dropped, same schema, with `reason`.
+   - EVERY ledger entry needs `title`, `status`, `first_seen` and deep-link
+     `source_urls` — an entry missing them is invisible to the duplicate gate.
+     Dated notes belong in the `notes` array, never in new top-level keys.
 7. DISCOVERY LOGGING: unregistered evidence domains →
    data/ledger/source_candidates.json; query patterns that earned their keep or
    produced noise → note in report.
