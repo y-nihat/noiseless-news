@@ -6,6 +6,13 @@ set -uo pipefail  # deliberately NOT -e: errors are handled per cycle
 
 log() { echo "[loop $(date -u +%H:%M:%S)] $*"; }
 
+# A pause you can see in the repository, rather than a workflow toggled off in a
+# settings page nobody will remember. See RUNBOOK.md.
+if [ -f .paused ]; then
+  log "'.paused' present at the repo root — publishing is paused, exiting cleanly"
+  exit 0
+fi
+
 SMOKE="${SMOKE:-false}"
 if [ "$SMOKE" = "true" ]; then
   MAX_CYCLES=2; CYCLE_INTERVAL=1500; STORIES_PER_CYCLE=1
