@@ -168,3 +168,68 @@ class TestTelemetry:
 
     def test_stats_file_is_optional(self, tmp_path):
         assert check_result.main([stream(tmp_path, OK_RESULT)]) == 0
+
+
+class TestAgentActivity:
+    """Tool counts are the only committed evidence that §5's protocol ran.
+
+    52 of 54 evidence logs assert a fresh verifier and an adversarial falsifier
+    — in prose, written by the same session that drafted the article. The stream
+    file that would corroborate it lives on the runner and dies with the job.
+    """
+
+    def stream_with_tools(self, tmp_path, *names):
+        events = [{"type": "system", "subtype": "init"}]
+        for name in names:
+            events.append(
+                {
+                    "type": "assistant",
+                    "message": {
+                        "content": [
+                            {"type": "text", "text": "reasoning"},
+                            {"type": "tool_use", "name": name,
+                             "input": {"query": "SENSITIVE QUERY", "url": "https://SENSITIVE"}},
+                        ]
+                    },
+                }
+            )
+        events.append(OK_RESULT)
+        return stream(tmp_path, *events)
+
+    def test_tool_calls_are_counted(self, tmp_path):
+        path = self.stream_with_tools(tmp_path, "WebSearch", "WebFetch", "WebFetch", "Write")
+        _result, tools = check_result.read_stream(path)
+        assert tools == {"WebSearch": 1, "WebFetch": 2, "Write": 1}
+
+    def test_research_calls_are_summed_for_the_record(self, tmp_path):
+        stats = tmp_path / "stats.jsonl"
+        check_result.main(
+            [
+                self.stream_with_tools(tmp_path, "WebSearch", "WebFetch", "Write", "Read"),
+                "--stats-file",
+                str(stats),
+            ]
+        )
+        record = json.loads(stats.read_text(encoding="utf-8"))
+        assert record["research_calls"] == 2
+        assert record["tools"]["Read"] == 1
+
+    def test_tool_inputs_are_never_committed(self, tmp_path):
+        """Names are safe; inputs carry search queries, URLs and drafts."""
+        stats = tmp_path / "stats.jsonl"
+        check_result.main(
+            [self.stream_with_tools(tmp_path, "WebSearch"), "--stats-file", str(stats)]
+        )
+        written = stats.read_text(encoding="utf-8")
+        assert "SENSITIVE" not in written
+        assert "WebSearch" in written
+
+    def test_a_cycle_with_no_tool_calls_records_none(self, tmp_path):
+        stats = tmp_path / "stats.jsonl"
+        check_result.main([stream(tmp_path, OK_RESULT), "--stats-file", str(stats)])
+        record = json.loads(stats.read_text(encoding="utf-8"))
+        assert "tools" not in record
+        assert "research_calls" not in record
+
+    def test_read_result_still_works_for_existing_callers(self, tmp_path):
+        assert check_result.read_result(stream(tmp_path, OK_RESULT))["subtype"] == "success"
