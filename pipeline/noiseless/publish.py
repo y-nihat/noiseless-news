@@ -256,11 +256,33 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
     return {}, text.strip()
 
 
+def safe_frontmatter(path: Path) -> tuple[dict, str] | None:
+    """parse_frontmatter, but a broken file is skipped instead of fatal.
+
+    Article files are written unattended at 03:00. Before this, one malformed
+    YAML block took down the site build and `dedup-check` together — so the
+    duplicate gate, which is the agent's own way out of the mess, broke at
+    exactly the moment it was needed.
+    """
+    try:
+        meta, body = parse_frontmatter(path.read_text(encoding="utf-8"))
+    except (yaml.YAMLError, ValueError, UnicodeDecodeError, OSError) as exc:
+        print(f"[publish] SKIP {path}: {type(exc).__name__}: {exc}")
+        return None
+    if not isinstance(meta, dict):
+        print(f"[publish] SKIP {path}: frontmatter is not a mapping")
+        return None
+    return meta, body
+
+
 def load_articles(content_dir: Path, lang: str) -> list[Article]:
     lang_dir = content_dir / "articles" / lang
     articles = []
     for path in sorted(lang_dir.rglob("*.md")):
-        meta, body = parse_frontmatter(path.read_text(encoding="utf-8"))
+        parsed = safe_frontmatter(path)
+        if parsed is None:
+            continue
+        meta, body = parsed
         if not meta.get("title") or not meta.get("slug"):
             continue
         articles.append(Article(meta=meta, body_html=md.markdown(body), lang=lang))
@@ -315,8 +337,18 @@ def build_digest(data_dir: Path, max_per_tier: int = 5) -> dict:
 
     tiers: dict[int, list[dict]] = {}
     for path in sorted(latest.glob("*.json")):
-        for item in json.loads(path.read_text(encoding="utf-8")):
-            tiers.setdefault(item["tier"], []).append(item)
+        try:
+            items = json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, UnicodeDecodeError, OSError) as exc:
+            print(f"[publish] SKIP raw {path.name}: {exc}")
+            continue
+        if not isinstance(items, list):
+            continue
+        for item in items:
+            # A truncated write or a feed oddity must not cost us the whole
+            # site build — the digest is the least important thing on the page.
+            if isinstance(item, dict) and isinstance(item.get("tier"), int):
+                tiers.setdefault(item["tier"], []).append(item)
     for tier, items in tiers.items():
         items.sort(key=lambda item: item.get("published") or "", reverse=True)
         tiers[tier] = items[:max_per_tier]
@@ -417,10 +449,13 @@ def _digest_html(digest: dict, lang: str) -> str:
     for tier in sorted(digest["tiers"]):
         parts.append(f"<p class='tier-label'>{s['tiers'][tier]}</p><ul class='feed'>")
         for item in digest["tiers"][tier]:
+            url, title = item.get("url"), item.get("title")
+            if not url or not title:
+                continue
             published = (item.get("published") or "")[:10]
             parts.append(
-                f"<li><a href='{html.escape(item['url'])}'>{html.escape(item['title'])}</a>"
-                f"<span class='meta'>{html.escape(item['source'])}"
+                f"<li><a href='{html.escape(str(url))}'>{html.escape(str(title))}</a>"
+                f"<span class='meta'>{html.escape(str(item.get('source', '')))}"
                 f"{' · ' + published if published else ''}</span></li>"
             )
         parts.append("</ul>")
@@ -503,9 +538,25 @@ def _article_html(
 
 
 def build_site(repo_root: Path | str, out_dir: Path | str) -> dict[str, int]:
+    """Render the whole site, then swap it into place.
+
+    The build is assembled in a sibling directory and moved over the old one
+    only once it has completed. The nightly workflow runs its upload and deploy
+    steps with `if: always()`, so a build that died halfway through used to be
+    a half-rendered site queued for publication.
+    """
     repo_root, out_dir = Path(repo_root), Path(out_dir)
+    staging = out_dir.parent / f".{out_dir.name}.building"
+    if staging.exists():
+        shutil.rmtree(staging)
+    counts = _render_site(repo_root, staging)
     if out_dir.exists():
         shutil.rmtree(out_dir)
+    staging.replace(out_dir)
+    return counts
+
+
+def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
     (out_dir / "articles").mkdir(parents=True)
     (out_dir / "tr" / "articles").mkdir(parents=True)
 

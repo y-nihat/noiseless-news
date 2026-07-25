@@ -20,7 +20,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from noiseless.ingest import canonical_url
-from noiseless.publish import parse_frontmatter
+from noiseless.publish import safe_frontmatter
 
 # Minimal English stopwords — enough to stop "the/of/in" from inflating overlap.
 _STOPWORDS = {
@@ -98,7 +98,10 @@ def load_index(repo_root: Path | str) -> list[IndexEntry]:
     entries: dict[str, IndexEntry] = {}
 
     for path in sorted((repo_root / "content" / "articles" / "en").rglob("*.md")):
-        meta, _body = parse_frontmatter(path.read_text(encoding="utf-8"))
+        parsed = safe_frontmatter(path)
+        if parsed is None:
+            continue  # a broken article must not disable the duplicate gate
+        meta, _body = parsed
         slug = meta.get("slug") or path.stem
         urls = identity_urls(
             src["url"]
