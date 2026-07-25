@@ -26,7 +26,13 @@ claims:
     type: capability
     verdict: vendor-claim
     evidence: [1, 2]
-updated: []                      # changelog entries, e.g. "2026-07-10: added independent confirmation"
+updated: []                      # dated changelog entries, newest last. Two kinds:
+                                 #   "2026-07-10: added independent confirmation"
+                                 #   "correction: 2026-07-10: the round was $200M, not $300M"
+                                 # Untyped entries are updates: new information on a
+                                 # story that was right. A `correction:` entry says a
+                                 # published claim was WRONG, and is collected onto
+                                 # /corrections.html automatically. Same in both languages.
 follows: earlier-story-slug      # OPTIONAL — only on follow-up articles (verification.md §8):
                                  # slug of the immediate predecessor in the same story thread.
                                  # Same value in both language versions; mirror it in the ledger entry.

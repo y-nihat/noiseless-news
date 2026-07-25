@@ -131,10 +131,55 @@ one of three outcomes — never an unlinked duplicate:
   context? If yes, it's a follow-up (`follows`), not an in-place update.
 - `follows` points at the immediate predecessor; chains are allowed
   (original ← follow-up ← follow-up). The ledger entry mirrors the `follows` field.
-- Errors are corrected visibly: the correction is noted in the article and logged on a
-  public corrections page. The original wrong text remains available via git history.
+- Errors are corrected visibly. Add a dated entry to the article's `updated:` list
+  prefixed `correction:` — e.g. `"correction: 2026-07-25: the round was $200M, not
+  $300M"` — in BOTH languages. The site builder collects those entries onto
+  `/corrections.html` automatically; an untyped `updated:` entry is an update, not
+  a correction, and does not appear there. The original wrong text is never
+  deleted: it remains in git history.
 
-## 9. Budget discipline
+## 10. Naming people
+
+Companies, public officials and executives acting in their public roles may be
+named. A **private individual** — someone who is newsworthy only because of the
+event being reported — is different, and the archive is permanent.
+
+- Prefer covering the case without the name. A story about a lawsuit rarely
+  needs the defendant's identity to be understood; if removing the name does not
+  weaken the story, remove it.
+- Name a private individual only if all three hold: (a) the name appears in a
+  Tier 0–2 source that is itself accountable (a court filing, a regulator's or
+  prosecutor's own publication, a named-byline report in quality press),
+  (b) the name is load-bearing for the story, and (c) the article states the
+  procedural status plainly.
+- Never publish an allegation as a finding. Attribute every allegation to the
+  party making it ("prosecutors allege", "the complaint states") and say in the
+  body that no court has ruled where that is the case.
+- Criminal or civil proceedings carry an obligation to follow up: set
+  `open_obligation: true` in the ledger entry so the outcome is checked later.
+  A published accusation with no published outcome is a defect.
+- Do not publish home addresses, contact details, family members, health or
+  immigration status, or anything about a minor's identity.
+- Two loads of doubt equal a no: if it is unclear whether someone is a public
+  figure, treat them as private.
+
+## 11. Retractions
+
+A correction fixes a wrong detail. A **retraction** is for an article whose
+central claim does not hold, or which should not have been published at all.
+
+- Do not delete the file. Replace the article body at the same slug with a
+  retraction notice: what was published, what was wrong, when it was withdrawn,
+  and what is known now. Keep the frontmatter, set every affected claim's verdict
+  to `disputed` or remove it, and add a `correction:` entry to `updated:`.
+- Do the same in both languages, in the same commit.
+- The permanence of git history is subordinate to this: history preserves what
+  was said, the live page must not keep asserting it.
+- If a retraction is requested by someone named in an article, act on the
+  evidence, not on the pressure — but respond, and record the decision in the
+  ledger entry either way.
+
+## 12. Budget discipline
 
 - Research/verification agents run on Sonnet 5 at max effort; hard caps apply per run
   (max stories, max tool calls per story). When the budget is hit, remaining candidates
