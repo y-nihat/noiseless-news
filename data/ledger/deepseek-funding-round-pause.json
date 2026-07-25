@@ -1,0 +1,21 @@
+{
+  "slug": "deepseek-funding-round-pause",
+  "title": "DeepSeek pauses second funding round after viral remarks attributed to Liang Wenfeng",
+  "status": "watching",
+  "first_seen": "2026-07-25",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-07-25/deepseek-said-to-tell-backers-of-funding-pause-after-viral-posts"
+  ],
+  "follows": null,
+  "reason": "Rumor / unnamed-sources claim type (verification.md §3) -- Bloomberg's own reporting states it 'hasn't verified the authenticity' of the viral posts/transcript attributed to Liang Wenfeng that reportedly triggered the pause, and DeepSeek's telling backers of a pause is itself sourced to unnamed people familiar with the matter. Wire-exclusive check: every outlet found (China Money Network, Yahoo Finance, Investing.com/Reuters relay, US News, Business Standard, cryptobriefing.com, Fortune, WDC TV) traces to the same Bloomberg story, not independent reporting. No DeepSeek statement. Never publishable as fact per policy; held internally as watching.",
+  "watch": [
+    "A DeepSeek statement confirming or denying the funding pause",
+    "Independent reporting (not relaying Bloomberg) on either the pause or the authenticity of the viral posts/transcript",
+    "Resumption or formal termination of the funding round, which would itself be the more solid news event"
+  ],
+  "notes": [
+    "2026-07-25 c3: opened from a candidate handed over by cycle 2 (dedup-check clean then, unopened). Dedup-check re-run this cycle, still clean. Corroboration search confirms wire-exclusive/rumor status -- Bloomberg is explicit that it has not verified the underlying viral posts' authenticity, and the pause itself is 'people familiar' sourcing with no company statement. Holding as watching rather than opening for publish."
+  ]
+}

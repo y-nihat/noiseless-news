@@ -1,0 +1,40 @@
+{
+  "slug": "aisi-kimi-k3-cyber-assessment",
+  "checked_at": "2026-07-25T23:53:00+00:00",
+  "method": "single-session verification under tight cycle-time constraint (deviates from the full fresh-verifier/fresh-falsifier subagent split, deliberately, given this is a Tier-0 joint-institute research finding with a directly fetchable primary source): direct fetch of the AISI/CAISI joint blog post (twice, to pin down exact benchmark-vs-percentage attribution after an initial secondary-source figure could not be confirmed against primary text), cross-checked against South China Morning Post's independent write-up, plus one open web search for any dispute or Moonshot AI response (none found).",
+  "origin_items": [
+    "data/raw/2026-07-25/techmeme.json — Techmeme digest, 'A joint preliminary evaluation by the UK's AISI and the US' CAISI finds Kimi K3 trails leading US frontier closed weight models on cyber capability'",
+    "data/ledger/aisi-open-weight-cyber-gap.json — this is the anticipated follow-up flagged in that entry's `watch` list ('AISI's planned Kimi K3 evaluation, once Kimi K3's weights are publicly released')"
+  ],
+  "claims": [
+    {
+      "text": "UK AISI and the US Center for AI Standards and Innovation (CAISI) jointly published a preliminary assessment on 23 July 2026 finding Kimi K3 performs significantly below the most recent frontier cyber-capable closed models",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed verbatim against the AISI/CAISI primary blog post; corroborated by SCMP's independent write-up with matching framing.",
+      "evidence": ["https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities", "https://www.scmp.com/tech/tech-war/article/3361711/chinas-kimi-k3-significantly-below-us-rivals-hacking-power-uk-us-study-shows"]
+    },
+    {
+      "text": "On ExploitBench, Kimi K3 scored 32% versus GLM-5.2's 24%, but achieved arbitrary code execution on none of 41 test samples, while leading US frontier models averaged arbitrary code execution on 20 of 41",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "A secondary-source search initially surfaced an unconfirmed framing (an overall '32.2% vs 76.2%' comparison). Re-fetched the AISI primary text directly to check attribution: the 32%/24% figure is specifically ExploitBench's score comparing Kimi K3 to GLM-5.2, quoted verbatim from the primary post ('Kimi K3 achieves a score of 32%, whereas GLM-5.2 achieves a score of 24%'); the primary post does not give a single overall percentage score comparable to a US-frontier average, and explicitly states Kimi K3's overall estimate has a wider confidence interval since it rests on one benchmark. The unconfirmed '76.2%' framing was excluded from the published claim set.",
+      "evidence": ["https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities"]
+    },
+    {
+      "text": "On 'The Last Ones,' a 32-step simulated corporate-network attack, Kimi K3 reached step 17 of the path on average versus 28.5 for leading US frontier models, and completed the full attack path in 1 of 10 attempts",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed against AISI primary text; matching figures independently reported by SCMP.",
+      "evidence": ["https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities", "https://www.scmp.com/tech/tech-war/article/3361711/chinas-kimi-k3-significantly-below-us-rivals-hacking-power-uk-us-study-shows"]
+    },
+    {
+      "text": "Kimi K3's safeguards allowed the model to assist with agentic cyber exploit development during the evaluation rather than refusing, unlike more restricted alternatives",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed verbatim against AISI primary text.",
+      "evidence": ["https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities"]
+    }
+  ],
+  "notes": "AISI/CAISI joint post is Tier-0 (AISI already registered; CAISI is the US NIST-housed counterpart, treated as the same tier as the joint publication's primary venue). SCMP is Tier-2 independent reporting, not a repost of the primary text. This is the anticipated follow-up to aisi-open-weight-cyber-gap (published 2026-07-18) -- dedup-check returned a moderate match (0.429) against that slug before opening, consistent with same-saga follow-up rather than duplicate; published with `follows: aisi-open-weight-cyber-gap` in both language frontmatters and mirrored in the ledger entry. No dispute or Moonshot AI response found in one adversarial search pass. Research-finding claim type, confirmed against the institutes' own primary evaluation; article notes it is a preliminary blog post, not a peer-reviewed or final capability determination."
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "aisi-kimi-k3-cyber-assessment",
+  "title": "UK and US AI safety institutes find Moonshot AI's Kimi K3 significantly trails frontier closed models on cyber capability",
+  "status": "published",
+  "first_seen": "2026-07-25",
+  "published_at": "2026-07-25",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+    "https://www.scmp.com/tech/tech-war/article/3361711/chinas-kimi-k3-significantly-below-us-rivals-hacking-power-uk-us-study-shows"
+  ],
+  "follows": "aisi-open-weight-cyber-gap",
+  "watch": [
+    "Any Moonshot AI response to the assessment",
+    "AISI/CAISI's fuller (non-preliminary) evaluation of Kimi K3, given the primary post flags this as a preliminary, single-benchmark-driven overall estimate",
+    "Whether AISI folds Kimi K3 into the broader open-weight-vs-closed cyber-gap comparison from the 18 July article"
+  ],
+  "notes": [
+    "2026-07-25 c3: new standalone-slug follow-up to aisi-open-weight-cyber-gap, surfaced via Techmeme in this cycle's fresh ingest -- exactly the follow-up flagged in that entry's watch list ('AISI's planned Kimi K3 evaluation, once Kimi K3's weights are publicly released'). Dedup-check: moderate match (0.429) against aisi-open-weight-cyber-gap before opening, confirming same-saga follow-up per §8 rather than duplicate or unrelated. Verified under tight cycle-time constraint via direct fetch of the AISI/CAISI primary post (twice, to resolve a secondary-source figure -- an '32.2% vs 76.2%' overall comparison -- that could not be confirmed against primary text and was excluded) plus SCMP's independent write-up and one adversarial search pass for disputes/Moonshot response (none found). Style gates run on both languages: pass (falsifiable headline scoped to the confirmed benchmarks, standalone TL;DR, no padding, Turkish mirrors structure and hedging on the preliminary/single-benchmark caveat)."
+  ]
+}
