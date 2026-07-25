@@ -18,5 +18,25 @@
     "published": "2026-07-25T03:02:33+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>About to be over 36 hours now? Nothing on the website, twitter, anywhere. What the hell? Is anyone else facing the same issue what do I do?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Specialist-Manager67\"> /u/Specialist-Manager67 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v5wcy3/i_still_didnt_get_my_neurips_meta_review_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v5wcy3/i_still_didnt_get_my_neurips_meta_review_d/\">[comments]</a></span>",
     "fetched_at": "2026-07-25T11:13:04.860231+00:00"
+  },
+  {
+    "id": "8fcbc85261c2ad86",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Why first person video may matter for robot learning[D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v6cd5j/why_first_person_video_may_matter_for_robot/",
+    "published": "2026-07-25T16:09:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I can see why first-person video might help a robot model, but not because the robot can copy a human hand. The joints, reach, timing, and control space are all different. What may transfer is the sequence of visual attention: which object enters view, what changes before contact, and where the actor looks next.</p> <p>LingBot-VLA 2.0 (arXiv:2607.06403) uses first-person data alongside robot trajectories. A useful ablation separates visual prediction from robot control. First-person pretraining might improve next-state prediction without improving task success, which would still tell us where the information survived. A matched third-person comparison is important too, otherwise viewpoint and video volume are mixed together.</p> <p>Occlusion is the obvious problem. Hands often cover the object at the exact moment of contact. Would you treat those frames as useful evidence of intent, missing visual data, or both? I have not seen a convincing evaluation that cleanly separates those effects.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Temporary_Joke_7501\"> /u/Temporary_Joke_7501 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v6cd5j/why_first_person_video_may_matter_for_robot/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v6cd5j/why_first_person_video_may_matter_for_robot/\">[comments]</a></span>",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
+  },
+  {
+    "id": "5420823c123a4f96",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "What are real use-cases right now for custom models and model training for big corporations that have real business value? [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v6cc5v/what_are_real_usecases_right_now_for_custom/",
+    "published": "2026-07-25T16:08:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I hope this subreddit is the correct subreddit for my question. I'm a data engineer and cloud architect that is currently being tasked with providing a all-in-one solution for ML workloads. Now the thing is these guys didn't show me what they actually want to do with this (i know i know dubious motivation for a project but here we are). </p> <p>I always have been interested in ML though and really want to understand what they are doing there and what use-cases are currently still benefiting from model training. I would like to prepare a demo (hosting a model that actually solves problems that matter) running on our platform basically. The context is a big corporation in the engineering space so amount of data and money is no concern. </p> <p>For me it's just hard to grasp with all the models out there right now that are very good at many tasks. Yes I can google use-cases for model training, but what I'm trying to understand is where the real world businesses stand right now. So use-cases that actually matter.</p> <p>Some things I could come up with:</p> <ol> <li>training a model on data that is not known to open source models due to compliance</li> <li>fine tuning existing open-source models to be good at a certain task (but this can be done also with having a very professional usage of those models with context etc.)</li> </ol> <p>And then i'm basically lost.</p> <p><strong>Can some of you maybe share use-cases for model training where YOU think it actually adds real business value?</strong></p> <p>Something like: &quot;I trained a model on sensor data that did this and that&quot;</p> <p>I highly appreciate your input on this!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Educational-Meal-660\"> /u/Educational-Meal-660 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v6cc5v/what_are_real_usecases_right_now_for_custom/\">[link]</a></span> &#32; <span><a href=\"https:…",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
   }
 ]

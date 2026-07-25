@@ -108,5 +108,75 @@
     "published": "2026-07-25T08:24:57+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v62j0k/modelexpress_distributing_model_artifacts_at_the/\"> <img alt=\"ModelExpress: Distributing Model Artifacts at the Speed of Light - NVIDIA Technical Blog\" src=\"https://preview.redd.it/ktu5lg9g5cfh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=234064893f8bf0973356569e799960846a7840ae\" title=\"ModelExpress: Distributing Model Artifacts at the Speed of Light - NVIDIA Technical Blog\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><blockquote> <p><strong>We cut DeepSeek-V4 Pro startup from 8 minutes to under 2 minutes by moving weights over the fastest path to GPU memory with GPU-to-GPU RDMA</strong>. </p> </blockquote> <p>This was achieved using NVIDIA ModelExpress (MX), the weight distribution and cache management service in NVIDIA Dynamo, and this same approach speeds up both inference and RL post-training too. MX reuses kernel caches, while inference workers fetch updated weights directly from other GPUs over NIXL—avoiding centralized broadcasts and keeping weight movement off the critical path.</p> <p><strong>Blog Post</strong> : <a href=\"https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/\">https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://i.redd.it/ktu5lg9g5cfh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v62j0k/modelexpress_distributing_model_artifacts_at_the/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-07-25T11:13:04.860231+00:00"
+  },
+  {
+    "id": "013d478f1a042267",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Google comes out in favor of OpenWeight models. (It is now EVERY tech giant vs Anthropic)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6axx3/google_comes_out_in_favor_of_openweight_models_it/",
+    "published": "2026-07-25T15:12:42+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MysteryWra\"> /u/MysteryWra </a> <br /> <span><a href=\"https://x.com/sundarpichai/status/2081026488158040181\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6axx3/google_comes_out_in_favor_of_openweight_models_it/\">[comments]</a></span>",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
+  },
+  {
+    "id": "a2db5f1cf09556eb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "CachyLLama: llama.cpp fork with persistent SSD-backed KV caching for local agent workflows",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v68164/cachyllama_llamacpp_fork_with_persistent/",
+    "published": "2026-07-25T13:11:17+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>If you run local agentic coding harnesses (Aider, Claude Code, etc.), prompt evaluation usually eats up most of your execution time. Every turn re-evaluates thousands of identical prefix tokens_system prompts, tool schemas, and conversation history.</p> <p>CachyLLama is a llama.cpp fork built specifically to solve this bottleneck on mid-tier hardware and APUs where generation speeds are fine, but prompt processing is brutal.Key FeaturesPersistent On-Disk KV Cache: Saves conversation checkpoints to SSD. State survives server restarts and power cycles, restoring from disk on cold start.</p> <p>Dedicated System Prompt Cache: Maintains a global, cross-conversation cache for static prefixes. Subsequent requests skip reevaluation entirely.Hybrid MoE/SSM Support: Properly tracks and restores recurrent state alongside attention cells for hybrid architectures (Qwen 3.5/3.6, Gemma 4, GLM-4.7, DeepSeek-V3).Multi-Tiering:</p> <p>Keeps active states in RAM, demotes idle sessions to disk, and uses kernel readahead to overlap disk I/O with compute work.</p> <p>Official Benchmarks (AMD Ryzen 7840U / 780M) Note: CachyLLama does not speed up token generation itself; it solely eliminates redundant prompt-processing overhead.</p> <p>Prompt Size ~1,243 tokens, Cold Start 9.3s, Warm (Cached) 0.41s</p> <p>Prompt Size ~15,700 tokens, Cold Start 143.1s, Warm (Cached) 0.99s</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/UsedMorning9886\"> /u/UsedMorning9886 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v68164/cachyllama_llamacpp_fork_with_persistent/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v68164/cachyllama_llamacpp_fork_with_persistent/\">[comments]</a></span>",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
+  },
+  {
+    "id": "56ccb5e023e94c5c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM 5.2 with vision on 8x GB10",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6cvbd/glm_52_with_vision_on_8x_gb10/",
+    "published": "2026-07-25T16:29:44+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ciprianveg\"> /u/ciprianveg </a> <br /> <span><a href=\"https://x.com/i/status/2081048541833658404\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6cvbd/glm_52_with_vision_on_8x_gb10/\">[comments]</a></span>",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
+  },
+  {
+    "id": "6b53593647dfd824",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Getting a second GPU in addition to my RTX3090",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6akx1/getting_a_second_gpu_in_addition_to_my_rtx3090/",
+    "published": "2026-07-25T14:57:23+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello,</p> <p>I've been learning how to use local LLMs for a year or so on my workstation, using a RTX3090.</p> <p>Current setup :</p> <p>- i5 12400</p> <p>- 64gb RAM</p> <p>- RTX 3090</p> <p>- OS : Fedora KDE workstation</p> <p>I'm using LMStudio to serve mainly these models :</p> <p>- Qwen 3.6 27B</p> <p>- Gemma 4 26b a4b</p> <p>And then VSCode + kilocode / Continue for light coding / scripting / log analysis tasks (i'm a sysadmin).</p> <p>It works very well, but i'm hitting the context size ceiling quite fast with this setup. This prevents me to work on bigger projects.</p> <p>My goal is to buy another GPU to provide more VRAM, and since i'm using linux, i'd prefer an AMD GPU. A 16gb Radeon 9070 would be nice in this regard : it's natively supported on Linux, doesn't cost an arm, it's powerful enough for casual gaming, and doesn't have crazy power requirements.</p> <p>I've read here and there that mixing AMD and Nvidia is now well supported (<a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1qea29t/mix_of_amd_nvidia_gpu_in_one_system_possible/\">https://www.reddit.com/r/LocalLLaMA/comments/1qea29t/mix_of_amd_nvidia_gpu_in_one_system_possible/</a>), especially with LMStudio.</p> <p>Since this is moving and evolving very quickly, how are the support and the performance of mixing a 24gb nvidia gpu + 16gb AMD gpu in 2026 ?</p> <p>Is it a better idea to go for another Nvidia GPU instead ?</p> <p>From my understanding, the idea would be to load the model in the 24Gb 3090, and then reserve the 16gb GPU for context. Correct me if I'm wrong.</p> <p>I've read multiple times 36 / 40 Gb VRAM is the sweet spot for the models i'm using (at q4 quant).</p> <p>Also, adding another 3090 is a solution i'd like to avoid because :</p> <p>- it's expensive and hard to find in good condition at the moment</p> <p>- adding another 350W and 3 slot GPU would be a challenge to cool down in my PC case</p> <p>- I probably would have to buy a new and bigger…",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
+  },
+  {
+    "id": "a31a626b1713d0d7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "My GX10 died",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v67tzg/my_gx10_died/",
+    "published": "2026-07-25T13:02:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Everything ran fine,</p> <p>I was using UD 3.6 Q6 for 35 and 27B, each 4 concurrent requests at 200K context.<br /> I had Dify and Mastra to play around with, Unsloth studio to get around to and vLLM ready for whenever I decided to do some more testing.<br /> LLama-swap above lama.cpp and liteLLM with semantic routing.<br /> And a nice dashboard.</p> <p>But yesterday morning after nothing much hit my local machine, Ubuntu wasn’t booting.<br /> Nvme got corrupted, I figured it was an update going wrong.</p> <p>Well, the keyboard didn’t respond anymore so I did a RTC/EC reset and poked around a bit, at least I got into the BIOS and ran the nvme tests (passed).<br /> So I got on the Asus website and got the image for a bootable USB. To actually use it, I swapped keyboards and monitors because that was faster than power draining and resetting the CMOS again.</p> <p>New image installed, so I am at 1008, I start updating and my WiFi extender just quits, seems like a known bug in the graphics drivers froze the screen and the WiFi driver was also known to cause issues.</p> <p>Since an open ssh session could still encode the reboot and not much else, I tried that but black screen again.</p> <p>Great, now the screen goes to UEFI recovery… after some tinkering I get to GRUB and see the 1008 and 1026 options both with a recovery version present but none load.</p> <p>I try to use the USB again but now the CMOS won’t clear and the power button lights up only after a power drain and even then after trying it again after 20 seconds and then waiting a minute or 2, it decides it finds me worthy.</p> <p>Ok, time to leave it on its own for an hour while unplugged and do something else. I plug it back in and nothing happens. So I leave it for ten minutes and check the fan, which I can’t hear. The GX10 is warm but the magic smoke doesn’t come out.</p> <p>I fill in the RMA thinking they’ll find a way to charge me for repairs blaming me for not correctly h…",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
+  },
+  {
+    "id": "c31ad0bd94370e2a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Medium sized MoE LLM models",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6d2ou/medium_sized_moe_llm_models/",
+    "published": "2026-07-25T16:37:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>What are some medium sized MoE models (up to 60B parameters in float8/110B in mxfp4) that are currently worth using?</p> <p>As far as I am aware there is Qwen 3.5 35B, Gemma 4 A4B, Nemotron 3 Nano. Qwen seems to dominate this bracked in terms of model performance. DeepSeek v4 flash is slightly above that parameter limit. Any nicher ones?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Azazelionide\"> /u/Azazelionide </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6d2ou/medium_sized_moe_llm_models/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6d2ou/medium_sized_moe_llm_models/\">[comments]</a></span>",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
+  },
+  {
+    "id": "a4b4ca6b2efde1ed",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How much are you actually using your local models these days? Which ones do you reach for the most?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6dk8t/how_much_are_you_actually_using_your_local_models/",
+    "published": "2026-07-25T16:57:17+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6dk8t/how_much_are_you_actually_using_your_local_models/\"> <img alt=\"How much are you actually using your local models these days? Which ones do you reach for the most?\" src=\"https://preview.redd.it/m3o4hap7pefh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6b063138fc732af9b54b432c446e77f7a0c148ad\" title=\"How much are you actually using your local models these days? Which ones do you reach for the most?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I started tracking my local model usage about four weeks ago and was wondering if anyone else here keeps track of how much they use them.</p> <p>I’ve also been running some tests with the cheapest SOTA open-weight Chinese models via OpenRouter. Apart from that, I’m mainly using GPT-5.5 in Codex CLI for professional work and Local models + Composer 2.5/4.5 from X Premium for hobby projects.</p> <p>Edit: It looks like the average tk/s panel might be bugged. I’m hoping I haven’t lost any data... This it’s just a JSON file that my model launcher populates.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Alan_Silva_TI\"> /u/Alan_Silva_TI </a> <br /> <span><a href=\"https://i.redd.it/m3o4hap7pefh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6dk8t/how_much_are_you_actually_using_your_local_models/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-25T17:03:06.549584+00:00"
   }
 ]
