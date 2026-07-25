@@ -33,8 +33,9 @@ STRINGS = {
         "tagline": "AI news that survives verification. Nothing else.",
         "articles": "Latest",
         "no_articles": (
-            "No verified articles yet — the verification pipeline is being built. "
-            "Below is a live sample of what the scanner currently ingests."
+            "Nothing has cleared verification yet. Below is a live sample of what "
+            "the scanner is currently watching — unverified, and listed only to "
+            "show the pipeline is running."
         ),
         "digest": "Scanner feed",
         "digest_note": (
@@ -42,7 +43,79 @@ STRINGS = {
             "listed only to show what the pipeline watches."
         ),
         "methodology": "Methodology",
+        "about": "About",
+        "corrections": "Corrections",
         "footer": "Built in the open — every verdict's evidence trail is public.",
+        "disclosure": (
+            "Articles on this site are written and verified by AI agents, "
+            "unattended, following a public editorial policy. No person edits "
+            "an article before it is published."
+        ),
+        "operator": "Operated by <a href='https://github.com/y-nihat'>y-nihat</a>.",
+        "contact": "Spotted an error?",
+        "contact_link": "Report it",
+        "last_run": "Last verification run",
+        "no_corrections": (
+            "No corrections have been issued yet. When an article is corrected, "
+            "the correction is listed here and dated on the article itself; the "
+            "original wording stays in this repository's git history."
+        ),
+        "corrections_note": (
+            "Every correction the site has made, newest first. A correction "
+            "means a published claim was wrong — as distinct from an update, "
+            "which adds new information to a story that was right."
+        ),
+        "about_intro": (
+            "noiseless.news publishes artificial-intelligence news that survives "
+            "verification, and publishes the verification too. Claims that "
+            "cannot be checked against independent sources are not printed as "
+            "fact — and stories that fail the bar are held, with the reason "
+            "written down."
+        ),
+        "about_made_h": "How it is made",
+        "about_made": (
+            "Every article on this site is written and verified by AI agents "
+            "running unattended overnight, following the editorial policy linked "
+            "below. Nightly the pipeline scans a public registry of named "
+            "sources, decomposes candidate stories into individual factual "
+            "claims, verifies each claim against independent evidence, and "
+            "writes the article from the verified claims only — headline "
+            "included. A second agent, working from a fresh context, then tries "
+            "to break each claim before anything is published. "
+            "<strong>No person reviews an article before it goes live.</strong> "
+            "The English article is canonical; the Turkish version mirrors it."
+        ),
+        "about_verdicts_h": "What the verdicts mean",
+        "about_verdicts": {
+            "confirmed": "Met the standard of proof for its claim type: a primary source for an announcement, two independent sources for a business claim, the paper itself for a research finding.",
+            "vendor-claim": "Stated by the party that benefits from it. Published as their claim, never as settled fact — benchmark results from the company that made the model, for instance.",
+            "single-source": "One source only. Published because the claim carries the story, and labelled so you can weigh it.",
+            "disputed": "Sources disagree. Both accounts are given.",
+        },
+        "about_sources_h": "Where the evidence comes from",
+        "about_sources": (
+            "Sources are registered by name and tier in a public file. Tier 0 is "
+            "primary and official — company announcements, filings, legal texts. "
+            "Tier 1 is literature. Tier 2 is independent press. Tier 3 — forums, "
+            "video, social — is used to <em>find</em> stories and may never "
+            "confirm one. Several outlets repeating the same press release count "
+            "as one source, not several."
+        ),
+        "about_wrong_h": "When we get it wrong",
+        "about_wrong": (
+            "Corrections are published on a dedicated page and dated on the "
+            "article itself. The original wording is not deleted — it stays in "
+            "the repository's public history. If you think something here is "
+            "wrong, or you are named in an article and want to respond, open an "
+            "issue and it will be dealt with."
+        ),
+        "about_open_h": "Open to inspection",
+        "about_open": (
+            "The editorial policy, the source registry, every article's evidence "
+            "log, the nightly run reports and the pipeline itself are all in one "
+            "public repository. Articles and evidence logs are licensed CC BY "
+            "4.0; the code is MIT."
+        ),
         "verification": "Verification",
         "sources": "Sources",
         "updated": "Updates",
@@ -72,8 +145,9 @@ STRINGS = {
         "tagline": "Doğrulamadan geçen yapay zekâ haberleri. Fazlası değil.",
         "articles": "Son haberler",
         "no_articles": (
-            "Henüz doğrulanmış haber yok — doğrulama hattı inşa ediliyor. Aşağıda "
-            "tarayıcının şu anda topladığı içeriklerden canlı bir örnek görüyorsunuz."
+            "Henüz doğrulamadan geçen haber yok. Aşağıda tarayıcının izlediği "
+            "içeriklerden canlı bir örnek var — doğrulanmamıştır, yalnızca hattın "
+            "çalıştığını göstermek için listelenmiştir."
         ),
         "digest": "Tarayıcı akışı",
         "digest_note": (
@@ -81,7 +155,79 @@ STRINGS = {
             "doğrulanmamıştır; yalnızca hattın neyi izlediğini göstermek içindir."
         ),
         "methodology": "Yöntem",
+        "about": "Hakkında",
+        "corrections": "Düzeltmeler",
         "footer": "Açık inşa ediliyor — her hükmün kanıt zinciri kamuya açık.",
+        "disclosure": (
+            "Bu sitedeki haberler, kamuya açık bir yayın politikasını izleyen "
+            "yapay zekâ ajanları tarafından, insan gözetimi olmadan yazılıp "
+            "doğrulanır. Hiçbir haber yayımlanmadan önce bir kişi tarafından "
+            "düzenlenmez."
+        ),
+        "operator": "Yürüten: <a href='https://github.com/y-nihat'>y-nihat</a>.",
+        "contact": "Bir hata mı gördünüz?",
+        "contact_link": "Bildirin",
+        "last_run": "Son doğrulama turu",
+        "no_corrections": (
+            "Henüz düzeltme yayımlanmadı. Bir haber düzeltildiğinde, düzeltme "
+            "burada listelenir ve haberin kendisinde tarihiyle belirtilir; "
+            "ilk hâli bu deponun git geçmişinde kalır."
+        ),
+        "corrections_note": (
+            "Sitenin yaptığı bütün düzeltmeler, en yenisi başta. Düzeltme, "
+            "yayımlanmış bir iddianın yanlış olduğu anlamına gelir; doğru olan "
+            "bir habere yeni bilgi ekleyen güncellemeden farklıdır."
+        ),
+        "about_intro": (
+            "noiseless.news, doğrulamadan geçen yapay zekâ haberlerini yayımlar "
+            "ve doğrulamanın kendisini de yayımlar. Bağımsız kaynaklarla "
+            "denetlenemeyen iddialar olgu diye sunulmaz; eşiği geçemeyen "
+            "haberler ise gerekçesi yazılarak bekletilir."
+        ),
+        "about_made_h": "Nasıl hazırlanıyor",
+        "about_made": (
+            "Bu sitedeki her haber, gece boyunca insan gözetimi olmadan çalışan "
+            "yapay zekâ ajanları tarafından, aşağıda bağlantısı verilen yayın "
+            "politikasına göre yazılır ve doğrulanır. Hat her gece adı belli "
+            "kaynaklardan oluşan açık bir kayıt defterini tarar, aday haberleri "
+            "tek tek olgusal iddialara ayırır, her iddiayı bağımsız kanıtlarla "
+            "denetler ve haberi — başlığı dahil — yalnızca doğrulanmış "
+            "iddialardan yazar. Ardından, hiçbir şeyi bilmeyen ikinci bir ajan "
+            "her iddiayı çürütmeye çalışır. "
+            "<strong>Hiçbir haber yayına girmeden önce bir kişi tarafından "
+            "incelenmez.</strong> İngilizce metin asıldır; Türkçe sürüm onu "
+            "birebir yansıtır."
+        ),
+        "about_verdicts_h": "Hükümler ne anlama geliyor",
+        "about_verdicts": {
+            "confirmed": "İddia türünün gerektirdiği ispat düzeyini karşıladı: duyuru için birincil kaynak, ticari iddia için iki bağımsız kaynak, araştırma bulgusu için makalenin kendisi.",
+            "vendor-claim": "İddiadan çıkarı olan tarafça öne sürüldü. Kesinleşmiş bilgi olarak değil, o tarafın beyanı olarak yayımlanır — örneğin modeli üreten şirketin kendi kıyaslama sonuçları.",
+            "single-source": "Tek kaynak var. İddia haberi taşıdığı için yayımlandı, tartabilmeniz için de böyle etiketlendi.",
+            "disputed": "Kaynaklar çelişiyor. Her iki taraf da aktarılıyor.",
+        },
+        "about_sources_h": "Kanıt nereden geliyor",
+        "about_sources": (
+            "Kaynaklar, kamuya açık bir dosyada adıyla ve katmanıyla kayıtlıdır. "
+            "Katman 0 birincil ve resmîdir: şirket duyuruları, resmî başvurular, "
+            "hukuki metinler. Katman 1 literatür, Katman 2 bağımsız basındır. "
+            "Katman 3 — forumlar, video, sosyal medya — yalnızca haber "
+            "<em>bulmak</em> için kullanılır, hiçbir iddiayı doğrulayamaz. Aynı "
+            "basın bültenini yineleyen çok sayıda yayın tek kaynak sayılır."
+        ),
+        "about_wrong_h": "Yanıldığımızda",
+        "about_wrong": (
+            "Düzeltmeler ayrı bir sayfada yayımlanır ve haberin kendisinde "
+            "tarihiyle belirtilir. İlk metin silinmez; deponun açık geçmişinde "
+            "kalır. Burada bir şeyin yanlış olduğunu düşünüyorsanız ya da bir "
+            "haberde adınız geçiyor ve yanıt vermek istiyorsanız, bir konu "
+            "açın; gereği yapılır."
+        ),
+        "about_open_h": "Denetime açık",
+        "about_open": (
+            "Yayın politikası, kaynak kaydı, her haberin kanıt dosyası, gece "
+            "raporları ve hattın kendisi tek bir kamuya açık depodadır. Haberler "
+            "ve kanıt dosyaları CC BY 4.0, kod MIT lisanslıdır."
+        ),
         "verification": "Doğrulama",
         "sources": "Kaynaklar",
         "updated": "Güncellemeler",
@@ -226,6 +372,24 @@ ul.updates li { padding:.25rem 0; }
 
 footer.site { margin:3rem 0 0; padding:1.3rem 0 2.6rem; border-top:1px solid var(--rule);
               font-size:.8rem; color:var(--muted); }
+footer.site .foot-line { margin:0 0 .4rem; max-width:38rem; line-height:1.55; }
+footer.site .foot-line:last-child { margin-bottom:0; }
+footer.site .disclosure { color:var(--fg); opacity:.85; }
+footer.site .sep { margin:0 .45rem; opacity:.5; }
+
+.page h1 { font-size:1.6rem; line-height:1.25; letter-spacing:-.02em;
+           font-weight:750; margin:.2rem 0 .9rem; }
+.page .lede { font-size:1.02rem; line-height:1.65; color:var(--fg); margin:0 0 1.6rem; }
+.page h2 { font-size:1.02rem; letter-spacing:-.01em; font-weight:700; margin:1.9rem 0 .5rem; }
+.page p { margin:0 0 .9rem; line-height:1.7; max-width:38rem; }
+dl.verdicts { margin:.6rem 0 0; }
+dl.verdicts dt { margin:.9rem 0 .25rem; }
+dl.verdicts dd { margin:0; font-size:.93rem; line-height:1.6; color:var(--muted);
+                 max-width:38rem; }
+ul.corrections { list-style:none; margin:.4rem 0 0; padding:0; }
+ul.corrections li { padding:.9rem 0; border-bottom:1px solid var(--rule); }
+ul.corrections .date { font-size:.78rem; color:var(--muted); letter-spacing:.02em; }
+ul.corrections .what { margin:.25rem 0 .3rem; line-height:1.6; }
 """
 
 
@@ -355,6 +519,52 @@ def build_digest(data_dir: Path, max_per_tier: int = 5) -> dict:
     return {"date": latest.name, "tiers": tiers}
 
 
+_UPDATE_KIND = re.compile(r"^\s*(correction|düzeltme|update|güncelleme)\s*[:—-]\s*", re.I)
+_UPDATE_DATE = re.compile(r"^\s*(\d{4}-\d{2}-\d{2})\s*[:—-]\s*")
+_CORRECTION_WORDS = {"correction", "düzeltme"}
+
+
+def parse_update_entry(entry: str) -> dict:
+    """Split an `updated:` line into kind, date and text.
+
+    Accepts `2026-07-14: text`, `correction: 2026-07-14: text` and
+    `2026-07-14: correction: text`. Untyped entries are updates, which keeps
+    every existing entry valid: an update adds information to a story that was
+    right, a correction says a published claim was wrong. Only the second
+    belongs on the corrections page.
+    """
+    text = str(entry).strip()
+    kind, date = "update", ""
+    for _ in range(2):  # kind and date may appear in either order
+        matched = _UPDATE_KIND.match(text)
+        if matched:
+            if matched.group(1).lower() in _CORRECTION_WORDS:
+                kind = "correction"
+            text = text[matched.end():]
+            continue
+        matched = _UPDATE_DATE.match(text)
+        if matched and not date:
+            date = matched.group(1)
+            text = text[matched.end():]
+    return {"kind": kind, "date": date, "text": text.strip()}
+
+
+def latest_run_date(data_dir: Path) -> str:
+    """Date of the most recent nightly run, from the run-report filenames.
+
+    Run reports exist even on nights that published nothing, so this says "the
+    machine ran" rather than "an article appeared" — which is the honest signal
+    for a site whose stated policy is to publish nothing when nothing clears
+    the bar. A site that has stopped running now says so.
+    """
+    dates = sorted(
+        match.group(1)
+        for path in (data_dir / "ledger").glob("run-report-*.md")
+        if (match := re.search(r"(\d{4}-\d{2}-\d{2})", path.name))
+    )
+    return dates[-1] if dates else ""
+
+
 def reading_minutes(body_html: str) -> int:
     words = len(re.sub(r"<[^>]+>", " ", body_html).split())
     return max(1, round(words / 200))
@@ -365,9 +575,23 @@ def _domain(url: str) -> str:
 
 
 def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
-          description: str = "") -> str:
+          description: str = "", prefix: str = "", last_run: str = "") -> str:
     s = STRINGS[lang]
     desc = html.escape(description or s["tagline"])
+    # The footer carries the three things a reader needs and the site did not
+    # say anywhere: who runs it, that no person edits an article before it is
+    # published, and how to report an error.
+    liveness = (
+        f"<span class='sep'>·</span>{s['last_run']}: {html.escape(last_run)}"
+        if last_run
+        else ""
+    )
+    footer = (
+        f"<p class='foot-line'>{s['footer']}{liveness}</p>"
+        f"<p class='foot-line disclosure'>{s['disclosure']}</p>"
+        f"<p class='foot-line'>{s['operator']} {s['contact']} "
+        f"<a href='{REPO_URL}/issues/new'>{s['contact_link']}</a>.</p>"
+    )
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -385,8 +609,9 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
       <a class="wordmark" href="{home}">noiseless<em>.</em>news</a>
       <nav class="top">
         <a href="{other_lang_href}">{s['other_lang']}</a>
+        <a href="{prefix}about.html">{s['about']}</a>
+        <a href="{prefix}corrections.html">{s['corrections']}</a>
         <a href="{REPO_URL}/blob/main/policy/verification.md">{s['methodology']}</a>
-        <a href="{REPO_URL}">GitHub</a>
       </nav>
     </div>
     <p class="tagline">{s['tagline']}</p>
@@ -396,7 +621,7 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
 <main><div class="wrap">
 {body}
 </div></main>
-<footer class="site"><div class="wrap">{s['footer']}</div></footer>
+<footer class="site"><div class="wrap">{footer}</div></footer>
 </body>
 </html>
 """
@@ -537,6 +762,56 @@ def _article_html(
     return "\n".join(parts)
 
 
+def _about_html(lang: str) -> str:
+    s = STRINGS[lang]
+    verdicts = "".join(
+        f"<dt><span class='badge {VERDICT_CLASS[key]}'>"
+        f"{html.escape(s['verdicts'][key])}</span></dt><dd>{html.escape(text)}</dd>"
+        for key, text in s["about_verdicts"].items()
+    )
+    return (
+        f"<div class='page'><h1>{s['about']}</h1>"
+        f"<p class='lede'>{s['about_intro']}</p>"
+        f"<h2>{s['about_made_h']}</h2><p>{s['about_made']}</p>"
+        f"<h2>{s['about_verdicts_h']}</h2><dl class='verdicts'>{verdicts}</dl>"
+        f"<h2>{s['about_sources_h']}</h2><p>{s['about_sources']}</p>"
+        f"<h2>{s['about_wrong_h']}</h2><p>{s['about_wrong']}</p>"
+        f"<h2>{s['about_open_h']}</h2><p>{s['about_open']} "
+        f"<a href='{REPO_URL}'>GitHub</a> · "
+        f"<a href='{REPO_URL}/blob/main/policy/verification.md'>{s['methodology']}</a>"
+        f"</p></div>"
+    )
+
+
+def collect_corrections(articles: list[Article]) -> list[dict]:
+    """Every entry in every article's `updated:` list that is typed as a correction."""
+    corrections = []
+    for article in articles:
+        for entry in article.meta.get("updated") or []:
+            parsed = parse_update_entry(entry)
+            if parsed["kind"] != "correction":
+                continue
+            corrections.append({**parsed, "slug": article.slug, "title": article.title})
+    corrections.sort(key=lambda c: (c["date"], c["slug"]), reverse=True)
+    return corrections
+
+
+def _corrections_html(corrections: list[dict], lang: str, article_prefix: str) -> str:
+    s = STRINGS[lang]
+    if not corrections:
+        body = f"<p class='empty'>{s['no_corrections']}</p>"
+    else:
+        items = "".join(
+            f"<li><span class='date'>{html.escape(c['date'])}</span>"
+            f"<p class='what'>{html.escape(c['text'])}</p>"
+            f"<a href='{article_prefix}{c['slug']}.html'>{html.escape(c['title'])}</a>"
+            f"</li>"
+            for c in corrections
+        )
+        body = f"<p class='note'>{s['corrections_note']}</p><ul class='corrections'>{items}</ul>"
+    return f"<div class='page'><h1>{s['corrections']}</h1>{body}</div>"
+
+
 def build_site(repo_root: Path | str, out_dir: Path | str) -> dict[str, int]:
     """Render the whole site, then swap it into place.
 
@@ -561,37 +836,54 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
     (out_dir / "tr" / "articles").mkdir(parents=True)
 
     digest = build_digest(repo_root / "data")
+    last_run = latest_run_date(repo_root / "data")
     counts = {}
-    for lang, index_path, article_prefix, home in (
-        ("en", out_dir / "index.html", "articles/", "index.html"),
-        ("tr", out_dir / "tr" / "index.html", "articles/", "index.html"),
+    for lang, lang_root, home in (
+        ("en", out_dir, "index.html"),
+        ("tr", out_dir / "tr", "index.html"),
     ):
         articles = load_articles(repo_root / "content", lang)
         threads = resolve_threads(articles)
         counts[lang] = len(articles)
         other = "tr/index.html" if lang == "en" else "../index.html"
-        index_body = _article_list_html(articles, lang, article_prefix) + _digest_html(
+
+        def page(title, body, *, home=home, other=other, prefix="", description=""):
+            return _page(lang=lang, title=title, body=body, home=home,
+                         other_lang_href=other, description=description,
+                         prefix=prefix, last_run=last_run)
+
+        index_body = _article_list_html(articles, lang, "articles/") + _digest_html(
             digest, lang
         )
-        index_path.write_text(
-            _page(lang=lang, title="noiseless.news", body=index_body, home=home,
-                  other_lang_href=other),
+        (lang_root / "index.html").write_text(
+            page("noiseless.news", index_body), encoding="utf-8"
+        )
+        (lang_root / "about.html").write_text(
+            page(f"{STRINGS[lang]['about']} — noiseless.news", _about_html(lang),
+                 other="tr/about.html" if lang == "en" else "../about.html",
+                 description=STRINGS[lang]["disclosure"]),
             encoding="utf-8",
         )
+        (lang_root / "corrections.html").write_text(
+            page(f"{STRINGS[lang]['corrections']} — noiseless.news",
+                 _corrections_html(collect_corrections(articles), lang, "articles/"),
+                 other="tr/corrections.html" if lang == "en" else "../corrections.html",
+                 description=STRINGS[lang]["corrections_note"]),
+            encoding="utf-8",
+        )
+
         for article in articles:
-            article_dir = out_dir / ("tr/articles" if lang == "tr" else "articles")
             counterpart = (
                 f"../../articles/{article.slug}.html"
                 if lang == "tr"
                 else f"../tr/articles/{article.slug}.html"
             )
-            (article_dir / f"{article.slug}.html").write_text(
-                _page(lang=lang, title=f"{article.title} — noiseless.news",
-                      body=_article_html(article, lang, home="../index.html",
-                                         thread=threads.get(article.slug)),
-                      home="../index.html",
-                      other_lang_href=counterpart,
-                      description=str(article.meta.get("tldr", "")).strip()),
+            (lang_root / "articles" / f"{article.slug}.html").write_text(
+                page(f"{article.title} — noiseless.news",
+                     _article_html(article, lang, home="../index.html",
+                                   thread=threads.get(article.slug)),
+                     home="../index.html", other=counterpart, prefix="../",
+                     description=str(article.meta.get("tldr", "")).strip()),
                 encoding="utf-8",
             )
 
