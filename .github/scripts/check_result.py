@@ -31,9 +31,20 @@ USAGE_LIMIT = re.compile(
 STAT_FIELDS = ("num_turns", "duration_ms", "duration_api_ms", "total_cost_usd")
 
 
-def read_result(path: str) -> dict | None:
-    """Return the last `result` event in the stream, or None if there is none."""
+def read_stream(path: str) -> tuple[dict | None, dict[str, int]]:
+    """Return the last `result` event and a per-tool call count.
+
+    The tool counts are the only committed evidence that policy §5's multi-agent
+    protocol actually ran. 52 of 54 evidence logs assert a fresh verifier and an
+    adversarial falsifier — in prose, written by the same session that drafted
+    the article. Nothing else survived the night: the stream file lives on the
+    runner and is destroyed with it.
+
+    Counting tool *names* is safe to commit; the tool inputs are not, since they
+    carry search queries, fetched URLs and article drafts.
+    """
     result = None
+    tools: dict[str, int] = {}
     with open(path, encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -45,7 +56,18 @@ def read_result(path: str) -> dict | None:
                 continue
             if event.get("type") == "result":
                 result = event
-    return result
+            elif event.get("type") == "assistant":
+                content = event.get("message", {}).get("content")
+                for block in content if isinstance(content, list) else []:
+                    if isinstance(block, dict) and block.get("type") == "tool_use":
+                        name = str(block.get("name", "unknown"))
+                        tools[name] = tools.get(name, 0) + 1
+    return result, tools
+
+
+def read_result(path: str) -> dict | None:
+    """Back-compatible accessor for the result event alone."""
+    return read_stream(path)[0]
 
 
 def classify(result: dict | None) -> tuple[int, str]:
@@ -65,9 +87,18 @@ def classify(result: dict | None) -> tuple[int, str]:
     return 0, "cycle completed OK"
 
 
-def stat_record(result: dict | None, night: str, cycle: str, gate: int) -> dict:
+def stat_record(result: dict | None, night: str, cycle: str, gate: int,
+                tools: dict[str, int] | None = None) -> dict:
     """Build the committed telemetry record. Numeric fields only, by design."""
     record: dict = {"night": night, "cycle": cycle, "gate": gate}
+    if tools:
+        record["tools"] = dict(sorted(tools.items()))
+        # Searches and fetches are what a verification pass is made of, so this
+        # is the number to look at when asking whether one actually happened.
+        record["research_calls"] = sum(
+            count for name, count in tools.items()
+            if name in ("WebSearch", "WebFetch")
+        )
     if result is None:
         record["subtype"] = "no-result-event"
         return record
@@ -102,7 +133,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        result = read_result(args.stream_file)
+        result, tools = read_stream(args.stream_file)
     except FileNotFoundError:
         print("FAIL: no agent output file — the agent never started")
         if args.stats_file:
@@ -134,7 +165,9 @@ def main(argv: list[str] | None = None) -> int:
                 f.write(f"- cycle result: `{summary}`\n")
 
     if args.stats_file:
-        append_stats(args.stats_file, stat_record(result, args.night, args.cycle, code))
+        append_stats(
+            args.stats_file, stat_record(result, args.night, args.cycle, code, tools)
+        )
 
     print(reason)
     return code
