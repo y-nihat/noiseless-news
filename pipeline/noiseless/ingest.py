@@ -18,7 +18,12 @@ import httpx
 
 from noiseless.sources import Source
 
-USER_AGENT = "noiseless-news/0.1 (autonomous news verification; +https://github.com)"
+# The +URL exists so a publisher seeing this traffic can find out who we are and
+# ask us to stop. Pointing it at github.com's homepage gave them no route.
+USER_AGENT = (
+    "noiseless-news/0.1 (autonomous news verification; "
+    "+https://github.com/y-nihat/noiseless-news)"
+)
 ARXIV_DELAY_SECONDS = 3.0
 DEFAULT_DELAY_SECONDS = 1.0
 

@@ -1,0 +1,78 @@
+name: Source health
+
+# policy/source-lifecycle.md §4 builds a dead-feed rule on live validation:
+# "feeds that fail live validation for 14 consecutive days are flagged for
+# repair or retirement". validate.py has implemented that check since day one
+# and nothing ever ran it, so a Tier-2 source produced zero items for two weeks
+# without a signal. This is the runner.
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"   # Monday, 12:00 Istanbul — a weekday, so it gets seen
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: nightly          # never race the night loop's pushes
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r pipeline/requirements.txt
+
+      - name: Fetch every active source
+        id: check
+        run: |
+          set +e
+          PYTHONPATH=pipeline python -m noiseless.run validate-sources --live \
+            | tee /tmp/health.txt
+          echo "exit=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          grep -c '^\[FAIL\]' /tmp/health.txt > /tmp/failcount || echo 0 > /tmp/failcount
+          echo "failures=$(cat /tmp/failcount)" >> "$GITHUB_OUTPUT"
+
+      - name: Commit the health report
+        run: |
+          REPORT="data/ledger/source-health-$(date -u +%F).md"
+          {
+            echo "# Source health — $(date -u +%F)"
+            echo
+            echo "\`validate-sources --live\` over every active source."
+            echo
+            echo '```'
+            cat /tmp/health.txt
+            echo '```'
+          } > "$REPORT"
+          git config user.name "y-nihat"
+          git config user.email "nihat@yinovasyon.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Source health check $(date -u +%F)"
+          git push
+
+      - name: Flag failing sources
+        if: steps.check.outputs.failures != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "${{ steps.check.outputs.failures }} active source(s) failed live validation."
+            echo
+            echo "Per policy/source-lifecycle.md §4, a feed that keeps failing is flagged"
+            echo "for repair or retirement. Compare against last week's report before acting —"
+            echo "a single transient failure is not a dead feed."
+            echo
+            echo '```'
+            grep '^\[FAIL\]' /tmp/health.txt
+            echo '```'
+          } > /tmp/issue.md
+          gh issue create --title "Source health: failing feeds $(date -u +%F)" \
+            --body-file /tmp/issue.md || true
