@@ -550,6 +550,28 @@ def parse_frontmatter(text: str) -> tuple[dict, str]:
     return {}, text.strip()
 
 
+_RAW_TAG = re.compile(r"<(?=[a-zA-Z/!?])")
+_DANGEROUS_SCHEME = re.compile(r"""(href|src)\s*=\s*(['"])\s*(javascript|data|vbscript):""", re.I)
+
+
+def body_to_html(body: str) -> str:
+    """Markdown to HTML, with raw HTML disabled.
+
+    Python-Markdown has shipped no sanitiser since 3.0 removed safe_mode: raw
+    HTML blocks are stashed and restored verbatim, and link destinations are not
+    scheme-checked. The article body is the one field written wholly by an agent
+    that has just read attacker-reachable text, so anything it wrote would
+    become live markup on a public page.
+
+    No article body in the archive has ever contained a tag, so disabling raw
+    HTML costs nothing and removes the sink. Offending markup is escaped and
+    therefore visible as text rather than silently dropped — a defaced article
+    should look wrong, not disappear. validate_content flags it as an error.
+    """
+    rendered = md.markdown(_RAW_TAG.sub("&lt;", body))
+    return _DANGEROUS_SCHEME.sub(r"\1=\2#blocked-scheme:", rendered)
+
+
 def safe_frontmatter(path: Path) -> tuple[dict, str] | None:
     """parse_frontmatter, but a broken file is skipped instead of fatal.
 
@@ -579,7 +601,7 @@ def load_articles(content_dir: Path, lang: str) -> list[Article]:
         meta, body = parsed
         if not meta.get("title") or not meta.get("slug"):
             continue
-        articles.append(Article(meta=meta, body_html=md.markdown(body), lang=lang))
+        articles.append(Article(meta=meta, body_html=body_to_html(body), lang=lang))
     # Newest first by when the reader could first have seen it, then by slug so
     # same-day ordering is deterministic rather than alphabetical-by-filename
     # falling out of a stable sort.

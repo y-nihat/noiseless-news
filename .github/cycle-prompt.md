@@ -88,6 +88,12 @@ Work order:
    - EVERY ledger entry needs `title`, `status`, `first_seen` and deep-link
      `source_urls` — an entry missing them is invisible to the duplicate gate.
      Dated notes belong in the `notes` array, never in new top-level keys.
+   - If the story has a pending outcome — a filed case with no ruling, a
+     scheduled hearing, an announced-but-unshipped product, a deal not yet
+     closed — set `open_obligation: true` and `revisit_after: <YYYY-MM-DD>` in
+     the ledger entry. Publishing an accusation or an announcement and never
+     publishing the outcome is a defect (verification.md 3 and 10). Clear the
+     flag when the outcome is published.
 7. DISCOVERY LOGGING: unregistered evidence domains →
    data/ledger/source_candidates.json; query patterns that earned their keep or
    produced noise → note in report.

@@ -18,6 +18,7 @@ with --warn-as-error once those are cleared.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -46,10 +47,21 @@ def _claim_shape(claims: list[dict]) -> list[tuple]:
     ]
 
 
-def check_article(meta: dict, slug: str, repo_root: Path) -> list[Finding]:
+RAW_TAG = re.compile(r"<\s*(script|iframe|object|embed|form|style|link|meta)\b", re.I)
+
+
+def check_article(meta: dict, slug: str, repo_root: Path, body: str = "") -> list[Finding]:
     findings: list[Finding] = []
     sources = meta.get("sources") or []
     claims = meta.get("claims") or []
+
+    if RAW_TAG.search(body):
+        findings.append(
+            Finding("ERROR", "raw-html-in-body", slug,
+                    "the body contains raw HTML markup; it is escaped at render "
+                    "time, but an agent writing tags means something went wrong "
+                    "upstream and needs looking at")
+        )
 
     for index, claim in enumerate(claims):
         for ref in claim.get("evidence") or []:
@@ -133,16 +145,16 @@ def check_parity(en_meta: dict, tr_meta: dict | None, slug: str) -> list[Finding
     return findings
 
 
-def _load_meta(repo_root: Path, lang: str) -> dict[str, dict]:
+def _load_meta(repo_root: Path, lang: str) -> dict[str, tuple[dict, str]]:
     metas = {}
     root = repo_root / "content" / "articles" / lang
     for path in sorted(root.rglob("*.md")):
         parsed = safe_frontmatter(path)
         if parsed is None:
             continue
-        meta, _body = parsed
+        meta, body = parsed
         slug = meta.get("slug") or path.stem
-        metas[slug] = meta
+        metas[slug] = (meta, body)
     return metas
 
 
@@ -152,9 +164,15 @@ def validate(repo_root: Path | str) -> list[Finding]:
     tr = _load_meta(repo_root, "tr")
 
     findings: list[Finding] = []
-    for slug, meta in en.items():
-        findings.extend(check_article(meta, slug, repo_root))
-        findings.extend(check_parity(meta, tr.get(slug), slug))
+    for slug, (meta, body) in en.items():
+        findings.extend(check_article(meta, slug, repo_root, body))
+        tr_entry = tr.get(slug)
+        findings.extend(check_parity(meta, tr_entry[0] if tr_entry else None, slug))
+        if tr_entry and RAW_TAG.search(tr_entry[1]):
+            findings.append(
+                Finding("ERROR", "raw-html-in-body", slug,
+                        "the Turkish body contains raw HTML markup")
+            )
     for slug in sorted(set(tr) - set(en)):
         findings.append(
             Finding("ERROR", "bilingual-parity", slug, "Turkish article has no English original")

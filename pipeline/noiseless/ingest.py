@@ -33,6 +33,13 @@ FEED_TYPES = {"rss", "arxiv_api", "google_news_query", "youtube_channel"}
 
 _TRACKING_PARAMS = {"fbclid", "gclid", "mc_cid", "mc_eid"}
 
+# Some publishers put the whole article body in the feed's summary field — the
+# largest single item captured so far is 58 KB, and 125 items exceed 8 KB. That
+# is a verbatim copy in a public repository, which is a redistribution question
+# rather than a storage one (see NOTICE). The cap is generous enough to keep the
+# lede plus context, which is what the night agent's triage greps over.
+SUMMARY_LIMIT = 2000
+
 
 def canonical_url(url: str) -> str:
     """Normalize a URL for identity: drop fragments and tracking params."""
@@ -50,6 +57,14 @@ def canonical_url(url: str) -> str:
 def item_id(url: str) -> str:
     """Stable identifier derived from the canonical URL."""
     return hashlib.sha256(canonical_url(url).encode("utf-8")).hexdigest()[:16]
+
+
+def _clip(text: str, limit: int = SUMMARY_LIMIT) -> str:
+    """Trim a publisher-supplied summary to a citation, not a copy."""
+    text = text.strip()
+    if len(text) <= limit:
+        return text
+    return text[:limit].rstrip() + "…"
 
 
 def _entry_published(entry) -> str | None:
@@ -74,7 +89,7 @@ def normalize_entry(source: Source, entry, fetched_at: str) -> dict | None:
         "title": title,
         "url": canonical_url(link),
         "published": _entry_published(entry),
-        "summary": (entry.get("summary") or "").strip(),
+        "summary": _clip(entry.get("summary") or ""),
         "fetched_at": fetched_at,
     }
     # Aggregator feeds (Google News) name the origin outlet in <source> — keep it

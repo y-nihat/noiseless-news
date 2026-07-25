@@ -124,7 +124,7 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
     sweep="light sweep — re-fetch only Tier-0 html sources that had fresh content earlier tonight or that a candidate story points to."
   fi
   if [ "$cycle" -eq 1 ] || [ "$is_final" -eq 1 ]; then
-    watching="re-check EVERY ledger entry in watching state (1-3 searches each) for its missing evidence; publish if the gate now passes, else update the entry's notes."
+    watching="re-check EVERY ledger entry in watching state (1-3 searches each) for its missing evidence; publish if the gate now passes, else update the entry's notes. ALSO re-check every PUBLISHED ledger entry whose open_obligation is true and whose revisit_after date has passed (or is absent) — a covered case with a pending outcome is an obligation under verification.md 3, not a finished story."
   else
     watching="only re-check a watching-state ledger entry if this cycle's fresh ingest or sweep mentions it — otherwise leave watching stories alone (they were checked in cycle 1 and will be re-checked in the final cycle)."
   fi
