@@ -1,0 +1,21 @@
+{
+  "slug": "nvidia-sk-group-500b-ai-partnership",
+  "title": "SK Group and Nvidia sign letters of intent for $500 billion-plus AI factory and memory partnership",
+  "status": "published",
+  "first_seen": "2026-07-25",
+  "published_at": "2026-07-25",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory",
+    "https://hothardware.com/news/nvidia-secures-sk-hynix-hbm-memory-500b-ai-infrastructure-deal"
+  ],
+  "follows": null,
+  "watch": [
+    "Whether the letters of intent convert to signed, binding final contracts",
+    "Whether the 2-gigawatt SK Telecom AI factory stays on its 2027 first-phase timeline",
+    "Any independent confirmation of the exact $500B breakdown between the two halves of the deal (factory vs. memory)"
+  ],
+  "notes": [
+    "2026-07-25 c2: new standalone story, surfaced via this cycle's Techmeme/gnews sweep (Reuters/Bloomberg pickup). dedup-check clean (no match). Verified under a tight ~26 min cycle-time constraint via direct fetch of Nvidia's own newsroom release plus independent HotHardware reporting, with an adversarial search pass for non-binding/skeptical framing -- deviates from the usual fresh-verifier + fresh-falsifier subagent split (report flags this explicitly); justified given this is a pure Tier-0 announcement claim with both companies' own confirmed terms. Style gates run on both languages: pass (falsifiable headline noting letters-of-intent status, standalone TL;DR, no padding, Turkish mirrors structure)."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "slug": "nvidia-sk-group-500b-ai-partnership",
+    "checked_at": "2026-07-25T23:15:00+00:00",
+    "method": "Single-session verification under a hard cycle-time constraint (~26 min runway to deadline): primary-source trace via Nvidia's own newsroom press release, cross-checked against independent tech-press pickup (HotHardware) that adds context beyond the release, plus an adversarial search pass for skepticism/non-binding framing. Not the full fresh-verifier-subagent + adversarial-falsifier-subagent split used on other nights -- flagged in the report as a deviation, justified because this is a pure Tier-0 announcement claim type (both companies' own confirmed terms) with low verification burden.",
+    "origin_items": [
+        "Surfaced via Techmeme sweep in this cycle's raw ingest (2026-07-25 gnews/techmeme feeds), citing Reuters and Ian King/Bloomberg. dedup-check before opening: no match."
+    ],
+    "claims": [
+        {
+            "text": "SK Group and Nvidia signed letters of intent on 24 July 2026 for a partnership the companies describe as worth more than $500 billion, covering AI factory construction and next-generation memory supply",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via direct fetch of Nvidia's own newsroom press release (joint SK Group/Nvidia announcement, quotes from both Jensen Huang and Chey Tae-won), independently corroborated by HotHardware's own reporting (byline Paul Lilly, 2026-07-25) which adds its own framing/context rather than only repeating the release. An adversarial search pass found one secondary blog claiming 'no official press release... had emerged' -- resolved as stale/incorrect since the Nvidia newsroom release itself was directly fetched and confirms the figure.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory",
+                "https://hothardware.com/news/nvidia-secures-sk-hynix-hbm-memory-500b-ai-infrastructure-deal"
+            ]
+        },
+        {
+            "text": "SK Telecom plans to build a 2-gigawatt AI factory in South Korea on Nvidia's DSX architecture, using Nvidia Vera Rubin compute with SK hynix HBM4 memory, targeting the first phase online in 2027",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Stated identically in both the Nvidia newsroom release and HotHardware's independent writeup.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory",
+                "https://hothardware.com/news/nvidia-secures-sk-hynix-hbm-memory-500b-ai-infrastructure-deal"
+            ]
+        },
+        {
+            "text": "SK hynix and Nvidia agreed to a separate long-term partnership to secure HBM supply for Nvidia and jointly develop next-generation AI memory",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed in both sources; explicitly framed as letters of intent, not a signed final supply contract -- reflected in the article body rather than treating the deal as fully closed.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory",
+                "https://hothardware.com/news/nvidia-secures-sk-hynix-hbm-memory-500b-ai-infrastructure-deal"
+            ]
+        }
+    ],
+    "falsifier_notes": "Verdict: CLEAR TO PUBLISH, with caveats reflected in the article. Adversarial search surfaced market-side skepticism (SK hynix shares down ~41% from peak same week) but this concerns earnings/valuation sentiment, not the veracity of the deal terms themselves -- not evidence against the claims. Also surfaced that the arrangement is letters of intent rather than binding final contracts; the headline and body were written to reflect that explicitly rather than imply a closed deal. CNBC's own piece could not be fetched (403); not used as evidence load-bearing beyond confirming the same headline figure independently in search snippets.",
+    "gaps_closed_from_watching_state": []
+}
