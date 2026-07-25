@@ -1,6 +1,7 @@
 ---
 title: Nvidia ve KAIST, Güney Kore'de ortak yapay zeka araştırma laboratuvarı kuruyor; beş yılda 300 milyon dolar
 date: 2026-07-23
+published: 2026-07-25
 slug: nvidia-kaist-ai-research-lab
 lang: tr
 tldr: >

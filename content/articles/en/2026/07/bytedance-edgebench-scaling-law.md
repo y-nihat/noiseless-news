@@ -1,6 +1,7 @@
 ---
 title: ByteDance Seed releases EdgeBench, reports a new scaling law for AI agents learning from real-world environments
 date: 2026-07-02
+published: 2026-07-11
 slug: bytedance-edgebench-scaling-law
 lang: en
 tldr: >

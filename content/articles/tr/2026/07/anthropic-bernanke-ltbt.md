@@ -1,6 +1,7 @@
 ---
 title: Anthropic, eski Fed Başkanı Ben Bernanke'yi Uzun Vadeli Fayda Vakfı'na atadı
 date: 2026-07-09
+published: 2026-07-11
 slug: anthropic-bernanke-ltbt
 lang: tr
 tldr: >

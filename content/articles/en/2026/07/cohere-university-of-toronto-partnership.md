@@ -1,6 +1,7 @@
 ---
 title: Cohere and University of Toronto announce multi-year AI partnership
 date: 2026-07-16
+published: 2026-07-17
 slug: cohere-university-of-toronto-partnership
 lang: en
 tldr: >

@@ -1,6 +1,7 @@
 ---
 title: Anthropic, Public First Action'a ikinci kez 20 milyon dolar daha bağışladı; toplam 40 milyon dolara ulaştı
 date: 2026-07-21
+published: 2026-07-23
 slug: anthropic-public-first-action-40m
 lang: tr
 tldr: >

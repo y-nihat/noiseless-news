@@ -1,6 +1,7 @@
 ---
 title: Mistral, ilk robotik modeli Robostral Navigate'i tek kameralı robot navigasyonu için yayınladı
 date: 2026-07-08
+published: 2026-07-11
 slug: mistral-robostral-navigate
 lang: tr
 tldr: >

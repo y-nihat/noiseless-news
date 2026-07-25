@@ -1,6 +1,7 @@
 ---
 title: Anthropic, ABD'deki K-12 öğretmenleri için ücretsiz Claude for Teachers'ı duyurdu
 date: 2026-07-14
+published: 2026-07-16
 slug: anthropic-claude-for-teachers
 lang: tr
 tldr: >

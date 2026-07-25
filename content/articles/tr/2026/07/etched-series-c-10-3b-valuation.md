@@ -1,6 +1,7 @@
 ---
 title: Yapay zekâ çip girişimi Etched, 10,3 milyar dolar değerlemeyle 300 milyon dolarlık yatırım turunu kapattı
 date: 2026-07-23
+published: 2026-07-24
 slug: etched-series-c-10-3b-valuation
 lang: tr
 tldr: >

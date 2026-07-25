@@ -1,6 +1,7 @@
 ---
 title: Anthropic gives a second $20 million to Public First Action, bringing its total to $40 million
 date: 2026-07-21
+published: 2026-07-23
 slug: anthropic-public-first-action-40m
 lang: en
 tldr: >

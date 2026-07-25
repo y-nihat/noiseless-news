@@ -1,6 +1,7 @@
 ---
 title: xAI sues user, alleging he used Grok to generate child sexual abuse material
 date: 2026-07-14
+published: 2026-07-17
 slug: xai-sues-user-grok-csam
 lang: en
 tldr: >

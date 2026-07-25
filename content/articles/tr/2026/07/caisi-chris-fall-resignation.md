@@ -1,6 +1,7 @@
 ---
 title: Trump yönetiminin AI güvenliği şefi Chris Fall, üç ay sonra istifa etti
 date: 2026-07-20
+published: 2026-07-21
 slug: caisi-chris-fall-resignation
 lang: tr
 tldr: >

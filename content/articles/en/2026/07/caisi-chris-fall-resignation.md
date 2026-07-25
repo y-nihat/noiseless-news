@@ -1,6 +1,7 @@
 ---
 title: Trump administration's AI safety chief Chris Fall resigns after three months
 date: 2026-07-20
+published: 2026-07-21
 slug: caisi-chris-fall-resignation
 lang: en
 tldr: >

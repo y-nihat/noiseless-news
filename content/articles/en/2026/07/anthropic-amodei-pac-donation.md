@@ -1,6 +1,7 @@
 ---
 title: Anthropic CEO Dario Amodei disclosed a $1 million donation to a pro-AI-regulation super PAC
 date: 2026-07-16
+published: 2026-07-18
 slug: anthropic-amodei-pac-donation
 lang: en
 tldr: >

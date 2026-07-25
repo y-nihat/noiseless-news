@@ -1,6 +1,7 @@
 ---
 title: xAI, Grok'u çocuk istismarı görseli üretmek için kullandığı iddiasıyla bir kullanıcıya dava açtı
 date: 2026-07-14
+published: 2026-07-17
 slug: xai-sues-user-grok-csam
 lang: tr
 tldr: >

@@ -1,6 +1,7 @@
 ---
 title: 26 Meta çalışanı dava açtı; yapay zeka destekli işten çıkarma seçim sisteminin tıbbi izinli ve engelli çalışanları dezavantajlı konuma soktuğunu iddia ediyor
 date: 2026-07-14
+published: 2026-07-15
 slug: meta-ai-layoffs-discrimination-lawsuit
 lang: tr
 tldr: >

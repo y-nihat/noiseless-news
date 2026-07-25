@@ -1,6 +1,7 @@
 ---
 title: Anthropic CEO'su Dario Amodei, yapay zekâ düzenlemesini destekleyen bir süper PAC'e 1 milyon dolar bağış yaptığını açıkladı
 date: 2026-07-16
+published: 2026-07-18
 slug: anthropic-amodei-pac-donation
 lang: tr
 tldr: >

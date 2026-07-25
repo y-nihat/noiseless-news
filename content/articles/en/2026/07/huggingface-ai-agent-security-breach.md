@@ -1,6 +1,7 @@
 ---
 title: Hugging Face says an autonomous AI agent drove a breach of its production infrastructure
 date: 2026-07-16
+published: 2026-07-18
 slug: huggingface-ai-agent-security-breach
 lang: en
 tldr: >

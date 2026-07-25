@@ -1,6 +1,7 @@
 ---
 title: Illinois enacts first state law requiring recurring independent audits of frontier AI systems
 date: 2026-07-06
+published: 2026-07-14
 slug: illinois-ai-safety-measures-act
 lang: en
 tldr: >

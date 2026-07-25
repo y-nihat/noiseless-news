@@ -1,6 +1,7 @@
 ---
 title: Hundreds march from OpenAI to Anthropic to Google DeepMind in San Francisco to demand a pause on AI development
 date: 2026-07-11
+published: 2026-07-13
 slug: sf-stop-the-ai-race-protest
 lang: en
 tldr: >

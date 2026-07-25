@@ -1,6 +1,7 @@
 ---
 title: Amkor and Nvidia sign $1.5 billion deal to build US advanced chip packaging capacity
 date: 2026-07-23
+published: 2026-07-24
 slug: amkor-nvidia-packaging-partnership
 lang: en
 tldr: >

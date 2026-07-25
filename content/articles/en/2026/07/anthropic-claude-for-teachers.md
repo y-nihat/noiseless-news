@@ -1,6 +1,7 @@
 ---
 title: Anthropic launches free Claude for Teachers for US K-12 educators
 date: 2026-07-14
+published: 2026-07-16
 slug: anthropic-claude-for-teachers
 lang: en
 tldr: >
