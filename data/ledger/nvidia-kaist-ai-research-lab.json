@@ -1,0 +1,21 @@
+{
+  "slug": "nvidia-kaist-ai-research-lab",
+  "title": "Nvidia and KAIST launch joint AI research lab in South Korea, $300 million over five years",
+  "date": "2026-07-23",
+  "status": "published",
+  "state": "published",
+  "first_seen": "2026-07-25",
+  "published_at": "2026-07-25",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://nvidianews.nvidia.com/news/nvidia-and-kaist-launch-joint-ai-research-lab-to-accelerate-ai-innovation-in-korea",
+    "https://news.kaist.ac.kr/newsen/html/news/?mode=V&mng_no=64872"
+  ],
+  "dedup_check": "clean (no archive match), cycle 4",
+  "watch": [
+    "The unreconciled $50M/yr x 5yr = $250M vs stated $300M total figure, if either party clarifies",
+    "The '$500 billion+' Nvidia/SK Group AI datacenter initiative and 'Nvidia $1B in Naver' headlines from the same news window -- both single-sourced (Reuters, Bloomberg) with no independent corroboration found this cycle; good candidate for a later cycle if a second independent source or primary document surfaces",
+    "Naver-Brookfield AI-factory financing talks (~10 trillion won ask) -- reported as ongoing talks, not a concluded deal, by Korean press"
+  ],
+  "cycle_2026-07-25_c4_note": "Surfaced via fresh Tier-3 gnews-ai-chips-and-compute ingest during triage, amid a cluster of Nvidia/SK Group Korea headlines. Fresh verifier sub-agent (25 tool calls) found the wider lead conflated three distinct events (June 8 SK Hynix/SK Telecom/Naver deals, 23 July KAIST lab, 24 July Silicon Valley summit) and that the '$500B' and '$1B Naver' figures were each single-sourced with no independent Tier<=2 corroboration reachable within budget; recommended narrowing to the cleanly Tier-0-sourced KAIST lab story. Fresh adversarial falsifier (6 tool calls) independently fetched both Nvidia's and KAIST's own newsroom posts, found no contradicting/delay/cancellation coverage, flagged the $50M x 5yr vs $300M total arithmetic gap present in the primary sources themselves (reported as-is), and confirmed neither primary source describes this as a signed/binding contract (kept as 'announced collaboration' framing). Style gates: EN pass, TR pass."
+}

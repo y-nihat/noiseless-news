@@ -1,0 +1,41 @@
+{
+  "slug": "nvidia-kaist-ai-research-lab",
+  "checked_at": "2026-07-25T00:36:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts), primary-source fetches from both named parties",
+  "origin_items": [
+    "gnews-ai-chips-and-compute.json (2026-07-25 fresh ingest) -- Korean-press item 'Nvidia, KAIST launch AI research institute' surfaced during triage, plus a cluster of Nvidia/SK Group Korea headlines from the same window"
+  ],
+  "claims": [
+    {
+      "text": "Nvidia and KAIST announced the launch of a joint AI research lab on 23 July 2026 (24 July in Korea), to be hosted at KAIST's Kim Jaechul Graduate School of AI",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly from both named parties' own newsrooms: Nvidia's press release (23 July, US date) and KAIST's own news post (24 July, Korea date) -- a timezone artifact, not a factual discrepancy. Falsifier independently fetched both primary sources.",
+      "evidence": [
+        "https://nvidianews.nvidia.com/news/nvidia-and-kaist-launch-joint-ai-research-lab-to-accelerate-ai-innovation-in-korea",
+        "https://news.kaist.ac.kr/newsen/html/news/?mode=V&mng_no=64872"
+      ]
+    },
+    {
+      "text": "The collaboration is a $300 million commitment over an initial five-year period, including $50 million a year in Nvidia compute contributions",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both primary sources state the same figures verbatim. Independent secondary outlets (eWeek, Telecompaper, Techgenyz, StockTitan, Seoul Economic Daily, JoongAng Daily) relay the identical numbers with no variance found. Falsifier flagged that $50M x 5 years = $250M, $50M short of the stated $300M total -- an internal gap in the primary sources themselves (likely covers the research-funding/hiring commitments), reported as-is rather than resolved by us.",
+      "evidence": [
+        "https://nvidianews.nvidia.com/news/nvidia-and-kaist-launch-joint-ai-research-lab-to-accelerate-ai-innovation-in-korea",
+        "https://news.kaist.ac.kr/newsen/html/news/?mode=V&mng_no=64872"
+      ]
+    },
+    {
+      "text": "The lab will fund at least 10 KAIST researchers annually, alongside internship and full-time hiring commitments from Nvidia; KAIST's own contribution is talent and facilities, not a cash figure",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated in both primary releases. Neither source attributes any part of the $300M to KAIST or the Korean government.",
+      "evidence": [
+        "https://nvidianews.nvidia.com/news/nvidia-and-kaist-launch-joint-ai-research-lab-to-accelerate-ai-innovation-in-korea",
+        "https://news.kaist.ac.kr/newsen/html/news/?mode=V&mng_no=64872"
+      ]
+    }
+  ],
+  "notes": "Deliberately excluded from the published claim set: the '$500 billion+ AI data centers initiative' and 'Nvidia to invest $1 billion in Naver' headlines from the same news window (Reuters and Bloomberg respectively) -- verifier found both single-sourced with no independent Tier<=2 corroboration or primary document reachable within budget (reuters.com blocked, Bloomberg body paywalled), and found the wider lead conflated at least three distinct events (June 8 SK Hynix/SK Telecom/Naver deals, 23 July KAIST lab, 24 July Silicon Valley AI summit). A GuruFocus headline implying a concluded 'Nvidia partners with Naver and Brookfield' data-center deal was found to conflate Naver's separate, unconcluded fundraising talks with Brookfield with Nvidia's pre-existing, unrelated $100B AI infrastructure fund with Brookfield (announced Nov 2025) -- not a real three-party deal, excluded entirely. These are candidates for a later cycle if a primary document or independent second source surfaces. Narrowed this cycle to the cleanly-sourced KAIST lab story only, per verifier/falsifier recommendation."
+}
