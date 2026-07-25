@@ -179,6 +179,31 @@ central claim does not hold, or which should not have been published at all.
   evidence, not on the pressure — but respond, and record the decision in the
   ledger entry either way.
 
+## 11a. The public hold record
+
+Stories held in `watching` are listed on `/held.html`. Publishing what we could
+not verify is the point — a verification standard that never costs a story is
+not a standard — but a held story is by definition one whose claims did not
+stand up, so the page must never become an outlet for them.
+
+What is rendered: the subject, the date it was first seen, the policy rule it
+failed, an optional one-sentence `public_note`, and the `watch` list of evidence
+that would change the answer. What is **not** rendered: the ledger's `reason`
+field, which restates the unverified claim in full so the next cycle has the
+context it needs.
+
+Rules for the ledger entry:
+
+- The `title` of a held story is read by the public page. Write it as the
+  *subject under review*, not as the claim — "Reports of a Meta in-house chip
+  timeline", not "Meta will start chip production in September".
+- `public_note`, if present, is written for readers: one sentence, no substance
+  of the unverified claim.
+- Set `public: false` on any held story that must not be listed at all. This is
+  required whenever a private individual (§10) is involved, and whenever listing
+  the hold would itself repeat an allegation about a named person.
+- `reason` stays internal and may be as detailed as the next cycle needs.
+
 ## 12. Budget discipline
 
 - Research/verification agents run on Sonnet 5 at max effort; hard caps apply per run

@@ -53,6 +53,31 @@ STRINGS = {
         "feed_link": "Feed",
         "about": "About",
         "corrections": "Corrections",
+        "held": "Not published",
+        "held_intro": (
+            "Stories the pipeline looked at and decided it could not stand "
+            "behind. Publishing what we could not verify is the point of this "
+            "page: a verification standard that never costs you a story is not "
+            "a standard."
+        ),
+        "held_warning": (
+            "Nothing on this page is reported as fact. These are reports we have "
+            "NOT confirmed. Listed here is why each one failed our bar and what "
+            "evidence would change the answer — not the claims themselves."
+        ),
+        "held_since": "held since {date}",
+        "held_needs": "What would change the answer",
+        "no_held": "Nothing is on hold right now.",
+        "rule_labels": {
+            "0": "Outside the AI vertical",
+            "0a": "Already covered by an existing story",
+            "1": "No source that may confirm this claim type",
+            "2": "Independence — every account traces to a single origin",
+            "3": "Standard of proof not met for this claim type",
+            "4": "No verifiable substance behind the headline",
+            "5": "Verification agents disagreed",
+            "default": "Did not meet the publishing gate",
+        },
         "footer": "Built in the open — every verdict's evidence trail is public.",
         "disclosure": (
             "Articles on this site are written and verified by AI agents, "
@@ -175,6 +200,31 @@ STRINGS = {
         "feed_link": "Akış",
         "about": "Hakkında",
         "corrections": "Düzeltmeler",
+        "held": "Yayımlanmayanlar",
+        "held_intro": (
+            "Hattın incelediği, ancak arkasında duramayacağına karar verdiği "
+            "haberler. Doğrulayamadıklarımızı yayımlamak bu sayfanın amacıdır: "
+            "hiçbir habere mal olmayan bir doğrulama ölçütü, ölçüt değildir."
+        ),
+        "held_warning": (
+            "Bu sayfadaki hiçbir şey olgu olarak aktarılmamaktadır. Bunlar "
+            "doğrulayamadığımız iddialardır. Burada listelenen, her birinin "
+            "eşiğimizi neden geçemediği ve hangi kanıtın sonucu değiştireceğidir "
+            "— iddiaların kendisi değil."
+        ),
+        "held_since": "{date} tarihinden beri bekletiliyor",
+        "held_needs": "Sonucu ne değiştirir",
+        "no_held": "Şu anda bekleyen haber yok.",
+        "rule_labels": {
+            "0": "Yapay zekâ alanının dışında",
+            "0a": "Mevcut bir haberde zaten ele alınmış",
+            "1": "Bu iddia türünü doğrulayabilecek kaynak yok",
+            "2": "Bağımsızlık — bütün aktarımlar tek bir kaynağa dayanıyor",
+            "3": "Bu iddia türü için ispat düzeyi karşılanmadı",
+            "4": "Başlığın arkasında doğrulanabilir bir öz yok",
+            "5": "Doğrulama ajanları anlaşamadı",
+            "default": "Yayın eşiğini geçemedi",
+        },
         "footer": "Açık inşa ediliyor — her hükmün kanıt zinciri kamuya açık.",
         "disclosure": (
             "Bu sitedeki haberler, kamuya açık bir yayın politikasını izleyen "
@@ -431,6 +481,15 @@ dl.verdicts { margin:.6rem 0 0; }
 dl.verdicts dt { margin:.9rem 0 .25rem; }
 dl.verdicts dd { margin:0; font-size:.93rem; line-height:1.6; color:var(--muted);
                  max-width:38rem; }
+ul.held { list-style:none; margin:.6rem 0 0; padding:0; }
+ul.held > li { padding:1.1rem 0; border-bottom:1px solid var(--rule); }
+.held-subject { font-weight:650; margin:0 0 .25rem; line-height:1.45; }
+.held-meta { font-size:.79rem; color:var(--muted); margin:0 0 .5rem; }
+.held-note { margin:0 0 .5rem; font-size:.93rem; line-height:1.6; }
+.held-label { font-size:.72rem; font-weight:650; text-transform:uppercase;
+              letter-spacing:.08em; color:var(--muted); margin:.6rem 0 .2rem; }
+ul.held-watch { margin:0; padding-left:1.15rem; font-size:.9rem; color:var(--muted); }
+ul.held-watch li { padding:.15rem 0; line-height:1.55; }
 ul.corrections { list-style:none; margin:.4rem 0 0; padding:0; }
 ul.corrections li { padding:.9rem 0; border-bottom:1px solid var(--rule); }
 ul.corrections .date { font-size:.78rem; color:var(--muted); letter-spacing:.02em; }
@@ -708,6 +767,7 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
       <nav class="top">
         <a href="{other_lang_href}" hreflang="{'tr' if lang == 'en' else 'en'}" lang="{'tr' if lang == 'en' else 'en'}">{s['other_lang']}</a>
         <a href="{prefix}about.html">{s['about']}</a>
+        <a href="{prefix}held.html">{s['held']}</a>
         <a href="{prefix}corrections.html">{s['corrections']}</a>
         <a href="{prefix}feed.xml">{s['feed_link']}</a>
         <a href="{REPO_URL}/blob/main/policy/verification.md">{s['methodology']}</a>
@@ -967,6 +1027,81 @@ def _article_html(
     return "\n".join(parts)
 
 
+_RULE_REF = re.compile(r"§\s*(\d+[a-z]?)")
+
+
+def load_held_stories(data_dir: Path) -> list[dict]:
+    """Stories the pipeline decided not to publish, for the public hold record.
+
+    Deliberately narrow about what leaves the repository. A held story is one we
+    could NOT verify, so republishing its substance would make the site an
+    outlet for exactly the claims it declined to print. What gets rendered is
+    the fact of the hold, the policy rule it failed, and the evidence that would
+    change the answer — never the ledger's internal `reason` prose, which
+    restates the unverified claim in full so the next cycle has the context.
+
+    An entry is excluded entirely when it sets `public: false`.
+    """
+    ledger = data_dir / "ledger"
+    if not ledger.exists():
+        return []
+    held = []
+    for path in sorted(ledger.glob("*.json")):
+        if path.name in ("source_candidates.json", "source_rejections.json"):
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, UnicodeDecodeError, OSError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        if data.get("state", data.get("status")) != "watching":
+            continue
+        if data.get("public") is False:
+            continue
+        slug = data.get("slug") or path.stem
+        held.append(
+            {
+                "slug": slug,
+                "subject": str(data.get("title") or "") or slug.replace("-", " "),
+                "since": str(data.get("first_seen") or data.get("date") or ""),
+                "note": str(data.get("public_note") or ""),
+                "rules": sorted(set(_RULE_REF.findall(str(data.get("reason") or "")))),
+                "watch": [str(w) for w in (data.get("watch") or []) if str(w).strip()],
+            }
+        )
+    held.sort(key=lambda h: (h["since"], h["slug"]), reverse=True)
+    return held
+
+
+def _held_html(held: list[dict], lang: str) -> str:
+    s = STRINGS[lang]
+    if not held:
+        return f"<div class='page'><h1>{s['held']}</h1><p class='empty'>{s['no_held']}</p></div>"
+    items = []
+    for entry in held:
+        rules = ", ".join(
+            s["rule_labels"].get(rule, s["rule_labels"]["default"])
+            for rule in entry["rules"]
+        ) or s["rule_labels"]["default"]
+        watch = "".join(f"<li>{html.escape(w)}</li>" for w in entry["watch"])
+        items.append(
+            f"<li><p class='held-subject'>{html.escape(entry['subject'])}</p>"
+            f"<p class='held-meta'>{s['held_since'].format(date=html.escape(entry['since']))}"
+            f"<span class='sep'>·</span>{html.escape(rules)}</p>"
+            + (f"<p class='held-note'>{html.escape(entry['note'])}</p>" if entry["note"] else "")
+            + (f"<p class='held-label'>{s['held_needs']}</p><ul class='held-watch'>{watch}</ul>"
+               if watch else "")
+            + "</li>"
+        )
+    return (
+        f"<div class='page'><h1>{s['held']}</h1>"
+        f"<p class='lede'>{s['held_intro']}</p>"
+        f"<p class='note'>{s['held_warning']}</p>"
+        f"<ul class='held'>{''.join(items)}</ul></div>"
+    )
+
+
 def _about_html(lang: str) -> str:
     s = STRINGS[lang]
     verdicts = "".join(
@@ -1100,6 +1235,7 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
 
     digest = build_digest(repo_root / "data")
     last_run = latest_run_date(repo_root / "data")
+    held = load_held_stories(repo_root / "data")
     counts = {}
     sitemap_paths: list[str] = []
     for lang, lang_root, home, base in (
@@ -1133,6 +1269,14 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
                  path=f"{base}about.html", alternate=f"{other_base}about.html",
                  other="tr/about.html" if lang == "en" else "../about.html",
                  description=STRINGS[lang]["disclosure"]),
+            encoding="utf-8",
+        )
+        (lang_root / "held.html").write_text(
+            page(f"{STRINGS[lang]['held']} — noiseless.news",
+                 _held_html(held, lang),
+                 path=f"{base}held.html", alternate=f"{other_base}held.html",
+                 other="tr/held.html" if lang == "en" else "../held.html",
+                 description=STRINGS[lang]["held_intro"]),
             encoding="utf-8",
         )
         (lang_root / "corrections.html").write_text(
