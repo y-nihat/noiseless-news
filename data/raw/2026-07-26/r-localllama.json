@@ -1,0 +1,12 @@
+[
+  {
+    "id": "afa711088a257ce1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "MI50 power curve tests",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6ns73/mi50_power_curve_tests/",
+    "published": "2026-07-25T23:50:20+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6ns73/mi50_power_curve_tests/\"> <img alt=\"MI50 power curve tests\" src=\"https://preview.redd.it/sni2ix02pgfh1.png?width=140&amp;height=79&amp;auto=webp&amp;s=f27bb72640f434e50f05c741546d33838c06ab3b\" title=\"MI50 power curve tests\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>tests done power limiting the GPU on LACT - real power usage varies wildy</p> <p>at 20W it ranges from 25W to 56W<br /> same behavior happens on every setting</p> <p>prompt for the test runs:</p> <p><a href=\"https://github.com/lukesdevlab/youtube/blob/main/prompts/agent-maze.txt\">https://github.com/lukesdevlab/youtube/blob/main/prompts/agent-maze.txt</a></p> <p>analysis by mimo 2.5</p> <p><strong>Key Findings:</strong><br /> • <strong>Generation speed is remarkably resilient to power throttling</strong> — 100W delivers 97.5% of 190W gen speed (31.98 vs 32.79 t/s), since decode is memory-bandwidth bound, not compute bound.<br /> • <strong>At 50W you get 70% of peak gen speed at only 26% of peak power</strong> — 3.6× better energy efficiency (0.458 vs 0.173 t/s/W).<br /> • <strong>At 20W the card is 6.0× more energy efficient than 190W</strong>, though prompt processing drops to 53% of peak.<br /> • <strong>Graph reuse correlates inversely with power</strong> — 190W reuses 44,790 graphs vs 11,669 at 100W, but 20W reuses 38,248. Lower power limits cause more partial graph reuse as the scheduler compensates for throttled compute.<br /> • <strong>Prompt processing degrades faster than gen under power limits</strong> — 190W→20W: prompt drops to 53% (691→366 t/s), gen drops to 63% (32.8→20.8 t/s). Prompt processing is more compute-bound than memory-bound.<br /> • <strong>For inference-heavy deployments, 50W is the optimal operating point</strong> on MI50 — near-peak gen speed with dramatically lower power draw and cooling requirements.</p> <p>Avarage of 3 runs:</p> <p>190W config consistently processed a lot less total token…",
+    "fetched_at": "2026-07-26T00:18:50.356286+00:00"
+  }
+]
