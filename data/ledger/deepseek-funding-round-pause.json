@@ -16,6 +16,7 @@
     "Resumption or formal termination of the funding round, which would itself be the more solid news event"
   ],
   "notes": [
-    "2026-07-25 c3: opened from a candidate handed over by cycle 2 (dedup-check clean then, unopened). Dedup-check re-run this cycle, still clean. Corroboration search confirms wire-exclusive/rumor status -- Bloomberg is explicit that it has not verified the underlying viral posts' authenticity, and the pause itself is 'people familiar' sourcing with no company statement. Holding as watching rather than opening for publish."
+    "2026-07-25 c3: opened from a candidate handed over by cycle 2 (dedup-check clean then, unopened). Dedup-check re-run this cycle, still clean. Corroboration search confirms wire-exclusive/rumor status -- Bloomberg is explicit that it has not verified the underlying viral posts' authenticity, and the pause itself is 'people familiar' sourcing with no company statement. Holding as watching rather than opening for publish.",
+    "2026-07-26 c5: Re-checked (1 web search). New outlets syndicating the same Bloomberg wire story (China Money Network, Unite.AI, AI Weekly, ground.news, US News, Fortune) -- all still relay Bloomberg's 'people familiar' sourcing and its explicit non-verification of the viral posts' authenticity. No DeepSeek statement. Gate still fails. Still watching."
   ]
 }

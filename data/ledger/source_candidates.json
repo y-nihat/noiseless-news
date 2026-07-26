@@ -674,5 +674,25 @@
       ],
       "context": "Established tech outlet with editorial standards and named authors; independent second account used alongside Music Business Worldwide for sony-music-udio-second-lawsuit. Propose Tier 2."
     }
+  ],
+  "candidates_2026-07-26_night_c5": [
+    {
+      "domain": "thenextweb.com",
+      "first_seen": "2026-07-26",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://thenextweb.com/news/samsung-broadcom-200-billion-chip-deal-ai-memory-foundry"
+      ],
+      "context": "Established tech outlet with editorial standards and named reporting; used as the independent second account (alongside Reuters/Yahoo relay) for samsung-broadcom-200b-ai-chip-mou. Frequently surfaces as a recurring, editorially-distinct relay of wire stories across many nights this month -- propose Tier 2 registration."
+    },
+    {
+      "domain": "finance.yahoo.com",
+      "first_seen": "2026-07-26",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://finance.yahoo.com/technology/ai/articles/samsung-wins-200-billion-order-063012683.html"
+      ],
+      "context": "Used this cycle as the mirror carrying Reuters' bylined wire account (Heekyong Yang) for samsung-broadcom-200b-ai-chip-mou -- a wire distribution mirror, not independent reporting in its own right, similar to prior stocktitan.net treatment; noting occurrence rather than proposing registration."
+    }
   ]
 }
