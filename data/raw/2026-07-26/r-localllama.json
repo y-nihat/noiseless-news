@@ -248,5 +248,85 @@
     "published": "2026-07-26T11:01:24+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Anyone got that card and could tell me what to expect noise wise? I currently have a 7800xt and it is very quiet. Can I expect the r9700 to be tolerable? I am willing to undervolt and underclock a bit to keep noise tolerable. I plan to use that card for qwen 27b and gemma 4 31b.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/UnlawfulRepublic\"> /u/UnlawfulRepublic </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v70r06/sapphire_r9700_fan_noise/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v70r06/sapphire_r9700_fan_noise/\">[comments]</a></span>",
     "fetched_at": "2026-07-26T17:06:41.256464+00:00"
+  },
+  {
+    "id": "a377c2f87ce4e077",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Kimi K3 countdown has been released",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v7e5ck/kimi_k3_countdown_has_been_released/",
+    "published": "2026-07-26T19:51:55+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7e5ck/kimi_k3_countdown_has_been_released/\"> <img alt=\"Kimi K3 countdown has been released\" src=\"https://external-preview.redd.it/tqrGq8OpM96DAwRhHL39J0kk5k0hcVVhKEppExYOH8M.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=628a34c1466f402204a0b9ce125951815212a6bb\" title=\"Kimi K3 countdown has been released\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Unusual_Guidance2095\"> /u/Unusual_Guidance2095 </a> <br /> <span><a href=\"https://huggingface.co/moonshotai/Kimi-K3\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7e5ck/kimi_k3_countdown_has_been_released/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
+  },
+  {
+    "id": "2447a830df38ae0c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "MiniMax (official) on X: \"Open weights. Open research. Open innovation.🫶 Marching for an open future.🤍",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v7bwg7/minimax_official_on_x_open_weights_open_research/",
+    "published": "2026-07-26T18:28:47+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RhubarbSimilar1683\"> /u/RhubarbSimilar1683 </a> <br /> <span><a href=\"https://xcancel.com/MiniMax_AI/status/2081167102753517574\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7bwg7/minimax_official_on_x_open_weights_open_research/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
+  },
+  {
+    "id": "a327a788cda38a2d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Harness showdown: Claude Code vs OpenCode vs Pi with DeepSeek V4 Flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v7d8px/harness_showdown_claude_code_vs_opencode_vs_pi/",
+    "published": "2026-07-26T19:17:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7d8px/harness_showdown_claude_code_vs_opencode_vs_pi/\"> <img alt=\"Harness showdown: Claude Code vs OpenCode vs Pi with DeepSeek V4 Flash\" src=\"https://preview.redd.it/93nz4nc02gfh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=7652127f1fd4487153b58757a5851f520801d601\" title=\"Harness showdown: Claude Code vs OpenCode vs Pi with DeepSeek V4 Flash\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I ran DeepSeek V4 Flash through Claude Code, OpenCode and Pi on my own benchmark, and the quality came out basically the same across all three while the time and tokens spent was wildly different. Claude code (with DS in <a href=\"https://github.com/router-for-me/CLIProxyAPI\">CLIProxyAPI</a>) takes nearly 4 times longer than the fastest to land the same diffs.</p> <p>Theo posted a video &quot;<a href=\"https://www.youtube.com/watch?v=Noo0NWD0gHU\">GPT-5.6 is better in Claude Code</a>&quot; last week, and that got me curious, does the harness make a quality difference? I could at least run my own bench and see what I got, with DeepSeek V4 Flash on vLLM running at ~180 tok/s, the only moving part is the scaffolding.</p> <p>Anyway I went to town measuring all of it on my workload (antigenic work in large code base), so the full charts, the token and wall-clock spread across the three harnesses and the raw per-run data are on the site if you want to see it in detail and pick it apart yourself <a href=\"https://nqawhc.github.io/articles/harness-efficiency-not-quality/\">https://nqawhc.github.io/articles/harness-efficiency-not-quality/</a> but in short, the quality did not change, each harness made the same code diffs, but took wildly different paths to get there, how many tools calls, the structure of those tool calls and how the system prompt and tools plays a big role in how it plays out, like «Pi reasons, OpenCode delegates», while Claude Code loves exploring the code base, maybe too much.</p> </div><!-- S…",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
+  },
+  {
+    "id": "51710b65d4a9da19",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Minimax M3 support with MSA has been merged into llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v7ay5h/minimax_m3_support_with_msa_has_been_merged_into/",
+    "published": "2026-07-26T17:54:00+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Time_Reaper\"> /u/Time_Reaper </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/24908\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7ay5h/minimax_m3_support_with_msa_has_been_merged_into/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
+  },
+  {
+    "id": "6290a01ff1cf41b9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "~20s that you'll never get back",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v7fquf/20s_that_youll_never_get_back/",
+    "published": "2026-07-26T20:51:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>There is no quality or value to this post, however, I hope you might find humor in this broken output from my local Qwen TTS setup. Evidently I messed something up.</p> <p><a href=\"https://www.reddit.com/submit/?source_id=t3_1v7fptu&amp;composer_entry=crosspost_prompt\"></a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Full_Dimension_3495\"> /u/Full_Dimension_3495 </a> <br /> <span><a href=\"https://v.redd.it/vppvhbe40nfh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7fquf/20s_that_youll_never_get_back/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
+  },
+  {
+    "id": "e9778998864d67d3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is turboquant any good?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v79y3y/is_turboquant_any_good/",
+    "published": "2026-07-26T17:16:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know im late to the party. I was thinking since some time has passed, has turboquant matured enough to be used? Do any of you actually use it?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-Conflict391\"> /u/Ok-Conflict391 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v79y3y/is_turboquant_any_good/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v79y3y/is_turboquant_any_good/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
+  },
+  {
+    "id": "5ff0b679fd306161",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Has anyone compared pre-training, SFT/LoRA and reinforcement post-training on Qwen3.6-27B?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v7fng0/has_anyone_compared_pretraining_sftlora_and/",
+    "published": "2026-07-26T20:48:11+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Qwen3.6-27B: SFT vs continued pre-training vs RL?<br /> I’m interested in adapting Qwen3.6-27B, but I’m increasingly unsure whether conventional SFT/LoRA is the best route if the goal is to add a capability without degrading what the base model already does well.<br /> Some recent research makes this especially interesting:</p> <p><strong>“Reinforcement Fine-Tuning Naturally Mitigates Forgetting” - arXiv:2507.05386</strong></p> <p>Finds substantially more catastrophic forgetting with SFT than reinforcement fine-tuning in its experiments.</p> <p><strong>“The Role of On-Policy Data in Mitigating Forgetting” - arXiv:2510.18874</strong></p> <p>Reports that on-policy/RL training generally preserves previous capabilities better than SFT across Qwen and Llama models.</p> <p><strong>“RL Forgets! Towards Continual Policy Optimization” - arXiv:2607.04364</strong></p> <p>Shows that RL can also cause catastrophic forgetting, so it’s clearly not a complete solution.</p> <p><strong>“Fine-Tuning Without Forgetting via Loss-Adaptive Learning” - arXiv:2605.20005</strong></p> <p>Reports a large reduction in forgetting from changing the optimisation schedule, including experiments with Qwen3.</p> <p>Most of this research isn’t specifically on Qwen3.6-27B, which is why I’m interested in community results. Has anyone directly compared continued pre-training, SFT/LoRA and reinforcement post-training on Qwen3.6-27B?</p> <p>I’m particularly interested in whether improving one domain caused regressions in unrelated areas such as coding, reasoning, instruction following, tool use, long-context behaviour or general knowledge.</p> <p>For people who have tested this, what training method worked best, and did you benchmark the original model against the trained checkpoint afterwards?<br /> I’m also curious whether continued pre-training followed by a small amount of SFT or RL is proving safer than doing a larger SFT directly.</p> <p>Actual before/after results a…",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
+  },
+  {
+    "id": "973202aa1016cea7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Do people building local LLM rigs track RTX Ada/workstation card prices, or just consumer cards like the 5090?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v7eb4x/do_people_building_local_llm_rigs_track_rtx/",
+    "published": "2026-07-26T19:58:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>curious how people here approach buying high-end/workstation cards (RTX 6000 Ada, 5000 Ada, etc) for local LLM work, do you actively watch pricing/timing on these specifically, or is the consumer 5090 usually enough for most builds?</p> <p>also wondering if price alerts/tracking tools even exist for this category specifically, since these purchases are less frequent and higher stakes than a typical gaming GPU buy.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/egudegi\"> /u/egudegi </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7eb4x/do_people_building_local_llm_rigs_track_rtx/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7eb4x/do_people_building_local_llm_rigs_track_rtx/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T22:38:18.230784+00:00"
   }
 ]
