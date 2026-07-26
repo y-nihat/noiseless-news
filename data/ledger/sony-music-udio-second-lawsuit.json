@@ -1,0 +1,27 @@
+{
+    "slug": "sony-music-udio-second-lawsuit",
+    "title": "Sony Music files second lawsuit against Udio over 30,117 recordings",
+    "status": "published",
+    "first_seen": "2026-07-26",
+    "published_at": "2026-07-26",
+    "langs": [
+        "en",
+        "tr"
+    ],
+    "source_urls": [
+        "https://www.musicbusinessworldwide.com/sony-music-files-new-lawsuit-against-ai-platform-udio-asserting-over-30000-sound-recordings-a-judge-barred-it-from-adding-to-its-original-case/",
+        "https://www.engadget.com/2219497/sony-files-another-lawsuit-with-udio/"
+    ],
+    "follows": null,
+    "open_obligation": true,
+    "revisit_after": "2026-08-25",
+    "watch": [
+        "Any Udio response, motion to dismiss, or answer to the new complaint",
+        "Docket/case-number surfacing on a court tracker (CourtListener, UniCourt)",
+        "Whether Udio settles with Sony as Universal and Warner already have",
+        "Any ruling narrowing or dismissing the claims"
+    ],
+    "notes": [
+        "2026-07-26 cycle 4: New standalone story, surfaced via fresh gnews-ai-litigation ingest (AOL wire), dedup-check clean against the full archive. Legal/litigation claim type -- single-session verification (direct fetch of Music Business Worldwide + Engadget, cross-check via a third outlet, adversarial search for Udio's response) given the ~29-minute cycle window; same process deviation used elsewhere tonight, not a lowered evidence bar. Caught one source (Variety mirror) giving an internally inconsistent filing date and excluded it rather than using it. Every allegation attributed to Sony's complaint, no ruling implied. open_obligation set: case just filed, no ruling yet."
+    ]
+}

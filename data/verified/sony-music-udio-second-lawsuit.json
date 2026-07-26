@@ -1,0 +1,70 @@
+{
+    "slug": "sony-music-udio-second-lawsuit",
+    "checked_at": "2026-07-26T00:30:00+00:00",
+    "method": "Single-session verification (direct fetch of two independent trade-press accounts plus a third for cross-check, adversarial search for Udio's response) given the ~29-minute cycle window; same deviation from the full fresh-verifier/falsifier subagent split used on other nights, recorded per policy. Legal/litigation claim type per policy/verification.md §3 -- every allegation attributed to Sony's complaint or press reporting of it, never stated as adjudicated fact.",
+    "origin_items": [
+        "Surfaced via this cycle's fresh gnews-ai-litigation.json ingest (AOL.com headline, 2026-07-26 raw pull). dedup-check run before opening (title 'Sony Music Entertainment sues AI startup Udio', AOL URL): no match against archive."
+    ],
+    "claims": [
+        {
+            "text": "Sony Music Entertainment and nine affiliated labels filed a new copyright-infringement lawsuit against Udio in SDNY on 20 July 2026, asserting 30,117 sound recordings",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Music Business Worldwide and Engadget both independently report the filing with matching figures (30,117 recordings, SDNY). A third outlet (Variety, au mirror) corroborated the recording count and damages figure but gave an internally inconsistent filing date ('Monday, 22 July 2026' -- 22 July 2026 is actually a Wednesday, while 20 July 2026 is the Monday MBW and Engadget cite); Variety's date claim was treated as unreliable and excluded, keeping the two consistent, mutually-corroborating sources for the date.",
+            "evidence": [
+                "https://www.musicbusinessworldwide.com/sony-music-files-new-lawsuit-against-ai-platform-udio-asserting-over-30000-sound-recordings-a-judge-barred-it-from-adding-to-its-original-case/",
+                "https://www.engadget.com/2219497/sony-files-another-lawsuit-with-udio/"
+            ]
+        },
+        {
+            "text": "The new suit follows a 29 June 2026 ruling denying Sony's motion to add these recordings to its original 2024 case against Udio",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed by MBW (quotes the judge's language acknowledging Sony's right to separately pursue the claims) and Engadget (dates the original ruling to 29 June 2026, same framing).",
+            "evidence": [
+                "https://www.musicbusinessworldwide.com/sony-music-files-new-lawsuit-against-ai-platform-udio-asserting-over-30000-sound-recordings-a-judge-barred-it-from-adding-to-its-original-case/",
+                "https://www.engadget.com/2219497/sony-files-another-lawsuit-with-udio/"
+            ]
+        },
+        {
+            "text": "Complaint seeks up to $150,000 per infringed work (theoretical max >$4.5B across all works), up to $2,500 per DMCA circumvention violation, and injunctive relief",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Both MBW and Engadget cite the $150,000-per-work statutory maximum and DMCA circumvention figure; 30,117 x $150,000 = ~$4.52B, consistent with the ~$4.5B figure reported by aggregator search results. Framed in the article as a theoretical maximum, not an expected award.",
+            "evidence": [
+                "https://www.musicbusinessworldwide.com/sony-music-files-new-lawsuit-against-ai-platform-udio-asserting-over-30000-sound-recordings-a-judge-barred-it-from-adding-to-its-original-case/",
+                "https://www.engadget.com/2219497/sony-files-another-lawsuit-with-udio/"
+            ]
+        },
+        {
+            "text": "Sony complaint quote: 'Udio's belated embrace of licensing only underscores the unlawfulness of its decision to copy [the labels'] copyrighted sound recordings, without a license, in the first place'",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Direct quote pulled from MBW's fetch of the complaint text; attributed strictly to Sony's filing, not treated as an adjudicated fact.",
+            "evidence": [
+                "https://www.musicbusinessworldwide.com/sony-music-files-new-lawsuit-against-ai-platform-udio-asserting-over-30000-sound-recordings-a-judge-barred-it-from-adding-to-its-original-case/"
+            ]
+        },
+        {
+            "text": "Universal and Warner, Sony's original 2024 co-plaintiffs, have each separately licensed with Udio, leaving Sony the last major label still litigating against it",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed by Engadget, which quotes Warner's characterization of its deal as a new artist income stream. Adversarial search independently corroborated via the au.variety.com mirror (Universal and Warner settled; Sony -- and separately Universal -- continue against Suno, a distinct company not covered by this article).",
+            "evidence": [
+                "https://www.engadget.com/2219497/sony-files-another-lawsuit-with-udio/"
+            ]
+        },
+        {
+            "text": "Udio did not comment on the new suit; in the original case it argued fair use and separately acknowledged training on a large recording collection that presumably included labels' works",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Adversarial WebSearch specifically for an Udio response to the new July 2026 suit found none -- 'did not immediately return a request for comment' per search aggregation. Udio's fair-use defense and training-data admission are drawn from MBW's and Engadget's reporting of the company's prior public statements in the original case, correctly scoped as prior-case statements, not a response to this filing.",
+            "evidence": [
+                "https://www.musicbusinessworldwide.com/sony-music-files-new-lawsuit-against-ai-platform-udio-asserting-over-30000-sound-recordings-a-judge-barred-it-from-adding-to-its-original-case/",
+                "https://www.engadget.com/2219497/sony-files-another-lawsuit-with-udio/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Single-session adversarial pass: (1) checked for Udio public response to this specific suit -- none found, noted as absence rather than silently omitted; (2) caught and excluded a third source's (Variety) internally inconsistent filing date rather than averaging or picking one arbitrarily; (3) verified the $4.5B figure is a computed theoretical maximum (30,117 x $150,000), not a court-awarded or claimed specific number, and framed it as such in the article; (4) confirmed no ruling has issued on the new complaint -- open_obligation flagged in the ledger with a revisit date.",
+    "gaps_closed_from_watching_state": []
+}
