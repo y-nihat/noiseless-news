@@ -1,0 +1,12 @@
+[
+  {
+    "id": "b987fd5fb3fd21ea",
+    "source": "IEEE Spectrum AI",
+    "tier": 2,
+    "title": "Optical Tech Would Update a Robot’s AI on the Fly",
+    "url": "https://spectrum.ieee.org/ai-in-robotics",
+    "published": "2026-07-26T13:00:01+00:00",
+    "summary": "<img src=\"https://spectrum.ieee.org/media-library/an-asian-man-positions-the-lens-of-an-optical-receiver-a-meter-away-from-a-beam-of-led-light-in-a-lab.jpg?id=67530602&amp;width=1245&amp;height=700&amp;coordinates=0%2C469%2C0%2C470\" /><br /><br /><p>Atop a lab bench, <a href=\"https://tech.cornell.edu/\" rel=\"noopener noreferrer\" target=\"_blank\">Cornell Tech</a> postdoctoral researcher <a href=\"https://www.linkedin.com/in/yifan-he-5471a1386/\" rel=\"noopener noreferrer\" target=\"_blank\">Yifan He</a> positions the lens of an optical receiver almost a meter away from an LED emitting a beam of red light. The computer monitor attached to the receiver takes a beat to refresh, then displays an array of squares that resemble a QR code.</p><p>When you hold your phone camera up to a QR code, light strikes the image sensor as only a first step to revealing the data hidden behind the black and white matrix. The receiver here is doing something different: Directly altering its own memory using the photocurrents produced by the beamed array of light. And unlike the data behind a QR code, which might point to a simple web address, this optical code could convey the <a href=\"https://spectrum.ieee.org/sparse-ai\" target=\"_blank\">parameters of an AI model</a>. </p><p>The new receiver design, presented last month at the <a href=\"https://www.vlsisymposium.org/\" rel=\"noopener noreferrer\" target=\"_blank\">IEEE/JSAP Symposium on VLSI Technology & Circuits</a>, seeks to reduce the burden of increasing memory demands on AI systems. Shining data down onto processors could lower the energy typically required for data centers, self-driving cars, and even “edge” applications like AI-powered robots, researchers say. </p><p>“People are designing all sorts of different AI chips,” says <a href=\"https://www.linkedin.com/in/jae-sun-seo-21062717/\" rel=\"noopener noreferrer\" target=\"_blank\">Jae-sun Seo</a>, an associate professor of electrical and computer engineering at Cornell Tech, in New York City. These…",
+    "fetched_at": "2026-07-26T17:06:41.256464+00:00"
+  }
+]
