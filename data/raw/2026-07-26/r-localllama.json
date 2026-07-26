@@ -18,5 +18,105 @@
     "published": "2026-07-26T00:30:04+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>For the Big Tech giants, looks like it is leaning heavily in favor of OSS. Even some of the ones who abstained from signing, like AMD, Intel, and Apple are likely on the pro-OSS side. Broadcom, Amazon, and Oracle are maybe the few big ones that might be on the anti side (and of course Anthropic), but are heavily outnumbered/outweighed in Big Tech, overall, at this point.</p> <p>To be fair, OpenAI is probably lying, and also Google it's unclear if lying about being pro OSS (might actually be, but who knows). SpaceX AI and Elon are claiming to be on the pro side, but also could easily be lying.</p> <p>Anyway, still comes out like 70/30 or 80/20 or more on the pro side, probably.</p> <p>But Big Tech isn't the whole game.</p> <p>You've also got the Defense companies and Department of War and the big agencies. Those come out more 50/50? Not sure.</p> <p>And then the big banks and Wall Street. Banks maybe lean against it, overall, and Big Wall Street less clear. Short term against it, but maybe long term they like it?</p> <p>And then the executive and legislative government itself. Probably leans against it so far, but maybe some fairly influential people are giving them advice bringing it back the other way more in favor of OSS. Still probably leaning anti-OSS for now, but maybe not as much as a few weeks ago/couple months ago.</p> <p>So, overall seems like the see saw is teetering at, what, around 50/50 right now? What do you think? Are any of these percentages way off? Any key players I forgot to mention or that would have a big effect one way or the other?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DeepOrangeSky\"> /u/DeepOrangeSky </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6oocn/if_we_include_the_nontech_giants_and_powerful/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6oocn/if_we_include_the_nontech_giants_and_powerful…",
     "fetched_at": "2026-07-26T00:53:50.429435+00:00"
+  },
+  {
+    "id": "555cd3d1846bad57",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Karparthy removed Anthropic from his bio",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6pkji/karparthy_removed_anthropic_from_his_bio/",
+    "published": "2026-07-26T01:12:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6pkji/karparthy_removed_anthropic_from_his_bio/\"> <img alt=\"Karparthy removed Anthropic from his bio\" src=\"https://preview.redd.it/zgrxk8mq5hfh1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=0a167e0822e822b049527d05bccbb59f81b47e30\" title=\"Karparthy removed Anthropic from his bio\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Andrej Karpathy, a prominent advocate for open-source AI and a co-founder of OpenAI, appears to have removed Anthropic from his X bio, suggesting he may have left the company.</p> <p>Karpathy joined Anthropic only a few months ago, making the apparent departure somewhat surprising.</p> <p>This is possibly related to Anthropic’s increasingly strong opposition to open-weight and open-source AI models. Of course, that’s just speculation, but the timing is interesting.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ResearchCrafty1804\"> /u/ResearchCrafty1804 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v6pkji\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6pkji/karparthy_removed_anthropic_from_his_bio/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "598c40e353c3dfe0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "POCKET-35B agentic model on cpu 59 t/s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6zseq/pocket35b_agentic_model_on_cpu_59_ts/",
+    "published": "2026-07-26T10:10:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6zseq/pocket35b_agentic_model_on_cpu_59_ts/\"> <img alt=\"POCKET-35B agentic model on cpu 59 t/s\" src=\"https://preview.redd.it/xbyvic9dtjfh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=743828d48949ee01cd133fffc6f9dd78a3e312cc\" title=\"POCKET-35B agentic model on cpu 59 t/s\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/FINAL-Bench/POCKET-35B-GGUF\">https://huggingface.co/FINAL-Bench/POCKET-35B-GGUF</a></p> <p>A <strong>35B</strong> model that runs on your <strong>PC with no GPU</strong> — and on your phone. Just stock <code>llama.cpp</code>. <strong>No fork</strong>, no CUDA, no cloud.</p> <h1>The POCKET lineup — pick by your device</h1> <table><thead> <tr> <th align=\"left\">Repo</th> <th align=\"left\">File</th> <th align=\"left\">Size</th> <th align=\"left\">Runs on</th> <th align=\"left\">Best for</th> <th align=\"left\">Korean PPL*</th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>POCKET-35B-GGUF</strong></td> <td align=\"left\"><code>Q4_K_M</code></td> <td align=\"left\">21 GB</td> <td align=\"left\">PC / server (32 GB RAM)</td> <td align=\"left\">top quality</td> <td align=\"left\"><strong>5.79</strong></td> </tr> <tr> <td align=\"left\"><strong>POCKET-35B-GGUF</strong></td> <td align=\"left\"><code>Q2_K</code> ⭐</td> <td align=\"left\">13 GB</td> <td align=\"left\">mini-PC, no GPU</td> <td align=\"left\"><strong>daily driver</strong></td> <td align=\"left\">6.49</td> </tr> <tr> <td align=\"left\"><strong>POCKET-35B-GGUF</strong></td> <td align=\"left\"><code>IQ1_M</code></td> <td align=\"left\">8.2 GB</td> <td align=\"left\">16 GB RAM box</td> <td align=\"left\">smallest full model</td> <td align=\"left\">9.69</td> </tr> <tr> <td align=\"left\"><strong>POCKET-KR-GGUF</strong></td> <td align=\"left\"><code>IQ2_M</code></td> <td align=\"left\">5.1 GB</td> <td align=\"left\">Android 8 GB+</td> <td align=\"left\">🇰🇷 Korean phone</td> <td align=\"left\">7.95</td> </tr> <tr> <td align=\"left\"><strong>POCK…",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "8dbe5c329e4586de",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "ai-sage/GigaChat3.1-Audio-10B-A1.8B · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6zksb/aisagegigachat31audio10ba18b_hugging_face/",
+    "published": "2026-07-26T09:59:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6zksb/aisagegigachat31audio10ba18b_hugging_face/\"> <img alt=\"ai-sage/GigaChat3.1-Audio-10B-A1.8B · Hugging Face\" src=\"https://external-preview.redd.it/szDqPyquF34NnfOa0Nf53wiECe5gbQ7yFvH7Ihy93PQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=302095da714867d10694d8708ba0c69b2a20e8b6\" title=\"ai-sage/GigaChat3.1-Audio-10B-A1.8B · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><code>GigaChat Audio 10B</code> is an audio-native LLM built on top of the <a href=\"https://huggingface.co/ai-sage/GigaChat3.1-10B-A1.8B-GGUF\">GigaChat 3.1 Lightning</a> text model. A Conformer speech encoder and a modality adapter feed audio embeddings directly into a Mixture-of-Experts decoder, so the model keeps the text quality of its base while adding speech understanding.</p> <p>Capabilities: audio question answering and classification, temporal grounding (localization in long audio, timestamped event descriptions, audio summarization with timestamps), tool-use, and text-only tasks.</p> <p>The temporal grounding skills are trained on <a href=\"https://huggingface.co/datasets/ai-sage/TimeGround-1M\">TimeGround-1M</a> — a purpose-built dataset of long-form audio paired with time-aligned annotations.</p> <ul> <li><strong>arXiv</strong> : <a href=\"https://arxiv.org/abs/2607.10387\">https://arxiv.org/abs/2607.10387</a></li> <li><strong>Full Paper</strong> : <a href=\"https://arxiv.org/pdf/2607.10387.pdf\">https://arxiv.org/pdf/2607.10387.pdf</a></li> <li><strong>HF Dataset</strong> : <a href=\"https://huggingface.co/datasets/ai-sage/TimeGround-1M\">https://huggingface.co/datasets/ai-sage/TimeGround-1M</a></li> <li><strong>HF Space</strong> : <a href=\"https://huggingface.co/spaces/hugging-apps/gigachat-audio-10b-a1-8b-demo\">https://huggingface.co/spaces/hugging-apps/gigachat-audio-10b-a1-8b-demo</a></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji…",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "9c3b3c837de57338",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Macaron-V1 family, built on Qwen3.6-35B-A3B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v704o2/macaronv1_family_built_on_qwen3635ba3b/",
+    "published": "2026-07-26T10:28:41+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v704o2/macaronv1_family_built_on_qwen3635ba3b/\"> <img alt=\"Macaron-V1 family, built on Qwen3.6-35B-A3B\" src=\"https://external-preview.redd.it/FeQVOaIL_t_7J2_VLLxm89zxKbhLdiqFQB6Dv490ReE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=016308a76b81ffc3f6cd4c6cc784498ba05a5c71\" title=\"Macaron-V1 family, built on Qwen3.6-35B-A3B\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It came out 3 days ago just wondering if anyone's tried it yet?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MundanePercentage674\"> /u/MundanePercentage674 </a> <br /> <span><a href=\"https://huggingface.co/mindlab-research/Macaron-V1-Tall\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v704o2/macaronv1_family_built_on_qwen3635ba3b/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "92d5b3b67beec2f2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Will small model intelligence be limited by parameter count?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6q22t/will_small_model_intelligence_be_limited_by/",
+    "published": "2026-07-26T01:35:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Qwen3.6-27b is fantastic! It makes me wonder if there's a hard ceiling to smaller sized models. Do you guys think the ceiling of intelligence for smaller models will be constrained by factors like parameter count, or VRAM size? Or will we continue to see improvements for small models and see jumps of intelligence like Qwen3 coder 30b to Qwen3.6 27b for the foreseeable future? Does it depend on how clean the dataset you put into those parameters? </p> <p>What does <a href=\"/r/LocalLLama\">/r/LocalLLama</a> think about the future of small models that can run on less than 48GB of VRAM?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sevealin_\"> /u/Sevealin_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6q22t/will_small_model_intelligence_be_limited_by/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6q22t/will_small_model_intelligence_be_limited_by/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "6b91a0fd1f8585a1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM 5.2 and ik_llama.ccp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6uira/glm_52_and_ik_llamaccp/",
+    "published": "2026-07-26T05:18:04+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Running GLM-5.2 (the new glm-dsa arch), Unsloth UD-Q4_K_XL, on a 4-socket Xeon E7-8880 v4 box with 1TB RAM and a single RTX 3060 12GB. ik_llama.cpp, experts on CPU (--cpu-moe), 24 attention layers on the GPU. Works great at 8k context — rock solid, ~3.7 tok/s gen.</p> <p>Problem: the second I raise context (anywhere past ~32–64k), generation crashes on the very first token. Fatal error in llama-sampling.cpp, and the dumped probabilities.txt shows every logit is nan (max = nan, sump = nan). 8k always works, long context always dies.</p> <p>Stuff I've already tried, none of it helped:</p> <p>-dsa on and off</p> <p>-fa off (and on)</p> <p>shrinking -ub all the way down to 32/64</p> <p>-nkvo (KV on CPU)</p> <p>both f16 and q8 KV cache</p> <p>pulled the latest commits with the GLM-DSA indexer fixes (#2075, #2090, #2093)</p> <p>Same all-NaN crash every time. Feels like an f16 overflow somewhere in the DSA/indexer path on the GPU, but I can't flag my way around it. Model's trained for 1M context so I'd really like to actually use it.</p> <p>Is this a known glm-dsa long-context bug? Any workaround to keep it on the GPU, or is CPU-only genuinely the only path right now? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/naunen\"> /u/naunen </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6uira/glm_52_and_ik_llamaccp/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6uira/glm_52_and_ik_llamaccp/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "b70d6db34b0231b3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Any use cases for RTX PRO 4500?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6ul6a/any_use_cases_for_rtx_pro_4500/",
+    "published": "2026-07-26T05:21:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>At its price point, PRO 4500 doesn’t offer as much raw performance due to its lower power draw at 300W. The 5090 can perform up to 60-70% in short spurts with 600W, but can also be undervolted down to 400W. </p> <p>Are there legitimate reasons other than 24/7 usage and lower power draw for this PRO 4500? </p> <p>How would this compare to 4x 3090 and 4x R9700? Granted multi card solutions have inefficiencies with large power consumption and needing dedicated boards and PCIE lanes. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/meikawaii\"> /u/meikawaii </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6ul6a/any_use_cases_for_rtx_pro_4500/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6ul6a/any_use_cases_for_rtx_pro_4500/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "b48367cd0a0dc6f5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "M2 Ultra 64gb vs m1 ultra 128gb",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6s2dh/m2_ultra_64gb_vs_m1_ultra_128gb/",
+    "published": "2026-07-26T03:13:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Trying to weigh if I should buy a $3000 m1 ultra at 128gb when I currently already have an M2 Ultra albeit at 64gb ram. </p> <p>I run small models right now in my workflow but would appreciate more context and try out larger workflows. What would you guys go with?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jaqueh\"> /u/jaqueh </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6s2dh/m2_ultra_64gb_vs_m1_ultra_128gb/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6s2dh/m2_ultra_64gb_vs_m1_ultra_128gb/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "b5e3d8b3c401a1b7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "16 bit better than lower quants for Qwen3.6-27B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6q6z5/16_bit_better_than_lower_quants_for_qwen3627b/",
+    "published": "2026-07-26T01:42:28+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I am writing a fairly complex C++ windows MFC application. I have a few 3090s and can run F16 Qwen3.6-27B with 256K context and MTP. The quality of code is exceptional with this quant vs its lower quants. The others are good but they get stuck in difficult situations like managing design with multiple threads, etc. Not saying F16 is as good as Claude but it gets the job done. Just throwing it out there for folks who may be swayed by tps. If you are making simple web apps, you can get by with lower quants. For high quality of code with edge cases use the 16 bit quants. A bad choice taken by the same LLM at lower quant could easily mean the loss of an afternoon.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TinyFrodo\"> /u/TinyFrodo </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6q6z5/16_bit_better_than_lower_quants_for_qwen3627b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v6q6z5/16_bit_better_than_lower_quants_for_qwen3627b/\">[comments]</a></span>",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
+  },
+  {
+    "id": "5ad30f54f29890d8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Old Coder Needs help with New AI Development and wants to get up to speed to understand it all.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6ks08/old_coder_needs_help_with_new_ai_development_and/",
+    "published": "2026-07-25T21:39:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi Guys, </p> <p>I'm an old coder and DBA that has been in the field for almost 40 years. More and more the jobs I was doing for work are being taken over by AI and the need for my type of work is diminishing over time. I have not coded in about 15 years for work but that said I still work with .NET as I use it in migration packages I use for database migrations and also into Azure Data Factory, also something I am a little lacking in since I know ADF but I was more into SSIS. This all said I am trying to learn AI on my own as I am not working now and desperately in need up updating my skills to help me find more work. </p> <p>I have learned how to code python now as I took a certification tutorial on <a href=\"https://www.coursera.org/\">https://www.coursera.org/</a> until I passed it. I later learned this is useful for AI Developers. I have an AWS server but It is only running a database on it but I could repurpose it if I needed to. For now though trying to do this the el cheapo way since I have kids to feed and I am looking for work daily and have not had any such luck for months now. I am desperate to do what I need to in order to learn this stuff and understand it and be useful. You all are welcome to joke on me all you want but I will do the legwork if someone is helpful enough to guide me through this process of what I need to do. I can use cousera since I have an account for the next year to learn new skills and I have a computer here I am willing to refactor into a Linux server if needed to be my AI system, not a Linux guy so I will probably need to take a course on that as well but I really need to get up to speed since I am not ready to retire yet and I need to feed my family.</p> <p>This all said I know there are some really bright minds out there and people who are learning newer things like AI that they did not teach when I was in school back in the days but will point me in a good direction to get a good foundation and…",
+    "fetched_at": "2026-07-26T11:21:31.701755+00:00"
   }
 ]
