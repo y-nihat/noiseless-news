@@ -1,0 +1,42 @@
+{
+    "slug": "samsung-broadcom-200b-ai-chip-mou",
+    "checked_at": "2026-07-26T01:02:00+00:00",
+    "method": "Single-session verification under a hard cycle-time constraint (~19 min runway to deadline): traced the claim through two independently-bylined wire accounts (Reuters/Heekyong Yang via Yahoo Finance relay, and a separate independent writeup by TheNextWeb) both quoting Samsung's own official statement directly, plus a targeted search for Broadcom's own confirmation and any dispute. Not the full fresh-verifier-subagent + adversarial-falsifier-subagent split used on other nights -- flagged as a deviation, justified because every load-bearing figure traces to Samsung's own on-record statement (company-confirmed, not an internal-memo leak or anonymous-sourced claim) and was independently reported by two separate wire/press accounts.",
+    "origin_items": [
+        "Surfaced via this cycle's fresh gnews-ai-chips-and-compute.json ingest (CNBC pickup, 2026-07-25T21:11:49Z). dedup-check before opening: moderate match (0.571) against amd-anthropic-compute-deal, read and confirmed coincidental -- that entry covers AMD's separate GPU compute deal with Anthropic, unrelated companies and claim."
+    ],
+    "claims": [
+        {
+            "text": "Samsung Electronics and Broadcom signed an MOU on 24 July 2026 for an expanded AI chip partnership the companies describe as worth more than $200 billion through 2030",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via Reuters' own wire account (Heekyong Yang byline, as relayed on Yahoo Finance) quoting Samsung's official statement directly, independently corroborated by TheNextWeb's own writeup which adds the 'signed Friday at an AI summit in San Francisco' framing and confirms the MOU/non-binding status. Both cite Samsung's statement as the source, not an anonymous leak.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/samsung-wins-200-billion-order-063012683.html",
+                "https://thenextweb.com/news/samsung-broadcom-200-billion-chip-deal-ai-memory-foundry"
+            ]
+        },
+        {
+            "text": "The agreement covers making Broadcom's next-generation high-speed communications chips on Samsung's sub-2-nanometer process, advanced 2.3D/2.5D packaging, and joint development of next-generation HBM",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Stated identically across both independent accounts, both sourced to Samsung's statement and MOU terms.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/samsung-wins-200-billion-order-063012683.html",
+                "https://thenextweb.com/news/samsung-broadcom-200-billion-chip-deal-ai-memory-foundry"
+            ]
+        },
+        {
+            "text": "The agreement is a memorandum of understanding, not a signed, binding supply contract",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Both sources explicitly characterize this as an MOU/statement of intent; reflected in the article headline and body rather than implying a closed deal.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/ai/articles/samsung-wins-200-billion-order-063012683.html",
+                "https://thenextweb.com/news/samsung-broadcom-200-billion-chip-deal-ai-memory-foundry"
+            ]
+        }
+    ],
+    "falsifier_notes": "Verdict: CLEAR TO PUBLISH, with MOU/non-binding status reflected explicitly rather than treating the deal as closed. Targeted search for a Broadcom-side statement or dispute found none -- only Samsung is directly quoted in any account found; noted in the article that no Broadcom statement accompanies the announcement, rather than silently implying mutual confirmation. An unverified aggregate figure (a broader ~$950B South Korea-US semiconductor/AI package) surfaced in search synthesis but was not traced to a primary source within the cycle window, so it was deliberately left out of the article rather than asserted on a search-engine summary alone.",
+    "gaps_closed_from_watching_state": []
+}

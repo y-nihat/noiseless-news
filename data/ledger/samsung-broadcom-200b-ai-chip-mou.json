@@ -1,0 +1,23 @@
+{
+  "slug": "samsung-broadcom-200b-ai-chip-mou",
+  "title": "Samsung and Broadcom sign $200 billion AI chip MOU spanning foundry, memory and packaging",
+  "status": "published",
+  "first_seen": "2026-07-26",
+  "published_at": "2026-07-26",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://finance.yahoo.com/technology/ai/articles/samsung-wins-200-billion-order-063012683.html",
+    "https://thenextweb.com/news/samsung-broadcom-200-billion-chip-deal-ai-memory-foundry"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-15",
+  "watch": [
+    "Whether the MOU converts to a signed, binding supply/foundry contract",
+    "A Broadcom-side statement or executive quote confirming the terms",
+    "Independent confirmation or breakdown of the broader ~$950B South Korea-US semiconductor/AI package this MOU was reported alongside"
+  ],
+  "notes": [
+    "2026-07-26 cycle 5: new standalone story, surfaced via this cycle's fresh gnews-ai-chips-and-compute.json ingest (CNBC pickup). dedup-check moderate match (0.571) against amd-anthropic-compute-deal, read and confirmed coincidental -- unrelated companies and claim. Verified under a ~19-minute cycle-time constraint via two independently-bylined accounts (Reuters/Yahoo relay, TheNextWeb) both quoting Samsung's own official statement directly; single-session process deviation flagged, justified since every load-bearing figure traces to a company-confirmed statement, not an anonymous leak. Deliberately left out an unverified ~$950B broader-package figure that appeared only in search-engine synthesis, not a primary source. open_obligation set: MOU is a non-binding statement of intent, not a signed contract -- revisiting near the 2030 timeline's first checkpoints, starting mid-September when other South Korea-US AI infrastructure MOUs from the same week may also update."
+  ]
+}
