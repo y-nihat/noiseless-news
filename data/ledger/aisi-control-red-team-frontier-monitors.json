@@ -1,0 +1,21 @@
+{
+  "slug": "aisi-control-red-team-frontier-monitors",
+  "title": "UK AISI finds vulnerabilities in every internal safety monitor it red-teamed at Anthropic and Google DeepMind",
+  "date": "2026-07-23",
+  "status": "published",
+  "first_seen": "2026-07-26",
+  "published_at": "2026-07-26",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors"
+  ],
+  "follows": null,
+  "watch": [
+    "Any public statement from Anthropic or Google DeepMind on these findings",
+    "Independent reproduction of the evolutionary-search suspicion-score result outside AISI",
+    "AISI follow-up posts naming further labs or monitor architectures tested by the Control Red Team"
+  ],
+  "notes": [
+    "2026-07-26 c3: flagged as a candidate in cycle 1 and cycle 2 sweeps (dated 2026-07-23, at the edge of the 72h window); dedup-check clean in cycle 2. Opened and published in cycle 3 via fresh verifier + adversarial falsifier sub-agents. Falsifier independently re-fetched the primary page and confirmed all six extracted claims verbatim, including resolving a verifier extraction discrepancy over the 'Claude Mythos Preview' sentence (confirmed present). No independent confirmation from Anthropic/DeepMind found; single Tier-0 primary source, which is the policy standard for a research-finding claim type."
+  ]
+}

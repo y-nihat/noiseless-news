@@ -1,0 +1,54 @@
+{
+  "slug": "aisi-control-red-team-frontier-monitors",
+  "checked_at": "2026-07-26T23:56:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts); direct WebFetch of the AISI primary post plus web searches for independent confirmation, novelty check against AISI's Dec 2025 predecessor post, and model-name verification",
+  "origin_items": [
+    "UK AI Security Institute blog (Tier 0 html sweep) — How our new Control Red Team is stress-testing frontier monitors",
+    "Cross-checked for novelty against AISI's Dec 2025 post (Stress-testing asynchronous monitoring of AI coding agents) and for any Anthropic/DeepMind/press response"
+  ],
+  "claims": [
+    {
+      "text": "AISI's Control Red Team has spent over two years evaluating AI misuse safeguards",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim on the Tier-0 primary post; falsifier re-fetched and confirmed the exact wording.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors"]
+    },
+    {
+      "text": "AISI tested the internal control monitors of two frontier AI developers, named as Google DeepMind and Anthropic",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Named verbatim in the primary post. No public statement from either lab confirming or disputing their participation was found, but per policy a research finding is confirmed by the paper/report itself; this is AISI's own primary disclosure.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors"]
+    },
+    {
+      "text": "With DeepMind, AISI tested an asynchronous reasoning monitor and found an attack where an agent could complete a malicious objective by making the harmful action look as though it were following a user instruction",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier re-fetched the live page and confirmed the attack description verbatim.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors"]
+    },
+    {
+      "text": "With Anthropic, AISI tested successive versions of a synchronous agentic coding monitor and found vulnerabilities in every version tested",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed verbatim on re-fetch.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors"]
+    },
+    {
+      "text": "Using an evolutionary search technique with Claude Sonnet 4.6 as both proposer and monitor, across three runs of 150,000 queries each, AISI drove the monitor's minimum suspicion score to 3 out of 100 in under 5,000 steps in one run, versus best-of-N baseline scores of 14, 15 and 18",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "All figures confirmed verbatim by both verifier and falsifier on independent fetches. Falsifier confirmed 'Claude Sonnet 4.6' is a real, previously-released Anthropic model (Feb 2026), ruling out a fabricated/mistaken model name. Falsifier also confirmed this is a distinct study from AISI's Dec 2025 post (different models, metric, and methodology), not a rehash.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors"]
+    },
+    {
+      "text": "AISI says its best attacks also informed Anthropic's own testing of Claude Mythos Preview",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Verifier's first extraction flagged this sentence but a second pass missed it, so verification was inconclusive pending falsifier review. Falsifier independently re-fetched the live page and confirmed the exact quote ('Our best attacks ultimately informed Anthropic's testing of Claude Mythos Preview') is present. Falsifier also confirmed Claude Mythos Preview is a real, separately-announced Anthropic model (AISI's own prior cybersecurity evaluation post, and Anthropic's red.anthropic.com writeup, both reference it), so the claim is internally consistent with known model history.",
+      "evidence": ["https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors"]
+    }
+  ],
+  "adversarial_notes": "Falsifier re-fetched the primary page independently and confirmed all six claims verbatim, with no softening required. No public response or dispute found from Anthropic or Google DeepMind. A secondary curator site (resultsense.com) appears to corroborate the findings via search snippet but returned HTTP 403 on direct fetch and was not used as evidence. No prompt injection detected on the primary page (only unrelated human-directed hiring copy). Residual-substance test passes: the post contains specific, falsifiable numbers (3/100 vs 14/15/18, 5k steps, 150k queries, named labs and monitor types), not vague process-writing."
+}
