@@ -138,5 +138,135 @@
     "published": "2026-07-27T12:00:25+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v7ybwy/xyzailabxyzaquilamini_hugging_face/\"> <img alt=\"XYZAILab/XYZ-Aquila-mini · Hugging Face\" src=\"https://external-preview.redd.it/ptnfv6sJjfV1YxO2loWSDiYyCKR7rJkEYe47I1v1H8Q.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3a979bb00dc3a54f3fd86ee813bb117172d84b04\" title=\"XYZAILab/XYZ-Aquila-mini · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>XYZ-Aquila</strong> is a family of open-weight Deep Search agents developed by <a href=\"https://xyz-lab.ai/\">XYZ AI Lab</a>. XYZ-Aquila-mini is post-trained from <a href=\"https://huggingface.co/Qwen/Qwen3.6-35B-A3B\"><strong>Qwen3.6-35B-A3B</strong></a> through a bounded-exploration <strong>AI4AI</strong> pipeline: humans define the target capability, development evidence, constraints, risk boundaries, and acceptance policy, while AI agents diagnose failures and propose scoped interventions across data, post-training, runtime, context management, tools, evaluation, and infrastructure.</p> <p>The released checkpoint is a <strong>thinking model</strong> with Qwen-compatible reasoning and tool-call formats. It is optimized for agentic search, including long-horizon planning, English and Chinese web browsing, multi-source evidence aggregation, source verification, and recovery from failed environment interactions. The open-source <a href=\"https://github.com/XYZ-AI-Lab/AxisAgentic\">AxisAgentic harness</a> provides the concrete <code>search</code> / <code>scrape</code> / <code>python</code> tool implementations, fixed tool contract, replayable context management, and benchmark evaluation workflow; these capabilities are supplied by the surrounding harness rather than by the checkpoint alone.</p> <p><strong>Additional Model</strong>:</p> <ul> <li><a href=\"https://huggingface.co/XYZAILab/XYZ-Aquila-pro\">https://huggingface.co/XYZAILab/XYZ-Aquila-pro</a> (397B. Based on Qwen3.5-397B-A17B)</li> </ul> </div><!-- SC_ON --> &#32; submitted…",
     "fetched_at": "2026-07-27T12:56:19.752300+00:00"
+  },
+  {
+    "id": "1fe301a11044b6af",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Kimi K3 weights now released.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8364f/kimi_k3_weights_now_released/",
+    "published": "2026-07-27T15:11:07+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8364f/kimi_k3_weights_now_released/\"> <img alt=\"Kimi K3 weights now released.\" src=\"https://preview.redd.it/nlw2mqk9gsfh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=45fcb7df195400c006c65e9cde0c40c5436c40c6\" title=\"Kimi K3 weights now released.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Kimi K3 weights are finally released! </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SavunOski\"> /u/SavunOski </a> <br /> <span><a href=\"https://i.redd.it/nlw2mqk9gsfh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8364f/kimi_k3_weights_now_released/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "ba5e95659898bb3e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Kimi K3 weights drop today. We're deploying on A100s, H200s and B300s this week and the A100 math is already rough",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v81qw0/kimi_k3_weights_drop_today_were_deploying_on/",
+    "published": "2026-07-27T14:18:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>tldr; we are going to host K3 on A100s (yes, thats correct, we'll try to see if it holds up), H200s &amp; B300s - expect results for A100s &amp; H200s this week while we setup the B300 cluster this weekend &amp; maybe results by next week.</p> <p>Weights are supposed to hit Hugging Face today (Moonshot committed to July 27). What we already know from their platform docs: 2.8t total Params, MoE with 896 experts and 16 active per token, 1M context, vision. The download should be around 1.4 tb since they did quantization-aware training in MXFP4. We sat down and worked through the memory requirements., so here it is since everyone is probably about to pull the weights</p> <p>We have A100 80GB, H200 and B300 capacity and the plan was to bring it up on all three. Then we actually did the memory math.</p> <p>8x A100 gives you 640 GB. The weights are around 1.4 TB. That means three nodes before you've even allocated KV cache. On top of that Ampere has no FP4 or even FP8 tensor cores, so you're either dequantizing or running INT4 kernels that were never the target for this release. <strong>We're still going to benchmark it because someone should have real numbers</strong>, but we're expecting it to be ugly!</p> <p>8x H200 is about 1.13TB, so it still doesn't fit in one node. Two node setup minimum and you eat interconnect cost on every token.</p> <p>8x B300 is ~2.3TB, so that's the only config where the whole thing fits in a single node with room for long context KV cache. And Blackwell has native FP4, which is pretty clearly what Moonshot quantized for. these B300s are coming live this weekend, and we'll be setting up the clusters this weekend everyone preecommitting hardware is doing it without knowing the terms. And Moonshot's own model crd is unusually honest about weaknesses: quality drops if your agent harness truncates its thinking history, it tends to act instead of asking when things are ambiguous, and they admit the chat experience…",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "75f01f0125a3920a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "KIMI K3’s WEIGHTS ARE OUT!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v834tu/kimi_k3s_weights_are_out/",
+    "published": "2026-07-27T15:09:51+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v834tu/kimi_k3s_weights_are_out/\"> <img alt=\"KIMI K3’s WEIGHTS ARE OUT!\" src=\"https://external-preview.redd.it/tqrGq8OpM96DAwRhHL39J0kk5k0hcVVhKEppExYOH8M.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=628a34c1466f402204a0b9ce125951815212a6bb\" title=\"KIMI K3’s WEIGHTS ARE OUT!\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BritishDudeGuy\"> /u/BritishDudeGuy </a> <br /> <span><a href=\"https://huggingface.co/moonshotai/Kimi-K3\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v834tu/kimi_k3s_weights_are_out/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "ac68e019007f405c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Nvidia CEO Jensen Huang defends Open Source AI by saying distillation is fundamental to learning",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v81nqt/nvidia_ceo_jensen_huang_defends_open_source_ai_by/",
+    "published": "2026-07-27T14:15:27+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v81nqt/nvidia_ceo_jensen_huang_defends_open_source_ai_by/\"> <img alt=\"Nvidia CEO Jensen Huang defends Open Source AI by saying distillation is fundamental to learning\" src=\"https://external-preview.redd.it/eGltNTRtdDc2c2ZoMQIYEkPdiwR3DAn4F89Jzs2o4b1KYn8yuOtOh2EpcD87.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=7a877cd425836234893b5c987d37dbe50924d571\" title=\"Nvidia CEO Jensen Huang defends Open Source AI by saying distillation is fundamental to learning\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Nvidia CEO Jensen Huang “Distillation - learning from AI, learning from other people, and learning from other sources of knowledge, is fundamental to intelligence. We are constantly learning from one another. AI also has to learn from something.”</p> <p>Since using <a href=\"https://apps.apple.com/us/app/ai-desktop-98/id6761027867\">AI Desktop 98</a>, I have become a staunch advocate of local AI.</p> <p>In his Axios interview, Jensen explains why seeing distillation as theft or a threat misses the point—and why the real future of AI depends on continuous knowledge sharing between models.</p> <p>The idea is simple: as AI generates most of the internet’s content, systems will naturally learn from one another, much like humans do from books, teachers, and peers. Blocking that exchange doesn’t protect anyone; it only slows progress.</p> <p>Smarter AI is safer AI, open models boost adoption, and the whole industry, from developers to chipmakers gains. It’s a clear, grounded case for why open and closed models feeding each other is a feature, not a flaw.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ImaginaryRea1ity\"> /u/ImaginaryRea1ity </a> <br /> <span><a href=\"https://v.redd.it/mo6md7t76sfh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v81nqt/nvidia_ceo_jensen_huang_defends_open_source_ai_by/\">[comments]</a></span…",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "d7d335cfd2f366fd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Here it is boys, The Kimi K3 2.8T",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v834tl/here_it_is_boys_the_kimi_k3_28t/",
+    "published": "2026-07-27T15:09:50+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v834tl/here_it_is_boys_the_kimi_k3_28t/\"> <img alt=\"Here it is boys, The Kimi K3 2.8T\" src=\"https://external-preview.redd.it/tqrGq8OpM96DAwRhHL39J0kk5k0hcVVhKEppExYOH8M.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=628a34c1466f402204a0b9ce125951815212a6bb\" title=\"Here it is boys, The Kimi K3 2.8T\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>The Fable dabler. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Altruistic_Heat_9531\"> /u/Altruistic_Heat_9531 </a> <br /> <span><a href=\"https://huggingface.co/moonshotai/Kimi-K3\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v834tl/here_it_is_boys_the_kimi_k3_28t/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "98a60e153ee22943",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AI labs are about to have a blast of a day. (Composer v3 coming soon lmfao)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v843yk/ai_labs_are_about_to_have_a_blast_of_a_day/",
+    "published": "2026-07-27T15:45:20+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v843yk/ai_labs_are_about_to_have_a_blast_of_a_day/\"> <img alt=\"AI labs are about to have a blast of a day. (Composer v3 coming soon lmfao)\" src=\"https://preview.redd.it/wsmogrh5msfh1.png?width=140&amp;height=23&amp;auto=webp&amp;s=0bfe6f35e6b91cb64129ab3443f5f9656a7e23b1\" title=\"AI labs are about to have a blast of a day. (Composer v3 coming soon lmfao)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/wsmogrh5msfh1.png?width=530&amp;format=png&amp;auto=webp&amp;s=c8359bcbaa83acb573cad819fcfbb27029425ba3\">https://preview.redd.it/wsmogrh5msfh1.png?width=530&amp;format=png&amp;auto=webp&amp;s=c8359bcbaa83acb573cad819fcfbb27029425ba3</a></p> <p>2.85k downloads. my god its only been an hour. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ninjam5\"> /u/Ninjam5 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v843yk/ai_labs_are_about_to_have_a_blast_of_a_day/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v843yk/ai_labs_are_about_to_have_a_blast_of_a_day/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "fb498a8025bdace5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "NYT: Protect America’s lead in the A.I. race.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v81guk/nyt_protect_americas_lead_in_the_ai_race/",
+    "published": "2026-07-27T14:08:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>“China is working hard to catch up, and the United States should take steps to keep its advantage. Most important, it should continue to prohibit American companies from selling the most advanced chips and equipment to China.”</p> <p>— The editorial board</p> <p>Ridiculous piece from the Times on blaming Trump for China's recent AI breakthroughs and basically saying &quot;China bad, America good&quot;. (I abhor Trump and everything he stands for, but it seems the Times is showing their hand as an America-First institution).<br /> They also might be writing this in hopes that OpenAI and Anthropic win so they can squeeze as much money out of them for copyright lawsuits.</p> <p>source: <a href=\"https://www.nytimes.com/2026/07/27/opinion/chips-ai-china-trump.html\">https://www.nytimes.com/2026/07/27/opinion/chips-ai-china-trump.html</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Cheifreef12\"> /u/Cheifreef12 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v81guk/nyt_protect_americas_lead_in_the_ai_race/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v81guk/nyt_protect_americas_lead_in_the_ai_race/\">[comments]</a></span>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "f02b49d679647336",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Where is KIMI-K3 - countdown finished",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v82z7x/where_is_kimik3_countdown_finished/",
+    "published": "2026-07-27T15:04:06+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v82z7x/where_is_kimik3_countdown_finished/\"> <img alt=\"Where is KIMI-K3 - countdown finished\" src=\"https://preview.redd.it/8br6fg5tesfh1.png?width=140&amp;height=52&amp;auto=webp&amp;s=6e1ce360a8ad17f1479a1445a2feae01946d6cec\" title=\"Where is KIMI-K3 - countdown finished\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/8br6fg5tesfh1.png?width=5120&amp;format=png&amp;auto=webp&amp;s=ddadbb985aedbdb78e69c6adba91e20e76165ab6\">Where is KIMI-K3</a></p> <p>Where is KIMI-K3?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mossy_troll_84\"> /u/mossy_troll_84 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v82z7x/where_is_kimik3_countdown_finished/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v82z7x/where_is_kimik3_countdown_finished/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "c0457b148af7000c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ling-3.0-flash weights: SGLang says day-0, vLLM says when they land, llama.cpp closed the 2.6 request as not_planned",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v85hnf/ling30flash_weights_sglang_says_day0_vllm_says/",
+    "published": "2026-07-27T16:33:49+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Some Ling-3.0-flash threads here last week ended on the same two questions with no real answer, so I went through the repos. State as of writing, with links so you can check instead of taking my word for it.</p> <p>SGLang publicly committed to day-0 support. Their post on the 23rd says they're working with the Ant team on it, and it describes the model as KDA + MLA hybrid attention.</p> <p><a href=\"https://x.com/sgl_project/status/2080372971219415458\">https://x.com/sgl_project/status/2080372971219415458</a></p> <p>vLLM said the quiet part out loud. Their support is &quot;coming soon and will be available when the model weights are open-sourced&quot;, and they spent four paragraphs endorsing announce-first-open-weights-later as a release pattern they want other vendors to copy.</p> <p><a href=\"https://x.com/vllm_project/status/2080702006378082384\">https://x.com/vllm_project/status/2080702006378082384</a></p> <p>Neither of those is a date. There's no Ling-3.0-flash model card on hugging face as of writing, no license statement for this generation, and I couldn't find an open PR mentioning it in either vllm or sglang.</p> <p>The part nobody in either thread brought up is the gguf side, and it's in worse shape than the weights side.</p> <p>llama.cpp does not support the Bailing MoE variant this family moved to. The feature request for Ling-2.6-flash (BailingMoeV2_5) is <a href=\"https://github.com/ggml-org/llama.cpp/issues/22641\">https://github.com/ggml-org/llama.cpp/issues/22641</a> — opened May 3, seven upvotes, no implementation, went stale, closed as not_planned on June 18. The earlier &quot;Add support for Ling v2&quot; PR <a href=\"https://github.com/ggml-org/llama.cpp/pull/16028\">https://github.com/ggml-org/llama.cpp/pull/16028</a> sat open for almost three months and got closed without merging. Only the original BailingMoE from March 2025 ever landed, and a llama.cpp maintainer wrote that one, not anyone from the lab.</p> <p>Here'…",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "cf7ee31b889f2793",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[Model] Add support for Nanbeige4.2 by zqlcode · Pull Request #25994 · ggml-org/llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8426q/model_add_support_for_nanbeige42_by_zqlcode_pull/",
+    "published": "2026-07-27T15:43:25+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8426q/model_add_support_for_nanbeige42_by_zqlcode_pull/\"> <img alt=\"[Model] Add support for Nanbeige4.2 by zqlcode · Pull Request #25994 · ggml-org/llama.cpp\" src=\"https://external-preview.redd.it/TP0DCX2tP3DZOJoumkrUwBacCeewzgamepCExBsguCw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=e42f0eb3c840735b81043dbc2c2664bfa368ba21\" title=\"[Model] Add support for Nanbeige4.2 by zqlcode · Pull Request #25994 · ggml-org/llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>Model</strong> : <a href=\"https://huggingface.co/Nanbeige/Nanbeige4.2-3B\">https://huggingface.co/Nanbeige/Nanbeige4.2-3B</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/25994\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8426q/model_add_support_for_nanbeige42_by_zqlcode_pull/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "83fd5c8968071bbd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Viable ways to run K3 locally",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v866sg/viable_ways_to_run_k3_locally/",
+    "published": "2026-07-27T16:58:47+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>just curious how would people run it cheap if they really want kimi k3.</p> <ol> <li><p>dgx spark / strix halo clusters</p></li> <li><p>optane persistent memory platform + some gpus</p></li> <li><p>mac studio clusters</p></li> <li><p>orange pi 6 clusters</p></li> <li><p>ssd streaming + gpus</p></li> <li><p>multiple ddr3 + connectx 5 rdma clients</p></li> <li><p>two dgx stations</p></li> <li><p>power 10 systems?</p></li> <li><p>other</p></li> </ol> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ylchao\"> /u/ylchao </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v866sg/viable_ways_to_run_k3_locally/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v866sg/viable_ways_to_run_k3_locally/\">[comments]</a></span>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "8564d1112ed86553",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ornith-397B running at Q4 on a single RTX PRO 6000 Blackwell 96GB - 2,354 tok/s prefill, ~20–24 tok/s decode",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v818gf/ornith397b_running_at_q4_on_a_single_rtx_pro_6000/",
+    "published": "2026-07-27T13:59:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been building <strong>Krasis</strong>, an MoE-focused runtime for streaming big models through limited VRAM on NVIDIA consumer/workstation GPUs, and I think this is the most interesting result so far: <strong>Ornith-1.0-397B running interactively on one GPU.</strong></p> <p><strong>Hardware:</strong> </p> <p>1× RTX PRO 6000 Blackwell 96GB + AMD EPYC 7742 (64c although the CPU isn't really relevant to the run) with enough DDR4 system RAM to hold the model in RAM at Q4. </p> <p>The model obviously doesn't fit in 96GB, Krasis keeps experts in CPU RAM and dynamically manages which ones stay resident in VRAM (~43% of routed experts resident for this run). Peak process RAM was ~202GB, so you need beyond that amount in order to run it but 256GB ram is doable with a consumer DDR5 motherboard.</p> <p><strong>Measured numbers (INT4 experts, HQQ4 attention, 4-bit KV):</strong></p> <ul> <li><strong>1,346.3 tok/s</strong> prefill at 10,000 tokens: <strong>7.43 seconds</strong></li> <li><strong>2,354.5 tok/s</strong> prefill at 39,920 tokens: <strong>16.95 seconds</strong></li> <li><strong>23.58 tok/s</strong> decode over 50 tokens</li> <li><strong>21.85 tok/s</strong> decode over 100 tokens</li> <li><strong>20.40 tok/s</strong> decode sustained over 250 tokens</li> <li><strong>25.73 tok/s over 50 tokens (+9.1%)</strong> using Krasis Adaptive Cold Mass Pruning, which skipped low-ranked, non-resident expert routes while omitting just ~1.8% of routed probability mass on average during the measured run.</li> </ul> <p>The same runtime also runs smaller MoEs much faster when everything fits in system RAM (e.g. 35B-class models at ~117 tok/s decode on a 5090), and Ornith-397B even runs on a single RTX 5090 32GB at ~7.9 tok/s decode if you're patient.</p> <p><a href=\"https://github.com/brontoguana/krasis/tree/main\">Github repo</a> </p> <p><a href=\"https://github.com/brontoguana/krasis/blob/main/STATS-BENCHMARKS.md\">Speed benchmarks</a> </p> <p><a h…",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "258ac8e16de9cf71",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AMD AI PRO R9700 users, how's the performance lately?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v837j3/amd_ai_pro_r9700_users_hows_the_performance_lately/",
+    "published": "2026-07-27T15:12:31+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Just curious how these budget cards are working out? Initially they were lack luster but I expect that improvements in the software stack might make them more viable now. I am very interested to hear how 4x + are performing because that puts you into DS4 flash territory. </p> <p>Looking for some big PP (hehe) and TG numbers.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fragment_me\"> /u/fragment_me </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v837j3/amd_ai_pro_r9700_users_hows_the_performance_lately/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v837j3/amd_ai_pro_r9700_users_hows_the_performance_lately/\">[comments]</a></span>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
   }
 ]

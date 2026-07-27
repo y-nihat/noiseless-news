@@ -1,0 +1,32 @@
+[
+  {
+    "id": "7ee06c5a02efd958",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Beyond RAG: Task-aware knowledge compression for enterprise AI on AWS",
+    "url": "https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/",
+    "published": "2026-07-27T16:11:32+00:00",
+    "summary": "Traditional RAG hits a ceiling on analytical tasks that span hundreds of documents. This post shows how to use task-aware knowledge compression (TAKC) on AWS to pre-compress entire knowledge bases into task-specific representations, cache them at multiple fidelity tiers, and route each query to the right tier, with an open-source implementation you can deploy.",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "ca5f35e343786704",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Deepgram enhances Amazon SageMaker AI support with AWS IAM Temporary Delegation",
+    "url": "https://aws.amazon.com/blogs/machine-learning/deepgram-enhances-amazon-sagemaker-ai-support-with-aws-iam-temporary-delegation/",
+    "published": "2026-07-27T16:07:44+00:00",
+    "summary": "In this post, we cover why Deepgram built on IAM temporary delegation, how the integration works end-to-end, and what it unlocks for customers running Deepgram speech models on SageMaker AI. With this integration, Deepgram has reduced the time for initial investigation on a SageMaker AI support ticket from days to minutes.",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "b31bbdc7e4839560",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How Guardoc transforms medical document processing with Amazon Nova models",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-guardoc-transforms-medical-document-processing-with-amazon-nova-models/",
+    "published": "2026-07-27T16:05:00+00:00",
+    "summary": "In this post, we explore how Guardoc Health uses the Amazon Nova family of models, available through Amazon Bedrock, to transform clinical documentation in long-term care.",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  }
+]

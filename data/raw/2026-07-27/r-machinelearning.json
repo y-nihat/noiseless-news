@@ -8,5 +8,25 @@
     "published": "2026-07-27T02:38:26+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi all,</p> <p>I recently made an end to end ML platform that eases the pain of going from raw sensor data to a deployed model on an MCU. I wanted to get some feedback from those of you who are interested in the tinyML space on anything I can improve, I intend on keeping it free and open sourced so others can contribute to the development if they would like. One main thing that I tried to add was an auto-labeling tool, as for time series sensor data it is very difficult to manually label data, so my goal was to create an auto-labeler that could streamline that process. It works fairly well as of right now, but I definitely could make some improvements. I also added in a chatbot that can analyze your signal data directly and give you insights.</p> <p>Let me know what you think and if there is any improvements that can be made, hopefully this can help some of the people that are working on edge projects!</p> <p><a href=\"https://sensorforge.dev/app\">https://sensorforge.dev/app</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/No-Bug-4879\"> /u/No-Bug-4879 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v7nudc/recent_project_i_worked_on_end_to_end_edge_ml/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v7nudc/recent_project_i_worked_on_end_to_end_edge_ml/\">[comments]</a></span>",
     "fetched_at": "2026-07-27T12:56:19.752300+00:00"
+  },
+  {
+    "id": "164d59b925c3a497",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Made a small model that extracts text from a white background [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v811sc/made_a_small_model_that_extracts_text_from_a/",
+    "published": "2026-07-27T13:52:41+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello,</p> <p>I read a paper on a model named DONUT that extracts text from documents, which became my inspiration for this little project. Initially I wanted to make a model that extracts items bought from receipts, but in the process of trying to pinpoint some problems, I dropped that objective for a much simpler one. I will like to hear some of your thoughts on it, thank you!</p> <p>GitHub: <a href=\"https://github.com/ZeroMeOut/VQVAET5\">https://github.com/ZeroMeOut/VQVAET5</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ZeroMe0ut\"> /u/ZeroMe0ut </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v811sc/made_a_small_model_that_extracts_text_from_a/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v811sc/made_a_small_model_that_extracts_text_from_a/\">[comments]</a></span>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "cb0e1d450e38152c",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Built & Trained a Transformer from Scratch in Pure PyTorch for English-to-Tamil Machine Translation [Math + Code Breakdown] [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v86qo9/built_trained_a_transformer_from_scratch_in_pure/",
+    "published": "2026-07-27T17:17:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone! 👋</p> <p>I built and trained the complete <strong>Transformer architecture from scratch</strong> using pure PyTorch (`torch.nn` primitives) based on the original &quot;<strong>Attention Is All You Need</strong>&quot; paper.</p> <p>I trained the model on an <strong>English-to-Tamil</strong> parallel translation dataset (`<a href=\"https://huggingface.co/datasets/gopi30/english-tamil\">gopi30/english-tamil</a>` on Hugging Face) using dual NVIDIA T4 GPUs on Kaggle. </p> <p>I wrote a detailed mathematical breakdown and step-by-step tutorial covering every equation, tensor shape transformation, and PyTorch block.</p> <p><strong>Full Blog Post</strong>: <a href=\"https://imrancoder786.github.io/blog-post.html?post=transformer-from-scratch\">https://imrancoder786.github.io/blog-post.html?post=transformer-from-scratch</a></p> <p>GitHub Repository:</p> <p><a href=\"https://github.com/imrancoder786/ML_FROM_SCRATCH/tree/main/Transformer_from_scratch\">https://github.com/imrancoder786/ML_FROM_SCRATCH/tree/main/Transformer_from_scratch</a></p> <p>I’d love to hear your feedback, suggestions, or any questions on the code/math!</p> <p>I’d love to hear your feedback, suggestions, or any questions on the code/math!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/imrancoder\"> /u/imrancoder </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v86qo9/built_trained_a_transformer_from_scratch_in_pure/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v86qo9/built_trained_a_transformer_from_scratch_in_pure/\">[comments]</a></span>",
+    "fetched_at": "2026-07-27T17:45:42.034996+00:00"
   }
 ]
