@@ -1,0 +1,25 @@
+{
+  "slug": "sakana-fugu-cyber-release",
+  "title": "Sakana AI releases Fugu-Cyber, a cyber-defense orchestration model",
+  "date": "2026-07-21",
+  "status": "published",
+  "first_seen": "2026-07-26",
+  "published_at": "2026-07-27",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://sakana.ai/fugu-cyber-release/",
+    "https://www.marktechpost.com/2026/07/25/sakana-ai-releases-fugu-cyber-orchestration-model-cybergym-cti-realm/",
+    "https://www.techtimes.com/articles/321267/20260722/sakana-ai-fugu-cyber-claims-869-vulnerability-score-benchmark-methodology-not-disclosed.htm"
+  ],
+  "follows": null,
+  "watch": [
+    "Any independent reproduction of the CyberGym/CTI-REALM figures, or Fugu-Cyber appearing on CyberGym's own leaderboard",
+    "Sakana disclosing evaluation methodology (trial count, scaffold) for the benchmark figures",
+    "Any Sakana response to the Tech Times methodology critique"
+  ],
+  "notes": [
+    "2026-07-26 c2: flagged as a candidate, dedup-check clean (no matches).",
+    "2026-07-26 c3: verifier sub-agent found announcement confirmed but benchmark figures self-reported, absent from CyberGym leaderboard, and a TechTimes skepticism piece (403 on direct fetch). Deferred to cycle 4 to complete falsification without rushing before the cutoff.",
+    "2026-07-27 c4: adversarial falsifier independently re-fetched the Sakana release page (confirmed live/unchanged), recovered TechTimes' critique via search-index content (CTI-REALM metric mischaracterization: a 0-1 trajectory-reward score presented as a success rate), and independently corroborated CyberGym's own ICLR 2026 paper ceiling (~18-20% for top model/scaffold combos, arXiv 2506.02548) against Fugu-Cyber's self-reported 86.9%. Live-checked llm-stats.com's CyberGym leaderboard today: no Fugu-Cyber entry. Published: announcement confirmed (Tier-0), benchmark figures labeled vendor-claim, independent skepticism and academic ceiling stated as confirmed facts about what others found/published, not as endorsement of either number."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "nvidia-openai-250b-guarantee",
+  "title": "Reports of a Nvidia financing guarantee for an OpenAI data-center project",
+  "status": "watching",
+  "first_seen": "2026-07-27",
+  "source_urls": [
+    "https://www.investing.com/news/stock-market-news/nvidia-in-talks-to-provide-250-bln-guarantee-for-openai-data-center-project--wsj-4812928",
+    "https://finance.yahoo.com/technology/ai/articles/nvidia-talks-openai-guarantee-250-233930971.html"
+  ],
+  "follows": null,
+  "reason": "Wall Street Journal exclusive (2026-07-26), citing unnamed 'people familiar with the matter': Nvidia is reportedly in talks to guarantee roughly $250B in financing to help OpenAI lease a ~10GW Ohio data-center project developed by a SoftBank energy subsidiary; a separately-cited $500B 'total scale' figure traces to prior public remarks by SoftBank's Masayoshi Son, not to this WSJ report. Every other outlet found (Yahoo Finance, Korea Times, MarketScreener, GuruFocus, biggo.com, the original Google News lead) is a relay of the same WSJ story, not independent reporting - fails the ≥2-independent-source bar for a business/financial claim outright. WSJ itself frames it as unfinalized talks that could fall apart. No comment from Nvidia, OpenAI, or SoftBank; Reuters says it could not independently verify the report.",
+  "watch": [
+    "A second genuinely independent Tier ≤2 outlet (Bloomberg, The Information, FT, Reuters) reporting the same guarantee with its own sourcing",
+    "An on-record statement or filing from Nvidia, OpenAI, or SoftBank confirming or denying terms",
+    "Deal signing or collapse of the talks"
+  ],
+  "notes": [
+    "2026-07-27 c4: surfaced via Techmeme (c3) and a same-story Google News/biggo.com lead (c4 fresh ingest). Verifier traced the whole wave to a single WSJ exclusive - one source, not multi-source-independent. Held per the independence rule, not published."
+  ]
+}

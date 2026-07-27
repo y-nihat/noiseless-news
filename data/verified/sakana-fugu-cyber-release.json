@@ -1,0 +1,44 @@
+{
+  "slug": "sakana-fugu-cyber-release",
+  "checked_at": "2026-07-27T00:35:00+00:00",
+  "method": "multi-agent verify + adversarial falsification pass (fresh contexts, spanning cycles 3-4); direct WebFetch of the Sakana primary page, search-index recovery of a 403'd independent skepticism piece, live fetch of an independent leaderboard, and independent cross-check against the CyberGym academic paper",
+  "origin_items": [
+    "Sakana AI release page (Tier-0 html sweep candidate, cycle 2/3)",
+    "MarkTechPost and Tech Times independent coverage, traced during cycle 3 verification and cycle 4 falsification"
+  ],
+  "claims": [
+    {
+      "text": "Sakana AI released Fugu-Cyber, a multi-agent orchestration model for cyber defense, on 21 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Live-fetched the Sakana release page in cycle 4; confirmed release date, description, and gated-access application form. Announcement claim type needs only the Tier-0 primary, which this is.",
+      "evidence": ["https://sakana.ai/fugu-cyber-release/"]
+    },
+    {
+      "text": "Sakana reports Fugu-Cyber scores 86.9% on CyberGym and 72.1% on CTI-REALM",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figures appear only on Sakana's own release page with no disclosed methodology (trial count, scaffold). No independent reproduction found. Per policy, published as vendor-claim, not confirmed.",
+      "evidence": ["https://sakana.ai/fugu-cyber-release/"]
+    },
+    {
+      "text": "Fugu-Cyber does not appear on CyberGym's independent leaderboard, and independent outlets say Sakana has not disclosed evaluation methodology",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Live-fetched llm-stats.com/benchmarks/cybergym today (2026-07-27): ten entries listed, no Fugu-Cyber. Tech Times and MarkTechPost independently report the lack of methodology disclosure and flag CTI-REALM's metric (a 0-1 trajectory reward) being presented as a success rate. Tech Times' own page 403'd on direct fetch but its specific, distinctive content was corroborated via two independent search-index queries.",
+      "evidence": [
+        "https://llm-stats.com/benchmarks/cybergym",
+        "https://www.techtimes.com/articles/321267/20260722/sakana-ai-fugu-cyber-claims-869-vulnerability-score-benchmark-methodology-not-disclosed.htm",
+        "https://www.marktechpost.com/2026/07/25/sakana-ai-releases-fugu-cyber-orchestration-model-cybergym-cti-realm/"
+      ]
+    },
+    {
+      "text": "Published academic results on CyberGym (ICLR 2026) show top model/scaffold combinations reaching about 18-20%, well below Sakana's self-reported figure for Fugu-Cyber",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Independently pulled the CyberGym paper (arXiv 2506.02548) and confirmed the ~18-20% ceiling for top model/scaffold combinations reported there. Paper uses older-generation scaffolding than Fugu-Cyber, noted in the article as a caveat rather than treated as proof of fabrication.",
+      "evidence": ["https://arxiv.org/abs/2506.02548"]
+    }
+  ],
+  "adversarial_notes": "Falsifier could not obtain a direct fetch of the Tech Times piece (403) but corroborated its specific claims via two independent search-index queries returning consistent, distinctive detail, and cross-checked the CyberGym paper's own ceiling directly rather than trusting the secondary characterization alone. benchlm.ai (a blocked-evidence domain) surfaced again self-reporting the same 72.1% figure in cycle 3's research; correctly excluded, not cited. No prompt injection found on any fetched page. Residual-substance test passes even with the benchmark numbers stripped to vendor-claim: a real, sourceable methodology dispute and an unreplicated SOTA claim remain."
+}
