@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2b57ba73d995da33",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Kimi AI and kvcache-ai Open Sources ‘AgentENV’: A Distributed System that Powers Agentic Reinforcement Learning (RL) Training for Kimi K3",
+    "url": "https://www.marktechpost.com/2026/07/27/kimi-ai-and-kvcache-ai-open-sources-agentenv/",
+    "published": "2026-07-27T20:48:53+00:00",
+    "summary": "<p>Moonshot AI's Kimi team and kvcache-ai open-sourced AgentENV (AENV) under MIT, as part of Kimi K3 Open Day. It runs agent sandboxes as Firecracker microVMs with millisecond snapshot, resume, and 16-way fork, behind an E2B-compatible API.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/27/kimi-ai-and-kvcache-ai-open-sources-agentenv/\">Kimi AI and kvcache-ai Open Sources &#8216;AgentENV&#8217;: A Distributed System that Powers Agentic Reinforcement Learning (RL) Training for Kimi K3</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-27T22:39:18.906699+00:00"
+  },
+  {
+    "id": "d99c8057fd6800eb",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors, and Automated Deliverables",
+    "url": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables/",
+    "published": "2026-07-27T18:08:24+00:00",
+    "summary": "<p>In this tutorial, we build an advanced workflow around Anthropic’s financial-services repository and reproduce its skill-driven architecture in pure Python. We begin by installing the required libraries, cloning the repository, and programmatically mapping its agents, vertical plugins, partner integrations, managed-agent cookbooks, and financial analysis skills. We then parse the repository’s SKILL.md files into a searchable [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables/\">Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors, and Automated Deliverables</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-27T22:39:18.906699+00:00"
+  },
+  {
+    "id": "a96056acfcc26704",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Perplexity Releases pplx, a Single-Binary CLI That Puts Its Search API in the Terminal for Coding Agents",
+    "url": "https://www.marktechpost.com/2026/07/27/perplexity-releases-pplx/",
+    "published": "2026-07-27T16:32:47+00:00",
+    "summary": "<p>Perplexity has released pplx, an official command line client for its Search API. The tool exposes two commands — pplx search web and pplx content fetch — and returns exactly one JSON object on stdout. It ships as a checksum-verified single binary for macOS arm64 and Linux, alongside an Agent Skill for Claude Code, Codex CLI and any harness that can read a URL.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/27/perplexity-releases-pplx/\">Perplexity Releases pplx, a Single-Binary CLI That Puts Its Search API in the Terminal for Coding Agents</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-27T22:39:18.906699+00:00"
+  }
+]

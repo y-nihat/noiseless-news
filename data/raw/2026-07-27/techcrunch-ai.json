@@ -78,5 +78,35 @@
     "published": "2026-07-27T13:00:00+00:00",
     "summary": "The massive seed round was led by  Index Ventures and Ribbit Capital, with participation from Sarah Guo's Conviction Partners.",
     "fetched_at": "2026-07-27T17:45:42.034996+00:00"
+  },
+  {
+    "id": "9a5f660e760ee4a4",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Satya Nadella says companies that trust one AI for everything may not survive",
+    "url": "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/",
+    "published": "2026-07-27T21:17:11+00:00",
+    "summary": "Companies without their own models — or without a layer of AI infrastructure known as AI gateways to separate their prompts from the model itself — will be in trouble, Nadella says.",
+    "fetched_at": "2026-07-27T22:39:18.906699+00:00"
+  },
+  {
+    "id": "bb239ee05f73e5d0",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "PSA: Your Claude shared chats and Artifacts may have ended up on Google",
+    "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+    "published": "2026-07-27T20:19:42+00:00",
+    "summary": "The issue appears to have originated from Claude’s “share chat” feature, which allows users to create links that enable anyone with the assigned URL view a conversation or project.",
+    "fetched_at": "2026-07-27T22:39:18.906699+00:00"
+  },
+  {
+    "id": "dd98f963f3b250f7",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system",
+    "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+    "published": "2026-07-27T18:32:11+00:00",
+    "summary": "Microsoft bolstered its AI cybersecurity offerings this week with the launch of its first AI security model and a new security platform.",
+    "fetched_at": "2026-07-27T22:39:18.906699+00:00"
   }
 ]
