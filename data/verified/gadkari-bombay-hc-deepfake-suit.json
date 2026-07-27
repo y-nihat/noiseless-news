@@ -1,0 +1,39 @@
+{
+  "slug": "gadkari-bombay-hc-deepfake-suit",
+  "checked_at": "2026-07-27T23:22:00+00:00",
+  "method": "Verifier and adversarial-falsifier passes run within this cycle: cross-checked facts via WebSearch (multiple independent queries) and WebFetch of two independent named-byline legal-press accounts (LiveLaw, Bar and Bench) plus corroborating headlines/snippets from Business Today, Republic World, Free Press Journal, NDTV, Telegraph India, Mint, Fortune India, The Indian Express, Firstpost, Outlook India, CNBCTV18, Rediff — all consistent, no contradictions found. Adversarial check: searched specifically for a Meta/X/Google denial or dispute of the facts (none found — defendants have not yet responded, expected at this early procedural stage) and for any indication this order is a final ruling rather than procedural (all sources agree it is procedural leave-to-sue only).",
+  "origin_items": [
+    "data/raw/2026-07-27/gnews-ai-litigation.json — multiple items, e.g. Firstpost 'Nitin Gadkari moves court against Meta, X, Google...', LiveLaw 'Bombay High Court Permits Nitin Gadkari To Sue X, Meta, Google...', Bar and Bench, NDTV Profit, Business Standard, Outlook India, and ~20 other outlets covering the same 27 July order"
+  ],
+  "claims": [
+    {
+      "text": "On 27 July 2026, Justice Abhay Ahuja of the Bombay High Court granted Nitin Gadkari leave under Clause XII of the Letters Patent to file a civil suit naming Meta, X Corp, Google LLC/YouTube, and two Indian government departments as defendants",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Judge name, date, and Clause XII procedural mechanism independently and identically confirmed via direct WebFetch of both LiveLaw and Bar and Bench (independent legal-press outlets, different bylines); corroborated by Business Today, Republic World and ~20 other outlets' headlines/ledes.",
+      "evidence": ["https://www.livelaw.in/high-court/bombay-high-court/nitn-gadkari-e20-petrol-policy-defamatory-posts-x-google-meta-ai-deepfake-543006", "https://www.barandbench.com/news/bombay-high-court-allows-nitin-gadkari-to-sue-meta-google-for-deepfakes-ai-content-over-e20-fuel-row"]
+    },
+    {
+      "text": "Gadkari's plea alleges deepfake videos/posts (at least 24 identified) falsely portray him as personally responsible for and financially benefiting from the E20 policy, which he says is run by the Ministry of Petroleum and Natural Gas, not his ministry",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Directly quoted from the plea via LiveLaw fetch ('falsely, maliciously and without any basis...derived undue pecuniary benefits'); consistent with Bar and Bench and Business Today. Presented in the article as Gadkari's allegation, not as established fact, per verification.md §3 legal-claim standard.",
+      "evidence": ["https://www.livelaw.in/high-court/bombay-high-court/nitn-gadkari-e20-petrol-policy-defamatory-posts-x-google-meta-ai-deepfake-543006", "https://www.barandbench.com/news/bombay-high-court-allows-nitin-gadkari-to-sue-meta-google-for-deepfakes-ai-content-over-e20-fuel-row"]
+    },
+    {
+      "text": "Gadkari seeks roughly Rs 11 crore in damages plus removal of the content and an injunction against unauthorised AI use of his voice/image/likeness",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Damages figure and relief sought independently confirmed via both LiveLaw and Bar and Bench fetches.",
+      "evidence": ["https://www.livelaw.in/high-court/bombay-high-court/nitn-gadkari-e20-petrol-policy-defamatory-posts-x-google-meta-ai-deepfake-543006", "https://www.barandbench.com/news/bombay-high-court-allows-nitin-gadkari-to-sue-meta-google-for-deepfakes-ai-content-over-e20-fuel-row"]
+    },
+    {
+      "text": "The order is procedural leave-to-sue only, not a ruling on the merits; no interim takedown was granted, and the substantive suit including any interim-relief request goes to Justice Arif Doctor later",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "This is the load-bearing procedural-status claim per §10 ('state the procedural status plainly'). Explicitly confirmed by both LiveLaw and Bar and Bench: 'procedural leave-to-sue order, not a final ruling'; 'interim relief... none granted yet... suit will be heard by Justice Arif Doctor in due course.'",
+      "evidence": ["https://www.livelaw.in/high-court/bombay-high-court/nitn-gadkari-e20-petrol-policy-defamatory-posts-x-google-meta-ai-deepfake-543006", "https://www.barandbench.com/news/bombay-high-court-allows-nitin-gadkari-to-sue-meta-google-for-deepfakes-ai-content-over-e20-fuel-row"]
+    }
+  ],
+  "notes": "Legal/litigation claim type per verification.md §3/§10: Gadkari here is the plaintiff/named public official filing suit (not a private individual or an accused party), so §10's naming restrictions for private individuals do not apply; Meta/X/Google are companies. Every allegation in the article is attributed to Gadkari's plea, not stated as fact. Dedup-check (PYTHONPATH=pipeline python -m noiseless.run dedup-check) returned no matches against the archive. open_obligation set true: this is a pending civil suit with no ruling on the merits yet and an interim-relief hearing still to come; revisit_after set to roughly 4-5 weeks out given no specific next hearing date was reported. LiveLaw and Bar and Bench are not yet in policy/sources.yaml — proposed for registration in data/ledger/source_candidates.json."
+}

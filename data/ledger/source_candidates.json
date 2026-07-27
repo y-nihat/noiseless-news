@@ -732,5 +732,25 @@
       ],
       "context": "Established Indian general/policy news outlet with a dedicated judiciary desk and named reporting; independently confirmed the interim/non-precedential procedural status and the amicus curiae's involvement for delhi-hc-ani-openai-copyright-ruling. Unregistered; propose Tier 2."
     }
+  ],
+  "candidates_2026-07-27_night_c2_gadkari": [
+    {
+      "domain": "livelaw.in",
+      "first_seen": "2026-07-27",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.livelaw.in/high-court/bombay-high-court/nitn-gadkari-e20-petrol-policy-defamatory-posts-x-google-meta-ai-deepfake-543006"
+      ],
+      "context": "Second use this night (see candidates_2026-07-27_night_delhi_hc_ani) -- primary account for the Bombay HC Gadkari v. Meta/X/Google leave-to-sue order (gadkari-bombay-hc-deepfake-suit). Recurring, high-value for Indian AI-litigation coverage; recommend prioritizing this one for actual registration over the other one-off Indian legal candidates."
+    },
+    {
+      "domain": "barandbench.com",
+      "first_seen": "2026-07-27",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.barandbench.com/news/bombay-high-court-allows-nitin-gadkari-to-sue-meta-google-for-deepfakes-ai-content-over-e20-fuel-row"
+      ],
+      "context": "Established Indian legal-news outlet (named bylines, court-reporting focus), independent of LiveLaw -- used as the second confirming source for gadkari-bombay-hc-deepfake-suit, matched LiveLaw's facts (judge, damages figure, procedural status) on independent fetch. Unregistered; propose Tier 2, type html."
+    }
   ]
 }

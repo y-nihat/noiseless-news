@@ -1,0 +1,26 @@
+{
+  "slug": "gadkari-bombay-hc-deepfake-suit",
+  "title": "Bombay High Court grants Indian minister Nitin Gadkari leave to sue Meta, X and Google over AI deepfakes",
+  "status": "published",
+  "first_seen": "2026-07-27",
+  "published_at": "2026-07-27",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.livelaw.in/high-court/bombay-high-court/nitn-gadkari-e20-petrol-policy-defamatory-posts-x-google-meta-ai-deepfake-543006",
+    "https://www.barandbench.com/news/bombay-high-court-allows-nitin-gadkari-to-sue-meta-google-for-deepfakes-ai-content-over-e20-fuel-row",
+    "https://www.businesstoday.in/india/story/nitin-gadkari-moves-bombay-high-court-against-viral-e20-deepfakes-hits-meta-with-suit-545414-2026-07-27"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-01",
+  "reason": "Published: procedural order (27 July 2026, Bombay HC, Justice Abhay Ahuja) granting Union Minister Nitin Gadkari leave under Letters Patent Clause XII to sue Meta, X Corp and Google/YouTube over alleged AI deepfakes about the E20 fuel policy. Cross-confirmed via direct fetch of two independent named-byline legal-press outlets (LiveLaw, Bar and Bench) plus ~20 corroborating mainstream Indian outlets, all consistent. open_obligation set because this is only a leave-to-sue order: no ruling on the merits, no interim relief granted yet, substantive suit and interim-relief request to be heard later before Justice Arif Doctor, and defendants have not yet responded.",
+  "watch": [
+    "Meta, X, or Google public response or motion in the suit",
+    "The interim-relief hearing before Justice Arif Doctor and any takedown order",
+    "Any ruling on the merits of Gadkari's defamation/deepfake allegations",
+    "Whether this becomes part of a broader pattern of Indian official-vs-platform deepfake suits worth tracking as a saga"
+  ],
+  "notes": [
+    "2026-07-27 c2: New standalone story, surfaced via fresh gnews-ai-litigation ingest (23:17Z pull, ~25 outlets same-day). dedup-check clean (no matches) against the archive. Verifier + adversarial pass done within this cycle (see data/verified/gadkari-bombay-hc-deepfake-suit.json) — no denial/dispute found from named defendants, confirmed procedural (not final) status via two independent legal-press fetches. LiveLaw and Bar and Bench proposed for source registration in source_candidates.json."
+  ]
+}
