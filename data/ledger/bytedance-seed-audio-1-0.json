@@ -18,6 +18,7 @@
   "cycle_2026-07-26_c5_note": "Re-checked (1 web search). No official ByteDance benchmark table, arXiv paper, or independent hands-on review found; results are the same vendor/directory-style pages (Baidu Baike summary, Atlas Cloud/EvoLink API listings, aireiter.com review, digitaljournal PR) as prior rechecks. Gate still fails. Still watching.",
   "public_note": "The product appears to have launched earlier than the announcement we saw suggests, so the news value is unclear.",
   "notes": [
-    "2026-07-26 c1: Re-checked (1 web search). Same vendor/directory-style coverage (Atlas Cloud, theresanaiforthat, remio.ai, howaiworks, qwen3tts blog, evolink, aireiter) still repeating the vendor-reported >90% usability / MOS>4.0 figures with no independent reproduction. No official ByteDance benchmark table or arXiv paper found. Gate still fails. Still watching."
+    "2026-07-26 c1: Re-checked (1 web search). Same vendor/directory-style coverage (Atlas Cloud, theresanaiforthat, remio.ai, howaiworks, qwen3tts blog, evolink, aireiter) still repeating the vendor-reported >90% usability / MOS>4.0 figures with no independent reproduction. No official ByteDance benchmark table or arXiv paper found. Gate still fails. Still watching.",
+    "2026-07-27 c1: Re-checked (1 web search). Same vendor/directory-style coverage (remio.ai, digitalapplied, baike.baidu, digitaljournal PR, qwen3tts blog, evolink) still repeating the vendor-reported MOS>4.0 figures with an explicit caveat noted that these remain internal company assessments with no independent third-party benchmark. Gate still fails. Still watching."
   ]
 }

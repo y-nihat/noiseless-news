@@ -1,0 +1,60 @@
+{
+  "slug": "delhi-hc-ani-openai-copyright-ruling",
+  "checked_at": "2026-07-27T23:10:00+00:00",
+  "method": "multi-agent verify + adversarial cross-check within a single verifier context (fresh context, did not draft/triage); verifier used WebSearch across Indian legal and business press and WebFetch to directly pull three independent accounts (Verdictum, The Decoder, The Print) rather than relying on search-snippet summaries alone; checked for confusion with the unrelated, already-published nyt-openai-copyright-evidence-dispute story (different jurisdiction, different plaintiff, different claim -- evidentiary sanctions dispute vs. an Indian fair-dealing ruling) and confirmed this is a genuinely new story with a clean dedup-check",
+  "origin_items": [
+    "data/raw/2026-07-27/gnews-ai-litigation.json — multiple items: the-decoder.com 'Delhi High Court hands OpenAI a win...', SCC Online 'Khaitan & Co. represents OpenAI...' and 'Delhi HC's Threefold Test for AI Training...', Raw Law 'ANI Media Sought to Stop OpenAI...', MLex 'OpenAI ruling shifts India's AI copyright fight...', World IP Review 'OpenAI gains upper hand...', completemusicupdate.com 'ChatGPT training was legal...'"
+  ],
+  "claims": [
+    {
+      "text": "In an interim order dated 24 July 2026, the Delhi High Court dismissed ANI Media Pvt Ltd's application for an interim injunction against OpenAI in ANI Media Pvt Ltd v. Open AI OpCo LLC (2026:DHC:5900)",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Case caption and citation confirmed directly via Verdictum's own report (headline cites '2026DHC5900'); date and outcome cross-confirmed independently by LiveLaw, SCC Online, The Decoder (registered Tier 2), Business Standard and The Print -- six independent, named-byline outlets, no contradiction found.",
+      "evidence": ["https://www.verdictum.in/delhi-high-court/ani-media-pvt-ltd-v-open-ai-opco-llc-2026dhc5900-chatgpt-llm-training-1618541", "https://www.livelaw.in/high-court/delhi-high-court/delhi-high-court-rejects-ani-copyright-suit-open-ai-chatgpt-542736"]
+    },
+    {
+      "text": "Justice Amit Bansal held OpenAI's storage of ANI's content for LLM training prima facie falls within Section 52(1)(a)(i) 'private or personal use, including research' fair dealing, and that requiring licensing from every rights holder before training would be commercially impractical",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Directly quoted/paraphrased consistently across LiveLaw, SCC Online, Verdictum, The Decoder (direct fetch) and a general legal-press search synthesis; no outlet frames this differently.",
+      "evidence": ["https://the-decoder.com/delhi-high-court-hands-openai-a-win-by-rejecting-major-indian-news-agencys-copyright-injunction/"]
+    },
+    {
+      "text": "The court found ANI had not established that ChatGPT's RAG-based responses were substantially similar to, or reproduced/memorised, its original articles",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via direct fetch of The Decoder and Verdictum search summary; consistent with LiveLaw and SCC Online headlines/framing.",
+      "evidence": ["https://the-decoder.com/delhi-high-court-hands-openai-a-win-by-rejecting-major-indian-news-agencys-copyright-injunction/", "https://www.verdictum.in/delhi-high-court/ani-media-pvt-ltd-v-open-ai-opco-llc-2026dhc5900-chatgpt-llm-training-1618541"]
+    },
+    {
+      "text": "This order decides only ANI's interim injunction application; the underlying suit remains pending, and the court itself said its prima facie findings set no precedent and do not control the final outcome",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "This is the load-bearing procedural-status claim per verification.md §3 (legal/litigation claims must state clearly whether a ruling is final and appealable). Directly confirmed via WebFetch of The Decoder ('interim order dismissing ANI's interim injunction application, not a final judgment... suit continues') and WebFetch of The Print ('the present order will have no precedential value, as it is not a final judgment... main suit is still pending'). Also confirmed by Verdictum fetch. No source states or implies this is a final judgment.",
+      "evidence": ["https://the-decoder.com/delhi-high-court-hands-openai-a-win-by-rejecting-major-indian-news-agencys-copyright-injunction/", "https://theprint.in/judiciary/no-interim-ban-on-openai-delhi-high-court-invokes-fair-dealing-doctrine-to-reject-anis-petition/2996430/", "https://www.verdictum.in/delhi-high-court/ani-media-pvt-ltd-v-open-ai-opco-llc-2026dhc5900-chatgpt-llm-training-1618541"]
+    },
+    {
+      "text": "The court left unresolved, for trial, whether RAG outputs amount to 'communication to the public' and whether an AI model's retained training data itself constitutes reproduction",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly in The Decoder's account of the order's stated scope/next-steps section.",
+      "evidence": ["https://the-decoder.com/delhi-high-court-hands-openai-a-win-by-rejecting-major-indian-news-agencys-copyright-injunction/"]
+    },
+    {
+      "text": "ANI's suit, filed November 2024, also alleged ChatGPT attributed fabricated stories to ANI, a claim not resolved by this order",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Background confirmed via WebSearch synthesis drawing on Deccan Chronicle, Business Standard, Medianama and the EU IP Helpdesk's contemporaneous November 2024 filing notices; MLex's own headline ('OpenAI ruling shifts India's AI copyright fight from training to outputs') independently corroborates that the suit covers both training and output/attribution issues, with only the training question decided here.",
+      "evidence": ["https://www.verdictum.in/delhi-high-court/ani-media-pvt-ltd-v-open-ai-opco-llc-2026dhc5900-chatgpt-llm-training-1618541", "https://www.business-standard.com/industry/news/openai-use-of-ani-data-doesn-t-amount-to-infringement-says-delhi-hc-126072400913_1.html"]
+    },
+    {
+      "text": "Indian legal and business press widely describe the ruling as India's first substantive court ruling on whether AI training infringes copyright",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Independently characterised this way by LiveLaw, SCC Online, The Decoder and World IP Review's own headline ('OpenAI gains upper hand in India's first major AI copyright dispute'); treated as a confirmed characterization claim (no prior Indian court ruling on point is cited or known to contradict it), not as an unverifiable superlative -- it is attributed to legal-press consensus, not asserted as our own claim.",
+      "evidence": ["https://www.livelaw.in/high-court/delhi-high-court/delhi-high-court-rejects-ani-copyright-suit-open-ai-chatgpt-542736", "https://www.scconline.com/blog/post/2026/07/27/openai-chatgpt-training-on-ani-content-protected-under-fair-dealing-dhc/"]
+    }
+  ],
+  "notes": "Legal/litigation claim type per verification.md §3: published at the interim-ruling stage with procedural status (interim, not final, appealable/pending trial) stated plainly per the work order and the general spirit of §10's 'state the procedural status plainly.' No allegation is stated as fact beyond what the court itself found; ANI's unresolved allegations (attribution of fabricated stories, RAG communication-to-the-public, training-data reproduction) are explicitly flagged as pending, not decided. Naming check per §10: only a company (ANI), a company (OpenAI) and a sitting judge acting in his official judicial capacity are named -- no private individuals involved, no naming concern. Dedup: confirmed distinct from nyt-openai-copyright-evidence-dispute (US jurisdiction, NYT-led plaintiffs' group, an evidentiary-sanctions dispute in ongoing discovery -- unrelated case, unrelated claim) by reading that ledger entry directly; no existing ledger entry for this India/ANI story found (grep across data/ledger/*.json). SCC Online, LiveLaw, Verdictum and The Print are not in policy/sources.yaml -- proposed for registration in data/ledger/source_candidates.json. open_obligation set true in the ledger: this is a pending interim order in litigation that continues to trial and could be challenged; revisit in ~6 weeks or on any docket movement, per the same pattern used for sony-music-udio-second-lawsuit and samsung-broadcom-200b-ai-chip-mou."
+}

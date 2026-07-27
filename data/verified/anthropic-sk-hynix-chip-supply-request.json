@@ -1,0 +1,51 @@
+{
+  "slug": "anthropic-sk-hynix-chip-supply-request",
+  "checked_at": "2026-07-27T00:00:00+00:00",
+  "method": "fresh-context verify + adversarial falsification pass, web search/fetch corroboration across independent outlets, no contradicting reports found",
+  "origin_items": [
+    "data/ledger/anthropic-sk-hynix-chip-supply-request.json — prior watching entry (2026-07-25), held on the wire-exclusive check",
+    "cycle note 2026-07-27 c1 flagging the new BusinessToday lead for escalation"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic CEO Dario Amodei said Anthropic has signed supply agreements with both Samsung Electronics and SK Hynix",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "A named executive's on-record statement functions as a company statement under verification.md's independence rule, clearing the wire-exclusive bar the original Bloomberg-derived entry failed on. Independently corroborated by BusinessToday and Unique Times Magazine (fetched directly; Unique Times Magazine's reporting carries no attribution to BusinessToday or any other outlet) plus Korea JoongAng Daily's separate reporting of the same San Francisco event naming Anthropic among the companies with signed/pursued memory-supply arrangements. No contradicting report, denial, or walk-back found in an adversarial search.",
+      "evidence": [
+        "https://www.businesstoday.in/technology/news/story/anthropic-signs-supply-deal-with-samsung-sk-hynix-amid-custom-ai-chip-race-545338-2026-07-27",
+        "https://uniquetimes.org/anthropic-signs-supply-agreements-with-samsung-and-sk-hynix-as-ai-chip-competition-intensifies/",
+        "https://www.koreajoongangdaily.com/business/nearly-1-trillion-in-deals-big-tech-korean-chipmakers-align-to-steer-future-of-ai/12791942"
+      ]
+    },
+    {
+      "text": "Amodei did not disclose which components are covered, the deal value, or the duration of either agreement",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both BusinessToday and Unique Times Magazine explicitly state Amodei withheld these details; no outlet found in this search cites a chip type, dollar figure, or timeline attributed to Anthropic's own deals specifically (as distinct from the separate, much larger Samsung/SK Hynix deals with Nvidia, Microsoft, and Broadcom announced at the same event, which do carry disclosed figures).",
+      "evidence": [
+        "https://www.businesstoday.in/technology/news/story/anthropic-signs-supply-deal-with-samsung-sk-hynix-amid-custom-ai-chip-race-545338-2026-07-27",
+        "https://uniquetimes.org/anthropic-signs-supply-agreements-with-samsung-and-sk-hynix-as-ai-chip-competition-intensifies/"
+      ]
+    },
+    {
+      "text": "The statement was made at a summit in San Francisco on 24 July 2026 tied to South Korean President Lee Jae-myung's visit, alongside separate multi-billion-dollar Samsung/SK Hynix memory-supply agreements with Nvidia, Microsoft and Broadcom",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Korea JoongAng Daily (direct fetch) states the gathering took place in San Francisco on 24 July 2026 and details the separate Samsung-Broadcom (~$200B) and SK Hynix-Nvidia (~$500B+) agreements. This corrects BusinessToday's looser framing of the event as a 'South Korea AI summit' -- the event was in San Francisco, occasioned by the South Korean president's US visit, consistent with the original watching entry's note that Chey Tae-won's remarks two days earlier were also 'at a San Francisco AI event'.",
+      "evidence": [
+        "https://www.koreajoongangdaily.com/business/nearly-1-trillion-in-deals-big-tech-korean-chipmakers-align-to-steer-future-of-ai/12791942"
+      ]
+    },
+    {
+      "text": "SK Group chairman Chey Tae-won had separately said Anthropic asked SK Hynix for chip-manufacturing supplies, at an earlier San Francisco event reported by Bloomberg on 25 July 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Carried over from the original watching entry, which established this as the single-source Bloomberg wire-exclusive baseline this article now supersedes/resolves.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-07-25/sk-chair-says-anthropic-asked-for-supplies-to-make-its-own-chips"
+      ]
+    }
+  ],
+  "notes": "Resolves a story held in watching since 2026-07-25. The original entry failed the wire-exclusive check: every outlet's account of Chey Tae-won's remarks traced to one Bloomberg story. The new lead -- Amodei's own on-record confirmation of signed deals with Samsung AND SK Hynix -- is qualitatively different evidence: a named executive speaking for his own company, independently reported by BusinessToday, Unique Times Magazine (confirmed via direct fetch to carry no attribution back to BusinessToday), and Korea JoongAng Daily. Adversarial pass searched explicitly for denials, walk-backs, or contradicting context and found none; also checked whether Samsung or SK Hynix issued their own statements naming Anthropic specifically -- none found distinct from the broader Nvidia/Microsoft/Broadcom-focused $950B announcements from the same event, so the article does not claim a Samsung/SK Hynix-side confirmation beyond Amodei's own words. No chip type, value, or duration is claimed for Anthropic's specific deals since none was disclosed by any source checked."
+}

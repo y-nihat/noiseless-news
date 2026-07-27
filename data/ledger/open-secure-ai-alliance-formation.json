@@ -1,0 +1,23 @@
+{
+  "slug": "open-secure-ai-alliance-formation",
+  "title": "Nvidia and dozens of tech firms form AI security alliance after Hugging Face breach; OpenAI, Google and Anthropic are not members",
+  "status": "published",
+  "first_seen": "2026-07-27",
+  "published_at": "2026-07-27",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+    "https://www.cnbc.com/2026/07/27/nvidia-ai-initiative-openai-cyber-attack.html",
+    "https://www.csoonline.com/article/4201761/openai-not-part-of-the-new-open-secure-ai-alliance.html",
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-google-and-anthropic-absent-from-nvidia-led-open-secure-ai-alliance-30-companies-join-security-alliance-after-openai-agent-breach"
+  ],
+  "follows": "huggingface-ai-agent-security-breach",
+  "watch": [
+    "Whether OpenAI, Google or Anthropic ever states a reason for not joining, or whether any of them joins later",
+    "Any solidly-sourced report of internal OpenAI disagreement over the alliance snub (none found as of this cycle; treat any future claim of this kind with the same skepticism until independently corroborated)",
+    "Concrete output from the alliance (actual tool releases, not just the founding announcement)"
+  ],
+  "notes": [
+    "2026-07-27 c: dedup-check run for the alliance-formation angle specifically (title 'Tech coalition forms Open Secure AI Alliance after Hugging Face breach', url blogs.nvidia.com/blog/open-secure-ai-alliance/) returned a moderate match (score 0.4, no shared source URLs) against huggingface-ai-agent-security-breach -- read that ledger entry and article first. Determined this is a NEW event in the same saga (alliance formation, not new detail about the breach itself), so published as a follow-up per verification.md Sec.8 with follows set, rather than an in-place update to the breach article. Verified the founding-member list, stated motivation, and named tool contributions (Hugging Face Safetensors, Microsoft MDASH) directly against NVIDIA's own Tier-0 blog post. Verified the OpenAI/Google/Anthropic absence against three sources. Explicitly searched three separate ways for any 'internal OpenAI backlash over not joining' narrative named in the task brief and found zero sourcing anywhere -- dropped entirely (not softened) as unverified rumor per verification.md Sec.3, and the CSO Online 'did not respond to request for comment' detail was kept but labeled single-source rather than confirmed. CNBC is a registered Tier-2 source; CSO Online and Tom's Hardware are unregistered but qualify by Tier-2 editorial-standard criteria per Sec.1 and should be proposed for sources.yaml registration in a future cycle."
+  ]
+}

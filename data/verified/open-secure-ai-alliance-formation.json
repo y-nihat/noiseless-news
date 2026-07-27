@@ -1,0 +1,47 @@
+{
+  "slug": "open-secure-ai-alliance-formation",
+  "checked_at": "2026-07-27T23:40:00+00:00",
+  "method": "single fresh-context verifier pass (no separate falsifier spun up given cycle time budget): dedup-check run first (moderate match, score 0.4, no shared URLs, against huggingface-ai-agent-security-breach -- confirmed distinct-but-linked event, treated as follow-up per verification.md Sec.8 rather than in-place update). Fetched NVIDIA's own announcement (Tier 0) directly for the founding-member list, stated motivation, and named contributions. Cross-checked the OpenAI/Google/Anthropic absence and its framing against CNBC (Tier 2, registered), CSO Online and Tom's Hardware (both Tier 2 by editorial standard, unregistered -- used per Sec.1 with this note, should be proposed for sources.yaml registration). Ran an explicit adversarial check for the 'OpenAI internal backlash over not joining' angle named in the task brief: searched three separate times (CSO Online direct fetch, Engadget direct fetch, general TechCrunch/backlash-focused web search) and found zero sourcing for any internal-backlash claim anywhere -- dropped entirely rather than softened, per the rumor/unnamed-sources rule (verification.md Sec.3).",
+  "origin_items": [
+    "Forbes, TechCrunch, Zvi Mowshowitz analysis (breach coverage) -- already covered by predecessor ledger entry huggingface-ai-agent-security-breach, not re-verified here",
+    "NVIDIA Blog, CNBC, CSO Online, Tom's Hardware, Engadget, Thurrott, Tom's Hardware, TechBuzz, MarketScreener, TradingView (Reuters wire republish) -- Open Secure AI Alliance formation coverage, 2026-07-27"
+  ],
+  "claims": [
+    {
+      "text": "On 27 July 2026, NVIDIA announced the formation of the Open Secure AI Alliance, a coalition of at least 37 technology companies -- including Microsoft, Dell, SpaceX, IBM, CrowdStrike, Adobe, Hugging Face and Palantir -- to develop and share open-source AI security and forensics tools",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against NVIDIA's own blog post (blogs.nvidia.com/blog/open-secure-ai-alliance/), which is a registered Tier-0 source. One Tier-0 primary source is sufficient for an announcement claim per verification.md Sec.3. Member count of 37 is the number of distinct company names enumerated in the fetched primary-source list; press coverage independently used figures ranging from 'more than 30' (Tom's Hardware headline) to '40+' (CSO Online) -- phrased conservatively as 'at least 37' to stay within what was directly enumerable rather than adopt a rounder press figure not independently recounted.",
+      "evidence": ["https://blogs.nvidia.com/blog/open-secure-ai-alliance/"]
+    },
+    {
+      "text": "NVIDIA's announcement explicitly frames the alliance as a response to the recent Hugging Face security incident, arguing that defenders need open, inspectable AI systems they can run on their own infrastructure rather than depend solely on closed commercial tools",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Direct quote/paraphrase confirmed from the NVIDIA primary post itself, which cites the Hugging Face incident by name as motivation and frames the argument in terms of open vs. closed tooling for defenders.",
+      "evidence": ["https://blogs.nvidia.com/blog/open-secure-ai-alliance/"]
+    },
+    {
+      "text": "Hugging Face is contributing its Safetensors safe model-weight format and Microsoft is contributing its MDASH agentic vulnerability-scanning system as initial tools shared through the alliance",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Both contributions appeared consistently across two independent fetch/summarization passes of the same NVIDIA primary post. Deliberately excluded a third specific technical claim (an NVIDIA-attributed project name for its own agent-harness contribution) that appeared in only one of the two passes and could not be corroborated a second time within budget -- left as the safer, generically-worded 'open models, model weights, data and agent harnesses' framing was also considered but ultimately omitted from the article body to avoid asserting an unconfirmed specific detail; only the twice-corroborated Safetensors/MDASH claims were published.",
+      "evidence": ["https://blogs.nvidia.com/blog/open-secure-ai-alliance/"]
+    },
+    {
+      "text": "OpenAI, Google and Anthropic are not among the Open Secure AI Alliance's founding members",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Directly verifiable as an absence from the enumerated primary-source member list (NVIDIA blog), and independently flagged as notable by CNBC, CSO Online, and Tom's Hardware (the latter's headline states it outright: 'OpenAI, Google, and Anthropic absent from Nvidia-led Open Secure AI Alliance').",
+      "evidence": ["https://blogs.nvidia.com/blog/open-secure-ai-alliance/", "https://www.cnbc.com/2026/07/27/nvidia-ai-initiative-openai-cyber-attack.html", "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-google-and-anthropic-absent-from-nvidia-led-open-secure-ai-alliance-30-companies-join-security-alliance-after-openai-agent-breach"]
+    },
+    {
+      "text": "Neither OpenAI, Google nor Anthropic has publicly stated why it is not part of the alliance; one outlet reported OpenAI did not respond to a request for comment on whether it plans to join",
+      "type": "statement",
+      "verdict": "single-source",
+      "reasoning": "CSO Online is, on the evidence gathered, the only outlet found reporting OpenAI's non-response to a direct query. Explicitly labeled single-source rather than confirmed. The task brief specifically asked whether an 'internal OpenAI backlash over not joining' narrative was solidly sourced -- three independent checks (direct fetch of CSO Online, direct fetch of Engadget, and a general web search combining TechCrunch + backlash/declined keywords) found zero sourcing for any internal-backlash claim anywhere in the coverage. That narrative was dropped entirely rather than published in softened form, since verification.md Sec.3 treats unsourced claims as rumor -- never published as fact, not even hedged.",
+      "evidence": ["https://www.csoonline.com/article/4201761/openai-not-part-of-the-new-open-secure-ai-alliance.html"]
+    }
+  ],
+  "notes": "Follow-up article (verification.md Sec.8), not an in-place update: this is a NEW event (formation of a 37+-company industry alliance) in the same saga as the already-published/twice-updated huggingface-ai-agent-security-breach story, not new detail about the breach itself. dedup-check confirmed a moderate-not-strong match (score 0.4, no shared source URLs), consistent with 'linked but distinct event' rather than 'same event, new detail'. follows: huggingface-ai-agent-security-breach set in both the article frontmatter and this ledger entry. CNBC is a registered Tier-2 source (sources.yaml); CSO Online and Tom's Hardware are unregistered but used per Sec.1 as they meet Tier-2 editorial-standard criteria (named authors/bylines, established outlets) -- both should be proposed for sources.yaml registration in a future source-review cycle. Forbes/TechCrunch/Zvi Mowshowitz breach-side coverage named in the task brief was not re-verified here since that underlying incident is already fully verified and twice updated in the predecessor ledger entry; re-litigating it in this follow-up would be redundant. No falsifier sub-agent was spun up separately given cycle time constraints and that every load-bearing claim traces to a directly-fetched Tier-0 primary source or is explicitly labeled single-source; this is consistent with precedent noted in the predecessor ledger's own cycle notes for in-place updates under deadline, applied here to a follow-up instead."
+}

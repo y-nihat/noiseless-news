@@ -15,6 +15,7 @@
     "Deal signing or collapse of the talks"
   ],
   "notes": [
-    "2026-07-27 c4: surfaced via Techmeme (c3) and a same-story Google News/biggo.com lead (c4 fresh ingest). Verifier traced the whole wave to a single WSJ exclusive - one source, not multi-source-independent. Held per the independence rule, not published."
+    "2026-07-27 c4: surfaced via Techmeme (c3) and a same-story Google News/biggo.com lead (c4 fresh ingest). Verifier traced the whole wave to a single WSJ exclusive - one source, not multi-source-independent. Held per the independence rule, not published.",
+    "2026-07-27 c1: Re-checked (2 web searches, one wsj.com-excluded). Bloomberg published a piece but its own headline/URL slug attributes it to WSJ ('...WSJ Says') - an attributed relay, not independent sourcing; all other new hits (GovConWire, TipRanks, Proactive Investors, PYMNTS, Tom's Hardware, Capacity, Techtimes, Slashdot, itechpost, Business Standard, WHTC) likewise cite WSJ, and no Nvidia/OpenAI/SoftBank statement surfaced. Gate still fails on independence. Still watching."
   ]
 }

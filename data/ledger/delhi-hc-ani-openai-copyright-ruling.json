@@ -1,0 +1,29 @@
+{
+  "slug": "delhi-hc-ani-openai-copyright-ruling",
+  "title": "Delhi High Court declines to block OpenAI's ChatGPT training in ANI copyright case",
+  "status": "published",
+  "first_seen": "2026-07-27",
+  "published_at": "2026-07-27",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.livelaw.in/high-court/delhi-high-court/delhi-high-court-rejects-ani-copyright-suit-open-ai-chatgpt-542736",
+    "https://www.scconline.com/blog/post/2026/07/27/openai-chatgpt-training-on-ani-content-protected-under-fair-dealing-dhc/",
+    "https://the-decoder.com/delhi-high-court-hands-openai-a-win-by-rejecting-major-indian-news-agencys-copyright-injunction/",
+    "https://www.verdictum.in/delhi-high-court/ani-media-pvt-ltd-v-open-ai-opco-llc-2026dhc5900-chatgpt-llm-training-1618541",
+    "https://www.business-standard.com/industry/news/openai-use-of-ani-data-doesn-t-amount-to-infringement-says-delhi-hc-126072400913_1.html",
+    "https://theprint.in/judiciary/no-interim-ban-on-openai-delhi-high-court-invokes-fair-dealing-doctrine-to-reject-anis-petition/2996430/"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-08",
+  "reason": "Published: interim order (24 July 2026, Delhi HC, ANI Media Pvt Ltd v. Open AI OpCo LLC, 2026:DHC:5900) dismissing ANI's interim-injunction application against OpenAI, cross-confirmed across six independent named-byline outlets (LiveLaw, SCC Online, The Decoder, Verdictum, Business Standard, The Print). open_obligation set because this is explicitly a non-final, interim ruling in a pending suit: the court itself said the finding sets no precedent and does not control the eventual outcome, two substantive questions (RAG as 'communication to the public'; whether retained training data is reproduction) are reserved for trial, and either party could challenge the interim order. No appeal/next-step statement from ANI found as of publication.",
+  "watch": [
+    "Any appeal of the 24 July interim order (e.g. to a Division Bench) or ANI public statement on next steps",
+    "Progress or ruling in the underlying ANI v. OpenAI suit (trial court taking up the reserved RAG/'communication to the public' and training-data-reproduction questions)",
+    "Any final judgment in the case, which per the court's own statement could differ from this interim, prima facie finding",
+    "Whether other Indian publishers/news agencies with pending or future AI-copyright suits cite this order, given legal press calling it India's first substantive ruling on point"
+  ],
+  "notes": [
+    "2026-07-27 c(verify): New standalone story, surfaced via fresh gnews-ai-litigation ingest (multiple outlets same day). dedup-check (per run instructions) clean against the archive; manually confirmed distinct from the already-published nyt-openai-copyright-evidence-dispute (US jurisdiction, NYT-led evidentiary-sanctions dispute, unrelated case/parties/claim) by reading that ledger entry directly. SCC Online, LiveLaw, Verdictum and The Print are unregistered in policy/sources.yaml -- proposed for registration in data/ledger/source_candidates.json per policy/verification.md §1."
+  ]
+}

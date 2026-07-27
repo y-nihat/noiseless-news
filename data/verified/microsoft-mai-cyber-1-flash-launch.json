@@ -1,0 +1,40 @@
+{
+  "slug": "microsoft-mai-cyber-1-flash-launch",
+  "checked_at": "2026-07-27T00:00:00+00:00",
+  "method": "fresh-context verification + adversarial check via WebSearch/WebFetch of Microsoft's own primary announcements plus independent press coverage",
+  "origin_items": [
+    "the-decoder.com (lead item from raw ingest 2026-07-27) — Microsoft launches its own cybersecurity model MAI-Cyber-1-Flash but still depends on OpenAI for the toughest tasks",
+    "Cross-checked against NYT and TechCrunch coverage named in the raw ingest, plus The Register, VentureBeat, Help Net Security, Axios, Constellation Research"
+  ],
+  "claims": [
+    {
+      "text": "Microsoft launched MAI-Cyber-1-Flash, its first specialized cybersecurity model, embedded in MDASH, and unveiled the agentic Project Perception platform, on 27 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly by two Microsoft-owned primary sources: the Official Microsoft Blog (blogs.microsoft.com/blog) and Microsoft AI News (microsoft.ai/news), both dated 27 July 2026. Neither is the exact registered Tier-0 feed URL in sources.yaml (news.microsoft.com/source/topics/ai) but both are official company-owned blogs and qualify as Tier-0 primary per verification.md §1; recommend proposing microsoft.ai/news for registration as a Microsoft AI product-blog source. Independently corroborated same-day by TechCrunch, The Register, VentureBeat, Axios, Help Net Security, Constellation Research.",
+      "evidence": ["https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/", "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/"]
+    },
+    {
+      "text": "MDASH routes roughly 90% of vulnerability-analysis tasks to MAI-Cyber-1-Flash and escalates the hardest 10% of cases to OpenAI's GPT-5.4",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "This is Microsoft's own self-disclosed architecture fact from its primary announcement (microsoft.ai/news), not a press inference or vendor boast about superiority -- Microsoft states plainly it forwards the hardest 10% of tasks to GPT-5.4. TechCrunch and the-decoder independently report the same split. Treated as confirmed rather than vendor-claim since it is a factual architectural disclosure, not a comparative performance boast.",
+      "evidence": ["https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/"]
+    },
+    {
+      "text": "Microsoft says MDASH with MAI-Cyber-1-Flash and GPT-5.4 scores 96% (95.95%) on CyberGym, ahead of GPT-5.5 Cyber (85.6%), GPT-5.6 Sol (83.6%), and Anthropic's Mythos 5 (83%), at roughly half the cost of the prior MDASH configuration",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figures come from Microsoft's own primary announcement and benchmark table; no independent reproduction of the CyberGym scores was found. The Register's coverage explicitly frames these as claims made by Microsoft executives ('Microsoft executives claim... outperforms...'). Labeled vendor-claim per policy rather than published as fact.",
+      "evidence": ["https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/", "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/", "https://www.theregister.com/security/2026/07/27/microsofts-solution-to-ai-security-more-ai-and-more-acronyms/5279140"]
+    },
+    {
+      "text": "Project Perception, coordinating red/blue/green team agents to find, triage, and patch vulnerabilities, enters public preview on 3 August 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed by the Official Microsoft Blog primary source and independently corroborated by TechCrunch and other outlets found via search. Note: one WebFetch summary of the TechCrunch article incorrectly stated a 3 November 2026 preview date; this was cross-checked against the primary source and a second independent search result (Windows Forum coverage) which both confirm 3 August 2026 -- the November date was a fetch-tool summarization error and was discarded.",
+      "evidence": ["https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/", "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/"]
+    }
+  ],
+  "adversarial_notes": "No contradicting reports found on the core announcement, the launch date, or the public-preview date. The Register's coverage is editorially skeptical in tone ('more AI and more acronyms') but does not dispute any specific figure. One internal discrepancy surfaced during research (TechCrunch fetch summary claiming a November 3 preview date vs. the primary source's August 3) was resolved in favor of the primary source and corroborating independent search results -- treated as a WebFetch summarization artifact, not a real source conflict. No independent security-researcher critique of the autonomous-patching (Perception) approach was found within the search budget."
+}

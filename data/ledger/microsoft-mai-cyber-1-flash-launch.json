@@ -1,0 +1,25 @@
+{
+  "slug": "microsoft-mai-cyber-1-flash-launch",
+  "title": "Microsoft launches its first in-house cybersecurity model, MAI-Cyber-1-Flash, and the agentic Project Perception platform",
+  "status": "published",
+  "first_seen": "2026-07-27",
+  "published_at": "2026-07-27",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/",
+    "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/",
+    "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+    "https://www.theregister.com/security/2026/07/27/microsofts-solution-to-ai-security-more-ai-and-more-acronyms/5279140",
+    "https://the-decoder.com/microsoft-launches-its-own-cybersecurity-model-mai-cyber-1-flash-but-still-depends-on-openai-for-the-toughest-tasks/"
+  ],
+  "follows": null,
+  "reason": "Published: Tier-0 primary confirmation found directly from Microsoft (Official Microsoft Blog + Microsoft AI News), independently corroborated by TechCrunch, The Register, VentureBeat, Axios, Help Net Security. Benchmark/cost claims labeled vendor-claim; the GPT-5.4 escalation architecture is Microsoft's own factual disclosure, confirmed.",
+  "watch": [
+    "Independent (non-Microsoft) reproduction of the 96%/95.95% CyberGym score would upgrade that claim from vendor-claim to confirmed",
+    "Project Perception's actual public preview launch on 3 August 2026 -- confirm it ships as described and check for early independent security-researcher reaction to autonomous patch deployment",
+    "Independent security-researcher commentary on the autonomous 'green team' patch-deployment risk, which had not surfaced within this cycle's search budget"
+  ],
+  "notes": [
+    "2026-07-27: dedup-check run pre-verification, clean, no archive matches. Primary source used is microsoft.ai/news and blogs.microsoft.com/blog rather than the exact registered sources.yaml feed URL (news.microsoft.com/source/topics/ai); both are Microsoft-owned official blogs and qualify as Tier-0 per verification.md §1. Recommend proposing microsoft.ai/news for registration in sources.yaml per source-lifecycle.md."
+  ]
+}
