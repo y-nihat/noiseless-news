@@ -1,0 +1,32 @@
+[
+  {
+    "id": "019f99f4d633a5c0",
+    "source": "MIT Technology Review AI",
+    "tier": 2,
+    "title": "The path to artificial superintelligence",
+    "url": "https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/",
+    "published": "2026-07-27T12:00:00+00:00",
+    "summary": "Imagine a healthcare system made up of multiple AI agents: one that manages symptom assessment, another scheduling, a third insurance, and a fourth pharmacy. Each is an expert in its domain. But they all have their own distinct knowledge and objectives. Today they can exchange data, but they are not yet able to actually coordinate&#8230;",
+    "fetched_at": "2026-07-27T12:56:19.752300+00:00"
+  },
+  {
+    "id": "0a9b60fb4c575c08",
+    "source": "MIT Technology Review AI",
+    "tier": 2,
+    "title": "Closing the data loop in AI-driven drug discovery",
+    "url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
+    "published": "2026-07-27T11:40:16+00:00",
+    "summary": "Drug discovery is a high-cost, high-risk endeavor that is under growing pressure from a market increasingly defined by first-mover advantage. Since the 1950s, the cost of developing new pharmaceuticals has roughly doubled every nine years—a phenomenon known as Eroom’s Law. Today, bringing a new drug to market takes an average of 10-15 years and costs&#8230;",
+    "fetched_at": "2026-07-27T12:56:19.752300+00:00"
+  },
+  {
+    "id": "cc4e3f6d6e64b2d4",
+    "source": "MIT Technology Review AI",
+    "tier": 2,
+    "title": "Building the enterprise environment for agentic AI",
+    "url": "https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/",
+    "published": "2026-07-27T11:32:58+00:00",
+    "summary": "For the enterprise, the promise of agentic AI is much more than just a better chatbot. It is software agents that execute business tasks end-to-end across people, business workflows, data, and systems. The platform best-suited to run agents is built with proper CPU capacity, resilient data access, policy-aware tool use, observability, memory management, and the&#8230;",
+    "fetched_at": "2026-07-27T12:56:19.752300+00:00"
+  }
+]

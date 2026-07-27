@@ -1,0 +1,12 @@
+[
+  {
+    "id": "d1cd21036962a84e",
+    "source": "Berkeley BAIR Blog",
+    "tier": 1,
+    "title": "Teaching LLMs to Update Beliefs for Efficient Long-Horizon Interaction",
+    "url": "http://bair.berkeley.edu/blog/2026/07/26/abbel/",
+    "published": "2026-07-26T09:00:00+00:00",
+    "summary": "<!-- twitter -->\n\n\n\n\n\n\n<!-- PREVIEW: <meta name=\"twitter:image\" content=\"https://bairblog.github.io/assets/abbel/cover.png\"> -->\n\n\n\n\n\n\n\n\n\n<p class=\"abbel-fig abbel-fig--wide abbel-fig--tight\">\n<img alt=\"ABBEL overview\" src=\"https://bair.berkeley.edu/static/blog/abbel/ABBEL main figure.png\" />\n<!-- PREVIEW: <img src=\"/assets/abbel/ABBEL%20main%20figure.png\" alt=\"ABBEL overview\"> -->\n<i class=\"abbel-fig-cap\">Overview of ABBEL compared to traditional recursive summarization. Beliefs replace the full interaction history as the agent’s working context, and belief grading improves performance by\nsupervising the contents of each belief state..</i>\n</p>\n\n<p>As task horizons grow, LLM contexts can’t scale forever. Self-summarization enables concise, interpretable contexts, but at a significant performance cost, especially for human assistance domains where high quality data is scarce, e.g., collaborative code generation. We address this with <a href=\"https://arxiv.org/abs/2512.20111\">ABBEL</a>: a framework that isolates and supervises the information content of summaries in the form of natural-language belief states.\n<!--more--></p>\n\n<h2 id=\"motivation-the-cost-of-recursive-summarization\">Motivation: the cost of recursive summarization</h2>\n\n<p>For language models to effectively assist with increasingly complex tasks such as software development, they must be able to interact with us over hundreds or even thousands of steps. For such long tasks, it is impractical to keep the history of the entire interaction in context. The heuristic approach used so far has been summary generation, sometimes called context compaction. For example, Cursor’s latest model composer 2.5 uses compaction during training for improved performance (<a href=\"https://cursor.com/blog/self-summarization\">Cassano et al., 2026</a>). Alongside composer, Grandcode (<a href=\"https://arxiv.org/abs/2604.02721\">DeepReinforce et al., 2026</a>), the first system to consistently beat all human competitors in online…",
+    "fetched_at": "2026-07-27T12:56:19.752300+00:00"
+  }
+]
