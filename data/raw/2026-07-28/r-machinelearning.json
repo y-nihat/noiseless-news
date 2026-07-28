@@ -1,0 +1,12 @@
+[
+  {
+    "id": "6077bab45a48a025",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Structural Admission: verify a sequential task’s claimed dependency structure before interpreting learning [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v8insy/structural_admission_verify_a_sequential_tasks/",
+    "published": "2026-07-28T00:39:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Structural Admission: verify a sequential task’s claimed dependency structure before interpreting learning</p> <p>results</p> <p>When we train agents on staged or multi-phase environments, it is tempting to interpret learning curves, transfer,</p> <p>or apparent “emergence” as evidence for a particular causal or informational structure.</p> <p>But has that structure actually been verified under the same observation and action interface seen by the learner?</p> <p>Structural Admission is a small, standard-library-only Python harness for testing that question before training</p> <p>begins. Researchers implement a task adapter and a separate scripted oracle; the core calibration, rollout,</p> <p>validation, reporting, and reproduction logic remains unchanged.</p> <p>It enforces, among other things:</p> <p>- calibration seeds disjoint from task-rollout seeds;</p> <p>- a CMI threshold fixed from synthetic calibration before candidate evaluation;</p> <p>- evaluation under both uniform-random and scripted-oracle policies;</p> <p>- oracle access limited by the learner-facing observation contract;</p> <p>- CI measurement restricted to preregistered phases;</p> <p>- paired environment noise and random-policy draws across conditions;</p> <p>- pre-disclosure leakage checks on declared observable field groups;</p> <p>- raw trajectory storage before aggregation;</p> <p>- balanced policies, conditions, seeds, and sample cardinalities;</p> <p>- immutable formal output directories;</p> <p>- content-hashed reports and byte-level reproduction of deterministic artifacts.</p> <p>The tool reports Admitted, Rejected, or Inconclusive. Failures are preserved rather than tuned away.</p> <p>One motivating case involved a relation intended to be non-operative. Its measured conditional mutual information</p> <p>was 0.07181 bits, above a previously calibrated threshold of 0.05902 bits. The task was rejected before learning</p> <p>experiments were interpreted, an…",
+    "fetched_at": "2026-07-28T00:59:18.730075+00:00"
+  }
+]

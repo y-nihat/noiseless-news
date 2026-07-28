@@ -1,0 +1,12 @@
+[
+  {
+    "id": "5fe14fe7415601f7",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "Kotlin beta previews support for coroutine stack trace recovery",
+    "url": "https://www.infoworld.com/article/4202006/kotlin-beta-previews-support-for-coroutine-stack-trace-recovery.html",
+    "published": "2026-07-28T00:54:37+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">JetBrains has released Kotlin 2.4.20-Beta2, an update to the company’s multiplatform programming language that has emerged with capabilities ranging from the Wasmtime runtime to JavaScript functions and Swift accommodations.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Kotlin 2.4.20-Beta2 was released <a href=\"https://kotlinlang.org/docs/eap.html#build-details\">July 2</a>. Among the new capabilities and improvements, the new release changes how Kotlin/Wasm handles top-level <code>require()</code> calls in <code>@JsFun</code> declarations, aligns companion object initialization order with JVM behavior, and supports Wasmtime as a runtime for the<code>wasmWasi</code> target in the Kotlin Gradle plugin. Kotlin/Wasm now initializes superclass companion objects before subclass companion objects, matching the JVM behavior. Previously, the initialization could be reversed, leading to inconsistent behavior across platforms.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Kotlin 2.4.20-Beta2 also introduces cross-language inheritance support to Swift export. A common use case for this feature is the <a href=\"https://kotlinlang.org/docs/native-lib-import-stability.html#swift-library-import\">reverse import</a> pattern, where developers define a contract in Kotlin and provide platform-specific implementations on the Swift side. And for Kotlin/JS, Kotlin 2.4.20-Beta2 introduces an experimental DSL for browser testing and support for exporting suspend lambdas as JavaScript async functions. Previously, there was no way to export declarations containing suspend lambdas from Kotlin/JS libraries. Now, the Kotlin compiler automatically handles the bridging between Kotlin’s suspend functio…",
+    "fetched_at": "2026-07-28T00:59:18.730075+00:00"
+  }
+]
