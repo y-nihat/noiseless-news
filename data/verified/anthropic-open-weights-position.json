@@ -1,0 +1,50 @@
+{
+  "slug": "anthropic-open-weights-position",
+  "checked_at": "2026-07-28T23:22:00+00:00",
+  "method": "direct fetch of Anthropic's primary statement plus cross-check against three independent Tier-2 outlets (TechCrunch, Axios, CNBC) for framing and context; single-cycle verification given tight cycle time budget, no separate falsifier sub-agent spawned -- claims are the primary source's own self-attributed statement, which the fetch itself confirms, and the contextual claim (letter absence) was checked against TechCrunch's independent report of the same fact already used in the previously published open-weight-ai-restrictions-letters story",
+  "origin_items": [
+    "Tier-0 sweep (cycle 1, this run) -- Anthropic News blog: 'Our position on open-weights models' (2026-07-27), flagged as a triage candidate for cycle 2"
+  ],
+  "claims": [
+    {
+      "text": "Anthropic published a statement on 27 July 2026 saying it has never advocated for a ban on open-weight AI models and does not support banning them as a category",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Direct fetch of anthropic.com/news/position-open-weights-models confirms the statement verbatim ('never advocated for a ban on open-weights models'). Independently reported by TechCrunch, Axios, and CNBC same-day.",
+      "evidence": [
+        "https://www.anthropic.com/news/position-open-weights-models",
+        "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/",
+        "https://www.axios.com/2026/07/27/anthropic-open-weight-ban-china-dario-amodei",
+        "https://www.cnbc.com/2026/07/27/anthropic-ceo-dario-amodei-isnt-advocating-open-weight-model-ban.html"
+      ]
+    },
+    {
+      "text": "Anthropic states its primary concern is authoritarian governments, naming China, building more powerful AI models than the US -- not the existence of open-weight models -- with a secondary concern about misuse for cyberattacks or biological attacks",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Directly stated in the primary source; TechCrunch's independent reporting on Amodei's remarks matches this framing.",
+      "evidence": [
+        "https://www.anthropic.com/news/position-open-weights-models",
+        "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/"
+      ]
+    },
+    {
+      "text": "Instead of a ban, Anthropic proposes three measures: restricting powerful chip sales to China and cracking down on smuggling, cracking down on industrial-scale distillation operations, and mandatory safety testing for all sufficiently capable models, open and closed",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim from the primary source fetch; no other outlet needed since this is Anthropic's own self-attributed policy proposal.",
+      "evidence": ["https://www.anthropic.com/news/position-open-weights-models"]
+    },
+    {
+      "text": "Anthropic did not sign the 24 July 2026 joint statement led by Nvidia, Meta, Microsoft, Hugging Face, and Mistral opposing broad restrictions on open-weight models, and Amodei's statement followed murmuring in the industry over that absence",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Anthropic's absence from the 24 July letter was already independently confirmed for the previously published open-weight-ai-restrictions-letters story (Tom's Hardware's own reporting). TechCrunch's 27 July piece independently reports that Amodei's statement was a response to industry murmuring about that absence, naming Nvidia, Hugging Face, Meta, Microsoft, and Mistral as the letter's signatories.",
+      "evidence": [
+        "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/",
+        "https://www.axios.com/2026/07/27/anthropic-open-weight-ban-china-dario-amodei"
+      ]
+    }
+  ],
+  "adversarial_notes": "No separate falsifier sub-agent spawned given the cycle 2 time budget (30-minute cycle window). Risk assessed as low: claims 1-3 are Anthropic's own self-attributed statement, confirmed directly against the primary source text rather than a paraphrase; claim 4 (letter absence) reuses an already-adversarially-verified fact from the open-weight-ai-restrictions-letters story plus a fresh independent TechCrunch citation. dedup-check returned only moderate-strength matches (aisi-open-weight-cyber-gap, cisco-antares-vulnerability-models, open-weight-ai-restrictions-letters, score 0.5) -- read the closest match (open-weight-ai-restrictions-letters) before drafting; this is a distinct event (Anthropic's own statement, not an update to the letter), so published as a standalone article rather than a follow-up, per verification.md §8 unrelated-despite-surface-similarity outcome."
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "anthropic-open-weights-position",
+  "title": "Anthropic says it has never advocated for a ban on open-weight AI models",
+  "date": "2026-07-27",
+  "status": "published",
+  "first_seen": "2026-07-28",
+  "published_at": "2026-07-28",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/news/position-open-weights-models",
+    "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/",
+    "https://www.axios.com/2026/07/27/anthropic-open-weight-ban-china-dario-amodei",
+    "https://www.cnbc.com/2026/07/27/anthropic-ceo-dario-amodei-isnt-advocating-open-weight-model-ban.html"
+  ],
+  "follows": null,
+  "reason": "Published. Announcement/statement claim type, confirmed against Anthropic's own primary-source text plus three independent Tier-2 outlets for context and framing.",
+  "watch": [
+    "Whether Anthropic signs a future industry letter on open-weight policy",
+    "Any US government policy response citing Anthropic's position",
+    "Whether the proposed chip-sales/distillation/safety-testing measures advance into actual policy or legislation"
+  ],
+  "notes": [
+    "2026-07-28 c2: surfaced via Tier-0 sweep in cycle 1 (Anthropic News blog), triaged and published in cycle 2. dedup-check returned only moderate matches (aisi-open-weight-cyber-gap, cisco-antares-vulnerability-models, open-weight-ai-restrictions-letters) -- read the closest match (open-weight-ai-restrictions-letters) and confirmed this is a distinct event (Anthropic's own statement responding to that letter, not new information about the letter itself); published standalone rather than as a follow-up. No separate falsifier sub-agent spawned given the 30-minute cycle 2 window; risk judged low since core claims are Anthropic's self-attributed statement confirmed against primary-source text."
+  ]
+}
