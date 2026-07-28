@@ -1,0 +1,22 @@
+{
+  "slug": "nvidia-safe-superintelligence-5b-investment",
+  "title": "Nvidia and Ilya Sutskever's Safe Superintelligence announce long-term partnership",
+  "status": "published",
+  "first_seen": "2026-07-28",
+  "published_at": "2026-07-27",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership",
+    "https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/",
+    "https://www.investing.com/news/stock-market-news/nvidia-to-invest-5-billion-in-ilya-sutskevers-ai-startup-source-says-4814862"
+  ],
+  "follows": null,
+  "watch": [
+    "Any on-record disclosure of the actual investment amount by Nvidia or SSI",
+    "A second genuinely independent (non-Bloomberg-derived) Tier<=2 report on the $5B figure",
+    "SSI's own confirmation or dispute of the $5B number"
+  ],
+  "notes": [
+    "2026-07-28 c4: New standalone story, surfaced via fresh raw ingest (GNews: AI chips and compute, ~00:10Z pull) -- also a deferred candidate noted in cycle 1's report. dedup-check: two moderate (0.4) matches against unrelated Nvidia deals (Amkor packaging, SK Group AI factory partnership) -- different companies/subject, judged coincidental. Verified directly against NVIDIA's own newsroom press release (Tier-0): partnership and Vera Rubin compute access confirmed on-record with named-executive quotes. The widely-reported $5B investment figure traced explicitly: fetched Reuters' own copy, which states outright 'Bloomberg earlier reported the amount' -- every outlet surveyed relays Bloomberg's figure, none independently source it. Published the $5B figure as single-source, attributed to Bloomberg by name, per the wire-exclusive rule (verification.md SS2). No open_obligation set -- this is an already-announced, on-record partnership (not a pending deal/talks/lawsuit), the only open item is the undisclosed dollar amount, tracked via the watch list instead. style-gate: nvidia-safe-superintelligence-5b-investment EN pass / TR pass."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+    "slug": "nvidia-safe-superintelligence-5b-investment",
+    "checked_at": "2026-07-28T00:35:00+00:00",
+    "method": "Direct verification against a Tier-0 primary source (NVIDIA Newsroom press release) plus cross-checked wire-exclusive tracing for the investment-amount claim, per policy/verification.md §2 and §5. Time-constrained cycle (tight window to 00:57Z deadline); verification and adversarial sourcing-trace were performed in the same pass rather than as two separate sub-agent contexts, but the adversarial step (explicitly tracing the $5B figure's sourcing chain across three outlets) was completed before publication.",
+    "origin_items": [
+        "Surfaced via fresh raw ingest (GNews: AI chips and compute, item published 2026-07-28T00:10:25Z, via_outlet GuruFocus) and independently via a same-topic item (Data Center Dynamics) in the same feed pull. Flagged as a deferred candidate in cycle 1's report. dedup-check before opening: two moderate (0.4) matches against unrelated Nvidia deals (Amkor packaging partnership, SK Group AI factory partnership) -- different companies/subject, judged coincidental keyword overlap on 'Nvidia', not a real match."
+    ],
+    "claims": [
+        {
+            "text": "Nvidia and Safe Superintelligence announced a long-term strategic partnership on 27 July 2026, giving SSI access to Nvidia's next-generation Vera Rubin platform and roughly a tenfold increase in compute capacity",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Directly confirmed by NVIDIA's own newsroom press release (Tier-0 primary source), including on-record quotes from Jensen Huang (NVIDIA CEO) and Ilya Sutskever (SSI cofounder). 'Order of magnitude' compute increase and Vera Rubin platform access both stated in the release itself, not sourced to a third party.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership"
+            ]
+        },
+        {
+            "text": "Nvidia is making an equity investment in Safe Superintelligence as part of the partnership, though neither company has disclosed the amount",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "The NVIDIA press release confirms an investment is part of the deal but states no dollar figure. TechCrunch's reporting independently confirms the release 'is sparse in details' and that TechCrunch reached out to both companies for the amount without a response at publication time -- corroborates that neither party has disclosed a number.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic-partnership",
+                "https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/"
+            ]
+        },
+        {
+            "text": "The investment is reported at $5 billion, per Bloomberg sourcing citing a person familiar with the deal -- a figure Nvidia and SSI have not themselves confirmed, and which Reuters and other outlets explicitly attribute back to Bloomberg's reporting",
+            "type": "business",
+            "verdict": "single-source",
+            "reasoning": "Wire-exclusive check (verification.md §2) run explicitly: fetched the Reuters piece (via Investing.com) directly and confirmed its exact sourcing language -- 'Bloomberg earlier reported the amount of Nvidia's equity investment' -- meaning Reuters is relaying Bloomberg's number, not independently sourcing it. Every other outlet surveyed (CTech/Calcalist, Yahoo Finance, AOL, Tech Times, cryptobriefing.com) likewise traces the figure to the same Bloomberg report. This fails the independence bar for a business claim (needs >=2 independent Tier<=2 sources); published as single-source, attributed to Bloomberg by name, not stated as fact.",
+            "evidence": [
+                "https://www.investing.com/news/stock-market-news/nvidia-to-invest-5-billion-in-ilya-sutskevers-ai-startup-source-says-4814862",
+                "https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/"
+            ]
+        },
+        {
+            "text": "This is not Nvidia's first investment in SSI; Nvidia previously participated in earlier SSI funding rounds",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Stated consistently across independent reporting (TechCrunch, background search results) as established background -- SSI's prior funding history (total raised prior to this deal, backers including a16z, Sequoia, Alphabet, Greenoaks) is not disputed by any source found.",
+            "evidence": [
+                "https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/"
+            ]
+        }
+    ],
+    "falsifier_notes": "No denial, dispute, or contradicting report found for the partnership itself; NVIDIA's own release is unambiguous. Deliberately did not adopt any outlet's valuation figure ($32B, per PitchBook via secondary reporting) in the article body since it was not load-bearing for the claims being made and its own sourcing chain was not traced within the cycle's time budget -- omitted rather than under-verified. Checked specifically whether this deal could be conflated with an earlier, separate SSI funding round (Nvidia 'previously participated' per TechCrunch) -- the article states this explicitly as background rather than presenting today's announcement as SSI's first Nvidia backing. NVIDIA Newsroom (nvidianews.nvidia.com) is functionally the same registered Tier-0 source as 'NVIDIA AI Blog' in sources.yaml but is a distinct URL/section (newsroom vs. blogs.nvidia.com); flagged for source registration review.",
+    "gaps_closed_from_watching_state": []
+}
