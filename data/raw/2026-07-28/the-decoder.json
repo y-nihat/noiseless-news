@@ -38,5 +38,15 @@
     "published": "2026-07-28T12:06:42+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"608\" src=\"https://the-decoder.com/wp-content/uploads/2026/05/anthropic_logo_wall-1.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1088\" /></p>\n<p>        Anthropic CEO Dario Amodei is once again warning about the risks of open AI models while insisting he has never called for a ban. He argues that authoritarian states like China could overtake the US and that open models could be misused for biological or cyberattacks. Critics say he's mostly trying to protect his own business from cheaper competition.</p>\n<p>The article <a href=\"https://the-decoder.com/anthropic-ceo-amodei-doubles-down-on-open-weight-risk-stance-while-insisting-he-never-called-for-a-ban/\">Anthropic CEO Amodei doubles down on open-weight risk stance while insisting he never called for a ban</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "4ef11a8b7de53f53",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Anthropic says its Mythos model found vulnerabilities in cryptographic algorithms that secure the internet",
+    "url": "https://the-decoder.com/anthropic-says-its-mythos-model-found-vulnerabilities-in-cryptographic-algorithms-that-secure-the-internet/",
+    "published": "2026-07-28T19:12:27+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/anthropic_cybersecurity.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Anthropic's Claude Mythos Preview found weaknesses in key cryptographic algorithms, including a better attack on HAWK, a post-quantum signature scheme that human experts had reviewed for more than two years. The model found it in just 60 hours at an API cost of about $100,000. The findings don't affect systems in use today, but they show how AI could challenge core assumptions behind internet security, Anthropic says.</p>\n<p>The article <a href=\"https://the-decoder.com/anthropic-says-its-mythos-model-found-vulnerabilities-in-cryptographic-algorithms-that-secure-the-internet/\">Anthropic says its Mythos model found vulnerabilities in cryptographic algorithms that secure the internet</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "cef8c7b3465e489c",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Memory Efficient Audio Synthesis with Decoupled Temporal Depth Diffusion Transformers",
+    "url": "https://machinelearning.apple.com/research/audio-synthesis-diffusion-transformers",
+    "published": "2026-07-28T00:00:00+00:00",
+    "summary": "Siri Expressive Voices synthesize rich, configurable speech in real time and entirely on device, powered by AFM 3 Core Advanced, Apple’s most powerful on-device foundation model. This work presents the memory-efficient audio synthesis architecture behind that capability: a detokenizer that converts the semantic audio tokens emitted by the foundation model into high-fidelity audio within the tight compute and memory budget of the Apple Matrix Coprocessor (AMX). We convert semantic audio tokens to a residual vector quantization (RVQ) representation with a three-component design—a streaming…",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  }
+]

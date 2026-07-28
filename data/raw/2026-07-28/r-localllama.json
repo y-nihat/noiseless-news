@@ -248,5 +248,125 @@
     "published": "2026-07-28T16:17:58+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been occasionally checking Laguna S 2.1 to see if there's any updates/fixes to the issues they've been having. I just noticed that they recently updated their Q4_K_M and it's now ballooned to 96GB, bumping up 8 layers to FP16 while leaving the rest in 4-bit.</p> <p>Does anyone know why they would do this? I'm guessing because the previous Q4_K_M had issues at that level of quantization, but just wanted to see if anyone else has better insight into this.</p> <p>I tried using Unsloth's Q4_K_M, but I find that it starts to loop repeatedly at higher contexts. I haven't tried their latest updated version from yesterday where they fixed the YaRN config, but I've tried manually setting those config values in llama.cpp and even then I have the looping, so I think I'll get the same result. Will give it another spin though just in case.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BawbbySmith\"> /u/BawbbySmith </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v935ev/laguna_s_21_gguf_q4_k_m_went_from_68gb_to_96gb/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v935ev/laguna_s_21_gguf_q4_k_m_went_from_68gb_to_96gb/\">[comments]</a></span>",
     "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "440937aa340ffdce",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Should we be calling Elon a liar?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v99nlk/should_we_be_calling_elon_a_liar/",
+    "published": "2026-07-28T20:06:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Last year he said grok 3 would be open sourced in about 6 months. A year later and nada.</p> <p><a href=\"https://x.com/elonmusk/status/1959379349322313920\">https://x.com/elonmusk/status/1959379349322313920</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Terminator857\"> /u/Terminator857 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v99nlk/should_we_be_calling_elon_a_liar/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v99nlk/should_we_be_calling_elon_a_liar/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "06efcac5ccc184c5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Unsloth has begun dropping Kimi K3 GGUFs. The MXFP4 (it's 1.5 TB) and mmproj are already there.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9c77r/unsloth_has_begun_dropping_kimi_k3_ggufs_the/",
+    "published": "2026-07-28T21:43:17+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9c77r/unsloth_has_begun_dropping_kimi_k3_ggufs_the/\"> <img alt=\"Unsloth has begun dropping Kimi K3 GGUFs. The MXFP4 (it's 1.5 TB) and mmproj are already there.\" src=\"https://external-preview.redd.it/-Pi0PiNmpJmI17QD0uo-SnFZHONDxkrCISpiFrdpHa8.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=48f4e0f32c02df68aeb40a87995bb8f7d6d7cc0f\" title=\"Unsloth has begun dropping Kimi K3 GGUFs. The MXFP4 (it's 1.5 TB) and mmproj are already there.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/_TheWolfOfWalmart_\"> /u/_TheWolfOfWalmart_ </a> <br /> <span><a href=\"https://huggingface.co/unsloth/Kimi-K3-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9c77r/unsloth_has_begun_dropping_kimi_k3_ggufs_the/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "23058019b52d3bd2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A 5B-active model doesn't know much, and I've stopped counting that as a flaw",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v952ka/a_5bactive_model_doesnt_know_much_and_ive_stopped/",
+    "published": "2026-07-28T17:25:51+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v952ka/a_5bactive_model_doesnt_know_much_and_ive_stopped/\"> <img alt=\"A 5B-active model doesn't know much, and I've stopped counting that as a flaw\" src=\"https://preview.redd.it/x8pk741790gh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8bde0a7820a778e06d5af7983c0dc9cdb50522a3\" title=\"A 5B-active model doesn't know much, and I've stopped counting that as a flaw\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Bit of a change of mind post.</p> <p>I skipped the low active param stuff for a while because every one I tested failed the same way. Ask it something slightly obscure and it invents a plausible answer with complete confidence. Ling-3.0-flash is the one I've had running lately and it does this too. 124B total but only about 5B firing per token, so there just isn't much in there.</p> <p>What changed my mind is that I was testing it wrong. I was checking whether it knew things. In the loop I actually run it in, it never needs to know anything, it needs to go find out. Docs are on disk, the API reference is a fetch away, the codebase is right there. Knowledge that lives in weights is knowledge I can't update and can't audit.</p> <p>So the property I care about now is whether it calls the tool instead of guessing. That's a different thing and it's one you can train for, and the small ones seem better at it than their size suggests, probably because they were pointed at that rather than at trivia.</p> <p>Where this falls apart, to be fair to the objection. It has to know enough to know it doesn't know. When it's confident and wrong there's no tool call to intercept, it just answers. I've watched it invent a library API rather than grep for it. A rule that says look it up first helps a lot and doesn't fully fix it.</p> <p>The version I'd actually want is a small model explicitly trained to bail out to a tool on low confidence, and I don't know whether anyone is doing that on purpose or wh…",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "4d6f12415cd8729c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "White-hat hacking IS the defense to black-hat hacking. The techniques are the same. How does Dario expect companies to do it if their models refuse?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v96yn8/whitehat_hacking_is_the_defense_to_blackhat/",
+    "published": "2026-07-28T18:31:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>You patch security holes by intentionally finding them. If the models refuse to do it, how can companies protect themselves against rogue AIs, whether they are Chinese or OpenAI/Anthropic themselves? The Hugging Face attack showed the world that any AI can do the unexpected.</p> <p>The only true safety we have is defense with equally capable, open models that are NOT strangled due to safety measures. Anything less than that is stifling security, while simultaneously protecting Anthropic/OpenAI from competition, as acknowledged by Anthropic's message on open-weight models.</p> <p>Don't be fooled by any pro-open-weight companies who aim for &quot;safe open models&quot;. Always ask, &quot;safe in what way?&quot;</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/walden42\"> /u/walden42 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v96yn8/whitehat_hacking_is_the_defense_to_blackhat/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v96yn8/whitehat_hacking_is_the_defense_to_blackhat/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "005a565f185ec12c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Appreciation for Gemma 4 26b A4b",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v95tka/appreciation_for_gemma_4_26b_a4b/",
+    "published": "2026-07-28T17:52:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I really love this model, I have been using the q4_k_l by Bartowski (I have heard QAT is quite the downgrade in some aspects) and it handles every task I throw at it easily. Agentic and coding performance is not as good as Qwen of course but good enough and I have found myself to be constantly surprised by it considering the size and speed.</p> <p>I really like its personality. It's a great writer and soulful especially with lower soft logit capping values. Of course it also has native multimodality which is a big plus.</p> <p>But the real star of the show is its language capabilities and knowledge. It is excellent in German so it feels like a big cloud model in that regard and it knows quite a lot for such a speedy local model, too. Definately more world knowledge than Qwen.</p> <p>And all of that runs at around 10-23 token/s on my aging laptop with 600 token/s prefill performance. </p> <p>What is your experience with this model? If you haven't been using it for a while, consider giving it a go again with the new chat template.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dampflokfreund\"> /u/dampflokfreund </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v95tka/appreciation_for_gemma_4_26b_a4b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v95tka/appreciation_for_gemma_4_26b_a4b/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "ee20685fa7c97854",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "microsoft/Mage-VL · Hugging Face - An Efficient Codec-Native Streaming Multimodal Foundation Model",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v97f8d/microsoftmagevl_hugging_face_an_efficient/",
+    "published": "2026-07-28T18:47:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v97f8d/microsoftmagevl_hugging_face_an_efficient/\"> <img alt=\"microsoft/Mage-VL · Hugging Face - An Efficient Codec-Native Streaming Multimodal Foundation Model\" src=\"https://external-preview.redd.it/LYxzgRgMkB0QS3wki643sIjDzbXTknLkZXIZciX_aBQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=d9c9428153e7848f9f2f4181c68feb16d5072153\" title=\"microsoft/Mage-VL · Hugging Face - An Efficient Codec-Native Streaming Multimodal Foundation Model\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>Mage-VL</strong> is a <strong>codec-native, proactive-streaming multimodal foundation model</strong> for image and video understanding, whose visual encoder is trained <strong>entirely from scratch</strong> at a compact <strong>4B</strong> scale. It targets a modern <em>Moravec's paradox</em> of VLMs — strong at complex offline reasoning, yet slow and compute-heavy on simple real-time streaming perception. Instead of decoding video into uniformly-sampled frames and pushing a dense grid of patch tokens through a frozen web-pretrained ViT, Mage-VL follows the structure of modern video codecs: it separates a stream into <strong>anchor (I) frames</strong> and <strong>predicted (P) frames</strong>, keeps every anchor patch, and retains only the predicted-frame patches where the codec spends bits — the regions carrying real motion and new detail. This codec-aligned sparsity cuts visual tokens by <strong>over 75%</strong> while preserving spatio-temporal context, yielding <strong>up to 3.5× wall-clock inference speedup</strong> over uniform frame sampling.</p> <p>The system pairs <strong>two components</strong>:</p> <ul> <li><strong>Mage-ViT</strong> — a from-scratch <em>Codec-ViT</em> visual encoder that allocates tokens by codec-derived spatio-temporal importance, on a shared <code>16×16</code> patch grid with 3D rotary position encoding. It is <strong>codec-agnostic</strong>: the same interface accepts a tr…",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "f9d1e9e10f1d2511",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Now, this: 1,100 current/former frontier-AI employees sign a petition calling for US gov't to step in for \"pacing\" frontier development",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9bflp/now_this_1100_currentformer_frontierai_employees/",
+    "published": "2026-07-28T21:14:43+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9bflp/now_this_1100_currentformer_frontierai_employees/\"> <img alt=\"Now, this: 1,100 current/former frontier-AI employees sign a petition calling for US gov't to step in for &quot;pacing&quot; frontier development\" src=\"https://preview.redd.it/ytciwpbqc1gh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=d90b8fc82c47ef2c3d0b732f211bda1063af3c29\" title=\"Now, this: 1,100 current/former frontier-AI employees sign a petition calling for US gov't to step in for &quot;pacing&quot; frontier development\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>So, it appears that this is the week of open letters in AI🥲... an open letter signed by current and former employees of OpenAI, Anthropic and Google primarily - calling for a slow-down in frontier AI development and strengthened government &quot;oversight&quot;.</p> <blockquote> <p>To realize AI's potential, industry, government, and society at large may need the option to buy time to address emerging risks, develop security measures, and strengthen oversight.</p> </blockquote> <p><a href=\"https://www.pacingthefrontier.com/\">Pacing the Frontier</a></p> <p>And yes - that really is the full statement. It is only three short sections🥲</p> <ol> <li>AI research automation may accelerate capabilities beyond understanding or control.</li> <li>Society may need a way to “buy time,” but competitive pressure prevents unilateral slowing.</li> <li>A single request: the U.S. government should support an international effort to create technical and governance tools for deliberately pacing automated frontier-AI development.</li> </ol> <p>There is no detailed policy proposal, no definition of “pace,” no thresholds, enforcement design, verification mechanism, China strategy, open-source treatment, compute-control framework, or concrete evidence demonstrating that automated AI R&amp;D is presently near a dangerous runaway point.</p> <p>Some personal comments go much f…",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "93f96e04eb9dc444",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I got Kimi-k3 running.....",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9cwfz/i_got_kimik3_running/",
+    "published": "2026-07-28T22:09:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Results:</p> <pre><code>prompt eval: 40 tokens / 97.5s → 0.41 tok/s eval: 400 tokens / 1769.9s → 0.23 tok/s total: 440 tokens / 1867s (31 min) </code></pre> <p>Prompt:</p> <pre><code>&quot;Write a C++ function that reverses a linked list in place. Explain the pointer manipulation.&quot; </code></pre> <p>How I ran it:</p> <ul> <li>Using <a href=\"https://github.com/ggml-org/llama.cpp/pull/26185\">PR#26185 from llama.cpp GitHub</a></li> <li>Used the same PR for the conversion to GGUF.</li> </ul> <p>Hardware:</p> <ul> <li>9965WX PRO 512 GB DDR5 6400</li> <li>RTX 6000 PRO 96GB x2</li> <li>PCIE Gen 5 Raid NVME Raid card.</li> <li>2x 4TB 9100 Pros in Raid 0 (~29 GB/s)</li> </ul> <p>Run info:</p> <pre><code># other params are default, mmap is on (default.) CUDA_VISIBLE_DEVICES=0,1 llama-server \\ -m k3-00001-of-00033.gguf \\ --n-cpu-moe 93 -ngl 99 -c 8192 -fa on --jinja </code></pre> <p>Next Step: Connect the workstation using 2x 25GbE to the 100GbE Fabric (4xSpark Cluster )using RPC server.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Aroochacha\"> /u/Aroochacha </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9cwfz/i_got_kimik3_running/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9cwfz/i_got_kimik3_running/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "64f1bc15ee187acc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Agenta: an open-source Claude Cowork alternative where you can use self-hosted models (and any harness)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9c1hz/agenta_an_opensource_claude_cowork_alternative/",
+    "published": "2026-07-28T21:37:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9c1hz/agenta_an_opensource_claude_cowork_alternative/\"> <img alt=\"Agenta: an open-source Claude Cowork alternative where you can use self-hosted models (and any harness)\" src=\"https://preview.redd.it/uykxkzbqh1gh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=34b930f30addfb5f2a28adf663a35a8f2f78d84b\" title=\"Agenta: an open-source Claude Cowork alternative where you can use self-hosted models (and any harness)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey r/LocalLLaMA, I’m Mahmoud from Agenta.</p> <p>We built a self-hosted, more flexible, alternative to Claude Cowork .</p> <p><a href=\"https://youtu.be/Y5l2BPRkKC8\">This short video </a>shows how it works.</p> <p>I use it to build AI coworkers for my startup, like the marketing agent in the video. Or AI automations, like a daily report to our Slack about Reddit posts I should contribute to.</p> <p>You can switch between harnesses (right now Claude code, OpenAI Codex, or Pi, but we plan adding many more), and models (to use your self-hosted models). You can even your own ChatGPT or Claude subscription. </p> <p>You build agents by chatting with them. Each agent has its own instructions (`agents.md`), skills, and tools/MCPs.. You can provide feedback to the agent and it will edit its own configuration and improve.</p> <p>Each agent has its own work folder. I use it to build a wiki, for instance my marketing agent has knowledge of the product, the ICP, research about competitors that we built overtime.</p> <p>You can also turn the same agent into an automation that runs on a schedule or when something happens in another app.</p> <p>If this looks useful, check out the video and GitHub repo:</p> <p>Youtube: <a href=\"https://youtu.be/Y5l2BPRkKC8\">https://youtu.be/Y5l2BPRkKC8</a><br /> Github: <a href=\"https://github.com/agenta-ai/agenta\">https://github.com/agenta-ai/agenta</a></p> <p>To self-host copy paste <a href=\"https://github.com/Agent…",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "db2f617bb76653f3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[PAPER] GPQA, MMLU-Pro, and MMMU-Pro were audited for broken questions, and up to 12% of them had to be removed. New drop in clean versions released",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v99f6m/paper_gpqa_mmlupro_and_mmmupro_were_audited_for/",
+    "published": "2026-07-28T19:58:08+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v99f6m/paper_gpqa_mmlupro_and_mmmupro_were_audited_for/\"> <img alt=\"[PAPER] GPQA, MMLU-Pro, and MMMU-Pro were audited for broken questions, and up to 12% of them had to be removed. New drop in clean versions released\" src=\"https://external-preview.redd.it/dA5pwmkvUvz3lNMrhJR9OFc-ChoginftXNYjPKO_HAo.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3d79bed8e3bb1e04f8652af6778a0784cccf7717\" title=\"[PAPER] GPQA, MMLU-Pro, and MMMU-Pro were audited for broken questions, and up to 12% of them had to be removed. New drop in clean versions released\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I was very curious why all the models were topping out on GPQA-Diamond around 92 or 93% (<a href=\"https://artificialanalysis.ai/evaluations/gpqa-diamond\">AA</a>) and spent the last few weeks pouring over GPQA (Diamond and Extended), and then expanded to auditing MMLU-Pro and MMMU-Pro. </p> <p>It was quite frankly shocking just how many questions were malformed, had wrong answer keys, or questions with more than one realistic answer. In fact, on GPQA-Extended, MMLU-Pro and MMMU-Pro, ~12% of questions were verifiably broken! Once fixed, the top models hit around 98%.</p> <p>Full paper released here: <a href=\"https://github.com/adamallcock/answer-key-audit\">https://github.com/adamallcock/answer-key-audit</a></p> <p>As part of this process, I have also shopped <code>-Clean</code> versions of all four benchmarks with the broken items removed, but also a full flagged-candidate ledger so you can see exactly why. I've also included dual original-vs-cleaned scoring, lm-eval-harness tasks and Hugging Face datasets.</p> <p>I would love any feedback you have on the paper, and what benchmarks I should look at next. PS: There are some verbatim examples of broken questions on page 28 if you want to take a look.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pawofdoom\"> /u/pawofdoom…",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "7f616d12e141830e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Gemma 4 26B/31B Q4 QAT vs Q4/Q5/Q6/Q8",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9b23d/gemma_4_26b31b_q4_qat_vs_q4q5q6q8/",
+    "published": "2026-07-28T21:00:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>What are your experiences with Gemma 4's QAT versions compared to their regular ones? So far I have mostly heard about regressions, but if you have a different experience or even benchmarks that are in favor of QAT, this is the thread to share them.</p> <p>Please share your positive or negative experiences. I think we really need more data to verify if one is truly better than the other. Google itself has not released any data. Please also share whether you have used Unsloth's or Google's QAT.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dampflokfreund\"> /u/dampflokfreund </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9b23d/gemma_4_26b31b_q4_qat_vs_q4q5q6q8/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9b23d/gemma_4_26b31b_q4_qat_vs_q4q5q6q8/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "389d2c307e87e32e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Who is LoRA?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9c1fw/who_is_lora/",
+    "published": "2026-07-28T21:37:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Why does she need so much VRAM?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/InfusedBush\"> /u/InfusedBush </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9c1fw/who_is_lora/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9c1fw/who_is_lora/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
   }
 ]

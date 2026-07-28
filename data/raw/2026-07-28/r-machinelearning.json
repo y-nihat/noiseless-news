@@ -118,5 +118,25 @@
     "published": "2026-07-28T14:42:07+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>my goal was to train a Language model (SLM) entirely from scratch so no ML libraries allowed . so i gathered what's needed to make it happen : </p> <p>from tensor manipulation (views, operations , allocations) </p> <p>the autograd ( a DAG that retains the previous operations and inputs in order that led into a certain output tensor , this let's us also apply backpropagation so i've got to implement also the partial derivative functions in order to calculate the gradients for each weights) </p> <p>the neural networks modules (organizes the weights / activations , losses , optimizers implemented SGD and Adamw) </p> <p>the decoder so the layer norm , MHA , FFN .<br /> also implemented a Fast matmul using AVX2 to speed things up. </p> <p>with it i managed to train a tiny LM with 2 millions params.it's a 4 layer Decoder used tiny_shakespear i got what i think is a good result .<br /> since i can't post images in this post i will just paste the output: </p> <p>Corpus: 743500 bytes (669150 train, 74350 validation)</p> <p>TinyLM: L=4 C=192 H=6 T=128 V=256, 1902976 parameters (1.903M)</p> <p>Training: steps=0 batch=1 lr=0.0003 checkpoint=tiny_lm.chk (resumed)</p> <p>validation_loss=0.02989</p> <p>--- generation ---</p> <p>hello to the name of action. Soft you now! The fair Ophelia! Nymph, in thy orisons be all my sins remember'd. To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer the slings and arrows of of outrageous fortune, or to take arms against a sea of troubles and by opposing end them.</p> <p>check out the repo : <a href=\"https://github.com/nisbenz/TensorLib\">https://github.com/nisbenz/TensorLib</a><br /> it was a cool project overall and i managed to learn a lot about the core mechanics of frameworks like pytorch or ggml.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Intelligent_Nose_791\"> /u/Intelligent_Nose_791 </a> <br /> <span><a href=\"https://www.reddit.…",
     "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "b1e1366154bea45a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "How to deal with text only vector search across multimodal embedding space? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v9ad2j/how_to_deal_with_text_only_vector_search_across/",
+    "published": "2026-07-28T20:34:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>My data set is a list of images, each equipped with a a couple sentences of text.</p> <p>A user would search primarily with text only. My default approach is using BM25, but how would I facilitate searching with a vector DB and a model that embeds vectors in a multimodal combined space?</p> <p>Here is my dilemma:</p> <p>Do I embed text part and image part as 2 separate individual vectors or do I combine them into 1 vector?</p> <p>If a typical search happens with text only, that would immediately deprioritize all image-only embeddings and only good text matches would float up. This is why I am now considering embedding text and images together but would prefer to hear more opinions on this. Thanks.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AdaObvlada\"> /u/AdaObvlada </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v9ad2j/how_to_deal_with_text_only_vector_search_across/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v9ad2j/how_to_deal_with_text_only_vector_search_across/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
+  },
+  {
+    "id": "64063a5c4bf4f7db",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "PNAS: Over Half of All Academic Articles Now Show LLM Influence—7.3M-Paper Study [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v93q78/pnas_over_half_of_all_academic_articles_now_show/",
+    "published": "2026-07-28T16:38:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Largest empirical study of AI penetration in academic publishing ever conducted—51%-by-2025 is the most authoritative quantitative marker yet of how thoroughly LLMs have reshaped scientific writing, and the inequality angle (adoption skews lower-prestige and non-English institutions) is a fresh policy dimension.</p> <p>---</p> <p>Source: <a href=\"https://pnas.org/doi/10.1073/pnas.2605754123\">https://pnas.org/doi/10.1073/pnas.2605754123</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Justgototheeffinmoon\"> /u/Justgototheeffinmoon </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v93q78/pnas_over_half_of_all_academic_articles_now_show/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v93q78/pnas_over_half_of_all_academic_articles_now_show/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T22:40:09.295633+00:00"
   }
 ]
