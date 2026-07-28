@@ -8,5 +8,55 @@
     "published": "2026-07-28T00:39:44+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Structural Admission: verify a sequential task’s claimed dependency structure before interpreting learning</p> <p>results</p> <p>When we train agents on staged or multi-phase environments, it is tempting to interpret learning curves, transfer,</p> <p>or apparent “emergence” as evidence for a particular causal or informational structure.</p> <p>But has that structure actually been verified under the same observation and action interface seen by the learner?</p> <p>Structural Admission is a small, standard-library-only Python harness for testing that question before training</p> <p>begins. Researchers implement a task adapter and a separate scripted oracle; the core calibration, rollout,</p> <p>validation, reporting, and reproduction logic remains unchanged.</p> <p>It enforces, among other things:</p> <p>- calibration seeds disjoint from task-rollout seeds;</p> <p>- a CMI threshold fixed from synthetic calibration before candidate evaluation;</p> <p>- evaluation under both uniform-random and scripted-oracle policies;</p> <p>- oracle access limited by the learner-facing observation contract;</p> <p>- CI measurement restricted to preregistered phases;</p> <p>- paired environment noise and random-policy draws across conditions;</p> <p>- pre-disclosure leakage checks on declared observable field groups;</p> <p>- raw trajectory storage before aggregation;</p> <p>- balanced policies, conditions, seeds, and sample cardinalities;</p> <p>- immutable formal output directories;</p> <p>- content-hashed reports and byte-level reproduction of deterministic artifacts.</p> <p>The tool reports Admitted, Rejected, or Inconclusive. Failures are preserved rather than tuned away.</p> <p>One motivating case involved a relation intended to be non-operative. Its measured conditional mutual information</p> <p>was 0.07181 bits, above a previously calibrated threshold of 0.05902 bits. The task was rejected before learning</p> <p>experiments were interpreted, an…",
     "fetched_at": "2026-07-28T00:59:18.730075+00:00"
+  },
+  {
+    "id": "e33245c0d6b3fa5f",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Are single GPU research still published in ML/DL and its applications nowadays? Which are the most notable recent ones? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v8r7ab/are_single_gpu_research_still_published_in_mldl/",
+    "published": "2026-07-28T07:33:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>ML research is progressing at breakneck speed where frontier labs in both academia and industry have access to considerably large computes (GPUs). Where do small labs or independent researchers go in this context?</p> <p>Have you come across recent works in ML/DL and its applications (vision, language, speech, etc) where the work is good but it uses very limited compute? Maybe even single GPU workstations? In the past it was still possible, but, I am losing hope that single GPU works would soon become impossible.</p> <p>Pls link to the works.</p> <p>I came across InfiniteDiffusion, a work by an independent researcher Alexander Goslin using a single RTX 3090 : <a href=\"https://xandergos.github.io/terrain-diffusion/\">https://xandergos.github.io/terrain-diffusion/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/KingMakerMan\"> /u/KingMakerMan </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8r7ab/are_single_gpu_research_still_published_in_mldl/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8r7ab/are_single_gpu_research_still_published_in_mldl/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "1467f9ebd62b9b9a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "How exactly does the NeurIPS meta reviewer response work? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v8uic0/how_exactly_does_the_neurips_meta_reviewer/",
+    "published": "2026-07-28T10:34:30+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>We can currently answer the meta-reviewer via AC confidential comment, but they just posted the following tweet: </p> <p><a href=\"https://x.com/neuripsconf/status/2081991451236319328?s=46&amp;t=HWfJoLgHxGH2W5l-o3mPJw\">https://x.com/neuripsconf/status/2081991451236319328?s=46&amp;t=HWfJoLgHxGH2W5l-o3mPJw</a></p> <p>Where it says:</p> <p>“Please post your answers to the Area Chair's initial-meta reviews via a comment from July 28th and by August 3rd, so that reviewers can see it too.”</p> <p>Is this option going to open up today as the rebuttal period ends? Is this where the meta-reviewer rebuttal should be posted? Or are we supposed to finalize the discussions and inform the AC at the end, stating what happened basically? It is all quite confusing.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ihatesalad1\"> /u/ihatesalad1 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8uic0/how_exactly_does_the_neurips_meta_reviewer/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8uic0/how_exactly_does_the_neurips_meta_reviewer/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "8dee8e82b239fd54",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS 2026 AI-generated reviews [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v8vuae/neurips_2026_aigenerated_reviews_d/",
+    "published": "2026-07-28T11:34:57+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm really confused about what the point of the prompt injection was (speaking as an author). Is it just a study? I would really prefer that they took action against the AI-generated reviews. Obviously, we cannot assume that the reviewers were copy-pasting the output from the LLM without having given it any look at all, but in some cases that does look to be the case. In fact, in some cases the meta-reviewer seems to have also largely used LLMs. What exactly is the consequence here for using an LLM for reviewing? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/bricklerex\"> /u/bricklerex </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8vuae/neurips_2026_aigenerated_reviews_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8vuae/neurips_2026_aigenerated_reviews_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "8332b28b9b9ebf92",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Editing Neurips Rebuttal [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v8jzmn/editing_neurips_rebuttal_d/",
+    "published": "2026-07-28T01:37:30+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>It looks like the post rebuttal button will change to official comment July 27 AoE. Will I be able to edit my rebuttal once that happens?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/New_Supermarket_5490\"> /u/New_Supermarket_5490 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8jzmn/editing_neurips_rebuttal_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8jzmn/editing_neurips_rebuttal_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "e54283c77bba8f76",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Pattern Recognition (Elsevier): \"With Editor\" status date changed, but status didn't. Is this normal? [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1v8q9xc/pattern_recognition_elsevier_with_editor_status/",
+    "published": "2026-07-28T06:42:34+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone,</p> <p>I have a manuscript under review at <strong>Pattern Recognition (Elsevier)</strong>, and I'm a bit confused about the Editorial Manager status.</p> <p>My timeline is:</p> <ul> <li><strong>Submitted:</strong> May 26, 2026</li> <li><strong>Re-submitted after making corrections, July 1:</strong> Status <strong>&quot;With Editor&quot;</strong></li> <li><strong>July 22:</strong> The <strong>Status Date</strong> updated to July 22, but the <strong>Current Status</strong> remained <strong>&quot;With Editor&quot;</strong></li> <li><strong>Today:</strong> Still showing <strong>&quot;With Editor&quot;</strong></li> </ul> <p>So the status date changed, but the visible status didn't.</p> <p><strong>I'm wondering:</strong></p> <ul> <li>Has anyone experienced this with <strong>Pattern Recognition</strong> or other Elsevier journals?</li> <li>Approximately how long after this stage did you receive your first decision? [P] Pattern Recognition (Elsevier): &quot;With Editor&quot; status date changed, but status didn't. Is this normal?</li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mdiktushar\"> /u/mdiktushar </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8q9xc/pattern_recognition_elsevier_with_editor_status/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v8q9xc/pattern_recognition_elsevier_with_editor_status/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
   }
 ]

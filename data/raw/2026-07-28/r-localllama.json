@@ -38,5 +38,105 @@
     "published": "2026-07-28T00:27:31+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><ol> <li>It doesn't solve any problems. Just a few paragraphs above, he says he fears that authoritarian states (he names China, and possibly others) can use their models to do evil stuff. And surely enough, malicious actors creating a model for themselves and for the EVILZ aren't going to subject it to safety controls (or even release it publicly).</li> <li>It just sets a bureaucratic wall against AI models that can be made as high as preferred. &quot;Oh, this model says Israel is bad; this is anti-Semitic. No safety here.&quot; &quot;Oh, this other one, yes, can stop cyberattacks, but can also be used to launch some&quot; (see the recent episode that involved OpenAI and Hugging Face and the fact that they used open models to defend their site). Open-source models will be delayed and made hard to use for companies and private individuals, just for &quot;reasons.&quot;</li> <li>And what is even more important to me: open-weights models will need to be depowered at the root, because the guardrails for open models need to be in the model itself. As Stable Diffusion taught us, when you try to sanitize stuff, you end up poisoning your own model and making it stupid. At the same time, closed models can have their guardrails implemented as a filter that decides if a request is acceptable or not. That is way easier to implement and way less prone to breaking the model itself. <strong>So the proposal is aiming to kill open weights models, just with extra logical steps.</strong></li> </ol> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/UserXtheUnknown\"> /u/UserXtheUnknown </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8idkc/why_anthropics_battle_is_meant_to_poison_the/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8idkc/why_anthropics_battle_is_meant_to_poison_the/\">[comments]</a></span>",
     "fetched_at": "2026-07-28T00:59:18.730075+00:00"
+  },
+  {
+    "id": "9b74b69d0fba0a34",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Sorry, but did Dario just say that closed-weights, in-secret models are worse than open-weights ones?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8tny9/sorry_but_did_dario_just_say_that_closedweights/",
+    "published": "2026-07-28T09:50:59+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8tny9/sorry_but_did_dario_just_say_that_closedweights/\"> <img alt=\"Sorry, but did Dario just say that closed-weights, in-secret models are worse than open-weights ones?\" src=\"https://preview.redd.it/v1rsg4gbzxfh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=409c789de25716c43f13e81fd5c910c8678e114b\" title=\"Sorry, but did Dario just say that closed-weights, in-secret models are worse than open-weights ones?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BritishDudeGuy\"> /u/BritishDudeGuy </a> <br /> <span><a href=\"https://i.redd.it/v1rsg4gbzxfh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8tny9/sorry_but_did_dario_just_say_that_closedweights/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "9c63d94365006a74",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "First evidence of a pending qwen3.7 open weights release. Qwen3.7-flash is on open router. They referred to Qwen3.6-35b-a3b as Qwen3.6 flash so this is likely a small MoE. The prices are substantially cheaper than 3.6 flash with a native 1M context window.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8kbwn/first_evidence_of_a_pending_qwen37_open_weights/",
+    "published": "2026-07-28T01:52:34+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8kbwn/first_evidence_of_a_pending_qwen37_open_weights/\"> <img alt=\"First evidence of a pending qwen3.7 open weights release. Qwen3.7-flash is on open router. They referred to Qwen3.6-35b-a3b as Qwen3.6 flash so this is likely a small MoE. The prices are substantially cheaper than 3.6 flash with a native 1M context window.\" src=\"https://external-preview.redd.it/jSLLYQBfo1V9Y0yzss1eLOLPvgimAsVAW6qf29ro6sQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=1c54fe8e94ef6fa9be8a2c3fc61e0746cf2c788c\" title=\"First evidence of a pending qwen3.7 open weights release. Qwen3.7-flash is on open router. They referred to Qwen3.6-35b-a3b as Qwen3.6 flash so this is likely a small MoE. The prices are substantially cheaper than 3.6 flash with a native 1M context window.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fulgencio_batista\"> /u/fulgencio_batista </a> <br /> <span><a href=\"https://openrouter.ai/qwen/qwen3.7-flash\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8kbwn/first_evidence_of_a_pending_qwen37_open_weights/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "3c2ac8d37d555a2b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Medical model: Reasoning-Medical-27B (Qwen3.6-27B finetune)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8qyl2/medical_model_reasoningmedical27b_qwen3627b/",
+    "published": "2026-07-28T07:19:27+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>From the description: &quot;Reasoning-Medical-27B is designed for universal advanced medical reasoning in professional medicine, medical genetics, college biology/medicine, and clinical knowledge. The model was fine-tuned on a large-scale dataset of 370,000 high-quality question-and-answer examples, incorporating Chain-of-Thought reasoning to improve step-by-step medical related questions. Training was performed using the GRPO trainer with the Unsloth optimization method for efficient fine-tuning.&quot;</p> <p>Model: <a href=\"https://huggingface.co/EpistemeAI/Reasoning-Medical-27B\">https://huggingface.co/EpistemeAI/Reasoning-Medical-27B</a></p> <p>Demo: <a href=\"https://huggingface.co/spaces/EpistemeAI/reasoning-medical-27b\">https://huggingface.co/spaces/EpistemeAI/reasoning-medical-27b</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/beneath_steel_sky\"> /u/beneath_steel_sky </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8qyl2/medical_model_reasoningmedical27b_qwen3627b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8qyl2/medical_model_reasoningmedical27b_qwen3627b/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "7b8984ed7962aece",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Neutrino-1 8B: A dense decoder-only transformer.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8rsx4/neutrino1_8b_a_dense_decoderonly_transformer/",
+    "published": "2026-07-28T08:07:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8rsx4/neutrino1_8b_a_dense_decoderonly_transformer/\"> <img alt=\"Neutrino-1 8B: A dense decoder-only transformer.\" src=\"https://external-preview.redd.it/IlMSIu-lPR1j-eJlrm80XJB0lyednWhZ83rNUel0xf8.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=73dba5052a4df3f60ee86a1ddc7c71402ac7103e\" title=\"Neutrino-1 8B: A dense decoder-only transformer.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rm-rf-rm\"> /u/rm-rf-rm </a> <br /> <span><a href=\"https://www.fermionresearch.com/models/neutrino-8b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8rsx4/neutrino1_8b_a_dense_decoderonly_transformer/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "ea93bd5730ee77cf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "current state of the CMP 170hx",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8uad7/current_state_of_the_cmp_170hx/",
+    "published": "2026-07-28T10:23:09+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8uad7/current_state_of_the_cmp_170hx/\"> <img alt=\"current state of the CMP 170hx\" src=\"https://external-preview.redd.it/bzJjcnJ1b241eWZoMQW6DiSl4mcWCqNA68XkgTAywcC9wshqYGK2V0iJuJ5i.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6ebe6a75ab3d03479f26a29186becfda3106cfc8\" title=\"current state of the CMP 170hx\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Toooooool\"> /u/Toooooool </a> <br /> <span><a href=\"https://v.redd.it/jxjjxaon5yfh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8uad7/current_state_of_the_cmp_170hx/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "ad2397c8a2a7f851",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "24/7 open models",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8vyf3/247_open_models/",
+    "published": "2026-07-28T11:39:56+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8vyf3/247_open_models/\"> <img alt=\"24/7 open models\" src=\"https://preview.redd.it/kudf0a4djyfh1.jpg?width=140&amp;height=92&amp;auto=webp&amp;s=f852190e5dc59ea889766d9cbfdb2081dad2178a\" title=\"24/7 open models\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Denny’s on 𝕏: <a href=\"https://x.com/DennysDiner/status/2081069889931112816\">https://x.com/DennysDiner/status/2081069889931112816</a></p> <p>History with Jensen Huang/NVIDIA and Denny’s: NVIDIA Founder and CEO Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision: <a href=\"https://blogs.nvidia.com/blog/nvidia-dennys-trillion/\">https://blogs.nvidia.com/blog/nvidia-dennys-trillion/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v8vyf3\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8vyf3/247_open_models/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "a391030cb5ca5cf4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Update your chat template for dsv4 if you're using llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8oalz/update_your_chat_template_for_dsv4_if_youre_using/",
+    "published": "2026-07-28T04:58:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Following some recent commits in llama.cpp, preserve_thinking behavior for chat templates included in older DSV4 ggufs got broken. This makes the model pretty dumb in a coding agent context.</p> <p>Adding kwargs won't fix it. Just add:</p> <p>--chat-template-file /path/to/llama.cpp/models/templates/deepseek-ai-DeepSeek-V4.jinja</p> <p>to override the gguf's template with the new one the contributors created.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/computehungry\"> /u/computehungry </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8oalz/update_your_chat_template_for_dsv4_if_youre_using/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8oalz/update_your_chat_template_for_dsv4_if_youre_using/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "31ac51f00730f086",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What’s the maximum physical amount of intelligence we can fit into small models?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8teut/whats_the_maximum_physical_amount_of_intelligence/",
+    "published": "2026-07-28T09:37:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I was talking to my friend the other day, who is a <em>really</em> avid supporter of local models. He thinks we might be able to get something as intelligent (not smart in terms of how much it knows) as Claude Fable in inside a model which is like, 20 billion parameters, even if we’d get that in 2035.</p> <p>While I don’t know much about small models since I’ve only recently come from the closed-source labs, is this even possible? I say no. And what is the minimum model size you think someone would need to host something as capable as Fable 5?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BritishDudeGuy\"> /u/BritishDudeGuy </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8teut/whats_the_maximum_physical_amount_of_intelligence/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8teut/whats_the_maximum_physical_amount_of_intelligence/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "f0ec3cfe604081f2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "microsoft/VibeVoice-ASR-BitNet",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8ncmr/microsoftvibevoiceasrbitnet/",
+    "published": "2026-07-28T04:10:23+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8ncmr/microsoftvibevoiceasrbitnet/\"> <img alt=\"microsoft/VibeVoice-ASR-BitNet\" src=\"https://external-preview.redd.it/6bwnX8JfK7QkDtiUw0a9f_t71ZwMWMyKmeIyiC4oUzo.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=28c059ceeb6f3b656456b7f7bd42724b7bf4e43c\" title=\"microsoft/VibeVoice-ASR-BitNet\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>VibeVoice-ASR-BitNet is a compressed variant of <a href=\"https://huggingface.co/microsoft/VibeVoice-ASR\">VibeVoice-ASR</a> optimized for real-time inference on edge CPUs — no GPU required. Through heterogeneous quantization, the model is compressed from 4.62 GB to 1.58 GB while achieving 1.6–2.3× faster inference than Whisper.cpp with real-time capability (RTF &lt; 1) on as few as 3 CPU threads.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Balance-\"> /u/Balance- </a> <br /> <span><a href=\"https://huggingface.co/microsoft/VibeVoice-ASR-BitNet\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8ncmr/microsoftvibevoiceasrbitnet/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "e60b7cd8ea588f2b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I built a tool to actually test which weights matter before quantizing, instead of guessing (Qwen3.6-27B, 3 builds: Bedrock/Tightrope/Gambit)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8nj6o/i_built_a_tool_to_actually_test_which_weights/",
+    "published": "2026-07-28T04:19:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Most quantization works like this: pick a bit depth, apply it everywhere, maybe let imatrix take a rough guess at what matters, ship it. Most don't check which specific weight groups can take a hit and which ones can't. It's convention and vibes.</p> <p>So I built a harness that quantizes one weight group at a time and measures exactly how much it diverges from the full precision model, using KL divergence across general, code, math, and tool calling prompts. Not a guess. A real number, per weight group.</p> <p>I want to be upfront about something before anyone else points it out: this kind of per-weight-group testing is something experienced quantizers already do informally, by feel and years of iteration. I'm not claiming to have invented a new technique. I automated it and got real numbers out of it instead of going on vibes. I'm one person with a testing harness, not a lab, and I'm not claiming this beats the work bartowski, Unsloth, or ik put out. They've got way more experience than I do.</p> <p>Here's what came out of the testing:</p> <p>Size does not predict how well a weight group compresses. I found weight groups that are nearly identical in size and role with wildly different tolerance for compression. One holds up fine at aggressive settings, its architectural twin breaks two levels earlier. You cannot see this by looking at the model. Only testing reveals it.</p> <p>There's a real cliff, and it's narrow. Across everything I tested, measurable divergence consistently started in a tight band, roughly 3.5 to 3.9 bits per weight. Stay above it and things hold clean. Drop below it and it starts to crack.</p> <p>Tool calling breaks first, every time. In the majority of weight groups I tested, tool calling was the first capability to show divergence, ahead of general chat, code, and math. If you care about agentic or tool use performance in a quantized model, this is the thing to watch, regardless of whose quant you're running…",
+    "fetched_at": "2026-07-28T11:59:14.498250+00:00"
   }
 ]
