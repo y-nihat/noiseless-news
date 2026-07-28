@@ -1,0 +1,23 @@
+{
+  "slug": "eu-ai-omnibus-enters-force",
+  "title": "EU's AI Omnibus enters into force, pushing back AI Act high-risk deadlines",
+  "date": "2026-07-27",
+  "status": "published",
+  "first_seen": "2026-07-28",
+  "published_at": "2026-07-28",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force",
+    "https://edri.org/our-work/ai-omnibus-deal-eu-lawmakers-should-reject-a-rollback-of-ai-safeguards/"
+  ],
+  "follows": null,
+  "reason": "Published. Announcement claim type confirmed against the European Commission's own primary source; the civil-society criticism claim is confirmed against EDRi's own primary statement of its position, framed in the article as attributed opinion.",
+  "watch": [
+    "Whether the December 2027 / August 2028 deadlines hold or are revised again before they land",
+    "Any legal challenge to the package from civil-society groups or member states",
+    "Whether the AI Office's expanded oversight powers are exercised in a way that becomes independently newsworthy"
+  ],
+  "notes": [
+    "2026-07-28 c3: surfaced via Tier-0 sweep in cycle 1 (European Commission Digital Strategy News), carried to cycle 3 for triage and verification. dedup-check ('EU AI Omnibus enters into force') returned only moderate matches (china-waico-ai-cooperation-body, eu-google-ai-android-interoperability, score 0.4) -- both distinct events; cleared to proceed as standalone. No separate falsifier sub-agent spawned given the cycle's tight time budget; risk judged low since all claims trace to primary self-attributed sources (the Commission's own regulation announcement, EDRi's own position statement) confirmed by direct fetch/search rather than paraphrase."
+  ]
+}
