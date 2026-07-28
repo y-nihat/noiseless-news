@@ -1,0 +1,24 @@
+{
+  "slug": "databricks-188b-valuation-round",
+  "title": "Databricks signs term sheet for funding round valuing company at $188 billion",
+  "status": "published",
+  "first_seen": "2026-07-28",
+  "published_at": "2026-07-27",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation",
+    "https://finance.yahoo.com/technology/articles/databricks-valued-188-billion-coatue-012434060.html",
+    "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-15",
+  "watch": [
+    "Whether the round actually closes 'later this summer' as Databricks expects, and at what final size",
+    "Any independent (non-WSJ-derived) confirmation of the $3 billion investment amount",
+    "Named participating investors beyond Coatue, once disclosed"
+  ],
+  "notes": [
+    "2026-07-28 c3: New standalone story, surfaced via discovery-sweep query 'AI company funding round announcement' (recurring_queries index 6-8 of policy/discovery.yaml), not from feed ingest. dedup-check: clean, no matches. Fresh verifier and fresh adversarial falsifier run in parallel: both independently confirmed the $188B term-sheet announcement via Databricks' own press release plus Reuters/TechCrunch corroboration; both flagged the $3B raise amount as a WSJ-exclusive figure with no independent confirmation (single-source), and both independently caught that 'Coatue declined to comment' would overstate sourcing that actually says Coatue could not immediately be reached -- that detail was dropped from the published article. No dispute, denial or date-conflation with the separate Feb 2026 $134B round found. open_obligation set: term sheet signed but round not yet closed. Databricks Newsroom proposed for source registration (unregistered Tier-0). style-gate: databricks-188b-valuation-round EN pass / TR pass."
+  ]
+}

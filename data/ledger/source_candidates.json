@@ -752,5 +752,16 @@
       ],
       "context": "Established Indian legal-news outlet (named bylines, court-reporting focus), independent of LiveLaw -- used as the second confirming source for gadkari-bombay-hc-deepfake-suit, matched LiveLaw's facts (judge, damages figure, procedural status) on independent fetch. Unregistered; propose Tier 2, type html."
     }
+  ],
+  "candidates_2026-07-28_night_c3": [
+    {
+      "domain": "databricks.com",
+      "first_seen": "2026-07-28",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation"
+      ],
+      "context": "Databricks' own newsroom -- Tier-0 primary for the $188B term-sheet announcement and stated use of funds (databricks-188b-valuation-round). Likely to recur for future Databricks product/funding announcements. Propose Tier 0 registration, type html."
+    }
   ]
 }

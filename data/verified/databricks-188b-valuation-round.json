@@ -1,0 +1,51 @@
+{
+    "slug": "databricks-188b-valuation-round",
+    "checked_at": "2026-07-27T23:59:00+00:00",
+    "method": "Fresh verifier sub-agent and independent adversarial falsifier sub-agent run in parallel per policy/verification.md §5. Announcement claim type for the term-sheet/valuation/use-of-funds facts (Tier-0 primary source: Databricks' own press release); business claim type for the $3B raise amount (wire-exclusive check applied, per §2).",
+    "origin_items": [
+        "Surfaced via this cycle's discovery sweep (recurring query 'AI company funding round announcement'), not from the feed ingest. dedup-check before opening: clean, no matches."
+    ],
+    "claims": [
+        {
+            "text": "Databricks signed a term sheet for a strategic funding round valuing the company at $188 billion, led by existing investor Coatue Management, expected to close later summer 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed directly by Databricks' own newsroom press release (Tier-0 primary source), corroborated by Reuters' own wire text (via Yahoo Finance syndication) and TechCrunch's named-byline reporting (Julie Bort). Falsifier specifically checked whether 'signed' overstates 'in talks'/'seeking' framing used by some outlets (e.g. a Yahoo headline saying 'Seeks') and found Databricks' own release states plainly it has signed a term sheet, consistent with 'expected to close later this summer' -- not overstated.",
+            "evidence": [
+                "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation",
+                "https://finance.yahoo.com/technology/articles/databricks-valued-188-billion-coatue-012434060.html"
+            ]
+        },
+        {
+            "text": "The round is reported to include a $3 billion investment, per Wall Street Journal sourcing citing people familiar with the matter -- a figure Databricks has not itself confirmed",
+            "type": "business",
+            "verdict": "single-source",
+            "reasoning": "Wire-exclusive check run per §2: every outlet found (Reuters, TechCrunch, Yahoo, US News, SiliconANGLE, Investing.com) traces the $3B figure to the same WSJ report citing anonymous sources; none add independent confirmation. Databricks' own release does not disclose an amount. Note: TechCrunch/Reuters phrase the non-response as Coatue 'could not immediately be reached for comment' rather than an affirmative decline -- the published article avoids the stronger 'declined to comment' wording the falsifier flagged as unsupported.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/articles/databricks-valued-188-billion-coatue-012434060.html",
+                "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/"
+            ]
+        },
+        {
+            "text": "The $188 billion valuation is roughly a 40% increase from the $134 billion valuation Databricks reached in February 2026, when it raised about $5 billion",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Independently stated by both Reuters (via Yahoo Finance) and TechCrunch as established background (TechCrunch dates the prior round to February 2026, consistent with CNBC's Feb 9 2026 report the falsifier located separately). Math checks: 188/134 ≈ 1.403, a ~40% increase. No date conflation with the new round found.",
+            "evidence": [
+                "https://finance.yahoo.com/technology/articles/databricks-valued-188-billion-coatue-012434060.html",
+                "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/"
+            ]
+        },
+        {
+            "text": "Databricks said the new capital will fund expansion of its Unity AI Gateway, Genie AI assistant and Lakebase database products, plus potential future AI acquisitions",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Directly stated in Databricks' own press release, naming all three products and future AI acquisitions/research as intended uses of the capital.",
+            "evidence": [
+                "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH. No dispute, denial, or retraction found for the $188B figure or the deal itself across any outlet searched, including pieces dated as late as 19 July. No conflation between this round and the earlier Feb 2026 $134B/$5B round -- confirmed as genuinely separate events. One wording nuance caught and corrected before publication: 'Coatue declined to comment' would have overstated sourcing that actually says Coatue 'could not immediately be reached for comment'; the published article omits the comment detail entirely rather than risk the inaccurate framing. Databricks Newsroom is an unregistered Tier-0 source -- proposed for registration in source_candidates.json.",
+    "gaps_closed_from_watching_state": []
+}
