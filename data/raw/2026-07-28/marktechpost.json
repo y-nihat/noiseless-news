@@ -1,0 +1,22 @@
+[
+  {
+    "id": "10ebf29ade5ae9c4",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Microsoft AI Releases MAI-Cyber-1-Flash: A 5B-Active-Parameter Cyber Model That Pushes MDASH to 95.95% on CyberGym",
+    "url": "https://www.marktechpost.com/2026/07/28/microsoft-ai-releases-mai-cyber-1-flash-a-5b-active-parameter-cyber-model-that-pushes-mdash-to-95-95-on-cybergym/",
+    "published": "2026-07-28T08:33:30+00:00",
+    "summary": "<p>Microsoft AI has released MAI-Cyber-1-Flash, its first model built specifically for cyber defense. It is a 137B total, 5B active sparse MoE fine-tune of MAI-Code-1-Flash with a 256k context window. The model does not ship as a standalone endpoint — it runs inside MDASH, Microsoft's multi-model agentic scanning harness, where it handles up to 90% of tasks and pushes the system to 95.95% on CyberGym.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/28/microsoft-ai-releases-mai-cyber-1-flash-a-5b-active-parameter-cyber-model-that-pushes-mdash-to-95-95-on-cybergym/\">Microsoft AI Releases MAI-Cyber-1-Flash: A 5B-Active-Parameter Cyber Model That Pushes MDASH to 95.95% on CyberGym</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "61dd64b989cabba2",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Deploying a 1-Bit Bonsai-27B Model with PrismML llama.cpp and OpenAI-Compatible Local Inference Workflows",
+    "url": "https://www.marktechpost.com/2026/07/28/deploying-a-1-bit-bonsai-27b-model-with-prismml-llama-cpp-and-openai-compatible-local-inference-workflows/",
+    "published": "2026-07-28T07:53:48+00:00",
+    "summary": "<p>In this tutorial, we deploy the 1-bit Bonsai-27B language model using the PrismML fork of llama.cpp, which provides the specialized CUDA kernels required to decode the model’s Q1_0_g128 GGUF quantization format</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/28/deploying-a-1-bit-bonsai-27b-model-with-prismml-llama-cpp-and-openai-compatible-local-inference-workflows/\">Deploying a 1-Bit Bonsai-27B Model with PrismML llama.cpp and OpenAI-Compatible Local Inference Workflows</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  }
+]

@@ -138,5 +138,115 @@
     "published": "2026-07-28T04:19:24+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Most quantization works like this: pick a bit depth, apply it everywhere, maybe let imatrix take a rough guess at what matters, ship it. Most don't check which specific weight groups can take a hit and which ones can't. It's convention and vibes.</p> <p>So I built a harness that quantizes one weight group at a time and measures exactly how much it diverges from the full precision model, using KL divergence across general, code, math, and tool calling prompts. Not a guess. A real number, per weight group.</p> <p>I want to be upfront about something before anyone else points it out: this kind of per-weight-group testing is something experienced quantizers already do informally, by feel and years of iteration. I'm not claiming to have invented a new technique. I automated it and got real numbers out of it instead of going on vibes. I'm one person with a testing harness, not a lab, and I'm not claiming this beats the work bartowski, Unsloth, or ik put out. They've got way more experience than I do.</p> <p>Here's what came out of the testing:</p> <p>Size does not predict how well a weight group compresses. I found weight groups that are nearly identical in size and role with wildly different tolerance for compression. One holds up fine at aggressive settings, its architectural twin breaks two levels earlier. You cannot see this by looking at the model. Only testing reveals it.</p> <p>There's a real cliff, and it's narrow. Across everything I tested, measurable divergence consistently started in a tight band, roughly 3.5 to 3.9 bits per weight. Stay above it and things hold clean. Drop below it and it starts to crack.</p> <p>Tool calling breaks first, every time. In the majority of weight groups I tested, tool calling was the first capability to show divergence, ahead of general chat, code, and math. If you care about agentic or tool use performance in a quantized model, this is the thing to watch, regardless of whose quant you're running…",
     "fetched_at": "2026-07-28T11:59:14.498250+00:00"
+  },
+  {
+    "id": "4ff91edc6659f056",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Gemini Distillation Service",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v911as/gemini_distillation_service/",
+    "published": "2026-07-28T15:02:02+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v911as/gemini_distillation_service/\"> <img alt=\"Gemini Distillation Service\" src=\"https://external-preview.redd.it/DsiOIzUSicS_9zIKwMDQbNT2LOE1o29sSYs49HAmO_k.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=635431c5fe10b3d4e477123496ecb5d7f8ce7c83\" title=\"Gemini Distillation Service\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>So looks like Google is now going to offer distilling as a service.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/giveen\"> /u/giveen </a> <br /> <span><a href=\"https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning/distillation\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v911as/gemini_distillation_service/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "430d6f05ec190727",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash, up to 32 tok/s on AMD Ryzen AI MAX+ 395",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai/",
+    "published": "2026-07-28T15:00:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9100b/deepseek_v4_flash_up_to_32_toks_on_amd_ryzen_ai/\"> <img alt=\"DeepSeek V4 Flash, up to 32 tok/s on AMD Ryzen AI MAX+ 395\" src=\"https://preview.redd.it/e67btq9fezfh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5677fdf34bfbcca513f22d67a698f39a9158c12e\" title=\"DeepSeek V4 Flash, up to 32 tok/s on AMD Ryzen AI MAX+ 395\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey fellow llamas. we have something new for Strix Halo owners we thought would be useful to share. i'll keep it short:</p> <p>We were able to fit DeepSeek V4 Flash plus its speculative draft on a single Ryzen AI MAX+ 395 with 128 GB of unified memory, and got it to a usable decode rate. </p> <p>Blog post with all details here: <a href=\"https://www.lucebox.com/blog/deepseek-v4-strix-halo\">https://www.lucebox.com/blog/deepseek-v4-strix-halo</a> (code is open-source, Apache-2.0)</p> <p>We submitted the run to LocalMaxxing. On July 25th, its next-fastest DeepSeek V4 Flash entry for the Radeon 8060S was HipFire at 18.99 tok/s. The previous best in the site’s Ryzen AI Max 395 unified-memory group was DwarfStar at 15.6 tok/s.</p> <p>That puts our run 68.5% ahead of HipFire and at 2.05× the DwarfStar result. These are comparisons against the public LocalMaxxing entries shown above, not controlled A/B tests.</p> <h1>ROCmFPX: fitting 284B weights into 128 GB</h1> <p>ROCmFPX is not one quantization format. It is a family of block formats built around the AMD ROCm/HIP path. Each block holds 32 weights as packed low-bit codes plus one or two small scales. ROCmFP2 stores a block in 10 bytes, or 2.50 bits per weight; ROCmFP3 uses 3.50 bits per weight; and the fast ROCmFP4 layout uses 4.25.</p> <p>For DeepSeek V4 Flash, we added the missing 2-bit format and its HIP kernels, then built a Strix-specific mixed-precision recipe. The enormous routed-expert gate and up matrices use ROCmFP2, expert down projections use ROCmFP3, and dense or mo…",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "7fbca78b09ef1e00",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What would it take for the frontier labs to open the weights of their old, deprecated proprietary models?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v92c7h/what_would_it_take_for_the_frontier_labs_to_open/",
+    "published": "2026-07-28T15:49:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Anyone thought about this? What do you think needs to happen for them to release the old weights? I’d love to see models like Gemini-2.5, OAI o3, 4o, 4.1 being open one day.<br /> In Oct 2025 Scam Altman said they could release the original GPT-4 “as a museum artefact” but obviously 10 months later there’s no museum and no artefact lol. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ythorne\"> /u/ythorne </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v92c7h/what_would_it_take_for_the_frontier_labs_to_open/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v92c7h/what_would_it_take_for_the_frontier_labs_to_open/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "94cf29e766cde32b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "spec: add DSpark speculative decoding by wjinxu · Pull Request #25173 · ggml-org/llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8w91b/spec_add_dspark_speculative_decoding_by_wjinxu/",
+    "published": "2026-07-28T11:52:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8w91b/spec_add_dspark_speculative_decoding_by_wjinxu/\"> <img alt=\"spec: add DSpark speculative decoding by wjinxu · Pull Request #25173 · ggml-org/llama.cpp\" src=\"https://external-preview.redd.it/rC4s2HJaHlLjc_W9tC3Wshd2IyXtDAdyxvG9Fl8xfs8.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=705e270ee8ea29d92c9d52e23511fb229aa6f0e8\" title=\"spec: add DSpark speculative decoding by wjinxu · Pull Request #25173 · ggml-org/llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It's time to experiment using DSpark! Please share your stats(pp/tg improvements).</p> <p><strong>DSpark related stuff to check</strong>:</p> <ul> <li><a href=\"https://www.reddit.com/r/LocalLLaMA/s/4whV3MFvOa\">DeepSpec - a deepseek-ai Collection</a></li> <li>DeepSeek-V4 with DSpark - <a href=\"https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark\">DeepSeek-V4-Pro-DSpark</a> &amp; <a href=\"https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark\">DeepSeek-V4-Pro-DSpark</a></li> <li>Bonsai AntiDoom with DSpark - <a href=\"https://huggingface.co/Danny-Dasilva/Bonsai-27B-antidoom-1bit-DSpark\">https://huggingface.co/Danny-Dasilva/Bonsai-27B-antidoom-1bit-DSpark</a></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/25173\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8w91b/spec_add_dspark_speculative_decoding_by_wjinxu/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "5e7f5e7daf0e28a1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "CohereLabs/North-Mini-Code-1.0-eagle · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v90f4e/coherelabsnorthminicode10eagle_hugging_face/",
+    "published": "2026-07-28T14:39:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v90f4e/coherelabsnorthminicode10eagle_hugging_face/\"> <img alt=\"CohereLabs/North-Mini-Code-1.0-eagle · Hugging Face\" src=\"https://external-preview.redd.it/UfpO2wR4K_J4DtNRm1a0R7v198UAFdajbJQjI1yMPAA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=05852ce6066bbe88794e9660601f7228ce1c166b\" title=\"CohereLabs/North-Mini-Code-1.0-eagle · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Eagle model for <a href=\"https://huggingface.co/CohereLabs/North-Mini-Code-1.0\">CohereLabs/North-mini-code-1.0</a>.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://huggingface.co/CohereLabs/North-Mini-Code-1.0-eagle\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v90f4e/coherelabsnorthminicode10eagle_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "90c1db952847f8d2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "SWE-rebench Multilingual Update (Go, Java, Python, Rust, TS). Evaluated: GLM-5.2, DeepSeek-V4 Pro, Qwen3.6-27B and others",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v93phk/swerebench_multilingual_update_go_java_python/",
+    "published": "2026-07-28T16:37:50+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v93phk/swerebench_multilingual_update_go_java_python/\"> <img alt=\"SWE-rebench Multilingual Update (Go, Java, Python, Rust, TS). Evaluated: GLM-5.2, DeepSeek-V4 Pro, Qwen3.6-27B and others\" src=\"https://external-preview.redd.it/t4cNt5D638DSOJgsxl8f-7IwJhLpxHIh7HxK5GHcBJE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9b72b5025e78c2cc97de15c8fea348f262235ecb\" title=\"SWE-rebench Multilingual Update (Go, Java, Python, Rust, TS). Evaluated: GLM-5.2, DeepSeek-V4 Pro, Qwen3.6-27B and others\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hi everyone!</p> <p>We’ve just released a major update to the leaderboard! We are expanding beyond Python with a new multilingual slice featuring real-world software engineering tasks across 5 languages<strong>.</strong> </p> <p>Open-weight models:</p> <table><thead> <tr> <th align=\"left\">Model</th> <th align=\"left\"><strong>Pass@1</strong></th> <th align=\"left\"><strong>Pass@5</strong></th> <th align=\"left\"><strong>Pass all 5</strong></th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>GLM-5.2 [high]</strong></td> <td align=\"left\"><strong>62,9%</strong> (± 1.19%)</td> <td align=\"left\"><strong>81,1%</strong></td> <td align=\"left\"><strong>39,6%</strong></td> </tr> <tr> <td align=\"left\"><strong>MiniMax M3</strong></td> <td align=\"left\"><strong>47,2%</strong> (± 1.13%)</td> <td align=\"left\"><strong>69,4%</strong></td> <td align=\"left\"><strong>20,7%</strong></td> </tr> <tr> <td align=\"left\"><strong>MiMo V2.5 Pro</strong></td> <td align=\"left\"><strong>46,5%</strong> (± 0.54%)</td> <td align=\"left\"><strong>65,8%</strong></td> <td align=\"left\"><strong>27,0%</strong></td> </tr> <tr> <td align=\"left\"><strong>DeepSeek-V4 Pro [high]</strong></td> <td align=\"left\"><strong>40,2%</strong> (± 1.29%)</td> <td align=\"left\"><strong>64,0%</strong></td> <td align=\"left\"><strong>13,5%</strong></td> </tr> <tr> <td align=\"left\"><strong>Qwen3.6-27B</strong></td> <td align=\"left\"><st…",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "5f8743f7f3a924ce",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I've been tracking RTX 5090 prices across EU stores since March, it's up €1,061 and still climbing",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8vkmm/ive_been_tracking_rtx_5090_prices_across_eu/",
+    "published": "2026-07-28T11:23:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Been running a GPU price tracker (<a href=\"https://www.pricesquirrel.com\">https://www.pricesquirrel.com</a>) since March, covering 20+ EU stores, recently added RAM, SSDs and CPUs too. Every GPU tier has gotten cheaper since launch. The RTX 5090 has done the exact opposite.</p> <p><strong>The data:</strong></p> <p>The ASUS TUF Gaming RTX 5090 OC was €3,239 in mid-March. It's now €4,300. That's €1,061 more expensive in 4.5 months, a 33% increase. Verified against Geizhals.</p> <p>The EU-wide average across all tracked 5090 models tells the same story:</p> <ul> <li>Germany: +29% since March</li> <li>France: +28% since March</li> <li>Netherlands: +23% since March</li> </ul> <p>Everything below 5090 (5070, 5060 Ti, RX 9070) has dropped 5-15%.</p> <p><strong>Why this matters for local inference:</strong></p> <p>The RTX 5090 is the only good single consumer GPU with 32GB VRAM, useful if you want to run larger models on one card without multi-GPU setups or aggressive quantization. Demand from the AI/ML crowd on top of gamers means supply hasn't caught up.</p> <p>The brief dip to ~€3,026 in late May lasted about 3 weeks before reversing hard. Anyone waiting for a correction has been waiting while prices climbed €1,000+ instead.</p> <p>If you're actually in the market right now, here's where the best current prices are (updated every 6 hours at pricesquirrel.com):</p> <ul> <li>Gainward RTX 5090 Phantom GS: €4,428 (Caseking DE)</li> <li>ASUS ROG Astral White: €4,399 (Megekko NL)</li> </ul> <p>Germany isn't always cheapest here, Netherlands beats it on specific models, worth checking both before buying.</p> <p>(reddit was down/lagging so this post was submitted twice for some reason)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/egudegi\"> /u/egudegi </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8vkmm/ive_been_tracking_rtx_5090_prices_across_eu/\">[link]</a></span> &#32; <span>…",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "e458ad90b4b2cb88",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "LoRA over GGUF: Train DeepSeek-V4-Flash in 90G VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v941oh/lora_over_gguf_train_deepseekv4flash_in_90g_vram/",
+    "published": "2026-07-28T16:49:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://github.com/woct0rdho/transformers5-qwen3.5-recipe\">https://github.com/woct0rdho/transformers5-qwen3.5-recipe</a></p> <p>An update on my progress with low-VRAM LoRA training over GGUF base model: Now we can train DeepSeek-V4-Flash (284B-A13B) in 90 GiB VRAM, with no CPU offloading.</p> <p>On Strix Halo it runs at 19 s/it. All the WTF parts - sliding attention, CSA, HCA, mHC now have vibe-coded Triton kernels, and they're faster than any other implementations I've seen.</p> <p>Besides training, I also hope the work on integrating GGUF into the PyTorch ecosystem can make non-training model surgeries more accessible, such as Heretic. Abliteration with mHC is still an unsolved task, see <a href=\"https://huggingface.co/blog/RadicalNotionAI/mhc-ablation-challenges\">https://huggingface.co/blog/RadicalNotionAI/mhc-ablation-challenges</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/woct0rdho\"> /u/woct0rdho </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v941oh/lora_over_gguf_train_deepseekv4flash_in_90g_vram/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v941oh/lora_over_gguf_train_deepseekv4flash_in_90g_vram/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "2207ed5ad9e555a2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.7 or 3.8 30B - 100B. When?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8xuqe/qwen_37_or_38_30b_100b_when/",
+    "published": "2026-07-28T13:01:41+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm not quite following the news.</p> <p>Is it true?</p> <p>When will the Qwen versions of this size be released? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dai_app\"> /u/dai_app </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8xuqe/qwen_37_or_38_30b_100b_when/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v8xuqe/qwen_37_or_38_30b_100b_when/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "e51cff0494837aac",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "It's the small things that matter the most. - llama.cpp - Bunch of updates(Boost & Fixes)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v8zset/its_the_small_things_that_matter_the_most/",
+    "published": "2026-07-28T14:16:06+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://github.com/ggml-org/llama.cpp/pull/22675\"><strong>ggml-cuda: add chunked SSD matmul for Mamba-2 prefill acceleration- #22675</strong></a></p> <p><strong>Nemotron-Nano-9B-v2</strong></p> <table><thead> <tr> <th align=\"left\">ub</th> <th align=\"left\">base (scan)</th> <th align=\"left\">branch (SSD)</th> <th align=\"left\">speedup</th> </tr> </thead><tbody> <tr> <td align=\"left\">128</td> <td align=\"left\">5,404</td> <td align=\"left\">5,351</td> <td align=\"left\">−1% (both scan)</td> </tr> <tr> <td align=\"left\">256</td> <td align=\"left\">6,180</td> <td align=\"left\">7,110</td> <td align=\"left\">+15%</td> </tr> <tr> <td align=\"left\">512</td> <td align=\"left\">6,627</td> <td align=\"left\">7,778</td> <td align=\"left\">+17%</td> </tr> <tr> <td align=\"left\">1k</td> <td align=\"left\">6,814</td> <td align=\"left\">8,152</td> <td align=\"left\">+20%</td> </tr> <tr> <td align=\"left\">2k</td> <td align=\"left\">6,759</td> <td align=\"left\">8,190</td> <td align=\"left\">+21%</td> </tr> <tr> <td align=\"left\">4k</td> <td align=\"left\">6,660</td> <td align=\"left\">8,118</td> <td align=\"left\">+22%</td> </tr> <tr> <td align=\"left\">8k</td> <td align=\"left\">6,387</td> <td align=\"left\">7,761</td> <td align=\"left\">+22%</td> </tr> </tbody></table> <p>pp16384 tok/s (base=scan, branch=SSD at ub&gt;128) tested on RTX 6000 Pro MaxQ.</p> <p><a href=\"https://github.com/ggml-org/llama.cpp/pull/25924\"><strong>ggml-metal: FWHT kernel for metal backend- #25924</strong></a></p> <p>Tested using unsloth/DeepSeek-V4-Flash-UD-IQ2_XXS on M4 Max with llama-bench -r 15.</p> <table><thead> <tr> <th align=\"left\">K cache</th> <th align=\"left\">Benchmark</th> <th align=\"left\">base</th> <th align=\"left\">PR head</th> <th align=\"left\">Speedup</th> </tr> </thead><tbody> <tr> <td align=\"left\">f16</td> <td align=\"left\">pp512</td> <td align=\"left\">228.90 ± 1.55 t/s</td> <td align=\"left\">228.46 ± 1.38 t/s</td> <td align=\"left\">-0.19%</td> </tr> <tr> <td align=\"left\">f16</td> <td align=\"left\">tg16<…",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
+  },
+  {
+    "id": "90d3b45966b3fa9c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Laguna S 2.1 GGUF Q4_K_M went from 68GB to 96GB?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v935ev/laguna_s_21_gguf_q4_k_m_went_from_68gb_to_96gb/",
+    "published": "2026-07-28T16:17:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been occasionally checking Laguna S 2.1 to see if there's any updates/fixes to the issues they've been having. I just noticed that they recently updated their Q4_K_M and it's now ballooned to 96GB, bumping up 8 layers to FP16 while leaving the rest in 4-bit.</p> <p>Does anyone know why they would do this? I'm guessing because the previous Q4_K_M had issues at that level of quantization, but just wanted to see if anyone else has better insight into this.</p> <p>I tried using Unsloth's Q4_K_M, but I find that it starts to loop repeatedly at higher contexts. I haven't tried their latest updated version from yesterday where they fixed the YaRN config, but I've tried manually setting those config values in llama.cpp and even then I have the looping, so I think I'll get the same result. Will give it another spin though just in case.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BawbbySmith\"> /u/BawbbySmith </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v935ev/laguna_s_21_gguf_q4_k_m_went_from_68gb_to_96gb/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v935ev/laguna_s_21_gguf_q4_k_m_went_from_68gb_to_96gb/\">[comments]</a></span>",
+    "fetched_at": "2026-07-28T17:38:14.645173+00:00"
   }
 ]
