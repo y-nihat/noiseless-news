@@ -1,0 +1,32 @@
+[
+  {
+    "id": "185393cd5fa5aec2",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Liquid AI Releases LFM2.5-Encoder-230M and LFM2.5-Encoder-350M: Bidirectional Encoders That Stay Fast at 8K Context on CPU",
+    "url": "https://www.marktechpost.com/2026/07/29/liquid-ai-releases-lfm2-5-encoder-230m-and-lfm2-5-encoder-350m-bidirectional-encoders-that-stay-fast-at-8k-context-on-cpu/",
+    "published": "2026-07-29T09:38:42+00:00",
+    "summary": "<p>Liquid AI released two open-weight bidirectional encoders, LFM2.5-Encoder-230M and LFM2.5-Encoder-350M. Both carry an 8,192-token context and are built on the LFM2 hybrid backbone. The 350M ranks fourth of 14 models on a 17-task GLUE, SuperGLUE, and multilingual suite, behind only larger models. The 230M clears one 8K-token forward pass on CPU in about 28 seconds.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/29/liquid-ai-releases-lfm2-5-encoder-230m-and-lfm2-5-encoder-350m-bidirectional-encoders-that-stay-fast-at-8k-context-on-cpu/\">Liquid AI Releases LFM2.5-Encoder-230M and LFM2.5-Encoder-350M: Bidirectional Encoders That Stay Fast at 8K Context on CPU</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "324e791dc937dac3",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Building Non-Interactive Agentic Coding Workflows with Moonshot AI’s Kimi CLI, JSONL Streaming, Testing, and Session Memory",
+    "url": "https://www.marktechpost.com/2026/07/28/building-non-interactive-agentic-coding-workflows-with-moonshot-ais-kimi-cli-jsonl-streaming-testing-and-session-memory/",
+    "published": "2026-07-28T23:04:44+00:00",
+    "summary": "<p>In this tutorial, we configure and operate Kimi CLI as a fully non-interactive AI coding agent. We install the CLI through uv with an isolated Python 3.13 environment, configure Moonshot API authentication through a TOML-based provider and model definition, and build a reusable Python wrapper for executing non-interactive CLI commands. We then apply Kimi to [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/28/building-non-interactive-agentic-coding-workflows-with-moonshot-ais-kimi-cli-jsonl-streaming-testing-and-session-memory/\">Building Non-Interactive Agentic Coding Workflows with Moonshot AI’s Kimi CLI, JSONL Streaming, Testing, and Session Memory</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "3652c54cd13c5868",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Fireworks AI Releases Fireworks Nexus: A Drop-In Routing and Cost-Control Layer That Moves Routine Coding Work to Open-Weight Models",
+    "url": "https://www.marktechpost.com/2026/07/28/fireworks-ai-releases-fireworks-nexus-a-drop-in-routing-and-cost-control-layer-that-moves-routine-coding-work-to-open-weight-models/",
+    "published": "2026-07-28T22:45:56+00:00",
+    "summary": "<p>Fireworks AI has released Fireworks Nexus, an AI management and routing platform aimed at engineering organizations. It connects the coding tools developers already use to a managed layer of open-weight models. The problem it targets is well documented. Forbes reported that Uber exhausted its entire 2026 AI budget in four months. Claude Code had reached [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/28/fireworks-ai-releases-fireworks-nexus-a-drop-in-routing-and-cost-control-layer-that-moves-routine-coding-work-to-open-weight-models/\">Fireworks AI Releases Fireworks Nexus: A Drop-In Routing and Cost-Control Layer That Moves Routine Coding Work to Open-Weight Models</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  }
+]

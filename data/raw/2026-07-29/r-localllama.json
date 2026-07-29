@@ -8,5 +8,105 @@
     "published": "2026-07-28T23:49:52+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9fetk/zucks_opinion_the_ai_future_is_for_everyone/\"> <img alt=\"Zuck's opinion: The AI Future Is for Everyone\" src=\"https://preview.redd.it/fypdn9gv42gh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=119db82e2db8aa37380b86d4dee5b5f0cf5d4570\" title=\"Zuck's opinion: The AI Future Is for Everyone\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>’Tis the season of AI open letters and manifestos, apparently.</p> <p>Mark Zuckerberg has now entered the debate over the future of AI with a WSJ op-ed published today - and frankly, his position is much more balanced and technologically coherent than <em>Pacing the Frontier</em>.</p> <p><a href=\"https://www.wsj.com/opinion/the-ai-future-is-for-everyone-a0c24e20?mod=hp_opin_pos_2\">The AI Future Is for Everyone - WSJ</a></p> <p>Zuckerberg’s argument is the most pro-diffusion of the four positions now circulating. His core view is that advanced AI should not be enclosed within a handful of frontier labs or government-controlled systems. It should spread through businesses, individuals, open ecosystems, products, and national infrastructure.</p> <p>The emphasis is on opportunity, competitiveness, American leadership, and broad human agency - not on “buying time” by attempting to slow the frontier.</p> <p>His argument, distilled:</p> <p><strong>AI should primarily be understood as a tool for expanding individual agency - not as a force from which institutions must protect humanity.</strong></p> <p>So far, the emerging AI-policy map looks something like this:</p> <p><strong>1. The open-model coalition: openness as national strategy</strong></p> <p>Nvidia, Microsoft, Meta, Google, OpenAI, IBM, the Linux Foundation, and others argue that open models, open weights, and ecosystem competition are strategic assets rather than threats.</p> <p><strong>2. Dario Amodei: open below the danger threshold, restricted above it</strong></p> <p>Open models are beneficial…",
     "fetched_at": "2026-07-29T00:25:08.888362+00:00"
+  },
+  {
+    "id": "fc3fc93ea70a98ae",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Nvidia is expected to raise GeForce RTX GPU prices again by up to 30%",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9h6y9/nvidia_is_expected_to_raise_geforce_rtx_gpu/",
+    "published": "2026-07-29T01:05:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9h6y9/nvidia_is_expected_to_raise_geforce_rtx_gpu/\"> <img alt=\"Nvidia is expected to raise GeForce RTX GPU prices again by up to 30%\" src=\"https://external-preview.redd.it/OHnm0D5XAWPA4pBJD9Xwjm7m-Odp3cdhWx_AJgD35nY.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=28d512a1a331e8317c77b2e82af1335791d19362\" title=\"Nvidia is expected to raise GeForce RTX GPU prices again by up to 30%\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ab2377\"> /u/ab2377 </a> <br /> <span><a href=\"https://www.notebookcheck.net/Nvidia-is-expected-to-raise-GeForce-RTX-GPU-prices-again-by-up-to-30.1353981.0.html\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9h6y9/nvidia_is_expected_to_raise_geforce_rtx_gpu/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "b2183abebbcb2dba",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Microsoft did it .... again! (404 for their Mage-Flow models on HF)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9swx1/microsoft_did_it_again_404_for_their_mageflow/",
+    "published": "2026-07-29T11:02:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9swx1/microsoft_did_it_again_404_for_their_mageflow/\"> <img alt=\"Microsoft did it .... again! (404 for their Mage-Flow models on HF)\" src=\"https://preview.redd.it/zw9ct2yxf5gh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=e14be50900c44774384900d34d88635da8f35a99\" title=\"Microsoft did it .... again! (404 for their Mage-Flow models on HF)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Still you could grab GGUF, MLX, FP8, etc., from others on HuggingFace.</p> <p><a href=\"https://huggingface.co/models?sort=trending&amp;search=Mage-Flow\">https://huggingface.co/models?sort=trending&amp;search=Mage-Flow</a></p> <p>GitHub : <a href=\"https://github.com/microsoft/Mage\">https://github.com/microsoft/Mage</a></p> <p>Take backup of GitHub ASAP.</p> <p><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v3o024/comment/p0fyifk/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button\">Thanks</a> for your comment <a href=\"/u/Mk-Daniel\">u/Mk-Daniel</a></p> <p><strong>Links for their Mage-Flow Models:</strong> (Currently it's only 404)</p> <ul> <li><a href=\"https://huggingface.co/microsoft/Mage-Flow\">https://huggingface.co/microsoft/Mage-Flow</a></li> <li><a href=\"https://huggingface.co/microsoft/Mage-Flow-Turbo\">https://huggingface.co/microsoft/Mage-Flow-Turbo</a></li> <li><a href=\"https://huggingface.co/microsoft/Mage-Flow-Edit\">https://huggingface.co/microsoft/Mage-Flow-Edit</a></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://i.redd.it/zw9ct2yxf5gh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9swx1/microsoft_did_it_again_404_for_their_mageflow/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "fb55e4c70b0d451f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A.X-K2 released",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9hpac/axk2_released/",
+    "published": "2026-07-29T01:27:42+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9hpac/axk2_released/\"> <img alt=\"A.X-K2 released\" src=\"https://preview.redd.it/qzil2fg1n2gh1.png?width=140&amp;height=49&amp;auto=webp&amp;s=a09ef86a2e5114a66169bb6ae3cd302f515c434a\" title=\"A.X-K2 released\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/skt/A.X-K2\">https://huggingface.co/skt/A.X-K2</a></p> <p><a href=\"https://huggingface.co/skt/A.X-K2-ALM\">https://huggingface.co/skt/A.X-K2-ALM</a></p> <p><a href=\"https://huggingface.co/KRAFTON/A.X-K2-Raon-Speech-21B-A3B\">https://huggingface.co/KRAFTON/A.X-K2-Raon-Speech-21B-A3B</a></p> <p>688B-A33B</p> <p>+ About South Korea's Soverign AI Foundation Model Project.</p> <p>South Korea's Soverign AI Foundation Model Project (This will not be official English name.)(aka. K-AI) is one of the national AI project in this government.</p> <p>Until 2027, the government invests total ₩530B($0.36B) to 4 companies. Every 6 months, 1~2 companies are dropped out.</p> <p>The second evaluation is the upcoming August. 5 companies - Upstage, SKT, LG AI Research, Naver Cloud, and NC AI - are the first funded companies. Naver Cloud and NC AI are dropped out in the first evaluation(Dec. 2025.). And Motif Technologies is chosen additional funded company.(Feb. 2026.)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Secure_Smoke_4280\"> /u/Secure_Smoke_4280 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v9hpac\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9hpac/axk2_released/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "c756d89b167b7de7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anyone tried the Q1 Kimi K3 yet? (555GB)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9kmis/anyone_tried_the_q1_kimi_k3_yet_555gb/",
+    "published": "2026-07-29T03:40:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9kmis/anyone_tried_the_q1_kimi_k3_yet_555gb/\"> <img alt=\"Anyone tried the Q1 Kimi K3 yet? (555GB)\" src=\"https://external-preview.redd.it/wPC451jNZ6XpUuFuKg65HBPN74-FR93T242097ddLbY.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f2157436e67a7292c56ae4071c74a2731f6ce924\" title=\"Anyone tried the Q1 Kimi K3 yet? (555GB)\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Hannibalj2ca\"> /u/Hannibalj2ca </a> <br /> <span><a href=\"https://huggingface.co/AtomicChat/Kimi-K3-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9kmis/anyone_tried_the_q1_kimi_k3_yet_555gb/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "4e2f8ad61d7100ee",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I built a GBNF grammar compiler that makes 8B models reliably call tools - here's how it works (deep dive)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9qvn3/i_built_a_gbnf_grammar_compiler_that_makes_8b/",
+    "published": "2026-07-29T09:14:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been building a local agent in Rust (Eris) that runs on llama.cpp and uses an Obsidian-compatible vault as memory. ~50 tools (vault read/write, memory, reminders, web fetch, email, calendar, vision).</p> <p>The biggest pain was getting small models to emit valid tool-calling JSON. You all know the drill: the model wraps JSON in code fences, invents tool names, forgets closing braces, adds trailing prose after the object.</p> <p>My solution: I compile each tool's JSON Schema into GBNF rules at session start, so the sampler enforces not just 'valid JSON' but 'valid JSON with exactly the right keys, types, and enum values for this specific tool'. Then before each LLM call, I narrow the grammar to only the tools that the semantic router matched for this turn. 8B model choosing between 3 tools instead of 50 = way more reliable.</p> <p>Wrote a detailed technical post about how it all works with real code from the project: <a href=\"https://eris-system.dev/blog/gbnf-grammars\">https://eris-system.dev/blog/gbnf-grammars</a></p> <p>Running Gemma 4 12B on a 4080 (16GB VRAM). Works great for chat + ~32k context + vision.</p> <p>Repo: <a href=\"https://github.com/janpauldahlke/eris\">https://github.com/janpauldahlke/eris</a> (Apache 2.0)</p> <p>Happy to answer questions about the grammar compiler, the recovery loop, or the architecture.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/paulqq\"> /u/paulqq </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9qvn3/i_built_a_gbnf_grammar_compiler_that_makes_8b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9qvn3/i_built_a_gbnf_grammar_compiler_that_makes_8b/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "d690468be0d47d7b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I tried running a 1.56TB MoE model on a 6GB RTX 4050 Laptop, Here’s the result",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9hd9u/i_tried_running_a_156tb_moe_model_on_a_6gb_rtx/",
+    "published": "2026-07-29T01:12:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The Test Bench Setup</p> <p>I tested running a massive 1.56TB Mixture-of-Experts (MoE) checkpoint (96 shards, 93 layers, 896 experts/layer, ~4.46 bits/param MXFP4) on a budget gaming laptop.</p> <p>Laptop: HP Victus 15</p> <p>GPU: NVIDIA RTX 4050 Laptop (6GB GDDR6, 96-bit interface @ 192 GB/s bandwidth, Ada Lovelace AD107)</p> <p>System RAM: 16GB DDR4 (Dual-Channel)</p> <p>Storage: Stock PCIe 4.0 NVMe SSD (Benchmarked at ~3,500 MB/s sequential read)</p> <p>Usable Fast Memory Budget: ~19GB total (~13.5GB available RAM + 5.5GB available VRAM after OS overhead)</p> <p>Hardware Context: The RTX 4050 uses 4th-Gen Tensor Cores. Because it lacks native MXFP4 hardware acceleration (which arrived with the 50-series/Blackwell), the engine dequantizes MXFP4 weights down to FP16/INT8 in memory before Tensor Core execution.</p> <p>Run 1: Standard Engine Architecture (Out-of-Box Attempt)</p> <p>Result: Hard Crash / OOM before Token 1</p> <p>Under the default engine setup, dense attention weights and shared parameters stay permanently resident in RAM while sparse expert weights stream off the NVMe.</p> <p>Required Resident Memory: ~40GB at 4-bit precision.</p> <p>Available Memory: ~19GB.</p> <p>The engine instantly hit an Out-Of-Memory (OOM) allocation error during the initial memory-map phase and terminated before processing a single prompt token.</p> <p>Run 2: Patched Engine (Streaming Dense Weights off SSD)</p> <p>To force the model to execute on 16GB RAM, I patched the runtime to treat RAM purely as a thin LRU cache, forcing the engine to stream non-cached dense weights and attention layers directly off the NVMe alongside the active experts.</p> <p>Real Benchmark Numbers:</p> <p>Initial Load &amp; Mmap Time: 5 minutes, 42 seconds (dominated by mmap overhead and parsing headers across all 96 shard files).</p> <p>Prefill (7-token prompt): 11.8 seconds (loads each layer's weights once across all positions).</p> <p>Decode Speed: 9.4 seconds / toke…",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "2e0aec1038678616",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "dropped 4k on a spark, am I crazy?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9lijh/dropped_4k_on_a_spark_am_i_crazy/",
+    "published": "2026-07-29T04:23:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Saw that the Asus Ascent 1tb was going for $3,950 from a few sources, couldn't stop thinking about it, finally just went ahead and did it. Am I completely insane? Will I regret this? I can't imagine the price will go down any time soon, so it seems like a good idea and I genuinely make good use of qwen 3.6 35BA3B on my current rtx5070ti, my biggest concern is only that it sounds like it's locked down to Nvidias DGX OS, but if it's Debian based, I think I can live with that as long as there's nothing hidden in their kernel that complicates things</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/cmdr-William-Riker\"> /u/cmdr-William-Riker </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9lijh/dropped_4k_on_a_spark_am_i_crazy/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9lijh/dropped_4k_on_a_spark_am_i_crazy/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "d4398766febe1cf4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Built and released BetterGPT-150M – A compact 150M parameter completion model (+ live HF Space demo)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9oa1u/built_and_released_bettergpt150m_a_compact_150m/",
+    "published": "2026-07-29T06:47:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey everyone,</p> <p>​I recently finished pre-training BetterGPT-150M, a small, lightweight causal language model with ~152 million parameters.Trained on 15B tokens.</p> <p>Dataset &amp; Training: Trained across stable and annealing phases using curated datasets (including FineWeb-Edu, fine maths, cosmopedia, starcode-python), ensuring strong capability retention while maximizing token efficiency.</p> <p>​Performance: Benchmark evaluations show it outperforms GPT-2 Small while remaining on par with models trained on significantly larger token budgets.</p> <p>​Since many small/tiny models tend to get buried under massive LLM releases, I wanted to share it here for anyone interested in lightweight architectures, fast CPU inference, or small edge-device experimentation.</p> <p>Repo: <a href=\"https://github.com/harikrish2727/BetterGPT\">https://github.com/harikrish2727/BetterGPT</a></p> <p>​Model Hub: <a href=\"https://huggingface.co/Harikrish2727/BetterGPT-150M\">https://huggingface.co/Harikrish2727/BetterGPT-150M</a></p> <p>​Live Demo: <a href=\"https://huggingface.co/spaces/Harikrish2727/BetterGPT-Demo\">https://huggingface.co/spaces/Harikrish2727/BetterGPT-Demo</a> (Hosted on ZeroGPU with token streaming)</p> <p>​Model Notes:</p> <p>​Task: Text completion / generation (it is a standard base completion model, not instruction-tuned).</p> <p>​Footprint: Very low RAM/vRAM footprint, runs instantly on standard CPUs.</p> <p>​Feel free to try out prompts on the Space demo or pull the weights to run locally. Feedback, benchmark suggestions, or ideas for instruction fine-tuning are always welcome!</p> <p>This is my very first serious try, hope I get genuine feedback from you guys.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Rich-Title-3668\"> /u/Rich-Title-3668 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9oa1u/built_and_released_bettergpt150m_a_compact_150m/\">[link]</a></span…",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "f4d6c71e60425c44",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is Laguna s2.1 fixed?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9p47o/is_laguna_s21_fixed/",
+    "published": "2026-07-29T07:33:06+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Laguna s2.1 launched about <strong>a week ago</strong>, the benchmark's that they advertised were <strong>crazy good</strong>. But <strong>It was a mess</strong>, looping issues, tool ussage problems, not performing near the advertised benchmark.</p> <p>So I was gonna ask <strong>kindly</strong> if anyone used it with the updates that they gave, and is it fixed? and if not is it atleast better? or would you reccommend to download it or wait for more updates?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Possible_Grocery8079\"> /u/Possible_Grocery8079 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9p47o/is_laguna_s21_fixed/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9p47o/is_laguna_s21_fixed/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "b7c462e84cc91bdb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "In-house LLM Inference on Kubernetes: A Production Runbook",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9mtkx/inhouse_llm_inference_on_kubernetes_a_production/",
+    "published": "2026-07-29T05:29:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Wrote this as I built the infra at my org. </p> <p>Let me know what you all think...</p> <p><a href=\"https://gd03.me/writings/inference-infra\">https://gd03.me/writings/inference-infra</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/GD-Champ\"> /u/GD-Champ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9mtkx/inhouse_llm_inference_on_kubernetes_a_production/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v9mtkx/inhouse_llm_inference_on_kubernetes_a_production/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T12:02:51.064534+00:00"
   }
 ]
