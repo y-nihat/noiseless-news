@@ -208,5 +208,75 @@
     "published": "2026-07-29T16:22:53+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>This might be the next open weight release by qwen team. What you feel like is improved or have become worse from previous model? Please share your experience.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Kirito275\"> /u/Kirito275 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va118v/has_anyone_tried_qwen37_flash_on_openrouter_how/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va118v/has_anyone_tried_qwen37_flash_on_openrouter_how/\">[comments]</a></span>",
     "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "cac473fd3287e6df",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The open-weights carousel never stops.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va73s6/the_openweights_carousel_never_stops/",
+    "published": "2026-07-29T19:54:19+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va73s6/the_openweights_carousel_never_stops/\"> <img alt=\"The open-weights carousel never stops.\" src=\"https://preview.redd.it/5v8mtzib48gh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=4e6790afb8c412c39465024a8b7f99825f085d29\" title=\"The open-weights carousel never stops.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/InternationalGap3698\"> /u/InternationalGap3698 </a> <br /> <span><a href=\"https://i.redd.it/5v8mtzib48gh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va73s6/the_openweights_carousel_never_stops/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "04ed5abb2387041d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Kimi K3 for local use (1.56TB → 594GB) compressed and released by Unsloth",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va6ot2/kimi_k3_for_local_use_156tb_594gb_compressed_and/",
+    "published": "2026-07-29T19:39:41+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va6ot2/kimi_k3_for_local_use_156tb_594gb_compressed_and/\"> <img alt=\"Kimi K3 for local use (1.56TB → 594GB) compressed and released by Unsloth\" src=\"https://external-preview.redd.it/-Pi0PiNmpJmI17QD0uo-SnFZHONDxkrCISpiFrdpHa8.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=48f4e0f32c02df68aeb40a87995bb8f7d6d7cc0f\" title=\"Kimi K3 for local use (1.56TB → 594GB) compressed and released by Unsloth\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>The model was quantized to 8, 4, 2, and 1 bit. Characteristics:</p> <ul> <li><strong>Q8</strong>: 8-bit 1.56 TB, lossless</li> <li><strong>Q4</strong>: 4-bit, 1.51 TB</li> <li><strong>Q2</strong>: 2-bit: 861 GB</li> <li><strong>Q1</strong>: 1-bit, 594 GB</li> </ul> <p>The smallest Q1 model keeps 78.9% accuracy, while being almost 3 times smaller than the original one. Instruction for running the model is in the model's card</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BankApprehensive7612\"> /u/BankApprehensive7612 </a> <br /> <span><a href=\"https://huggingface.co/unsloth/Kimi-K3-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va6ot2/kimi_k3_for_local_use_156tb_594gb_compressed_and/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "46619be47274aab3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Are you guys not scared of where we're heading? A year ago, GPT-5 was considered one of the best models in the world. Today, we have open-weight models like Qwen3.6-27B that are competitive enough to run locally on high-end consumer hardware. The pace of progress is absolutely brutal.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va7nm7/are_you_guys_not_scared_of_where_were_heading_a/",
+    "published": "2026-07-29T20:13:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va7nm7/are_you_guys_not_scared_of_where_were_heading_a/\"> <img alt=\"Are you guys not scared of where we're heading? A year ago, GPT-5 was considered one of the best models in the world. Today, we have open-weight models like Qwen3.6-27B that are competitive enough to run locally on high-end consumer hardware. The pace of progress is absolutely brutal.\" src=\"https://preview.redd.it/6dqiz91y78gh1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=53e57bf7e12346e48d76fcbefca796184a68448b\" title=\"Are you guys not scared of where we're heading? A year ago, GPT-5 was considered one of the best models in the world. Today, we have open-weight models like Qwen3.6-27B that are competitive enough to run locally on high-end consumer hardware. The pace of progress is absolutely brutal.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I think the claims about having Mythos level-model in our laptops in 1-2 years might not be so crazy of a theory</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SilverRegion9394\"> /u/SilverRegion9394 </a> <br /> <span><a href=\"https://i.redd.it/6dqiz91y78gh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va7nm7/are_you_guys_not_scared_of_where_were_heading_a/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "291c1dc948fc6dbb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "PSA: llama.cpp now loads MTP tensors by default for any draft-mtp arch, even with MTP disabled",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va54em/psa_llamacpp_now_loads_mtp_tensors_by_default_for/",
+    "published": "2026-07-29T18:45:34+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>If your GGUF has MTP/NextN tensors baked in (GLM-5.2, hy_v3, qwen35moe, step35, etc.), recent llama.cpp builds load them by default — even if you never pass <code>--spec-type draft-mtp</code>. Before, they were skipped unless you actually enabled speculative decoding.</p> <p>Most community GGUFs bundle the MTP block by default, so this means extra VRAM/RAM use (~1 extra MoE layer) on every load, whether you use MTP or not.</p> <p>See <a href=\"https://github.com/ggml-org/llama.cpp/pull/25980\">https://github.com/ggml-org/llama.cpp/pull/25980</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Shoddy_Bed3240\"> /u/Shoddy_Bed3240 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va54em/psa_llamacpp_now_loads_mtp_tensors_by_default_for/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va54em/psa_llamacpp_now_loads_mtp_tensors_by_default_for/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "02431ed81552d5b9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ilintar's Official Guide To Model Selection",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va4i9e/ilintars_official_guide_to_model_selection/",
+    "published": "2026-07-29T18:23:54+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va4i9e/ilintars_official_guide_to_model_selection/\"> <img alt=\"Ilintar's Official Guide To Model Selection\" src=\"https://preview.redd.it/44uk0k7ho7gh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=12b7b814fcaceb43f850abfc79d3d16da61173f8\" title=\"Ilintar's Official Guide To Model Selection\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Inspired by multiple discussions here and on some Discords I frequent, I've decided to share with you this high quality training material. You can thank me later ;)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ilintar\"> /u/ilintar </a> <br /> <span><a href=\"https://i.redd.it/44uk0k7ho7gh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va4i9e/ilintars_official_guide_to_model_selection/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "6f0335c993a2fc69",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Quantizing Kimi K3 (2.8T A50B) to GGUF ourselves - Q3_K_S works, 1.1 TB on disk",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vaaqdl/quantizing_kimi_k3_28t_a50b_to_gguf_ourselves_q3/",
+    "published": "2026-07-29T22:08:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vaaqdl/quantizing_kimi_k3_28t_a50b_to_gguf_ourselves_q3/\"> <img alt=\"Quantizing Kimi K3 (2.8T A50B) to GGUF ourselves - Q3_K_S works, 1.1 TB on disk\" src=\"https://preview.redd.it/bd7jqhj6s8gh1.png?width=140&amp;height=112&amp;auto=webp&amp;s=33914c3e856f9d8cc25457e5270d091ff98ec8a1\" title=\"Quantizing Kimi K3 (2.8T A50B) to GGUF ourselves - Q3_K_S works, 1.1 TB on disk\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>we're experimenting with our own dynamic GGUF quants of kimi k3, made from the original weights with our llama.cpp fork. Q3_K_S is done and works 1114.76 GiB on disk. Q1 and Q2 are in progress, results on those tomorrow</p> <p>rented box hardware:</p> <p>- AMD EPYC 9554P, 64 cores<br /> - 1.5 TB of DDR5<br /> - NVMe in raid0 to store the weights (inference runs fully from ram)<br /> - no GPU</p> <p>the run:</p> <p>- 110 threads<br /> - pp512: 4.21 t/s</p> <p>we ran a short test for text coherence and image understanding to make sure the quant isn't lobotomized. loaded the 1969 NYT &quot;men walk on moon&quot; front page and asked the model to describe what's going on. it listed the masthead, the &quot;all the news that's fit to print&quot; slogan, the date, the 10 cent price, the headline, the sub-headline about astronauts collecting rocks and the &quot;voice from moon&quot; column. we haven't noticed any hallucinated text</p> <p>wdyt about running quants of giant models like this on cpu instead of going with smth smaller but with normal tps and zero extra costs?</p> <p>disclaimer: we're the team behind atomic chat ( <a href=\"http://atomic.chat\">atomic.chat</a> )</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fun-Meaning-6474\"> /u/Fun-Meaning-6474 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vaaqdl\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vaaqdl/quantizing_kimi_k3_28t_a50b_to_gguf_o…",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "4f4e3d55fc28a6f1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I pre-trained a 700m on 18B tokens optimized for Python and Wikitext | TheOneWhoWill/Shibai-700M-Base · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va6dvv/i_pretrained_a_700m_on_18b_tokens_optimized_for/",
+    "published": "2026-07-29T19:29:11+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va6dvv/i_pretrained_a_700m_on_18b_tokens_optimized_for/\"> <img alt=\"I pre-trained a 700m on 18B tokens optimized for Python and Wikitext | TheOneWhoWill/Shibai-700M-Base · Hugging Face\" src=\"https://external-preview.redd.it/ee_qSSWDs2WtdngWQo5t7N8S2srpNgld3U6-1_6EcfE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=17d219205a7c31140fddb8b48a47fe987df6d0c6\" title=\"I pre-trained a 700m on 18B tokens optimized for Python and Wikitext | TheOneWhoWill/Shibai-700M-Base · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I know this is the 1000000th new sub billion parameter model out there and probably isn't as good as Qwen 3 0.6B or Qwen 3.5 0.8B but it still packs a decent punch. My intention to to continuously pre-train this model on another 5 Billion tokens or so on pure doc string based Python.</p> <p>It's not fine tuned for chat, just simple next-token prediction. It's definitely an order of magnitude better than GPT-2 at least </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TheOneWhoWil\"> /u/TheOneWhoWil </a> <br /> <span><a href=\"https://huggingface.co/TheOneWhoWill/Shibai-700M-Base\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va6dvv/i_pretrained_a_700m_on_18b_tokens_optimized_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
   }
 ]

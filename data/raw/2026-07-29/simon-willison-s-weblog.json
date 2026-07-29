@@ -8,5 +8,45 @@
     "published": "2026-07-26T04:38:46+00:00",
     "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/sqlite-utils/releases/tag/3.39.1\">sqlite-utils 3.39.1</a></p>\n        <p>I back-ported <a href=\"https://github.com/simonw/sqlite-utils/issues/815\">a fix</a> for <code>table.delete_where()</code> that shipped in version 4.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/sqlite-utils\">sqlite-utils</a></p>",
     "fetched_at": "2026-07-29T01:00:08.955926+00:00"
+  },
+  {
+    "id": "ba1aa95e0383c41d",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Quoting D. Richard Hipp",
+    "url": "https://simonwillison.net/2026/Jul/29/d-richard-hipp/",
+    "published": "2026-07-29T21:15:21+00:00",
+    "summary": "<blockquote cite=\"https://www.youtube.com/watch?v=R57nUGzo7CA&amp;t=848s\"><p>Years ago, we didn’t have SQL. There were people whose job was to generate software that would query large data sets. Their job title was COBOL programmer.</p>\n<p>Then SQL comes along—I’m simplifying this only a little bit—and it gives you this convenient way so people could just specify. With a very simple specification, you can generate all of that code that you had to pay the expensive COBOL programmer to do before.</p>\n<p>That didn’t mean programmers went away. It just meant the job changed a little bit.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://www.youtube.com/watch?v=R57nUGzo7CA&amp;t=848s\">D. Richard Hipp</a></p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/d-richard-hipp\">d-richard-hipp</a>, <a href=\"https://simonwillison.net/tags/sql\">sql</a>, <a href=\"https://simonwillison.net/tags/careers\">careers</a></p>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "dd3d1252e6b2853b",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "AI Worming through Word",
+    "url": "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/",
+    "published": "2026-07-29T18:43:03+00:00",
+    "summary": "<p><strong><a href=\"https://enklypesalt.com/posts/context-collapse-part3-ai-worming-through-word/\">AI Worming through Word</a></strong></p>\nNeat new prompt injection variant by Håkon Måløy, who found a way to upgrade prompt injection attacks against Microsoft Word to full self-replicating worms:</p>\n<blockquote>\n<p>An attacker places hidden instructions in a document that is later used as source material in Copilot for Word. Copilot may interpret those instructions as part of the user’s request, causing it to manipulate the document being drafted or edited. Copilot may then also copy the hidden instructions into the resulting document, turning that document into a new carrier. If the carrier is subsequently used in another Copilot-assisted workflow, the instructions can trigger again and propagate into further documents, even without the attacker’s original document being present.</p>\n</blockquote>\n<p>We've seen plenty of hidden white-on-white text before - the kids <a href=\"https://x.com/ScienceYael/status/2082175224007848019\">are using it in their job applications now</a> - but this is the first one I've seen that deliberately copies instructions to self-replicate itself.</p>\n<p>It was responsibly disclosed to Microsoft who then had 144 days to work on a fix, but so far (unsurprisingly) there's no mitigation that covers the full class of attack.\n\n    <p><small></small>Via <a href=\"https://news.ycombinator.com/item?id=49096188\">Hacker News</a></small></p>\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/microsoft\">microsoft</a>, <a href=\"https://simonwillison.net/tags/security\">security</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/prompt-injection\">prompt-injection</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a></p>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "3e82bb1c19ed0ab4",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Quoting Matthew Green",
+    "url": "https://simonwillison.net/2026/Jul/29/matthew-green/",
+    "published": "2026-07-29T18:18:15+00:00",
+    "summary": "<blockquote cite=\"https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/\"><p>Right now we’re in the midst of a historic transition from traditional public-key algorithms based on EC-based cryptography and RSA, moving over to new <em>post-quantum</em> algorithms based on novel problems. This is why there are so many standards like HAWK being considered. If there was ever a perfect time for a massive new public cryptanalysis capability to come on line, <em>we’re in it.</em> So unless AIs succeed in undermining all of our hard problems altogether (or we live in <a href=\"https://blog.computationalcomplexity.org/2004/06/impagliazzos-five-worlds.html\">Impagliazzo’s Minicrypt</a>) then this could not be a better time for AI to get good at cryptanalysis. In the best case, the result is that we gain real confidence in the problems we’ve identified, and the cryptanalysis literature gets a lot more robust. Hopefully.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/\">Matthew Green</a>, on <a href=\"https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/\">Anthropic's recent cryptography work</a></p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/cryptography\">cryptography</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/ai-security-research\">ai-security-research</a>, <a href=\"https://simonwillison.net/tags/claude-mythos-fable\">claude-mythos-fable</a></p>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "4a3d076bb95293c2",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Adding a custom MCP server to Claude and ChatGPT",
+    "url": "https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/",
+    "published": "2026-07-29T00:13:18+00:00",
+    "summary": "<p><strong>TIL:</strong> <a href=\"https://til.simonwillison.net/llms/mcp-in-claude-and-chatgpt\">Adding a custom MCP server to Claude and ChatGPT</a></p>\n        <p>Connecting a custom MCP server to Claude and ChatGPT's standard chat interfaces is possible, but can take quite a few steps.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/chatgpt\">chatgpt</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a>, <a href=\"https://simonwillison.net/tags/model-context-protocol\">model-context-protocol</a></p>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
   }
 ]

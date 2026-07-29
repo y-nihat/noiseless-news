@@ -68,5 +68,25 @@
     "published": "2026-07-29T12:43:33+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Title says it all really... ICLR 2027 decided to have the full paper deadline on Sep 16, 8 days before the NeurIPS decisions come out. Don't know if the reason is to have a reduced load but this will really hurt papers which have actually improved since the NeurIPS submission or have been unfairly rejected.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/1414vo\"> /u/1414vo </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v9v4e7/iclr_2027_deadline_is_before_neurips_2026/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1v9v4e7/iclr_2027_deadline_is_before_neurips_2026/\">[comments]</a></span>",
     "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "1994ab93aab21b21",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Open-source tabular model validation toolkit TanML needs feedback [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1va7w4p/opensource_tabular_model_validation_toolkit_tanml/",
+    "published": "2026-07-29T20:22:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>We’re developing TanML, an MIT-licensed automated model-validation toolkit for tabular machine-learning models.</p> <p>TanML runs locally and provides an end-to-end workflow covering data profiling, preprocessing, feature-power ranking, model development, evaluation, drift analysis, stress testing, SHAP explainability, and audit-ready Word reports.</p> <p>It is designed particularly for model-risk workflows in banking, credit risk, insurance, and other regulated environments.</p> <p>We would appreciate critical feedback from model developers and validators:</p> <ul> <li>Which capabilities would be useful in your existing workflow?</li> <li>What important validation tests are missing?</li> <li>Are the generated reports suitable for independent review?</li> <li>What would prevent your team from adopting a toolkit like this?</li> </ul> <p>GitHub: <a href=\"https://github.com/tdlabs-ai/tanml\">https://github.com/tdlabs-ai/tanml</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AccomplishedLeg1508\"> /u/AccomplishedLeg1508 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1va7w4p/opensource_tabular_model_validation_toolkit_tanml/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1va7w4p/opensource_tabular_model_validation_toolkit_tanml/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "7bdcc5ca143b2b01",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS reviewers not engaging [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1va5io6/neurips_reviewers_not_engaging_d/",
+    "published": "2026-07-29T18:59:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So I know this is an ongoing issue at ML conferences, reviewers just tend to ghost. Do people have any strategies or recommendations on how to nudge them to engage with the rebuttals? Is it recommended to post a comment saying something like hey we want to engage with you? This might be a hot take, but maybe NeurIPS should penalize the reviewers' papers if they don't engage (I believe this year they withheld scores for ACs who didn't post meta reviews on time if they had papers submitted). </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/grumpket\"> /u/grumpket </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1va5io6/neurips_reviewers_not_engaging_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1va5io6/neurips_reviewers_not_engaging_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T22:36:00.863661+00:00"
   }
 ]
