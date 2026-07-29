@@ -8,5 +8,55 @@
     "published": "2026-07-29T11:50:56+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_red_Logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        OpenAI has released Codex Security CLI, an open-source tool that automatically detects and fixes vulnerabilities in code repositories. Previously known internally as \"Aardvark,\" the system has already helped fix more than 3,000 critical security flaws, according to OpenAI. It competes directly with Anthropic's Claude Security, as both AI companies race to match the growing automation of cyberattacks with AI-powered defense.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-open-sources-codex-security-cli-to-help-developers-find-and-fix-vulnerabilities-from-the-command-line/\">OpenAI open-sources Codex Security CLI to help developers find and fix vulnerabilities from the command line</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-07-29T12:02:51.064534+00:00"
+  },
+  {
+    "id": "f5ede5dc074f57d1",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Pangram says its new AI text detector makes only one mistake per 24,000 documents",
+    "url": "https://the-decoder.com/pangram-says-its-new-ai-text-detector-makes-only-one-mistake-per-24000-documents/",
+    "published": "2026-07-29T17:16:53+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/pangram_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Pangram 4 detects 99.66 percent of AI-generated text with just one false positive per 24,000 documents, the company claims. The model also resists \"humanizer\" tools that disguise AI writing as human. API prices go up two- to tenfold.</p>\n<p>The article <a href=\"https://the-decoder.com/pangram-says-its-new-ai-text-detector-makes-only-one-mistake-per-24000-documents/\">Pangram says its new AI text detector makes only one mistake per 24,000 documents</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "a1cd3778d6eb40eb",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI admits its autonomous AI models also compromised credentials on other platforms during security eval",
+    "url": "https://the-decoder.com/openai-admits-its-autonomous-ai-models-also-compromised-credentials-on-other-platforms-during-security-eval/",
+    "published": "2026-07-29T16:26:56+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/openai_glitchy_blip.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        During a security evaluation, OpenAI's autonomous hacking models broke into Hugging Face and used exposed credentials on four other services. Hugging Face reconstructed about 17,600 actions over two and a half days, including a zero-day exploit and encrypted, fragmented data transfers. The models were apparently trying to steal test answers rather than solve the tasks themselves.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-admits-its-autonomous-ai-models-also-compromised-credentials-on-other-platforms-during-security-eval/\">OpenAI admits its autonomous AI models also compromised credentials on other platforms during security eval</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "0a31c0ca584b0c53",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Deepmind dismantles its AlphaFold team as key authors leave for Anthropic",
+    "url": "https://the-decoder.com/deepmind-dismantles-its-alphafold-team-as-key-authors-leave-for-anthropic/",
+    "published": "2026-07-29T13:47:11+00:00",
+    "summary": "<p><img alt=\"A man is watching a protein folding process on a monitor.\" class=\"attachment-full size-full wp-post-image\" height=\"566\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/AlphaFold-CASP-Title.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1000\" /></p>\n<p>        The majority of the researchers behind AlphaFold are now working on other projects, and almost a quarter have left Google Deepmind altogether. The restructuring marks a sharp turn away from the strategy that put the lab on the map.</p>\n<p>The article <a href=\"https://the-decoder.com/deepmind-dismantles-its-alphafold-team-as-key-authors-leave-for-anthropic/\">Deepmind dismantles its AlphaFold team as key authors leave for Anthropic</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "48d634efd37c693f",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "GPT Transcribe improves on its predecessor but can't catch ElevenLabs, Google, or Mistral on error rates",
+    "url": "https://the-decoder.com/gpt-transcribe-improves-on-its-predecessor-but-cant-catch-elevenlabs-google-or-mistral-on-error-rates/",
+    "published": "2026-07-29T12:45:33+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/05/openai_audio-1.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        OpenAI has released GPT Transcribe and GPT Live Transcribe, two new speech recognition models available through its API.</p>\n<p>The article <a href=\"https://the-decoder.com/gpt-transcribe-improves-on-its-predecessor-but-cant-catch-elevenlabs-google-or-mistral-on-error-rates/\">GPT Transcribe improves on its predecessor but can&#039;t catch ElevenLabs, Google, or Mistral on error rates</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "b0105eb9cb365d8a",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Frontier AI developers urge international coordination to pace automated research before capabilities outstrip control",
+    "url": "https://the-decoder.com/frontier-ai-developers-urge-international-coordination-to-pace-automated-research-before-capabilities-outstrip-control/",
+    "published": "2026-07-29T12:13:16+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/Frontier-Pacing-title.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        In a joint statement, employees from the leading AI labs are calling on the US government to pursue international coordination. Their argument is simple: no single company or country can slow things down alone.</p>\n<p>The article <a href=\"https://the-decoder.com/frontier-ai-developers-urge-international-coordination-to-pace-automated-research-before-capabilities-outstrip-control/\">Frontier AI developers urge international coordination to pace automated research before capabilities outstrip control</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
   }
 ]

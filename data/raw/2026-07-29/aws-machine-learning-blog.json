@@ -1,0 +1,32 @@
+[
+  {
+    "id": "c667cb95d07aa6fa",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Authenticate with Private Key JWT using Amazon Bedrock AgentCore Identity",
+    "url": "https://aws.amazon.com/blogs/machine-learning/authenticate-with-private-key-jwt-using-amazon-bedrock-agentcore-identity/",
+    "published": "2026-07-29T16:20:28+00:00",
+    "summary": "This post explains how Private Key JWT client authentication works in AgentCore Identity and reviews the supported grant flows. We then walk through creating an AWS KMS signing key, registering its public key with your identity provider, configuring a credential provider on the AWS Management Console, and reviewing example AWS CloudTrail events that record your agent’s access.",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "903c11f2379be96c",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Generate Autonomous Business Insights with AI Agent and MCP Servers",
+    "url": "https://aws.amazon.com/blogs/machine-learning/generate-autonomous-business-insights-with-ai-agent-and-mcp-servers/",
+    "published": "2026-07-29T15:34:18+00:00",
+    "summary": "Learn how Amazon Bedrock AgentCore delivers autonomous, cross-system business intelligence through configuration rather than custom code. Using pre-built MCP server connectors, fine-grained access control, and persistent memory, enterprises can query multiple data sources with natural language while enforcing role-based boundaries automatically.",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  },
+  {
+    "id": "e835b19b4acfd0d0",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Automating customer retention workflows in Amazon Quick",
+    "url": "https://aws.amazon.com/blogs/machine-learning/automating-customer-retention-workflows-in-amazon-quick/",
+    "published": "2026-07-29T15:24:21+00:00",
+    "summary": "Learn how to build a no-code customer retention pipeline in Amazon Quick that detects at-risk customers from call transcripts and CSAT data, scores them by retention priority with a custom MCP Action, and generates personalized retention letters, reducing response time from days to minutes.",
+    "fetched_at": "2026-07-29T17:18:51.450785+00:00"
+  }
+]
