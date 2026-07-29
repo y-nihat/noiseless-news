@@ -1,0 +1,19 @@
+{
+  "slug": "nist-aite-model-evaluation-testbed",
+  "title": "NIST launches AITE, a sequestered testbed for evaluating AI model performance",
+  "status": "published",
+  "first_seen": "2026-07-29",
+  "published_at": "2026-07-29",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.nist.gov/news-events/news/2026/07/announcing-nists-artificial-intelligence-technology-evaluation-aite",
+    "https://www.nextgov.com/artificial-intelligence/2026/07/nist-unveils-new-ai-evaluation-platform/415035/",
+    "https://www.defenseone.com/technology/2026/07/nist-unveils-new-ai-evaluation-platform/415044/"
+  ],
+  "follows": null,
+  "reason": "Published: Tier-0 NIST primary source for the announcement claim, independently corroborated by two Tier-2 trade outlets. dedup-check clean (no archive match).",
+  "watch": [],
+  "notes": [
+    "2026-07-29 c1: Surfaced via Tier-0 sweep of nist.gov/artificial-intelligence. dedup-check --title \"NIST launches AITE evaluation testbed for AI models\" --url nist.gov/... returned no matches (exit 0). Published same cycle given announcement-claim type clears the gate on the Tier-0 source alone; corroboration search found independent Nextgov/FCW and Defense One coverage, strengthening but not required for the gate. Nextgov/FCW and Defense One are unregistered -- proposed in source_candidates.json this cycle."
+  ]
+}

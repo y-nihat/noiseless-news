@@ -1,4 +1,24 @@
 {
+  "candidates_2026-07-29_c1": [
+    {
+      "domain": "nextgov.com",
+      "first_seen": "2026-07-29",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.nextgov.com/artificial-intelligence/2026/07/nist-unveils-new-ai-evaluation-platform/415035/"
+      ],
+      "context": "Named-byline federal-tech trade press (Nextgov/FCW); used as independent corroboration for the NIST AITE launch (nist-aite-model-evaluation-testbed). Unregistered; propose Tier 2, type rss/html."
+    },
+    {
+      "domain": "defenseone.com",
+      "first_seen": "2026-07-29",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.defenseone.com/technology/2026/07/nist-unveils-new-ai-evaluation-platform/415044/"
+      ],
+      "context": "Named-byline defense/gov-tech trade press; second independent corroboration for the NIST AITE launch (nist-aite-model-evaluation-testbed), same day as Nextgov/FCW but distinct newsroom. Unregistered; propose Tier 2, type html."
+    }
+  ],
   "candidates_2026-07-22_night_c2": [
     {
       "domain": "blogs.cisco.com",

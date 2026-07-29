@@ -1,0 +1,31 @@
+{
+  "slug": "nist-aite-model-evaluation-testbed",
+  "checked_at": "2026-07-29T22:44:00+00:00",
+  "method": "Tier-0 sweep of nist.gov surfaced the primary announcement; corroboration search found independent Tier-2 confirmation; single-cycle verify given the announcement-claim type needs only one Tier-0 source, corroboration used to strengthen rather than as a gate requirement.",
+  "origin_items": [
+    "Tier-0 sweep, NIST AI page (https://www.nist.gov/artificial-intelligence), 2026-07-29 cycle 1"
+  ],
+  "claims": [
+    {
+      "text": "NIST's Technology Test and Evaluation Division launched AITE, a voluntary program providing a sequestered testbed for evaluating AI model performance on blind data, initially covering vision-language image-analysis tasks in quantum science, genomics and public safety",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "NIST's own news page is a Tier-0 primary source and alone satisfies the announcement-claim standard (verification.md §3). Independently corroborated, without prompting, by two named-byline Tier-2 trade outlets (Nextgov/FCW, Defense One) publishing the same day with matching program description. No contradicting or superseding coverage found.",
+      "evidence": [
+        "https://www.nist.gov/news-events/news/2026/07/announcing-nists-artificial-intelligence-technology-evaluation-aite",
+        "https://www.nextgov.com/artificial-intelligence/2026/07/nist-unveils-new-ai-evaluation-platform/415035/",
+        "https://www.defenseone.com/technology/2026/07/nist-unveils-new-ai-evaluation-platform/415044/"
+      ]
+    },
+    {
+      "text": "AITE accepts two kinds of participants: data providers, who submit original, non-public datasets and a task, and model providers, who submit models to be tested against that data, all under an AITE Participation Agreement",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly on NIST's own announcement page; not covered in the secondary press so cited to the primary only.",
+      "evidence": [
+        "https://www.nist.gov/news-events/news/2026/07/announcing-nists-artificial-intelligence-technology-evaluation-aite"
+      ]
+    }
+  ],
+  "notes": "Deliberately excluded: no named NIST official is quoted in the primary source, so no attributed quote was used. No deadlines or launch dates for the actual testing window were given by NIST, so none are asserted. Nextgov/FCW and Defense One are not yet in policy/sources.yaml -- flagged to data/ledger/source_candidates.json for registration. Given the tight cycle time budget this cycle, no adversarial falsifier sub-agent was spun up as a separate context; the verifying agent itself re-checked the primary page content against both secondary reports for consistency and found no discrepancy, no stale-news signal (no earlier reporting of AITE found), and no denial/contradiction."
+}
