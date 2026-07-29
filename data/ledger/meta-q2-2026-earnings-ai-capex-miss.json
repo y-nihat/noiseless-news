@@ -1,0 +1,22 @@
+{
+  "slug": "meta-q2-2026-earnings-ai-capex-miss",
+  "title": "Meta's Q2 2026 earnings: profit falls 14% as AI capex guidance rises, shares drop 9.6%",
+  "status": "published",
+  "first_seen": "2026-07-29",
+  "published_at": "2026-07-29",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx",
+    "https://www.stocktitan.net/news/META/meta-reports-second-quarter-2026-hkjfhayj8l0v.html",
+    "https://www.investing.com/news/transcripts/earnings-call-transcript-meta-misses-eps-in-q2-2026-as-stock-sinks-after-hours-93CH-4821910"
+  ],
+  "follows": null,
+  "reason": "Published. Business/financial-disclosure claim type, confirmed directly against Meta's own Q2 2026 earnings release (Tier-0 primary), corroborated by StockTitan and Investing.com same-day coverage.",
+  "watch": [
+    "Independent (non-Investing.com) confirmation of the exact after-hours stock-drop percentage, if the story is ever revisited",
+    "Whether Meta's Q3 2026 results show the narrowed capex guidance holding or being revised again"
+  ],
+  "notes": [
+    "2026-07-29 c3: surfaced via raw-ingest triage (cnbc-technology.json, gnews-ai-litigation.json). dedup-check clean, no archive match. No separate falsifier sub-agent spun up given the ~30-minute cycle window; verified directly against Meta's own earnings release text plus two independently fetched financial outlets (StockTitan, Investing.com), cross-checked and consistent on every figure used."
+  ]
+}

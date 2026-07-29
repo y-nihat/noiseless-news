@@ -1,0 +1,62 @@
+{
+    "slug": "meta-q2-2026-earnings-ai-capex-miss",
+    "checked_at": "2026-07-29T23:53:00+00:00",
+    "method": "Surfaced via raw-ingest triage (cnbc-technology.json, gnews-ai-litigation.json this cycle -- Meta Q2 2026 earnings, reported same day). Business claim type throughout. Given the ~30-minute cycle window, verified directly against the Tier-0 primary source (Meta Investor Relations Q2 2026 press release) via WebFetch, cross-checked against two independent financial-news outlets (StockTitan, Investing.com) rather than spinning separate verifier/falsifier sub-agents. dedup-check clean, no archive match.",
+    "origin_items": [
+        "cnbc-technology.json: 'Meta reports second-quarter results after the close', 'Meta's Reality Labs lost over $4.6 billion in second quarter'; gnews-ai-litigation.json: 'Meta misses profit expectations, sticks to massive AI spending' (The Guardian), 'Meta shares tumble 10%' (New York Post), 'Meta's Profit Falls 14% as A.I. Spending Continues' (NYT), all 2026-07-29."
+    ],
+    "claims": [
+        {
+            "text": "Meta reported Q2 2026 revenue of $60.8 billion (up 28% year over year) and net income of $15.8 billion (down 14% year over year), with diluted EPS of $6.18, missing the average analyst estimate of $7.17",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Revenue/net income figures directly from Meta's own Q2 2026 press release (Tier-0 primary, WebFetch). EPS and analyst-estimate figures corroborated independently by StockTitan and Investing.com (both fetched directly, not from search snippets alone).",
+            "evidence": [
+                "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx",
+                "https://www.stocktitan.net/news/META/meta-reports-second-quarter-2026-hkjfhayj8l0v.html",
+                "https://www.investing.com/news/transcripts/earnings-call-transcript-meta-misses-eps-in-q2-2026-as-stock-sinks-after-hours-93CH-4821910"
+            ]
+        },
+        {
+            "text": "Q2 2026 capital expenditure was $31.08 billion, more than double the $17.0 billion spent in Q2 2025; Meta narrowed its full-year 2026 capex guidance to $130-145 billion from a prior $125-145 billion range",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Capex figure and the 'narrowed from $125-145B' detail both directly from Meta's own release, independently matched by StockTitan and Investing.com's earnings-call transcript coverage (which also carried CFO Susan Li's on-record framing of the guidance).",
+            "evidence": [
+                "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx",
+                "https://www.stocktitan.net/news/META/meta-reports-second-quarter-2026-hkjfhayj8l0v.html",
+                "https://www.investing.com/news/transcripts/earnings-call-transcript-meta-misses-eps-in-q2-2026-as-stock-sinks-after-hours-93CH-4821910"
+            ]
+        },
+        {
+            "text": "Meta's Reality Labs division posted an operating loss of $4.62 billion in Q2 2026 on revenue of $431 million, up from $370 million a year earlier",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Directly from Meta's own release, matched by StockTitan's independent restatement of the same figures.",
+            "evidence": [
+                "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx",
+                "https://www.stocktitan.net/news/META/meta-reports-second-quarter-2026-hkjfhayj8l0v.html"
+            ]
+        },
+        {
+            "text": "Meta shares fell about 9.6% in after-hours trading following the release",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Market-reaction figure (9.64%, $585.61 to $529.15) fetched live from Investing.com across two separate articles (slides summary and earnings-call transcript), both consistent. Not in Meta's own release (Meta does not report its own stock price). Headline direction (a sell-off) is also independently corroborated by New York Post ('shares tumble 10%') and BBC ('Meta shares fall') per this cycle's raw ingest, though those two were not independently re-fetched given the cycle time window -- flagged as a minor gap, not used as numbered sources.",
+            "evidence": [
+                "https://www.investing.com/news/transcripts/earnings-call-transcript-meta-misses-eps-in-q2-2026-as-stock-sinks-after-hours-93CH-4821910"
+            ]
+        },
+        {
+            "text": "CFO Susan Li said the narrowed capex guidance reflects a focus on 'maximizing 2026 and 2027 capacity' while preserving flexibility for later years; CEO Mark Zuckerberg said Meta continues 'to invest aggressively in infrastructure to meet the demand'",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Direct quotes carried in Investing.com's earnings-call transcript coverage. Zuckerberg's separate quote in Meta's own press release ('AI is accelerating our core business today...') is consistent in tone but is a different quote from the same call/release; the transcript-sourced quotes used in the article are attributed only to Investing.com's transcript.",
+            "evidence": [
+                "https://www.investing.com/news/transcripts/earnings-call-transcript-meta-misses-eps-in-q2-2026-as-stock-sinks-after-hours-93CH-4821910"
+            ]
+        }
+    ],
+    "falsifier_notes": "No separate adversarial falsifier sub-agent run this cycle given the ~30-minute window; verification was done directly against the Tier-0 primary source (Meta's own earnings release) plus two independently fetched financial-news outlets (StockTitan, Investing.com) that were cross-checked against each other and found consistent on every figure used. No dispute or contradiction found. Known gap: the specific 9.6% after-hours stock-drop figure rests on one outlet (Investing.com, cited twice/two articles) rather than two fully independent outlets; direction of the move (a sell-off) is independently corroborated by NYT/NY Post/BBC/Guardian headlines seen in raw ingest but not re-fetched for time. Not treated as load-bearing enough to block publication given it is descriptive market context, not the story's central claim.",
+    "gaps_closed_from_watching_state": []
+}

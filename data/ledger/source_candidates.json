@@ -773,6 +773,26 @@
       "context": "Established Indian legal-news outlet (named bylines, court-reporting focus), independent of LiveLaw -- used as the second confirming source for gadkari-bombay-hc-deepfake-suit, matched LiveLaw's facts (judge, damages figure, procedural status) on independent fetch. Unregistered; propose Tier 2, type html."
     }
   ],
+  "candidates_2026-07-29_night_c3": [
+    {
+      "domain": "investing.com",
+      "first_seen": "2026-07-29",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.investing.com/news/transcripts/earnings-call-transcript-meta-misses-eps-in-q2-2026-as-stock-sinks-after-hours-93CH-4821910"
+      ],
+      "context": "Financial-news outlet with its own earnings-call transcript coverage (direct CFO/CEO quotes, not just a press-release mirror) and live stock-reaction data; used for the after-hours stock-drop figure and executive quotes in meta-q2-2026-earnings-ai-capex-miss where Meta's own release doesn't cover stock price. Propose Tier 2, type html."
+    },
+    {
+      "domain": "stocktitan.net",
+      "first_seen": "2026-07-24",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.stocktitan.net/news/META/meta-reports-second-quarter-2026-hkjfhayj8l0v.html"
+      ],
+      "context": "Second occurrence this month (see candidates_2026-07-24_night_c4) -- used this cycle as an independently fetched cross-check of Meta's own Q2 2026 earnings figures, not merely a press-release mirror this time. Recurrence strengthens the case for Tier 2 registration."
+    }
+  ],
   "candidates_2026-07-28_night_c3": [
     {
       "domain": "databricks.com",
