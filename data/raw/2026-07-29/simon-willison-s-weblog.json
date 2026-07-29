@@ -1,0 +1,12 @@
+[
+  {
+    "id": "59bbc67b43fcd358",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "sqlite-utils 3.39.1",
+    "url": "https://simonwillison.net/2026/Jul/26/sqlite-utils/",
+    "published": "2026-07-26T04:38:46+00:00",
+    "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/sqlite-utils/releases/tag/3.39.1\">sqlite-utils 3.39.1</a></p>\n        <p>I back-ported <a href=\"https://github.com/simonw/sqlite-utils/issues/815\">a fix</a> for <code>table.delete_where()</code> that shipped in version 4.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/sqlite-utils\">sqlite-utils</a></p>",
+    "fetched_at": "2026-07-29T01:00:08.955926+00:00"
+  }
+]
