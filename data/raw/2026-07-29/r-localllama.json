@@ -278,5 +278,15 @@
     "published": "2026-07-29T19:29:11+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va6dvv/i_pretrained_a_700m_on_18b_tokens_optimized_for/\"> <img alt=\"I pre-trained a 700m on 18B tokens optimized for Python and Wikitext | TheOneWhoWill/Shibai-700M-Base · Hugging Face\" src=\"https://external-preview.redd.it/ee_qSSWDs2WtdngWQo5t7N8S2srpNgld3U6-1_6EcfE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=17d219205a7c31140fddb8b48a47fe987df6d0c6\" title=\"I pre-trained a 700m on 18B tokens optimized for Python and Wikitext | TheOneWhoWill/Shibai-700M-Base · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I know this is the 1000000th new sub billion parameter model out there and probably isn't as good as Qwen 3 0.6B or Qwen 3.5 0.8B but it still packs a decent punch. My intention to to continuously pre-train this model on another 5 Billion tokens or so on pure doc string based Python.</p> <p>It's not fine tuned for chat, just simple next-token prediction. It's definitely an order of magnitude better than GPT-2 at least </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TheOneWhoWil\"> /u/TheOneWhoWil </a> <br /> <span><a href=\"https://huggingface.co/TheOneWhoWill/Shibai-700M-Base\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1va6dvv/i_pretrained_a_700m_on_18b_tokens_optimized_for/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-07-29T22:36:00.863661+00:00"
+  },
+  {
+    "id": "f921958b966308bf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "3090 owners, what vram tempature do you get under ai load?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vabgly/3090_owners_what_vram_tempature_do_you_get_under/",
+    "published": "2026-07-29T22:37:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello</p> <p>Can you please share the tempature you get on your rtx 3090 under active llm load?</p> <p>Im trying to findout if my rtx 3090's tempatures are healthy or not</p> <p>please share VRAM Tempature only, you can track it via gpu-z on windows</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Whole_Alternative_18\"> /u/Whole_Alternative_18 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vabgly/3090_owners_what_vram_tempature_do_you_get_under/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vabgly/3090_owners_what_vram_tempature_do_you_get_under/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T23:11:00.180621+00:00"
   }
 ]
