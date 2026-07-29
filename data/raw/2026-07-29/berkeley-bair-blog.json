@@ -1,0 +1,12 @@
+[
+  {
+    "id": "dcb164d12c394efa",
+    "source": "Berkeley BAIR Blog",
+    "tier": 1,
+    "title": "From CUDA to MLX: How K-Search Brings Decades of Kernel Expertise to Apple Silicon",
+    "url": "http://bair.berkeley.edu/blog/2026/07/29/cuda-to-mlx-k-search/",
+    "published": "2026-07-29T09:00:00+00:00",
+    "summary": "<!-- twitter -->\n\n\n\n\n\n\n\n\n\n\n\n\n<p class=\"center\">\n<img alt=\"Kernel knowledge transfer from CUDA to MLX\" src=\"https://bair.berkeley.edu/static/blog/cuda-to-mlx-k-search/cover.svg\" /><br />\n</p>\n\n<p class=\"cuda-mlx-fig-caption\"><strong>Figure 1: CUDA-to-MLX optimization translation map.</strong> CUDA optimization knowledge can be translated into architecture-native MLX strategies rather than copied instruction-for-instruction.</p>\n\n<p>We face a new epoch in computing. Hardware is changing rapidly — not just faster GPUs, but a growing range of chips from different vendors, each with its own architecture and often tailored to specific AI workloads. Software is changing just as fast, and AI coding tools now generate in minutes what took months of effort a few years ago.</p>\n\n<!--more-->\n\n<p>With so much of computing now centered on AI, GPU kernels are a crucial component of its success. These are the low-level programs that run inside the GPU, and writing efficient ones is far from obvious — it takes years of expertise to get right. Transferring a kernel from one vendor’s hardware to another is harder still, and often means rediscovering the same optimizations from scratch. The CUDA ecosystem, for example, has accumulated decades of hard-won kernel expertise: hand-tuned implementations of attention, state space models, and other critical operations representing thousands of engineering hours. Newer hardware ecosystems (Apple Silicon, custom AI accelerators, and others) are growing fast but lack this depth.</p>\n\n<p>In this work we ask whether that expertise can be transferred automatically. We built on <a href=\"https://arxiv.org/abs/2602.19128\">K-Search</a>, an evolutionary kernel search framework introduced by Cao et al. at Berkeley Sky Lab that uses AI to optimize GPU kernels, and extended it with a backend for MLX — Apple’s machine-learning framework for its own Apple Silicon chips. We developed a novel structured CUDA-to-MLX translation layer that lets K-Search take exi…",
+    "fetched_at": "2026-07-29T23:46:00.191313+00:00"
+  }
+]

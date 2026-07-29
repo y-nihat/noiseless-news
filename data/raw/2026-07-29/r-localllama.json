@@ -288,5 +288,15 @@
     "published": "2026-07-29T22:37:39+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello</p> <p>Can you please share the tempature you get on your rtx 3090 under active llm load?</p> <p>Im trying to findout if my rtx 3090's tempatures are healthy or not</p> <p>please share VRAM Tempature only, you can track it via gpu-z on windows</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Whole_Alternative_18\"> /u/Whole_Alternative_18 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vabgly/3090_owners_what_vram_tempature_do_you_get_under/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vabgly/3090_owners_what_vram_tempature_do_you_get_under/\">[comments]</a></span>",
     "fetched_at": "2026-07-29T23:11:00.180621+00:00"
+  },
+  {
+    "id": "939d701ba44f54e0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Bought a 5090 to escape API fees. Ended up building a mini datacenter. Sound familiar?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vacf09/bought_a_5090_to_escape_api_fees_ended_up/",
+    "published": "2026-07-29T23:16:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I bought an RTX 5090 last year just to run 27B models natively. I even fine-tuned it with my own data using LoRA, building RAGs and was pretty damn happy with the results at first. But, Q8 quantization 130k context was barely squeezing through. Naturally, I bought two RTX 6000 Pros, just waiting for the next-gen releases.</p> <p>When I back to reality, minimum 100B class models started dropping everywhere these days, lol, making even this feel insufficient. Just as I felt I want at least 512GB cluster, it hit me, almost every single task I actually need to do runs totally fine on just that one 5090. So now I’m just lending the extra compute to my friends.</p> <p>Sound familiar? What do you use as your daily LLM model?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-Shower7286\"> /u/Ok-Shower7286 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vacf09/bought_a_5090_to_escape_api_fees_ended_up/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vacf09/bought_a_5090_to_escape_api_fees_ended_up/\">[comments]</a></span>",
+    "fetched_at": "2026-07-29T23:46:00.191313+00:00"
   }
 ]
