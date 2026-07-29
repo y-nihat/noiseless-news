@@ -1,0 +1,51 @@
+{
+    "slug": "microsoft-q4-anthropic-openai-investment-marks",
+    "checked_at": "2026-07-29T23:25:00+00:00",
+    "method": "Surfaced via raw-ingest triage (cnbc-technology.json, techcrunch-ai.json this cycle). Business claim type throughout. Given the ~30-minute cycle window, verification was done directly against the Tier-0 primary source (Microsoft Investor Relations FY26 Q4 press release) rather than spinning separate verifier/falsifier sub-agents; no adversarial falsifier sub-agent run this cycle for time.",
+    "origin_items": [
+        "cnbc-technology.json: 'OpenAI CFO Sarah Friar tells employees...' area of coverage; techcrunch-ai.json: 'Microsoft logs $3.2B from Anthropic investment, but OpenAI was a mixed bag' (2026-07-29)."
+    ],
+    "claims": [
+        {
+            "text": "Microsoft recorded a $3.2 billion gain from its investment in Anthropic in the quarter ended 30 June 2026 (fiscal Q4 2026)",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Directly quoted from Microsoft's own FY26 Q4 press release/investor relations page (Tier-0 primary): 'a $3.2 billion gain from our investment in Anthropic'. Independently corroborated by TechCrunch and CNBC same-day earnings coverage.",
+            "evidence": [
+                "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast",
+                "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+                "https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html"
+            ]
+        },
+        {
+            "text": "Microsoft recorded a net gain of $480 million ($0.07 diluted EPS) from OpenAI in fiscal Q4 2026, and a $4.96 billion gain ($0.67 diluted EPS) from OpenAI for the full fiscal year",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Directly quoted from Microsoft's own press release: 'net gains from investments in OpenAI, which resulted in an increase in net income and diluted earnings per share of $480 million and $0.07' for the quarter, with a separate full-year figure of $4.963B/$0.67 given in the same release. Note: a first-pass fetch of the TechCrunch article summary described the OpenAI quarterly figure as a $600 million markdown (loss) rather than a $480 million gain -- this directly contradicts Microsoft's own release text and was not used; treated as a fetch/summary artifact rather than re-checked against TechCrunch's raw HTML given time constraints, but the primary-source figure ($480M gain) is what the article uses.",
+            "evidence": [
+                "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast"
+            ]
+        },
+        {
+            "text": "The combined $0.27 per-share benefit from discrete items in the quarter includes the Anthropic gain, lower-than-expected Voluntary Retirement Program expenses, and is partly offset by Xbox severance/impairment charges -- it is not the Anthropic gain alone",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Verbatim from Microsoft's release: 'Several discrete items impacted our financial results in the quarter...resulting in a benefit of $0.27 on diluted earnings per share. These include a $3.2 billion gain from our investment in Anthropic and lower-than-expected expenses related to the Voluntary Retirement Program which were partially offset by severance expense and impairment charges in XBOX.' TechCrunch's framing that the Anthropic gain alone added '33 cents' to EPS is not supported by this primary-source wording and is flagged as a discrepancy in the published article rather than repeated as fact.",
+            "evidence": [
+                "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast"
+            ]
+        },
+        {
+            "text": "Microsoft reported $90.0 billion in fiscal Q4 2026 revenue (up 18% year over year) and $35.8 billion in GAAP net income, with GAAP diluted EPS of $4.81 (up 32%)",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Directly stated in Microsoft's own press release and corroborated by CNBC's same-day earnings report.",
+            "evidence": [
+                "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast",
+                "https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html"
+            ]
+        }
+    ],
+    "falsifier_notes": "No separate adversarial falsifier sub-agent run this cycle given the ~30-minute window; verification was done directly against the Tier-0 primary source (Microsoft's own earnings release), which is the strongest evidentiary tier available for a company's self-reported financials. The main risk found and resolved: secondary reporting (TechCrunch) attributes the combined $0.27/share discrete-items benefit to the Anthropic gain alone ('33 cents'), which the primary source does not support -- corrected in the published article to reflect the primary source's own combined-item framing. No dispute or correction found for the $3.2B Anthropic figure or the $480M/$4.96B OpenAI figures.",
+    "gaps_closed_from_watching_state": []
+}

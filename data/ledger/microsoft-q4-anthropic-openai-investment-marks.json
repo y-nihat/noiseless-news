@@ -1,0 +1,23 @@
+{
+  "slug": "microsoft-q4-anthropic-openai-investment-marks",
+  "title": "Microsoft's Q4 earnings show a $3.2 billion gain on its Anthropic stake, $480 million on OpenAI",
+  "date": "2026-07-29",
+  "status": "published",
+  "first_seen": "2026-07-29",
+  "published_at": "2026-07-29",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast",
+    "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+    "https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html"
+  ],
+  "follows": null,
+  "reason": "Published. Business/financial-disclosure claim type, confirmed directly against Microsoft's own FY26 Q4 earnings release (Tier-0 primary), corroborated by TechCrunch and CNBC same-day coverage.",
+  "watch": [
+    "Any 10-K/10-Q filing detail that refines the discrete-items breakdown",
+    "Whether other outlets repeat TechCrunch's unsupported '33 cents attributed to Anthropic alone' framing, which this article corrects against the primary source"
+  ],
+  "notes": [
+    "2026-07-29 c2: surfaced via raw-ingest triage (cnbc-technology.json, techcrunch-ai.json). dedup-check clean, no archive match. No separate falsifier sub-agent spun up given the ~30-minute cycle window; verified directly against Microsoft's own earnings release text. Caught and corrected a discrepancy: TechCrunch attributes the combined $0.27/share discrete-items benefit to the Anthropic gain alone ('33 cents'), which Microsoft's own release does not support -- the published article uses the primary source's combined-item framing instead."
+  ]
+}
