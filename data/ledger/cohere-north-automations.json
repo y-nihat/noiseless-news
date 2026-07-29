@@ -1,0 +1,15 @@
+{
+  "slug": "cohere-north-automations",
+  "title": "Cohere launches North Automations",
+  "status": "dropped",
+  "first_seen": "2026-07-29",
+  "source_urls": [],
+  "follows": null,
+  "reason": "Carried over from cycle 3 (dedup-check cleared, not yet investigated). No primary or clear secondary source for a \"North Automations\" launch found in raw ingest or a quick check of recent Cohere-tagged raw items — the only Cohere hits in the last week are a CohereLabs/North-Mini-Code-1.0 model card on Hugging Face (surfaced via a Reddit repost, not a launch announcement) and an unrelated open-source-AI advocacy story. Dropped for lack of a verifiable primary claim within this cycle's time budget rather than risk an inaccurate headline.",
+  "watch": [
+    "A dated primary announcement (cohere.com or press) of a product actually named \"North Automations\""
+  ],
+  "notes": [
+    "2026-07-29 c4: dropped, no supporting evidence found for the working title as stated."
+  ]
+}

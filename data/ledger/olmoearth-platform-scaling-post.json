@@ -1,0 +1,17 @@
+{
+  "slug": "olmoearth-platform-scaling-post",
+  "title": "Ai2 blog post on OlmoEarth Platform inference scaling (not a launch)",
+  "status": "dropped",
+  "first_seen": "2026-07-29",
+  "source_urls": [
+    "https://huggingface.co/blog/allenai/olmoearth-infrastructure"
+  ],
+  "follows": null,
+  "reason": "Carried over from cycle 3 as \"Allen Institute for AI launches OlmoEarth platform\" (dedup-check cleared, not yet investigated). On investigation the working title was wrong: the OlmoEarth Platform itself launched in November 2025 (Businesswire, GeekWire, other coverage all dated 2025-11-04). The 28 July 2026 Hugging Face post is a technical blog write-up of an infrastructure scaling run (a wildfire-risk inference job across ~19,600 CPUs / 994 GPUs, 155x speedup), not a new product or capability launch. Single-source (Ai2's own blog), no independent press pickup found for this specific post. Does not clear the newsworthiness/independence bar as a standalone story; dropped rather than published under a corrected headline.",
+  "watch": [
+    "Independent press coverage of this specific scaling milestone, if any outlet picks it up"
+  ],
+  "notes": [
+    "2026-07-29 c4: dropped after WebFetch of primary source + WebSearch showed the \"launches\" framing was inaccurate (product predates this post by ~9 months)."
+  ]
+}
