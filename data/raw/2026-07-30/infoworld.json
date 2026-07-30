@@ -1,0 +1,12 @@
+[
+  {
+    "id": "a94c29e43bb4afb4",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "Visual Studio Code 1.131 zeroes in on subagents",
+    "url": "https://www.infoworld.com/article/4203128/visual-studio-code-1-131-zeroes-in-on-subagents.html",
+    "published": "2026-07-30T00:49:12+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">Microsoft has shipped Visual Code 1.131, an update to its code editor with improvements for monitoring subagents, dictation, and Markdown editing.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Released <a href=\"https://code.visualstudio.com/updates/v1_131\">July 29</a>, Visual Studio Code 1.131 can be downloaded for Windows, Linux, or Mac at <a href=\"https://code.visualstudio.com/Download?_exp_download=fb315fc982\">code.visualstudio.com</a>. </p>\n\n\n\n<p class=\"wp-block-paragraph\">An enhancement to the Agents window in VS Code 1.131 allows developers to see what a running subagent is doing without opening its conversation. For each subagent, the main conversation now shows the model used by the subagent, how long the subagent has been running, and the tool the subagent is actively calling. </p>\n\n\n\n<p class=\"wp-block-paragraph\">A preview of built-in dictation across VS Code gives developers dictation capabilities without having to install the VS Code Speech extension. The transcription service works in chat inputs, text editors, and the terminal, Microsoft said. A single speech session and microphone selection are shared across all three surfaces, which prevents overlapping recordings and keeps dictated text in the intended location, according to the company. This is an experimental feature. </p>\n\n\n\n<p class=\"wp-block-paragraph\">VS Code 1.131 also introduces a hybrid Markdown editor in the Agents window, allow users to view Markdown files, edit them in place, and add comments that an agent can act on. By using “Reopen editor with”, developers can switch easily between the text editor and the new Markdown editor, both in the Agents window and editor windows. The hy…",
+    "fetched_at": "2026-07-30T00:56:01.065177+00:00"
+  }
+]
