@@ -38,5 +38,35 @@
     "published": "2026-07-30T09:00:00+00:00",
     "summary": "A German startup sent a camera-wearing chef to my apartment. In exchange for a free lunch, I let them record every chop and stir to train future humanoids.",
     "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "e0126cf71b23cd90",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "Chrome Needs Twice-a-Week Patching Thanks to AI Bug Hunting",
+    "url": "https://www.wired.com/story/chrome-needs-twice-a-week-patching-thanks-to-ai-bug-hunting-for-now/",
+    "published": "2026-07-30T17:00:00+00:00",
+    "summary": "The two Chrome updates in June patched more bugs than the 23 updates before them. Now, Google is ramping up its patching schedule thanks to AI-assisted vulnerability discovery.",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "8111c47017bfd595",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "The New Friend AI Pendant Can Now Talk Back to You",
+    "url": "https://www.wired.com/story/the-friend-2-necklace-can-talk-back-to-you-now/",
+    "published": "2026-07-30T16:00:00+00:00",
+    "summary": "Avi Schiffmann has a new version of his controversial AI companion. It’s more expensive, and you can’t change its personality.",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "a06a9c48828def03",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "Gemini Robotics 2 Brings Google's AI Into the Physical World",
+    "url": "https://www.wired.com/story/google-gemini-can-control-humanoid-robots/",
+    "published": "2026-07-30T15:04:22+00:00",
+    "summary": "The latest version of Google DeepMind's AI model includes a significant jump into “physical AGI.” But plopping AI into the real world comes with risks.",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
   }
 ]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "47092aa08a50bee4",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP’s kNN Graph",
+    "url": "https://machinelearning.apple.com/research/umap-knn-graph-sensemaking",
+    "published": "2026-07-30T00:00:00+00:00",
+    "summary": "While UMAP is widely used for exploring high-dimensional data, typical workflows focus on its lower-dimensional embedding, largely overlooking the rich k-nearest-neighbor (kNN) graph that UMAP constructs internally. This graph encodes the data manifold in its original high-dimensional space, before the distortion that UMAP’s 2D projection introduces. We demonstrate the untapped potential of this internal representation, showing how standard graph algorithms applied to this graph enhance data sensemaking: (1) PageRank identifies representative data points, (2) k-core decomposition reveals dense…",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  }
+]

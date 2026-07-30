@@ -78,5 +78,115 @@
     "published": "2026-07-29T23:09:47+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Has anyone yet tried to extract experts from kimi (or GLM 5.2) per chance? There is REAP that removes experts based on routing, but I could only run one K3 expert on my hardware. Could there maybe be a usual expert for different tasks? Would be fun to have a 104B Kimi model, although I think that it would be garbage</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/StableDiffer\"> /u/StableDiffer </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vac9e9/extracting_moe_experts_from_kimi_k3/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vac9e9/extracting_moe_experts_from_kimi_k3/\">[comments]</a></span>",
     "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "109dcb8688c39ecd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The real Flash？AntLing 3.0 flash VS. MiniMax M2.7 VS. Step 3.7 flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vazgc0/the_real_flashantling_30_flash_vs_minimax_m27_vs/",
+    "published": "2026-07-30T17:01:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vazgc0/the_real_flashantling_30_flash_vs_minimax_m27_vs/\"> <img alt=\"The real Flash？AntLing 3.0 flash VS. MiniMax M2.7 VS. Step 3.7 flash\" src=\"https://external-preview.redd.it/YnNscHJtZ2tlZWdoMYZF-fvQLhjEw-vRQlhiaxepEwjadd7g2Lk4RkS_cvx7.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a64b3bb8b2d2541938700b92da1d2bc4c5dc5fea\" title=\"The real Flash？AntLing 3.0 flash VS. MiniMax M2.7 VS. Step 3.7 flash\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/niacolhealth\"> /u/niacolhealth </a> <br /> <span><a href=\"https://v.redd.it/8c0tx3gkeegh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vazgc0/the_real_flashantling_30_flash_vs_minimax_m27_vs/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "c1e3ad296d1fc399",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "LG AI Research releases K-EXAONE 2.0 750B A37B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vazdxp/lg_ai_research_releases_kexaone_20_750b_a37b/",
+    "published": "2026-07-30T16:59:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vazdxp/lg_ai_research_releases_kexaone_20_750b_a37b/\"> <img alt=\"LG AI Research releases K-EXAONE 2.0 750B A37B\" src=\"https://external-preview.redd.it/xtn99Bhll5i_ScRfMZo1El9FVIdLxYjCFkohdABkrKs.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5a2e8d13ecc07da8971f456538083b5a7e56bd4b\" title=\"LG AI Research releases K-EXAONE 2.0 750B A37B\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It was developed under Phase 2 of Korea's Sovereign AI Foundation Model Project.</p> <ul> <li>​Size: 750B parameters (3x larger than their 236B v1 model). ​- License: Apache 2.0</li> <li>​Languages: Expanded to 10 languages (Korean, English, French, Italian, Portuguese, Polish, Spanish, German, Japanese, Vietnamese).</li> <li>​Benchmark Highlights (per their report):</li> <li>​Long Context: 94.4 on OpenAI-MRCR and 89.6 on Ko-LongBench (outperforming GLM-5.1).</li> <li>​Agentic Tool Use: 14.2 on Tau3-Bench Banking (ahead of Qwen 3.5 at 13.4 and GLM-5.1 at 11.5).</li> <li>​Coding: Average 30% performance increase across core coding metrics compared to v1. ​- Safety / Alignment: 94.6 average on ROK-Fortress and KGC-Safety.</li> </ul> <p><a href=\"https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B\">https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AlphaLemonMint\"> /u/AlphaLemonMint </a> <br /> <span><a href=\"https://www.lgresearch.ai/blog/view?seq=677\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vazdxp/lg_ai_research_releases_kexaone_20_750b_a37b/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "8a62f552cac8dc81",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Software Engineers: Do you honestly get anything useful out of LLMs?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vavh2h/software_engineers_do_you_honestly_get_anything/",
+    "published": "2026-07-30T14:37:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>For 6 months now I've been trying to make agentic coding work for me, using Pi and a handful 30-120B models (Qwens, Nemotrons, Leguna...etc). I'm not greedy either, I stick to decent quants, never quantize kv cache, and keep my sessions up to 90k max. But the results have ALWAYS been disappointing.</p> <p>No matter how much you harness the model or bombard it with pages-worth of markdown instructions, the agents continue to add technical dept more than value. And I end up spending more time cleaning up mess than I would've spent on doing everything by hand at the first place.</p> <p>I mean those models are absolutely shameless:</p> <ul> <li>They'll repeat themselves badly.</li> <li>They'll totally abandon what methodology you specify (eg functional-programming vs object-oriented) if they happen to be more comfortable with the other.</li> <li>Blatantly ignore instructions at 50k+ depth of context.</li> <li>Write superficial tests that pass easily, just to pat themselves on the back.</li> <li>Almost never stop for a moment to think they could refactor a mess before piling code on top of it.</li> <li>They all tend to write a shit ton of code that I always find myself reaching for ctrl+c before I get a heart attack!</li> </ul> <p>A junior engineer worth his salt wouldn't be that messy.</p> <p>And at the end of the day, there's a limit to how much architecting and steering one could do, before it turns into a micro-management hell.</p> <p>So, for the Senior Engineers that witness an increase in productivity thanks to agentic coding (as I always hear), how exactly do you do it? Thanks!</p> <p><strong>Edit: Sorry. I meant to refer to</strong> <strong><em>local</em></strong> <strong>models. I thought this is LocalLLama.</strong></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ParaboloidalCrest\"> /u/ParaboloidalCrest </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vavh2h/softwar…",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "34528389dfea8e23",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Turbo-fieldfare: Open-source engine running Gemma 4 26B in 2 GB RAM on Apple Silicon",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vasnys/turbofieldfare_opensource_engine_running_gemma_4/",
+    "published": "2026-07-30T12:46:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vasnys/turbofieldfare_opensource_engine_running_gemma_4/\"> <img alt=\"Turbo-fieldfare: Open-source engine running Gemma 4 26B in 2 GB RAM on Apple Silicon\" src=\"https://external-preview.redd.it/SXQ8EqUHuStiV7ZAuB8A8VhzR5EG_WQ9tnbTko4dfa8.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=d02c69625d09b4e1f6c0349b9aaf67c8a5b7f412\" title=\"Turbo-fieldfare: Open-source engine running Gemma 4 26B in 2 GB RAM on Apple Silicon\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Its a custom Swift/Metal inference engine that runs Gemma 4 26B-A4B-IT on M-series Macs with very low RAM. It uses ~2GB instead of ~14 GB. The result is reportedly 5–6 tok/s on an 8 GB M2 MacBook Air and 31–35 tok/s on an M5 MacBook Pro. It also includes an OpenAI-compatible local server with streaming and tool-call support.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/minefew\"> /u/minefew </a> <br /> <span><a href=\"https://github.com/drumih/turbo-fieldfare\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vasnys/turbofieldfare_opensource_engine_running_gemma_4/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "8507e16f4327d00d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AMD Lucebox Beats Nvidia DGX Spark by 3.63x on DeepSeek V4 Flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vb0fez/amd_lucebox_beats_nvidia_dgx_spark_by_363x_on/",
+    "published": "2026-07-30T17:35:42+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vb0fez/amd_lucebox_beats_nvidia_dgx_spark_by_363x_on/\"> <img alt=\"AMD Lucebox Beats Nvidia DGX Spark by 3.63x on DeepSeek V4 Flash\" src=\"https://preview.redd.it/zbho8gwzgegh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=cac80459e9b4ac90d3f03e463b6a6245d32fb86b\" title=\"AMD Lucebox Beats Nvidia DGX Spark by 3.63x on DeepSeek V4 Flash\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey fellow llamas, sorry for posting again this week but i thought this was interesting to showcase to share with y'all.</p> <p>Lucebox partnered up with AMD to bring heterogenous consumer hardware to life. </p> <p>We worked really hard on this, and were able to have Lucebox (AMD Radeon AI PRO R9700 + Strix Halo) to beat one NVIDIA DGX Spark by 3.63x on DeepSeek V4 Flash Decode Speed. </p> <p>R9700 takes the dense path, the hot experts, the cache and the draft model. Strix Halo holds the other experts in 128gb and computes them at the same time, not after. </p> <p>51.1 tok/s on the full 284B, 3.63x one DGX Spark, and $2,899 less than having two of them.</p> <p><strong>You can check the full technical breakdown here:</strong> <a href=\"https://www.lucebox.com/blog/deepseek-v4-asymmetric-parallelism\"><strong>https://www.lucebox.com/blog/deepseek-v4-asymmetric-parallelism</strong></a> </p> <p>Please don't be rude with us, we know that it's still something experimental running q2 model at 16k context. We're currently working on implementing <a href=\"https://www.lucebox.com/blog/kvflash\">KVFlash</a> to get to context at 64k-128k. </p> <p>Let us know what you think and if you have any feedback!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sandropuppo\"> /u/sandropuppo </a> <br /> <span><a href=\"https://i.redd.it/zbho8gwzgegh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vb0fez/amd_lucebox_beats_nvidia_dgx_spark_by_363x_on/\">[comments]…",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "88f436a4eb4b433a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Nanbeige4.2-3B: I'm not impressed",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vayzwm/nanbeige423b_im_not_impressed/",
+    "published": "2026-07-30T16:45:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've tested Nanbeige-4.2-3B. On paper, the benchmarks promise it blows away Qwen3.5-9B and Gemma4-12B.</p> <p>My goal was to have something very light and fast to replace Qwen3.6-35B (or finetunes thereof) for simple and straightforward coding tasks. In the past I tried downgrading Qwen3.5-9B and it was not good enough to be considered.</p> <p>The model is currently broken in llamacpp master - this PR fixes it:<br /> <a href=\"https://github.com/ggml-org/llama.cpp/pull/26324\">https://github.com/ggml-org/llama.cpp/pull/26324</a></p> <p>After fixing its issues, I played around with it and must say <strong>I'm not impressed.</strong></p> <p>To begin with, it's a looped model: all layers are traversed twice. This means that, at a theoretical baseline, it has the speed and context size of a 6B model. It's nice to be able to run the weights at a Q6 quant and barely notice the size difference from Q4, but you will have to compensate by using a very bad KV cache quant, because <strong>the context is</strong> <strong><em>enormous</em></strong> <strong>for the size</strong>. 128k of kvarn3 t2048 context, which I must point out is both very tight and at the edge of the cliff of what is usable without extreme degradation, costs 5.2GB. That's ginormous for a model this size. 256k kvarn5 won't fit on 16GB VRAM after you factor in weights and desktop.</p> <p>The model uses the same &quot;hack&quot; to get good benchmark results that Laguna-S-2.1 uses: at [max] thinking level, where it is benchmarked, it thinks and thinks and thinks and just does not stop. This means that, besides being atrociously slow (wall time per task), it burns through its context budget VERY fast even for simple tasks.</p> <p>I gave it two very straightforward, uncomplicated brownfield maintenance tasks in a project with a robust <a href=\"http://AGENTS.md\">AGENTS.md</a> and skills. It flunked both.</p> <p>The only good thing I have to say is that tool calling is rock solid. A…",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "3b58d29ece733bd0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Mechanistic interpretability streamlined for everyday users like us😎 🧠",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vavkiz/mechanistic_interpretability_streamlined_for/",
+    "published": "2026-07-30T14:41:17+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vavkiz/mechanistic_interpretability_streamlined_for/\"> <img alt=\"Mechanistic interpretability streamlined for everyday users like us😎 🧠\" src=\"https://external-preview.redd.it/ZXc2OTY0M29wZGdoMYkNZo8ksdo5riNoGJyTS6Plr0FjotCO6Y9ILYX6Ep8K.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=bb04acf78e6df20724c5f8ac5889a68e1ce2bb2f\" title=\"Mechanistic interpretability streamlined for everyday users like us😎 🧠\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Context: </p> <p>I want to give the community an Open Research (well open under Apache 2.0 clause) </p> <p>- tool that allows everyday users like us to look deeper into the local models we use consistently.</p> <p>Mechanistic interpretability streamlined into a more visible work-flow.</p> <p>Easy to read for beginners and deeper for experts. </p> <p>Originally designed around the GPT2 and Llama architectures, it supports most local LLMs at - at least tier 1 generation observation (i am one person so please dont @ me if your model isnt supported tho😆. I will keep adding support as we go haha) 🫪🧠 This tool is called </p> <p>&quot;CORTEX // MODEL OBSERVATORY&quot; and i do want to clarify that is Ai assisted in creation, otherwise i would have needed an entire research department😭😂</p> <p>If you're obsessed with how Ai works, feel free to mess around with the application, add your own additions/support or integrations. I want to help the community learn more - together. As always, feel free to break this thing as hard as you can so i can keep making it better and more reliable for everyone, including Ai researchers. </p> <p>It is available on GitHub now for everyone to use 😀</p> <p><a href=\"https://github.com/TurboDash99/Cortex\">https://github.com/TurboDash99/Cortex</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JayB_Official\"> /u/JayB_Official </a> <br /> <span><a href=\"https://v.redd.it/crdorb4opdgh1\">[l…",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "10ac21280c66c305",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "unsloth/Qwen3.6-27B-NVFP4 vs. Intel/Qwen3.6-27B-int4-AutoRound vs. nvidia/Qwen3.6-27B-NVFP4 -- which one to choose?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vaswg8/unslothqwen3627bnvfp4_vs/",
+    "published": "2026-07-30T12:56:25+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Are there any benchmarks on these 4 bit quants, like how Artificial Analysis runs a slew of various benchmarks?</p> <p>If not, how can I run one (5x over for consistency) on them? I'm also very interested in hallucinations, as community discussions seem to point them out.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jinnyjuice\"> /u/jinnyjuice </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vaswg8/unslothqwen3627bnvfp4_vs/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vaswg8/unslothqwen3627bnvfp4_vs/\">[comments]</a></span>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "6640cfecf4a1206a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How close are we to local llama robotics for consumer price point?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vazt2h/how_close_are_we_to_local_llama_robotics_for/",
+    "published": "2026-07-30T17:14:07+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vazt2h/how_close_are_we_to_local_llama_robotics_for/\"> <img alt=\"How close are we to local llama robotics for consumer price point?\" src=\"https://external-preview.redd.it/vSrO6AEcjmrV6xyfz7pIhLLQXH-gWVkeH-ei2Kc2YBA.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=bf48aba847dd78e57e0f2b87d99b329059c854e6\" title=\"How close are we to local llama robotics for consumer price point?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I'm guessing 3 years, what do you think?</p> <p>In other words: many of us will be able to afford a general purpose robot in 3 years to experiment with in the home. Cost roughly $5k? Probably small size, but hopefully still able to do the dishes and operate a vacuum.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Terminator857\"> /u/Terminator857 </a> <br /> <span><a href=\"https://www.youtube.com/watch?v=4lSQnrMC6nY\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vazt2h/how_close_are_we_to_local_llama_robotics_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "4c5b0c4f0093b784",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "PR for running Ternary-Bonsai-8B-Q2_0.gguf in llama.cpp with CUDA support just got merged",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vau4dh/pr_for_running_ternarybonsai8bq2_0gguf_in/",
+    "published": "2026-07-30T13:46:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vau4dh/pr_for_running_ternarybonsai8bq2_0gguf_in/\"> <img alt=\"PR for running Ternary-Bonsai-8B-Q2_0.gguf in llama.cpp with CUDA support just got merged\" src=\"https://external-preview.redd.it/jBBV3MzaSud8CMMlCxvVEQ-YytRIcv4zkirhoiNIF8M.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=671afb18343bab0eb3c59cd1f73264f300539657\" title=\"PR for running Ternary-Bonsai-8B-Q2_0.gguf in llama.cpp with CUDA support just got merged\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Time to see what it's capable of</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/413205\"> /u/413205 </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/25707\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vau4dh/pr_for_running_ternarybonsai8bq2_0gguf_in/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "9a1f266ffb3fdb50",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Does MTP head get loaded in VRAM by default?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vawdma/does_mtp_head_get_loaded_in_vram_by_default/",
+    "published": "2026-07-30T15:11:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I ran into a doubt when using the following command. It seems that the System RAM usage keeps increasing even though there is &gt;10GB of space left in VRAM while using the MTP mode. </p> <p>Does the MTP head load separately from the main model? Do I need to set the device here as well? </p> <pre><code>/mnt/ml/llama.cpp/llama.cpp-cuda-13.2-20260723/build/bin/llama-server -dio --no-warmup --jinja --swa-full --no-mmap -m /mnt/ml/Models/lm-studio-models/CodeFault/Nvidia-Qwen3.6-27B-NVFP4-GGUF/Nvidia-Qwen3.6-27B-NVFP4-Q8.gguf -ngl 999 -c 262144 -b 2048 -ub 512 -fa on --device CUDA0 -np 4 --kv-unified --spec-type draft-mtp --spec-draft-n-max 4 --spec-draft-p-min 0.75 --host 0.0.0.0 --port 8021 --slot-save-path /home/linuxadmin/.config/myapp/checkpoints --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 --chat-template-kwargs {preserve_thinking: true} </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/xornullvoid\"> /u/xornullvoid </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vawdma/does_mtp_head_get_loaded_in_vram_by_default/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vawdma/does_mtp_head_get_loaded_in_vram_by_default/\">[comments]</a></span>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
   }
 ]

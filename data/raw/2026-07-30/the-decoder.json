@@ -8,5 +8,35 @@
     "published": "2026-07-30T09:03:11+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/openai_gpt56_sol.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        OpenAI counters Anthropic's ARC-AGI-3 record: GPT-5.6 Sol scores 38.3 percent, but only with its own API features instead of the official test setup, where the model landed at 7.8 percent. ARC Prize claims its test environment is provider-neutral, but may have used an outdated API that skewed the comparison with Opus 5.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-claims-gpt-5-6-sol-beats-opus-5-on-arc-agi-3-with-its-latest-api-and-two-additional-settings/\">OpenAI claims GPT-5.6 Sol beats Opus 5 on ARC-AGI-3 with its latest API and two additional settings</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "1ce3a2d355b5a649",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Language models can't spark scientific revolutions, but world models might",
+    "url": "https://the-decoder.com/language-models-cant-spark-scientific-revolutions-but-world-models-might/",
+    "published": "2026-07-30T14:01:33+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/LLMs-cant-jump-title.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Can language models spark a scientific revolution? In a position paper titled \"LLMs can't jump,\" Google Deepmind's Tom Zahavy argues they can't. They're missing the cognitive mechanism needed to create something truly new.</p>\n<p>The article <a href=\"https://the-decoder.com/language-models-cant-spark-scientific-revolutions-but-world-models-might/\">Language models can&#039;t spark scientific revolutions, but world models might</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "4dce66d4aa903c39",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Microsoft AI bets on cheap specialist models instead of chasing the frontier",
+    "url": "https://the-decoder.com/microsoft-ai-bets-on-cheap-specialist-models-instead-of-chasing-the-frontier/",
+    "published": "2026-07-30T13:11:48+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1080\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/mai-microsoft.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1600\" /></p>\n<p>        Microsoft AI is betting on small specialist models instead of expensive general-purpose ones, according to AI CEO Mustafa Suleyman. MAI-Cyber-1-Flash tops the CyberGym benchmark when embedded in an orchestrator and reportedly costs half as much as Anthropic's Mythos, but it still relies on OpenAI for hard tasks. Competition is shifting from individual models to the orchestration software that routes and manages them.</p>\n<p>The article <a href=\"https://the-decoder.com/microsoft-ai-bets-on-cheap-specialist-models-instead-of-chasing-the-frontier/\">Microsoft AI bets on cheap specialist models instead of chasing the frontier</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
+  },
+  {
+    "id": "e533f5710f23cce9",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "FCC bans new Chinese robots and power inverters to protect US AI buildout from foreign threats",
+    "url": "https://the-decoder.com/fcc-bans-new-chinese-robots-and-power-inverters-to-protect-us-ai-buildout-from-foreign-threats/",
+    "published": "2026-07-30T12:47:46+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/China-USA-Robotban-title.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        The FCC is blocking imports of new Chinese humanoid robots and robot dogs. But the rule's broad definition also sweeps in Roombas, robotic lawn mowers, and delivery bots.</p>\n<p>The article <a href=\"https://the-decoder.com/fcc-bans-new-chinese-robots-and-power-inverters-to-protect-us-ai-buildout-from-foreign-threats/\">FCC bans new Chinese robots and power inverters to protect US AI buildout from foreign threats</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-07-30T17:39:42.271158+00:00"
   }
 ]
