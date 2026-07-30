@@ -268,5 +268,15 @@
     "published": "2026-07-30T18:54:27+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello,</p> <p>I have a friend who's using various local LLM's like qwen3.6 27B, 35b-a3b, North Mini Code, and qwen2.5-vl-7b (just for vision).</p> <p>They have a use case where they're trying to have an LLM drive an actual machine via hermes' computer_use tool and cua_driver to click through and navigate a complex web app that has many different pages / slides on it, and figure out what it needs to do to advance to the next screen (there can be many many possible page configurations, but essentially there's a 'click this, then click next, or drag this here, and click next, or click this , wait, click next' type thing).</p> <p>The issue they're having is that often the model seems to make mistakes with figuring out how to click on various things, like the 'page navigation' steps at the bottom of the screen (clicking page 2, 3,4 ,5, 'next'), clicking on some circle elements on the screen, etc etc.</p> <p>They've had similar issues and performance whether using a small model for vision, like qwen2.5-vl-7b, which they like because it's local and they don't have to spend on api, because they have a limited budget, but also with using an api model like mimo 2.5, they haven't got much better performance out of that.</p> <p>I'm trying to research, if anybody knows a small model that would function better with driving a real machine with mouse/keyboard input via hermes' computer_use function. Or if they have any tips for the same with existing models we may have tried.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NotARedditUser3\"> /u/NotARedditUser3 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vb2ni8/smallest_model_tips_for_intelligent_computer_use/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vb2ni8/smallest_model_tips_for_intelligent_computer_use/\">[comments]</a></span>",
     "fetched_at": "2026-07-30T22:44:32.116921+00:00"
+  },
+  {
+    "id": "0bc6c2d889704ac4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is this a good \"budget\" local AI setup?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vb99i2/is_this_a_good_budget_local_ai_setup/",
+    "published": "2026-07-30T23:03:40+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Please no ROCm jokes</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Last_Bad_2687\"> /u/Last_Bad_2687 </a> <br /> <span><a href=\"https://pcpartpicker.com/list/RrgQR4\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vb99i2/is_this_a_good_budget_local_ai_setup/\">[comments]</a></span>",
+    "fetched_at": "2026-07-30T23:54:31.488688+00:00"
   }
 ]

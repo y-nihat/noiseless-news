@@ -218,5 +218,15 @@
     "published": "2026-07-30T22:46:47+00:00",
     "summary": "The company previously hadn't disclosed whether it would recoup tariff costs after the Supreme Court ruled many of President Donald Trump's levies were illegal.",
     "fetched_at": "2026-07-30T23:19:31.683031+00:00"
+  },
+  {
+    "id": "33671ebc53dc5c65",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Anthropic says its Claude models 'gained unauthorized access' to other organizations' systems",
+    "url": "https://www.cnbc.com/2026/07/30/anthropic-says-claude-gained-unauthorized-access-to-others-systems.html",
+    "published": "2026-07-30T23:50:41+00:00",
+    "summary": "Anthropic said it discovered three instances where its Claude AI models accessed the internet during an evaluation and accessed outside systems.",
+    "fetched_at": "2026-07-30T23:54:31.488688+00:00"
   }
 ]
