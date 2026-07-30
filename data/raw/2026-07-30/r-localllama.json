@@ -1,0 +1,82 @@
+[
+  {
+    "id": "3f4b960ea63c51f6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Think of the children, another excuse for them to go after open source AI",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vapsbz/think_of_the_children_another_excuse_for_them_to/",
+    "published": "2026-07-30T10:28:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vapsbz/think_of_the_children_another_excuse_for_them_to/\"> <img alt=\"Think of the children, another excuse for them to go after open source AI\" src=\"https://preview.redd.it/94ht2tw9gcgh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c84ea95eee62a4fe08337895b2504b2cede1d851\" title=\"Think of the children, another excuse for them to go after open source AI\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Source:</p> <p><a href=\"https://web.archive.org/web/20260728093051/https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children\">https://web.archive.org/web/20260728093051/https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MaruluVR\"> /u/MaruluVR </a> <br /> <span><a href=\"https://i.redd.it/94ht2tw9gcgh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vapsbz/think_of_the_children_another_excuse_for_them_to/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "ec7f3180c4176e20",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM 5.2 with vision on Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vapetj/glm_52_with_vision_on_hugging_face/",
+    "published": "2026-07-30T10:08:30+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi all,</p> <p>I have not seen this model talked about here but it seems like baseten (inference provider on OpenRouter) merged the vision encoder from Kimi k2.6 into GLM 5.2.</p> <p>I think the lack of vision was one of the big complaint when GLM 5.2 came out, I have not tested this model but that is quite cool from baseten to release that to the public.</p> <p><a href=\"https://huggingface.co/baseten/GLM-5.2-Vision-NVFP4\">https://huggingface.co/baseten/GLM-5.2-Vision-NVFP4</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Practical-Collar3063\"> /u/Practical-Collar3063 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vapetj/glm_52_with_vision_on_hugging_face/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vapetj/glm_52_with_vision_on_hugging_face/\">[comments]</a></span>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "032edb8284b2e78c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Benchmarked: MindControl for Llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vapbnl/benchmarked_mindcontrol_for_llamacpp/",
+    "published": "2026-07-30T10:03:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vapbnl/benchmarked_mindcontrol_for_llamacpp/\"> <img alt=\"Benchmarked: MindControl for Llama.cpp\" src=\"https://preview.redd.it/j4mxkydybcgh1.png?width=140&amp;height=115&amp;auto=webp&amp;s=bfcbb49f0fd1f0be44482eb0dde895b8e6141a53\" title=\"Benchmarked: MindControl for Llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I recently shared the <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v3ms3c/mindcontrol_llamacpp_fork_to_guide_the_reasoning/\">original MindControl PoC</a> (and on <a href=\"http://github.com/laurencehardman/llama-mindcontrol\">github</a>) - sampler-level guided reasoning budgets for llama.cpp, nudging the model with self-aware statements about its own thinking budget instead of just hard-truncating it. We received some great feedback, and the most common ask (fair enough) was along the lines of &quot;Cool idea, but the implementation may result in degraded performance, and it needs benchmarking&quot;</p> <p>I'm pleased to now share benchmark results - HumanEval+ and LiveCodeBench, across a range of token budgets, four configs each: naive (llama.cpp's existing immediate cutoff — no signaling at all, this is the mechanism we're trying to improve upon), the grace-period hard-stop on its own, soft-warning + hard-stop, and the full intro + soft + hard mechanism. All on Qwen3.6-27B, Q4_K_XL (MTP), and results held up without speculative decoding (which is trivial considering the implementation_</p> <p><strong>Result:</strong> token consumption drops consistently, and the results become more pronounced on more complex tasks. On LiveCodeBench the ordering (naive &gt; hard-limit only &gt; soft+hard &gt; intro+soft+hard) held at every budget tested, with no exceptions. At the top end, intro+soft+hard used less than half the tokens naive did for effectively the same score. On HumanEval+, most configs matched or beat the unconstrained baseline outright - best score in the whol…",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "2e2e0842aab3b213",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anyone tested the IQ1_M 342GB Pruned Kimi K3? Is it usable?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vakvmg/anyone_tested_the_iq1_m_342gb_pruned_kimi_k3_is/",
+    "published": "2026-07-30T05:51:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vakvmg/anyone_tested_the_iq1_m_342gb_pruned_kimi_k3_is/\"> <img alt=\"Anyone tested the IQ1_M 342GB Pruned Kimi K3? Is it usable?\" src=\"https://external-preview.redd.it/rYyc07zb2JXBUOxH5Wzo4VBqEkGHBuhR9lesxiAhrlI.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=84d7823f31163339f5f2e79473b211066043b17c\" title=\"Anyone tested the IQ1_M 342GB Pruned Kimi K3? Is it usable?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Hannibalj2ca\"> /u/Hannibalj2ca </a> <br /> <span><a href=\"https://huggingface.co/prometheusAIR/Kimi-K3-REAP55-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vakvmg/anyone_tested_the_iq1_m_342gb_pruned_kimi_k3_is/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "56219304811d11a2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What is the fastest local research tool (deep research) ?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vakz7g/what_is_the_fastest_local_research_tool_deep/",
+    "published": "2026-07-30T05:56:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've tried grok and Claude's deep research mode and I was amazed with the speed considering the amount of sources analysed. Is there anything as fast that can run locally? </p> <p>My guess would be that to run faster, searches should be done in parallel by subadgents with an API (and not by emulating a full browser).</p> <p>Is there any privacy respecting search option ? I've heard about perplexity's API but there is an AI generation so it defeats the whole purpose imo.</p> <p>So far I've come across local-deep-research and open-deep-research but tested neither.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sarlaytos284\"> /u/sarlaytos284 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vakz7g/what_is_the_fastest_local_research_tool_deep/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vakz7g/what_is_the_fastest_local_research_tool_deep/\">[comments]</a></span>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "1b9045f506fed934",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What is the best intelligence/stable model currently for a single GB10/DGX spark?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vaorm7/what_is_the_best_intelligencestable_model/",
+    "published": "2026-07-30T09:32:14+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Is Qwen 3.6 27b still the go' ol' reliable at this point? I know 35b is faster but it just doesn't give as good results.</p> <p>Is it possible to run deepseek v4 flash on a single spark at decent tk/s without having to ssd stream or Q1 lobotomize?</p> <p>I was having good hopes for laguna s 2.1 but so far ive seen mixed reviews. Hopefully they fix those, otherwise we wait for qwen 3.8 or new deepseek stuff 🤞 </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Intrepid-Scale2052\"> /u/Intrepid-Scale2052 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vaorm7/what_is_the_best_intelligencestable_model/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vaorm7/what_is_the_best_intelligencestable_model/\">[comments]</a></span>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "ab1cdfdd3249ecd1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "4090 + 5060 Ti + 64GB RAM: 206 t/s on a 35B-A3B, and a 122B at 37 t/s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1valwh8/4090_5060_ti_64gb_ram_206_ts_on_a_35ba3b_and_a/",
+    "published": "2026-07-30T06:46:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been benchmarking a two-card box for a few weeks and I still can't quite get over some of these numbers, so I'm dumping them here.</p> <p><strong>Box:</strong> RTX 4090 (24GB) + RTX 5060 Ti (16GB), i9-13900K, 64GB DDR5. WSL2 with 47GB allocated to the VM, CUDA 12.8 (12.8 specifically,13.1 segfaults llama.cpp's MMQ kernel on Blackwell and silently falls back to cuBLAS, which cost me ~6x on prompt processing before I figured that out). llama.cpp built for <code>89;120</code>. Everything below is 131K context with q8_0 KV cache, measured on short-code generation.</p> <table><thead> <tr> <th align=\"left\">Model</th> <th align=\"left\">Placement</th> <th align=\"left\">MTP on</th> <th align=\"left\">MTP off</th> </tr> </thead><tbody> <tr> <td align=\"left\">Qwen3.6-27B dense, Q4_K_XL</td> <td align=\"left\">4090 only</td> <td align=\"left\"><strong>101–118 t/s</strong></td> <td align=\"left\">44 t/s</td> </tr> <tr> <td align=\"left\">Qwen3.6-27B dense, Q6_K_XL</td> <td align=\"left\">both cards, layer split</td> <td align=\"left\"><strong>64 t/s</strong></td> <td align=\"left\"></td> </tr> <tr> <td align=\"left\">Qwen3.6-35B-A3B, Q4_K_XL</td> <td align=\"left\">4090 + 6 expert layers spilled</td> <td align=\"left\"><strong>206 t/s</strong></td> <td align=\"left\">113 t/s</td> </tr> <tr> <td align=\"left\">Qwen3.5-122B-A10B, IQ3_S</td> <td align=\"left\">4090 + 5060 Ti + ~15GB in RAM</td> <td align=\"left\"><strong>37–41 t/s</strong></td> <td align=\"left\">24 t/s</td> </tr> </tbody></table> <p>The 122B one is the one I keep re-reading. That's a 122-billion-parameter model with 17 of its 49 layers living in system RAM, generating faster than most people's 8B setups. My own napkin estimate before I ran it was 20–30 t/s and I thought I was being optimistic.</p> <p>Scripts and all the raw numbers are in a repo I put up (github.com/04RR/qServer). it's my own, mostly llama.cpp launch flags and regression gates rather than anything clever, but the RESULTS and LEARNINGS files ha…",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "8db89934c221485d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Extracting MoE experts from Kimi K3",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vac9e9/extracting_moe_experts_from_kimi_k3/",
+    "published": "2026-07-29T23:09:47+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Has anyone yet tried to extract experts from kimi (or GLM 5.2) per chance? There is REAP that removes experts based on routing, but I could only run one K3 expert on my hardware. Could there maybe be a usual expert for different tasks? Would be fun to have a 104B Kimi model, although I think that it would be garbage</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/StableDiffer\"> /u/StableDiffer </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vac9e9/extracting_moe_experts_from_kimi_k3/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vac9e9/extracting_moe_experts_from_kimi_k3/\">[comments]</a></span>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  }
+]

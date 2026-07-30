@@ -1,0 +1,22 @@
+[
+  {
+    "id": "6042836637756443",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Classifying multipartite continuous-variable entanglement structures through data-augmented neural networks",
+    "url": "https://www.nature.com/articles/s42256-026-01284-y",
+    "published": "2026-07-30T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 30 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01284-y\">doi:10.1038/s42256-026-01284-y</a></p>Gao et al. introduce a quantum data augmentation method to enable neural networks to classify multipartite entanglement structures in infinite-dimensional systems, substantially improving accuracy and reducing the data acquisition costs that typically limit training.",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "8b2787be829271c0",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Reusability report: Exploring the utility and extensibility of an integrated modelling framework for liquid electrolyte design",
+    "url": "https://www.nature.com/articles/s42256-026-01277-x",
+    "published": "2026-07-30T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 30 July 2026; <a href=\"https://www.nature.com/articles/s42256-026-01277-x\">doi:10.1038/s42256-026-01277-x</a></p>Lai et al. extend and evaluate a unified framework for liquid electrolyte design, showing how data size and composition affect robustness, and demonstrating improved cross-system transferability and multiscale performance over baselines.",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a1ad3609da6f9936",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Tencent Open-Sources AngelSpec: A Unified Training Framework for MTP and Block-Parallel Speculative Decoding on Hy3 Models",
+    "url": "https://www.marktechpost.com/2026/07/30/tencent-open-sources-angelspec-a-unified-training-framework-for-mtp-and-block-parallel-speculative-decoding-on-hy3-models/",
+    "published": "2026-07-30T10:08:18+00:00",
+    "summary": "<p>Tencent has released AngelSpec, an open-source torch-native framework for training speculative-decoding draft models across six architectures. It introduces DFly, a block-diffusion drafter with hybrid target conditioning and a hidden-correction autoregressive head, and integrates D-cut for runtime-adaptive verification budgeting. On HY3-295B-A21B with TP=8, DFly-8 delivers a 1.98–2.40× speedup over autoregressive decoding across concurrency 4 to 64.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/30/tencent-open-sources-angelspec-a-unified-training-framework-for-mtp-and-block-parallel-speculative-decoding-on-hy3-models/\">Tencent Open-Sources AngelSpec: A Unified Training Framework for MTP and Block-Parallel Speculative Decoding on Hy3 Models</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "1b2a1aeeb1ecec87",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Meet Token Saver: An Open-Source MCP Extension Using Local Hybrid RAG to Cut Claude PDF Token Costs 90-99%",
+    "url": "https://www.marktechpost.com/2026/07/30/token-saver-an-open-source-mcp-extension-using-local-hybrid-rag/",
+    "published": "2026-07-30T07:43:29+00:00",
+    "summary": "<p>Marktechpost AI has released Token Saver, an open-source MCP extension for Claude Desktop that uses local Hybrid RAG to slash PDF token consumption by up to 99% while ensuring absolute document privacy.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/30/token-saver-an-open-source-mcp-extension-using-local-hybrid-rag/\">Meet Token Saver: An Open-Source MCP Extension Using Local Hybrid RAG to Cut Claude PDF Token Costs 90-99%</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "3620c9526c3c4f2f",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Prompt Engineering vs Loop Engineering vs Graph Engineering: What Changes at Each Layer",
+    "url": "https://www.marktechpost.com/2026/07/29/prompt-engineering-vs-loop-engineering-vs-graph-engineering/",
+    "published": "2026-07-30T05:45:53+00:00",
+    "summary": "<p>Three terms now compete for the same line in AI engineering job descriptions. Prompt engineering is the established one. Loop engineering entered the AI vocabulary in late 2025 and dominated developer discussion through June 2026. Graph engineering followed roughly six weeks later. They get used interchangeably. Should they be? The three are not competing techniques. [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/29/prompt-engineering-vs-loop-engineering-vs-graph-engineering/\">Prompt Engineering vs Loop Engineering vs Graph Engineering: What Changes at Each Layer</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "640b0fd2efc9e2bd",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Moonshot AI Open-Sources MoonEP: A Perfectly Balanced Expert Parallelism Library for MoE Training",
+    "url": "https://www.marktechpost.com/2026/07/29/moonshot-ai-open-sources-moonep-a-perfectly-balanced-expert-parallelism-library-for-moe-training/",
+    "published": "2026-07-30T05:28:39+00:00",
+    "summary": "<p>Moonshot AI has open-sourced MoonEP, an Expert Parallelism (EP) communication library for distributed Mixture-of-Experts (MoE) workloads. The team announced the release as a library built to make expert-parallel communication more efficient at scale. It ships under an MIT license. MoonEP arrived as part of Kimi K3 Open Day. Alongside the K3 model weights and technical [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/07/29/moonshot-ai-open-sources-moonep-a-perfectly-balanced-expert-parallelism-library-for-moe-training/\">Moonshot AI Open-Sources MoonEP: A Perfectly Balanced Expert Parallelism Library for MoE Training</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  }
+]

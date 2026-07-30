@@ -1,0 +1,42 @@
+[
+  {
+    "id": "2fc5e7043d4cbab2",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "OpenAI’s Hacking Debacle Was a Human Mistake",
+    "url": "https://www.wired.com/story/openais-hacking-debacle-was-a-human-mistake/",
+    "published": "2026-07-30T10:30:00+00:00",
+    "summary": "If the generative AI giant had followed well-known security best practices, it’s likely that its AI agent would never have escaped to the open internet and hacked multiple companies.",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "6768520791d55411",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "LinkedIn Won’t Be Expanding Its Data Centers in the Next Year",
+    "url": "https://www.wired.com/story/how-linkedin-is-keeping-its-compute-capacity-flat/",
+    "published": "2026-07-30T10:15:00+00:00",
+    "summary": "Despite the ongoing AI boom, LinkedIn is holding the line on compute spending. Instead, it’s challenging engineers to make every GPU count.",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "998ef26432df0db9",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "AI Scammers Are Better at Building Trust Than Humans",
+    "url": "https://www.wired.com/story/ai-scammers-are-better-at-building-trust-than-humans/",
+    "published": "2026-07-30T09:30:00+00:00",
+    "summary": "Researchers pitted a person against a Claude agent and found that, after a week of texting, the AI chatbot was more effective at creating “exploitable trust” with others.",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  },
+  {
+    "id": "96c37dec4da89645",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "I Got a Free Meal From a Private Chef—Who Filmed It All to Train Robots",
+    "url": "https://www.wired.com/story/i-let-a-private-chef-film-my-kitchen-for-robot-training-data/",
+    "published": "2026-07-30T09:00:00+00:00",
+    "summary": "A German startup sent a camera-wearing chef to my apartment. In exchange for a free lunch, I let them record every chop and stir to train future humanoids.",
+    "fetched_at": "2026-07-30T11:53:51.588827+00:00"
+  }
+]
