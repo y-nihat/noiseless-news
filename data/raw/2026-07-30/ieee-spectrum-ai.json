@@ -1,0 +1,12 @@
+[
+  {
+    "id": "b67dc1f2751529d3",
+    "source": "IEEE Spectrum AI",
+    "tier": 2,
+    "title": "Are AI Models Working Harder Than They Need to?",
+    "url": "https://spectrum.ieee.org/ai-energy-weightless-neural-networks",
+    "published": "2026-07-30T13:35:32+00:00",
+    "summary": "<img src=\"https://spectrum.ieee.org/media-library/a-middle-aged-indian-woman-in-professional-attire-smiling-while-holding-an-fpga-board.jpg?id=67554240&amp;width=1200&amp;height=400&amp;coordinates=0%2C416%2C0%2C417\" /><br /><br /><p>Much of modern AI runs on multiplication. Neural networks behind everything from generated answers to photo organization and song recommendations perform millions or billions of operations that multiply inputs by learned weights. <a href=\"https://ece.utexas.edu/people/faculty/lizy-john\" rel=\"noopener noreferrer\" target=\"_blank\">Lizy K. John</a> thinks that’s more work than the job requires.</p><p>John, a professor of electrical and computer engineering at the University of Texas at Austin, has spent the past five years working on a class of models called <a href=\"https://research.google/pubs/weightless-neural-networks-an-efficient-edge-inference-architecture/\" rel=\"noopener noreferrer\" target=\"_blank\">weightless neural networks</a>. Instead of repeatedly multiplying inputs by weights, these networks pass binary inputs through interconnected lookup tables—closer to consulting a collection of stored answers than solving the same arithmetic problem repeatedly. Depending on the task, she says, the networks can be 1,000 times as small or as fast as conventional alternatives while maintaining comparable accuracy.</p><p>Her team’s work has so far focused on small, specific problems: medical sensors, activity tracking, keyword spotting. But she thinks the same approach could eventually reach much bigger targets, including the <a href=\"https://spectrum.ieee.org/what-is-generative-ai\" target=\"_self\">transformer models</a> behind today’s chatbots.</p><p><strong>What made you walk away from weights in the first place? Was there a specific moment that pushed you toward lookups instead?</strong></p><p><strong>Lizy K. John: </strong>A friend casually invited me to a weekly meeting a few years ago to talk about using lookups instead of weights, a techn…",
+    "fetched_at": "2026-07-30T22:44:32.116921+00:00"
+  }
+]
