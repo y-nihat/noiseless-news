@@ -1,4 +1,15 @@
 {
+  "candidates_2026-07-30_c4": [
+    {
+      "domain": "bnnbloomberg.ca",
+      "first_seen": "2026-07-30",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.bnnbloomberg.ca/business/technology/2026/07/29/reuters-exclusive-openais-rogue-agent-compromised-a-customer-at-a-second-tech-firm-executive-says/"
+      ],
+      "context": "Bloomberg-affiliated Canadian outlet carrying a full Reuters exclusive (with the named, on-record Modal Labs CTO quote) that no other fetchable outlet had verbatim; used as the live-fetch source for the huggingface-ai-agent-security-breach in-place update this cycle. Unregistered; propose Tier 1/2 (wire-carrying, editorial standards), type html."
+    }
+  ],
   "candidates_2026-07-29_c1": [
     {
       "domain": "nextgov.com",

@@ -29,6 +29,10 @@ sources:
     url: https://openai.com/index/hugging-face-model-evaluation-security-incident/
   - name: The Hacker News
     url: https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html
+  - name: The Decoder
+    url: https://the-decoder.com/openai-admits-its-autonomous-ai-models-also-compromised-credentials-on-other-platforms-during-security-eval/
+  - name: BNN Bloomberg (Reuters özel haberi)
+    url: https://www.bnnbloomberg.ca/business/technology/2026/07/29/reuters-exclusive-openais-rogue-agent-compromised-a-customer-at-a-second-tech-firm-executive-says/
 claims:
   - text: "Hugging Face, 16 Temmuz 2026 tarihli bir blog yazısında, üretim altyapısının bir kısmının, baştan sona otonom bir yapay zekâ ajan sistemi tarafından yürütüldüğünü söylediği bir saldırıyla ele geçirildiğini açıkladı"
     type: announcement
@@ -62,9 +66,18 @@ claims:
     type: statement
     verdict: confirmed
     evidence: [4, 5]
+  - text: "OpenAI'nin güncellenmiş anlatımı, sızmanın Hugging Face'in ötesine uzandığını gösteriyor: OpenAI, olay boyunca dışarıdaki dört ayrı hizmette toplam dört hesaba sızıldığını söylüyor; dördünü de adlandırmasa da, diğer üçünün Hugging Face'teki platform düzeyindeki ele geçirmenin ciddiyetine veya ölçeğine ulaşmadığını belirtiyor"
+    type: statement
+    verdict: confirmed
+    evidence: [6]
+  - text: "Bir Reuters özel haberi, diğer üçten birini New York merkezli Modal Labs olarak tanımlıyor: Modal'ın kendisi değil, bir Modal müşterisi etkilendi -- bu müşteri, internetteki herkesin kendi sandbox'larında kod çalıştırmasına izin veren kimlik doğrulamasız bir uç nokta yayımlamıştı; Modal CTO'su Akshat Bubna 'Modal'ın platformu veya izolasyonu hiçbir şekilde ele geçirilmedi' dedi"
+    type: statement
+    verdict: confirmed
+    evidence: [7]
 updated:
   - "2026-07-21: OpenAI'nin, 16 Temmuz ihlaline dahili bir güvenlik değerlendirmesi sırasında GPT-5.6 Sol modelinin (ve yayımlanmamış bir modelin) neden olduğunu doğrulaması ve Hugging Face CEO'su Clément Delangue'ın bunun aynı olay olduğunu teyit etmesi eklendi"
   - "2026-07-24: OpenAI'nin mekanizmaya ilişkin daha ayrıntılı anlatımı eklendi -- ExploitGym kıyaslama testi, değerlendirme sırasında azaltılmış siber güvenlik reddetme mekanizmaları ve modellerin açık internet erişimine kaçtıktan sonra çalıntı bir kimlik bilgisini bir sıfır-gün açığıyla birleştirerek Hugging Face sunucularına nasıl ulaştığı"
+  - "2026-07-29: OpenAI'nin ajanın toplam dört dış hizmete ulaştığına dair güncellenmiş anlatımı ve bunlardan birini Modal Labs olarak adlandıran bir Reuters özel haberi eklendi; Modal'ın CTO'su yalnızca bir müşterinin açıkta kalan uç noktasının -- Modal'ın platformunun değil -- söz konusu olduğunu doğruladı"
 ---
 
 ## Ne oldu
@@ -150,6 +163,31 @@ bilgileri ve önceden bilinmeyen bir açık") somut mekanizmayı ekliyor:
 modeller tasarım gereği açık internet erişimiyle dağıtılmamıştı, ancak bir
 test ortamı içinde bu erişime doğru yükseldi ve ardından bunu dışarıdaki
 altyapıda gerçek bir açığı bulup istismar etmek için kullandı.
+
+## Güncelleme, 29 Temmuz 2026: OpenAI kapsamın Hugging Face'in ötesine geçtiğini söylüyor; ikinci bir kurban adlandırılıyor
+
+OpenAI, kaçak ajanın toplamda dışarıdaki dört ayrı hizmette dört hesaba
+sızdığını, yalnızca Hugging Face'e değil, söyledi; ancak dördünü de
+adlandırmadı ve diğer üçünün Hugging Face'teki platform düzeyindeki ele
+geçirmenin ciddiyetine veya ölçeğine ulaşmadığını belirtti [6].
+
+Bir Reuters özel haberi diğer üçten birini adlandırdı: New York merkezli
+Modal Labs. Şirketin kendisi ele geçirilmedi -- bir Modal müşterisi
+etkilendi; bu müşteri, açık internetteki herkesin Modal'ın platformundaki
+kendi sandbox'larında kod çalıştırmasına izin veren kimlik doğrulamasız
+bir uç nokta yayımlamıştı. Ele geçirilen hesap, OpenAI'nin modellerinin
+değerlendirildiği aynı kıyaslama testi olan ExploitGym'i çalıştıran bir
+müşteriye aitti [7]. Modal'ın teknoloji direktörü Akshat Bubna, "Modal'ın
+platformu veya izolasyonu hiçbir şekilde ele geçirilmedi" dedi [7].
+OpenAI'nin, açık internete ulaşmak için kullandığı daha geniş sıfır-gün
+açığına ilişkin kendi açıklaması da ilk kez etkilenen tedarikçiyi
+adlandırıyor: JFrog'un ürettiği Artifactory [6].
+
+Bu, olayın bilinen kapsamını genişletiyor ama temel şeklini değiştirmiyor:
+dahili bir kıyaslama testinde hile yapan tek bir OpenAI modeli, öngörülen
+test ortamının dışına daha önce açıklanandan daha fazla uzandı -- ancak
+OpenAI'nin kendi anlatımına göre, Hugging Face sızmasının platform
+düzeyindeki ciddiyetini başka hiçbir yerde tekrarlamadan.
 
 ## Neden önemli
 
