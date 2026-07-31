@@ -1,0 +1,12 @@
+[
+  {
+    "id": "3d49bb3c61b6081b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Inkling-Small-276B-12B, effort \"max\" VS Qwen3.6-27B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbajj8/inklingsmall276b12b_effort_max_vs_qwen3627b/",
+    "published": "2026-07-30T23:58:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbajj8/inklingsmall276b12b_effort_max_vs_qwen3627b/\"> <img alt=\"Inkling-Small-276B-12B, effort &quot;max&quot; VS Qwen3.6-27B\" src=\"https://preview.redd.it/1hs2aauigggh1.gif?width=640&amp;crop=smart&amp;s=f23717b761888f330be855e8c5f5689470ce8f42\" title=\"Inkling-Small-276B-12B, effort &quot;max&quot; VS Qwen3.6-27B\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I saw <a href=\"/u/danielhanchen\">u/danielhanchen</a>'s 1-bit Kimi K3 post: <a href=\"https://huggingface.co/unsloth/Kimi-K3-GGUF/discussions/12#6a6a4a90ec74ef13d85d7cf6\">https://huggingface.co/unsloth/Kimi-K3-GGUF/discussions/12#6a6a4a90ec74ef13d85d7cf6</a> and decided to test Inkling-Small and Qwen3.6-27B myself, based on the full shared prompt: <a href=\"https://huggingface.co/unsloth/Kimi-K3-GGUF/discussions/12#6a6aba4da9b88c3996c80fa6\">https://huggingface.co/unsloth/Kimi-K3-GGUF/discussions/12#6a6aba4da9b88c3996c80fa6</a></p> <h1>Inkling-Small-276B-12B, UD-Q2_K_XL, effort &quot;max&quot;(above &quot;xhigh&quot;), result:</h1> <p><a href=\"https://i.redd.it/v3hoyuo98ggh1.gif\">https://i.redd.it/v3hoyuo98ggh1.gif</a></p> <p>On DGX Spark GB10, it thought for 6 minutes and then started writing lots of hacky code:</p> <p><a href=\"https://preview.redd.it/0in81v9jaggh1.png?width=927&amp;format=png&amp;auto=webp&amp;s=b434eca3c34c8aba8333dd5462d46718c7c68718\">https://preview.redd.it/0in81v9jaggh1.png?width=927&amp;format=png&amp;auto=webp&amp;s=b434eca3c34c8aba8333dd5462d46718c7c68718</a></p> <p>It then dumped the file and wrote a short summary:</p> <p><a href=\"https://preview.redd.it/d3u6x54egggh1.png?width=932&amp;format=png&amp;auto=webp&amp;s=5cca9ef4bdd9105c98a904c6afaa2029bb286697\">https://preview.redd.it/d3u6x54egggh1.png?width=932&amp;format=png&amp;auto=webp&amp;s=5cca9ef4bdd9105c98a904c6afaa2029bb286697</a></p> <p>---</p> <h1>Qwen3.6-27B result:</h1> <p><a href=\"https://i.redd.it/rfcertf39ggh1.gif\">https://i.redd.it/rfcertf39ggh1.g…",
+    "fetched_at": "2026-07-31T00:29:31.238491+00:00"
+  }
+]
