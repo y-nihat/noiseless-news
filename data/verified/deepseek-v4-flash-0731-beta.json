@@ -1,0 +1,68 @@
+{
+  "slug": "deepseek-v4-flash-0731-beta",
+  "checked_at": "2026-07-31T23:24:00+00:00",
+  "method": "dedup-check clean (no matches) before opening -- confirmed no prior article covers the April V4 preview launch either, so this is a standalone story, not a follow-up. Fresh verifier sub-agent fetched DeepSeek's own API updates log and April preview announcement, cross-checked pricing on DeepSeek's own pricing page, and found independent Tier-2 coverage (Nikkei Asia, byline Cissy Zhou; VentureBeat) that is separately bylined and reported, not a single wire relayed multiple times. Fresh adversarial falsifier sub-agent attempted to break the release-date, public-beta-status, benchmark, and price-war framing claims.",
+  "origin_items": [
+    "Surfaced via GNews: AI model releases aggregator leads (Tier-3, discovery only) on 2026-07-31, traced to DeepSeek's own API updates log and independent press"
+  ],
+  "claims": [
+    {
+      "text": "DeepSeek released DeepSeek-V4-Flash-0731 into public beta via its API on 31 July 2026, a re-post-trained update of V4-Flash aimed at improved agentic, coding and tool-use performance",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (DeepSeek's own API updates log) dated 31 July 2026 states this directly; corroborated same-day by Nikkei Asia's independently bylined report.",
+      "evidence": [
+        "https://api-docs.deepseek.com/updates/",
+        "https://asia.nikkei.com/business/technology/artificial-intelligence/deepseek-releases-beta-version-of-v4-models-as-ai-price-war-heats-up"
+      ]
+    },
+    {
+      "text": "V4-Flash was originally open-sourced on 24 April 2026 as part of a preview alongside V4-Pro; V4-Pro itself was not updated on 31 July",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "April preview confirmed via DeepSeek's own news page. Absence of any V4-Pro entry in DeepSeek's 31 July updates log confirms V4-Pro was not touched -- avoids the candidate framing's conflation of 'V4 and V4 Flash' as a joint July launch.",
+      "evidence": [
+        "https://api-docs.deepseek.com/news/news260424/",
+        "https://api-docs.deepseek.com/updates/"
+      ]
+    },
+    {
+      "text": "DeepSeek reports V4-Flash-0731 scoring 82.7 on Terminal-Bench 2.1, 54.4 on DeepSWE, and 70.3 on Toolathlon",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "All figures attributed to DeepSeek's own published benchmarks by every outlet checked (Bloomberg: 'the company reported').",
+      "evidence": [
+        "https://api-docs.deepseek.com/updates/"
+      ]
+    },
+    {
+      "text": "An independent Artificial Analysis evaluation puts V4-Flash-0731's Terminal-Bench 2.1 score at approximately 79%, close to but not matching DeepSeek's own 82.7, still a large rise from the prior Flash's roughly 62%",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier sub-agent live-fetched Artificial Analysis's independent evaluation (verification.md section 5 live-fetch rule) and found a score close to but not exactly matching DeepSeek's self-reported figure. No independent figures found for DeepSWE or Toolathlon.",
+      "evidence": [
+        "https://artificialanalysis.ai"
+      ]
+    },
+    {
+      "text": "API pricing for V4-Flash-0731 is unchanged from the preview",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Directly matches DeepSeek's own pricing page.",
+      "evidence": [
+        "https://api-docs.deepseek.com/quick_start/pricing"
+      ]
+    },
+    {
+      "text": "The release comes amid intensifying price competition among frontier AI labs, landing the same week OpenAI cut prices on GPT-5.6 Luna by roughly 80%",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Independence check (wire-exclusive rule, verification.md section 2): Nikkei Asia and VentureBeat are separately bylined/reported outlets, not one wire relayed multiple ways -- passes the independence rule for a business claim needing two independent Tier <=2 sources.",
+      "evidence": [
+        "https://asia.nikkei.com/business/technology/artificial-intelligence/deepseek-releases-beta-version-of-v4-models-as-ai-price-war-heats-up",
+        "https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost"
+      ]
+    }
+  ],
+  "notes": "Bloomberg's article on this release is paywalled and was only corroborated via search-result snippet, not full-text fetch; not cited as a numbered source for that reason, relying on Nikkei and VentureBeat instead. TechNode (unregistered, previously logged as a source candidate on 2026-07-31) independently corroborates V4-Pro being unchanged but was not cited as a numbered source given DeepSeek's own updates log already establishes this directly. A blocked-domain outlet (cryptobriefing.com) used the same 'V4 models' plural framing as early aggregator leads -- deliberately not followed; the article scopes the headline and claims to V4-Flash-0731 specifically. Adversarial falsifier pass (fresh sub-agent) recommended two edits, both applied: (1) added the independent Artificial Analysis figure alongside the vendor-reported Terminal-Bench 2.1 score rather than leaving the vendor number unchecked; (2) confirmed the article does not call V4-Flash 'flagship' -- DeepSeek's own materials position V4-Pro as the higher/flagship tier. All other claims (release date, public-beta access, V4-Pro unchanged, price-war framing) survived falsification without changes. Falsifier go/no-go: GO."
+}

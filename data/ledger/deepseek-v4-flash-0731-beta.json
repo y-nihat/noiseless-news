@@ -1,0 +1,26 @@
+{
+  "slug": "deepseek-v4-flash-0731-beta",
+  "title": "DeepSeek releases V4-Flash-0731 in public beta amid intensifying AI price competition",
+  "status": "published",
+  "first_seen": "2026-07-31",
+  "published_at": "2026-07-31",
+  "date": "2026-07-31",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://api-docs.deepseek.com/updates/",
+    "https://api-docs.deepseek.com/news/news260424/",
+    "https://api-docs.deepseek.com/quick_start/pricing",
+    "https://asia.nikkei.com/business/technology/artificial-intelligence/deepseek-releases-beta-version-of-v4-models-as-ai-price-war-heats-up",
+    "https://venturebeat.com/technology/ai-price-wars-openai-cuts-gpt-5-6-luna-prices-by-80-as-model-competition-shifts-toward-cost",
+    "https://artificialanalysis.ai"
+  ],
+  "follows": null,
+  "watch": [
+    "Independent (non-vendor) evaluation of V4-Flash-0731's Terminal-Bench 2.1 / DeepSWE / Toolathlon scores",
+    "Whether the announced peak/off-peak pricing structure takes effect and at what rates",
+    "Whether V4-Pro receives its own update in response to competitive pressure"
+  ],
+  "notes": [
+    "2026-07-31 c2: Surfaced via GNews aggregator leads, traced to DeepSeek's own API updates log. dedup-check clean, including against the April V4/V4-Pro preview (no prior article, so standalone not follow-up). Fresh verifier + adversarial falsifier sub-agents run. Corrected candidate framing that conflated V4 and V4-Flash as a joint launch -- only V4-Flash was updated on 31 July; V4-Pro is unchanged since its 24 April preview. Benchmark numbers labeled vendor-claim; falsifier live-fetched an independent Artificial Analysis evaluation putting the Terminal-Bench 2.1 score close to but not matching DeepSeek's own figure, added to the article. Bloomberg coverage paywalled, not cited; relied on Nikkei Asia and VentureBeat for independent business-claim sourcing. Falsifier go/no-go: GO, no false or fabricated claims found."
+  ]
+}
