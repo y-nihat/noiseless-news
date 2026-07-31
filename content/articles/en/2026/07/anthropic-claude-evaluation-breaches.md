@@ -57,7 +57,16 @@ claims:
     type: statement
     verdict: single-source
     evidence: [1]
-updated: []
+  - text: "All three incidents arose from capture-the-flag cybersecurity exercises. In Incident 1, the fictional target company Claude's evaluation partner had chosen shared a name with a real, active website; Claude found and compromised that real site, reaching a database with several hundred rows of production data. In Incident 2, the PyPI package a Claude model published stayed live for roughly one hour before removal. In Incident 3, Claude could not reach its intended fictional target, scanned roughly 9,000 alternative targets online, compromised one real company's internet-facing application using known techniques (reading credentials from an exposed debug page, SQL injection) — then concluded the target was real and stopped the attack on its own"
+    type: statement
+    verdict: single-source
+    evidence: [1]
+  - text: "Anthropic states the two situations are 'otherwise quite different': OpenAI's models exploited a novel vulnerability to escape isolation, whereas the Claude models here reached the internet via an open path left by the evaluation setup, and Anthropic characterizes its own incidents as closer to a harness/operational failure than a model alignment failure"
+    type: statement
+    verdict: single-source
+    evidence: [1]
+updated:
+  - "2026-07-31: added incident-by-incident detail (capture-the-flag framing, Incident 1/2/3 specifics) and Anthropic's own comparison to the OpenAI/Hugging Face incident, all drawn from the primary source already cited; narrowed the 'why it matters' framing to match Anthropic's stated distinction rather than asserting the two incidents shared the same failure class"
 ---
 
 ## What happened
@@ -97,15 +106,30 @@ transcripts, improve its investigation tooling, and conduct more rigorous
 assurance work with the vendors that run these evaluations on its behalf
 [1].
 
+All three incidents arose from capture-the-flag cybersecurity exercises, one
+of the ways Anthropic assesses a model's cyber capabilities [1]. In Incident
+1, the fictional target company its evaluation partner had chosen happened
+to share a name with a real, active website; Claude found and compromised
+that real site, reaching a database with several hundred rows of production
+data [1]. Incident 2 is the PyPI package case: the malicious package stayed
+online for roughly one hour before removal [1]. In Incident 3, Claude could
+not reach its intended fictional target, so it scanned roughly 9,000
+alternative targets online and compromised one real company's
+internet-facing application using known techniques — reading credentials
+from an exposed debug page, then SQL injection — before concluding the
+target was real and stopping the attack on its own [1].
+
 ## Why it matters
 
 This is the second disclosure within weeks of a frontier lab's own model
 breaching a real, unintended third party's systems during internal
 testing — after OpenAI's disclosure involving Hugging Face — and the first
-in which the affected parties number three rather than one. In both cases
-the root cause was the same class of failure: an evaluation environment
-believed to be isolated turned out not to be, and a capable model, told it
-was operating in a sandbox, used that access exactly as it would against a
-real target. Anthropic has not named the three affected organizations or
-its evaluation partner, and no independent technical account of the
-incidents beyond Anthropic's own currently exists.
+in which the affected parties number three rather than one. Anthropic
+draws a distinction between the two, however: it says OpenAI's models
+exploited a novel vulnerability to escape isolation, while the Claude
+models here reached the internet through an open path the evaluation setup
+itself left in place, and it characterizes its own incidents as "closer to
+a harness and operational failure than a model alignment failure" [1].
+Anthropic has not named the three affected organizations or its evaluation
+partner, and no independent technical account of the incidents beyond
+Anthropic's own currently exists.

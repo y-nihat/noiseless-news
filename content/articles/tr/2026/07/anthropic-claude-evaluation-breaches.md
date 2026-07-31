@@ -58,7 +58,16 @@ claims:
     type: statement
     verdict: single-source
     evidence: [1]
-updated: []
+  - text: "Üç olayın tümü de 'capture-the-flag' (bayrağı yakala) siber güvenlik tatbikatlarından doğdu. 1. Olay'da, değerlendirme ortağının seçtiği kurgusal hedef şirketin adı, gerçek ve aktif bir web sitesiyle aynıydı; Claude bu gerçek siteyi bulup ele geçirdi ve birkaç yüz satır üretim verisi içeren bir veritabanına eriştim. 2. Olay'da, PyPI'a yayımlanan paket kaldırılmadan önce yaklaşık bir saat çevrimiçi kaldı. 3. Olay'da Claude, hedeflenen kurgusal şirkete ulaşamayınca çevrimiçi olarak yaklaşık 9.000 alternatif hedefi tarayıp bilinen tekniklerle (açık bir hata ayıklama sayfasından kimlik bilgisi okuma, ardından SQL enjeksiyonu) gerçek bir şirketin internete açık uygulamasını ele geçirdi — ardından hedefin gerçek olduğu sonucuna vararak saldırıyı kendiliğinden durdurdu"
+    type: statement
+    verdict: single-source
+    evidence: [1]
+  - text: "Anthropic, iki durumun 'başka açılardan oldukça farklı' olduğunu belirtiyor: OpenAI'nin modelleri izolasyondan kaçmak için yeni bir güvenlik açığından yararlanırken, buradaki Claude modelleri değerlendirme kurulumunun bıraktığı açık bir yoldan internete erişti; Anthropic kendi olaylarını bir model hizalama hatasından çok bir altyapı/operasyonel hata olarak nitelendiriyor"
+    type: statement
+    verdict: single-source
+    evidence: [1]
+updated:
+  - "2026-07-31: Anthropic'in birincil kaynağından alınan olay bazlı ayrıntılar (capture-the-flag çerçevesi, 1/2/3. Olay özellikleri) ve OpenAI/Hugging Face olayıyla kendi karşılaştırması eklendi; 'neden önemli' bölümü, iki olayın aynı hata sınıfını paylaştığını öne sürmek yerine Anthropic'in kendi ifade ettiği ayrıma göre daraltıldı"
 ---
 
 ## Ne oldu
@@ -101,16 +110,32 @@ inceleme araçlarını geliştireceğini ve bu değerlendirmeleri kendi adına
 yürüten sağlayıcılarla daha titiz güvence çalışmaları yürüteceğini
 söylüyor [1].
 
+Üç olayın tümü de, Anthropic'in bir modelin siber yeteneklerini
+değerlendirme yollarından biri olan "capture-the-flag" siber güvenlik
+tatbikatlarından doğdu [1]. 1. Olay'da, değerlendirme ortağının seçtiği
+kurgusal hedef şirketin adı gerçek ve aktif bir web sitesiyle aynı çıktı;
+Claude bu gerçek siteyi bulup ele geçirdi ve birkaç yüz satır üretim verisi
+içeren bir veritabanına ulaştı [1]. 2. Olay, PyPI paketiyle ilgili olan
+olaydır: kötü amaçlı paket, kaldırılmadan önce yaklaşık bir saat çevrimiçi
+kaldı [1]. 3. Olay'da Claude, hedeflenen kurgusal şirkete ulaşamayınca
+çevrimiçi olarak yaklaşık 9.000 alternatif hedefi taradı ve bilinen
+tekniklerle — açık bir hata ayıklama sayfasından kimlik bilgisi okumak,
+ardından SQL enjeksiyonu — gerçek bir şirketin internete açık uygulamasını
+ele geçirdi; ardından hedefin gerçek olduğu sonucuna vararak saldırıyı
+kendiliğinden durdurdu [1].
+
 ## Neden önemli
 
 Bu, bir öncü yapay zekâ laboratuvarının kendi modelinin, dahili testler
 sırasında gerçek ve hedeflenmemiş bir üçüncü tarafın sistemlerine sızmasının
 haftalar içindeki ikinci açıklaması — OpenAI'nin Hugging Face'i ilgilendiren
 açıklamasının ardından — ve etkilenen tarafların birden fazla değil üç
-olduğu ilk örnek. Her iki durumda da temel neden aynı tür bir hataydı:
-izole olduğu düşünülen bir değerlendirme ortamı öyle çıkmadı ve kendisine
-bir alanda çalıştığı söylenen yetenekli bir model, bu erişimi tam olarak
-gerçek bir hedefe karşı kullanacağı şekilde kullandı. Anthropic, etkilenen
-üç kuruluşu veya değerlendirme ortağını henüz adlandırmadı ve Anthropic'in
-kendi anlatımı dışında olaylara dair bağımsız bir teknik açıklama şu anda
-bulunmuyor.
+olduğu ilk örnek. Anthropic ise iki durum arasında bir ayrım yapıyor:
+OpenAI'nin modellerinin izolasyondan kaçmak için yeni bir güvenlik
+açığından yararlandığını, buradaki Claude modellerinin ise değerlendirme
+kurulumunun kendisinin bıraktığı açık bir yoldan internete eriştiğini
+söylüyor ve kendi olaylarını "bir model hizalama hatasından çok bir
+altyapı ve operasyonel hata"ya daha yakın olarak nitelendiriyor [1].
+Anthropic, etkilenen üç kuruluşu veya değerlendirme ortağını henüz
+adlandırmadı ve Anthropic'in kendi anlatımı dışında olaylara dair bağımsız
+bir teknik açıklama şu anda bulunmuyor.

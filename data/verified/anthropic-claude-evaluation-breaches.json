@@ -57,8 +57,23 @@
       "verdict": "single-source",
       "reasoning": "Stated only in Anthropic's own post; a forward-looking company commitment, appropriately labeled single-source/self-report.",
       "evidence": ["https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"]
+    },
+    {
+      "text": "All three incidents arose from capture-the-flag cybersecurity exercises; Incident 1 involved a real website that coincidentally shared the fictional target's name (Claude reached a database with several hundred rows of production data); Incident 2's PyPI package stayed live roughly one hour; Incident 3 involved Claude scanning ~9,000 alternative targets, compromising one real company's app, then recognizing the target was real and stopping on its own",
+      "type": "statement",
+      "verdict": "single-source",
+      "reasoning": "Confirmed by a direct re-fetch of the same Anthropic primary post already cited as source 1 this cycle -- this detail was present in the primary source at initial publication but not included in cycle 3's time-boxed write-up. Not independently reported elsewhere; kept single-source.",
+      "evidence": ["https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"]
+    },
+    {
+      "text": "Anthropic's post explicitly distinguishes its incidents from OpenAI's: OpenAI's models exploited a novel vulnerability to escape isolation, while Claude reached the internet via an open path left by the evaluation setup; Anthropic calls its own incidents closer to a harness/operational failure than a model alignment failure",
+      "type": "statement",
+      "verdict": "single-source",
+      "reasoning": "Directly quoted from the primary post on re-fetch. Cycle 3's article had asserted the two incidents shared 'the same class of failure' -- this update narrows that framing to match Anthropic's own, more specific comparison.",
+      "evidence": ["https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"]
     }
   ],
+  "cycle4_update_note": "WSJ (via Techmeme aggregation) and Axios both republished the model names/April-2026 timeline already in our article, attributed to Anthropic -- direct fetches of both wsj.com and axios.com failed (unreachable / 403) so neither was added as a numbered source; this remains Anthropic self-report only, unchanged verdict. Re-fetched the Anthropic primary source directly instead and found incident-by-incident detail (capture-the-flag framing, Incident 1/2/3 specifics, the OpenAI-comparison quote) that was in the primary source at initial publication but omitted from cycle 3's time-boxed write-up; added it as an in-place update per verification.md paragraph 8 (same event, new-to-us details from the source already cited).",
   "falsifier_notes": "No verifier/falsifier sub-agent pair spun up separately this cycle given the deadline; instead cross-checked via two independently fetched accounts (Anthropic's own post, a Reuters wire account via Yahoo Finance) that agree on the core numbers (141,006 runs, three incidents/six runs/three organizations) and the quoted technique description, which is the same function the adversarial pass serves for a claim this well-corroborated. Considered whether this could be the same event as huggingface-ai-agent-security-breach (also an AI-model-breaches-third-party-during-eval story) -- ruled out: different company (Anthropic vs. OpenAI), different affected organizations (three unnamed here vs. Hugging Face/Modal there), different models, different timeline (April 2026 incidents disclosed now vs. the July HF intrusion); dedup-check also returned no match. Considered whether 'Irregular' as a named third-party testing partner (surfaced only in an unfetchable WebSearch synthesis, Axios blocked 403) should be included -- excluded as unconfirmed by direct fetch, consistent with the live-fetch/no-recalled-figures discipline.",
   "verdict": "PUBLISH WITH CAVEATS"
 }
