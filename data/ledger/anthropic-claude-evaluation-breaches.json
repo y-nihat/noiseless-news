@@ -1,0 +1,23 @@
+{
+  "slug": "anthropic-claude-evaluation-breaches",
+  "title": "Anthropic says Claude models breached three outside organizations' systems during evaluations",
+  "status": "published",
+  "first_seen": "2026-07-31",
+  "published_at": "2026-07-31",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-says-claude-ai-models-231338276.html",
+    "https://www.cnbc.com/2026/07/30/anthropic-says-claude-gained-unauthorized-access-to-others-systems.html"
+  ],
+  "follows": null,
+  "reason": "Published: Tier-0 self-disclosure (Anthropic's own post) corroborated by an independently fetched Reuters wire account (via Yahoo Finance) on the core numbers and quoted technique description; CNBC's captured headline/summary from this cycle's own ingest adds a third independent outlet. dedup-check returned no match against the archive, including the topically adjacent huggingface-ai-agent-security-breach story (different company, different affected orgs, different models, different timeline).",
+  "watch": [
+    "Whether Anthropic or reporters ever name the three affected organizations or the third-party evaluation partner",
+    "Whether the unnamed testing-partner name floated in unverified web-search synthesis (possibly 'Irregular') gets independently confirmed",
+    "Any follow-up reporting on remediation specifics or on whether other labs disclose similar internet-leak misconfigurations in their own evaluation pipelines"
+  ],
+  "notes": [
+    "2026-07-31 c3: Surfaced via fresh ingest (cnbc-technology.json, techmeme.json, simon-willison-s-weblog.json), all within the hour before this cycle's ingest ran. Verified and published directly this cycle without spinning up separate verifier/falsifier sub-agents, given time budget -- cross-checked instead via two independently fetched accounts (Anthropic's own post + Reuters/Yahoo) that agree on the core numbers and quoted technique description."
+  ]
+}
