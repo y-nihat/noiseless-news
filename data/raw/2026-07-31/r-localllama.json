@@ -408,5 +408,15 @@
     "published": "2026-07-31T21:32:17+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vc4041/deepseek_v4_flash_is_now_2_open_weight_model_to/\"> <img alt=\"Deepseek V4 Flash is now ~#2 open weight model to Kimi K3 and &gt;50x cheaper\" src=\"https://preview.redd.it/h7zv5tb3tmgh1.png?width=140&amp;height=95&amp;auto=webp&amp;s=e3d938e1cd49dc043bdc4777f21f8449dbcf4951\" title=\"Deepseek V4 Flash is now ~#2 open weight model to Kimi K3 and &gt;50x cheaper\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/h7zv5tb3tmgh1.png?width=2854&amp;format=png&amp;auto=webp&amp;s=507380e8f862c18f10f7c5c84da9e8d1c59139b0\">https://preview.redd.it/h7zv5tb3tmgh1.png?width=2854&amp;format=png&amp;auto=webp&amp;s=507380e8f862c18f10f7c5c84da9e8d1c59139b0</a></p> <p>Deepseek's new flash model is unexpectedly cheap and high-performing across useful benchmarks. It's priced at $0.09 / $0.18 per 1M. Truly &quot;intelligence too cheap to meter&quot;. </p> <p>Seems to work pretty well on coding, reasoning chat topics for me. How's it holding up for you all in your testing and work?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/davidthesong\"> /u/davidthesong </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vc4041/deepseek_v4_flash_is_now_2_open_weight_model_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vc4041/deepseek_v4_flash_is_now_2_open_weight_model_to/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-07-31T22:40:00.107294+00:00"
+  },
+  {
+    "id": "4dc794533cd4d01d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Now Suddenly too many choices for DGX Spark with Qwen 3.5 122B . What would be the next upgrade?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vc4wie/now_suddenly_too_many_choices_for_dgx_spark_with/",
+    "published": "2026-07-31T22:08:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><ul> <li>Laguna 2.1 at NVFP4</li> <li>Deepseek v4 at Q2<br /></li> <li>Inkling-Small at IQ3</li> </ul> <p>Which models you guys running now ? How it compares to 122b?</p> <p>Upcoming in few days :</p> <ul> <li>Ling 3.0 124B (Could be new king)</li> <li>LongCat 69B A3B ( very interesting worker model)</li> </ul> <p>What else?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Voxandr\"> /u/Voxandr </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vc4wie/now_suddenly_too_many_choices_for_dgx_spark_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vc4wie/now_suddenly_too_many_choices_for_dgx_spark_with/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T23:14:59.761058+00:00"
   }
 ]

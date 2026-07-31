@@ -98,5 +98,25 @@
     "published": "2026-07-31T21:26:06+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Any one got meta score 2.5 (borderline finding) and still accepted to findings previously?? In my case meta review didnot acknowledge the reporting against a wrong review</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Historical_Pause247\"> /u/Historical_Pause247 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vc3uit/meta_score_emnlp_2026_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vc3uit/meta_score_emnlp_2026_d/\">[comments]</a></span>",
     "fetched_at": "2026-07-31T22:40:00.107294+00:00"
+  },
+  {
+    "id": "98d607496334dd35",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Meh-Compression [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vc5w42/mehcompression_d/",
+    "published": "2026-07-31T22:48:30+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Compression by switched linear matrix compression. Backpropagation teaches - when this matrix is selected - this is the best (on average) linear mapping to use:</p> <p><a href=\"https://archive.org/details/switched-linear-matrix-compression\">https://archive.org/details/switched-linear-matrix-compression</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/oatmealcraving\"> /u/oatmealcraving </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vc5w42/mehcompression_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vc5w42/mehcompression_d/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T23:14:59.761058+00:00"
+  },
+  {
+    "id": "1f8bb97c5532f7af",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "I implemented BatchNorm, LayerNorm, and GroupNorm from scratch to see what they actually do to neuron activations [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vc5w5r/i_implemented_batchnorm_layernorm_and_groupnorm/",
+    "published": "2026-07-31T22:48:33+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I kept seeing BatchNorm/LayerNorm in model definitions without really understanding the assumptions behind each one, so I implemented all three (batch, layer, group) from scratch and ran them side by side on a simple 3-layer MLP on MNIST — comparing training speed, test accuracy, and neuron activations.</p> <p>A few things that stuck with me:</p> <p>Dead neurons are visible. If you plot post-activation values (neuron × batch sample) for the vanilla MLP, whole neuron rows stay white — dead across the entire batch. With any normalization, the same plot turns into a mixed texture: each neuron fires for some samples and not others, i.e. its output is actually input-dependent. That contrast was more stark than I expected.</p> <p>All three help, and roughly equally here. Test accuracy: vanilla 84.1% → BatchNorm 96.6% / LayerNorm 95.4% / GroupNorm 96.3%. No meaningful gap between the three normalizations on this task — which makes sense: there's no conv feature extraction, so GroupNorm has no structure to exploit over LayerNorm, and the batch is large enough that BatchNorm's assumption holds fine.</p> <p>The geometric framing helped me most. LayerNorm projects each sample onto the subspace where features sum to zero, then fixes the norm — so a d-dim vector loses 2 degrees of freedom (in 3-D, the normalized points literally live on a circle). GroupNorm generalizes this to d−2g. Framing them as &quot;which degrees of freedom do we declare redundant&quot; made the inductive biases click for me.</p> <p>Full code and plots <a href=\"https://blog.strayforge.com/posts/normalization-notebook/\">here</a>. </p> <p>Question for people who use these in anger: in practice, where does GroupNorm's per-group assumption actually earn its keep over LayerNorm outside of small-batch vision? Curious what real workloads make the difference show up.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jcflynnnn\"> /u/jcflynnnn </a>…",
+    "fetched_at": "2026-07-31T23:14:59.761058+00:00"
   }
 ]
