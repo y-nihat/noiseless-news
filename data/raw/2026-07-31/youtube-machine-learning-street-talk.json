@@ -1,0 +1,12 @@
+[
+  {
+    "id": "5708195144ca5417",
+    "source": "YouTube — Machine Learning Street Talk",
+    "tier": 3,
+    "title": "How Researchers Test AI for Hidden Goals — Apollo Research",
+    "url": "https://www.youtube.com/watch?v=n1Qk8xbqF-M",
+    "published": "2026-07-31T20:12:29+00:00",
+    "summary": "Can an AI do the right thing for the wrong reason? Tim Scarfe speaks with Apollo Research’s Alexander Meinke, Axel Højmark and Jérémy Scheurer about Measuring Reward-Seeking via Contrastive Belief Updates, their new research with OpenAI.\n\nThe panel asks how models infer what graders reward, why good behaviour can come from the wrong reason, and whether that difference can be measured. The conversation moves through promise-breaking, grader awareness, reward hacking, scheming, opaque reasoning and corrigibility, then turns to a detailed walkthrough of the contrastive-belief method and what its results do and do not show. The o3 results discussed here concern an intermediate checkpoint without safety training.\n\nThis episode was made in partnership with Apollo Research. MLST retained full editorial control.\n\nReference\nApollo Research: https://www.apolloresearch.ai/\n\n---\nTIMESTAMPS:\n00:00:00 Cold Open\n00:02:12 Right Things, Wrong Reasons\n00:12:47 Grader Awareness\n00:26:22 Legibility\n00:32:35 What To Call It\n00:35:58 Intelligence, Agency, Anthropomorphism\n00:45:16 Apollo’s Mission\n00:48:54 The End of the Exponential\n00:55:45 The Paper\n01:16:34 Closing Reflection\n\n---\nREFERENCES:\ntool:\n[00:00:08] Claude Fable\nhttps://www.anthropic.com/claude/fable\n[00:12:50] AlphaGo Zero\nhttps://deepmind.google/blog/alphago-zero-starting-from-scratch/\n[00:44:30] AlphaFold 3\nhttps://deepmind.google/science/alphafold/\npaper:\n[00:01:02] Measuring Reward-Seeking via Contrastive Belief Updates\nhttps://arxiv.org/abs/2607.18966\n[00:16:19] Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations\nhttps://transformer-circuits.pub/2026/nla/\n[00:26:48] Stress Testing Deliberative Alignment for Anti-Scheming Training\nhttps://arxiv.org/abs/2509.15541\n[00:35:33] Shortcut learning in deep neural networks\nhttps://arxiv.org/abs/2004.07780\n[00:53:49] Measuring AI Ability to Complete Long Software Tasks\nhttps://arxiv.org/abs/2503.14499\n[00:59:52] Modifying LLM Beliefs with Synthetic…",
+    "fetched_at": "2026-07-31T22:40:00.107294+00:00"
+  }
+]

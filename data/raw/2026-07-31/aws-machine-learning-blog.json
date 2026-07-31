@@ -8,5 +8,25 @@
     "published": "2026-07-31T15:33:11+00:00",
     "summary": "As your AI agents move from prototype to production, the challenge shifts from getting them to work to keeping them fast and efficient. Learn how to use Amazon Bedrock AgentCore Observability and Amazon CloudWatch to find performance bottlenecks and diagnose memory issues in long-running agent sessions.",
     "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "ebcdc683ed795425",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Announcing the Agentic Catalog Experience in Amazon Quick",
+    "url": "https://aws.amazon.com/blogs/machine-learning/announcing-the-agentic-catalog-experience-in-amazon-quick/",
+    "published": "2026-07-31T19:53:04+00:00",
+    "summary": "Amazon Quick introduces the Agentic Catalog Experience, an AI-powered workflow for data curators to discover upstream catalog assets in natural language and auto-create Datasets and Topics with inherited semantics. Now in preview for AWS Glue Data Catalog and Databricks Unity Catalog.",
+    "fetched_at": "2026-07-31T22:40:00.107294+00:00"
+  },
+  {
+    "id": "85f11211b175b2ff",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Deploying Kimi K3 on Amazon SageMaker HyperPod and Amazon EKS",
+    "url": "https://aws.amazon.com/blogs/machine-learning/deploying-kimi-k3-on-amazon-sagemaker-hyperpod-and-amazon-eks/",
+    "published": "2026-07-30T17:22:32+00:00",
+    "summary": "This post walks through deploying Kimi K3 on AWS using two approaches: Amazon SageMaker HyperPod, and&nbsp; Amazon Elastic Kubernetes Service (Amazon EKS) cluster.",
+    "fetched_at": "2026-07-31T22:40:00.107294+00:00"
   }
 ]
