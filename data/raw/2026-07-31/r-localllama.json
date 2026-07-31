@@ -18,5 +18,185 @@
     "published": "2026-07-31T00:47:47+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Last time I posted a per weight group KLD quantization of Qwen3.6-27B here, and the best pushback I got, thank you for that btw, was that I tested every weight group in isolation and never actually checked whether the combined model, all the floors applied together, held up on its own. Fair hit. It stuck with me.</p> <p>This is a companion project on a different model, DavidAU's Fable-Fusion-711 fine-tune of the same base architecture, using the same harness as last time. But this round I actually built the combined model, tested it, found real degradation that none of the isolated tests predicted, walked back the specific tensors causing it, and retested until it was actually clean. The numbers below are from the real combined file, not stitched together from separate component runs like last time.</p> <p>What's different about this model is it tolerates way deeper compression than base Qwen3.6-27B did on the exact same test, and not evenly either, pretty wildly uneven across components. A handful of categories (attn_q, attn_output, attn_k, attn_v, attn_gate, ssm_beta, ssm_alpha) survived the entire ladder down to the most aggressive setting with zero measurable break. Their equivalents in base Qwen cracked multiple steps earlier.</p> <p>Also, last time tool calling broke first almost everywhere. This time it flipped. General purpose output broke first, tool calling actually held up comparatively well. Did not expect that going in.</p> <p>Combined model KLD (full quantized file, tested as one, not pieced together)</p> <p>Bedrock Final, 12.19 GiB, 3.90 BPW. general 0.0213, code 0.0041, math 0.0059, toolcalling 0.0104</p> <p>Tightrope, 12.13 GiB, 3.88 BPW. general 0.0237, code 0.0047, math 0.0073, toolcalling 0.0127</p> <p>Gambit, 10.43 GiB, 3.33 BPW. general 0.0460, code 0.0074, math 0.0156, toolcalling 0.0269</p> <p>Nothing crossed into red (over 0.1) on any tier. Toolcalling on Bedrock Final sits right at the edge of the yellow li…",
     "fetched_at": "2026-07-31T01:04:31.710657+00:00"
+  },
+  {
+    "id": "634c90f438d57936",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash has been updated, \"The official release of DeepSeek-V4-Pro will follow soon\"",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbidkp/deepseekv4flash_has_been_updated_the_official/",
+    "published": "2026-07-31T06:04:59+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbidkp/deepseekv4flash_has_been_updated_the_official/\"> <img alt=\"DeepSeek-V4-Flash has been updated, &quot;The official release of DeepSeek-V4-Pro will follow soon&quot;\" src=\"https://preview.redd.it/mbz7sdwbaigh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=c858c5f22db0a92b1df972971b49d9c9aa7c6ef1\" title=\"DeepSeek-V4-Flash has been updated, &quot;The official release of DeepSeek-V4-Pro will follow soon&quot;\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://api-docs.deepseek.com/updates/\">https://api-docs.deepseek.com/updates/</a></p> <p>Edit: official post on 𝕏: <a href=\"https://x.com/deepseek_ai/status/2083084415157022911\">https://x.com/deepseek_ai/status/2083084415157022911</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://i.redd.it/mbz7sdwbaigh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbidkp/deepseekv4flash_has_been_updated_the_official/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "f8d8d0a4d825c429",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New DeepSeek V4-Flash achieves 50 on ArtificalAnalysis Index, 1 point below GLM-5.2 and GPT-5.6 Luna",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbk5ob/new_deepseek_v4flash_achieves_50_on/",
+    "published": "2026-07-31T07:41:14+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbk5ob/new_deepseek_v4flash_achieves_50_on/\"> <img alt=\"New DeepSeek V4-Flash achieves 50 on ArtificalAnalysis Index, 1 point below GLM-5.2 and GPT-5.6 Luna\" src=\"https://preview.redd.it/mtmrp4lnrigh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=296e5fd9ec73449178f061a4db3927357694487b\" title=\"New DeepSeek V4-Flash achieves 50 on ArtificalAnalysis Index, 1 point below GLM-5.2 and GPT-5.6 Luna\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MagicZhang\"> /u/MagicZhang </a> <br /> <span><a href=\"https://i.redd.it/mtmrp4lnrigh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbk5ob/new_deepseek_v4flash_achieves_50_on/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "809ac99de2fafbc7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash-0731 is going to cause another market crash.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbjdby/deepseekv4flash0731_is_going_to_cause_another/",
+    "published": "2026-07-31T06:57:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Beats GLM 5.2, and is the same cost as the previous one. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Potential_Top_4669\"> /u/Potential_Top_4669 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbjdby/deepseekv4flash0731_is_going_to_cause_another/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbjdby/deepseekv4flash0731_is_going_to_cause_another/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "b00bf369566b9305",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash-0731 now far surpassing the DeepSeek-V4-Pro-Preview in benchmarks",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbkvau/deepseekv4flash0731_now_far_surpassing_the/",
+    "published": "2026-07-31T08:21:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbkvau/deepseekv4flash0731_now_far_surpassing_the/\"> <img alt=\"DeepSeek-V4-Flash-0731 now far surpassing the DeepSeek-V4-Pro-Preview in benchmarks\" src=\"https://preview.redd.it/bq9d2c2vyigh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=6f5e1c441d7481edf56aaf72b8d562792419a4db\" title=\"DeepSeek-V4-Flash-0731 now far surpassing the DeepSeek-V4-Pro-Preview in benchmarks\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SnooBunnies8392\"> /u/SnooBunnies8392 </a> <br /> <span><a href=\"https://i.redd.it/bq9d2c2vyigh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbkvau/deepseekv4flash0731_now_far_surpassing_the/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "3f4a9102fb9c384e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anthropic “our models hacked three different external companies, months before OpenAI’s model was able to do the same\"",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbcmtn/anthropic_our_models_hacked_three_different/",
+    "published": "2026-07-31T01:29:53+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbcmtn/anthropic_our_models_hacked_three_different/\"> <img alt=\"Anthropic “our models hacked three different external companies, months before OpenAI’s model was able to do the same&quot;\" src=\"https://external-preview.redd.it/XYG6UXpG8BXyt9WMGllfxtl8E5B0KP71jT0dLyvihOw.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=b988743a75c9b134ccfcb733e15a6bf403c5882c\" title=\"Anthropic “our models hacked three different external companies, months before OpenAI’s model was able to do the same&quot;\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>&quot;Anthropic’s AI Claude escaped testing environment and hacked organizations&quot;</p> <p>&quot;Company says it discovered unauthorized access during ‘proactive review’ after rival OpenAI revealed rogue agent… its AI Claude model hacked ⁠systems of ⁠three ​organizations during testing, <a href=\"https://www.theguardian.com/technology/2026/jul/22/openai-says-its-models-went-rogue-and-hacked-startup-in-unprecedented-incident\">days after rival OpenAI</a> ⁠revealed a rogue agent had gone on a days-long ⁠hacking spree at AI ​firm Hugging ‌Face… The earliest cases dated back to April and ‌occurred in evaluation environments that lacked what the company described as standard safeguards.&quot;</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Separate-Forever-447\"> /u/Separate-Forever-447 </a> <br /> <span><a href=\"https://www.theguardian.com/technology/2026/jul/30/anthropic-ai-claude-hack\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbcmtn/anthropic_our_models_hacked_three_different/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "c211905a6acc4ffd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Minimax-H3 video model released, open weights coming in the next few days",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbdsmz/minimaxh3_video_model_released_open_weights/",
+    "published": "2026-07-31T02:22:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbdsmz/minimaxh3_video_model_released_open_weights/\"> <img alt=\"Minimax-H3 video model released, open weights coming in the next few days\" src=\"https://preview.redd.it/t7zl8qdo6hgh1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=e411b768b210be3649f61c879607d174532d757e\" title=\"Minimax-H3 video model released, open weights coming in the next few days\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://x.com/MiniMax_AI/status/2083006198828417501?s=20\">https://x.com/MiniMax_AI/status/2083006198828417501?s=20</a><br /> Quote from their article:<br /> Today, we're launching MiniMax H3, a general-purpose multimodal generation model. H3 understands unified context across text, images, video, and audio, generating video with native stereo sound, up to 15 seconds at 2K resolution.</p> <p>Early testing shows H3 is ready for commercial content creation across a wide range of use cases, excelling at instruction following, accurate text and brand rendering, and V2V motion transfer. With precise, controllable multimodal generation and editing, H3 is built for advertising, branding, e-commerce, product design, UI/UX, gaming, and more.</p> <p>Powered by technologies including Contextual Omni Representation, H3-VAE, H3-Omni Transformer, and In-Context Regeneration, H3 delivers industry-leading price-performance. We offer 2K resolution by default. At 2K, H3's per-second price is less than a third of mainstream models, and at 768p, it's less than half the price of mainstream models' 720p.</p> <p>Closed-source models have long dominated video generation, with slower iteration and a less open ecosystem than fields like large language models. To support the open-source community, accelerate compatibility with a broader range of AI hardware, and make it easier for users to build their own customized versions, we plan to open up the model weights in the coming days, subject to applicable laws and re…",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "3b91f4a5f5e4e551",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "My second Inspur AGX-2 with another x8 v100 arrived!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbft9q/my_second_inspur_agx2_with_another_x8_v100_arrived/",
+    "published": "2026-07-31T03:56:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbft9q/my_second_inspur_agx2_with_another_x8_v100_arrived/\"> <img alt=\"My second Inspur AGX-2 with another x8 v100 arrived!\" src=\"https://preview.redd.it/c4zomnxjnhgh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=b0346a44c73808c5d4c4227b6246fec14cfb2351\" title=\"My second Inspur AGX-2 with another x8 v100 arrived!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>So now full 512gb of vram, I think I will need to get a third one soon seeing that llms keep getting absurdly huge!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/UltraFOV\"> /u/UltraFOV </a> <br /> <span><a href=\"https://i.redd.it/c4zomnxjnhgh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbft9q/my_second_inspur_agx2_with_another_x8_v100_arrived/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "9bdca126a3a8c8e6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek v4 Flash has a nice bump in Capability",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbimop/deepseek_v4_flash_has_a_nice_bump_in_capability/",
+    "published": "2026-07-31T06:18:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><h1>DeepSeek V4 Flash: Preview → 2026-07-31</h1> <table><thead> <tr> <th align=\"left\">Benchmark</th> <th align=\"left\">Preview</th> <th align=\"left\">0731</th> <th align=\"left\">Δ</th> </tr> </thead><tbody> <tr> <td align=\"left\">Terminal Bench*</td> <td align=\"left\">56.9</td> <td align=\"left\"><strong>82.7</strong></td> <td align=\"left\"><strong>+25.8</strong></td> </tr> <tr> <td align=\"left\">Toolathlon</td> <td align=\"left\">51.8</td> <td align=\"left\"><strong>70.3</strong></td> <td align=\"left\"><strong>+18.5</strong></td> </tr> <tr> <td align=\"left\">NL2Repo</td> <td align=\"left\">—</td> <td align=\"left\">54.2</td> <td align=\"left\">new</td> </tr> <tr> <td align=\"left\">Cybergym</td> <td align=\"left\">—</td> <td align=\"left\">76.7</td> <td align=\"left\">new</td> </tr> <tr> <td align=\"left\">DeepSWE</td> <td align=\"left\">—</td> <td align=\"left\">54.4</td> <td align=\"left\">new</td> </tr> <tr> <td align=\"left\">Agent Last Exam</td> <td align=\"left\">—</td> <td align=\"left\">25.2</td> <td align=\"left\">new</td> </tr> <tr> <td align=\"left\">Automation Bench</td> <td align=\"left\">—</td> <td align=\"left\">25.1</td> <td align=\"left\">new</td> </tr> <tr> <td align=\"left\">DSBench-FullStack</td> <td align=\"left\">—</td> <td align=\"left\">68.7</td> <td align=\"left\">new</td> </tr> <tr> <td align=\"left\">DSBench-Hard</td> <td align=\"left\">—</td> <td align=\"left\">59.6</td> <td align=\"left\">new</td> </tr> </tbody></table> <p>* Terminal Bench changed from <strong>v2.0 → v2.1</strong>, so the improvement isn't a strict apples-to-apples comparison.</p> <h1>Compared to GPT-5.6 Terra</h1> <table><thead> <tr> <th align=\"left\">Benchmark</th> <th align=\"left\">GPT-5.6 Terra</th> <th align=\"left\">DeepSeek V4 Flash</th> <th align=\"left\">Advantage</th> </tr> </thead><tbody> <tr> <td align=\"left\">Terminal Bench</td> <td align=\"left\">78.4</td> <td align=\"left\"><strong>82.7</strong></td> <td align=\"left\">Flash (+4.3)</td> </tr> <tr> <td align=\"left\">Toolathlon</td> <td align=\"left\">53.1</td…",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "eea7129a853ae764",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Huawei opensouced openPangu-2.0-Pro, 505B-A18B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbj6uf/huawei_opensouced_openpangu20pro_505ba18b/",
+    "published": "2026-07-31T06:47:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>openPangu-2.0-Pro is an MoE model trained on Ascend. The model has 505B total parameters and 18B activated parameters. Its context length is 512k. The total pretraining data contains 34T tokens. During Post-training, openPangu-2.0-Pro is trained through unified SFT with slow and fast thinking capability, multiple specialist RL traning, on-policy distillation combining multiple RL specialists. More details, please refer to <a href=\"https://ai.gitcode.com/ascend-tribe/openPangu-2.0-Pro/blob/main/openPangu-2.0%20Tech%20Report.pdf\">openPangu-2.0 Tech Report</a>.</p> <p>source: <a href=\"https://ai.gitcode.com/ascend-tribe/openPangu-2.0-Pro\">https://ai.gitcode.com/ascend-tribe/openPangu-2.0-Pro</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/langsfang\"> /u/langsfang </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbj6uf/huawei_opensouced_openpangu20pro_505ba18b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbj6uf/huawei_opensouced_openpangu20pro_505ba18b/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "8b46240895e670b5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why are AI model tests always the same generic prompts?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbm1tc/why_are_ai_model_tests_always_the_same_generic/",
+    "published": "2026-07-31T09:29:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Okay, hear me out. Why is it that every time a new model comes out, all the tests I see are &quot;make a car game,&quot; &quot;make a website,&quot; or something equally generic, usually from a prompt that's barely a line and a half long?</p> <p>That doesn't feel like a fair test. I'd be way more interested in seeing evaluations with detailed, real world instructions, the kind of complex tasks you'd actually run into on the job.</p> <p>From what I've looked into, most benchmarks rely on simple multiple choice or short coding problems that are easy to auto-score. The only one that seems to get close to real-world work is deepswe which looks okeyish. Everything else feels pretty shallow. Did I miss some?</p> <p>And even youtubers, most of them just run the same lazy one line prompts and spend half of the time screaming at the screen.. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ddeeppiixx\"> /u/ddeeppiixx </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbm1tc/why_are_ai_model_tests_always_the_same_generic/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbm1tc/why_are_ai_model_tests_always_the_same_generic/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "aff1eaba114a4d0a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is it just me, or are current LLM benchmarks failing to capture actual usability? (Gemma 4 vs. Gemini/Claude Opus)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbdpcz/is_it_just_me_or_are_current_llm_benchmarks/",
+    "published": "2026-07-31T02:18:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><em>Disclaimer, this was kinda written with AI (Gemma 4 again) but it also did really well here, it outputted what I wanted, and when I asked it to refine stuff or improve on certain areas it did that without compromising others or making things bulky.</em></p> <p>I’ve been noticing a massive disconnect lately between how models perform on technical leaderboards and how they actually perform in real-world tasks.</p> <p>Recently, I’ve been running some side-by-side tests, and I’m finding that <strong>Gemma 4 (26B A4B)</strong> is consistently outperforming much &quot;larger&quot; or more &quot;advanced&quot; models like Gemini 3.5 Flash and even Claude Opus 5 in practical instruction following.</p> <p><strong>Here are two specific examples:</strong></p> <ol> <li><strong>Email Composition:</strong> I asked Gemini to write a response to an email with specific ideas. It failed to follow my instructions and missed the tone entirely. I tried Claude Opus 5, and while it was &quot;smart,&quot; the output was sloppy, overly verbose, and sounded incredibly &quot;AI-ish.&quot; Gemma 4, however, was able to nail the subtleties. It understands when I want something expressed subtly rather than just being blunt—it actually understands the subtext and the layers of intent.</li> <li><strong>Prompt Refining &amp; Engineering:</strong> I tried to have Gemini refine a prompt for me, and it failed my instructions every single time. This goes beyond just refining; even when I'm engineering a new prompt and tell a model, <em>&quot;Do X, Y, and Z, but avoid A, B, and C,&quot;</em> Gemini is too literal—it just outputs: <em>&quot;Do X, Y, and Z and don't do A, B, and C.&quot;</em> It's clunky and obvious. Gemma 4 handles this naturally; it writes the prompt in a way that pushes it away from A, B, and C without needing to explicitly mention them. It just <em>understands</em>.</li> </ol> <p><strong>My takeaway:</strong> I’m starting to think that metrics use…",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "43a887f27a880160",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "All oneshots from Kimi-K3, looks better than opus4.8.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbf4bp/all_oneshots_from_kimik3_looks_better_than_opus48/",
+    "published": "2026-07-31T03:23:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbf4bp/all_oneshots_from_kimik3_looks_better_than_opus48/\"> <img alt=\"All oneshots from Kimi-K3, looks better than opus4.8.\" src=\"https://preview.redd.it/dp6dopooghgh1.png?width=140&amp;height=131&amp;auto=webp&amp;s=f455cf570e07a0b95542f108b42f15ec64bfae58\" title=\"All oneshots from Kimi-K3, looks better than opus4.8.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I've ran Kimi-k3 through 34 oneshot prompts and evaluated the generated htmls, screenshots and gifs using sonnet 4.6. It came out to be better than opus4.8 from the evals.</p> <p>Kimi K3: <a href=\"https://oneshotlm.com/model/moonshotai-kimi-k3/\">https://oneshotlm.com/model/moonshotai-kimi-k3/</a> Opus 4.8: <a href=\"https://oneshotlm.com/model/anthropic-claude-opus-4-8/\">https://oneshotlm.com/model/anthropic-claude-opus-4-8/</a></p> <p>Also opus costed $7.16 to go through all 34 prompts whereas $0.44 for kimi k3, so its token efficient as well.</p> <p>More evaluations to come.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kms_dev\"> /u/kms_dev </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vbf4bp\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbf4bp/all_oneshots_from_kimik3_looks_better_than_opus48/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "1d791e9fe02d34e6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Can we expect Deepseek v4 distills into smaller models?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbnwmt/can_we_expect_deepseek_v4_distills_into_smaller/",
+    "published": "2026-07-31T11:09:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Remember when R1 had Llama and Qwen distills? Can we expect those for v4?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Aggravating-Push-207\"> /u/Aggravating-Push-207 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbnwmt/can_we_expect_deepseek_v4_distills_into_smaller/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbnwmt/can_we_expect_deepseek_v4_distills_into_smaller/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "ad2589e3d7f8a32c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Want to see all oneshot slops in one place?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbc3kw/want_to_see_all_oneshot_slops_in_one_place/",
+    "published": "2026-07-31T01:05:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbc3kw/want_to_see_all_oneshot_slops_in_one_place/\"> <img alt=\"Want to see all oneshot slops in one place?\" src=\"https://preview.redd.it/zzlkpg31sggh1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=0cf78079912513100f2da2820e6bb0b9a70e495e\" title=\"Want to see all oneshot slops in one place?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I've been looking at oneshots posted here whenever a new model comes around and wondered if there is a single place to see all the &quot;oneslops&quot;. Behold <a href=\"https://oneshotlm.com/\">https://oneshotlm.com/</a>, where I'm trying to gather all the models from openrouter and interesting oneshot prompts around here.</p> <p>Currently at 40 models across 34 prompts = 1360 oneslops. More to come and if you have any model or prompt requests, raise a pull request here <a href=\"https://github.com/Nexight-ai/oneshotlm-prompts\">https://github.com/Nexight-ai/oneshotlm-prompts</a>.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kms_dev\"> /u/kms_dev </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vbc3kw\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbc3kw/want_to_see_all_oneshot_slops_in_one_place/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "a451812d11024091",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Has anyone actually benchmarked where the \"big-model orchestrator + local-model worker\" split breaks down?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbl8mf/has_anyone_actually_benchmarked_where_the/",
+    "published": "2026-07-31T08:43:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I keep seeing the &quot;use a big model via API as the architect, run local small/mid models as workers&quot; pattern recommended for people with modest local hardware. I've been running it myself (orchestrator on a hosted model, local Qwen-class 27B workers doing scans/refactors/test runs), and it works - but I have a nagging feeling the win is smaller than the hype once you account for round-trip latency and the fact that the orchestrator still has to read everything the workers produce.</p> <p>What I'd actually like to see from this sub: has anyone measured, with real numbers, the point where the local worker becomes the bottleneck vs. where the orchestrator's reasoning is genuinely load-bearing? Specifically: - token/s on your local card when the worker is doing high-volume boilerplate vs. when it's doing judgment calls - whether the orchestrator-via-API + local-worker setup actually beats just running a bigger local model end-to-end (if your VRAM allows) - failure modes you hit that pure &quot;all local&quot; or &quot;all API&quot; didn't have</p> <p>Not looking for a recommendation - I want data/war stories. If you've A/B'd it, what changed your mind?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/InterviewDesigner777\"> /u/InterviewDesigner777 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbl8mf/has_anyone_actually_benchmarked_where_the/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbl8mf/has_anyone_actually_benchmarked_where_the/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "3e29e7f589b6545b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I predict DeepSeek V4 Flash 0731's Artificial Analysis score to be 57 ± 1 point (Kimi K3 Level)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbj3cn/i_predict_deepseek_v4_flash_0731s_artificial/",
+    "published": "2026-07-31T06:42:32+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbj3cn/i_predict_deepseek_v4_flash_0731s_artificial/\"> <img alt=\"I predict DeepSeek V4 Flash 0731's Artificial Analysis score to be 57 ± 1 point (Kimi K3 Level)\" src=\"https://preview.redd.it/ynzzd2h3high1.png?width=140&amp;height=78&amp;auto=webp&amp;s=33e427049d92f37a434131c9656a30825e113cb3\" title=\"I predict DeepSeek V4 Flash 0731's Artificial Analysis score to be 57 ± 1 point (Kimi K3 Level)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Deepseek's new model V4 Flash 0731 is much better, I (Claude lol) did a bit of linear regression with a leave one out style verification to predict its AA Score, and that puts it at Kimi K3 level, which is just absurd to me for its price! I'm SO EXCITED!!!</p> <p><a href=\"https://preview.redd.it/ynzzd2h3high1.png?width=1374&amp;format=png&amp;auto=webp&amp;s=4af3118c0daddecd073b772a028030fec7213879\">https://preview.redd.it/ynzzd2h3high1.png?width=1374&amp;format=png&amp;auto=webp&amp;s=4af3118c0daddecd073b772a028030fec7213879</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MaxDev0\"> /u/MaxDev0 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbj3cn/i_predict_deepseek_v4_flash_0731s_artificial/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbj3cn/i_predict_deepseek_v4_flash_0731s_artificial/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "0d0f91bdadb6aefe",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek weights when?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbothg/deepseek_weights_when/",
+    "published": "2026-07-31T11:55:03+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Didn't see anything about it in their announcement</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Eyelbee\"> /u/Eyelbee </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbothg/deepseek_weights_when/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbothg/deepseek_weights_when/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "ce7b3116ebaf5176",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Open Source Ternary LLM Engine in Rust/CUDA for Quantization, Serving, and Training of models on consumer GPUs, called Tritium (Apache 2.0)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbf0nt/open_source_ternary_llm_engine_in_rustcuda_for/",
+    "published": "2026-07-31T03:18:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><h1>This post was not written by a clanker.</h1> <p>Hey guys, I'm a comp sci major who wanted to introduce a cool project I built for quantizing models to ternary (1.58 bit) with as minimal of loss as possible, a process that can provide even more than 10x reductions in VRAM usage and much faster inference speed, disk space, and more. There is a disclaimer, in that actual reductions in VRAM are generally significantly less than 10x at this current stage. (apologies for the ADHD)</p> <p>For reference of what we can do today, BitNet 2B4T fits in 1.71 GiB, 7.5x smaller than fp16, with significantly faster inference and optional KV cache compression. I intend to release Tritium Stable v1.1 with weights for Qwen 3.6 27B in ternary, reducing VRAM usage down to 8-12 gb VRAM while maintaining good context window and performance. Feel free to explore the code and design your own applications with the tritium inference engine for your ternary models.</p> <h1>Tritium History</h1> <p>Tritium as in Trit, for the ternary bit, and tritium cause it sounds cool and implies a form of fusion from all of my other projects. I'm publishing this now, as this has been under works for months now, but literally today, July 30th, llama.cpp has finally merged support for Q2_0 CUDA. I intend to have this be a continuing infrastructure project that I will be using personally and maintaining. I also intend to release my code as to give it a chance to shine a bit. As of this morning's benchmark, we are still faster bandwidth-normalized (474 vs 352 GiB/s effective) compared to llama.cpp. The original reason I wanted to develop this was because I have started my own company and I am running ternary models on MCU hardware for signal compression which is why I wanted a better way to train and quantize ternary models and embed them into firmware. It's a shame I never released this earlier, as this definitely would have been significantly more interesting 2 months ago.</p>…",
+    "fetched_at": "2026-07-31T12:02:11.035452+00:00"
   }
 ]
