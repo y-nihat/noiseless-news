@@ -5,9 +5,14 @@ filters clickbait, writes its own headlines/articles, lists sources under every 
 
 ## Non-negotiable rules
 
-- **NEVER** add `Co-Authored-By`, "Generated with Claude Code", or any AI-attribution
-  line to commit messages, PR bodies, or file headers. Commits must appear to come
-  solely from the repository owner. Write commit messages in plain, human style.
+- **No tool-attribution trailers.** Commit messages, PR bodies and file headers carry
+  no `Co-Authored-By`, no "Generated with Claude Code", no tool signature. This is a
+  formatting rule and must never be read as a disclosure one: that this site is
+  written and verified by AI agents, with no per-article human review, is stated in
+  the README's third paragraph and printed on the published pages themselves
+  (`publish.py`). Disclosure belongs there — said once, plainly, where a reader
+  actually sees it — not repeated as boilerplate in several hundred commit trailers.
+  Write commit messages in plain prose.
 - **No local installs.** Everything runs through Docker Compose:
   `docker compose run --rm pipeline <command>`. Outputs are volume-mapped into the repo.
 - **Commit regularly** in small logical units. Every pipeline change ships with pytest
