@@ -76,7 +76,7 @@
       "sample_urls": [
         "https://www.infoworld.com/article/4194895/spacexai-launches-grok-4-5-touts-lower-coding-task-costs-than-ai-rivals.html"
       ],
-      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md §1) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
+      "context": "Used as an unregistered Tier-2-equivalent source (per verification.md \u00a71) to corroborate Grok 4.5 pricing/spec claims in grok-4-5-release. Established tech-industry outlet with editorial standards and named authors; propose for registration as Tier 2, type rss (feed: https://www.infoworld.com/index.rss, unverified this run)."
     },
     {
       "domain": "metr.org",
@@ -85,7 +85,7 @@
       "sample_urls": [
         "https://metr.org/blog/2026-06-26-gpt-5-6-sol"
       ],
-      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md §3) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
+      "context": "Independent third-party AI model evaluator (nonprofit, publishes its own capability/safety evaluations). Directly load-bearing for the GPT-5.6 reward-hacking finding in gpt-5-6-launch -- this is exactly the kind of independent-reproduction source the capability-claim standard (verification.md \u00a73) calls for. Strong candidate for Tier 1 registration; likely to recur for future frontier-model launches."
     },
     {
       "domain": "vals.ai",
@@ -305,8 +305,8 @@
     }
   ],
   "query_notes": [
-    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release — worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
-    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) — worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
+    "'Grok 4.5 xAI release SWE-bench benchmark' and site:x.ai searches both returned high-signal, on-topic results the same day as the release \u2014 worth keeping as a discovery.yaml pattern for major-model-release verification (site-scoped search as x.ai/news fetch fallback, per the known-blocker note in the run brief).",
+    "For frontier-model launches, a search pattern like '{model_name} independent benchmark review' or '{model_name} METR OR vals.ai OR artificialanalysis.ai' reliably surfaced independent, non-vendor evaluators (METR for GPT-5.6, Vals AI + Artificial Analysis for GPT-5.6/Muse Spark) \u2014 worth promoting to a recurring claim_check_template alongside the existing '{model_name} independent benchmark' line, since these three named evaluators recurred across multiple stories this run.",
     "'{company} response OR denies OR disputes {allegation}' was essential for the NYT/OpenAI litigation story to surface OpenAI's on-record denial alongside the plaintiffs' claims -- worth adding as an explicit claim_check_template for any business/legal claim type, not just capability claims.",
     "For business claims sourced to a single wire/leak (Reuters exclusive on Meta's AI chip), tracing every outlet's citation back to one origin was decisive in correctly failing that story's gate -- a reminder that broad press pickup of a single leak is not multi-source confirmation.",
     "Tier-0 html sweep (Anthropic, Meta, Mistral, Cohere, Ai2, NIST, EU Commission) via WebFetch worked well this run and surfaced 3 of the 7 published stories directly (Anthropic Reflect, Meta Muse Image, Meta Muse Spark, EU cybersecurity plan) that would otherwise have relied only on secondary press framing -- confirms this sweep is worth the run-time cost every night, not just when a Tier-2 story needs it.",
@@ -734,7 +734,7 @@
       "sample_urls": [
         "https://www.livelaw.in/high-court/delhi-high-court/delhi-high-court-rejects-ani-copyright-suit-open-ai-chatgpt-542736"
       ],
-      "context": "India's leading legal-news specialty outlet (named bylines, court-reporting focus); primary account used for the Delhi HC interim order in ANI v. OpenAI (delhi-hc-ani-openai-copyright-ruling), including the case citation and the order's own 'not a final judgment, no precedential value' framing. Unregistered but would clearly qualify as Tier 2 (established outlet, editorial standards, named authors) per verification.md §1; likely to recur for Indian AI-litigation stories going forward. Propose Tier 2, type html (check for RSS feed)."
+      "context": "India's leading legal-news specialty outlet (named bylines, court-reporting focus); primary account used for the Delhi HC interim order in ANI v. OpenAI (delhi-hc-ani-openai-copyright-ruling), including the case citation and the order's own 'not a final judgment, no precedential value' framing. Unregistered but would clearly qualify as Tier 2 (established outlet, editorial standards, named authors) per verification.md \u00a71; likely to recur for Indian AI-litigation stories going forward. Propose Tier 2, type html (check for RSS feed)."
     },
     {
       "domain": "scconline.com",
@@ -743,7 +743,7 @@
       "sample_urls": [
         "https://www.scconline.com/blog/post/2026/07/27/openai-chatgpt-training-on-ani-content-protected-under-fair-dealing-dhc/"
       ],
-      "context": "SCC Online Blog -- major Indian legal-specialty publisher (Supreme Court Cases), named-byline legal analysis; independently corroborated the fair-dealing/Section 52(1)(a)(i) reasoning and the 'threefold test' framing for delhi-hc-ani-openai-copyright-ruling. Unregistered; qualifies for Tier 2 per verification.md §1. Propose Tier 2, type html."
+      "context": "SCC Online Blog -- major Indian legal-specialty publisher (Supreme Court Cases), named-byline legal analysis; independently corroborated the fair-dealing/Section 52(1)(a)(i) reasoning and the 'threefold test' framing for delhi-hc-ani-openai-copyright-ruling. Unregistered; qualifies for Tier 2 per verification.md \u00a71. Propose Tier 2, type html."
     },
     {
       "domain": "verdictum.in",
@@ -813,6 +813,17 @@
         "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation"
       ],
       "context": "Databricks' own newsroom -- Tier-0 primary for the $188B term-sheet announcement and stated use of funds (databricks-188b-valuation-round). Likely to recur for future Databricks product/funding announcements. Propose Tier 0 registration, type html."
+    }
+  ],
+  "candidates_2026-07-31_c1": [
+    {
+      "domain": "technode.com",
+      "first_seen": "2026-07-31",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://technode.com/2026/07/31/bytedance-launches-seedance-2-5-video-generation-model/"
+      ],
+      "context": "Named China-tech trade press (own reporting, sourced from Yicai); used as independent corroboration for the ByteDance Seedance 2.5 launch (bytedance-seedance-2-5-launch), including to disprove a stale API-live claim from a low-credibility aggregator. Unregistered; propose Tier 2, type rss/html."
     }
   ]
 }

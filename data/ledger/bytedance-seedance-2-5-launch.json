@@ -1,0 +1,22 @@
+{
+  "slug": "bytedance-seedance-2-5-launch",
+  "title": "ByteDance launches Seedance 2.5, an update to its AI video-generation model",
+  "status": "published",
+  "first_seen": "2026-07-31",
+  "published_at": "2026-07-31",
+  "date": "2026-07-31",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+    "https://technode.com/2026/07/31/bytedance-launches-seedance-2-5-video-generation-model/"
+  ],
+  "follows": null,
+  "watch": [
+    "Independent (non-vendor) benchmark or hands-on comparison of Seedance 2.5's claimed 30-second single-take duration against competitors",
+    "Whether/when the BytePlus ModelArk API opens to outside developers",
+    "Any legal or copyright response specific to Seedance 2.5 (distinct from the 2.0 dispute)"
+  ],
+  "notes": [
+    "2026-07-31 c1: Surfaced via Tier-0 sweep of seed.bytedance.com/en/blog (same-day entry). dedup-check clean. Verified via fresh verifier + adversarial falsifier sub-agents (6+5 searches/fetches). Dropped an unverifiable duration-comparison claim and a low-credibility techtimes.com API-live claim contradicted by TechNode's same-day report. Confirmed 31 July is the genuine public-launch date, distinct from a 23 June enterprise-beta preview. Style gate: headline rewritten to not assert the vendor-claim (30s duration) as bare fact."
+  ]
+}

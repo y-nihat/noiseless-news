@@ -1,0 +1,49 @@
+{
+  "slug": "bytedance-seedance-2-5-launch",
+  "checked_at": "2026-07-31T22:52:00+00:00",
+  "method": "dedup-check clean (no matches) before opening. Fresh verifier sub-agent re-fetched ByteDance's own Seed blog post and independently searched for corroborating Tier-2 coverage (found TechNode's same-day report; no other credible independent outlet had covered the specific 2.5 launch at check time -- most other hits were AI-tool marketing/aggregator sites relaying ByteDance's own claims, treated as non-independent). Fresh adversarial falsifier sub-agent checked for date manipulation (confirmed 31 July is the genuine public-launch date, distinct from a 23 June enterprise-beta preview at Volcano Engine's FORCE conference) and checked disputed capability/legal claims (found none tied to 2.5 specifically; the Feb-Mar 2026 Hollywood cease-and-desist dispute is tied to the prior Seedance 2.0 release, not this one, so it was left out of the article).",
+  "origin_items": [
+    "Surfaced during this cycle's Tier-0 sweep of seed.bytedance.com/en/blog (entry dated 31 July 2026, same-day as this cycle)"
+  ],
+  "claims": [
+    {
+      "text": "ByteDance publicly launched Seedance 2.5, an update to its AI video-generation model, on 31 July 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (ByteDance's own Seed blog) dated 31 July 2026 states the launch directly; one Tier-0 source suffices for an announcement claim. TechNode (unregistered, qualifies Tier-2, proposed for registration) independently published its own same-day report confirming the rollout.",
+      "evidence": [
+        "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+        "https://technode.com/2026/07/31/bytedance-launches-seedance-2-5-video-generation-model/"
+      ]
+    },
+    {
+      "text": "Seedance 2.5 generates single-take video clips up to 30 seconds long, with a multi-round mode for extending sequences further",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Stated only by ByteDance; no independent reproduction found. Explicitly avoided publishing an unverifiable 'roughly double the prior ~15s limit' framing -- the verifier could only source Seedance 2.0's prior duration limit from non-independent tool-aggregator marketing sites, not credible press, so that comparison was dropped from the article.",
+      "evidence": [
+        "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"
+      ]
+    },
+    {
+      "text": "The model accepts up to 50 multimodal reference inputs in one request -- up to 30 images, 10 video clips and 10 audio clips -- with timestamp-level editing",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Product-feature announcement; one Tier-0 primary source suffices. Numbers match the primary blog post exactly.",
+      "evidence": [
+        "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"
+      ]
+    },
+    {
+      "text": "Seedance 2.5 is rolling out through Jimeng AI and Doubao Pro; API access via BytePlus ModelArk was not yet live at launch",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Matches primary source directly; TechNode's independent same-day report corroborates that the API was not yet live, which also let us discard a low-credibility techtimes.com claim that the API had gone live on 16 July.",
+      "evidence": [
+        "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+        "https://technode.com/2026/07/31/bytedance-launches-seedance-2-5-video-generation-model/"
+      ]
+    }
+  ],
+  "notes": "Adversarial falsifier pass confirmed 31 July is the genuine public-shipping date and not repackaged news from the 23 June FORCE-conference beta preview or a 3-16 July aggregator-claimed soft launch. No outlet disputes the capability numbers as exaggerated. No legal/copyright controversy is tied to 2.5 itself (the Seedance 2.0 Hollywood cease-and-desist dispute from Feb-Mar 2026 is a different release and was deliberately left out to avoid implying fresh legal exposure that isn't documented). Headline written to avoid asserting the vendor-claim (30s duration) as a bare fact, per style.md Gate 1. TechNode logged to source_candidates.json for registration review."
+}
