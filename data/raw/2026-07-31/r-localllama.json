@@ -198,5 +198,155 @@
     "published": "2026-07-31T03:18:53+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><h1>This post was not written by a clanker.</h1> <p>Hey guys, I'm a comp sci major who wanted to introduce a cool project I built for quantizing models to ternary (1.58 bit) with as minimal of loss as possible, a process that can provide even more than 10x reductions in VRAM usage and much faster inference speed, disk space, and more. There is a disclaimer, in that actual reductions in VRAM are generally significantly less than 10x at this current stage. (apologies for the ADHD)</p> <p>For reference of what we can do today, BitNet 2B4T fits in 1.71 GiB, 7.5x smaller than fp16, with significantly faster inference and optional KV cache compression. I intend to release Tritium Stable v1.1 with weights for Qwen 3.6 27B in ternary, reducing VRAM usage down to 8-12 gb VRAM while maintaining good context window and performance. Feel free to explore the code and design your own applications with the tritium inference engine for your ternary models.</p> <h1>Tritium History</h1> <p>Tritium as in Trit, for the ternary bit, and tritium cause it sounds cool and implies a form of fusion from all of my other projects. I'm publishing this now, as this has been under works for months now, but literally today, July 30th, llama.cpp has finally merged support for Q2_0 CUDA. I intend to have this be a continuing infrastructure project that I will be using personally and maintaining. I also intend to release my code as to give it a chance to shine a bit. As of this morning's benchmark, we are still faster bandwidth-normalized (474 vs 352 GiB/s effective) compared to llama.cpp. The original reason I wanted to develop this was because I have started my own company and I am running ternary models on MCU hardware for signal compression which is why I wanted a better way to train and quantize ternary models and embed them into firmware. It's a shame I never released this earlier, as this definitely would have been significantly more interesting 2 months ago.</p>…",
     "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "ef772fe578220750",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The Chinese LLM release carousel never stops. Place your bets for MiniMax next week.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbr5zj/the_chinese_llm_release_carousel_never_stops/",
+    "published": "2026-07-31T13:36:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbr5zj/the_chinese_llm_release_carousel_never_stops/\"> <img alt=\"The Chinese LLM release carousel never stops. Place your bets for MiniMax next week.\" src=\"https://preview.redd.it/y0ab3pktikgh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=21b2151ea92e9216763ee588cfbf2c7db8900694\" title=\"The Chinese LLM release carousel never stops. Place your bets for MiniMax next week.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Mountain_Patience231\"> /u/Mountain_Patience231 </a> <br /> <span><a href=\"https://i.redd.it/y0ab3pktikgh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbr5zj/the_chinese_llm_release_carousel_never_stops/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "fce16cb58d1edb49",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "deepseek-ai/DeepSeek-V4-Flash-0731 on Huggingface",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbp7kb/deepseekaideepseekv4flash0731_on_huggingface/",
+    "published": "2026-07-31T12:12:35+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731\">https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/cgs019283\"> /u/cgs019283 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbp7kb/deepseekaideepseekv4flash0731_on_huggingface/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbp7kb/deepseekaideepseekv4flash0731_on_huggingface/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "78f57a145e2140b7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Unsloth Deepseek V4 0731 GGUF's are UP!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbtdok/unsloth_deepseek_v4_0731_ggufs_are_up/",
+    "published": "2026-07-31T15:00:43+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtdok/unsloth_deepseek_v4_0731_ggufs_are_up/\"> <img alt=\"Unsloth Deepseek V4 0731 GGUF's are UP!\" src=\"https://external-preview.redd.it/wMZUsudfTHG534WgBRWwhtsK20jasRrxNGwenbWxNxM.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3e2782ab948d48abdd1970b4c5d2950de152c2ff\" title=\"Unsloth Deepseek V4 0731 GGUF's are UP!\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BlackBeardAI\"> /u/BlackBeardAI </a> <br /> <span><a href=\"https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtdok/unsloth_deepseek_v4_0731_ggufs_are_up/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "8387aa4ef870b8e9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash GA ranks the same as Sonnet 5 and Grok 4.5 on DeepSWE",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbx39u/deepseek_v4_flash_ga_ranks_the_same_as_sonnet_5/",
+    "published": "2026-07-31T17:14:23+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbx39u/deepseek_v4_flash_ga_ranks_the_same_as_sonnet_5/\"> <img alt=\"DeepSeek V4 Flash GA ranks the same as Sonnet 5 and Grok 4.5 on DeepSWE\" src=\"https://preview.redd.it/qroosd9ullgh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=99d592f59e5b87681b4227f38c510a964cec312b\" title=\"DeepSeek V4 Flash GA ranks the same as Sonnet 5 and Grok 4.5 on DeepSWE\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Source: <a href=\"https://x.com/deepseek_ai/status/2083084415157022911\">https://x.com/deepseek_ai/status/2083084415157022911</a> &amp; <a href=\"https://deepswe.datacurve.ai/\">https://deepswe.datacurve.ai/</a> just combined data view. DeepSeek claims, not verified by DeepSWE yet.</p> <p><a href=\"https://www.reddit.com/submit/?source_id=t3_1vbx1q5&amp;composer_entry=crosspost_prompt\"></a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sdexca\"> /u/sdexca </a> <br /> <span><a href=\"https://i.redd.it/qroosd9ullgh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbx39u/deepseek_v4_flash_ga_ranks_the_same_as_sonnet_5/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "ef0c8e1335df2b65",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Meituan just dropped LongCat-Flash-Lite-Sparse",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbsztw/meituan_just_dropped_longcatflashlitesparse/",
+    "published": "2026-07-31T14:46:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbsztw/meituan_just_dropped_longcatflashlitesparse/\"> <img alt=\"Meituan just dropped LongCat-Flash-Lite-Sparse\" src=\"https://external-preview.redd.it/TB8lvc_WvC59pV7HAeNN_QTT2Sa6SPRzddgrjEvNFGA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=69dbd902d26c787ea87029f23bda89609f0c3c2c\" title=\"Meituan just dropped LongCat-Flash-Lite-Sparse\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It’s an MoE with ~3B active params and a 30B n-gram lookup table offloaded to RAM for fast 256k context on a 24GB GPU. Reminds me of Gemma 4’s PLE trick. </p> <p>Initial analysis suggest it wont be replacing my Qwen 3.6 27b. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Gohab2001\"> /u/Gohab2001 </a> <br /> <span><a href=\"https://huggingface.co/meituan-longcat/LongCat-Flash-Lite-Sparse\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbsztw/meituan_just_dropped_longcatflashlitesparse/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "f4091e4229aa5819",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek flash 0731 reasoning is hilarious",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbwmdv/deepseek_flash_0731_reasoning_is_hilarious/",
+    "published": "2026-07-31T16:57:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Tell me this is not funny - &quot;<strong>OH MY GOD. I THINK I FINALLY SEE IT!!!</strong> The black pixels are at the QUAD CENTERS because of the <strong>mipmapping of the UV derivative at the quad DIAGONAL</strong>... no. Hmm.&quot;</p> <p>I have never seen a reasoning trace say &quot;OH MY GOD,&quot; lol.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fragment_me\"> /u/fragment_me </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbwmdv/deepseek_flash_0731_reasoning_is_hilarious/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbwmdv/deepseek_flash_0731_reasoning_is_hilarious/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "4e53bb255e7de50a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek V4 Flash on SlopCodeBench",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbtiy7/deepseek_v4_flash_on_slopcodebench/",
+    "published": "2026-07-31T15:05:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>While waiting for some of the quants to drop, I load the API with $50 and ran it on SlopCodeBench</p> <p>Just vibe reading the results it seems like Opus 4.8 &lt; Deepseek &lt; Opus 5</p> <p><a href=\"https://github.com/michaelasper/benchmarks/blob/main/deepseek-v4-flash-on-slop-code-bench.md\">https://github.com/michaelasper/benchmarks/blob/main/deepseek-v4-flash-on-slop-code-bench.md</a></p> <p>I was mostly curious from this <a href=\"https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md\">blog post</a></p> <p>When Q2 drops - I'm goign to re-run on my macbook</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/corruptbytes\"> /u/corruptbytes </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtiy7/deepseek_v4_flash_on_slopcodebench/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtiy7/deepseek_v4_flash_on_slopcodebench/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "5badcb59db0739be",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Rule Suggestion: \"Open\" models without weight releases should be tagged [no weights]",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbpi44/rule_suggestion_open_models_without_weight/",
+    "published": "2026-07-31T12:25:56+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>A lot of recent models are being announced with promised open weights, but the weights are either weeks away, or in some cases (looking at you Meta) not being released at all.</p> <p>This sub is about local LLMs - not &quot;maybe local in the future&quot; llms.</p> <p>These models are still useful to post, but I'm kind of sick of having to click through posts like this to find out that I can't actually download the weights at all. I think posts like this should have to be clearly labelled with [no weights], or similar in the title. A tag is another option, but it's less visible. Ideally I would clearly see on my Reddit homepage which posts I should not click.</p> <p>Thoughts?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SexyAlienHotTubWater\"> /u/SexyAlienHotTubWater </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbpi44/rule_suggestion_open_models_without_weight/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbpi44/rule_suggestion_open_models_without_weight/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "54050d3d9c174f4b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Review testing on Ling 3.0 flash - From one prompt to a 3D world",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbsewq/review_testing_on_ling_30_flash_from_one_prompt/",
+    "published": "2026-07-31T14:24:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbsewq/review_testing_on_ling_30_flash_from_one_prompt/\"> <img alt=\"Review testing on Ling 3.0 flash - From one prompt to a 3D world\" src=\"https://external-preview.redd.it/NTBlYTJyOXBxa2doMf7LzWjWCII9gM7ovR1SfTeFlwFiCuM97lzU6fUHEXi7.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=93966b42e4132b3450d9843314c037b4169530e5\" title=\"Review testing on Ling 3.0 flash - From one prompt to a 3D world\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Using Blender MCP, Ling-3.0-flash wrote Python, built a city with elevated roads, skyscrapers, and materials, set the camera path, and rendered an aerial video—showing spatial reasoning and long-horizon tool use</p> <p>vLLM confirm will be open source soon, and now is free on open router, I have no complaints about free items, and even actually it's not bad though<br /> <a href=\"https://x.com/vllm_project/status/2080702006378082384?s=20\">https://x.com/vllm_project/status/2080702006378082384?s=20</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/niacolhealth\"> /u/niacolhealth </a> <br /> <span><a href=\"https://v.redd.it/9l7ws09pqkgh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbsewq/review_testing_on_ling_30_flash_from_one_prompt/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "d8b80350ecf7ba92",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek v4 flash MXFP4 (original quality) ggufs",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vburcs/deepseek_v4_flash_mxfp4_original_quality_ggufs/",
+    "published": "2026-07-31T15:50:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vburcs/deepseek_v4_flash_mxfp4_original_quality_ggufs/\"> <img alt=\"Deepseek v4 flash MXFP4 (original quality) ggufs\" src=\"https://external-preview.redd.it/cU_TC8_Hb5aJ5dzr8C_zYHJ0xYict6VnIuftD7H0DZo.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3564be78b088218236c6d2d107889224eb35db56\" title=\"Deepseek v4 flash MXFP4 (original quality) ggufs\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Antique_Archer_7110\"> /u/Antique_Archer_7110 </a> <br /> <span><a href=\"https://huggingface.co/bartowski/DeepSeek-V4-Flash-0731-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vburcs/deepseek_v4_flash_mxfp4_original_quality_ggufs/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "54ebb35abb0e383c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I ported TurboFieldfare to Qwen 3.6 35B and it runs in 1.4 GB of RAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbp8te/i_ported_turbofieldfare_to_qwen_36_35b_and_it/",
+    "published": "2026-07-31T12:14:10+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbp8te/i_ported_turbofieldfare_to_qwen_36_35b_and_it/\"> <img alt=\"I ported TurboFieldfare to Qwen 3.6 35B and it runs in 1.4 GB of RAM\" src=\"https://external-preview.redd.it/bjJzaDF4ODA0a2doMTeG42tysRNKHjpprPAIKe8RQhhS-gd0jDd8sWnPzZpk.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8cd37403f66ca7902696ef761a0f4a11a3f82aec\" title=\"I ported TurboFieldfare to Qwen 3.6 35B and it runs in 1.4 GB of RAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Was playing around with <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vasnys/turbofieldfare_opensource_engine_running_gemma_4/\">TurboFieldfare</a>, a Mac engine that runs Gemma 4 26B in ~2 GB by streaming MoE experts off SSD instead of loading them. It only supported that one model, so I added support for Qwen 3.6 35B-A3B.</p> <p>Comparatively, Qwen needs <em>lesser</em> memory. ~1.4 GB vs ~2.1 GB for Gemma. Qwen's experts are half the size and 30 of its 40 layers use linear attention. So there's a drastic drop in the KV cache to hold onto.</p> <p>Speed on my M5 is 19–23 tok/s depending on prompt length. Gemma gets 31–35 on the same machine. Qwen IS slower because its 18 GB of experts dont fit in the os page cache, so more reads actually hit the SSD.</p> <p>I also pinned the machine down to an 8 GB working set and it made no difference: 22.9 tok/s and byte-identical output which is expected since its already streaming from disk anyway.</p> <p>PR is open upstream: <a href=\"https://github.com/drumih/turbo-fieldfare/pull/29\">drumih/turbo-fieldfare#29</a><br /> Branch if you want to build it: <a href=\"https://github.com/NeelM0906/turbo-fieldfare/tree/qwen36-support\">NeelM0906/turbo-fieldfare@qwen36-support</a></p> <p>Notes: text-only, tested at 4K context, needs ~20 GB of disk, and my 8 GB test was simulated memory pressure, not an actual 8 GB Mac. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Blahblahb…",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "a8459529759828a3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A lesson about retries, hidden in the DeepSeek-V4 paper",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbtvmd/a_lesson_about_retries_hidden_in_the_deepseekv4/",
+    "published": "2026-07-31T15:18:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtvmd/a_lesson_about_retries_hidden_in_the_deepseekv4/\"> <img alt=\"A lesson about retries, hidden in the DeepSeek-V4 paper\" src=\"https://external-preview.redd.it/m5_br7E39RWfsiN-u3Nb_4FQ_dYHoymxdoVjP16WfFM.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=5cc55fbcf92372f84ad25f30b7935fd8593236a2\" title=\"A lesson about retries, hidden in the DeepSeek-V4 paper\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmigdal\"> /u/pmigdal </a> <br /> <span><a href=\"https://quesma.com/blog/hidden-lesson-deepseek-paper/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtvmd/a_lesson_about_retries_hidden_in_the_deepseekv4/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "2407430cfc91b1ca",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "SenseNova U1.5 Lite preview just dropped",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbtdyk/sensenova_u15_lite_preview_just_dropped/",
+    "published": "2026-07-31T15:00:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtdyk/sensenova_u15_lite_preview_just_dropped/\"> <img alt=\"SenseNova U1.5 Lite preview just dropped\" src=\"https://preview.redd.it/lct9pn79xkgh1.png?width=140&amp;height=98&amp;auto=webp&amp;s=9c2b606bcf270fa2c679da710a14a265465ea05b\" title=\"SenseNova U1.5 Lite preview just dropped\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>SenseNova released U1.5-Lite-Preview</p> <p>Benchmarks: Qwen-Image-Bench from 47.14 to 55.20. ImgEdit-Bench from 3.90 to 4.37. GEdit-Bench-en from 7.47 to 8.17.</p> <p><strong>Key updates:</strong></p> <ul> <li>4K native generation with better texture, material, and lighting detail</li> <li>Improved Chinese and English text rendering for dense layouts like posters and infographics</li> <li>Long, structured prompts with hierarchical constraints work reliably (one example prompt in their docs is ~3,880 Chinese characters covering timelines, color schemes, composition rules, and prohibited elements)</li> <li>Image editing stays localized. Changing one region doesn't shift the rest of the image</li> <li>New workflows: multi-reference composition, style transfer, continuous iterative editing without rerolling</li> </ul> <p>Still preview quality. Short prompt understanding, small font rendering, face detail, and aesthetic consistency are acknowledged weaknesses. World knowledge and editing stability in complex scenes also need polishing.</p> <p>GitHub: <a href=\"https://github.com/OpenSenseNova/SenseNova-U1\">https://github.com/OpenSenseNova/SenseNova-U1</a></p> <p>HF: <a href=\"https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT-Preview\">https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT-Preview</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SandyL925\"> /u/SandyL925 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vbtdyk\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtdyk/s…",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "a3c39c402931307a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash-0731 unsloth gguf on A100",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbwuq0/deepseekv4flash0731_unsloth_gguf_on_a100/",
+    "published": "2026-07-31T17:06:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>A100 with 40gb VRAM:</p> <ul> <li>162GB Q8_K_XL</li> <li>~16.1 tok/s generation</li> <li>Only 15.8GB of 40GB VRAM used with all experts on CPU</li> </ul> <p>NOTE just tested coding on linux box DeepSeek-V4-Flash-0731 runs losslessly on the single 40GB A100 at 17.7 tok/s with 6 experts loaded into VRAM, with Codex driving it through a full agentic coding loop</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Different-Pickle1021\"> /u/Different-Pickle1021 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbwuq0/deepseekv4flash0731_unsloth_gguf_on_a100/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbwuq0/deepseekv4flash0731_unsloth_gguf_on_a100/\">[comments]</a></span>",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "39d02223953825c9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Uncensored Multi-Model Releases, LongCat-Flash-Lite with MTPs, Jamba2-Mini, Qwen3.5-9B-Nikusui-v1 with MTPs and Qwen3.5-27B-Nikusui-v1 with MTPs, Available in Safetensors and GGUF Formats!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vbwcrr/uncensored_multimodel_releases_longcatflashlite/",
+    "published": "2026-07-31T16:48:06+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbwcrr/uncensored_multimodel_releases_longcatflashlite/\"> <img alt=\"Uncensored Multi-Model Releases, LongCat-Flash-Lite with MTPs, Jamba2-Mini, Qwen3.5-9B-Nikusui-v1 with MTPs and Qwen3.5-27B-Nikusui-v1 with MTPs, Available in Safetensors and GGUF Formats!\" src=\"https://external-preview.redd.it/mnvldNvJmgmvmn6CPV4IIDN9Rl8zxPL2G6K8z2LQrKs.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=4b0357ac10448e828e758c73b710e42a15b66a9f\" title=\"Uncensored Multi-Model Releases, LongCat-Flash-Lite with MTPs, Jamba2-Mini, Qwen3.5-9B-Nikusui-v1 with MTPs and Qwen3.5-27B-Nikusui-v1 with MTPs, Available in Safetensors and GGUF Formats!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Been working hard for the past month to bring to the community some interesting curios, so for starters we have <strong>LongCat-Flash-Lite Uncensored Heretic with MTPs</strong> which has never before been uncensored, it is a 69B-A3B model, I spent a long time working on it to make it work with Heretic, to then create a llama.cpp fork that adds support for it as well as one that is optimized with as many issues stamped out as I could find and fix. This model has 0 support on llama.cpp, so to be able to load the GGUFs you will need to use my fork that you can find here:</p> <p><a href=\"https://github.com/erm14254/llama.cpp-minimax-m3-combined/tree/longcat-mtp\">https://github.com/erm14254/llama.cpp-minimax-m3-combined/tree/longcat-mtp</a></p> <p>You would need to load the model through llama-server.exe and you can interact with it through llama-ui.</p> <p>Here is the model links:</p> <p>Safetensors: <a href=\"https://huggingface.co/llmfan46/LongCat-Flash-Lite-uncensored-heretic-Native-MTP-Preserved\">https://huggingface.co/llmfan46/LongCat-Flash-Lite-uncensored-heretic-Native-MTP-Preserved</a></p> <p>GGUFs: <a href=\"https://huggingface.co/llmfan46/LongCat-Flash-Lite-uncensored-heretic-Native-MTP-Preserved-GGUF\">https://huggingface.co…",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
   }
 ]

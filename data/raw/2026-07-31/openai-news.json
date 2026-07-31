@@ -28,5 +28,455 @@
     "published": "2026-07-30T00:00:00+00:00",
     "summary": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
     "fetched_at": "2026-07-31T12:02:11.035452+00:00"
+  },
+  {
+    "id": "ff7c1653ce2eb767",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Disrupting a Criminal Scam Operation",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+    "published": "2026-08-04T00:00:00+00:00",
+    "summary": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "966cd163f8692d8c",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Building abundant intelligence",
+    "url": "https://openai.com/index/building-abundant-intelligence",
+    "published": "2026-07-31T15:00:00+00:00",
+    "summary": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "9be2f103fbe51c1c",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "“Tech and Tariffs” Campaign: Influence activity targeting US tech policy",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-tech-and-tariffs",
+    "published": "2026-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned likely PRC-origin accounts using AI to create comments and cartoons about US tech policy, tariffs, and trade restrictions.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "b6a1a5c9851acb81",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "“Data Center Bandwagon” Campaign: US-targeted influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-data-center-bandwagon",
+    "published": "2026-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned a likely PRC-origin cluster using AI to generate social media content criticizing US data centers and AI infrastructure.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "071d48002d8a1e5e",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Nine–emdash Line”: Regional influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-nine-emdash-line",
+    "published": "2025-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts linked to a previously unreprorted PRC-origin operation we dubbed \"Nine-emdash Line\", using AI to create regional influence content about the South China Sea, Hong Kong, and US politics.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "9137990df72ead76",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Stop News”: Recidivist influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-stop-news-2025",
+    "published": "2025-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts linked to a Russia-origin operation we dubbed “Stop News”, using AI to generate recidivist influence content targeting Africa and the UK.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "561c20c9d4e78071",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "PRC-linked abuse: Surveillance and influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-prc-linked-abuse",
+    "published": "2025-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned PRC-linked accounts using AI to support surveillance-related planning, targeted profiling, and research on critics and other individuals.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "c3151ad1badfd16e",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Cyber Operation: Korean-language malware support",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-korean-language-malware-support",
+    "published": "2025-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned Korean-language accounts using AI for malware development support, debugging, phishing, and credential-theft workflows.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "a6acec4e396b4cd7",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Cyber Operation: Phishing and scripting support",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-phishing-and-scripting-support",
+    "published": "2025-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts involved in activity that overlapped with publicly reported threat groups and displayed hallmarks consistent with PRC intelligence requirements, using AI to support phishing and scripting workflows.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "d0e249a4d21b8ad7",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Cyber Operation: Russian-speaking malware tooling",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-russian-speaking-malware-tooling",
+    "published": "2025-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts likely linked to Russian-speaking criminal groups, using AI to build malware loaders, evasion layers, credential-theft scripts, and C2 infrastructure.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "5a67e1abb891f2e0",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Scam operations: Online fraud networks",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-scam-operations",
+    "published": "2025-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts tied to online fraud networks using AI to support scam scripts, impersonation, translation, and victim engagement.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "7bc5a012b715b343",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Sneer Review”: China-origin influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-sneer-review",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts using AI to generate posts criticizing a Taiwanese social media influencer and related US topics.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "8ad59e7ce08f52db",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Wrong Number”: AI-assisted task scam",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-wrong-number",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts that likely originated in Cambodia and used AI to support scam workflows targeting people in the UK.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "78d0945b500d4e1d",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "STORM-2035: Recidivist influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-storm-2035-2025",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts associated with the likely Iran-linked STORM-2035 operation using AI to create influence content about US, UK, Irish, and Venezuelan politics.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "72abc989ea9f050e",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Uncle Spam”: US polarization influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-uncle-spam",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned China-origin accounts using AI to generate US political content and research people, movements, and online communities.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "dd98a29ff064d3bf",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “High Five”: Philippines political comments",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-high-five",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts using AI to generate comments about Philippine politics and public officials across social platforms.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "7bedc9da64b33fc4",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Helgoland Bite”: German-language influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-helgoland-bite",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts that appeared to originate in Russia and used AI to generate German-language political content about Ukraine, NATO, and domestic issues.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "bcbd6ed81d8a2974",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Deceptive Employment Scheme: IT worker activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-it-workers",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts associated with suspected deceptive employment campaigns that used AI to develop materials for potentially fraudulent remote-job applications.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "43c2579790920338",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “ScopeCreep”: Russian-speaking malware development",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-scopecreep",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned Russian-language accounts using AI to build malware, refine loaders, and troubleshoot cyber tooling.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "f88fc4f1fedcd3c3",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Vixen and Keyhole Panda: China-linked cyber operations",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-vixen-keyhole-panda",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts associated with threat actors publicly attributed to the PRC, using AI to support vulnerability research, scripting, translation, and operational troubleshooting.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "1ec7b442aba0b8f6",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “VAGue Focus”: Social engineering and influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-vague-focus",
+    "published": "2025-06-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts using AI for social engineering, surveillance-themed research, and influence activity targeting critics.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "52c5279070fe818d",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Deceptive Employment Scheme: AI-assisted hiring deception",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-deceptive-employment-scheme",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts potentially used to facilitate a deceptive employment scheme with characteristics of publicly reported North Korea-linked IT-worker activity.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "ca97b8944f0d8b91",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Peer Review”: AI-assisted surveillance planning",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-peer-review",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned likely China-origin accounts using AI to draft surveillance-tool pitches, analyze documents, and debug code.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "56dab6d870990a94",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Task scam: AI-assisted fake review jobs",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-task-scam",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts that appeared to originate in Cambodia and used AI to translate messages for fake-review job scams that asked victims to pay fees.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "560b5e96bf118dab",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Covert influence operation: Ghana election activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-ghana-election",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts using AI to generate articles, posts, and fake engagement around Ghana’s 2024 presidential election.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "77c1ee89d049f607",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Cyber threat actors: AI-assisted intrusion research",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-cyber-threat-actors",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts potentially associated with publicly reported DPRK-affiliated threat actors using AI to research intrusion tooling, phishing, malware, and cryptocurrency targeting.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "7fd7e01c8a207206",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Iranian influence nexus: Cross-platform activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-iranian-influence-nexus",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned Iran-linked accounts using AI to generate articles and social posts tied to IUVM and STORM-2035 influence activity.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "c2beee99786e9110",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Romance-baiting scam: AI-assisted pig butchering workflows",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-romance-baiting-scam",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts that appeared to originate in Cambodia and used AI to translate and generate romance, investment scam conversations.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "5177cce29a4812a9",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Sponsored Discontent”: Influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-sponsored-discontent",
+    "published": "2025-02-01T00:00:00+00:00",
+    "summary": "OpenAI banned likely China-origin accounts using AI to generate English social posts and Spanish-language articles.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "fe1652f155793c0c",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Corrupt Comment: Anti-corruption foundation criticism",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-corrupt-comment",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts using AI to generate comments criticizing a Russian anti-corruption foundation and related figures.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "e2f5130c7b13821e",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Tort Report: Abusive reporting activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-tort-report",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts using AI to draft abusive reports and complaints targeting Vietnamese public figures and platforms.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "a81640387cbb1f3f",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Rwandan election content: Political commenting network",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-rwandan-election-content",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned Rwanda-origin accounts using AI to generate partisan comments ahead of the country’s elections.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "2dca0749116fa9e4",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Bet Bot: Gambling spam network",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-bet-bot",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts that accessed its models through an Israel-based startup to generate conversations and send links to gambling sites on X.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "ead8650957364083",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “STORM-2035”: Iran-origin influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-storm-2035-2024",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned Iran-origin STORM-2035 accounts using AI to generate US and UK election content and publish it across sites.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "9fe200ec9daf7a50",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “A2Z”: Multilingual influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-a2z",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned “A2Z” accounts using AI to generate multilingual influence content about elections, Ukraine, and politics across platforms.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "85644f309938e526",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation “Stop News”: Russia-origin influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-stop-news-2024",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned Russia-origin “Stop News” accounts using AI to generate multilingual articles and posts targeting Ukraine and the West.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "00ef73acc9a89dfc",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Hoax: Fake Russian “troll” error message",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-hoax-russian-troll",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned an account that likely originated in the US and used AI to create a fake ChatGPT error message claiming to detect “Russian troll” activity.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "b6572c4b76d020a3",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "CyberAv3ngers: Iran-linked cyber research activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-cyberav3ngers",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts that appeared to belong to CyberAv3ngers using AI to research industrial control systems, default credentials, and targets.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "b9dccf6e638bc849",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "SweetSpecter: China-linked cyber activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-sweetspecter",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts likely belonging to a suspected China-based adversary tracked as SweetSpecter, using AI to research vulnerabilities, write code, and support spear-phishing activity.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "099a71668d91e44c",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "STORM-0817: Iran-linked malware and scraping activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-storm-0817",
+    "published": "2024-10-01T00:00:00+00:00",
+    "summary": "OpenAI banned Iran-linked STORM-0817 accounts using AI to debug Android malware, scrape social platforms, and translate tooling.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "a215b208b245251f",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "IUVM: Iran-linked influence content network",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-iuvm",
+    "published": "2024-05-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts associated with the Iran-origin operation \"IUVM\", using AI to generate and translate pro-Iran, anti-Israel and anti-US website content.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "49a3e1794407ba14",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation \"Zero Zeno\": Israel-linked influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-zero-zeno",
+    "published": "2024-05-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts linked to a previously unreprorted Israel-origin operation we dubbed “Zero Zeno,” using AI to generate anti-Hamas, anti-Qatar, pro-Israel, anti-BJP, and pro-Histadrut content.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "e5efdb9215df4cb1",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation \"Doppelganger\": Russian influence activity targeting Ukraine",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-doppelganger",
+    "published": "2024-05-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts associated with the Russia-origin operation \"Doppelganger\", using AI to generate anti-Ukraine social media comments, translations, and website copy across several languages.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "ea071dd139992c33",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "Operation \"Spamouflage\": China-linked influence activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-spamouflage",
+    "published": "2024-05-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts associated with the PRC-origin operation \"Spamouflage\", using AI to research social media activity, generate posts, and debug a previously unreported website.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
+  },
+  {
+    "id": "eafc4a96039ae2fa",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "\"Bad Grammar\": Russian-linked Telegram comment activity",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-bad-grammar",
+    "published": "2024-05-01T00:00:00+00:00",
+    "summary": "OpenAI banned accounts linked to a previously unreprorted Russia-origin operation we dubbed \"Bad Grammar\", using AI to generate English- and Russian-language Telegram comments on Ukraine, Moldova, Baltic, and US politics.",
+    "fetched_at": "2026-07-31T17:42:36.296710+00:00"
   }
 ]
