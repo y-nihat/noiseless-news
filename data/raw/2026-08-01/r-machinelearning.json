@@ -48,5 +48,25 @@
     "published": "2026-08-01T12:11:34+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I am trying to learn concepts like On Policy Distillation (OPD), On Policy Self Distillation (OPSD) and how do they compare to RL algorithms like GRPO.</p> <p>There are a lot of papers on this, but because of limited compute I cannot try these papers out and learn them by implementing them myself.</p> <p>If someone here has worked with these algorithms and their implementation on SLMs (something that can fit a consumer grade GPU like Nvidia RTX 4090 or 5090), can they suggest either a:</p> <ol> <li><p>Github repo, or</p></li> <li><p>The right choice of SLM(s) and the datasets, where i can see the difference between, RL/GRPO and OPSD algorithms?</p></li> </ol> <p>Thanks in advance! </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LatentBotNet\"> /u/LatentBotNet </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vclrah/github_repo_to_learn_the_opdopsd_and_how_they/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vclrah/github_repo_to_learn_the_opdopsd_and_how_they/\">[comments]</a></span>",
     "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "7c20d8edcb9d2ecd",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Question about NeurIPS discussion phase [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vcykc5/question_about_neurips_discussion_phase_d/",
+    "published": "2026-08-01T20:58:03+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>One reviewer said all concerns were resolved during discussion but hasn’t updated their score yet. The other reviewers haven’t engaged. In previous NeurIPS cycles, how common is it for reviewers to update scores after saying concerns are resolved? What have others observed?</p> <p>My ratings/confidences are : 4/4, 3/2, 3/2, 2/4.</p> <p>I am talking about the one who gave rating 2.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Invariant_n_Cauchy\"> /u/Invariant_n_Cauchy </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcykc5/question_about_neurips_discussion_phase_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcykc5/question_about_neurips_discussion_phase_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-01T22:34:03.120226+00:00"
+  },
+  {
+    "id": "5e1f5f0e6a583b3a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "EMNLP vs AACL commitment: Meta 3.5, reviews 3/3/4, what to do?[D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vcsv1s/emnlp_vs_aacl_commitment_meta_35_reviews_334_what/",
+    "published": "2026-08-01T17:11:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm trying to decide whether to commit my ARR May 2026 paper to <strong>EMNLP</strong> or <strong>AACL</strong>. (first time solo independent author).</p> <p>Final reviews after rebuttal (OA/Confidence/Excitement ):</p> <ul> <li>R1: <strong>2.5 → 3 /3/2.5</strong></li> <li>R2: <strong>2.5 → 3 /4/2.5</strong></li> <li>R3: <strong>4 /4 /3</strong></li> <li><strong>Meta: 3.5 (Borderline Conference)</strong></li> </ul> <p>The meta-review was overall positive and emphasized the paper's empirical rigor, practical value, and that the rebuttal addressed the main concerns. My recollection is that the AC mentioned they were <strong>leaning toward 3.5 primarily because of the quality of the presentation/readability</strong>, rather than concerns about technical soundness(now that comment is removed/not visiable anymore).</p> <p>I'm happy with <strong>either Main or Findings</strong>.</p> <p>My questions:</p> <ol> <li><strong>Which commitment would you choose: EMNLP or AACL?</strong></li> <li><strong>Which is generally considered more prestigious today?</strong> <ul> <li>EMNLP Main</li> <li>EMNLP Findings</li> <li>AACL Main</li> <li>AACL Findings</li> </ul></li> <li>Given this review profile (<strong>3/3/4 with a 3.5 meta</strong>), what would you estimate the chances are for <strong>EMNLP Main or Findings</strong>?</li> </ol> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Effective-Yam-7656\"> /u/Effective-Yam-7656 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcsv1s/emnlp_vs_aacl_commitment_meta_35_reviews_334_what/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcsv1s/emnlp_vs_aacl_commitment_meta_35_reviews_334_what/\">[comments]</a></span>",
+    "fetched_at": "2026-08-01T22:34:03.120226+00:00"
   }
 ]
