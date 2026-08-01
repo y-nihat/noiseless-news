@@ -108,5 +108,85 @@
     "published": "2026-08-01T07:52:10+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>CPU: Threadripper 3970X<br /> RAM: 128GB DDR4<br /> GPUs: 3x2080ti 11GB</p> <p>The current best parameters to run it:</p> <pre><code>llama-server \\ --model Qwen3.6-27B-Q5_K_S.gguf \\ --n-gpu-layers 999 \\ --split-mode tensor \\ --flash-attn on \\ --cache-type-k q8_0 \\ --cache-type-v q8_0 \\ --ctx-size 16384 \\ --batch-size 2048 \\ --ubatch-size 1024 \\ --threads 4 \\ --spec-type draft-mtp \\ --spec-draft-n-max 3 \\ --no-mmap </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AccountGotLocked69\"> /u/AccountGotLocked69 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vch2vl/qwen_36_27b_q5_on_3x2080ti_55tps_with_llamacpp/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vch2vl/qwen_36_27b_q5_on_3x2080ti_55tps_with_llamacpp/\">[comments]</a></span>",
     "fetched_at": "2026-08-01T11:18:17.333190+00:00"
+  },
+  {
+    "id": "eb0a8e8d1271ad01",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "EU AI Act takes effect tomorrow, August 2, 2026. 🤡",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcqpn4/eu_ai_act_takes_effect_tomorrow_august_2_2026/",
+    "published": "2026-08-01T15:44:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Basically you now have to mark all AI generated images, audio, video and text as AI generated. :P</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/xoxaxo\"> /u/xoxaxo </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcqpn4/eu_ai_act_takes_effect_tomorrow_august_2_2026/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcqpn4/eu_ai_act_takes_effect_tomorrow_august_2_2026/\">[comments]</a></span>",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "6bdd73a23263a689",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New official weights for Laguna S 2.1 FP8 & NVFP4 are now available",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcn9uw/new_official_weights_for_laguna_s_21_fp8_nvfp4/",
+    "published": "2026-08-01T13:20:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcn9uw/new_official_weights_for_laguna_s_21_fp8_nvfp4/\"> <img alt=\"New official weights for Laguna S 2.1 FP8 &amp; NVFP4 are now available\" src=\"https://external-preview.redd.it/pxdD67Tczx_FwUY4MQl6Fxr8We02ywCeJwxY1JvjFNc.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=32c9301992a05fdfc8b0c995ab8495d5cc142bed\" title=\"New official weights for Laguna S 2.1 FP8 &amp; NVFP4 are now available\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Poolside have updated the FP8 and NVFP4 checkpoints for Laguna S 2.1, increasing the default context size to 1 million, and updating the configs.</p> <p>Here's hoping they fixed the looping issue, this model has been great in my development workflows, when not looping. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rmhubbert\"> /u/rmhubbert </a> <br /> <span><a href=\"https://huggingface.co/poolside/Laguna-S-2.1-FP8\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcn9uw/new_official_weights_for_laguna_s_21_fp8_nvfp4/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "fd6c0b334cde7031",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "LongCat-Flash-Lite-Sparse Is Now Available for Download",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcpv6u/longcatflashlitesparse_is_now_available_for/",
+    "published": "2026-08-01T15:10:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcpv6u/longcatflashlitesparse_is_now_available_for/\"> <img alt=\"LongCat-Flash-Lite-Sparse Is Now Available for Download\" src=\"https://external-preview.redd.it/TB8lvc_WvC59pV7HAeNN_QTT2Sa6SPRzddgrjEvNFGA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=69dbd902d26c787ea87029f23bda89609f0c3c2c\" title=\"LongCat-Flash-Lite-Sparse Is Now Available for Download\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>The weights have now been added to the repo an hour ago.</p> <p>This model is built upon <a href=\"https://huggingface.co/meituan-longcat/LongCat-Flash-Lite\">LongCat-Flash-Lite</a>, the differences are that <a href=\"https://huggingface.co/meituan-longcat/LongCat-Flash-Lite-Sparse\">LongCat-Flash-Lite-Sparse</a>:</p> <ol> <li><p>Replaces dense MLA with LongCat Sparse Attention (LSA)</p></li> <li><p>Natively supports context lengths of up to 1M tokens (vs 256k for LongCat-Flash-Lite)</p></li> </ol> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LLMFan46\"> /u/LLMFan46 </a> <br /> <span><a href=\"https://huggingface.co/meituan-longcat/LongCat-Flash-Lite-Sparse\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcpv6u/longcatflashlitesparse_is_now_available_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "61b72db485fc5195",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash 0731 IQ2_M benchmark for Dual 3060 and 96GB RAM ≈ 3.5 tok/s.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcrd6d/deepseek_v4_flash_0731_iq2_m_benchmark_for_dual/",
+    "published": "2026-08-01T16:10:45+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcrd6d/deepseek_v4_flash_0731_iq2_m_benchmark_for_dual/\"> <img alt=\"DeepSeek V4 Flash 0731 IQ2_M benchmark for Dual 3060 and 96GB RAM ≈ 3.5 tok/s.\" src=\"https://preview.redd.it/3mzcq9labsgh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=d52a64038bfe06759c5203b30881c71c0339e8d9\" title=\"DeepSeek V4 Flash 0731 IQ2_M benchmark for Dual 3060 and 96GB RAM ≈ 3.5 tok/s.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Thanks to the community help I finally launched this llm. LM Studio refused to load weight onto second GPU but Unsloth Studio did so everything was done in there. Not a proper benchmark (used PC in parallel as well) but it gives an idea of ​​the performance from dual 3060 with RAM offloading.</p> <p>DeepSeek V4 Flash 0731 IQ2_M from Unsloth</p> <p>CPU: Ryzen 7500F<br /> GPU 0 (PCIe 5.0x16 lane): RTX3060<br /> GPU 1 (PCIe 3.0x1 lane): RTX3060<br /> RAM: 96GB 5600</p> <p>Prompt: Write me a tetris game.</p> <p>Result (copy from the summary):<br /> Prompt eval: 2.96s<br /> Prompt speed: 3.0 tok/s<br /> Generation: 960.02s<br /> Speed: 4.5 tok/s (PowerShell shows 3.5 tok/s, don't know why it shows 4.5 tok/s, single GPU with RAM offload output was around 3 tok/s so I trust PowerShell metrics more)<br /> Tokens: 4,338<br /> First token: 2.96s<br /> Cache hits: 1<br /> Total: 963.32s<br /> Chunks: 4318</p> <p>Wattmeter is on the way but my estimate is around 130W total system power draw (with 2 monitors connected but they are not taken into account) Each GPU used 30-40W with 0.9V undervolt. Task took around 16 minutes to complete, consumed around 35 watts and cost 0.0059 euros.</p> <p>Update:<br /> OS Windows 11. </p> <p><strong><em>Actually math is showing 4338/960.02=4.52 tok/s, don't know why PowerShell showed 3.5 most of the time. I ran one more request with web search and it gave 4.7 tok/s. Updated 3.5 -&gt; 4.5 tok/s.</em></strong></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a…",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "25eb62a1bcac71bb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Gemma4 (31B, bf16) constantly fails to edit files due to mismatches in original text - just me?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcn0w2/gemma4_31b_bf16_constantly_fails_to_edit_files/",
+    "published": "2026-08-01T13:09:33+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been trying to find a good model to run locally, and in the benchmarks I can Gemma4 does well.</p> <p>However, whenever I give it anything that involves writing any code, it sits in loops trying to edit files sending the wrong original content (usually it messes up something like the indentation) and the harness rejects it saying that code doesn't exist in the file.</p> <p>I tried the same task in a bunch of different harnesses, hoping one of them would have an edit tool it could use, but they all seem to fail in similar ways. Some of those I tried are Goose, Copilot, Codex, Little Coder.</p> <p>Is this a common issue? I've seen complaints about tool calling in general, but my issue seems quite specific to recalling the original content when editing files. I'm wondering if an edit tool that ignores indentation might be an idea. </p> <p>I'm using Gemma4 31B, full bf16, served with VLLM. I have the updated chat template from a few weeks back (which did increase scores in the benchmarks I ran).</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DanTup\"> /u/DanTup </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcn0w2/gemma4_31b_bf16_constantly_fails_to_edit_files/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcn0w2/gemma4_31b_bf16_constantly_fails_to_edit_files/\">[comments]</a></span>",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "2996c430dd318cc5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I'm kinda tired of obsession for one-shot tests in coding, there are good tests for multi-step debugging with analyzing output/images/videos?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcpsml/im_kinda_tired_of_obsession_for_oneshot_tests_in/",
+    "published": "2026-08-01T15:07:04+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Personally, i think good coding model shouldn't be focused on one-shot &quot;everything in one html-file&quot; tests, but should be really good on debugging, fixing and modifying its own output. Anyone know such simple tests that i would able to run with local models?</p> <p>May be some kind of synthetic stuff that forces LLM to build something that is broken by design and then asking the model to do a multi-step changes, fix issues, analyze program's output (preferably with getting screenshots/videos)?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/vasimv\"> /u/vasimv </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcpsml/im_kinda_tired_of_obsession_for_oneshot_tests_in/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcpsml/im_kinda_tired_of_obsession_for_oneshot_tests_in/\">[comments]</a></span>",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "a4982659cb16e231",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anyone else feeling this way about the closed frontier?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcs3w5/anyone_else_feeling_this_way_about_the_closed/",
+    "published": "2026-08-01T16:40:50+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcs3w5/anyone_else_feeling_this_way_about_the_closed/\"> <img alt=\"Anyone else feeling this way about the closed frontier?\" src=\"https://preview.redd.it/u3xo0qklksgh1.png?width=140&amp;height=140&amp;auto=webp&amp;s=f7216073e799a0a246d814d16565141768143655\" title=\"Anyone else feeling this way about the closed frontier?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/u3xo0qklksgh1.png?width=680&amp;format=png&amp;auto=webp&amp;s=9d72c80bbad2559e210897e137d30c88faa7bbc7\">https://preview.redd.it/u3xo0qklksgh1.png?width=680&amp;format=png&amp;auto=webp&amp;s=9d72c80bbad2559e210897e137d30c88faa7bbc7</a></p> <p>Hehe. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/laterbreh\"> /u/laterbreh </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcs3w5/anyone_else_feeling_this_way_about_the_closed/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcs3w5/anyone_else_feeling_this_way_about_the_closed/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
+  },
+  {
+    "id": "7af5a63d7dd69c8e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash-0731: Oneshot evals, surprisingly not token efficient??",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vcl502/deepseekv4flash0731_oneshot_evals_surprisingly/",
+    "published": "2026-08-01T11:41:11+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcl502/deepseekv4flash0731_oneshot_evals_surprisingly/\"> <img alt=\"DeepSeek-V4-Flash-0731: Oneshot evals, surprisingly not token efficient??\" src=\"https://preview.redd.it/shxbtioh0rgh1.png?width=140&amp;height=134&amp;auto=webp&amp;s=47b4a83283eeb0739e16766423e6aae31913d5dd\" title=\"DeepSeek-V4-Flash-0731: Oneshot evals, surprisingly not token efficient??\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I ran the newly released DeepSeek-V4-Flash-0731 in my oneshot eval harness across 34 prompts and here are the results.</p> <p><a href=\"https://oneshotlm.com/model/deepseek-deepseek-v4-flash-0731/\">https://oneshotlm.com/model/deepseek-deepseek-v4-flash-0731/</a></p> <p>The providers on openrouter were unstable and I had to retry generation multiple times.</p> <p>Surprisingly it costed $1.29 to go through all 34 prompts failing to produce 5 outputs whereas kimi k3 only costed $0.44 without any failures.</p> <p>DeepSeek V4 Flash 0731: 2.7/5 score, $1.29 cost, 753k tokens Kimi K3: 3.2/5 score, $0.44 cost, 233k tokens</p> <p>Am I doing something wrong?? How is your experience with this model compared to Kimi K3?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kms_dev\"> /u/kms_dev </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vcl502\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcl502/deepseekv4flash0731_oneshot_evals_surprisingly/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-01T17:04:19.844389+00:00"
   }
 ]
