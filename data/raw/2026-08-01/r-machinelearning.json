@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cda3414df5bcc87e",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "VLMs can score well on benchmarks, while silently erasing meaningful terms and including hallucinate bias [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vcipzz/vlms_can_score_well_on_benchmarks_while_silently/",
+    "published": "2026-08-01T09:27:26+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>While working with VLMs for report generation on chest x-rays (RRG), we noticed that evaluation metrics are flawed.</p> <p>Flawed in a sense where they rewarded repetitive templates, reports without clinical terms and reports which were &quot;normal&quot; with high scores on benchmark metrics. Also, clinically meaningful but rare words were erased leaving the generated report looking repetitive and boring. Importantly, of no clinical utility.</p> <p>In the paper below, we discuss this behaviour of VLMs for RRG and introduce a framework to actually measure the erasure of terms and introduction of biased terms.</p> <p>Paper: Measuring What VLMs Don't Say: Validation Metrics Hide Clinical Terminology Erasure in Radiology Report Generation</p> <p>Link: <a href=\"https://arxiv.org/abs/2603.01625\">Reference Paper</a></p> <p>Url: <a href=\"https://arxiv.org/abs/2603.01625\">https://arxiv.org/abs/2603.01625</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ade17_in\"> /u/ade17_in </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcipzz/vlms_can_score_well_on_benchmarks_while_silently/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcipzz/vlms_can_score_well_on_benchmarks_while_silently/\">[comments]</a></span>",
+    "fetched_at": "2026-08-01T11:18:17.333190+00:00"
+  },
+  {
+    "id": "38b49f573890c608",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "ARR May Meta Review[D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vcb4zw/arr_may_meta_reviewd/",
+    "published": "2026-08-01T02:43:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>This time we have seen the worst meta reviews...may be people are unintersted to do reviews...in my case they did not acknowledge the report at all as well the entire rebuttal. How many are facing the same thing?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Historical_Pause247\"> /u/Historical_Pause247 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcb4zw/arr_may_meta_reviewd/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vcb4zw/arr_may_meta_reviewd/\">[comments]</a></span>",
+    "fetched_at": "2026-08-01T11:18:17.333190+00:00"
+  }
+]
