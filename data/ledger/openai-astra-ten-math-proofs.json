@@ -1,0 +1,24 @@
+{
+  "slug": "openai-astra-ten-math-proofs",
+  "title": "OpenAI's claimed ten open-problem math solutions from an unreleased model",
+  "status": "watching",
+  "first_seen": "2026-08-01",
+  "langs": [],
+  "source_urls": [
+    "https://openai.com/index/ten-advances-in-mathematics",
+    "https://github.com/openai/ten-proofs",
+    "https://cdn.openai.com/pdf/ten-proofs-oai.pdf"
+  ],
+  "follows": null,
+  "reason": "OpenAI posted 2026-08-01 that an internal, unreleased model it calls 'Astra' (confirmed as OpenAI's own internal codename via an identifiable OpenAI staff X post, not press paraphrase) produced results on ten long-standing open problems in mathematics and theoretical computer science (sphere packing, non-sofic groups, arithmetic circuit complexity, lattice cryptography, etc.), each with a Lean proof certificate. Cycle 3 verifier sub-agent confirmed the GitHub artifact (github.com/openai/ten-proofs) is real: public openai org repo, Apache-2.0, Lean 4 with mathlib, 10 named .lean files matching the claimed results, plus a separate ComparatorChallenges checking harness -- this is a genuine, structurally plausible research artifact, not vaporware. What is NOT yet independently confirmed: (a) whether the Lean proofs actually type-check/build cleanly -- verifier could not run `lake build` within budget; (b) any independent mathematician's assessment that the ten problems are genuinely long-standing-open as framed, or that the proofs are correct -- searches surfaced only secondary paraphrase, no primary quote from a named mathematician, and a Hacker News technical thread could not be fetched (rate-limited); (c) OpenAI's own post itself already discloses human/org involvement in formalizing the Lean proofs ('helped prepare the manuscripts and formalize the proofs ... taking responsibility for their correctness'), so this is not framed by OpenAI itself as a fully autonomous result. Decisive reason to hold rather than publish as a labeled vendor-claim this cycle: the same lab has a directly analogous prior incident in this exact claim category -- OpenAI VP Kevin Weil posted and then deleted an 'AI solved 10 Erdos problems' claim in October 2025 that mathematician Thomas Bloom debunked as a literature-search artifact, not new math (see https://techcrunch.com/2025/10/19/openais-embarrassing-math/). Given that precedent, publishing this new ten-problems claim -- even labeled vendor-claim -- without at least one independent mathematician's read is judged too easy to mistake for confirmed mathematics, and not worth the residual reputational risk of publish-then-correct on a front-page-scale claim. Holding one more cycle for a cheap, high-value check (an HN/MathOverflow read, one mathematician-focused search) is a better tradeoff than lowering the bar under this cycle's time pressure.",
+  "watch": [
+    "Any independent mathematician (e.g. via MathOverflow, Hacker News technical discussion, a named academic's blog/X post) assessing whether the ten problems are genuinely long-standing-open as framed and whether the proofs look sound",
+    "Confirmation the github.com/openai/ten-proofs Lean files actually build/type-check (or a report that they do not)",
+    "Any dispute, correction, or retraction of this specific 2026-08-01 post, echoing the October 2025 Kevin Weil Erdos-problems retraction",
+    "Coverage from a Tier 0-2 outlet with its own named-author analysis rather than a relay of OpenAI's post"
+  ],
+  "notes": [
+    "2026-08-01 c2: triaged from openai-news.json ingest; dedup-check clean (no archive matches); flagged as ready to skip to verify in cycle 3, with explicit caution that the claim needs a real verification pass given the unverified 'Astra' naming and the research-artifact standard of proof.",
+    "2026-08-01 c3: verifier sub-agent (fresh context, 12 searches/fetches, 1 direct GitHub API/WebFetch check of the repo) confirmed the artifact is real and 'Astra' is OpenAI's own internal codename (not media invention), but could not obtain independent mathematician confirmation or Lean-build confirmation within budget, and surfaced the October 2025 Kevin Weil Erdos-problems overclaim as directly relevant lab history. Held in watching rather than published as vendor-claim; adversarial falsifier pass not run since the decision was already 'hold', not 'publish'."
+  ]
+}
