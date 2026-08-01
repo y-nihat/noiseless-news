@@ -278,5 +278,15 @@
     "published": "2026-08-01T19:08:54+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm building a render monster for work, and the idea is to stuff as much GPU power in there as possible. GPUs are going to be some stack of RTX Pro 6000's and 5090's. The hope is a full 2,400W of cards.</p> <p>Going with a Threadripper Pro 9975WX and ASUS SAGE motherboard in a Phanteks Enthoo Elite Server case.</p> <p>Of course, the issue is powering it (also cooling it, but I actually feel pretty good about that one). Unfortunately 240V power isn't available, so something like the Silverstone HELA 2500 won't work.</p> <p>Looking at 2x 1600W MSI MPG PSU. Each would run from its own dedicated 15A circuit through a 1900W UPS.</p> <p>How many here use dual PSUs? Most advice I can find online is stuff like &quot;just get a bigger PSU&quot; but obviously that can't work here. I'm also hoping to avoid the janky miner setups and go with something with a little more reliability considering the value of equipment attached here.</p> <p>What are your dual PSU experiences? What MB/PSU bridge would you recommend?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Generic_Name_Here\"> /u/Generic_Name_Here </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcvtpe/safety_and_reliability_of_a_dual_psu_config/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcvtpe/safety_and_reliability_of_a_dual_psu_config/\">[comments]</a></span>",
     "fetched_at": "2026-08-01T22:34:03.120226+00:00"
+  },
+  {
+    "id": "5d02f8ae91eb5863",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Koboldcpp v1.118 released",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vd13uv/koboldcpp_v1118_released/",
+    "published": "2026-08-01T22:45:47+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd13uv/koboldcpp_v1118_released/\"> <img alt=\"Koboldcpp v1.118 released\" src=\"https://external-preview.redd.it/69faToH0tszYvxMNaD6cl9C3x0zfprMqvyEIh-NmODs.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=10599c6906ab03a32acd3051c12e37e47a4f18d1\" title=\"Koboldcpp v1.118 released\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fcking_Chuck\"> /u/Fcking_Chuck </a> <br /> <span><a href=\"https://github.com/LostRuins/koboldcpp/releases/tag/v1.118\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd13uv/koboldcpp_v1118_released/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-01T23:09:03.119885+00:00"
   }
 ]
