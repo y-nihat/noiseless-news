@@ -1,0 +1,12 @@
+[
+  {
+    "id": "c3fa421241294498",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "For Local, what are your minimum good or usable tokens per second, for both promp processing and text generation?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vd24q1/for_local_what_are_your_minimum_good_or_usable/",
+    "published": "2026-08-01T23:31:25+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello guys, hoping you're doing fine.</p> <p>Lately with all the new models, and how popular is offloading, what are your min good or usable t/s for both PP and TG?</p> <p>Speaking on my case, I think PP about 300-350t/s for min, and for TG, about 9 t/s min.</p> <p>What about yours?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/panchovix\"> /u/panchovix </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd24q1/for_local_what_are_your_minimum_good_or_usable/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd24q1/for_local_what_are_your_minimum_good_or_usable/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T00:19:02.769250+00:00"
+  }
+]
