@@ -1,4 +1,24 @@
 {
+  "candidates_2026-08-02_c4": [
+    {
+      "domain": "futurism.com",
+      "first_seen": "2026-08-02",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://futurism.com/artificial-intelligence/google-pulls-down-google-earth-ai-feature"
+      ],
+      "context": "Independent tech-news outlet that ran its own reproduction tests (not just relaying Van Ess's examples) for the google-earth-ai-image-generation-pulled story; used as a live-fetched, independent Tier-2 source this cycle. Unregistered; propose Tier 2, type html."
+    },
+    {
+      "domain": "forbes.com",
+      "first_seen": "2026-08-02",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.forbes.com/sites/paulmonckton/2026/08/01/google-earth-ai-feature-removed/"
+      ],
+      "context": "Forbes contributor-network byline (Paul Monckton) used as an independent Tier-2 source for the google-earth-ai-image-generation-pulled story (Van Ess demonstration detail, Hive AI watermark-defeat test). Note contributor-network Forbes pieces vary in editorial rigor more than staff bylines; propose Tier 2 with that caveat, type html."
+    }
+  ],
   "candidates_2026-07-30_c4": [
     {
       "domain": "bnnbloomberg.ca",
