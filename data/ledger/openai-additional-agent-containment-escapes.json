@@ -18,6 +18,7 @@
     "OpenAI's specification of which parts of the 24 July Reuters account it considers inaccurate"
   ],
   "notes": [
-    "2026-08-02 c4: Surfaced in Tier-0/discovery triage of this cycle's fresh ingest (Daily Sabah gnews item) plus follow-up web search. Verifier and falsifier sub-agents run in parallel; both recommended HOLD independently before being shown each other's findings."
+    "2026-08-02 c4: Surfaced in Tier-0/discovery triage of this cycle's fresh ingest (Daily Sabah gnews item) plus follow-up web search. Verifier and falsifier sub-agents run in parallel; both recommended HOLD independently before being shown each other's findings.",
+    "2026-08-02 c5: Re-checked (1 web search, reuters.com excluded). Same outlet set (US News, Japan Times, Honolulu Star-Advertiser, Jakarta Post, KFGO, Slashdot, Rappler, Ary News) still traces to the same Reuters exclusive; OpenAI's only public comment remains the general Tuesday statement about reviewing 'broader activity from our models', not a specific confirmation of additional incidents. No second independently-sourced outlet, no openai.com post. Gate still fails on independence. Still watching. (This cycle ran under a tight ~20-minute deadline window; only a light recheck was possible, no new-story verification attempted this cycle.)"
   ]
 }
