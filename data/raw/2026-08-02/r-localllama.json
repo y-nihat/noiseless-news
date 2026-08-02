@@ -258,5 +258,105 @@
     "published": "2026-08-02T15:33:32+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>previously on my 3070, 32gb ddr4 and i711700 I used this command for months and got 26-30 tps:</p> <p>&quot;C:\\Program Files\\llama cpp\\llama-server.exe&quot; ^</p> <p>-m &quot;C:\\Program Files\\llama cpp\\models\\Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf&quot; ^</p> <p>--mmproj &quot;C:\\Program Files\\llama cpp\\models\\mmproj-F16.gguf&quot; ^</p> <p>--gpu-layers 99 ^</p> <p>--cpu-moe ^</p> <p>--ctx-size 131072 ^</p> <p>--cache-type-k q8_0 ^</p> <p>--cache-type-v q8_0 ^</p> <p>--port 8081 ^</p> <p>--host <a href=\"http://0.0.0.0\">0.0.0.0</a> ^</p> <p>--jinja ^</p> <p>--no-mmap ^</p> <p>--parallel 1 ^</p> <p>-b 4096 -ub 4096 ^</p> <p>--temp 1.0 ^</p> <p>--top-p 0.95 ^</p> <p>--top-k 20 ^</p> <p>--min-p 0.0 ^</p> <p>--presence-penalty 1.5 ^</p> <p>--repeat-penalty 1.0 ^</p> <p>--chat-template-kwargs &quot;{\\&quot;preserve_thinking\\&quot;:true}&quot;</p> <p>then yesterday suddenly at start I am at 13 or 12 tps even after lowering ctxt to 32k. my gemma model got the same tps hit as well. if anyone can help me I will appreciate. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/campaigner_\"> /u/campaigner_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdl44q/my_tps_is_suddenly_halved_and_i_do_not_know_why/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdl44q/my_tps_is_suddenly_halved_and_i_do_not_know_why/\">[comments]</a></span>",
     "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "f48ccdfe2c7f39a0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash-0731: surpasses Fable-5, Sol & Kimi-K3 on Chess Benchmark",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdq8en/deepseekv4flash0731_surpasses_fable5_sol_kimik3/",
+    "published": "2026-08-02T18:54:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdq8en/deepseekv4flash0731_surpasses_fable5_sol_kimik3/\"> <img alt=\"DeepSeek-V4-Flash-0731: surpasses Fable-5, Sol &amp; Kimi-K3 on Chess Benchmark\" src=\"https://preview.redd.it/vvoei0u5d0hh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=30ff6ca76dac9cfbb331219be30797608747d864\" title=\"DeepSeek-V4-Flash-0731: surpasses Fable-5, Sol &amp; Kimi-K3 on Chess Benchmark\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mrwang89\"> /u/mrwang89 </a> <br /> <span><a href=\"https://i.redd.it/vvoei0u5d0hh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdq8en/deepseekv4flash0731_surpasses_fable5_sol_kimik3/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "ab91fca5f86712c7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "China’s DFSX Offers 2x The Memory Bandwidth Of NVIDIA’s GB200",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vduej3/chinas_dfsx_offers_2x_the_memory_bandwidth_of/",
+    "published": "2026-08-02T21:39:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vduej3/chinas_dfsx_offers_2x_the_memory_bandwidth_of/\"> <img alt=\"China’s DFSX Offers 2x The Memory Bandwidth Of NVIDIA’s GB200\" src=\"https://external-preview.redd.it/N35gG6BXE7KO_z--xz3yZoIwvPDI6Ue7WgGUhk2Sk88.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=9d25a42242a823c21e509fdde128dff1c6e5c1bd\" title=\"China’s DFSX Offers 2x The Memory Bandwidth Of NVIDIA’s GB200\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MundanePercentage674\"> /u/MundanePercentage674 </a> <br /> <span><a href=\"https://wccftech.com/chinas-dfsx-offers-2x-the-memory-bandwidth-of-nvidias-gb200-nvl72-system-with-a-14nm-supernode-that-skips-microbumps-for-vertical-compute-memory-towers/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vduej3/chinas_dfsx_offers_2x_the_memory_bandwidth_of/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "679e9e6272d76873",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "You really should not quantize KV Cache for DeepSeek V4 Flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vduxth/you_really_should_not_quantize_kv_cache_for/",
+    "published": "2026-08-02T22:01:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I don't think anyone should quantize the KV with DS4F. I checked the the quality impact (PPL, KLD, Same TopP) for swhitching from BF16 KV to Q8 KV, and it appears significant. Very much in contrast to Qwen 397B.</p> <p>Here are the results for DS4F:</p> <pre><code>====== Perplexity statistics ====== Mean PPL(Q) : 5.877076 ± 0.042497 Mean PPL(base) : 5.839660 ± 0.041730 Cor(ln(PPL(Q)), ln(PPL(base))): 95.74% Mean ln(PPL(Q)/PPL(base)) : 0.006387 ± 0.002100 Mean PPL(Q)/PPL(base) : 1.006407 ± 0.002114 Mean PPL(Q)-PPL(base) : 0.037416 ± 0.012318 ====== KL divergence statistics ====== Mean KLD: 0.145884 ± 0.001043 Maximum KLD: 12.467786 99.9% KLD: 4.535020 99.0% KLD: 1.857870 95.0% KLD: 0.652148 90.0% KLD: 0.349220 Median KLD: 0.032079 10.0% KLD: 0.000093 5.0% KLD: 0.000012 1.0% KLD: 0.000000 0.1% KLD: -0.000002 Minimum KLD: -0.000025 ====== Token probability statistics ====== Mean Δp: -0.007 ± 0.031 % Maximum Δp: 99.525% 99.9% Δp: 81.503% 99.0% Δp: 42.054% 95.0% Δp: 14.588% 90.0% Δp: 7.220% 75.0% Δp: 1.066% Median Δp: 0.000% 25.0% Δp: -1.061% 10.0% Δp: -7.112% 5.0% Δp: -14.515% 1.0% Δp: -42.297% 0.1% Δp: -84.157% Minimum Δp: -99.994% RMS Δp : 11.884 ± 0.069 % Same top p: 87.189 ± 0.088 % </code></pre> <p>As a comparison, here are the results for Qwen 397B:</p> <pre><code>====== Perplexity statistics ====== Mean PPL(Q) : 3.747980 ± 0.020507 Mean PPL(base) : 3.746773 ± 0.020461 Cor(ln(PPL(Q)), ln(PPL(base))): 99.89% Mean ln(PPL(Q)/PPL(base)) : 0.000322 ± 0.000260 Mean PPL(Q)/PPL(base) : 1.000322 ± 0.000260 Mean PPL(Q)-PPL(base) : 0.001207 ± 0.000975 ====== KL divergence statistics ====== Mean KLD: 0.003552 ± 0.000034 Maximum KLD: 2.220941 99.9% KLD: 0.131591 99.0% KLD: 0.043847 95.0% KLD: 0.014439 90.0% KLD: 0.007836 Median KLD: 0.000866 10.0% KLD: 0.000013 5.0% KLD: 0.000004 1.0% KLD: -0.000000 0.1% KLD: -0.000006 Minimum KLD: -0.000176 ====== Token probability statistics ====== Mean Δp: 0.019 ± 0.005 % Maximum Δp: 39.939% 99.9% Δp: 15.97…",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "90f7b1c8b9baf418",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "https://huggingface.co/poolside/Laguna-S-2.1-NVFP4",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdssj7/httpshuggingfacecopoolsidelagunas21nvfp4/",
+    "published": "2026-08-02T20:34:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><strong><em>Updated release (August 2026).</em></strong> <em>This is a new checkpoint that supersedes the earlier version of this repository. The weights have changed, not only the config, so if you downloaded a previous copy please re-download to pick up the current checkpoint.</em></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/WhaleFactory\"> /u/WhaleFactory </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdssj7/httpshuggingfacecopoolsidelagunas21nvfp4/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdssj7/httpshuggingfacecopoolsidelagunas21nvfp4/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "405e1ff9c1d6199a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "PSA: llama.app, Mac app and llama serve from llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdt1i2/psa_llamaapp_mac_app_and_llama_serve_from_llamacpp/",
+    "published": "2026-08-02T20:44:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdt1i2/psa_llamaapp_mac_app_and_llama_serve_from_llamacpp/\"> <img alt=\"PSA: llama.app, Mac app and llama serve from llama.cpp\" src=\"https://preview.redd.it/wsd56hjsu0hh1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=f5a5325c25e6919c8b82ba96b679b431eeafda40\" title=\"PSA: llama.app, Mac app and llama serve from llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://llama.app/\">https://llama.app/</a></p> <p>Been using llama.cpp for years now and im on here all the time (im a mod..), but somehow I totally missed that <a href=\"http://llama.app\">llama.app</a> exists and its official from the HF/llama.cpp team. So posting this as I'm quite sure I'm not the only one in this boat. </p> <p>The llama.cpp team has been making it a lot more usable and generally baking in the things ollama was doing (sadly it seems to be taking design cues from ollama - I think better UX is possible, but its definitely a directionally right move to make llama.cpp more approachable) : </p> <ul> <li>DMG based install for Mac. <ul> <li>Gives you the pictured menu bar util showing API URL, installed models and model recommendations</li> </ul></li> <li>If you prefer command line, theres a one command install (no homebrew/winget needed)</li> <li><code>llama serve</code> is now available (replaces llama-server), can be invoked without having to pass arguments and llama.cpp handles loading the appropriate model based on incoming requests </li> </ul> <p>Might not be interesting/useful to many of us who've already been using llama.cpp for a while (or others using llama-swap), but this is great if you're setting up a new machine, introducing friends &amp; family to local AI etc.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rm-rf-rm\"> /u/rm-rf-rm </a> <br /> <span><a href=\"https://i.redd.it/wsd56hjsu0hh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com…",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "cb0a1125ca3214c1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash-0731: When Low is higher than High",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdqsod/deepseekv4flash0731_when_low_is_higher_than_high/",
+    "published": "2026-08-02T19:16:08+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I decided to test a few questions against DeepSeek-V4-Flash-0731. Locally, I was running Unsloth's UD-Q2_K_XL quant. After I saw the surprising shape of the results, I tested against DeepSeek's official API to confirm that I didn't do anything wrong.</p> <p>For anyone using OpenRouter, be aware that there is a <a href=\"https://www.reddit.com/r/DeepSeek/comments/1vdqjwr/openrouter_reasoning_effort_levels_are_broken_for/\">significant bug</a> that is breaking reasoning effort modes. I ran into that while trying to validate my local results.</p> <p>DeepSeek-V4-Flash-0731 <a href=\"https://api-docs.deepseek.com/guides/thinking_mode/\">supports four different effort modes</a>, consisting of no reasoning, low, high, and max. We can <a href=\"https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731/blob/main/encoding/encoding_dsv4.py#L67\">also see how</a> those are communicated to the model.</p> <p>As I found out, Low is surprisingly verbose.</p> <p>Averaged across 20 requests per mode, here is how many tokens were used by each mode:</p> <table><thead> <tr> <th>Mode</th> <th align=\"right\">Local Q2 total / reasoning / final</th> <th align=\"right\">DeepSeek API total / reasoning / final</th> </tr> </thead><tbody> <tr> <td>None</td> <td align=\"right\">801.7 / 0 / 801.7</td> <td align=\"right\">948.9 / 0 / 948.9</td> </tr> <tr> <td>Low</td> <td align=\"right\">1,227.5 / 874.4 / 353.2</td> <td align=\"right\">1,349.2 / 889.6 / 459.7</td> </tr> <tr> <td>High</td> <td align=\"right\">605.8 / 410.5 / 195.4</td> <td align=\"right\">481.5 / 253.9 / 227.7</td> </tr> <tr> <td>Max</td> <td align=\"right\">1,301.4 / 1,031.8 / 269.6</td> <td align=\"right\">698.7 / 473.9 / 224.8</td> </tr> </tbody></table> <p>I really wish that DeepSeek and Artificial Analysis had posted benchmarks for all of the effort modes, instead of only max.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/coder543\"> /u/coder543 </a> <br /> <span><a href=\"https:/…",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "944d2c012f007f8a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Parlor v2: best-effort fully local GPT-Live clone on an M3 Pro",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdrb0y/parlor_v2_besteffort_fully_local_gptlive_clone_on/",
+    "published": "2026-08-02T19:36:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdrb0y/parlor_v2_besteffort_fully_local_gptlive_clone_on/\"> <img alt=\"Parlor v2: best-effort fully local GPT-Live clone on an M3 Pro\" src=\"https://external-preview.redd.it/enQ4YW5hemVrMGhoMSv5rq9UCpAAwLkx5qlXgPgSubMVCi2N_YBvc474wHLR.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5daa55b5947ecb5627b89c6a89181aacb0b70c0e\" title=\"Parlor v2: best-effort fully local GPT-Live clone on an M3 Pro\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>GPT-Live is so good that I use it almost every day. I've been wanting to replicate it since it was released.</p> <p>My first attempt was to fine-tune Gemma 4 12B to behave like a full-duplex model. Something like grafting a decision tick + speech head to the model. It failed after multiple trials. For now, I think a classic cascade system is still better. We just need to wait until a benevolent frontier AI company releases a full-duplex model that's on par with GPT-Live.</p> <p>Repo: <a href=\"https://github.com/fikrikarim/parlor/\">https://github.com/fikrikarim/parlor/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ffinzy\"> /u/ffinzy </a> <br /> <span><a href=\"https://v.redd.it/dsqo6cxek0hh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdrb0y/parlor_v2_besteffort_fully_local_gptlive_clone_on/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "5235c2f5b3a65ff9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DSpark Benchmark Result on Deepseek v4 Flash 0731",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdpe1k/dspark_benchmark_result_on_deepseek_v4_flash_0731/",
+    "published": "2026-08-02T18:21:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdpe1k/dspark_benchmark_result_on_deepseek_v4_flash_0731/\"> <img alt=\"DSpark Benchmark Result on Deepseek v4 Flash 0731\" src=\"https://external-preview.redd.it/BugFswdIcKLwRPnzt5doIYbZkE995fzefJIHaWUjqks.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f076171da5c829956c3be293579b2e00f8ba8b24\" title=\"DSpark Benchmark Result on Deepseek v4 Flash 0731\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>TensorSharp supports DSpark on Deepseek v4 Flash 0731 now. Here is the benchmark result on 4x Nvidia A40 GPUs, cuda 12.8 with/without DSpark:</p> <p>Model:</p> <p>DeepSeek-V4-Flash-0731-UD-Q8_K_XL from <a href=\"https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF\">https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF</a></p> <p>DSpark draft model from: <a href=\"https://huggingface.co/alessandrobologna/DeepSeek-V4-Flash-0731-DSpark-Drafter-GGUF\">https://huggingface.co/alessandrobologna/DeepSeek-V4-Flash-0731-DSpark-Drafter-GGUF</a></p> <table><thead> <tr> <th align=\"left\">Turn</th> <th align=\"left\">Baseline</th> <th align=\"left\">+ DSpark</th> <th align=\"left\">Acceptance</th> </tr> </thead><tbody> <tr> <td align=\"left\"></td> <td align=\"left\" colspan=\"3\"></td> </tr> <tr> <td align=\"left\">short (53 tok)</td> <td align=\"left\">25.6</td> <td align=\"left\"><strong>44.5 (1.74x)</strong></td> <td align=\"left\">87%</td> </tr> <tr> <td align=\"left\">long generation (512)</td> <td align=\"left\">26.4</td> <td align=\"left\"><strong>40.3 (1.53x)</strong></td> <td align=\"left\">66%</td> </tr> <tr> <td align=\"left\">follow-up (470)</td> <td align=\"left\">26.4</td> <td align=\"left\"><strong>46.8 (1.77x)</strong></td> <td align=\"left\">76%</td> </tr> <tr> <td align=\"left\">10K-token document (214)</td> <td align=\"left\">25.3</td> <td align=\"left\"><strong>51.3 (2.03x)</strong></td> <td align=\"left\">85%</td> </tr> <tr> <td align=\"left\">second question on it (156)</td> <td align=\"left\">25.4</td> <td align=\"left\"><strong>49…",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "14fcdf3d0ac51339",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[Paper] EdgeRazor: A Lightweight Framework for Large Language Models via Mixed-Precision Quantization-Aware Distillation",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdrsbg/paper_edgerazor_a_lightweight_framework_for_large/",
+    "published": "2026-08-02T19:55:03+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The EdgeRazor method uses an entropy-guided distillation process to better translate a teacher model's logit probability distributions into the student model's low-bit / mixed-precision hidden-layer features, without attempting to preserve the teacher model's parameter structures.</p> <p>This is more computationally expensive than existing quantization methods, but much less so than QAT, and yields better results. The student model preserves more of the teacher model's competence at extremely low parameter precision (the authors demonstrate 1.88 bits per parameter).</p> <p>Since it's not a different internal representation like traditional quantization, inference implementations like llama.cpp do not need to be modified to take advantage of it.</p> <p>Hopefully this means more-useful high-parameter/low-memory models in our future, so we can eke more competent inference out of our consumer-grade GPUs.</p> <p>The paper: <a href=\"https://arxiv.org/abs/2605.04062\">https://arxiv.org/abs/2605.04062</a></p> <p>The authors' code: <a href=\"https://github.com/zhangsq-nju/EdgeRazor\">https://github.com/zhangsq-nju/EdgeRazor</a></p> <p>The authors applied their technique to a few models and uploaded them to Huggingface: <a href=\"https://huggingface.co/collections/zhangsq-nju/edgerazor-nbit\">https://huggingface.co/collections/zhangsq-nju/edgerazor-nbit</a></p> <p>Unfortunately since EdgeRazor is somewhat compute-intensive, their example models are all pretty tiny: MobileLLM, Qwen3-0.6B, Qwen3-1.7B, and Qwen2.5-Omni-7B</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ttkciar\"> /u/ttkciar </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdrsbg/paper_edgerazor_a_lightweight_framework_for_large/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdrsbg/paper_edgerazor_a_lightweight_framework_for_large/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
+  },
+  {
+    "id": "8b7928e1e8d9a06f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 @ IQ3XXS on M1 Ultra 128GB- 16 tok/s in LM Studio after patch",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdsmnk/deepseek_v4_iq3xxs_on_m1_ultra_128gb_16_toks_in/",
+    "published": "2026-08-02T20:27:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdsmnk/deepseek_v4_iq3xxs_on_m1_ultra_128gb_16_toks_in/\"> <img alt=\"DeepSeek V4 @ IQ3XXS on M1 Ultra 128GB- 16 tok/s in LM Studio after patch\" src=\"https://external-preview.redd.it/3mJZqyijpzF-bSHt-qo7s7hnYytAgfQWx2WMIDL5AvQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8584c9f23a875a731cb5f23b9a4fdffb823d0090\" title=\"DeepSeek V4 @ IQ3XXS on M1 Ultra 128GB- 16 tok/s in LM Studio after patch\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>M1 Ultra 128GB, Unsloth UD-IQ3_XXS, wired limit at 120GB. I was at 5-6 tok/s before the patch. Getting 15-16 tok/s now with the patched engine, and the output seems to have improved. Big thanks to this guy. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mil_phickelson\"> /u/mil_phickelson </a> <br /> <span><a href=\"https://github.com/noreff/lmstudio-dsv4-patch\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdsmnk/deepseek_v4_iq3xxs_on_m1_ultra_128gb_16_toks_in/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-02T22:35:01.434809+00:00"
   }
 ]
