@@ -8,5 +8,25 @@
     "published": "2026-08-01T23:31:25+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello guys, hoping you're doing fine.</p> <p>Lately with all the new models, and how popular is offloading, what are your min good or usable t/s for both PP and TG?</p> <p>Speaking on my case, I think PP about 300-350t/s for min, and for TG, about 9 t/s min.</p> <p>What about yours?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/panchovix\"> /u/panchovix </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd24q1/for_local_what_are_your_minimum_good_or_usable/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd24q1/for_local_what_are_your_minimum_good_or_usable/\">[comments]</a></span>",
     "fetched_at": "2026-08-02T00:19:02.769250+00:00"
+  },
+  {
+    "id": "934f3a69ef40f731",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why are almost all new benchmarks and leaderboards coding focused?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vd2yk9/why_are_almost_all_new_benchmarks_and/",
+    "published": "2026-08-02T00:08:41+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know in in this community LLM's are generally used for coding but there are other usecases besides coding and those usecases should be tested too. I also know benchmarks can sometimes be benchmaxxed and the model can still turn out shit but it can give a good outline on how a model <strong>should</strong> perform in a certain task. Maybe I'm too behind on the latest developments but we need more benchmarks for all other use-cases. I use LLM's mainly for foreign language learning, creative writing and STEM/Medical/Biochemistry reasoning and inquiries and I rarely find any new benchmarks that tell me how a model might perform in those areas. MMLU-Pro-2 and a solid benchmark that tells how a model will perform for language learning would be so good for my usecase, however in general we need more new diverse benchmarks for models in order to have a general outline for advancements in other areas.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dance-Till-Night1\"> /u/Dance-Till-Night1 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd2yk9/why_are_almost_all_new_benchmarks_and/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd2yk9/why_are_almost_all_new_benchmarks_and/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T00:54:02.841973+00:00"
+  },
+  {
+    "id": "78955bd7ccdeae6a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How well do multiple GPUs scale for LLM inference? (Trying to understand the basics)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vd2wf1/how_well_do_multiple_gpus_scale_for_llm_inference/",
+    "published": "2026-08-02T00:05:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone,<br /> I’m fairly new to the multi-GPU side of local LLMs and I’m trying to understand how inference actually scales across multiple GPUs.</p> <p>Suppose I have a model running on a single GPU and then move to two or more GPUs using llama.cpp (or similar backends).</p> <p>My questions are:<br /> - Is the performance gain anywhere close to <strong>1:1</strong> (e.g. 2× GPUs ≈ 2× speed), or is that unrealistic?<br /> - What are the main bottlenecks that prevent linear scaling?<br /> - How much do PCIe bandwidth and latency matter?<br /> - Does it make a difference if the model is dense or MoE?<br /> - Is the scaling different for prompt processing versus token generation?<br /> - At what point do additional GPUs start giving diminishing returns?</p> <p>For context, I’m currently running a single RTX 4090 (24 GB VRAM) with 128 GB RAM and I’m considering whether adding another GPU in the future would mainly let me run larger models or whether it would also provide a significant speedup.</p> <p>Moreover: is there a way to run one large llm on two different GPU on two different PCs simultaneously combining them?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/HomoAgens1\"> /u/HomoAgens1 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd2wf1/how_well_do_multiple_gpus_scale_for_llm_inference/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd2wf1/how_well_do_multiple_gpus_scale_for_llm_inference/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T00:54:02.841973+00:00"
   }
 ]
