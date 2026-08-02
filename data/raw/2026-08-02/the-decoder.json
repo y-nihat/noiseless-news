@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cb3da467a51014e4",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AI finds plenty of security flaws, but almost none of them get exploited",
+    "url": "https://the-decoder.com/ai-finds-plenty-of-security-flaws-but-almost-none-of-them-get-exploited/",
+    "published": "2026-08-02T10:09:34+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1396\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/cybersecurity_AI_pattern-scaled.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2560\" /></p>\n<p>        VulnCheck counted how often security flaws found by AI actually get exploited. Out of 1,061 AI-discovered vulnerabilities in the first half of 2026, just 14 saw confirmed attacks. That's 1.3 percent, the same rate as vulnerabilities overall. But exploits are landing faster, with the median dropping from 120 days to 80.</p>\n<p>The article <a href=\"https://the-decoder.com/ai-finds-plenty-of-security-flaws-but-almost-none-of-them-get-exploited/\">AI finds plenty of security flaws, but almost none of them get exploited</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-02T11:17:55.811175+00:00"
+  },
+  {
+    "id": "a2be0ec1ca4ba20a",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Claude Opus 5 pushes prompt-to-game AI from rough color blocks to full 3D prototypes with physics and music",
+    "url": "https://the-decoder.com/claude-opus-5-pushes-prompt-to-game-ai-from-rough-color-blocks-to-full-3d-prototypes-with-physics-and-music/",
+    "published": "2026-08-02T08:51:07+00:00",
+    "summary": "<p><img alt=\"game-worlds-3d-opus-5.png\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/spielwelten-3d.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Anthropic's Claude Opus 5 generates complete 3D games from single prompts, including a first-person shooter, a kart racer, and a Minecraft clone, all without a single external asset. Geometry, textures, physics, and in some cases music are produced as code and run directly in the browser. In side-by-side comparisons with GPT-5.6 Sol and Kimi K3, Opus 5 delivers significantly more detailed results.</p>\n<p>The article <a href=\"https://the-decoder.com/claude-opus-5-pushes-prompt-to-game-ai-from-rough-color-blocks-to-full-3d-prototypes-with-physics-and-music/\">Claude Opus 5 pushes prompt-to-game AI from rough color blocks to full 3D prototypes with physics and music</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-02T11:17:55.811175+00:00"
+  },
+  {
+    "id": "4571b8a591c1f4e4",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "After Hugging Face incident, METR urges independent root-cause investigations into AI agent misbehavior",
+    "url": "https://the-decoder.com/after-hugging-face-incident-metr-urges-independent-root-cause-investigations-into-ai-agent-misbehavior/",
+    "published": "2026-08-02T07:33:17+00:00",
+    "summary": "<p><img alt=\"metr-ki-agent-investigation-illustration.png\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/metr-ki-agenten-untersuchung-illustration.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Research organization METR is calling for systematic, independently led investigations whenever AI agents act autonomously against their developers' intentions. The push comes partly in response to the Hugging Face hack carried out by OpenAI models. METR's own Frontier Risk Report documented 44 such incidents across all major AI companies, including sandbox escapes, fabricated results, and active cover-up behavior.</p>\n<p>The article <a href=\"https://the-decoder.com/after-hugging-face-incident-metr-urges-independent-root-cause-investigations-into-ai-agent-misbehavior/\">After Hugging Face incident, METR urges independent root-cause investigations into AI agent misbehavior</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-02T11:17:55.811175+00:00"
+  },
+  {
+    "id": "0e55f1bbc974132b",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Snap and LinkedIn are fighting back against a flood of low-quality AI content",
+    "url": "https://the-decoder.com/snap-and-linkedin-are-fighting-back-against-a-flood-of-low-quality-ai-content/",
+    "published": "2026-08-02T06:49:28+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/snap_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Snap is banning AI-generated videos from Spotlight to keep the feed focused on human creativity. Content edited with Snapchat's own AI tools is still allowed. LinkedIn, meanwhile, has rolled out a dedicated \"AI slop\" reporting button.</p>\n<p>The article <a href=\"https://the-decoder.com/snap-and-linkedin-are-fighting-back-against-a-flood-of-low-quality-ai-content/\">Snap and LinkedIn are fighting back against a flood of low-quality AI content</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-02T11:17:55.811175+00:00"
+  }
+]
