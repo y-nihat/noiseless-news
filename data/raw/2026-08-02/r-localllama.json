@@ -148,5 +148,115 @@
     "published": "2026-08-02T04:34:36+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Built my 1st inference machine and have been tweaking models trying to get the most out of my modest hardware. I think I’m at a good place but I’m testing with my own prompts. I’ve looked into some of the popular benchmarks but I’m honestly lost. I use my models for Hermes agent mainly and a little bit with paperless ngx and home assistant. I don’t know how much something like swe bench is relevant to my use case. What do you all use to dick measure?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ecstatic-Wash-7667\"> /u/Ecstatic-Wash-7667 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd8cu0/whats_the_communitys_favorite_benchmark_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vd8cu0/whats_the_communitys_favorite_benchmark_to/\">[comments]</a></span>",
     "fetched_at": "2026-08-02T11:17:55.811175+00:00"
+  },
+  {
+    "id": "a75814550373835c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "llama.cpp just added MTP / DSpark support for DeepSeek V4 Flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdhgq9/llamacpp_just_added_mtp_dspark_support_for/",
+    "published": "2026-08-02T12:58:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdhgq9/llamacpp_just_added_mtp_dspark_support_for/\"> <img alt=\"llama.cpp just added MTP / DSpark support for DeepSeek V4 Flash\" src=\"https://external-preview.redd.it/jdXph3H8kb4oPAEYCPR0Asz_PpfpnBORvgt2dXIYfUU.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=fb0d83726e4a0c32c65d4f9c1214f7c30166527d\" title=\"llama.cpp just added MTP / DSpark support for DeepSeek V4 Flash\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rmhubbert\"> /u/rmhubbert </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/25784\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdhgq9/llamacpp_just_added_mtp_dspark_support_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "4dbce09e3e473472",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Conclusion: r/LocalLLaMA still has brilliant open-weight research, but finding it requires wading through endless benchmark drama, non-local Discussion Points and repetitive hardware flexes.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdku4r/conclusion_rlocalllama_still_has_brilliant/",
+    "published": "2026-08-02T15:22:17+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I let Gemma4-31b run on my laptop for like almost a day using a heavily altered pi to do a deep dive on our beloved Llama tangentially related Subreddit, and this was the conclusion. </p> <p>Feels pretty accurate. Kind funny to let a small LLM loose and see what happens. </p> <p>Next target I'm trying to let it steal some benchmark answers from Huggingface, wish me luck.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Long_War8748\"> /u/Long_War8748 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdku4r/conclusion_rlocalllama_still_has_brilliant/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdku4r/conclusion_rlocalllama_still_has_brilliant/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "9bd0a4db008a554f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Vacuum 16T",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdh1us/vacuum_16t/",
+    "published": "2026-08-02T12:39:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/tsfrm/vacuum-16t\">https://huggingface.co/tsfrm/vacuum-16t</a></p> <p>A 16.5-trillion-parameter model that contains nothing. This model is just a ████ you to the labs and companies who say that &quot;haha I have the biggest model out there!&quot;. We the people with shitty laptops want to get a record. And I now have a record for a temporary amount of time of about 16.5 trillion parameters and use for them so its completly useless.</p> <p><strong>What it demonstrates</strong></p> <p>Hugging Face computes a repository's parameter count from safetensors headers alone — it sums prod(shape) per tensor and never reads the tensor data. The count is therefore whatever the headers declare. Here they declare 3,841 tensors of shape [65536, 65536] in F4 (4 bits/param) across 385 shards, plus one [4294967296, 1] position-embedding tensor in a 386th.</p> <p>That is enough to place this repo at the top of the Hub sorted by num_parameters, above every real frontier model, while containing no information whatsoever. That juxtaposition is the entire point.</p> <p>The files are honest about their own size. Every byte the headers declare is really written and really uploaded: safetensors parses each header and its full-coverage check passes. Truncating a file, or overlapping two tensors so they share bytes, would make the count cheaper — both are rejected by the format, and neither is used here. The bytes are simply all 0x00.</p> <p><strong>Real cost — measured</strong></p> <p>|---|---| | Declared parameters | 16,501,264,351,232 | | Declared bytes | 8,250,632,175,616 (8.25 TB) | | Storage quota consumed | 8.25 TB — quota bills declared bytes | | Shard headers (all distinct) | 373,835 B | | model.safetensors.index.json | ~269,000 B | | Deduplicated weight data | 65,536 B (one 64 KiB block) | | Bytes actually transferred | ~692 KB | | Ratio | ~11,900,000 : 1 |</p> <p>The gap between the last rows and the third is the usefu…",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "983b7e1e58b71373",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek-V4-Flash-0731 Dwarfstar on Mac",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdld4v/deepseekv4flash0731_dwarfstar_on_mac/",
+    "published": "2026-08-02T15:43:30+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdld4v/deepseekv4flash0731_dwarfstar_on_mac/\"> <img alt=\"Deepseek-V4-Flash-0731 Dwarfstar on Mac\" src=\"https://preview.redd.it/qo4d4x9efzgh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de2dd36d78d9f0b441cdc089a80c423a713b28e3\" title=\"Deepseek-V4-Flash-0731 Dwarfstar on Mac\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Here is the prefill performance in an M2 Ultra with 192GB of RAM.</p> <p>For decode, at the following depth:<br /> Start: 28 t/s</p> <p>45k: 23.5 t/s</p> <p>192k: 18 t/s</p> <p>That speed is maintained with 8k token output at those depths.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Badger-Purple\"> /u/Badger-Purple </a> <br /> <span><a href=\"https://i.redd.it/qo4d4x9efzgh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdld4v/deepseekv4flash0731_dwarfstar_on_mac/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "0414d261c4953df7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Are you ready for Le Chaton FAT or still wasting money on GPUs?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdmfmi/are_you_ready_for_le_chaton_fat_or_still_wasting/",
+    "published": "2026-08-02T16:25:41+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdmfmi/are_you_ready_for_le_chaton_fat_or_still_wasting/\"> <img alt=\"Are you ready for Le Chaton FAT or still wasting money on GPUs?\" src=\"https://preview.redd.it/pz3xple3lzgh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=414e0bd3bb848fa179e0f025e248816dde793675\" title=\"Are you ready for Le Chaton FAT or still wasting money on GPUs?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>According to rumors (spread by myself) Le Chaton FAT will be 26T-a3b and I AM READY for it. </p> <p>Let's be real, I can't afford that many 5060Ti, so I got 12x Gen 4 3.2 TB (two per card). This gives me about 60GBs bandwidth on 30TB. </p> <p>Added 256gb ddr4 just for kv cache, but I can also write KV-cache to the disks, these are high endurance drives.</p> <p>Are you ready for the next era of local inference?</p> <hr /> <p>Jokes aside, this is what I use for my <code>HF_HOME</code> - model and dataset storage. I'm also setting up a few containers, but it's not running any heavy compute stuff, the CPU is only a 3945WX (12c/24t). </p> <p>The pool is actually raidz2, so I avoid all that worry of having agents delete stuff. I just <code>zfs snapshot</code> and no <code>rm -rf foo-bar</code> has me sweat.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/reto-wyss\"> /u/reto-wyss </a> <br /> <span><a href=\"https://i.redd.it/pz3xple3lzgh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdmfmi/are_you_ready_for_le_chaton_fat_or_still_wasting/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "263247a20887e2a1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek v4 flash - 100-150 faster t/s in prefill/pp.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdm4z8/deepseek_v4_flash_100150_faster_ts_in_prefillpp/",
+    "published": "2026-08-02T16:13:56+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>You have two choices here (in order of pref):</p> <ol> <li><p>Downgrade CUDA from 13.3 to 13.1 (skip 13.2 due to bugs) &lt;- prefer this (thanks to <a href=\"/u/fairydreaming\">u/fairydreaming</a> for pointing this out)</p></li> <li><p>Use this vibed fork that works with CUDA 13.3 <a href=\"https://github.com/vektorprime/working_ds4_speed\">https://github.com/vektorprime/working_ds4_speed</a></p></li> </ol> <p>I was troubleshooting this yesterday with the nvidia profiler and some LLM help (<a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vcs7bl/ds4%5C_flash%5C_full%5C_model%5C_in%5C_offload%5C_600%5C_ts%5C_pp%5C_and/\">https://www.reddit.com/r/LocalLLaMA/comments/1vcs7bl/ds4\\_flash\\_full\\_model\\_in\\_offload\\_600\\_ts\\_pp\\_and/</a>) </p> <p>Here's some more info on #1 (quote from fairydreaming) &quot;Downgrade your CUDA and recompile. Starting with 13.2 DeviceTopK is used for top-k instead of argsort, this turns PP rate to crap.&quot;</p> <p>In short, DS4 Flash is spending a lot of time on things other than matrix multiplication. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fragment_me\"> /u/fragment_me </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdm4z8/deepseek_v4_flash_100150_faster_ts_in_prefillpp/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdm4z8/deepseek_v4_flash_100150_faster_ts_in_prefillpp/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "e1f2e1ebd17d26e2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Running DeepSeek-V4-Flash-0731 (155 GB MoE) on a DGX Spark with vLLM-Moet 2-bit quantization - AI's narrative",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdm29u/running_deepseekv4flash0731_155_gb_moe_on_a_dgx/",
+    "published": "2026-08-02T16:10:59+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p># Running DeepSeek-V4-Flash-0731 (155 GB MoE) on a DGX Spark with vLLM-Moet 2-bit quantization</p> <p>I used Deepseek-v4-Flash-0731 cloud API settig up vllm-moet to run deepseek-v4-flash with MTP locally on single DGX Spark at 2-bit quant. Thought it might help others. Below is the summery from my AI Agent. So I did not write myself. </p> <p>There are few important things you must take care, and guide AI to do it for you. AI alone won't get it done right. </p> <ol> <li><p>rebuild vllm-moet on ARM64 </p></li> <li><p>pull PR #11 into the repo</p></li> <li><p>build the source code, and ask AI to modify the code that complains unsupported sm121 GPU. </p></li> <li><p>increase default VLLM timeout because the loading take very long time, and triggers false timeout. </p></li> <li><p>I do not recommend you to follow the below procedure to duplicate it. Instead feed the below text to your AI agent, let it handle the process and fixes. </p></li> <li><p>you need to setup a very big swapfile, or the loading will fail. the swapfile is only needed during model loading</p></li> <li><p>For convenience, I create a repo of the MTP head from preview version. If it helps others, it is located here. <a href=\"https://huggingface.co/ycui7/DeepSeek-V4-Flash-MTP\">https://huggingface.co/ycui7/DeepSeek-V4-Flash-MTP</a></p></li> </ol> <p>Performance wise, the prefill is at steady 1000 tps.</p> <p>decode is below</p> <p>### Aggregate (tok/s)</p> <p>| Concurrency | MTP | no-MTP | Δ |</p> <p>|---|---|---|---|</p> <p>| 1 | 25.2 | 19.1 | **+31.5%** |</p> <p>| 2 | 30.9 | 26.4 | **+17.3%** |</p> <p>| 4 | 43.2 | 45.6 | **−5.3%** |</p> <p>### Per-request (tok/s)</p> <p>| Concurrency | MTP | no-MTP |</p> <p>|---|---|---|</p> <p>| 1 | 25.2 | 19.1 |</p> <p>| 2 | 23.0 | 17.7 |</p> <p>| 4 | 14.5 | 13.9 |</p> <p>== Below is the AI talking ==</p> <p>**TL;DR:** [vLLM-Moet](<a href=\"https://github.com/kacper-daftcode/vLLM-Moet\">https://github.com/kacper-daftcode/vLLM-Moet</a>)…",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "ba371f704efafef5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "All Qwen model oneshots: 1109 outputs to look at and compare!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdn7zl/all_qwen_model_oneshots_1109_outputs_to_look_at/",
+    "published": "2026-08-02T16:57:30+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdn7zl/all_qwen_model_oneshots_1109_outputs_to_look_at/\"> <img alt=\"All Qwen model oneshots: 1109 outputs to look at and compare!\" src=\"https://preview.redd.it/vj7p7960szgh1.png?width=140&amp;height=108&amp;auto=webp&amp;s=71bd92b02c656e807336a7333c483b7a5aa06de0\" title=\"All Qwen model oneshots: 1109 outputs to look at and compare!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I've been busy this weekend generating oneshots for all the cheapest models on the openrouter and ended up going through all 33 qwen models across 35 prompts (there were some failures and only 1109 made out of 33*35 matrix). Here they are <a href=\"https://oneshotlm.com/model/?q=qwen\">https://oneshotlm.com/model/?q=qwen</a></p> <ul> <li><strong>Qwen 3.7:</strong> <a href=\"https://oneshotlm.com/model/qwen-qwen3-7-plus/\">qwen3.7-plus</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-7-flash/\">qwen3.7-flash</a></li> <li><strong>Qwen 3.6:</strong> <a href=\"https://oneshotlm.com/model/qwen-qwen3-6-plus/\">qwen3.6-plus</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-6-35b-a3b/\">qwen3.6-35b-a3b</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-6-27b/\">qwen3.6-27b</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-6-flash/\">qwen3.6-flash</a></li> <li><strong>Qwen 3.5:</strong> <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-plus-02-15/\">qwen3.5-plus (02-15)</a> · <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-plus-20260420/\">(20260420)</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-397b-a17b/\">qwen3.5-397b-a17b</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-122b-a10b/\">qwen3.5-122b-a10b</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-35b-a3b/\">qwen3.5-35b-a3b</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-27b/\">qwen3.5-27b</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-9b/\">qwen3.5-9b</a>, <a href=\"https://oneshotlm.com/model/qwen-qwen3-5-flash-02-23/\">qwen3.5-flash</a>…",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "a9a0ba282941416a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What is OpenCode privacy situation when pairing with outside providers?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdllr3/what_is_opencode_privacy_situation_when_pairing/",
+    "published": "2026-08-02T15:53:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi all,</p> <p>I recently discovered that MiniMax offers ~1.7B tokens/month for a basic $20 subscription, and I was genuinely shocked! I wanted to try it out and paired it with OpenCode. Everything is working amazingly well, but I started to wonder what happens with my data? I know OC is open source but navigating the codebase would take me weeks, so I wanted to ask the community here whether my data is being accessed by OC when using an outside provider.</p> <p>If the answer is yes, then what would you recommend me? Nanocoder was an alternative, wondering how that works, and whether there are other options.</p> <p>Thanks a lot!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dark_bits\"> /u/dark_bits </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdllr3/what_is_opencode_privacy_situation_when_pairing/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdllr3/what_is_opencode_privacy_situation_when_pairing/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "b42401148912f00b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What are the best ways for managing context across a massive project?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdl904/what_are_the_best_ways_for_managing_context/",
+    "published": "2026-08-02T15:38:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have a bunch of PDFs, word docs, and excel files that relate to a project of interest. I am trying to figure out what is the best way to organize this to an llm for easy understanding. This is an on-going project so if I ask a question a month from now I’d like to be able to get an accurate answer based on the entire corpus of info I’ve fed it. Currently I have everything dumped into a single folder. Then I use VSCode with Cline to ask questions against all those documents (about 500+ files in total). I am also using all that context to build our rules which I code up as well as build sql tables. So I need the code and database to reflect what’s found in those files.</p> <p>With all that, what have you found to be the most efficient way of doing sth like this?</p> <p>Thanks</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/throwaway0134hdj\"> /u/throwaway0134hdj </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdl904/what_are_the_best_ways_for_managing_context/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdl904/what_are_the_best_ways_for_managing_context/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
+  },
+  {
+    "id": "f8aa65d6562f6d23",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "my tps is suddenly halved and I do not know why.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vdl44q/my_tps_is_suddenly_halved_and_i_do_not_know_why/",
+    "published": "2026-08-02T15:33:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>previously on my 3070, 32gb ddr4 and i711700 I used this command for months and got 26-30 tps:</p> <p>&quot;C:\\Program Files\\llama cpp\\llama-server.exe&quot; ^</p> <p>-m &quot;C:\\Program Files\\llama cpp\\models\\Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf&quot; ^</p> <p>--mmproj &quot;C:\\Program Files\\llama cpp\\models\\mmproj-F16.gguf&quot; ^</p> <p>--gpu-layers 99 ^</p> <p>--cpu-moe ^</p> <p>--ctx-size 131072 ^</p> <p>--cache-type-k q8_0 ^</p> <p>--cache-type-v q8_0 ^</p> <p>--port 8081 ^</p> <p>--host <a href=\"http://0.0.0.0\">0.0.0.0</a> ^</p> <p>--jinja ^</p> <p>--no-mmap ^</p> <p>--parallel 1 ^</p> <p>-b 4096 -ub 4096 ^</p> <p>--temp 1.0 ^</p> <p>--top-p 0.95 ^</p> <p>--top-k 20 ^</p> <p>--min-p 0.0 ^</p> <p>--presence-penalty 1.5 ^</p> <p>--repeat-penalty 1.0 ^</p> <p>--chat-template-kwargs &quot;{\\&quot;preserve_thinking\\&quot;:true}&quot;</p> <p>then yesterday suddenly at start I am at 13 or 12 tps even after lowering ctxt to 32k. my gemma model got the same tps hit as well. if anyone can help me I will appreciate. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/campaigner_\"> /u/campaigner_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdl44q/my_tps_is_suddenly_halved_and_i_do_not_know_why/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdl44q/my_tps_is_suddenly_halved_and_i_do_not_know_why/\">[comments]</a></span>",
+    "fetched_at": "2026-08-02T17:03:58.386132+00:00"
   }
 ]
