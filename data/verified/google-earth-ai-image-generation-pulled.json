@@ -1,0 +1,52 @@
+{
+  "slug": "google-earth-ai-image-generation-pulled",
+  "checked_at": "2026-08-02T00:32:00+00:00",
+  "method": "Full multi-agent protocol: fresh verifier sub-agent and fresh adversarial falsifier sub-agent run in parallel, neither having drafted the story. Both independently found and read Google's own blog post (which itself contains both the launch announcement and a same-page 31 July rollback update), Futurism's independent reporting including its own reproduced examples, and Forbes's account of Henk van Ess's demonstrations and the SynthID/Hive AI detection test. This cycle's orchestrating context then directly live-fetched blog.google and futurism.com and forbes.com itself to confirm the verifier/falsifier quotes before drafting. NPR (npr.org) was cited by both sub-agents for an equivalent Hive AI watermark-defeat test but two direct WebFetch attempts by this cycle timed out, so NPR was left out of the article's source list; Forbes's own statement of the same Hive AI figure was used instead and is live-fetch-confirmed. Falsifier specifically checked for: contradicting/denying reports (none found), whether this was a recycled story about the unrelated 2025 Gemini image-generation controversy (ruled out, distinct product and failure mode), product misidentification (confirmed as Google Earth, not Maps or Gemini app), single-source/wire-relay risk (partially present among smaller outlets, but Google's own statement plus Futurism's and Forbes's own reporting clear the independence bar), and hoax/satire/correction (none found). Falsifier flagged that the SynthID claim needed nuance (watermark was present but trivially defeated by screenshotting, not simply absent) -- reflected in the article's phrasing.",
+  "origin_items": [
+    "Surfaced via this cycle's Tier-0 sweep of blog.google (checked as part of the broader lab/company sweep) and independently via the discovery/triage pass over quality-press coverage. dedup-check run before opening: no match against the archive."
+  ],
+  "claims": [
+    {
+      "text": "Google added an AI image-generation feature, powered by its Nano Banana 2 model, to the web version of Google Earth on 30 July 2026, letting users tap 'create image' after zooming to a location and type a prompt to generate imagery layered onto Google Earth's real satellite, aerial and 3D data",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Directly confirmed by live-fetching Google's own blog.google announcement post.",
+      "evidence": ["https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/"]
+    },
+    {
+      "text": "Google said generated images did not appear in the main Google Earth experience for other users to see and were watermarked as AI-generated using SynthID",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly in the primary Google announcement, live-fetched.",
+      "evidence": ["https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/"]
+    },
+    {
+      "text": "Within a day of launch, users demonstrated the tool could generate convincing fake imagery tied to real coordinates: Henk van Ess fabricated a nuclear facility in Iran and refugee scenes near the US-Mexico border, and Futurism independently reproduced the capability with its own generated images of a Pennsylvania town hit by drought and wildfire",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Independently reproduced: Futurism ran its own separate tests distinct from Van Ess's examples (confirmed via direct live fetch of futurism.com), and Forbes independently reported Van Ess's demonstration (live-fetched). Two independent parties producing convincing fake imagery clears the capability-claim reproduction bar even though Van Ess's specific examples are cited by only one origin (himself, relayed by press).",
+      "evidence": [
+        "https://futurism.com/artificial-intelligence/google-pulls-down-google-earth-ai-feature",
+        "https://www.forbes.com/sites/paulmonckton/2026/08/01/google-earth-ai-feature-removed/"
+      ]
+    },
+    {
+      "text": "Google's SynthID watermark could be defeated simply by photographing or screen-recording a generated image; a screen recording tested with Hive AI's detector was rated only 1% likely to be AI-generated",
+      "type": "statement",
+      "verdict": "single-source",
+      "reasoning": "Confirmed via direct live fetch of Forbes, which is the only outlet in this article's source list carrying this specific figure (NPR reportedly ran an equivalent test per both sub-agents' research but could not be live-fetched this cycle to confirm directly, so was not added as a second source).",
+      "evidence": ["https://www.forbes.com/sites/paulmonckton/2026/08/01/google-earth-ai-feature-removed/"]
+    },
+    {
+      "text": "Google rolled back the image-generation feature on 31 July 2026, about a day after launch, citing screenshots of generated imagery that appear to violate its policies and stating it would work on 'stronger guardrails'",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "The rollback statement appears as a same-page update on Google's own primary announcement post, live-fetched directly; corroborated independently by Futurism and Forbes.",
+      "evidence": [
+        "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+        "https://futurism.com/artificial-intelligence/google-pulls-down-google-earth-ai-feature",
+        "https://www.forbes.com/sites/paulmonckton/2026/08/01/google-earth-ai-feature-removed/"
+      ]
+    }
+  ]
+}

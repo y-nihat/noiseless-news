@@ -1,0 +1,19 @@
+{
+  "slug": "google-earth-ai-image-generation-pulled",
+  "title": "Google pulls AI image-generation tool from Google Earth a day after launch",
+  "status": "published",
+  "first_seen": "2026-08-02",
+  "published_at": "2026-08-02",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/",
+    "https://futurism.com/artificial-intelligence/google-pulls-down-google-earth-ai-feature",
+    "https://www.forbes.com/sites/paulmonckton/2026/08/01/google-earth-ai-feature-removed/"
+  ],
+  "follows": null,
+  "reason": "Published: Tier-0 primary source (Google's own blog.google post, which contains both the 30 July launch announcement and a same-page 31 July rollback update) plus two independent quality-press accounts (Futurism, which ran its own separate reproduction tests, and Forbes, which reported OSINT researcher Henk van Ess's demonstrations and the Hive AI watermark-defeat test). Full multi-agent protocol run: fresh verifier and fresh adversarial falsifier sub-agents in parallel, then this cycle's context live-fetched all three cited sources directly to confirm quotes before drafting. dedup-check returned no archive match before opening.",
+  "watch": [],
+  "notes": [
+    "2026-08-02 c4: Falsifier pass specifically ruled out that this was a recycled reference to the unrelated 2025 Gemini image-generation controversy, confirmed the product as Google Earth (not Maps or the Gemini app), and flagged that the SynthID claim needed nuance -- the watermark was present but trivially defeated by screenshotting, not simply absent -- which the published article's phrasing reflects. NPR (npr.org) was cited by both sub-agents for an equivalent Hive AI test but two direct live-fetch attempts timed out this cycle, so NPR was left out of the source list in favor of Forbes, which carries the same figure and was successfully live-fetched."
+  ]
+}
