@@ -258,5 +258,85 @@
     "published": "2026-08-03T15:25:47+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vegkq5/all_deepseek_model_oneshots_242_outputs_to_look/\"> <img alt=\"All DeepSeek model oneshots: 242 outputs to look at and compare!\" src=\"https://preview.redd.it/aylfsvq7h6hh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=d3ef6644b1fb2ae2b852e7925eae81182fd10f84\" title=\"All DeepSeek model oneshots: 242 outputs to look at and compare!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Continuing my weekend of oneshotting the cheap OpenRouter models, here are all 10 DeepSeek models across the same 35 prompts. DeepSeek had a rougher time (more provider errors / empty completions), so only 242 made it out of the 10*35 matrix. Here they are <a href=\"https://oneshotlm.com/model/?q=deepseek\">https://oneshotlm.com/model/?q=deepseek</a></p> <ul> <li><strong>DeepSeek V4:</strong> <a href=\"https://oneshotlm.com/model/deepseek-deepseek-v4-pro/\">deepseek-v4-pro</a>, <a href=\"https://oneshotlm.com/model/deepseek-deepseek-v4-flash/\">deepseek-v4-flash</a> (+<a href=\"https://oneshotlm.com/model/deepseek-deepseek-v4-flash-0731/\">0731</a>)</li> <li><strong>DeepSeek V3.x:</strong> <a href=\"https://oneshotlm.com/model/deepseek-deepseek-v3-2/\">deepseek-v3.2</a> (+<a href=\"https://oneshotlm.com/model/deepseek-deepseek-v3-2-exp/\">exp</a>), <a href=\"https://oneshotlm.com/model/deepseek-deepseek-v3-1-terminus/\">deepseek-v3.1-terminus</a>, <a href=\"https://oneshotlm.com/model/deepseek-deepseek-chat-v3-1/\">deepseek-chat-v3.1</a>, <a href=\"https://oneshotlm.com/model/deepseek-deepseek-chat/\">deepseek-chat</a></li> <li><strong>DeepSeek R1:</strong> <a href=\"https://oneshotlm.com/model/deepseek-deepseek-r1/\">deepseek-r1</a> (+<a href=\"https://oneshotlm.com/model/deepseek-deepseek-r1-0528/\">0528</a>)</li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kms_dev\"> /u/kms_dev </a> <br /> <span><a href=\"https://i.redd.it/aylfsvq7h6hh1.png\">[link]</a></span> &#32; <span><a href=\"https:…",
     "fetched_at": "2026-08-03T17:54:46.720919+00:00"
+  },
+  {
+    "id": "21f8d92ef8850c74",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Only 3 days ago...",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veqt03/only_3_days_ago/",
+    "published": "2026-08-03T21:37:11+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veqt03/only_3_days_ago/\"> <img alt=\"Only 3 days ago...\" src=\"https://preview.redd.it/ca91ww1jb8hh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=aff991756245b499f8f55ac6133d39db7a2fb119\" title=\"Only 3 days ago...\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fun_Librarian_7699\"> /u/Fun_Librarian_7699 </a> <br /> <span><a href=\"https://i.redd.it/ca91ww1jb8hh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veqt03/only_3_days_ago/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "9b5f56cb5edb8a38",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Max matches Kimi K3 and DeepSeek V4 Flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vellf2/qwen38max_matches_kimi_k3_and_deepseek_v4_flash/",
+    "published": "2026-08-03T18:25:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vellf2/qwen38max_matches_kimi_k3_and_deepseek_v4_flash/\"> <img alt=\"Qwen3.8-Max matches Kimi K3 and DeepSeek V4 Flash\" src=\"https://preview.redd.it/14mqdzhzb7hh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=53a5f1f5ea4dd8a66ef78591cbea34554cb1a2ed\" title=\"Qwen3.8-Max matches Kimi K3 and DeepSeek V4 Flash\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Qwen3.8-Max (2.4T) is another massive contribution to the open weight community. On benchmarks, it performs closely to Kimi K3 and DeepSeek V4 flash across all categories and is better at coding and software tasks. Qwen3.8-27B will also be open weight soon too. Weights are being released next week.</p> <p>Pricing:<br /> Input: $2.0 / M tokens<br /> Output: $6.0 / M tokens<br /> Implicit Caching: $0.25 / M tokens</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/davidthesong\"> /u/davidthesong </a> <br /> <span><a href=\"https://i.redd.it/14mqdzhzb7hh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vellf2/qwen38max_matches_kimi_k3_and_deepseek_v4_flash/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "c2aebf3e0740010a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4-Flash (284B MoE) at 33 tok/s single / 68 tok/s aggregate on 2× RTX 3090 + a used quad-Xeon DDR4 server — full config",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veow4b/deepseek_v4flash_284b_moe_at_33_toks_single_68/",
+    "published": "2026-08-03T20:25:21+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veow4b/deepseek_v4flash_284b_moe_at_33_toks_single_68/\"> <img alt=\"DeepSeek V4-Flash (284B MoE) at 33 tok/s single / 68 tok/s aggregate on 2× RTX 3090 + a used quad-Xeon DDR4 server — full config\" src=\"https://preview.redd.it/p18vqhmcy7hh1.jpg?width=140&amp;height=92&amp;auto=webp&amp;s=204c896235ee0928d2224869a5ce97d48ccddb24\" title=\"DeepSeek V4-Flash (284B MoE) at 33 tok/s single / 68 tok/s aggregate on 2× RTX 3090 + a used quad-Xeon DDR4 server — full config\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Ran DeepSeek V4-Flash-0731 — the full official checkpoint, not a re-quant — on commodity used hardware. Sharing because I couldn't find anyone else publishing Ampere results for this engine.</p> <h1>Why bother with a 2018 server</h1> <p>The model is <strong>156 GB</strong>. That number decides everything before speed matters:</p> <table><thead> <tr> <th align=\"left\">Platform</th> <th align=\"left\">Memory</th> <th align=\"left\">Bandwidth</th> <th align=\"left\">Price</th> <th align=\"left\">Runs DS4-Flash?</th> </tr> </thead><tbody> <tr> <td align=\"left\">Mac Studio M3 Ultra</td> <td align=\"left\"><strong>96 GB max</strong>¹</td> <td align=\"left\">819 GB/s</td> <td align=\"left\">$3,999+</td> <td align=\"left\">❌ won't load</td> </tr> <tr> <td align=\"left\">DGX Spark</td> <td align=\"left\">128 GB</td> <td align=\"left\">273 GB/s</td> <td align=\"left\">$4,699²</td> <td align=\"left\">⚠️ 4-bit re-quant only, ~10 GB headroom</td> </tr> <tr> <td align=\"left\">AMD Ryzen AI Halo</td> <td align=\"left\">128 GB</td> <td align=\"left\">~256 GB/s</td> <td align=\"left\">$3,999</td> <td align=\"left\">⚠️ same</td> </tr> <tr> <td align=\"left\">RTX PRO 6000 Blackwell</td> <td align=\"left\">96 GB</td> <td align=\"left\">1,792 GB/s</td> <td align=\"left\">~$9,000</td> <td align=\"left\">❌ won't load</td> </tr> <tr> <td align=\"left\">6× RTX 3090</td> <td align=\"left\">144 GB</td> <td align=\"left\">936 GB/s</td> <td align=\"left\">~$6,600 cards…",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "965bbed7b42c79fe",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "G9v3-39A5B: Agentic heavy MOE with low hallucination",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veqj1j/g9v339a5b_agentic_heavy_moe_with_low_hallucination/",
+    "published": "2026-08-03T21:26:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veqj1j/g9v339a5b_agentic_heavy_moe_with_low_hallucination/\"> <img alt=\"G9v3-39A5B: Agentic heavy MOE with low hallucination\" src=\"https://preview.redd.it/k3vay5xz88hh1.png?width=140&amp;height=57&amp;auto=webp&amp;s=39041106adb5ae8fa2ae4c2138f623eae41bb45c\" title=\"G9v3-39A5B: Agentic heavy MOE with low hallucination\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/ai9stars/G9v3-39A5B\">Hugging Face</a><br /> <a href=\"https://artificialanalysis.ai/models/g9v3-39a5b?models=g9v3-39a5b%2Cg9v3-3b%2Cqwen3-6-35b-a3b%2Cqwen3-5-9b%2Cqwen3-5-2b%2Cdeepseek-v4-flash%2Cqwen3-6-27b%2Cgemma-4-26b-a4b%2Cgemma-4-31b%2Cgemma-4-12b%2Cgpt-5-6-sol%2Cgpt-5-6-terra%2Cgpt-5-6-luna%2Cglm-5-2%2Ckimi-k3%2Cclaude-fable-5%2Cclaude-opus-5%2Cclaude-sonnet-5%2Cclaude-4-5-haiku-reasoning%2Cminimax-m3&amp;openness=openness-vs-intelligence&amp;omniscience=omniscience-hallucination-rate&amp;intelligence-index-token-use=intelligence-index-token-use\">Artificial Analysis</a></p> <p>Should be a sweet spot for general work. Seems like coding is the only part that is inferior to Qwen.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/axseem\"> /u/axseem </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1veqj1j\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veqj1j/g9v339a5b_agentic_heavy_moe_with_low_hallucination/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "173a1eab0c536de3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "nvidia/NVIDIA-NemotronLabs-VoiceChat-11B · Hugging Face (full duplex)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1verzxx/nvidianvidianemotronlabsvoicechat11b_hugging_face/",
+    "published": "2026-08-03T22:24:02+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1verzxx/nvidianvidianemotronlabsvoicechat11b_hugging_face/\"> <img alt=\"nvidia/NVIDIA-NemotronLabs-VoiceChat-11B · Hugging Face (full duplex)\" src=\"https://external-preview.redd.it/aSbeVMjS1PMYyWebfYoyOfahQeKCRF7HyYGAYGtPAvc.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=548a9a4ba03b178935d140b98030e764c425623a\" title=\"nvidia/NVIDIA-NemotronLabs-VoiceChat-11B · Hugging Face (full duplex)\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/adefa\"> /u/adefa </a> <br /> <span><a href=\"https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1verzxx/nvidianvidianemotronlabsvoicechat11b_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "6800c88844b0b5a6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ling-3.0-flash is another potential model to test before qwen3.8 27b",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veqd5c/ling30flash_is_another_potential_model_to_test/",
+    "published": "2026-08-03T21:20:19+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I tested Ling-3.0-flash with hard bugs and it fixed bugs that qwen3.6-27b could not. This models speed faster than deepseek v4 flash but almost the same level as (old) deepseek v4 flash. </p> <p>Note: hard bugs mean they don't have &quot;error messages&quot; but they are unexpected behaviors of a software. Most bugs with error messages can be fixed easily as they are already in training data. </p> <p>But it is harder for unexpected behaviors without error messages. That means it has to create hypothesis of the root causes and then create logging to trace values and then verify them. This tests its thinking capability, consistent in long conversation, and self-correction which most small-medium models fail. </p> <p>I post this because I hope llamacpp support it as I know the previous version still not support in llamacpp(correct me if I am wrong)</p> <p>PS: you can test it with openrouter free api. In my test I use it in kilo code. Actually, it should be released today but they delay the release to August 6.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Muted-Celebration-47\"> /u/Muted-Celebration-47 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veqd5c/ling30flash_is_another_potential_model_to_test/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veqd5c/ling30flash_is_another_potential_model_to_test/\">[comments]</a></span>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "ace74ee0e10b2be5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "'I ran my own benchmarks on it' seems to be pretty common comment around here. How about dedicating a thread for this and sharing?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veodfd/i_ran_my_own_benchmarks_on_it_seems_to_be_pretty/",
+    "published": "2026-08-03T20:06:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Of course, the concern is that in the end, this thread will be fed into the models' training data, but I feel benchmarking isn't so open and very fragmented.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jinnyjuice\"> /u/jinnyjuice </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veodfd/i_ran_my_own_benchmarks_on_it_seems_to_be_pretty/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veodfd/i_ran_my_own_benchmarks_on_it_seems_to_be_pretty/\">[comments]</a></span>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "766bf1a7d231b567",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[NEW MODELS!] Supra2-100M Base and Instruct - go check them out!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1velyl9/new_models_supra2100m_base_and_instruct_go_check/",
+    "published": "2026-08-03T18:38:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1velyl9/new_models_supra2100m_base_and_instruct_go_check/\"> <img alt=\"[NEW MODELS!] Supra2-100M Base and Instruct - go check them out!\" src=\"https://external-preview.redd.it/_n0BY0nGwoVeJxl6x2g4hNx2phXKxQMV5bNwTQzN3D8.png?width=140&amp;height=75&amp;auto=webp&amp;s=8cf9c73c35d9cf2bdde21c75b58bb1efe46236ff\" title=\"[NEW MODELS!] Supra2-100M Base and Instruct - go check them out!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey guys!</p> <p>After a LOT of good feedback on our previous models like Supra-50M-Instruct and -Reasoning, many community likes, follows and upvotes we saw many community requests asking for new models. We've inspired a lot of people with our work - and now we're presenting the all new Supra2 family.</p> <p>And our first release here is: Supra2-100M base and Instruct.</p> <p>Here are some samples:<br /> <strong>Prompt: &quot;What is google?&quot;</strong><br /> <strong>Answer:</strong><br /> <em>Google is a web-based platform that allows users to search and find information on the web. It's a social media platform that uses algorithms to make recommendations based on various factors such as location, time of day, and interests.</em></p> <p><em>Google has a number of features that make it easy to find information, including:</em><br /> <em>- Searching for keywords and phrases related to various topics, like books, movies, or music</em><br /> <em>- Analyzing website traffic and traffic patterns</em><br /> <em>- Creating a custom search interface</em><br /> <em>- Suggesting alternative ways to find the information</em><br /> <em>- Providing recommendations for books, articles, and other content</em><br /> <em>- Allowing users to customize the search results</em></p> <p><em>One of the main advantages of Google is that it's easy to use, as users can search for the information they need, and then filter the results based on their interests. This makes it accessible to a wider…",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
   }
 ]

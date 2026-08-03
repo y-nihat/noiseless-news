@@ -28,5 +28,25 @@
     "published": "2026-08-03T07:28:14+00:00",
     "summary": "<p>Cogent AI team released Cogent VR-1, a reasoning model post-trained specifically for cybersecurity rather than picking up cyber capability as a side effect of general coding strength. It ships with two companions: IntrusionBench, a benchmark that scores agents on completed enterprise intrusions, and the Cogent AI Harness, a governed runtime for security agents. The launch [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/\">Cogent AI Team Releases VR-1: A Frontier Cyber Reasoning Model That Composes and Verifies Enterprise Attack Paths</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-08-03T12:55:43.501503+00:00"
+  },
+  {
+    "id": "a4c53e13e1a2d02a",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Evaluating Multimodal Vision Models with Moonshot PerceptionBench Using Robust Data Loading and Automated Judging",
+    "url": "https://www.marktechpost.com/2026/08/03/evaluating-multimodal-vision-models-with-moonshot-perceptionbench-using-robust-data-loading-and-automated-judging/",
+    "published": "2026-08-03T22:26:32+00:00",
+    "summary": "<p>In this tutorial, we design an end-to-end evaluation workflow for PerceptionBench. This multimodal benchmark measures fine-grained visual perception capabilities across tasks such as OCR, counting, localization, contextual reasoning, comparison, depth understanding, and hallucination detection. We begin by configuring a Colab-compatible environment, installing the required libraries, and loading a balanced subset of the dataset through a [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/03/evaluating-multimodal-vision-models-with-moonshot-perceptionbench-using-robust-data-loading-and-automated-judging/\">Evaluating Multimodal Vision Models with Moonshot PerceptionBench Using Robust Data Loading and Automated Judging</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
+  },
+  {
+    "id": "0ac11515be27c360",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "How to Secure AI Agents, MCP Servers, and LLM Apps in Production",
+    "url": "https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/",
+    "published": "2026-08-03T20:16:56+00:00",
+    "summary": "<p>AI agents, MCP servers, and LLM apps break the core AppSec assumption that applications do what their code says. This guide walks through a practical see-fix-protect framework: a five-layer agentic AI attack surface map, a 12-point misconfiguration checklist, an evidence-based triage matrix, runtime guardrails, and system prompt hardening — plus a maturity self-assessment aligned to NIST AI RMF, OWASP AIMA, ISO/IEC 42001, and the EU AI Act.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/03/how-to-secure-ai-agents-mcp-servers-and-llm-apps-in-production/\">How to Secure AI Agents, MCP Servers, and LLM Apps in Production</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-03T22:37:38.961964+00:00"
   }
 ]
