@@ -18,5 +18,15 @@
     "published": "2026-08-03T15:30:38+00:00",
     "summary": "<p><a href=\"https://news.ycombinator.com/item?id=49156111#49156719\">My comment</a> on <a href=\"https://news.ycombinator.com/item?id=49156111\">Devtools must be open source (exe.dev)</a> &mdash; Hacker News.</p><p>One of the arguments for open source software for end-users has always been the freedom to examine and modify how that software works.</p>\n<p>The reality for most people - even expert programmers - has been that the freedom is more about being able to lean on other people to do that. Most people can't justify the time commitment needed to read and then modify the code for tools they use very often.</p>\n<p>I think LLMs have changed that equation in a way that makes the original dream much more feasible.\nSeveral times a day I'll prompt regular Claude chat to \"Clone x/y from GitHub and tell me how Z works\".</p>\n<p>Getting software to compile in order to start hacking on it used to be enough friction that I often wouldn't bother. Now I treat that as a zero time investment challenge: tell Codex or Claude Code to checkout and build X and then come back ten minutes later and see how it got on.</p>\n<p>I'm not habitually modifying the software I use yet, but I can see a path to that which didn't exist a year or so ago.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/hacker-news\">hacker-news</a>, <a href=\"https://simonwillison.net/tags/open-source\">open-source</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/ai-assisted-programming\">ai-assisted-programming</a></p>",
     "fetched_at": "2026-08-03T17:54:46.720919+00:00"
+  },
+  {
+    "id": "1857ef990ccad981",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Don't be a meat proxy",
+    "url": "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/",
+    "published": "2026-08-03T23:45:04+00:00",
+    "summary": "<p><strong><a href=\"https://gruhn.me/blog/2026-08-03/\">Don&#x27;t be a meat proxy</a></strong></p>\nNiklas Gruhn coins an excellent new term - <strong>meat proxy</strong> - for people who blindly copy and paste the output of AI systems to their peers.</p>\n<blockquote>\n<p>By all means, prompt AI. But don't just relay the output. Read it, understand it, validate it, and then write a response in your own words (a decent certificate that you've done the prior steps). Making that effort is value you can add.</p>\n</blockquote>\n\n    <p><small></small>Via <a href=\"https://lobste.rs/s/hfbqr3/don_t_be_meat_proxy#c_svolls\">Lobste.rs</a></small></p>\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/definitions\">definitions</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/ai-misuse\">ai-misuse</a></p>",
+    "fetched_at": "2026-08-03T23:47:38.968507+00:00"
   }
 ]
