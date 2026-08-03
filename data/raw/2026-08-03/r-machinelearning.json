@@ -1,0 +1,42 @@
+[
+  {
+    "id": "25589141395a5c00",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Is it too late regain some coherence in the ML research space in our life time? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1ve7chh/is_it_too_late_regain_some_coherence_in_the_ml/",
+    "published": "2026-08-03T08:17:40+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Was just looking at the list of preprints on Arxiv cs.LG <a href=\"https://arxiv.org/list/cs.LG/recent?skip=0&amp;show=500\">https://arxiv.org/list/cs.LG/recent?skip=0&amp;show=500</a></p> <p>Everyday 100 - 400 new machine learning papers gets uploaded on this server.</p> <p>Looking at this unending list of preprints is as if you stepped into a crowded room, like the stock trading floor on wall st. in the 1980s. Everyone is shouting over each other. Nobody is talking to each other. Everyone's trying to prove something, to someone, to themselves, to build some credentials in the ML/AI space to meet those job requirements, or dying to get their truth out. Every title contains some new terminology invented by the authors that feels not worth the effort in keeping it in your working memory. Burn-out by endless novelty.</p> <p>Frontier research are now corporate trade secrets that politicians and military are watching closely. Research papers are ir/unreproducible he-said-she-saids. Marketing material are research paper and vice versa. Extremely major breakthroughs are announced via tweets, whereas extremely minor results are unannounced via journals. Everything feels simultaneously mostly true and possibly false (because nobody is seriously checking). Nobody knows what's going on, and people who knows what's going on has a non-disclosure clause in their job contract. Is the theory of generalization that we learned in school true or false? It feels false, why hasn't there been any retractions? Many questions like these.</p> <p><strong>Is it too late to regain some coherence in this field??</strong></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NeighborhoodFatCat\"> /u/NeighborhoodFatCat </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1ve7chh/is_it_too_late_regain_some_coherence_in_the_ml/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/com…",
+    "fetched_at": "2026-08-03T12:55:43.501503+00:00"
+  },
+  {
+    "id": "04277dead62f3e66",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "No rebuttals from neurips authors [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vdz19e/no_rebuttals_from_neurips_authors_d/",
+    "published": "2026-08-03T01:02:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know there’s a lot of frustration around no response from reviewers, which I also got only one so yeah what a bummer, but I was wondering if no rebuttal from the authors was just as common or not. I got no rebuttal so far, so I’m here scratching my head what might have happened to the authors lol especially when at least one paper was pretty much on the borderline with somewhat of a positive AC comment</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/floor_souji\"> /u/floor_souji </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vdz19e/no_rebuttals_from_neurips_authors_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vdz19e/no_rebuttals_from_neurips_authors_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-03T12:55:43.501503+00:00"
+  },
+  {
+    "id": "6131b65967e9b356",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "EMNLP Commitment Submission number [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1veat2f/emnlp_commitment_submission_number_d/",
+    "published": "2026-08-03T11:30:28+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Whats your commitment submission id? My submission number is ~4k, im wondering the amounts of commitments :)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Huge_Argument_6979\"> /u/Huge_Argument_6979 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1veat2f/emnlp_commitment_submission_number_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1veat2f/emnlp_commitment_submission_number_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-03T12:55:43.501503+00:00"
+  },
+  {
+    "id": "6117dacd9019c30d",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Deep Dive on RL and OPD for Training LLMs [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1veat29/deep_dive_on_rl_and_opd_for_training_llms_d/",
+    "published": "2026-08-03T11:30:28+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone, if you have been reading the tech reports of Kimi, DS, Qwen and GLM, you will realize how much on policy distillation and GRPO style algorithms power the frontier. I thought it will be quite beneficial to do a deep dive explaining the maths and code behind this algorithms and how they connect to pretraining and supervised fine tuning.</p> <p>I have published a deep dive on this topics here</p> <p>Hope you enjoy it and it helps you understand training of LLMs better. Happy to answer questions on this</p> <p><a href=\"https://youtu.be/MaZWafi4gYY?is=8jLkAp%5C_Fe86abUVP\">https://youtu.be/MaZWafi4gYY?is=8jLkAp\\_Fe86abUVP</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/johnolafenwa\"> /u/johnolafenwa </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1veat29/deep_dive_on_rl_and_opd_for_training_llms_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1veat29/deep_dive_on_rl_and_opd_for_training_llms_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-03T12:55:43.501503+00:00"
+  }
+]
