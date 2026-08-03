@@ -1,4 +1,33 @@
 {
+  "candidates_2026-08-03_c4": [
+    {
+      "domain": "axios.com",
+      "first_seen": "2026-08-03",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.axios.com/2026/07/30/judge-pentagon-case-worse-anthropic"
+      ],
+      "context": "Named-byline (Maria Curi) political/tech coverage; axios.com itself returned 403 on direct fetch, content confirmed via Yahoo News republication instead. Used as an independent Tier-2 source for the anthropic-pentagon-supply-chain-risk-hearing story. Propose Tier 2, type html; note it may need the same 403-workaround treatment as other blocked Tier-0/1 sites."
+    },
+    {
+      "domain": "lawfaremedia.org",
+      "first_seen": "2026-08-03",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.lawfaremedia.org/article/anthropic-v.-u.s.-department-of-war--a-hearing-diary"
+      ],
+      "context": "Named-byline (Roger Parloff) legal-affairs publication, fetched directly; gave a detailed, court-specific hearing account for the anthropic-pentagon-supply-chain-risk-hearing story that general tech press lacked. Propose Tier 2, type html -- useful recurring source for AI litigation coverage."
+    },
+    {
+      "domain": "federalnewsnetwork.com",
+      "first_seen": "2026-08-03",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://federalnewsnetwork.com/artificial-intelligence/2026/05/appeals-court-judges-appear-to-be-divided-over-pentagons-legal-dispute-with-ai-company-anthropic/"
+      ],
+      "context": "Government/federal-contracting trade press, fetched directly, gave named-judge detail on the DC Circuit panel for the anthropic-pentagon-supply-chain-risk-hearing background. Propose Tier 2, type html."
+    }
+  ],
   "candidates_2026-08-02_c4": [
     {
       "domain": "futurism.com",

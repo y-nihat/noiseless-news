@@ -1,0 +1,25 @@
+{
+  "slug": "anthropic-pentagon-supply-chain-risk-hearing",
+  "title": "Judge says Pentagon's case against Anthropic has \"gotten worse\" at supply-chain-risk hearing",
+  "status": "published",
+  "first_seen": "2026-08-03",
+  "published_at": "2026-08-03",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.yahoo.com/news/politics/articles/judge-says-governments-case-got-172814319.html",
+    "https://www.lawfaremedia.org/article/anthropic-v.-u.s.-department-of-war--a-hearing-diary",
+    "https://federalnewsnetwork.com/artificial-intelligence/2026/05/appeals-court-judges-appear-to-be-divided-over-pentagons-legal-dispute-with-ai-company-anthropic/"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-08-17",
+  "reason": "Published: first site coverage of the Anthropic v. DOD 'supply chain risk' litigation, timed to the live edge of the saga (30 July 2026 summary-judgment hearing) rather than the recycled April appeals ruling that Cycle 3 flagged as a low-tier-syndication lead. Two independently fetched, named-byline Tier-2 sources (Axios/Maria Curi via Yahoo, Lawfare/Roger Parloff) confirm the hearing and quotes; Federal News Network independently confirms the April/May DC Circuit background. CNBC's own extensive prior coverage of this saga was found in search results but not cited -- cnbc.com returned 403 on direct fetch this cycle, so it was left out per the archive's live-fetch discipline rather than cited from memory/snippets.",
+  "watch": [
+    "Judge Lin's written summary-judgment order, whenever it lands -- no date is set",
+    "Whether the DC Circuit issues its own ruling on the parallel appeal",
+    "Any government appeal if Lin rules for Anthropic, or Anthropic appeal if she rules for the Pentagon"
+  ],
+  "notes": [
+    "2026-08-03 c4: Opened this cycle after Cycle 3 flagged the saga as an uncovered gap but ran out of time to verify whether a July/August ingest lead was genuinely new. Investigation found the ingest lead was recycled April coverage (confirmed via search: top hits for that exact headline trace to April 8-9 2026 CNBC/Hawaii Tribune-Herald pieces), but surfaced a genuinely new and unresolved development in the same saga -- the 30 July 2026 hearing -- which is what was verified and published. Deviated from the full fresh-verifier/fresh-falsifier sub-agent protocol given the cycle's time budget; ran an explicit adversarial search for a superseding ruling instead (none found) and required two independent directly-fetched sources per claim. See data/verified/anthropic-pentagon-supply-chain-risk-hearing.json for full reasoning."
+  ]
+}
