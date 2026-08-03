@@ -1,0 +1,12 @@
+[
+  {
+    "id": "6bb3f934048965cc",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Understanding Alignment in Multimodal LLMs: A Comprehensive Study",
+    "url": "https://machinelearning.apple.com/research/alignment-multimodal-llms",
+    "published": "2026-08-03T00:00:00+00:00",
+    "summary": "Preference alignment has become a crucial component in enhancing the performance of Large Language Models (LLMs), yet its impact in Multimodal Large Language Models (MLLMs) remains comparatively underexplored. Similar to language models, MLLMs for image understanding tasks encounter challenges like hallucination. In MLLMs, hallucination can occur not only by stating incorrect facts but also by producing responses that are inconsistent with the image content. A primary objective of alignment for MLLMs is to encourage these models to align responses more closely with image information. Recently…",
+    "fetched_at": "2026-08-03T17:54:46.720919+00:00"
+  }
+]
