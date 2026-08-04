@@ -28,5 +28,105 @@
     "published": "2026-08-04T00:46:22+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vevd3g/qwen38max_oneshots_one_of_the_few_model_that/\"> <img alt=\"Qwen3.8-Max: Oneshots, one of the few model that nailed aquarium break simulation alongside opus\" src=\"https://preview.redd.it/9rscxms399hh1.png?width=140&amp;height=132&amp;auto=webp&amp;s=26b5089ad1922337aab26c49f7b010ab9ca98709\" title=\"Qwen3.8-Max: Oneshots, one of the few model that nailed aquarium break simulation alongside opus\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Qwen3.8-Max oneshots across 35 prompts <a href=\"https://oneshotlm.com/model/qwen-qwen3-8-max/\">https://oneshotlm.com/model/qwen-qwen3-8-max/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kms_dev\"> /u/kms_dev </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vevd3g\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vevd3g/qwen38max_oneshots_one_of_the_few_model_that/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-04T00:57:38.230089+00:00"
+  },
+  {
+    "id": "8dff7993c68df14c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "More Qwen 3.8 sizes coming",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vevsv9/more_qwen_38_sizes_coming/",
+    "published": "2026-08-04T01:05:43+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vevsv9/more_qwen_38_sizes_coming/\"> <img alt=\"More Qwen 3.8 sizes coming\" src=\"https://preview.redd.it/zodlaejqc9hh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=e3f1c0c9754a4e68d47c2d26fbe91239f140855c\" title=\"More Qwen 3.8 sizes coming\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/appakaradi\"> /u/appakaradi </a> <br /> <span><a href=\"https://i.redd.it/zodlaejqc9hh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vevsv9/more_qwen_38_sizes_coming/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "59ceca5daae8414e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is LM Studio abandoning their core product?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf2hhp/is_lm_studio_abandoning_their_core_product/",
+    "published": "2026-08-04T06:38:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Some of you may be aware that a few weeks ago, LM Studio announced a new agent, Bionic. This is pretty much an agentic harness for both local models and paid cloud models. But most aren't aware that LM Studio replaced almost every link to the original app that built their brand and reputation with the new Bionic agent. If you go to the LM Studio website right now, you will see that every link that used to download the original app now downloads Bionic. The only link on the entire site that brings you to the OG app is a tiny link in the footer that says &quot;Download the app&quot;. They have updated that page since I last checked and added a Bionic download link at the top but at least they left the OG app downloads alone, albeit they are now underneath the original app. But the fact that you have to go through the entire site to find a tiny download link just to get the normal app is extremely stupid! Not to mention the app is still in &quot;preview&quot; and is a &quot;new, separate app from LM Studio&quot; and yet it gets all the promotion while their core product gets ZERO. Not to mention that ever since Bionic was released, the main app has only gotten 2 or 3 minor updates, mainly to make the app work with Bionic. This is very frustrating as someone who has used LM Studio for years and does not want to use yet another agentic harness. Whatever your views on Bionic are, you can't deny that hiding (and potentially abandoning) the core product that built their brand is not a good idea. I wanted to post this earlier, but seeing as I have gotten zero response from the team on Discord while they reviewed posts right below mine, I knew that I had to share this here.<br /> But all of this leads to something very concerning for LM Studio users: Will the incredibly popular LM Studio app, the original app that helped build their reputation and popularity, go away soon? Hidden download links + scarce updates seems like that LM Studio may b…",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "07aa23e58996aacb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Time to finally migrate from LM Studio -> llama.cpp, your experience?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf5gpp/time_to_finally_migrate_from_lm_studio_llamacpp/",
+    "published": "2026-08-04T09:30:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Has anyone moved from LM Studio to llama.cpp?</p> <p>What was your experience like? What did you have to learn in order to recreate your experience? Which harness/GUI did you switch to?</p> <p>Thanks in advance!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CSEliot\"> /u/CSEliot </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf5gpp/time_to_finally_migrate_from_lm_studio_llamacpp/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf5gpp/time_to_finally_migrate_from_lm_studio_llamacpp/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "2d154b7e04787f04",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Probably the best way to run DS4 flash on a mac right now (192gb+ vram)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf6us9/probably_the_best_way_to_run_ds4_flash_on_a_mac/",
+    "published": "2026-08-04T10:47:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf6us9/probably_the_best_way_to_run_ds4_flash_on_a_mac/\"> <img alt=\"Probably the best way to run DS4 flash on a mac right now (192gb+ vram)\" src=\"https://preview.redd.it/khujdjuh7chh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=0d63a1acce5b15bab5f6c007628e5b73325bf54f\" title=\"Probably the best way to run DS4 flash on a mac right now (192gb+ vram)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Found this quant, so thought I would share, since its the best I've found so far for running on my mac (m3 ultra). It's got dspark/mtp support so runs faster than anything else I've tried. The tok/s on this code run actually increased as generation went on, started at 34tok/s, ended at 43tok/s. The cached tokens were the default chat prompt, and the 13k was the query I sent.</p> <p><a href=\"https://huggingface.co/Vontra/DeepSeek-V4-Flash-0731-MXFP4-MLX\">https://huggingface.co/Vontra/DeepSeek-V4-Flash-0731-MXFP4-MLX</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Professional-Bear857\"> /u/Professional-Bear857 </a> <br /> <span><a href=\"https://i.redd.it/khujdjuh7chh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf6us9/probably_the_best_way_to_run_ds4_flash_on_a_mac/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "a4af0a9802b5be24",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "can someone create a website where people share specific hardware specs with specific llama cpp flags so we see what works?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veyxkf/can_someone_create_a_website_where_people_share/",
+    "published": "2026-08-04T03:28:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>title</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Rank201AltAccount\"> /u/Rank201AltAccount </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veyxkf/can_someone_create_a_website_where_people_share/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veyxkf/can_someone_create_a_website_where_people_share/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "f68b790861edde02",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Optimised DSv4-Flash for 2x GH200: 10,000 tok/s PP, >300 tok/s TG on SGLang",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf64mz/optimised_dsv4flash_for_2x_gh200_10000_toks_pp/",
+    "published": "2026-08-04T10:08:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>There are some PRs to use and a nice trick to speed up PP on really longs contexts in my write up. Hope it helps!</p> <p><strong><em>TL;DR:</em></strong><br /> <code>On this dual GH200 box, you build vLLM v0.26.0 from source, add the merged DSV4 cache-layout patch (PR #48993), disable async scheduling, and run DSpark at 6 predicted tokens to give: ~276 decode tok/s and a 1M context in 192 GB of HBM. SGLang, once it built on ARM64 and it’s DSpark loader bug fixed, is faster on every decode workload and hits ~317.0 tok/s.</code></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Reddactor\"> /u/Reddactor </a> <br /> <span><a href=\"https://dnhkng.github.io/posts/gh200-benchmarking-part-4-dsv4-released/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf64mz/optimised_dsv4flash_for_2x_gh200_10000_toks_pp/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "8ee2146ec0235413",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash 0731GGUFs with updated template (supports reasoning levels)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf8944/deepseek_v4_flash_0731ggufs_with_updated_template/",
+    "published": "2026-08-04T11:57:41+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/tarruda\"> /u/tarruda </a> <br /> <span><a href=\"https://huggingface.co/tarruda/DeepSeek-V4-Flash-0731-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf8944/deepseek_v4_flash_0731ggufs_with_updated_template/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "ed2ff3e22f73f1bb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek v4 Flash 0731 4bit ~50tps prefill, ~1tps decode on M5 Air 32gb",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf79h7/deepseek_v4_flash_0731_4bit_50tps_prefill_1tps/",
+    "published": "2026-08-04T11:08:15+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Currently running some experiments using the streamed experts trick that's been floating around this sub as well as some of my own trickery to get prefill to run a bit faster. It's been quite a bit of fun so far - just getting a 300b model to run at all on an Air is itself equal parts silly and satisfying</p> <p>Repo isn't in a tidy enough state to share - nothing about it is anywhere close to one-click serve yet. Especially reluctant to share since my naïve implementation of streamed experts incurred something like a ~30s tax between turns before any actual KV cache generation began. It's better now - more like ~3s last I benched</p> <p>--</p> <p>Also fun discovery I've made in the meantime - you can actually run less experts than default at prefill time and the KV caches are still perfectly serviceable. Run conservatively and you get &gt;95% the same top logits at each position. Run more aggressively and you lose that, but it doesn't always seem catastrophic e.g. needle in haystack perf can still be retained</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/maddie-lovelace\"> /u/maddie-lovelace </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf79h7/deepseek_v4_flash_0731_4bit_50tps_prefill_1tps/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf79h7/deepseek_v4_flash_0731_4bit_50tps_prefill_1tps/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "4573b27725aa53c0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Special Architecture in AFM3 20B: Instruction Following Pruning",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vewa3t/special_architecture_in_afm3_20b_instruction/",
+    "published": "2026-08-04T01:26:38+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://openreview.net/forum?id=juARG7yu4P\">https://openreview.net/forum?id=juARG7yu4P</a></p> <p>This is a model designed to activate ~20% of active MLP layers. It is also an MoE so it has some sparsity built-in. It's trained from scratch to use the same experts per prompt, not per token or switching per layer.</p> <p>Around two-thirds of a model's active parameters are FFN/MLP expert weights, so a 30B active MoE would be worth a 14B active in terms of read bandwidth performance. A 9B dense became a 3B active. </p> <p>It seems to be a similar idea to recently shared: <a href=\"https://old.reddit.com/r/LocalLLaMA/comments/1v3shir/sessionadaptive_orthogonal_distillation_saod\">Session-Adaptive Orthogonal Distillation</a> From someone who seems to be part of Qwen org. Both methods depend on input for pruning, both probably have some sort of delay that they can rebound from when producing long output.</p> <p><a href=\"https://thenextweb.com/news/apple-third-generation-foundation-models-afm\">https://thenextweb.com/news/apple-third-generation-foundation-models-afm</a></p> <blockquote> <p>Apple’s trick is to keep the entire model in flash storage rather than the much smaller pool of working memory. Using a technique its researchers call Instruction-Following Pruning, the model makes routing decisions once per prompt, loading only a small set of “expert” parameters into memory, between 1 and 4 billion at a time, while keeping a core of shared experts always on.</p> </blockquote> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Aaaaaaaaaeeeee\"> /u/Aaaaaaaaaeeeee </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vewa3t/special_architecture_in_afm3_20b_instruction/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vewa3t/special_architecture_in_afm3_20b_instruction/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "bdf7bba0b75b1dbd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New DSv4 Flash Doom Loop in Q8? Llama.cpp Vulkan",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf51z2/new_dsv4_flash_doom_loop_in_q8_llamacpp_vulkan/",
+    "published": "2026-08-04T09:06:54+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf51z2/new_dsv4_flash_doom_loop_in_q8_llamacpp_vulkan/\"> <img alt=\"New DSv4 Flash Doom Loop in Q8? Llama.cpp Vulkan\" src=\"https://preview.redd.it/z6p3z1n1obhh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b8095198ad9d51984691b2a0f2b8e521fab9a709\" title=\"New DSv4 Flash Doom Loop in Q8? Llama.cpp Vulkan\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Based on what everybody has been saying about this, I feel like I must've done something wrong. It was doing like 2 or 3 &quot;Need maybe&quot; in a row before meaningful stuff for a while, then got stuck in the loop. Using llama.cpp vulkan version 10216 (the latest from AUR); do I have to build the latest from GitHub directly to get it to work right for this model? Two 7900XTX (48GB total) + 9800X3D + 192GB 4000MT/s RAM. Here is my launch command:</p> <pre><code>llama-server --host localhost --port 8080 \\ -m /home/connor/AI/LLM/Models/DSV4-Flash/DeepSeek-V4-Flash-0731-UD-Q8_K_XL-00001-of-00005.gguf \\ -np 1 \\ -fa on \\ -ngl 999 \\ --ctx-size 500000 \\ --chat-template-kwargs '{&quot;reasoning_effort&quot;:&quot;max&quot;}' \\ --temp 1 \\ --top-p 0.95 \\ --threads 16 \\ --n-cpu-moe 35 \\ --load-mode mmap+mlock \\ -dev Vulkan0,Vulkan1 </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/KingCpzombie\"> /u/KingCpzombie </a> <br /> <span><a href=\"https://i.redd.it/z6p3z1n1obhh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf51z2/new_dsv4_flash_doom_loop_in_q8_llamacpp_vulkan/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
   }
 ]

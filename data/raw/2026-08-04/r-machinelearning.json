@@ -8,5 +8,65 @@
     "published": "2026-08-03T23:52:25+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hellooo I'm just a guy that learned about ML the past year pursuing an obsession: catch a model making things up the instant it commits to its first token. One forward pass, frozen model, before you see any text.</p> <p>I fit four families of internal signals (attention shape, residual motion, readout geometry, confidence — 29 total), let an honest selector pick one per model, and pre-registered everything before the data existed. Twice.</p> <p>Run 1 — 2 tasks, 10 models (20 deployments):</p> <p>- Geometry-only detector clears its pre-registered bar: 18/20 (needed ≥17). Bolt on the model's own confidence and you get the same 18/20 — same two misses, zero rescued — so the stricter &quot;confidence covers more&quot; claim (bar ≥19) is falsified. The model's confidence is redundant with the geometry.</p> <p>- No universal best signal — 12 different signals win across the 18 working cases, so the top pick is per model+task. But a universal floor: one fixed combo, calibrated on nine models and tested on the tenth — each pass excludes one model and scores that excluded model, rotating through all ten. Still beats chance on 9/10 (ANLI) and 10/10 (TriviaQA).</p> <p>Run 2 — a separate 6-task extension, incl. HaluEval-QA (spotting hallucinated answers):</p> <p>- Calibrate per model on the new task: 10/10 beat chance.</p> <p>- The one drop-in detector I pre-registered — fixed signal, fixed sign, applied blind — 6/10. The four misses don't lose the signal; they read it backwards (AUROC as low as 0.17). Same geometry, inverted sign.</p> <p>It's a universal fitting procedure and an above-chance floor — not one shippable detector. Even the sign has to be set per model.</p> <p>Every registered score matrix is public; both pre-registered verdicts re-derive from them with zero model inference (python stage_b/verify_endpoints.py, no GPU).</p> <p>Please find the hole.</p> <p>Paper: <a href=\"http://furnace.baby/cc-paper\">furnace.baby/cc-paper</a> · Code…",
     "fetched_at": "2026-08-04T00:22:38.443467+00:00"
+  },
+  {
+    "id": "57d41cd18c5eb173",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "The Downsides of LLM-Generated Peer Reviews [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vf4zjz/the_downsides_of_llmgenerated_peer_reviews_d/",
+    "published": "2026-08-04T09:03:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Having used LLMs to assist with reviews, and also having received reviews that appear to rely heavily on LLM-generated text, I have noticed two recurring problems.</p> <p><strong>1. The endless search for uncontrolled variables</strong></p> <p>LLMs are very good at identifying additional variables that were not explicitly controlled. The problem is that many of these variables have little realistic chance of changing the paper’s main conclusion.</p> <p>For any experiment, it is possible to generate an almost unlimited list of potential confounders. Suppose a study finds that trees treated with fertilizer A grow better than trees treated with fertilizer B. An LLM can ask whether rainfall was perfectly controlled, whether the distribution of grass around the trees was considered, or whether wind, temperature, soil microorganisms, and countless other factors were isolated.</p> <p>Each question may look logically valid in isolation. But the real issue is not whether a variable exists. The issue is whether it is sufficiently important and plausible to threaten the conclusion.</p> <p>LLMs are generally poor at making this prioritization. They often convert minor residual uncertainty into what sounds like a serious methodological weakness.</p> <p>This becomes especially harmful when reviewers copy such outputs directly into their reviews without independently assessing their importance. Authors are then forced to spend the rebuttal addressing an endless series of technically possible but practically insignificant concerns.</p> <p>A review should not ask whether every imaginable variable has been controlled. It should ask whether the remaining uncertainty materially weakens the central claim.</p> <p><strong>2. LLM reviews are often overly abstract</strong></p> <p>Another common problem is criticism at the level of an entire research field rather than a specific prior method.</p> <p>For example, an LLM may claim that a proposed method is “no…",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "817de666141a8399",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "A question on ICLR and NeurIPS deadlines, and OpenReview [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vf747o/a_question_on_iclr_and_neurips_deadlines_and/",
+    "published": "2026-08-04T11:00:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>After a very silent discussion period, we are in a very confused state with regards to NeurIPS, and really unsure what to make of everything. We do not wish to withdraw the submission since we have no idea what the reviewers and AC think of the paper, having deserted the conversation after a hopeful set of initial reviews. As of currently, ICLR abstract submission deadline is before the NeurIPS results announcement. Are we allowed to resubmit as an ICLR abstract, or will OpenReview flag this and consider it problematic? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ihatesalad1\"> /u/ihatesalad1 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vf747o/a_question_on_iclr_and_neurips_deadlines_and/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vf747o/a_question_on_iclr_and_neurips_deadlines_and/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "c61db90e00cbf745",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Automated Plagiarism with LLM-remixers [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vf623l/automated_plagiarism_with_llmremixers_d/",
+    "published": "2026-08-04T10:04:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>An author puts together a number of papers he likes, especially adds the .tex files from arxiv, tells the LLM to look for gaps in the papers, commented out material, and remix them, while avoiding syntactic overlap.</p> <p>The result is a paper that will pass arxiv's syntactic overlap checks, and can be claimed as novel during a submission.</p> <p>This has happened many times already, and we are now arguing against LLM-augmented plagiarists.</p> <p>Welcome to the new age of automated academic ethics collapse.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/examachine\"> /u/examachine </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vf623l/automated_plagiarism_with_llmremixers_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vf623l/automated_plagiarism_with_llmremixers_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "cbad50745d29f2dc",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Missed EMNLP commitment deadline, what can be done? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1veyvev/missed_emnlp_commitment_deadline_what_can_be_done/",
+    "published": "2026-08-04T03:25:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Asking for a friend:</p> <p>We submitted our paper to ARR May 2026 and got decent scores from the reviewers - 2.5,3,3.5,4. The meta-reviewer gave an overall of 3.5.</p> <p>However, we missed the deadline to commit our work to EMNLP! On our Saturday (we live in the eastern half of the globe), we saw the EMNLP 2026 page on open review with deadline set as Aug3, 11:59PM UTC-0. Apparently, a mail had been sent by ARR on our Sunday regarding committing our work to EMNLP but we didn’t check our mail on the holiday and when we logged in to commit our work on Monday - BOOM - deadline was Aug3 11:59 AM. Yes it’s our fault that we should have checked the mailbox but at the same time...the Open Review page just switched the deadlines.</p> <p>We have written mails to Program Chairs and some workflow chairs. like 1 hour after the newer deadline on the Open Review page ended. I wonder whether some help will be extended because of the thousands of papers that would already be in their buckets. Does anyone have any idea about what can be done or if they faced this previously and it was resolved somehow?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Happy_Today_3288\"> /u/Happy_Today_3288 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1veyvev/missed_emnlp_commitment_deadline_what_can_be_done/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1veyvev/missed_emnlp_commitment_deadline_what_can_be_done/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "8cac0d02183c5d09",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "\"Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation\", Gladstone et al. 2026 [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vf6r6f/explorative_modeling_unlocking_a_third/",
+    "published": "2026-08-04T10:42:09+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vf6r6f/explorative_modeling_unlocking_a_third/\"> <img alt=\"&quot;Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation&quot;, Gladstone et al. 2026 [R]\" src=\"https://external-preview.redd.it/q3evP6JeDpAC2MdSQHWYxnCYTqbJkElIQsLFqVSdkss.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de730fbf7ecace6df0036b21470c16a2d4feacfb\" title=\"&quot;Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation&quot;, Gladstone et al. 2026 [R]\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Benlus\"> /u/Benlus </a> <br /> <span><a href=\"/r/mlscaling/comments/1vdgvcl/explorative_modeling_unlocking_a_third/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vf6r6f/explorative_modeling_unlocking_a_third/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "0bf1d8623745b449",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Do ACs also give scores? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vezds9/do_acs_also_give_scores_d/",
+    "published": "2026-08-04T03:51:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>This is my first time submitting to NeurIPS.<br /> Are ACs also supposed to give ratings during the Phase 2 (author-reviewer discussion session)? </p> <p>I have received the meta-review, but have not received any comments from the AC yet, and was wondering whether this is the standard!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Living_Interview_638\"> /u/Living_Interview_638 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vezds9/do_acs_also_give_scores_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vezds9/do_acs_also_give_scores_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T12:03:22.487946+00:00"
   }
 ]
