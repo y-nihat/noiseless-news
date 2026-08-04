@@ -18,5 +18,15 @@
     "published": "2026-08-03T20:23:11+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>In this paper, the authors tackle continued pretraining without the risk of catastrophic forgetting, by identifying parameters which can safely be changed without risking identified concepts, and freezing the rest:</p> <p><a href=\"https://arxiv.org/abs/2604.19089v1\">https://arxiv.org/abs/2604.19089v1</a></p> <p>Current practice is to mix new datasets into comprehensive datasets to facilitate pretraining without catastrophic forgetting, which works but at the cost of an order of magnitude or more higher training costs (since it is not only training on the new data, but also on old data which reinforces the existing knowledge/skills).</p> <p>The authors' method might render mixing new data into comprehensive data unnecessary, because the model could be trained on only the new data, without risking old knowledge.</p> <p><strong>Edited:</strong> Fixed typo</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ttkciar\"> /u/ttkciar </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veotzv/paper_towards_scalable_lifelong_knowledge_editing/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1veotzv/paper_towards_scalable_lifelong_knowledge_editing/\">[comments]</a></span>",
     "fetched_at": "2026-08-04T00:22:38.443467+00:00"
+  },
+  {
+    "id": "defc2fe58505aaaa",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Max: Oneshots, one of the few model that nailed aquarium break simulation alongside opus",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vevd3g/qwen38max_oneshots_one_of_the_few_model_that/",
+    "published": "2026-08-04T00:46:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vevd3g/qwen38max_oneshots_one_of_the_few_model_that/\"> <img alt=\"Qwen3.8-Max: Oneshots, one of the few model that nailed aquarium break simulation alongside opus\" src=\"https://preview.redd.it/9rscxms399hh1.png?width=140&amp;height=132&amp;auto=webp&amp;s=26b5089ad1922337aab26c49f7b010ab9ca98709\" title=\"Qwen3.8-Max: Oneshots, one of the few model that nailed aquarium break simulation alongside opus\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Qwen3.8-Max oneshots across 35 prompts <a href=\"https://oneshotlm.com/model/qwen-qwen3-8-max/\">https://oneshotlm.com/model/qwen-qwen3-8-max/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kms_dev\"> /u/kms_dev </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vevd3g\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vevd3g/qwen38max_oneshots_one_of_the_few_model_that/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T00:57:38.230089+00:00"
   }
 ]
