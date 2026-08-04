@@ -348,5 +348,15 @@
     "published": "2026-08-04T20:15:40+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve been running a fairly opinionated evaluation loop on ~35B A3B/MoE-class models for coding over the past few months. Not synthetic benchmarks: actual dev workflows, iterative debugging, refactoring passes, and failure recovery.</p> <p>Here’s where things stand for me:</p> <p><strong>Qwen 3.6 (35B A3B via oMLX)</strong><br /> This was my baseline. Strong out of the gate: good code synthesis, decent reasoning depth, and acceptable consistency.<br /> But over time, a few patterns became clear:</p> <ul> <li>Tends to “hallucinate confidence” in edge cases</li> <li>Can drift during longer chains (especially multi-file reasoning)</li> <li>Some recurring logical blind spots that show up under stress</li> </ul> <p>Still solid, but not flawless.</p> <p><strong>Ornith 1.0</strong><br /> On paper? Extremely compelling. Benchmarks look great and yes, it <em>can</em> be great.</p> <p>In practice:</p> <ul> <li>Overthinking is real (token burn is high for simple tasks)</li> <li>Gets stuck in reasoning loops more often than expected</li> <li>Surprisingly, many of the same failure &quot;coding task&quot; I saw in Qwen 3.6 are still there</li> </ul> <p>It feels like a “smarter but less decisive” version of the same lineage.</p> <p><strong>KAT Coder 2.5 Dev (last ~48h)</strong><br /> This one caught me off guard.</p> <p>So far:</p> <ul> <li>More <em>decisive</em> outputs (less rambling, faster convergence)</li> <li>Better performance in my real-world coding benchmarks</li> <li>Fewer of the recurring issues I’ve seen in both Qwen and Ornith</li> <li>Doesn’t overthink (that I'm not sure is so good), but still lands correct solutions more often</li> </ul> <p>It’s early, but this is the first time I’ve felt a clear <em>practical</em> step forward rather than a lateral move.</p> <p><strong>If you’re actively running local models for</strong> <strong><em>serious coding workloads</em></strong> <strong>(not demos):</strong></p> <ul> <li>What are you using…",
     "fetched_at": "2026-08-04T23:16:19.038052+00:00"
+  },
+  {
+    "id": "3171bf5d6443099e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "White House AI Guidelines Exempt U.S. Open Models From Government Review",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfqqdb/white_house_ai_guidelines_exempt_us_open_models/",
+    "published": "2026-08-04T23:35:49+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/realmvp77\"> /u/realmvp77 </a> <br /> <span><a href=\"https://www.wsj.com/tech/ai/white-houses-ai-guidelines-exempt-u-s-open-models-from-government-review-74924eb8\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfqqdb/white_house_ai_guidelines_exempt_us_open_models/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T23:51:18.930613+00:00"
   }
 ]
