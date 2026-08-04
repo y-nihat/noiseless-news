@@ -1,0 +1,19 @@
+{
+  "slug": "zenity-series-c-125m-ai-agent-security",
+  "title": "AI-agent security startup Zenity raises $125 million Series C",
+  "status": "published",
+  "first_seen": "2026-08-03",
+  "published_at": "2026-08-03",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+    "https://fortune.com/2026/08/03/softbank-hitachi-lg-back-zenitys-125-million-round-to-police-ai-agents"
+  ],
+  "follows": null,
+  "watch": [
+    "Whether any independent audit of the self-reported revenue-tripling figures surfaces"
+  ],
+  "notes": [
+    "2026-08-04 c4: New standalone story. Candidate surfaced and dedup-checked clean in cycle 3's triage (techmeme.json sweep); re-checked clean before opening this cycle (exit 0, zero matches). Business claim type, >=2 independent sources bar met via CTech/Calcalist and Fortune, each carrying distinct on-record quotes not present in the other (wire-exclusive check applied -- Businesswire press release attempted but timed out, not used, not needed). Adversarial search for denial/dispute/delay found nothing. style-gate: zenity-series-c-125m-ai-agent-security EN pass / TR pass (falsifiable headline, standalone TL;DR, no padding, Turkish mirrors structure)."
+  ]
+}

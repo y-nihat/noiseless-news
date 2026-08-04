@@ -1,0 +1,51 @@
+{
+    "slug": "zenity-series-c-125m-ai-agent-security",
+    "checked_at": "2026-08-04T00:32:00+00:00",
+    "method": "Verifier and adversarial falsifier passes run this cycle by the drafting agent, applying policy/verification.md §5 (business claim type, >=2 independent Tier<=2 sources required) and the wire-exclusive check against the swarm of outlets covering the same announcement.",
+    "origin_items": [
+        "Surfaced in cycle 3's triage (2026-08-03 23:50-23:56 UTC) via techmeme.json; dedup-checked clean at that point. Opened for full verification this cycle (cycle 4)."
+    ],
+    "claims": [
+        {
+            "text": "Zenity raised a $125 million Series C round led by Norwest Venture Partners, announced 3 August 2026, taking its total funding to about $185 million",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via two independent sources with distinct, non-overlapping quotes: CTech/Calcalist (Kliger quote on technical differentiation, total-funding figure, revenue detail) and Fortune (separate Kliger quote on agent monitoring, SoftBank CISO Tadashi Iida quote). Both independently report the same $125M/Norwest/~$185M-total figures with no discrepancy -- satisfies the >=2 independent sources bar. A BusinessWire press-release fetch was attempted but timed out; not used as a source, not needed given the two independent outlets already meet the bar.",
+            "evidence": [
+                "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+                "https://fortune.com/2026/08/03/softbank-hitachi-lg-back-zenitys-125-million-round-to-police-ai-agents"
+            ]
+        },
+        {
+            "text": "New investors SoftBank Vision Fund 2, Hitachi Ventures, and LG Technology Ventures joined the round, alongside returning investors including Qumra Capital, Vertex Ventures, Third Point Ventures, DTCP, and Intel Capital",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Investor list consistent across both independent sources; Fortune additionally carries an on-record quote from SoftBank's own CISO confirming SoftBank's participation independent of the company's framing.",
+            "evidence": [
+                "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+                "https://fortune.com/2026/08/03/softbank-hitachi-lg-back-zenitys-125-million-round-to-police-ai-agents"
+            ]
+        },
+        {
+            "text": "Zenity says annual revenue has tripled in each of the past two years and is on track to triple again this year",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Company-reported figure via CTech, not independently audited; presented in the article as a company claim. Only one of the two sources carries this specific figure (Fortune does not disclose revenue), so evidence is [1] only for this claim.",
+            "evidence": [
+                "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe"
+            ]
+        },
+        {
+            "text": "Zenity plans to use the funds to expand its platform, grow its Zenity Labs research division, and accelerate international expansion in Europe and Asia-Pacific",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Use-of-funds detail reported consistently by both independent sources.",
+            "evidence": [
+                "https://www.calcalistech.com/ctechnews/article/b1ahbbcbfe",
+                "https://fortune.com/2026/08/03/softbank-hitachi-lg-back-zenitys-125-million-round-to-police-ai-agents"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH as confirmed. Adversarial search for 'Zenity funding denied OR disputed OR delayed Series C 2026' turned up no contradicting reports -- all results independently corroborate the $125M/Norwest/3 August 2026 figures. dedup-check returned zero matches (exit 0, empty matches array) -- no coincidental or genuine overlap with any existing article or ledger entry. Valuation was not disclosed by either source and is correctly omitted from the article rather than estimated.",
+    "gaps_closed_from_watching_state": []
+}
