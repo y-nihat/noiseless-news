@@ -128,5 +128,215 @@
     "published": "2026-08-04T09:06:54+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf51z2/new_dsv4_flash_doom_loop_in_q8_llamacpp_vulkan/\"> <img alt=\"New DSv4 Flash Doom Loop in Q8? Llama.cpp Vulkan\" src=\"https://preview.redd.it/z6p3z1n1obhh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b8095198ad9d51984691b2a0f2b8e521fab9a709\" title=\"New DSv4 Flash Doom Loop in Q8? Llama.cpp Vulkan\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Based on what everybody has been saying about this, I feel like I must've done something wrong. It was doing like 2 or 3 &quot;Need maybe&quot; in a row before meaningful stuff for a while, then got stuck in the loop. Using llama.cpp vulkan version 10216 (the latest from AUR); do I have to build the latest from GitHub directly to get it to work right for this model? Two 7900XTX (48GB total) + 9800X3D + 192GB 4000MT/s RAM. Here is my launch command:</p> <pre><code>llama-server --host localhost --port 8080 \\ -m /home/connor/AI/LLM/Models/DSV4-Flash/DeepSeek-V4-Flash-0731-UD-Q8_K_XL-00001-of-00005.gguf \\ -np 1 \\ -fa on \\ -ngl 999 \\ --ctx-size 500000 \\ --chat-template-kwargs '{&quot;reasoning_effort&quot;:&quot;max&quot;}' \\ --temp 1 \\ --top-p 0.95 \\ --threads 16 \\ --n-cpu-moe 35 \\ --load-mode mmap+mlock \\ -dev Vulkan0,Vulkan1 </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/KingCpzombie\"> /u/KingCpzombie </a> <br /> <span><a href=\"https://i.redd.it/z6p3z1n1obhh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vf51z2/new_dsv4_flash_doom_loop_in_q8_llamacpp_vulkan/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "f9a662d7a34500ed",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Kimi K3 full model running on 16x GB10 cluster at 20+tps",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfl525/kimi_k3_full_model_running_on_16x_gb10_cluster_at/",
+    "published": "2026-08-04T19:56:16+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfl525/kimi_k3_full_model_running_on_16x_gb10_cluster_at/\"> <img alt=\"Kimi K3 full model running on 16x GB10 cluster at 20+tps\" src=\"https://preview.redd.it/x4w1912fyehh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=8280c2baf350c6319c3be3beea76678c96e14967\" title=\"Kimi K3 full model running on 16x GB10 cluster at 20+tps\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Kimi K3 full model running on 16x GB10 cluster at 20+tps average (llama-benchy coherent corpus) 38tps peak, 750tps prefill. This is the first run of full k3 with dspark on my cluster. I will be doing some tests and try tp speed this up. As soon as it looks ready I'll publish the vllm image and instructions.<br /> <a href=\"https://forums.developer.nvidia.com/t/full-kimi-k3-running-on-16x-gb10-cluster/379174\">https://forums.developer.nvidia.com/t/full-kimi-k3-running-on-16x-gb10-cluster/379174</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ciprianveg\"> /u/ciprianveg </a> <br /> <span><a href=\"https://i.redd.it/x4w1912fyehh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfl525/kimi_k3_full_model_running_on_16x_gb10_cluster_at/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "b18ce03996af175e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Hugging Face CEO says China is winning the AI race and dominating on open models",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfj3q7/hugging_face_ceo_says_china_is_winning_the_ai/",
+    "published": "2026-08-04T18:42:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfj3q7/hugging_face_ceo_says_china_is_winning_the_ai/\"> <img alt=\"Hugging Face CEO says China is winning the AI race and dominating on open models\" src=\"https://external-preview.redd.it/X43RCUrRgExXOmrOtPv409kNTPwuLEekdte1dsrk6XE.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=e268e74f4e0a12e64c5b00d4dcad14acdcaf6c40\" title=\"Hugging Face CEO says China is winning the AI race and dominating on open models\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>This is something that was spoken here and there, and now it is like writing on the wall.</p> <p>The main additional point is that China has created an independent supply chain. Starting from raw materials and home-made lithography equipment, through their own GPU manufacturing, and to the AI models and training. Plus, there are tons of cheap energy, and it looks like they are also on track to launch the first thermonuclear reactor. I saw a similar pattern with robotics and EVs. The history does not repeat itself, but it rhymes.</p> <p>Does the US have what it takes to turn the tables, or should we just buy the popcorn and enjoy the show?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Miriel_z\"> /u/Miriel_z </a> <br /> <span><a href=\"https://www.cnbc.com/2026/08/03/hugging-face-china-ai-race-open-models.html\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfj3q7/hugging_face_ceo_says_china_is_winning_the_ai/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "bf7db5a32a81115a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "No more SLM open-source??",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfhhpq/no_more_slm_opensource/",
+    "published": "2026-08-04T17:45:56+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfhhpq/no_more_slm_opensource/\"> <img alt=\"No more SLM open-source??\" src=\"https://preview.redd.it/85mvexgsaehh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=1c331492cc43ad54603397e0391849551b5b9a6d\" title=\"No more SLM open-source??\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://x.com/xiong_hui_chen/status/2084695353346117760?s=20\">https://x.com/xiong_hui_chen/status/2084695353346117760?s=20</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Capital-Remove-6150\"> /u/Capital-Remove-6150 </a> <br /> <span><a href=\"https://i.redd.it/85mvexgsaehh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfhhpq/no_more_slm_opensource/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "8fc022b1bcbc7237",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Has anyone tried Mach-1 Additive? 95% of performance of Qwen 3.6 35B while being 10x smaller",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfirld/has_anyone_tried_mach1_additive_95_of_performance/",
+    "published": "2026-08-04T18:30:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfirld/has_anyone_tried_mach1_additive_95_of_performance/\"> <img alt=\"Has anyone tried Mach-1 Additive? 95% of performance of Qwen 3.6 35B while being 10x smaller\" src=\"https://preview.redd.it/7mirtq06jehh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=af17bf17f5155e9b5987d3d150cdd918bb33fb6a\" title=\"Has anyone tried Mach-1 Additive? 95% of performance of Qwen 3.6 35B while being 10x smaller\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Why nobody is talking about this? Seems pretty significant to the community</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MuzafferMahi\"> /u/MuzafferMahi </a> <br /> <span><a href=\"https://i.redd.it/7mirtq06jehh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfirld/has_anyone_tried_mach1_additive_95_of_performance/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "ea96d04953fc40ea",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "SK hynix, In Collaboration With SanDisk, Unveils The New High Bandwidth Flash (HBF) Standard, Helping To Resolve AI Inference Bottlenecks, Targeting Up To 3TB/s Bandwidth",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfa3tq/sk_hynix_in_collaboration_with_sandisk_unveils/",
+    "published": "2026-08-04T13:17:20+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfa3tq/sk_hynix_in_collaboration_with_sandisk_unveils/\"> <img alt=\"SK hynix, In Collaboration With SanDisk, Unveils The New High Bandwidth Flash (HBF) Standard, Helping To Resolve AI Inference Bottlenecks, Targeting Up To 3TB/s Bandwidth\" src=\"https://external-preview.redd.it/7pqBuQhlpjxOLT5l3_EuzyRkeeVDdIpKfU7m7EOfB1Y.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=24a376cdbb8469926677b9f83412cf039a0e78a1\" title=\"SK hynix, In Collaboration With SanDisk, Unveils The New High Bandwidth Flash (HBF) Standard, Helping To Resolve AI Inference Bottlenecks, Targeting Up To 3TB/s Bandwidth\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hopefully this would let us have faster local models....but it will probably be out of our price range. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/giveen\"> /u/giveen </a> <br /> <span><a href=\"https://wccftech.com/sk-hynix-sandisk-high-bandwidth-flash-hbf-standard-3tbs/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfa3tq/sk_hynix_in_collaboration_with_sandisk_unveils/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "7f59b9ae3df9e0cb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Introducing Shieldstral. | Mistral AI",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfj3me/introducing_shieldstral_mistral_ai/",
+    "published": "2026-08-04T18:42:32+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfj3me/introducing_shieldstral_mistral_ai/\"> <img alt=\"Introducing Shieldstral. | Mistral AI\" src=\"https://external-preview.redd.it/GG2Rfthj1s3iiI5DjnT0qs7RgN8Bd8j8vDZXHzJL9xI.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=5111af759174218eae38cae2125346533c088784\" title=\"Introducing Shieldstral. | Mistral AI\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/tengo_harambe\"> /u/tengo_harambe </a> <br /> <span><a href=\"https://mistral.ai/news/shieldstral/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfj3me/introducing_shieldstral_mistral_ai/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "7f2b70d07c5c9855",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "inclusionAI/Ling-3.0-flash weights are up on Hugging Face — MIT, BF16 plus an official FP8",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfdeek/inclusionailing30flash_weights_are_up_on_hugging/",
+    "published": "2026-08-04T15:21:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfdeek/inclusionailing30flash_weights_are_up_on_hugging/\"> <img alt=\"inclusionAI/Ling-3.0-flash weights are up on Hugging Face — MIT, BF16 plus an official FP8\" src=\"https://external-preview.redd.it/N3g5MjI3NzVsZGhoMcRn_3YLezlaMC7Lt9HA6YpCrkWr47gU8Zshhp0Vg1CN.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=064f481150edb8bb9986ccf8c41ee8a60e514cc4\" title=\"inclusionAI/Ling-3.0-flash weights are up on Hugging Face — MIT, BF16 plus an official FP8\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Went public in the last few minutes, both repos ungated.</p> <p>Ling-3.0-flash, BF16, 24 shards, ~255GB</p> <p>Ling-3.0-flash-fp8, official FP8, ~128GB</p> <p>127.5B total, they quote 5.1B active. What jumped out at me in config.json is 512 experts with 8 active per token, which is a lot finer-grained than most of what gets posted here. Arch is BailingMoeV3, model_type bailing_hybrid, custom_code, so same family as Ling-2.6-flash. Thinking is a per-request switch inside the chat template instead of a separate SKU, and it defaults to on.</p> <p>The FP8 landing at ~128GB is the bit I care about. Someone in the thread here last week guessed ~135GB at Q8_0 and that turned out to be close, except this one is official rather than a community quant, so it's a straight download for anyone with a big unified-memory box or a multi-GPU rig.</p> <p>Does anyone know if llama.cpp handles bailing_hybrid yet, or is this vllm and sglang only for now? That's genuinely the thing that decides whether I clear the disk space tonight.</p> <p><a href=\"https://huggingface.co/inclusionAI/Ling-3.0-flash\">https://huggingface.co/inclusionAI/Ling-3.0-flash</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/derspenti\"> /u/derspenti </a> <br /> <span><a href=\"https://v.redd.it/we8sse65ldhh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfdeek/inclusionaili…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "7ffdd0b8ae0b4af3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A llama.cpp PR caches “hot” MoE experts on the GPU — 33 → 56 tok/s reported with 8GB VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfhns3/a_llamacpp_pr_caches_hot_moe_experts_on_the_gpu/",
+    "published": "2026-08-04T17:52:04+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>A new llama.cpp PR (#26563) adds a heatmap that tracks which MoE experts are used most often.</p> <p>Instead of keeping every expert on the GPU or offloading all of them, it caches the frequently selected experts in VRAM while the cold experts continue running on the CPU.</p> <p>The author’s results on Qwen3.6-35B-A3B with 8GB VRAM:</p> <p>Q2_M: 33.25 → 56.0 tok/s (1.68x)</p> <p>Q5_K_P: 17.34 → 35.93 tok/s (2.07x)</p> <p>Autofit enabled with --expert-hot-s -1</p> <p>The negative results are probably more interesting: Qwen3.5-122B-A10B and Laguna-S-2.1 were actually slower with caching enabled.</p> <p>So this clearly isn’t a universal “make MoE faster” switch. My guess is that it only helps when expert reuse is high enough to outweigh the extra tracking and cache-management overhead.</p> <p>Current limitations:</p> <p>CUDA only</p> <p>Only active during single-token decoding</p> <p>Output can vary slightly depending on which experts are cached</p> <p>Still an open PR and not merged into llama.cpp</p> <p>This seems like a useful direction for running larger MoE models on consumer GPUs without destroying them with extremely low quants.</p> <p>Has anyone tested the branch on a 3060, 4060 or another 8–12GB card? I’d especially like to see hit rate and tok/s compared across coding, normal chat and long-context workloads.</p> <p>Source: llama.cpp PR #26563</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BTA_Labs\"> /u/BTA_Labs </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfhns3/a_llamacpp_pr_caches_hot_moe_experts_on_the_gpu/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfhns3/a_llamacpp_pr_caches_hot_moe_experts_on_the_gpu/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "a3d32ea74ae4c886",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Gemma 4 on 500MB",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfeick/gemma_4_on_500mb/",
+    "published": "2026-08-04T16:01:27+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfeick/gemma_4_on_500mb/\"> <img alt=\"Gemma 4 on 500MB\" src=\"https://preview.redd.it/xo71biijsdhh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=667e729cd1d68d0d95c0c5e096562ad30eaf5850\" title=\"Gemma 4 on 500MB\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://x.com/i/status/2084656348617392261\">https://x.com/i/status/2084656348617392261</a></p> <p><a href=\"https://www.reddit.com/r/LLMDevs/s/9oL5ogmE6s\">https://www.reddit.com/r/LLMDevs/s/9oL5ogmE6s</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://i.redd.it/xo71biijsdhh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfeick/gemma_4_on_500mb/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "f5eee0a463f2c829",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A 2.6B model with tool calling and 128K context now runs at 30 tok/s on a phone",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfn9vc/a_26b_model_with_tool_calling_and_128k_context/",
+    "published": "2026-08-04T21:15:16+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfn9vc/a_26b_model_with_tool_calling_and_128k_context/\"> <img alt=\"A 2.6B model with tool calling and 128K context now runs at 30 tok/s on a phone\" src=\"https://preview.redd.it/xxbkpo9jcfhh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=639016f76a3ad4c0a30de00c0dbd6b937336d829\" title=\"A 2.6B model with tool calling and 128K context now runs at 30 tok/s on a phone\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Liquid AI released LFM2.5-2.6B today, and this might be more relevant to local AI than another massive model most people cannot run.</p> <p>The model is only 2.69B parameters, has 128K context, supports tool calling and was post-trained specifically for multi-step agent workflows. The official Q4_K_M GGUF is around 1.67 GB and already works with llama.cpp.</p> <p>Their reported CPU speeds:</p> <p>- 30 tok/s on a phone</p> <p>- 113 tok/s on a Ryzen AI Max+ 395</p> <p>- 220 tok/s on an M5 Max</p> <p>- Under 2.5 GB memory during their tests</p> <p>These are vendor benchmarks, so independent results are obviously needed.</p> <p>The benchmark results are surprisingly competitive for the size:</p> <p>- ToolSandbox: 77.83, compared with 76.44 for Qwen3.5-9B</p> <p>- IFBench: 59.17, compared with 56.47 for Qwen3.5-9B</p> <p>- BFCLv4: 56.88, still behind Qwen3.5-9B at 60.13</p> <p>- LiveCodeBench: 59.41, compared with 69.86 for Qwen3.5-9B</p> <p>So it does not magically replace larger models. Coding and knowledge-heavy work are still weaknesses, and Liquid’s own model card says it is not recommended for agentic coding.</p> <p>But I think this is where small local models actually make sense: not as your smartest assistant, but as cheap worker agents doing extraction, searches, file operations and repetitive tool calls locally. A larger model could handle planning only when the small one gets stuck.</p> <p>The 128K claim also needs real testing. Supporting 128K and running it comfortably on…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "fef3ccc18ac062c3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "LFM2.5-2.6B is out",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfh1sn/lfm2526b_is_out/",
+    "published": "2026-08-04T17:30:34+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Released today, with emphasis on agentic capabilities. I really like their models for simple, high volume tasks (&quot;summarize these gazillion documents&quot;) and their 8b-a1b was my go-to for certain tasks so I'm excited to see how this one performs. There's not enough love for tiny models on this sub. </p> <p><a href=\"https://www.liquid.ai/blog/lfm2-5-2-6b\">https://www.liquid.ai/blog/lfm2-5-2-6b</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Alarming_Positive_59\"> /u/Alarming_Positive_59 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfh1sn/lfm2526b_is_out/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfh1sn/lfm2526b_is_out/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "daa957cfda629046",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "inclusionAI/Ling-3.0-flash · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfdcd7/inclusionailing30flash_hugging_face/",
+    "published": "2026-08-04T15:19:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The Ling-3.0-flash MoE is now open-weighted at 124B A5B params. I know the original announcements were before the Kimi K3, DeepSeek-V4-Flash and Qwen3.8 hype, but this model might still have a good niche for itself due to its sizing. </p> <p>Discussion on the benchmarks are here: <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1v4mltt/benchmarks_antling30flash_a_hybridreasoning_moe/\">https://www.reddit.com/r/LocalLLaMA/comments/1v4mltt/benchmarks_antling30flash_a_hybridreasoning_moe/</a> from almost 2 weeks ago.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/-Cubie-\"> /u/-Cubie- </a> <br /> <span><a href=\"https://huggingface.co/inclusionAI/Ling-3.0-flash\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfdcd7/inclusionailing30flash_hugging_face/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "d551fb3ff005da2c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GPT-OSS has turned one year old today!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfo8be/gptoss_has_turned_one_year_old_today/",
+    "published": "2026-08-04T21:52:28+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>It is one of the best local models ever released, in both 20B and 120B versions. I always come back to it, especially the 120B version. Its only competition is, in my opinion, Qwen 3.5 122B, but that model is much slower (A10B) and has not been released in a local-friendly QAT format (such as MXFP4).</p> <p>Nemotron 3 Super is disappointing; it is close in capability and feels like a GPT-OSS 120B clone with a better architecture. It is also slower (due to being A12B). NVIDIA essentially created a slower GPT-OSS 120B clone.</p> <p>Mistral 4 Small has similar problems. It is definitely not smarter, although it thinks less (for better or worse).</p> <p>OpenAI made a great model, and I hope they release a successor eventually.</p> <p>In the meantime, you may find my attempt at improving the GPT-OSS Jinja template useful. It is primarily based on the Unsloth version (so tool calls work correctly) and incorporates <code>TypeError</code> fixes from <a href=\"https://huggingface.co/openai/gpt-oss-120b/discussions/229\">elsewhere</a>, as well as additional sanity checks and configurable token smuggling protection.</p> <p>I hope someone finds my humble contribution useful:</p> <p><a href=\"https://huggingface.co/arbv/gpt-oss-fixed-jinja-template\">https://huggingface.co/arbv/gpt-oss-fixed-jinja-template</a></p> <p>It's not much, but it's honest work.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/arbv\"> /u/arbv </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfo8be/gptoss_has_turned_one_year_old_today/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfo8be/gptoss_has_turned_one_year_old_today/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "04284e8749e72464",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Llama.cpp PR 8% speed boost",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vf8obs/llamacpp_pr_8_speed_boost/",
+    "published": "2026-08-04T12:16:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Llama.cpp currently uses cpu based sampling for user with mtp enabled. The PR moves sampling to the gpu, which on a 5090 boasts an 8% increase in tok/s for qwen3.6:35b. I tested it on my P40 and observed a 4% increase inference speed boost.</p> <p>Pretty exciting to see 84 tok/s max on a nvidia p40 for me.</p> <p>Backend sampling shows ~4% improvement on Linux + Tesla P40 (sm_61, Pascal):</p> <p><strong>CPU Sampling</strong>: <code>llama-server -m Qwen3.6-35B-A3B-UD-IQ4_NL.gguf --spec-type draft-mtp --seed 42</code></p> <p><code> python3 mtp-bench.py code_python pred= 192 draft= 132 acc= 124 rate=0.939 tok/s=73.1 code_cpp pred= 113 draft= 76 acc= 74 rate=0.974 tok/s=75.9 explain_concept pred= 192 draft= 159 acc= 111 rate=0.698 tok/s=62.4 summarize pred= 192 draft= 167 acc= 107 rate=0.641 tok/s=59.6 qa_factual pred= 192 draft= 159 acc= 111 rate=0.698 tok/s=62.4 translation pred= 119 draft= 92 acc= 73 rate=0.793 tok/s=67.0 creative_short pred= 192 draft= 197 acc= 92 rate=0.467 tok/s=50.7 stepwise_math pred= 192 draft= 133 acc= 124 rate=0.932 tok/s=73.6 long_code_review pred= 192 draft= 155 acc= 113 rate=0.729 tok/s=63.8 </code></p> <p><strong>Backend sampling</strong>: <code>llama-server -m Qwen3.6-35B-A3B-UD-IQ4_NL.gguf --spec-type draft-mtp --seed 42 -bs</code></p> <p><code> python3 mtp-bench.py code_python pred= 192 draft= 132 acc= 124 rate=0.939 tok/s=76.2 code_cpp pred= 113 draft= 76 acc= 74 rate=0.974 tok/s=79.4 explain_concept pred= 192 draft= 159 acc= 111 rate=0.698 tok/s=64.6 summarize pred= 192 draft= 167 acc= 107 rate=0.641 tok/s=61.6 qa_factual pred= 192 draft= 159 acc= 111 rate=0.698 tok/s=64.6 translation pred= 119 draft= 92 acc= 73 rate=0.793 tok/s=69.6 creative_short pred= 192 draft= 197 acc= 92 rate=0.467 tok/s=52.1 stepwise_math pred= 192 draft= 133 acc= 124 rate=0.932 tok/s=76.6 long_code_review pred= 192 draft= 155 acc= 113 rate=0.729 tok/s=65.7 </code></p> <p>Acceptance ratio with both backend and CPU sampling is…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "2e38813ce0717a43",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[Deepseek-V4-Flash-0731] Full 1M context on a single RTX5090 + DDR5 Desktop Setup with VLLM CPU/Ram Offloading, ~800 tps pp & 15+ tps decode [Agentic Coding]",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfbcgx/deepseekv4flash0731_full_1m_context_on_a_single/",
+    "published": "2026-08-04T14:06:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>First of all, obviously I took some help from AI to type this post and this is the topic that enabled me to accomplish all that:</p> <p><a href=\"https://old.reddit.com/r/LocalLLaMA/comments/1veow4b/deepseek_v4flash_284b_moe_at_33_toks_single_68/\">https://old.reddit.com/r/LocalLLaMA/comments/1veow4b/deepseek_v4flash_284b_moe_at_33_toks_single_68/</a></p> <p>This post of mine is based on the link above.</p> <h1>My Hardware:</h1> <ul> <li>RTX 5090 32GB</li> <li>Ryzen 9 9950X3D</li> <li>256GB DDR5-5600</li> <li>Single NUMA node</li> <li>Linux Mint</li> <li>NVIDIA driver 595.71.05</li> <li>CUDA 13.2</li> </ul> <h1>Software</h1> <ul> <li><code>guqiong96/Lvllmds4-x</code></li> <li>vLLM 2.3.9</li> <li><code>lk_moe</code> 2.3.2</li> <li>PyTorch 2.11.0+cu130</li> <li>native DeepSeek-V4-Flash-0731 safetensors checkpoint</li> <li>48 safetensors shards</li> <li>~155.4 GiB checkpoint size</li> </ul> <h1>One fix I needed</h1> <p>During startup, FlashInfer's CUDA IPC helper could accidentally find TileLang's:</p> <p><code>libcudart_stub.so</code></p> <p>instead of the real loaded CUDA runtime.</p> <p>That eventually caused:</p> <p><code>undefined symbol: cudaDeviceReset</code></p> <p>The problem was FlashInfer's <code>find_loaded_library(&quot;libcudart&quot;)</code> doing a substring search over <code>/proc/self/maps</code>.</p> <p>I patched:</p> <p><code>flashinfer/comm/cuda_ipc.py</code></p> <p>so it checks the actual filename instead:</p> <pre><code>def find_loaded_library(lib_name): with open(&quot;/proc/self/maps&quot;) as f: for line in f: if &quot;/&quot; not in line: continue start = line.index(&quot;/&quot;) path = line[start:].strip() filename = path.split(&quot;/&quot;)[-1] if ( filename.startswith(lib_name + &quot;.so&quot;) or filename.startswith(lib_name + &quot;-&quot;) ): return path return None </code></pre> <p>After that, FlashInfer correctly resolves the real libcudart instead of the TileLang stub.</p> <p>This is a local patch a…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "b4ea455dd3a0f560",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Design systems from code alone - Without external images, Ling-3.0-flash generated webpages across Bauhaus, Bohemian, acid design, and more—using CSS gradients, SVG paths, typography, and layout to preserve each visual language.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfem5v/design_systems_from_code_alone_without_external/",
+    "published": "2026-08-04T16:05:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfem5v/design_systems_from_code_alone_without_external/\"> <img alt=\"Design systems from code alone - Without external images, Ling-3.0-flash generated webpages across Bauhaus, Bohemian, acid design, and more—using CSS gradients, SVG paths, typography, and layout to preserve each visual language.\" src=\"https://external-preview.redd.it/aWg0b3hwNzV0ZGhoMUC7aCk5BGmSSynfS9j2aoKMeZY3m4jsKf15Ewcli2ZV.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b0bf1cf18e2c8ce13154a731b7abea69911870f9\" title=\"Design systems from code alone - Without external images, Ling-3.0-flash generated webpages across Bauhaus, Bohemian, acid design, and more—using CSS gradients, SVG paths, typography, and layout to preserve each visual language.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Weights went up today so this is downloadable now, MIT, ~128GB for the official FP8. I ran these on the API before that landed, so treat it as a preview of what you'd be pulling rather than a local benchmark</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AcanthisittaOk1699\"> /u/AcanthisittaOk1699 </a> <br /> <span><a href=\"https://v.redd.it/1sktn165tdhh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfem5v/design_systems_from_code_alone_without_external/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "4d834a36fac0e0ac",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek V4 Flash 2-bit quant is the first model I can run locally that achieves 100% in this SQL benchmark",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfctwf/deepseek_v4_flash_2bit_quant_is_the_first_model_i/",
+    "published": "2026-08-04T15:00:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I really like to use this one SQL benchmark when testing new models. I had another post some time ago with my benchmarks, but I decided to post a new one because of how well Deepseek did. I like the benchmark because it's quick to run, is pretty &quot;real-world&quot; and requires good reasoning to build the correct SQL queries and almost no frontier models can achieve 100%.</p> <p>My old post: <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1s9mkm1/benchmarked_18_models_that_i_can_run_on_my_rtx/\">https://www.reddit.com/r/LocalLLaMA/comments/1s9mkm1/benchmarked_18_models_that_i_can_run_on_my_rtx/</a></p> <p>Benchmark with results from other models: <a href=\"https://sql-benchmark.nicklothian.com\">https://sql-benchmark.nicklothian.com</a> <a href=\"https://github.com/nlothian/llm-sql-benchmark\">https://github.com/nlothian/llm-sql-benchmark</a></p> <p>My setup is dual 3080 20GB GPUs with 96GB RAM and 9800X3D. I managed to run Deepseek V4 Flash with a custom IQ2_M GGUF with some tensors grafted from antirez GGUF and running it on a modified ds4 engine from antirez, getting 300pp and 11-12tg. Mainline llama.cpp gives me only 100pp and 8tg or something like that.</p> <p>To my surprise, Deepseek is the first local model I can realistically run locally that actually did ALL tests correctly. The only models according to the benchmark website that could do this were Opus 4.7 and GPT-5.5.</p> <p>Results together with all my old benches:</p> <p><code> 25: Deepseek-v4-Flash-IQ2_M-grafted 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 24: unsloth/Qwen3.6-27B-MTP-GGUF:Q8_0 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟥🟩🟩 24: unsloth/Qwen3.5-122B-A10B-GGUF:UD-Q4_K_XL 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟥🟩 🟩🟩🟩🟩🟩 23: unsloth/Qwen3.5-122B-A10B-GGUF:Q6_K 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟥🟩 🟥🟩🟩🟩🟩 23: unsloth/Qwen3.5-27B-MTP-GGUF:UD-Q6_K_XL 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟩🟥🟩 🟥🟩🟩🟩🟩 23: DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF:Q4_K_M 🟩🟩🟩🟩🟩 🟩🟩🟩🟩🟩 🟩🟩🟥🟩🟩 🟩🟩🟩🟥🟩 🟩🟩🟩🟩🟩 2…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "58693bb115302454",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Decrease the power limit of your 5090 to at least 480W - the performance penalty for inference is negligible.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfdwox/decrease_the_power_limit_of_your_5090_to_at_least/",
+    "published": "2026-08-04T15:39:31+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I run my inference machine in the living room, so noise and heat output are a significant concern. </p> <p>Ran a quick test using my daily driver model (Qwen 3.6-27b) and at 480W, the card outputs only <strong>2.1%</strong> less t/s in decode and 8.8% in prefill (which is already very fast). Well worth the massive noise reduction, heat output and increased card longevity, IMO. Even 450W would be fine for many use cases, but the output starts dropping off fast (2.1% -&gt; 4.2% for 30W less).</p> <h1></h1> <p>Full data:</p> <h1></h1> <p><strong>Model</strong>: Qwen3.6-27B-Q6_K.gguf</p> <p><strong>Results:</strong></p> <p>| Limit W | Max GPU C | Steady GPU C | Max GPU fan % | Sustained W | Steady clock MHz | Max case RPM | pp t/s | tg t/s | pp % | tg % |</p> <p>|--------:|----------:|-------------:|--------------:|------------:|-----------------:|-------------:|-------:|-------:|-----:|-----:|</p> <p>| 600 | 81 | 74.8 | 59 | 566 | 2818 | 1522 | 3242.9 | 61.5 | 100.0 | 100.0 |</p> <p>| 510 | 75 | 70.1 | 50 | 509 | 2645 | 1367 | 2980.0 | 61.2 | 91.9 | 99.5 |</p> <p>| 480 | 77 | 72.8 | 54 | 480 | 2501 | 1527 | 2863.4 | 60.2 | 88.3 | 97.9 |</p> <p>| 450 | 76 | 73.1 | 52 | 450 | 2283 | 1460 | 2696.4 | 58.9 | 83.1 | 95.8 |</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/WonderfulEagle7096\"> /u/WonderfulEagle7096 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfdwox/decrease_the_power_limit_of_your_5090_to_at_least/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfdwox/decrease_the_power_limit_of_your_5090_to_at_least/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "ba75c718489a452c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Cursor releases their Mixture-of-Kittens megakernel for training MoE models - Claims to nearly double TFLOP/s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfgxh4/cursor_releases_their_mixtureofkittens_megakernel/",
+    "published": "2026-08-04T17:26:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Link: <a href=\"https://cursor.com/blog/mixture-of-kittens\">https://cursor.com/blog/mixture-of-kittens</a></p> <p>GitHub: <a href=\"https://github.com/cursor/mixture-of-kittens\">https://github.com/cursor/mixture-of-kittens</a></p> <p>Seems like a neat way to squeeze more performance out of MoE. I'm sure everyone has a favorite MoE model they'd like to try this with. It just dropped so I'm curious to hear people's opinions on it.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CapnHat\"> /u/CapnHat </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfgxh4/cursor_releases_their_mixtureofkittens_megakernel/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfgxh4/cursor_releases_their_mixtureofkittens_megakernel/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "be599cf9e86c4630",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash 0731 (Q4) now reaches 1,328 tok/s prefill and ~29 tok/s decode on one RTX PRO 6000",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfdt1p/deepseek_v4_flash_0731_q4_now_reaches_1328_toks/",
+    "published": "2026-08-04T15:35:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been working on speeding up DeepSeek-V4-Flash-0731 in Krasis and have now got the long-prompt prefill quite a bit faster on a single RTX PRO 6000 96GB.</p> <p>These are timing-disabled internal Krasis results using INT4 experts. They aren't HTTP round-trip speeds:</p> <table><thead> <tr> <th align=\"left\">Prompt size</th> <th align=\"left\">Prompt Processing</th> </tr> </thead><tbody> <tr> <td align=\"left\">about 1K</td> <td align=\"left\">152 tok/s</td> </tr> <tr> <td align=\"left\">2,043</td> <td align=\"left\">321 tok/s</td> </tr> <tr> <td align=\"left\">8,623</td> <td align=\"left\">906 tok/s</td> </tr> <tr> <td align=\"left\">23,348</td> <td align=\"left\"><strong>1,328 tok/s</strong></td> </tr> <tr> <td align=\"left\">62,403</td> <td align=\"left\"><strong>1,204 tok/s</strong></td> </tr> </tbody></table> <p>Decode after the roughly 1K prompt was 29.4, 28.2 and 28.5 tok/s when generating 50, 100 and 250 tokens. After the 62K prompt it was 19.4 tok/s, as each new token has a lot more context to attend to.</p> <p>Krasis streams the model through limited VRAM for full-GPU prefill, then keeps the hottest experts in VRAM and serves the rest from system RAM during decode. In this configuration it kept 6,440 of 11,008 routed experts resident. No expert pruning occurred.</p> <p>Krasis v1.0.19 can be downloaded here:</p> <p><a href=\"https://github.com/brontoguana/krasis\">https://github.com/brontoguana/krasis</a></p> <p>There is still more to optimise, particularly the prefill speed I think could go higher but I think the speeds are already useful for coding agents which tend to send a lot of context with every request. If anyone tries it on similar hardware let me know how it goes.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mrstoatey\"> /u/mrstoatey </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfdt1p/deepseek_v4_flash_0731_q4_now_reaches_1328_toks/\">[link]</a></span> &#32; <span><a h…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "0480a7a34351b08c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek v4 Flash vs. Qwen3.6-27B, 3.5-122B, and Gemma 4 31B Benchmark",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfhqkm/deepseek_v4_flash_vs_qwen3627b_35122b_and_gemma_4/",
+    "published": "2026-08-04T17:54:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfhqkm/deepseek_v4_flash_vs_qwen3627b_35122b_and_gemma_4/\"> <img alt=\"DeepSeek v4 Flash vs. Qwen3.6-27B, 3.5-122B, and Gemma 4 31B Benchmark\" src=\"https://preview.redd.it/xucnql0lcehh1.png?width=140&amp;height=45&amp;auto=webp&amp;s=ba4a99fb597610c9ecf4c11489b47d2238e306ec\" title=\"DeepSeek v4 Flash vs. Qwen3.6-27B, 3.5-122B, and Gemma 4 31B Benchmark\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Just wanted to share my agentic coding benchmark run of DSv4F 0731 at both High and Low reasoning efforts (not Max)... I ran a 109-question subset of Aider Polyglot (the JS/C++/Python languages), based on the coding that I do most often. This benchmark measures file-editing and diffs in a harness, and gives the model two tries to accomplish the task -- one try blind, then if it fails, it gets another shot after seeing the results of its first attempt.</p> <p>I tracked first try pass rate, second try pass rate, well-formed diffs, # malformed, # of context overflows (60k token limit) and timeouts (1-hour limit including retry) [first image]. I also tracked cost, based on seconds/case, prompt tokens, completion tokens, prefill and decode tokens, and kilotokens/solved question [second image] Finally, I broke down the success rate by language for each model [3rd image].</p> <p>Overall, as expected, Flash on High was the overall winner. However, it wasn't that far ahead, and it outspent the next-best 122B over 5X in tokens to get there. Also, the Qwen models solved a LOT more of the cases on their first try than DS4, which is a surprising find. Overall, I was shocked how well 122B performed. I used the excellent ThinkingCap fine-tune of 27B because I didn't want to die of old age before base 27B finished the benchmark -- in previous coding and knowledge benchmark runs I did to choose my daily driver, 27B and ThinkingCap always performed within the statistical margin of error of each other, but ThinkingC…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
   }
 ]

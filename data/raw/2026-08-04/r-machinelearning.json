@@ -68,5 +68,45 @@
     "published": "2026-08-04T03:51:21+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>This is my first time submitting to NeurIPS.<br /> Are ACs also supposed to give ratings during the Phase 2 (author-reviewer discussion session)? </p> <p>I have received the meta-review, but have not received any comments from the AC yet, and was wondering whether this is the standard!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Living_Interview_638\"> /u/Living_Interview_638 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vezds9/do_acs_also_give_scores_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vezds9/do_acs_also_give_scores_d/\">[comments]</a></span>",
     "fetched_at": "2026-08-04T12:03:22.487946+00:00"
+  },
+  {
+    "id": "11ee57c052abe3d3",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Completely dead NeurIPS review period from both ends? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfm2k9/completely_dead_neurips_review_period_from_both/",
+    "published": "2026-08-04T20:30:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve seen a lot of people whose reviewers went silent after initial reviews, but I am also noting abnormally quiet authors. I ultimately withdrew my paper, but stayed an active reviewer. Out of my batch of 4 papers, one withdrew, one posted a rebuttal, and two have been completely silent. Of the two papers with radio silence, I think one had borderline scores. I was also the only reviewer who responded to the one paper with a rebuttal.</p> <p>Has anyone noticed this abnormally dead review period or did I just get a strange batch? I’m seeing either reviewers just dropping out of the review process or authors completely checking out after initial reviews are released. It’s strange to me to not even withdraw your paper if you’re not rebutting. Is this a new gambling trend of just submitting papers everywhere, and not even sticking around long enough to withdraw the paper?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RevolutionaryPea8272\"> /u/RevolutionaryPea8272 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfm2k9/completely_dead_neurips_review_period_from_both/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfm2k9/completely_dead_neurips_review_period_from_both/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "92d715e825d3ad6d",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS 2026 post-rebuttal score distribution poll [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfi23r/neurips_2026_postrebuttal_score_distribution_poll/",
+    "published": "2026-08-04T18:05:47+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>As the title suggests, because there's no data on Papercopilot yet, and people have been talking about the scores being lower in general than last year, I thought it could be interesting to survey the average score distribution after the rebuttal phase (not considering confidence weights).</p> <p>Very rough and simple poll (I also realize there's a self-selection bias in there). Cast your vote here:</p> <p><a href=\"https://loppy.be/poll/yczuv8yo\">https://loppy.be/poll/yczuv8yo</a></p> <p>Thanks!</p> <p>Edit: the trolls have taken over, never mind any notion of representativeness I guess...</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Zhiend727\"> /u/Zhiend727 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfi23r/neurips_2026_postrebuttal_score_distribution_poll/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfi23r/neurips_2026_postrebuttal_score_distribution_poll/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "00e1f3c298fc5ca7",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Building a new project[P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfnuxw/building_a_new_projectp/",
+    "published": "2026-08-04T21:37:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have a project question.</p> <p>Right now, I am building a webapp for advanced arabic language learners that helps in Nahw (I'rab) which is something related to how Arabic sentences are built. My question is, how do you develop your idea when you know that there are other people out there doing the same thing. Additionally, how do you go beyond the idea that all you will have to do is get an OpenAI API key since ChatGPT is really good at Arabic Nahw </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Freak-1\"> /u/Freak-1 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfnuxw/building_a_new_projectp/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfnuxw/building_a_new_projectp/\">[comments]</a></span>",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "56a3dff1e4ce2640",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Reactive Play: Achieved!! Experimenting with Atari Breakout [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfa9im/reactive_play_achieved_experimenting_with_atari/",
+    "published": "2026-08-04T13:23:38+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Six months ago I started experimenting with PPO and Breakout as a way to learn about Machine Learning and Reinforcement Learning. After a few experiuments just trying to get high scores, it bothered me that everything was a &quot;memorized&quot; script rather than reactive play, like a human would play. Thus began my journey to try and convince PPO to actually track the ball instead of focusing on scoring points. I read a lot of articles and tried a lot of things. After 124 PPO experiments on Atari Breakout, I found that every single model, across sticky actions, cursor wrappers, entropy tuning, dynamics randomization, adversarial bumpers, and everything else, converged to a memorized action sequence, not a reactive ball-tracking policy. The argmax was always a script.</p> <p>The fix wasn't more environment engineering. It was three lines of reward shaping:</p> <p>Directly rewarding the paddle for being horizontally close to the ball during descent. A tiny bonus (0.05 per frame vs 1.0-7.0 per brick) that fires every frame the ball is descending applied during training. During evaluation, the agent plays clean Breakout with no bonus. The behavior transfers!!</p> <p>Every prior approach I tried to penalize scripts by making the environment harder to memorize. PPO always found a way around it: timing-robust scripts, layout-conditioned scripts, noise-tolerant scripts. The optimum was always a script; only the shape changed. Proximity reward changes what the optimum is. A center-hold script gets incidental bonus when the ball passes near center. A reactive tracker gets the maximum bonus on every descent frame. The optimization pressure is unambiguous: track the ball, get more reward.</p> <p>I also made a cool tool to watch the agent work! It's called the &quot;Split-Watcher&quot; (so clever). It shows two instances of Breakout, each being controlled by a separate instance of the same agent. The one of the left is vanilla Breakout. The on…",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
   }
 ]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "9dca5c9f82606bf8",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Introducing Web Search on Amazon Bedrock for foundation model grounding",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-for-foundation-model-grounding/",
+    "published": "2026-08-04T18:39:14+00:00",
+    "summary": "Today, we are introducing the general availability of Web Search on Amazon Bedrock. It is a server-side built-in tool that grounds model responses in current web knowledge. With Web Search, grounding becomes a native capability of Amazon Bedrock, with no third-party vendors to onboard, no external APIs to orchestrate, and no additional third party vendor security reviews to conduct. In this post, we walk through what Web Search on Amazon Bedrock is, why it matters, how to enable it using the OpenAI Responses API, and how to get started with the tool.",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  },
+  {
+    "id": "557b4db933faa065",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Automated web insight extraction with Amazon Bedrock AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/automated-web-insight-extraction-with-amazon-bedrock-agentcore/",
+    "published": "2026-08-04T16:02:21+00:00",
+    "summary": "Extracting insights from dozens of websites by hand quickly becomes overwhelming. This post shows how to build an automated web insight extraction solution with Amazon Bedrock AgentCore Browser, Amazon Bedrock, Amazon OpenSearch Serverless, and AWS Lambda that monitors RSS feeds, renders pages reliably, and makes AI-extracted insights searchable.",
+    "fetched_at": "2026-08-04T22:41:18.934057+00:00"
+  }
+]
