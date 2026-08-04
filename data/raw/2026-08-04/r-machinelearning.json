@@ -1,0 +1,12 @@
+[
+  {
+    "id": "71c7f73d0a9efce9",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "No universal hallucination detector, but a universal floor — pre-registered, 10 models. Come break it. [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1veu3l1/no_universal_hallucination_detector_but_a/",
+    "published": "2026-08-03T23:52:25+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hellooo I'm just a guy that learned about ML the past year pursuing an obsession: catch a model making things up the instant it commits to its first token. One forward pass, frozen model, before you see any text.</p> <p>I fit four families of internal signals (attention shape, residual motion, readout geometry, confidence — 29 total), let an honest selector pick one per model, and pre-registered everything before the data existed. Twice.</p> <p>Run 1 — 2 tasks, 10 models (20 deployments):</p> <p>- Geometry-only detector clears its pre-registered bar: 18/20 (needed ≥17). Bolt on the model's own confidence and you get the same 18/20 — same two misses, zero rescued — so the stricter &quot;confidence covers more&quot; claim (bar ≥19) is falsified. The model's confidence is redundant with the geometry.</p> <p>- No universal best signal — 12 different signals win across the 18 working cases, so the top pick is per model+task. But a universal floor: one fixed combo, calibrated on nine models and tested on the tenth — each pass excludes one model and scores that excluded model, rotating through all ten. Still beats chance on 9/10 (ANLI) and 10/10 (TriviaQA).</p> <p>Run 2 — a separate 6-task extension, incl. HaluEval-QA (spotting hallucinated answers):</p> <p>- Calibrate per model on the new task: 10/10 beat chance.</p> <p>- The one drop-in detector I pre-registered — fixed signal, fixed sign, applied blind — 6/10. The four misses don't lose the signal; they read it backwards (AUROC as low as 0.17). Same geometry, inverted sign.</p> <p>It's a universal fitting procedure and an above-chance floor — not one shippable detector. Even the sign has to be set per model.</p> <p>Every registered score matrix is public; both pre-registered verdicts re-derive from them with zero model inference (python stage_b/verify_endpoints.py, no GPU).</p> <p>Please find the hole.</p> <p>Paper: <a href=\"http://furnace.baby/cc-paper\">furnace.baby/cc-paper</a> · Code…",
+    "fetched_at": "2026-08-04T00:22:38.443467+00:00"
+  }
+]
