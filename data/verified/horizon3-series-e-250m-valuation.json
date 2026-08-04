@@ -1,0 +1,52 @@
+{
+    "slug": "horizon3-series-e-250m-valuation",
+    "checked_at": "2026-08-04T00:35:00+00:00",
+    "method": "Verifier and adversarial falsifier passes run this cycle by the drafting agent, applying policy/verification.md §5 (business claim type, >=2 independent Tier<=2 sources required) and the wire-exclusive check against the swarm of outlets covering the same announcement.",
+    "origin_items": [
+        "Surfaced in cycle 3's triage (2026-08-03 23:50-23:56 UTC) via techmeme.json; dedup-checked clean at that point. Opened for full verification this cycle (cycle 4)."
+    ],
+    "claims": [
+        {
+            "text": "Horizon3 raised a $250 million Series E round at a valuation above $2 billion, announced 3 August 2026, co-led by NightDragon and NEA",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via two independent sources: (1) Horizon3's own press release (horizon3.ai), and (2) TechCrunch's independently reported story with its own quotes from CRO Matt Hartley not present in the press release -- satisfying the >=2 independent sources bar. A swarm of other outlets (betanews, finsmes, citybiz, Help Net Security, Unite.AI, SiliconANGLE, BusinessWire, Forbes) also covered the round; not individually counted where they substantively relay the same press-release figures (wire-exclusive check), though Forbes and SiliconANGLE appear to carry independent framing consistent with the two counted sources and no source contradicted the core figures.",
+            "evidence": [
+                "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+                "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/"
+            ]
+        },
+        {
+            "text": "The new valuation is roughly triple the $650 million Horizon3 was valued at in its Series D round about a year earlier",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Both the press release (\"over a year prior\") and TechCrunch (Series D valuation ~$650M, ~14 months prior) independently report the same prior valuation and comparable timeframe; no discrepancy.",
+            "evidence": [
+                "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+                "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/"
+            ]
+        },
+        {
+            "text": "Horizon3 reports 120% year-over-year growth in annual recurring revenue and more than 7,000 customers",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "120% YoY ARR growth figure and customer count (7,000+ per press release, 7,200-7,300 per TechCrunch -- treated as consistent rounding, not a conflict) both self-reported by the company but independently relayed by TechCrunch's own reporting; labeled as company-reported metrics in the article body, not third-party-audited.",
+            "evidence": [
+                "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+                "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/"
+            ]
+        },
+        {
+            "text": "Horizon3 says the funds will go toward international expansion (including Singapore, Australia, and EMEA) and further developing autonomous attack-and-defense automation",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Stated in Horizon3's own press release and consistent with TechCrunch's independent reporting of the same use-of-funds detail.",
+            "evidence": [
+                "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+                "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH as confirmed. Adversarial search for 'Horizon3 funding denied OR disputed OR delayed Series E' turned up no contradicting reports -- every result independently corroborates the $250M/$2B figures and the 3 August 2026 announcement date. dedup-check produced one moderate match (etched-series-c-10-3b-valuation, score 0.429, no shared source URL) -- read and dismissed as coincidental generic funding-round title similarity; Etched is an unrelated AI-chip company, Horizon3 is an unrelated cybersecurity company. No open litigation, denial, or prior coverage of this round found.",
+    "gaps_closed_from_watching_state": []
+}

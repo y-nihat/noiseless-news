@@ -1,0 +1,19 @@
+{
+  "slug": "horizon3-series-e-250m-valuation",
+  "title": "Cybersecurity startup Horizon3 raises $250 million at $2 billion-plus valuation",
+  "status": "published",
+  "first_seen": "2026-08-03",
+  "published_at": "2026-08-03",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+    "https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/"
+  ],
+  "follows": null,
+  "watch": [
+    "Whether any independent, non-company-reported audit of the 120% ARR growth or 7,000+ customer figures surfaces"
+  ],
+  "notes": [
+    "2026-08-04 c4: New standalone story. Candidate surfaced and dedup-checked clean in cycle 3's triage (techmeme.json sweep); opened for full verification this cycle. dedup-check re-run before opening: one moderate/coincidental match to etched-series-c-10-3b-valuation on generic funding-round title phrasing (score 0.429, no shared source URL) -- read and dismissed, unrelated company and sector (AI chips vs. cybersecurity). Business claim type, >=2 independent sources bar met via Horizon3's own press release plus TechCrunch's independently reported coverage (distinct CRO quotes not in the press release); wire-exclusive check applied against the remaining swarm of outlets relaying the same release. Adversarial search for denial/dispute/delay found nothing. style-gate: horizon3-series-e-250m-valuation EN pass / TR pass (falsifiable headline, standalone TL;DR, no padding, Turkish mirrors structure)."
+  ]
+}
