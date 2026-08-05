@@ -148,5 +148,55 @@
     "published": "2026-08-05T12:08:58+00:00",
     "summary": "EA said its stock has ceased trading and will be delisted from the Nasdaq. Its shareholders will receive $210 in cash per share.",
     "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "05087e8ff2b7a775",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "SpaceX ramps up Tesla Megapack purchases in Q2 to power its AI data centers",
+    "url": "https://www.cnbc.com/2026/08/05/spacex-tesla-megapack-ai-data-centers.html",
+    "published": "2026-08-05T21:32:34+00:00",
+    "summary": "SpaceX is using Tesla's big Megapack backup batteries to help power its Colossus AI data centers in Greater Memphis.",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "ba34aa0493f72062",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Marc Benioff gets a new operating chief, as Salesforce promotes Miguel Milano",
+    "url": "https://www.cnbc.com/2026/08/05/marc-benioff-gets-a-new-coo-as-salesforce-promotes-miguel-milano-.html",
+    "published": "2026-08-05T20:48:20+00:00",
+    "summary": "Salesforce promoted revenue head and former Oracle executive Miguel Milano to role of operating chief.",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "77ee6eceb005d301",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Etsy laying off 12% of staff in bid to streamline business, position for growth",
+    "url": "https://www.cnbc.com/2026/08/05/etsy-layoffs-q2-earnings.html",
+    "published": "2026-08-05T21:22:01+00:00",
+    "summary": "Etsy announced the layoffs along with second-quarter earnings.",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "aaafddabd3008b9a",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Meta debuts first AI coding agent to take on Anthropic and OpenAI",
+    "url": "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html",
+    "published": "2026-08-05T21:03:12+00:00",
+    "summary": "Meta released its first coding agent called Muse Code as the company ramps up its investments in AI models and services to try and take on Anthropic and OpenAI.",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "41631700ad9b1f61",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Microsoft AI exec tells developers to default to OpenAI's top model as part of efficiency push",
+    "url": "https://www.cnbc.com/2026/08/05/microsoft-makes-openai-gpt-5point6-sol-default-in-github-copilot-for-staff.html",
+    "published": "2026-08-05T18:46:39+00:00",
+    "summary": "Microsoft is taking advantage of its intellectual property rights with OpenAI, encouraging employees to use the company's top model.",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
   }
 ]

@@ -228,5 +228,105 @@
     "published": "2026-08-05T14:51:28+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg9jo8/the_session_you_cannot_take_with_you_earendil/\"> <img alt=\"The Session You Cannot Take With You | EARENDIL\" src=\"https://external-preview.redd.it/17Nr-c4wjcN82Pourd9ZsxKx5204Np0uFHLHgU2co9E.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2a1ca59fa7d0764fa9f4985d9b2fff99d9912688\" title=\"The Session You Cannot Take With You | EARENDIL\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MoneyPowerNexis\"> /u/MoneyPowerNexis </a> <br /> <span><a href=\"https://earendil.com/posts/session-portability/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg9jo8/the_session_you_cannot_take_with_you_earendil/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "14c2fcadc0b79c16",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "you can now buy llm's at your local supermarket",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgj0h8/you_can_now_buy_llms_at_your_local_supermarket/",
+    "published": "2026-08-05T20:27:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgj0h8/you_can_now_buy_llms_at_your_local_supermarket/\"> <img alt=\"you can now buy llm's at your local supermarket\" src=\"https://preview.redd.it/jqspfs9u8mhh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=baf9dbf440339de36a4df894fd1a564b216dacfa\" title=\"you can now buy llm's at your local supermarket\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ECrispy\"> /u/ECrispy </a> <br /> <span><a href=\"https://i.redd.it/jqspfs9u8mhh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgj0h8/you_can_now_buy_llms_at_your_local_supermarket/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "76ef5b19229c6b11",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "40% speedup of MoE training with faster megakernel, by cursor, of all people (for B200s)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgio2p/40_speedup_of_moe_training_with_faster_megakernel/",
+    "published": "2026-08-05T20:15:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgio2p/40_speedup_of_moe_training_with_faster_megakernel/\"> <img alt=\"40% speedup of MoE training with faster megakernel, by cursor, of all people (for B200s)\" src=\"https://external-preview.redd.it/vPMqIQmAKqNSK_c65001UHkeR5nt9hEoQGi7ryeksSw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=56d035e7c70365a77847ef360df662d6d7901bad\" title=\"40% speedup of MoE training with faster megakernel, by cursor, of all people (for B200s)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>daily reminder not to trust benchmarks and run it yourself. claimed e2e speedup is ~40%, forwards are ~140% faster</p> <p>I would wager that compared to a naive kernel anyone can write it's more in the range of 10-20% faster e2e in reality, if at all, but hey, it's free and open! Apache 2.0</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dany0\"> /u/Dany0 </a> <br /> <span><a href=\"https://github.com/cursor/mixture-of-kittens\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgio2p/40_speedup_of_moe_training_with_faster_megakernel/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "6a21e9107a8fae80",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Scenema Audio Comes to ComfyUI, Runs on 8GB VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgfmee/scenema_audio_comes_to_comfyui_runs_on_8gb_vram/",
+    "published": "2026-08-05T18:27:14+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgfmee/scenema_audio_comes_to_comfyui_runs_on_8gb_vram/\"> <img alt=\"Scenema Audio Comes to ComfyUI, Runs on 8GB VRAM\" src=\"https://external-preview.redd.it/YnQwb3hrajhubGhoMfDbbs74itHS_b4Z-x5HLPmm6FqiLRjJHI5ifOqNl9Ft.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=0b9768f58798e1f834e81f0fc4b4f1227497508e\" title=\"Scenema Audio Comes to ComfyUI, Runs on 8GB VRAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey everyone!</p> <p>Scenema Audio is now a native ComfyUI custom node. Same model that powers <a href=\"http://scenema.ai\">scenema.ai</a> now quantized so it fits on 8GB VRAM. When we first released it a few months ago as an API and Docker stack, the full precision transformers were too heavy for most people to self-host. That's fixed now.</p> <p>Expressive text-to-speech with zero-shot voice cloning. You describe how the speech should be performed (rage, grief, a child's wonder), optionally provide reference audio for voice identity, and the model generates a performance. Inline stage direction cues like <code>[he laughs softly]</code> or <code>[voice cracks]</code> get performed at that exact spot. Twelve preset voices ship in the dropdown covering accents, ages, and emotional registers.</p> <p>We also dropped the XML prompt format the original release used. Wrapping every performance directive in tags was clunky to write. Inline bracket cues are better-suited for the ComfyUI text editor.</p> <h1>Install</h1> <p><strong>ComfyUI Registry (recommended):</strong> open ComfyUI Manager, Custom Nodes Manager, search &quot;Scenema Audio&quot;, Install, restart.</p> <p><strong>GitHub:</strong></p> <pre><code>cd custom_nodes git clone https://github.com/ScenemaAI/ComfyUI-ScenemaAudio.git pip install -r ComfyUI-ScenemaAudio/requirements.txt </code></pre> <p>Both paths auto-drop the pre-wired workflow into your Workflows sidebar under a <strong>Scenema Audio</strong> folder. Click once to load t…",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "1ea6e9bf945d6a9f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Meta Model, Muse Spark 1.1 Hacked Another Company During Cybersecurity Testing, Breaching Systems and Making Changes to Internal Systems - The Information",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgm2h6/meta_model_muse_spark_11_hacked_another_company/",
+    "published": "2026-08-05T22:25:21+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pscoutou\"> /u/pscoutou </a> <br /> <span><a href=\"https://x.com/firstsquawk/status/2085129137778499741?s=46\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgm2h6/meta_model_muse_spark_11_hacked_another_company/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "8bfb153d09923aae",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Inkling-Small 276B-A12B at ~2.9 tok/s on <10gb memory",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgfuyg/inklingsmall_276ba12b_at_29_toks_on_10gb_memory/",
+    "published": "2026-08-05T18:35:47+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgfuyg/inklingsmall_276ba12b_at_29_toks_on_10gb_memory/\"> <img alt=\"Inkling-Small 276B-A12B at ~2.9 tok/s on &lt;10gb memory\" src=\"https://external-preview.redd.it/dTMzaGk2dG5vbGhoMctJqbS-x_J0wEm4fbWvJ83dxP-C2m3_vANVIfXI0_mj.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=92a096c1c891fcc1a9bfc2af7b182f78c83efe5d\" title=\"Inkling-Small 276B-A12B at ~2.9 tok/s on &lt;10gb memory\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>A follow up to the launch of <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vdbix4/deepseekv4flash_284b_on_53gb_of_memory/\">Mference</a>, it now supports and runs <strong>Inkling-Small 276B-A12B</strong>.</p> <p>Inkling-Small (Thinking Machines, Apache 2.0), from the <code>pipenetwork/Inkling-Small-MLX-4bit</code> conversion: 276B total, ~12B active, <strong>3.4 GB resident set</strong>, ~148 GB on disk.</p> <p><strong>Measured on my M5, 24GB:</strong></p> <table><thead> <tr> <th align=\"left\">Prompt Type</th> <th align=\"left\">Prompt / gen</th> <th align=\"left\">Prefill (excl. load)</th> <th align=\"left\">Decode</th> <th align=\"left\">Peak footprint</th> </tr> </thead><tbody> <tr> <td align=\"left\">short-explanation</td> <td align=\"left\">59 / 416</td> <td align=\"left\">8.4 s</td> <td align=\"left\">2.86 tok/s</td> <td align=\"left\">9.48 GB</td> </tr> <tr> <td align=\"left\">medium-review</td> <td align=\"left\">421 / 560</td> <td align=\"left\">60.1 s</td> <td align=\"left\">2.93 tok/s</td> <td align=\"left\">9.59 GB</td> </tr> <tr> <td align=\"left\">long-synthesis</td> <td align=\"left\">2,785 / 294</td> <td align=\"left\">535.9 s</td> <td align=\"left\">2.56 tok/s</td> <td align=\"left\">9.56 GB</td> </tr> </tbody></table> <p>The same three cases on a 256 GB M3 Ultra hit 5.31–6.92 tok/s.</p> <p>Issues: long prompt prefill is trash (2,785 tokens is almost 9mins to first token), and it's text-only for now.</p> <p>Four model families now: Gemma 4 26B-A4B (~2 GB), Qwen 3.6 35B-A3B (~1.45 GB),…",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "eca3484d32c4dc3a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "bootai",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vginkn/bootai/",
+    "published": "2026-08-05T20:14:54+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vginkn/bootai/\"> <img alt=\"bootai\" src=\"https://external-preview.redd.it/hnkAUjqUTQ6ML-fRygOJ144QxIFteGQQpEcKYin89W8.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9bace40192e46f22bad44a23f970ebdb845b6093\" title=\"bootai\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I was on here a while ago showcasing it. I've stoped playing with it so I'm open sourcing it. I figure I'll let other people play now.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Electrical_Ninja3805\"> /u/Electrical_Ninja3805 </a> <br /> <span><a href=\"https://github.com/dcherrera/bootai\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vginkn/bootai/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "1cdbe1814331dc06",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash 0731 at 10–17 t/s (nothink) on MacBook M5 Pro **64GB***, partly via SSD streaming",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vge4l5/deepseek_v4_flash_0731_at_1017_ts_nothink_on/",
+    "published": "2026-08-05T17:34:25+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Inspired by a post from <a href=\"/u/giveen\">u/giveen</a> I motivated claude (no patinence on my side to work through everything myself) to help me get DS running on my MacBook M5 Pro 64GB and it exceeded my expectations.. because it worked, and at a quite usable generation speed!</p> <p>background: antirez ds4 DwarfStar has a SSD streaming mode: non-routed weights stay resident, the routed experts live partly in a RAM cache and get pulled from the GGUF on cache misses. Since routed experts dominate model size and Mac SSDs are fast, those misses are tolerable. experts and the output head stay Q8_0.. Router, embeddings and the V4 auxiliary blocks stay FP16. </p> <p>(CORRECTED ... :)<br /> git clone <a href=\"https://github.com/antirez/ds4.git\">https://github.com/antirez/ds4.git</a></p> <p>cd ds4<br /> make<br /> ./download_model.sh ds4f-q2<br /> caffeinate ./ds4 -m ./ds4flash.gguf --ssd-streaming --ctx 32768 --nothink</p> <p>let me end up with 10-15-17t/s in my first tries. </p> <p>I am geniunly impressed and fascinated and wanted to share this, hit me up if you have questions but i guess everyone with like &gt;50Gigs of VRAM/unified Memory should get this running with ai help.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/vogelvogelvogelvogel\"> /u/vogelvogelvogelvogel </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vge4l5/deepseek_v4_flash_0731_at_1017_ts_nothink_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vge4l5/deepseek_v4_flash_0731_at_1017_ts_nothink_on/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "f709a82ad31691ce",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Xiaomi-Robotics-1: New robotics model released",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgizzm/xiaomirobotics1_new_robotics_model_released/",
+    "published": "2026-08-05T20:27:27+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Xiaomi-Robotics-1 is a robot foundation model trained on over 100K hours of real-world manipulation trajectories. It is a Vision-Language-Action (VLA) model engineered for out-of-the-box mobile manipulation in unseen environments and efficient adaptation to new tasks.</p> <p>XR-1 follows a two-stage training paradigm inspired by large language models — pre-training for breadth, followed by post-training for alignment. It showcases that pre-training scaling behavior reliably transfers through post-training to real-world robot performance, with no signs of saturation.</p> <p>XR-1 couples a pre-trained VLM (Qwen3-VL) with a Diffusion-Transformer (DiT) via a Mixture-of-Transformers (MoT) — the DiT matches the VLM in layer count but uses a smaller hidden size for faster inference.</p> <p>HugginFace: <a href=\"https://huggingface.co/collections/XiaomiRobotics/xiaomi-robotics-1\">https://huggingface.co/collections/XiaomiRobotics/xiaomi-robotics-1</a></p> <p>GitHub: <a href=\"https://github.com/XiaomiRobotics/Xiaomi-Robotics-1\">https://github.com/XiaomiRobotics/Xiaomi-Robotics-1</a></p> <p>Paper: <a href=\"https://arxiv.org/abs/2607.15330\">https://arxiv.org/abs/2607.15330</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/121507090301\"> /u/121507090301 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgizzm/xiaomirobotics1_new_robotics_model_released/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgizzm/xiaomirobotics1_new_robotics_model_released/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "37b5b68c49e49aa1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek V4 Flash just hit Colibri, does anyone have numbers?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgjtm7/deepseek_v4_flash_just_hit_colibri_does_anyone/",
+    "published": "2026-08-05T20:58:19+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm mosty interested in 128-192GB VRAM with 128-256GB RAM to spare, so SSD streaming is basically not even necessary. Seems only FP4 is supported, so older hardware will likely be slow - no Unsloth GGUF supported either.</p> <p>I'd be curious what people are getting with V100s, R9700s, etc, just to have some comparison.</p> <p>What's prefill like &gt;200k context? Tg/s high enough to support agentic workloads?</p> <p>It's probably wishful thinking, but when I saw the release, my immediate thought was Sonnet 5 level model being &quot;affordable&quot; to consumers.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/schaka\"> /u/schaka </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgjtm7/deepseek_v4_flash_just_hit_colibri_does_anyone/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgjtm7/deepseek_v4_flash_just_hit_colibri_does_anyone/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "3ffcb8044618c2e5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Could we have a --disk-moe or --n-disk-moe like --cpu-moe or --n-cpu-moe so we can use disk/cpu/gpu ?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgldw6/could_we_have_a_diskmoe_or_ndiskmoe_like_cpumoe/",
+    "published": "2026-08-05T21:58:35+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Explicit title, It would be nice to have the ability to have 3 tiers moe offload :( </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/storm1er\"> /u/storm1er </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgldw6/could_we_have_a_diskmoe_or_ndiskmoe_like_cpumoe/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgldw6/could_we_have_a_diskmoe_or_ndiskmoe_like_cpumoe/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
   }
 ]

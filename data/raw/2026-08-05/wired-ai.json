@@ -48,5 +48,25 @@
     "published": "2026-08-05T16:00:00+00:00",
     "summary": "Jeff Dean and other high-profile Google executives have founded Discovery Loop, a startup that will seek AI-powered breakthroughs in everything from drug discovery to chip design.",
     "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "f1e2a9b94851bb20",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "The Most Dangerous AI Hacking Techniques Still Have Humans in the Loop",
+    "url": "https://www.wired.com/story/the-most-dangerous-ai-hacking-techniques-still-have-human-input/",
+    "published": "2026-08-05T19:42:12+00:00",
+    "summary": "Security researcher James Kettle tried to push the limit of AI’s hacking abilities—and discovered how effective it can be when combined with human expertise.",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "121682378bb85dfe",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "AI Hacks Are Bad. AI Worms and Viruses Will Be Worse",
+    "url": "https://www.wired.com/story/ai-agents-could-act-like-computer-viruses-and-worms/",
+    "published": "2026-08-05T18:30:00+00:00",
+    "summary": "Chinese researchers have shown that AI models have the capacity to act like aggressive and adaptive computer viruses.",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
   }
 ]

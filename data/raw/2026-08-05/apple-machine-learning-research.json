@@ -1,0 +1,12 @@
+[
+  {
+    "id": "bf8f6a60ac502b75",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Taming Outlier Tokens in Diffusion Transformers",
+    "url": "https://machinelearning.apple.com/research/taming-outlier-tokens",
+    "published": "2026-08-05T00:00:00+00:00",
+    "summary": "We study outlier tokens in Diffusion Transformers (DiTs) for image generation. Prior work has shown that Vision Transformers (ViTs) can produce a small number of high-norm tokens that attract disproportionate attention while carrying limited local information, but their role in generative models remains underexplored. We show that this phenomenon appears in both the encoder and denoiser of modern Representation Autoencoder (RAE)-DiT pipelines: pretrained ViT encoders can produce outlier representations, and DiTs themselves can develop internal outlier tokens, especially in intermediate layers…",
+    "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  }
+]
