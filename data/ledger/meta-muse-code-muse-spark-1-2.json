@@ -1,0 +1,23 @@
+{
+  "slug": "meta-muse-code-muse-spark-1-2",
+  "title": "Meta releases Muse Code, a terminal coding agent, alongside Muse Spark 1.2",
+  "status": "published",
+  "first_seen": "2026-08-05",
+  "published_at": "2026-08-05",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+    "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html",
+    "https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents"
+  ],
+  "follows": "meta-muse-spark-1-1",
+  "reason": "Published as a follow-up, not an in-place update: dedup-check returned a strong match (0.667) against meta-muse-spark-1-1 (published 2026-07-09), but this is a new product (Meta's first coding agent, not just an API model) and a new model minor version (1.2 vs 1.1), announced a month later -- a new event in the same saga per verification.md section 8.",
+  "watch": [
+    "Independent third-party benchmark (Vals AI, Artificial Analysis) listing for Muse Spark 1.2, once available",
+    "Any response, dispute, or comparative claim from Anthropic or OpenAI",
+    "Whether Muse Code expands beyond macOS/Linux beta or gains a GUI/IDE integration"
+  ],
+  "notes": [
+    "2026-08-05 c3: triaged from fresh techmeme ingest (grep hit on 'anthropic'/'meta'), verified same cycle given a Tier-0 primary source (research.meta.ai) made the announcement claim low-risk within the remaining cycle window. Published EN+TR, editor gate passed both languages."
+  ]
+}

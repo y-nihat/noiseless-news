@@ -1,0 +1,40 @@
+{
+  "slug": "meta-muse-code-muse-spark-1-2",
+  "checked_at": "2026-08-05T23:57:00+00:00",
+  "method": "Single-cycle verification under a tight cycle-deadline window: direct primary-source fetch of Meta's own research blog post, cross-checked against two independent Tier-2 outlets (CNBC, VentureBeat) for the pricing claim, followed by an adversarial search pass for contradictions, benchmark disputes, and independent third-party evaluation. No separate sub-agent dispatch this cycle given time budget; verification and falsification were run as sequential, explicitly adversarial search passes by the same cycle.",
+  "origin_items": [
+    "data/raw/2026-08-05/techmeme.json (Meta Muse Code item, surfaced via 'anthropic'/'meta' keyword grep of fresh ingest)",
+    "data/raw/2026-08-05/cnbc-technology.json"
+  ],
+  "claims": [
+    {
+      "text": "Meta released Muse Code, a terminal coding agent powered by a new Muse Spark 1.2 model, in public beta for macOS and Linux on 5 August 2026, also available through the Meta Model API with expanded global access",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly from Meta's own primary research blog post (research.meta.ai) -- an announcement claim, Tier-0 primary source alone is sufficient. Corroborated by CNBC, Bloomberg, VentureBeat, Engadget, 9to5Mac, AppleInsider in independent search results, all dated 5 August 2026, no date-recycling detected.",
+      "evidence": [
+        "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+      ]
+    },
+    {
+      "text": "Muse Code's pay-as-you-go API pricing is $1.25 per million input tokens and $4.25 per million output tokens (unchanged from Muse Spark 1.1), undercutting comparable Anthropic and OpenAI offerings, with a further-discounted 'contributor' tier for developers who opt in to share usage data",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Business/pricing claim requiring >=2 independent Tier<=2 sources. CNBC (named author Jonathan Vanian) and VentureBeat independently report the same $1.25/$4.25 figures without citing each other; VentureBeat additionally notes the pricing is unchanged from Muse Spark 1.1. Wire-exclusive check: neither figure traces to a single shared press release quote -- both outlets appear to have pulled pricing from Meta's own developer pricing page, which independently satisfies the two-source bar for the same reason the July Muse Spark 1.1 article treated equivalent sourcing as confirmed.",
+      "evidence": [
+        "https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html",
+        "https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents"
+      ]
+    },
+    {
+      "text": "Meta says Muse Spark 1.2 (co-trained with Muse Code) improves on 1.1 in code generation, debugging, codebase understanding and end-to-end workflows, citing its own benchmark charts (Terminal-Bench 2.1, DeepSWE 1.1, Meta Internal Coding Bench) against rival coding agents",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Capability claim resting entirely on Meta's own published benchmark charts, not independently reproduced. Deliberately kept qualitative in the article -- an adversarial search surfaced specific third-party-reported numbers (e.g. a KuCoin-hosted flash item citing Terminal-Bench 2.1 percentages) but kucoin.com is a blocked_evidence_domain (policy/discovery.yaml) and no other outlet independently re-ran the benchmarks themselves within this cycle's search budget, so precise percentages were deliberately excluded rather than cited from a disallowed or unverified secondary source. No Vals AI / Artificial Analysis listing found yet for Muse Spark 1.2 (same-day release) -- article states this plainly rather than citing a search-snippet figure, per the live-fetch rule.",
+      "evidence": [
+        "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+      ]
+    }
+  ],
+  "notes": "Adversarial pass searched specifically for: (1) any dispute/denial from Anthropic or OpenAI -- found none, only comparative coverage; (2) whether this is a repeat/recycled announcement -- ruled out, this is a new product (agent) and new model version (1.2) distinct from the already-published Muse Spark 1.1 story, hence follows: meta-muse-spark-1-1 rather than an in-place update or standalone; (3) independent benchmark figures -- found only vendor-chart-derived numbers relayed by non-registered/blocked outlets, so capability claim stayed vendor-claim with no precise percentages stated. dedup-check run before opening: strong match (score 0.667) against meta-muse-spark-1-1 (published 2026-07-09) -- per verification.md section 8, judged a NEW event in the same product saga (new agent product + new model minor version, same pricing lineage), so published as a follow-up article with follows: meta-muse-spark-1-1, not an in-place update or unlinked standalone. Meta AI Research (research.meta.ai) is an unregistered primary source distinct from the registered 'Meta AI Blog' (ai.meta.com/blog) -- logged to source_candidates.json for registration proposal. 6 web searches/fetches used this cycle, well under the 15-search budget; no usage-limit errors. Verification compressed to fit a ~25-minute cycle-remainder window -- single-pass rather than separate sub-agent dispatch, but both a confirm-oriented and an explicitly adversarial/contradiction-hunting search were run before publishing."
+}
