@@ -32,6 +32,14 @@ sources:
     url: https://www.macrumors.com/2026/07/17/apple-sends-legal-letters-openai/
   - name: 9to5Mac
     url: https://9to5mac.com/2026/07/17/apple-sends-legal-letters-to-former-employees-now-at-openai/
+  - name: OpenAI News — "Apple is getting this wrong"
+    url: https://openai.com/index/apple-is-getting-this-wrong
+  - name: The Decoder — OpenAI's message evidence
+    url: https://the-decoder.com/openai-fires-back-at-apples-trade-secret-lawsuit-with-chat-logs-showing-apple-employees-kept-texting-their-former-colleague/
+  - name: TechCrunch — Apple's injunction filing
+    url: https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/
+  - name: MacRumors — Apple's injunction filing
+    url: https://www.macrumors.com/2026/08/04/openai-posts-public-rebuttal-to-apple/
 claims:
   - text: "Apple filed suit against OpenAI, its Chief Hardware Officer Tang Tan, engineer Chang Liu, and io Products LLC in the U.S. District Court for the Northern District of California on 10 July 2026 (Apple Inc. v. Liu, No. 5:26-cv-07078), alleging trade secret misappropriation and breach of contract"
     type: business
@@ -69,10 +77,23 @@ claims:
     type: business
     verdict: single-source
     evidence: [10, 11]
+  - text: "On 3 August 2026, OpenAI published a blog post, 'Apple is getting this wrong,' sharing iMessage exchanges between Chang Liu and Apple employees after his 22 January 2026 departure — including messages in which Apple staff asked Liu to help locate internal files, and one in which Liu told colleagues, 'this is highly irregular, please remove me from this thread.' OpenAI said the exchanges show an Apple access-management failure, not orchestrated theft, and said Apple's outside counsel confused two OpenAI employees and misrepresented a call with OpenAI's general counsel"
+    type: statement
+    verdict: confirmed
+    evidence: [12, 13]
+  - text: "On 4 August 2026, Apple filed a motion for a preliminary injunction and a separate motion for expedited discovery in Apple Inc. v. Liu, seeking to bar OpenAI and the two named ex-employees from accessing, using, or disclosing Apple's alleged confidential information while the case proceeds; the filing names 11 additional former Apple employees Apple says may be witnesses or otherwise involved. A hearing on the injunction is scheduled for 1 October 2026"
+    type: business
+    verdict: confirmed
+    evidence: [5, 14, 15]
+  - text: "OpenAI called Apple's injunction request 'both based on false information and completely unnecessary' because 'we do not have, nor want, any of their trade secrets,' and said it had offered to work with Apple to resolve the dispute before the lawsuit was filed"
+    type: statement
+    verdict: confirmed
+    evidence: [12, 14]
 updated:
   - "2026-07-14: added OpenAI's first substantive response to the allegations; see Update section"
   - "2026-07-16: added NBC News reporting on a February email exchange between counsel; see Update section"
   - "2026-07-19: added report that Apple sent preservation letters to ~40 former employees now at OpenAI; see Update section"
+  - "2026-08-04: added OpenAI's public rebuttal blog post with shared messages, and Apple's preliminary injunction filing; see Update section"
 ---
 
 ## What happened
@@ -154,3 +175,28 @@ back to that single FT account, with no independent second source or court
 filing confirming the number. OpenAI has not issued a fresh statement about
 the letters specifically — only its earlier general denial that it is "not
 aware of any evidence that this complaint has merit."
+
+## Update, 4 August 2026
+
+OpenAI published a blog post, "Apple is getting this wrong," sharing iMessage
+exchanges between Chang Liu and Apple employees after his 22 January 2026
+departure [12][13]. In the messages, Apple staff ask Liu to help locate
+internal files and decisions; in one exchange, after being added to a group
+chat, Liu tells his former colleagues, "this is highly irregular, please
+remove me from this thread." OpenAI argues the exchanges show an access-
+management failure on Apple's side, not orchestrated theft, and said Apple's
+outside counsel confused two OpenAI employees' names and misrepresented a
+call with OpenAI's general counsel [12][13].
+
+The same day, Apple filed a motion for a preliminary injunction and a
+separate motion for expedited discovery in *Apple Inc. v. Liu*, seeking to
+bar OpenAI and the two named ex-employees from accessing, using, or
+disclosing Apple's alleged confidential information while the case proceeds.
+The filing names 11 additional former Apple employees Apple says may be
+witnesses or otherwise involved, including one who allegedly took
+screenshots of confidential documents about an unannounced Apple product
+before an OpenAI interview. A hearing on the injunction is scheduled for 1
+October 2026 [5][14][15]. OpenAI called the injunction request "both based on
+false information and completely unnecessary" because "we do not have, nor
+want, any of their trade secrets," and said it had offered to work with Apple
+to resolve the dispute before the lawsuit was filed [12][14].
