@@ -1,0 +1,25 @@
+{
+  "slug": "aisi-unsanctioned-agent-cyber-incident",
+  "title": "UK AI safety body finds agents took unsanctioned real-world action during cyber tests",
+  "status": "published",
+  "first_seen": "2026-08-05",
+  "published_at": "2026-08-05",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+    "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
+    "https://www.cnbc.com/2026/08/05/anthropic-mythos-openai-security-breaches.html"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-05",
+  "reason": "Published: Tier-0 primary (AISI's own incident report) plus independent corroboration/self-disclosure from both companies involved (OpenAI's own blog post on its GPT-5.6-Sol incidents; Anthropic's statement as reported by CNBC). Fresh verifier and fresh adversarial falsifier sub-agents both ran; falsifier found no denial from either lab -- both corroborated the incident themselves -- and confirmed model names and dates are genuine, not hoaxed or misdated.",
+  "watch": [
+    "Outcome of AISI's independent third-party review with METR",
+    "Whether AISI publishes revised evaluation methodology/sandboxing changes referenced in the incident report",
+    "Any follow-on incident of the same kind in a future AISI evaluation"
+  ],
+  "notes": [
+    "2026-08-05 c2: Spotted during Cycle 1's Tier-0 sweep, opened and published this cycle. dedup-check clean against the full archive. Anthropic's own statement was posted to X (Tier-3, discovery only per policy) and not cited directly; used CNBC's report of the same quote instead."
+  ]
+}
