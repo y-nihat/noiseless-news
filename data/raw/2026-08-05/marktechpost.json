@@ -1,0 +1,22 @@
+[
+  {
+    "id": "81d4590c9503a4a4",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "NVIDIA Releases Alpamayo 2 Super: A 34B Open Vision-Language-Action Model for Robotaxis and Autonomous Driving Under OpenMDW-1.1",
+    "url": "https://www.marktechpost.com/2026/08/05/nvidia-alpamayo-2-super-open-vla-model-autonomous-driving/",
+    "published": "2026-08-05T08:25:11+00:00",
+    "summary": "<p>NVIDIA released Alpamayo 2 Super, a 34B vision-language-action model for autonomous driving, under OpenMDW-1.1 — a permissive license covering fine-tuning, derivatives and commercial redistribution. It pairs a 32B Cosmos 3 Super Reasoner backbone with a 2.3B diffusion action decoder, scores 79.2 on LingoQA, and emits trajectories, Chain-of-Causation traces, meta-actions, auto-labels and grounded VQA from a single pass.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/05/nvidia-alpamayo-2-super-open-vla-model-autonomous-driving/\">NVIDIA Releases Alpamayo 2 Super: A 34B Open Vision-Language-Action Model for Robotaxis and Autonomous Driving Under OpenMDW-1.1</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "ec3b893d5ed0d353",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "CopilotKit Open Sources Channels SDK: An MIT Licensed Library That Runs Any AG-UI Agent Inside Slack And Microsoft Teams",
+    "url": "https://www.marktechpost.com/2026/08/04/copilotkit-open-sources-channels-sdk/",
+    "published": "2026-08-05T04:43:17+00:00",
+    "summary": "<p>CopilotKit has published the Channels SDK, an MIT licensed library that runs an existing AG-UI agent inside Slack and Microsoft Teams. Version 0.5.0 ships five platform adapters and a documented runtime contract. This breakdown covers the verified deployment paths, the baseline requirements, and the one dependency that is easy to miss</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/04/copilotkit-open-sources-channels-sdk/\">CopilotKit Open Sources Channels SDK: An MIT Licensed Library That Runs Any AG-UI Agent Inside Slack And Microsoft Teams</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  }
+]

@@ -18,5 +18,115 @@
     "published": "2026-08-05T00:19:05+00:00",
     "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/cafedude\"> /u/cafedude </a> <br /> <span><a href=\"https://deepgrove.ai/maple-preview\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfrr5t/maplepreview_20ba1b_ternaryweight_reasoning/\">[comments]</a></span>",
     "fetched_at": "2026-08-05T00:26:18.464754+00:00"
+  },
+  {
+    "id": "13401473620cfbe0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3-TTS voice cloning is now in mainline llama.cpp — the old demo finally became real support",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg0q6r/qwen3tts_voice_cloning_is_now_in_mainline/",
+    "published": "2026-08-05T07:47:51+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg0q6r/qwen3tts_voice_cloning_is_now_in_mainline/\"> <img alt=\"Qwen3-TTS voice cloning is now in mainline llama.cpp — the old demo finally became real support\" src=\"https://preview.redd.it/kxag5u5ehihh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a834e7741f36d18f76c56a1ec7b72dbc96fa82e9\" title=\"Qwen3-TTS voice cloning is now in mainline llama.cpp — the old demo finally became real support\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>People may remember the Qwen3-TTS llama.cpp demo from a few months ago. That PR said it probably wouldn’t be merged because llama.cpp was missing some of the graph and API pieces it needed.</p> <p>A new implementation was merged into master yesterday.</p> <p>What works now:</p> <p>- Qwen3-TTS-12Hz-1.7B-Base in GGUF</p> <p>- WAV or MP3 files as the speaker reference</p> <p>- English, Chinese, German, Italian, Spanish, French, Portuguese, Russian, Japanese and Korean</p> <p>- Audio generation through the llama-tts binary</p> <p>Example:</p> <p>llama-tts -hf ggml-org/Qwen3-TTS-12Hz-1.7B-Base-GGUF \\</p> <p>-p &quot;Hello, this is running locally.&quot; \\</p> <p>--tts-lang en \\</p> <p>--tts-speaker-file speaker.mp3 \\</p> <p>--output out.wav</p> <p>Qwen describes the Base model as capable of cloning a voice from around three seconds of reference audio. I haven’t seen an independent test yet showing whether the llama.cpp version matches the original PyTorch implementation in voice similarity or stability.</p> <p>The interesting part is not that Qwen3-TTS can run locally. Dedicated C++ implementations already existed. It is that voice cloning is now part of mainline llama.cpp, which should make it much easier to add local speech output to projects already built around that runtime.</p> <p>There are still some important limitations:</p> <p>- The merged implementation currently uses llama-tts</p> <p>- The /tts server endpoint is still a draft PR</p> <p>- It only ta…",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "3914e91c2294860b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "China’s Open-Weight Models Will Be Spared US Safety Tests",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfujnc/chinas_openweight_models_will_be_spared_us_safety/",
+    "published": "2026-08-05T02:25:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfujnc/chinas_openweight_models_will_be_spared_us_safety/\"> <img alt=\"China’s Open-Weight Models Will Be Spared US Safety Tests\" src=\"https://external-preview.redd.it/buMtvXv7JIHo_a4-KkqzmFR26G797vzc1IMyTEncDhg.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=64b6682d58d78a0ff018f32d789e79296696f968\" title=\"China’s Open-Weight Models Will Be Spared US Safety Tests\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fallingdowndizzyvr\"> /u/fallingdowndizzyvr </a> <br /> <span><a href=\"https://www.bloomberg.com/news/articles/2026-08-05/china-s-open-weight-models-to-be-spared-us-tests-us-firms-told\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfujnc/chinas_openweight_models_will_be_spared_us_safety/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "8cbb6f864bd4b902",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I updated my localy run benchmark with DeepSeek V4 Flash 0731",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg41ot/i_updated_my_localy_run_benchmark_with_deepseek/",
+    "published": "2026-08-05T10:55:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg41ot/i_updated_my_localy_run_benchmark_with_deepseek/\"> <img alt=\"I updated my localy run benchmark with DeepSeek V4 Flash 0731\" src=\"https://preview.redd.it/6xkzb0cedjhh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=1b77198402fec8a82431a47b575b3ccb07368e6e\" title=\"I updated my localy run benchmark with DeepSeek V4 Flash 0731\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It's the purple cluster on the top left (the good corner...)</p> <p>I'm running the MXFP4 version from Bartoswski with Dspark at 1K t/s prefill and 90 t/s gen (average). I tried different sampling params, you can check the detail.</p> <p>It's very efficient while scoring the best yet.</p> <p>Too bad it does not have vision.</p> <p><a href=\"https://wonderrico.github.io/local_llm_benchmark/benchmark-main.html\">https://wonderrico.github.io/local_llm_benchmark/benchmark-main.html</a></p> <p><a href=\"https://wonderrico.github.io/local_llm_benchmark/benchmark-detail.html\">https://wonderrico.github.io/local_llm_benchmark/benchmark-detail.html</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/WonderRico\"> /u/WonderRico </a> <br /> <span><a href=\"https://i.redd.it/6xkzb0cedjhh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg41ot/i_updated_my_localy_run_benchmark_with_deepseek/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "572b3ca4d99f509d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen Developers' responses from their recent Twitter/X AMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg569y/qwen_developers_responses_from_their_recent/",
+    "published": "2026-08-05T11:51:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg569y/qwen_developers_responses_from_their_recent/\"> <img alt=\"Qwen Developers' responses from their recent Twitter/X AMA\" src=\"https://preview.redd.it/i3gay48ccjhh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=793e0143657dabbb86a7c35605708d14b72b3f0c\" title=\"Qwen Developers' responses from their recent Twitter/X AMA\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Questions &amp; Responses(in <strong>BOLD</strong>) below. </p> <p>Favorite question(s) moved to end of the thread with combined responses(removed duplicates).</p> <p>Be optimistic folks. I'm sure we're getting other models too apart from 27B. And 27B gonna make massive noise on release. (Based on their responses)</p> <p><strong>Tweet thread</strong> : <a href=\"https://xcancel.com/QwenDevs/status/2084102417885585597#m\">https://xcancel.com/QwenDevs/status/2084102417885585597#m</a></p> <p>you guys skipped 27b and 122b last time, can we expect those this time around? Also i can't seem to find crit pit score in the cards.</p> <p><strong>For sure! We’re actually releasing a 27B model very soon. Stay tuned. As for the Crit Pit score, please wait for the official Artificial Intelligence score.</strong></p> <p>Is the 27B just a retrained 3.6 27B? Or is it based off 3.8 bigger brother ?</p> <p><strong>We promise this 27B comes with a whole new level of capability!</strong></p> <p>Is the 100hrs of video understanding an agent swarm that parses sections of the video in parallel and orchestrates some sort of semantic representation graph?</p> <p><strong>Broadly speaking, yes, but not entirely. It is closer to a hierarchical video memory system rather than a traditional agent swarm. Video segments are encoded into a structured textual graph containing scenes, entities, events, and their temporal relationships, enabling retrieval and reasoning across more than 100 hours of content.</strong></p> <p>hey! is there anything special about the…",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "2034324da8a61557",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "VibeVoice 1.5B Running Locally...On an iPhone! Only ~2.2 GB of Memory and Up to 1.28× Real-Time Speed",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfuawi/vibevoice_15b_running_locallyon_an_iphone_only_22/",
+    "published": "2026-08-05T02:14:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfuawi/vibevoice_15b_running_locallyon_an_iphone_only_22/\"> <img alt=\"VibeVoice 1.5B Running Locally...On an iPhone! Only ~2.2 GB of Memory and Up to 1.28× Real-Time Speed\" src=\"https://external-preview.redd.it/b2dyNDM2ZTJzZ2hoMWWLfOC1sv4z5ZN0i22gcRcbkZrWSZXF7M09sVKrxhCB.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9f972004b4b8f5e9a0c6f249a51392b3ca071231\" title=\"VibeVoice 1.5B Running Locally...On an iPhone! Only ~2.2 GB of Memory and Up to 1.28× Real-Time Speed\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I speed up the generation part of the demo in case you get bored 😄</p> <p>I also tested another long-form generation, and the VRAM usage looks stable. The demo is about a minute long, and I posted it on X.</p> <p>This started as a random idea and somehow turned into a full detour from working on the next audio.cpp release. The model was uploaded to the audio.cpp HF repo. I will upload the xcframework later, and then push the code to a branch after release 0.6.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Acceptable-Cycle4645\"> /u/Acceptable-Cycle4645 </a> <br /> <span><a href=\"https://v.redd.it/23bwnqd2sghh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfuawi/vibevoice_15b_running_locallyon_an_iphone_only_22/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "45ead0b864427130",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anyone interested in building a harness-only benchmark?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg40w8/anyone_interested_in_building_a_harnessonly/",
+    "published": "2026-08-05T10:54:23+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>There are a lot of LLM benchmarks but few, if any, harness benchmarks. I am thinking this would be a really good community project to build one.</p> <p>End goal: a leaderboard of harness performance (multiple axis) on a set of diverse real world tasks [1] , grouped by underlying models and reasoning efforts. Anyone can contribute results.</p> <p>The task criteria, measurements, underlying framework et al can be decided by a group rather than a single person.</p> <p>If there is sufficient interest, I will create a discord.</p> <p>Disclosure: I am the maintainer of a coding agent called Dirac (<a href=\"https://github.com/dirac-run/dirac\">https://github.com/dirac-run/dirac</a>) so I will not influence what the final benchmark should look like to avoid any conflict of interest. I just want to make this happen.</p> <p>[1] Diverse real world tasks meaning sufficiently complex tasks that the contributors have encountered, preferably from an opensource repo.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Comfortable-Rock-498\"> /u/Comfortable-Rock-498 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg40w8/anyone_interested_in_building_a_harnessonly/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg40w8/anyone_interested_in_building_a_harnessonly/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "ab8f9e8285a77739",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Building a Fully Local PDF Read-Aloud & PDF-to-Audiobook Desktop App with Kokoro 82M, Qwen, and llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg1dqw/building_a_fully_local_pdf_readaloud/",
+    "published": "2026-08-05T08:26:25+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg1dqw/building_a_fully_local_pdf_readaloud/\"> <img alt=\"Building a Fully Local PDF Read-Aloud &amp; PDF-to-Audiobook Desktop App with Kokoro 82M, Qwen, and llama.cpp\" src=\"https://external-preview.redd.it/bXBrcHM0eTFqaWhoMU8axyHNZKl9k4j8U0jSsnmBd2ab8t14PaJEB5lM2qUn.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a36528f8c1bdb6e2ed45e6450141ba0a3cb75132\" title=\"Building a Fully Local PDF Read-Aloud &amp; PDF-to-Audiobook Desktop App with Kokoro 82M, Qwen, and llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey everyone,</p> <p>I’ve been building Speechfony - a desktop app for reading PDFs (and EPUBs) with offline text-to-speech. Open a document, listen sentence-by-sentence with highlighting, or export selected pages to an MP3. Everything runs locally: Kokoro for speech, and an on-device embedding model for semantic search.</p> <p>I wanted something that didn’t ship my documents to a cloud TTS service, worked offline after the first model download, and felt closer to “listen while you read” than “dump the whole PDF into a generic TTS box.”</p> <p>What works today</p> <ul> <li>PDF + EPUB reading</li> <li>Sentence-level playback with live highlighting</li> <li>Adjustable header/footer margins (so repeating page chrome doesn’t get read aloud)</li> <li>Resume where you left off</li> <li>Semantic search (meaning + keywords), local embeddings</li> <li>Audiobook export to MP3 (desktop only)</li> <li>Hardware acceleration where available (CoreML / DirectML / CUDA)</li> </ul> <p>Expect rough edges. Known gaps I’m already tracking:</p> <ul> <li>Multi-column layouts, tables, code, equations</li> <li>Footnotes / citations, TOC / index pages, captions / sidebars</li> <li>Scanned PDFs (no OCR yet)</li> <li>Non-English / RTL</li> <li>Voice &amp; rate controls are limited</li> <li>Pronunciation of company names / niche technical terms can be wrong (that’s mostly the Kokoro lexicon - as I build a…",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "0d05adb3e2ac1f38",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GPT-X2.5-135M scores 3rd place on Open SLM Leaderboard on Huggingface, Beating Facebook's MobileLLM-R1-140M",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfuo9d/gptx25135m_scores_3rd_place_on_open_slm/",
+    "published": "2026-08-05T02:31:19+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfuo9d/gptx25135m_scores_3rd_place_on_open_slm/\"> <img alt=\"GPT-X2.5-135M scores 3rd place on Open SLM Leaderboard on Huggingface, Beating Facebook's MobileLLM-R1-140M\" src=\"https://external-preview.redd.it/c0xXz1EyZyk12zAd9g0zMtW2wrhssJuuE_valFHMqhw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=56a37fec610308075b2d831a25bc5007b5ca9e89\" title=\"GPT-X2.5-135M scores 3rd place on Open SLM Leaderboard on Huggingface, Beating Facebook's MobileLLM-R1-140M\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Megneous\"> /u/Megneous </a> <br /> <span><a href=\"https://huggingface.co/AxiomicLabs/GPT-X2.5-135M\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfuo9d/gptx25135m_scores_3rd_place_on_open_slm/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "cb683735594f51b0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Thinking of buying more DRAM right now...",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfstpj/thinking_of_buying_more_dram_right_now/",
+    "published": "2026-08-05T01:07:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So I'm looking at <a href=\"https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF\">https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731-GGUF</a> and I realize my 128GB of DRAM just isn't cutting it for this (incredibly powerful) model.</p> <p>If only I had another 64GB, I thought...</p> <p>EVERYBODY is probably thinking that right this second... I hate to say it, but I imagine DRAM prices are about to go through the roof still yet.</p> <p>I hope I'm wrong.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/johnnyApplePRNG\"> /u/johnnyApplePRNG </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfstpj/thinking_of_buying_more_dram_right_now/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfstpj/thinking_of_buying_more_dram_right_now/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "7d5e10f07debeddf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "SLMs & QAT",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg3pxq/slms_qat/",
+    "published": "2026-08-05T10:38:26+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know many labs trying to shrink deployment costs and increase efficiency. While I do think that that is fine and dandy, I do sometimes question why they bother going so small, and yet training with all 16 bits. Wouldn't it be better for labs behind models like Nanbeige, Liquid and Qwen (when focusing on small models, of which the former 2 mentioned do a LOT) to focus on efficient quantization too?</p> <p>I saw LFM2.5 2.6B release today, and was planning to download it and run it at Q8 since that is usually near-lossless, but then I looked at the RAM costs and realized it was pinned at 2.87GB, that's practically 3GB, and I could run a pretty decent QAT-ed model, like Bonsai 27B at a slightly higher cost for much MUCH better performance.</p> <p>Which begs the question about why don't LLM labs post small models with QAT, if they were going for efficiency in size and cost, wouldn't this be it? Is it just inefficient to quantize (where running larger models at lower precision is just better)? Is it more sensitive to quantization (performance drop between a 100B+ and 3B quantized model are different)? Are there diminishing returns in an area I just don't understand?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ComplexType568\"> /u/ComplexType568 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg3pxq/slms_qat/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg3pxq/slms_qat/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "6fb225340d166494",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Intern S2 Mobius",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfv27k/intern_s2_mobius/",
+    "published": "2026-08-05T02:49:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>A Qwen3.5-35B derived model with an interesting architectural difference that results in larger throughput and less token consumption (allegedly):</p> <p><a href=\"https://huggingface.co/internlm/Intern-S2-Mobius\">https://huggingface.co/internlm/Intern-S2-Mobius</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Miserable-Dare5090\"> /u/Miserable-Dare5090 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfv27k/intern_s2_mobius/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfv27k/intern_s2_mobius/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
   }
 ]

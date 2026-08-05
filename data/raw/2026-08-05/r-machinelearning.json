@@ -1,0 +1,62 @@
+[
+  {
+    "id": "31508a0f72b25ba7",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "I Compressed Bad Apple into a 3MB Neural Network [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfrco1/i_compressed_bad_apple_into_a_3mb_neural_network_p/",
+    "published": "2026-08-05T00:01:48+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfrco1/i_compressed_bad_apple_into_a_3mb_neural_network_p/\"> <img alt=\"I Compressed Bad Apple into a 3MB Neural Network [P]\" src=\"https://preview.redd.it/h5r0ybpz5ghh1.gif?frame=1&amp;width=140&amp;height=70&amp;auto=webp&amp;s=99152a6a4c15a1a51e20a696f3a52115ce3add98\" title=\"I Compressed Bad Apple into a 3MB Neural Network [P]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I trained a small MLP to memorize the classic Bad Apple animation, ~2.7 billion pixels of video compressed into 790k parameters (3.2 MB float32, 1.6 MB float16).</p> <p>The network takes a 3D coordinate (t, y, x)- frame index and pixel position- and outputs a grayscale value between 0 and 1. To &quot;play&quot; the video, you can evaluate the function over the full grid. The &quot;video&quot; is stored implicitly in 5 linear layers of sine activations (Sitzmann et al.'s SIREN) with 512 hidden units, ω₀ = 30, and sigmoid output.</p> <p>The source <code>bad_apple.mp4</code> is 6524 frames at 854×480; I subsampled to 1620 frames × 384×384, about 1/10 of the original pixels (2.8x spatial + 4x temporal reduction).</p> <p>At first, I used a ReLU MLP with low-frequency Fourier features, which plateaued around MSE 0.12. SIREN's sine activations add higher frequency for free, so the network was capable of outputting fine details. Unfortunately, that model had an issue, which was that it could only shift the information slowly, so quick motion came out blurry.</p> <p>To fix this, I made two changes:</p> <ol> <li>Time-stretch: I scaled the time coordinate by 4x relative to the space before the first layer, giving it 4x more temporal capacity.</li> <li>Motion-focused sampling: Bad Apple is ~90% static black, so uniform pixel sampling starved the moving edges of the gradient. Now half of each training batch is drawn from pixels that changed between neighboring frames.</li> </ol> <p>For the training pipeline, I had a single shar…",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "0d00121bcf907fd8",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS 2026 Main Track — Theory papers score tracking post Rebuttal [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfx8pn/neurips_2026_main_track_theory_papers_score/",
+    "published": "2026-08-05T04:36:38+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>&#x200b;</p> <p>Now that the rebuttal period is over, I’m curious about the score distribution specifically for theory papers this year.</p> <p>If you’re comfortable sharing, please drop:</p> <p>• Scores: x / x / x</p> <p>• Confidence: x / x / x</p> <p>• Whether scores changed after rebuttal</p> <p>• Broad area (optional)</p> <p>I got 4 / 4 / 4, with confidence 3 / 3 / 3.</p> <p>From my experience, theory papers often seem to get somewhat lower scores, and this year the scores appear to be lower across disciplines as well. It would be interesting to see where the empirical cutoff might land.</p> <p>Feel free to share anonymously / approximately if you don't want to reveal too much. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Mammoth-Leg-3844\"> /u/Mammoth-Leg-3844 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfx8pn/neurips_2026_main_track_theory_papers_score/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfx8pn/neurips_2026_main_track_theory_papers_score/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "8bc0f0e190c4b76f",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Monodratic: learned product-hash routing for sparse causal attention [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vg3jda/monodratic_learned_producthash_routing_for_sparse/",
+    "published": "2026-08-05T10:28:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone,</p> <p>I'm an independent researcher sharing Monodratic, a sparse causal-attention architecture with learned product-hash routing.</p> <p>The idea is that after RoPE, source blocks are assigned to bounded causal posting lists, while each query probes product addresses, reranks the returned candidates, selects a fixed number of remote source blocks, adds guaranteed local blocks, and then runs exact causal softmax over just those tokens. I implemented it as a stateless [batch, sequence, width] -&gt; attention-delta mixer, so normalization, residual updates, feed-forward layers, and inference scheduling are left to the host model.</p> <p>What I found is that</p> <p>-learned routing with 2 selected remote blocks out of 5 eligible: 763/768 correct associative-recall answers across three seeds (99.35% mean, 98.05% minimum).</p> <p>-an equally wide untrained router: 425/768. Local-only attention: 151/768.</p> <p>-forcing the labelled target block while keeping the same maximum R2 attention budget recovered all five remaining errors, reaching 768/768.</p> <p>-sparse selected-set attention agreed with an independent dense selected-mask oracle to a maximum absolute error of 1.43e-6.</p> <p>-the packed CPU routing implementation showed a fitted timing exponent of 0.993 from 4,096 to 32,768 tokens under the fixed, balanced configuration.</p> <p>-all reported learned-route and scaling runs recorded zero posting overflow.</p> <p>The limitations are that the experiments are synthetic, the implementation is portable PyTorch rather than a fused kernel, and the report does not claim natural-language quality, asymptotic linear construction, or deployment speed.</p> <p>Paper: <a href=\"https://github.com/Misul-Computing/Monodratic/blob/main/output/pdf/monodratic_proof.pdf\">https://github.com/Misul-Computing/Monodratic/blob/main/output/pdf/monodratic_proof.pdf</a></p> <p>Code and reproduction: <a href=\"https://github.com/Misul-Computing/Mono…",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "082d749fc0378239",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Prior work on provenance-preserving epistemic abstention and evidence-triggered revision in neural systems? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vg4zx7/prior_work_on_provenancepreserving_epistemic/",
+    "published": "2026-08-05T11:42:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello everyone,</p> <p>Adjacent bodies of work appear to include selective prediction and abstention, uncertainty estimation and calibration, provenance-aware representations, truth-maintenance and belief-revision systems, continual learning, and localized model editing. Each seems to address part of the problem, but I have not been able to identify an end-to-end evaluation that jointly tests persistent epistemic suspension, provenance preservation, evidence-triggered revision, and bounded collateral change.</p> <p>I’m looking primarily for existing research, partial precedents, or terminology under which the following requirements may already have been studied. I am not assuming that they necessarily require a new architecture.</p> <p>Suppose a neural system receives a proposition P from a source S, but determines that it lacks the evidence D required to conclude either P or ¬P.</p> <p>Is there any architecture or end-to-end experiment in the current literature in which the system:</p> <ol> <li>keeps P semantically accessible without prematurely assigning it a truth value;</li> <li>separately preserves the source S and the precise reason R for suspending judgment;</li> <li>maintains these bindings through subsequent processing, without the suspended status drifting into either a verdict or a generic “I don’t know”;</li> <li>revises the epistemic status of P only in response to a defined epistemically relevant update, such as new evidence, a change in source reliability, or a defeater;</li> <li>propagates downstream changes where the update is relevant, while keeping behavioral and representational changes on an unrelated control set below a predefined threshold?</li> </ol> <p>I am not asking merely whether a model can output “I don’t know,” refuse to answer, or report low confidence. The question is whether it can preserve the unresolved proposition, its source, and the reason for suspension, and later resume evaluation when the ap…",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "d7e2926b72a84ec5",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "[ Removed by Reddit ]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfx7fo/removed_by_reddit/",
+    "published": "2026-08-05T04:34:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>[ Removed by Reddit on account of violating the <a href=\"/help/contentpolicy\">content policy</a>. ]</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Economy_Cicada8756\"> /u/Economy_Cicada8756 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfx7fo/removed_by_reddit/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfx7fo/removed_by_reddit/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "4933732585537654",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS 2026 Concept & Feasibility Track [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vfv9fj/neurips_2026_concept_feasibility_track_d/",
+    "published": "2026-08-05T02:58:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I could not find any discussion threads for the C&amp;F track. Have people actually submitted to this track? If so, what are your reviews and scores looking like, along with post rebuttal engagement? In our case, they received reviews not in line with the policy defined for the track, where most reviewers praised originality but complained about the scope of experiments. Despite the track saying that it would be possible that the idea cannot be validated in a single paper. </p> <p>We provided experiments but no dice, none of the reviewers responded. Have any ACs seen papers and reviews in this track or do authors have their experiences they could share? </p> <p>Please add your scores pre and post rebuttal here </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MakingComputersSmart\"> /u/MakingComputersSmart </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfv9fj/neurips_2026_concept_feasibility_track_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfv9fj/neurips_2026_concept_feasibility_track_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  }
+]
