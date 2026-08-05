@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cc9e3ee06da3250e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-v4-Flash-Mini 54GB GGUF running at ~20.5 t/s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfr3d2/deepseekv4flashmini_54gb_gguf_running_at_205_ts/",
+    "published": "2026-08-04T23:51:25+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Took the REAP adaptation of DeepSeek-V4-Flash (<code>0xSero/DeepSeek-V4-Flash-0731-REAP</code>) along with <code>antirez/deepseek-v4-gguf</code> as inspiration, and decided to see how aggressive we could get with standard quant tricks to create a budget-friendly &quot;Mini&quot; build.</p> <p>For the lulz, naturally.</p> <p>Started with the full 95GB <code>bf16</code> GGUF and crushed it down to an <code>IQ2_XXS</code> variant with mixed quantization (<code>w2Q2K-AProjQ8-OutQ8</code>).</p> <p>Is extreme 2-bit quantization practical for complex reasoning? Debatable. Did it shave off over 40GB of VRAM/RAM footprint and still generate coherently? Absolutely.</p> <p>Science isn't about <em>why</em>, it's about <em>why not</em>.</p> <pre><code>prompt eval time = 372.26 ms / 12 tokens (31.02 ms per token, 32.24 tokens per second) eval time = 81141.35 ms / 1667 tokens (48.68 ms per token, 20.54 tokens per second) total time = 81513.62 ms / 1679 tokens graphs reused = 1804 </code></pre> <p><strong>The File Sizes:</strong></p> <pre><code>-rw-rw-r-- 1 jabbatheduck jabbatheduck 95G Aug 4 16:10 deepseek-v4-flash-bf16.gguf -rw-rw-r-- 1 jabbatheduck jabbatheduck 54G Aug 4 17:41 DeepSeek-V4-Flash-REAP-IQ2XXS-w2Q2K-AProjQ8-OutQ8-chat-v2.gguf -rw-rw-r-- 1 jabbatheduck jabbatheduck 353M Aug 4 16:37 DeepSeek-V4-Flash-REAP-IQ2XXS-w2Q2K-AProjQ8-OutQ8-chat-v2-imatrix-0731.gguf </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/giveen\"> /u/giveen </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfr3d2/deepseekv4flashmini_54gb_gguf_running_at_205_ts/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfr3d2/deepseekv4flashmini_54gb_gguf_running_at_205_ts/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T00:26:18.464754+00:00"
+  },
+  {
+    "id": "e729c9af34f70e65",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Maple-Preview: 20B-A1B ternary-weight reasoning open-weight LLM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vfrr5t/maplepreview_20ba1b_ternaryweight_reasoning/",
+    "published": "2026-08-05T00:19:05+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/cafedude\"> /u/cafedude </a> <br /> <span><a href=\"https://deepgrove.ai/maple-preview\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfrr5t/maplepreview_20ba1b_ternaryweight_reasoning/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T00:26:18.464754+00:00"
+  }
+]
