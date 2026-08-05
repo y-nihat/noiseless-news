@@ -18,5 +18,55 @@
     "published": "2026-08-05T10:29:47+00:00",
     "summary": "The Trump administration's framework for assessing potential cybersecurity risks posed by advanced AI reportedly has no interest in testing open models. Axios reports that not only do the voluntary guidelines outright exclude open models - meaning anyone can download them and inspect their core components - but the framework explicitly says it can't be used [&#8230;]",
     "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "6831149afa29e593",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "Sure seems like Fenix Flexin used AI music generator Treblo",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/975528/fenix-flexin-ai-music-generator-treblo",
+    "published": "2026-08-05T16:57:25+00:00",
+    "summary": "We were pretty sure that Fenix Flexin's \"Rubberz\" was made using AI, but musician Medasin was confident that it was made using Treblo specifically. Now the company and a new detection tool seem to confirm it. On Monday, the company announced the open-source Treblo AI Music Classifier, which detects when a song was generated using [&#8230;]",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "acb096445fcff02d",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "Google just announced a major shakeup of its top AI leadership",
+    "url": "https://www.theverge.com/tech/975677/google-deepmind-ai-demis-hassabis-shakeup",
+    "published": "2026-08-05T16:47:23+00:00",
+    "summary": "Google is making some significant AI leadership changes, including a major shift for Google DeepMind leader Demis Hassabis. Hassabis will become the chair of Google DeepMind and the chief scientist at Alphabet, CEO Sundar Pichai announced on Wednesday. Hassabis will continue to lead Alphabet's Isomorphic Labs, which aims to use AI to develop drugs. Koray [&#8230;]",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "88e15d0b7e684c66",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "SpaceX is barely Space and mostly X",
+    "url": "https://www.theverge.com/science/975545/spacex-x-earnings-ai-data-centers-compute-space",
+    "published": "2026-08-05T16:35:56+00:00",
+    "summary": "Once, I had some questions about why SpaceX, Elon Musk's healthiest company, acquired xAI, his sickliest one. Now I have some questions about why we're calling the whole thing SpaceX. Look, what we have here, by revenue, is primarily a telecom company and a company that rents compute, according to SpaceX's first quarterly earnings statement [&#8230;]",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "e67c805c5c0fca39",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "Reddit is introducing a new moderator: AI",
+    "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform",
+    "published": "2026-08-05T16:00:00+00:00",
+    "summary": "Reddit is enlisting AI to help moderate new subreddits - and eventually the rest of site. The company is introducing automated moderation tools that rely on LLMs to help mods manage their communities, and it's expanding who can use those tools today ahead of a full launch later this year. The company calls the suite [&#8230;]",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "4f47d4d73942c27e",
+    "source": "The Verge AI",
+    "tier": 2,
+    "title": "Rogue AI agents created fake online identities in another hacking attempt",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/975577/aisi-openai-anthropic-agent-hacking",
+    "published": "2026-08-05T15:14:57+00:00",
+    "summary": "Yet more rogue AI agents from OpenAI and Anthropic have been caught attempting to hack real targets online without permission. The discoveries add to a growing list of previously unknown incidents that have alarmed AI safety experts and intensified pressure for greater oversight of frontier systems. According to a report from the UK's AI Security [&#8230;]",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
   }
 ]

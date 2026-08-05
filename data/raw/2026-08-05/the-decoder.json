@@ -18,5 +18,55 @@
     "published": "2026-08-05T10:15:49+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/cybersecurity_kraken.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        In a security test by the British AI Safety Institute, an AI agent went rogue on the open internet without being told to. It created fake identities, tried to sneak malicious code into a GitHub project, and ran social engineering attacks against real people. Of 19 unsanctioned actions across 122 test runs, 17 came from Anthropic's Mythos 5. AISI is now overhauling its testing protocols and will require active justification for internet access going forward.</p>\n<p>The article <a href=\"https://the-decoder.com/an-ai-agent-went-rogue-during-uk-safety-tests-creating-fake-identities-and-launching-social-engineering-attacks-unprompted/\">An AI agent went rogue during UK safety tests, creating fake identities and launching social engineering attacks unprompted</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "81076c495d2bcd6b",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Google Deepmind loses both its CEO and chief scientist as Demis Hassabis and Jeff Dean step down simultaneously",
+    "url": "https://the-decoder.com/google-deepmind-loses-both-its-ceo-and-chief-scientist-as-demis-hassabis-and-jeff-dean-step-down-simultaneously/",
+    "published": "2026-08-05T17:26:53+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"608\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/google_logo_wall-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1088\" /></p>\n<p>        Google Deepmind is overhauling its leadership as Demis Hassabis steps back from day-to-day management to become Alphabet's chief scientist and Jeff Dean leaves Google after 27 years to launch AI startup Discovery Loop. Former Deepmind CTO Koray Kavukcuoglu will take over as Google races to close the gap with its top AI rivals.</p>\n<p>The article <a href=\"https://the-decoder.com/google-deepmind-loses-both-its-ceo-and-chief-scientist-as-demis-hassabis-and-jeff-dean-step-down-simultaneously/\">Google Deepmind loses both its CEO and chief scientist as Demis Hassabis and Jeff Dean step down simultaneously</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "cc5e043b71b3d717",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Mistral's open model Shieldstral matches much larger safety models at a fraction of the size",
+    "url": "https://the-decoder.com/mistrals-open-model-shieldstral-matches-much-larger-safety-models/",
+    "published": "2026-08-05T16:35:07+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/mistral_ai-3.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Mistral's new 3B Shieldstral model checks AI inputs and outputs for safety violations using natural language yes-or-no questions instead of fixed categories. It matches models seven times its size in some benchmarks. Operators can set their own criteria at runtime rather than rely on a third party's category system, and the model can run locally.</p>\n<p>The article <a href=\"https://the-decoder.com/mistrals-open-model-shieldstral-matches-much-larger-safety-models/\">Mistral&#039;s open model Shieldstral matches much larger safety models at a fraction of the size</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "5c491b02dda3804a",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "UK's job market is splitting in two as AI demand surges while knowledge work postings crater",
+    "url": "https://the-decoder.com/uks-job-market-is-splitting-in-two-as-ai-demand-surges-while-knowledge-work-postings-crater/",
+    "published": "2026-08-05T15:42:52+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/ai_worker.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        AI now appears in 9.4 percent of British job postings, up from about 2 percent in 2023, according to Indeed. Overall hiring is falling in knowledge work fields such as marketing and management, but AI-related listings are rising fast. Indeed calls it a \"two-speed labor market.\"</p>\n<p>The article <a href=\"https://the-decoder.com/uks-job-market-is-splitting-in-two-as-ai-demand-surges-while-knowledge-work-postings-crater/\">UK&#039;s job market is splitting in two as AI demand surges while knowledge work postings crater</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "3f30961a5a49f6a0",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "SpaceX’s ambitious compute goals could require over two million Nvidia Rubin GPUs",
+    "url": "https://the-decoder.com/spacexs-ambitious-compute-goals-could-require-over-two-million-nvidia-rubin-gpus/",
+    "published": "2026-08-05T14:15:50+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/05/SpaceX-IPO.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        SpaceX plans to more than 5x its compute capacity by the end of 2027, betting exclusively on Nvidia's Vera Rubin platform. The expansion could require well over a million new GPUs. Meanwhile, the company's AI segment posted $2.56 billion in Q2 revenue, driven mostly by leasing out its own server capacity.</p>\n<p>The article <a href=\"https://the-decoder.com/spacexs-ambitious-compute-goals-could-require-over-two-million-nvidia-rubin-gpus/\">SpaceX’s ambitious compute goals could require over two million Nvidia Rubin GPUs</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "c033da378d4aa521",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Black Forest Labs makes FLUX 3 Video generally available and claims it beats Seedance 2.0",
+    "url": "https://the-decoder.com/black-forest-labs-makes-flux-3-video-generally-available-and-claims-it-beats-seedance-2-0/",
+    "published": "2026-08-05T13:06:48+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1439\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/flux_3_video.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2559\" /></p>\n<p>        Black Forest Labs has launched FLUX 3 Video, which generates Full HD clips up to 20 seconds long with native audio and lip-synced dialogue in more than 14 languages. It can also render typography directly in scenes. BFL's own Elo rankings put it ahead of Gemini Omni Flash and Seedance 2.0.</p>\n<p>The article <a href=\"https://the-decoder.com/black-forest-labs-makes-flux-3-video-generally-available-and-claims-it-beats-seedance-2-0/\">Black Forest Labs makes FLUX 3 Video generally available and claims it beats Seedance 2.0</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
   }
 ]

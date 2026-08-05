@@ -58,5 +58,25 @@
     "published": "2026-08-05T02:58:39+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I could not find any discussion threads for the C&amp;F track. Have people actually submitted to this track? If so, what are your reviews and scores looking like, along with post rebuttal engagement? In our case, they received reviews not in line with the policy defined for the track, where most reviewers praised originality but complained about the scope of experiments. Despite the track saying that it would be possible that the idea cannot be validated in a single paper. </p> <p>We provided experiments but no dice, none of the reviewers responded. Have any ACs seen papers and reviews in this track or do authors have their experiences they could share? </p> <p>Please add your scores pre and post rebuttal here </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MakingComputersSmart\"> /u/MakingComputersSmart </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfv9fj/neurips_2026_concept_feasibility_track_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vfv9fj/neurips_2026_concept_feasibility_track_d/\">[comments]</a></span>",
     "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "c9ed5435ba8b251e",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Running Whisper, Qwen3-ASR, Nemotron & MOSS completely offline on iPhone [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vgbl7w/running_whisper_qwen3asr_nemotron_moss_completely/",
+    "published": "2026-08-05T16:04:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Over the past month, I've been building LiveTranscriber, an open-source iOS app for running modern speech and language models entirely on-device.</p> <p>The goal was to see whether recent open-source models could be turned into a practical mobile product—not just technical demos.</p> <p>Currently supported local models include:</p> <p>- Whisper for offline transcription</p> <p>- Qwen3-ASR for multilingual speech recognition</p> <p>- NVIDIA Nemotron Streaming for low-latency live transcription</p> <p>- MOSS Multi-Speaker for speaker-aware transcription</p> <p>- Qwen3 for local summaries, key points, titles, and transcript analysis</p> <p>Features include:</p> <p>- 100% offline speech recognition</p> <p>- Offline multi-speaker transcription</p> <p>- On-device summaries and key-point extraction</p> <p>- Real-time translation</p> <p>- Apple Watch recording with automatic sync</p> <p>- Downloadable and switchable local models</p> <p>- Searchable transcript history</p> <p>The main engineering challenge was not simply running the models, but making them usable on iPhone: memory management, streaming latency, model loading, context handling, battery usage, and switching between different inference backends.</p> <p>The project is fully open source:</p> <p>GitHub:</p> <p><a href=\"https://github.com/iamwilliamli/LiveTranscriber\">https://github.com/iamwilliamli/LiveTranscriber</a></p> <p>App Store:</p> <p><a href=\"https://apps.apple.com/us/app/live-transcriber-recorder/id6785515364\">https://apps.apple.com/us/app/live-transcriber-recorder/id6785515364</a></p> <p>I'd appreciate feedback from anyone working on ASR, local LLMs, on-device AI, Core ML, or mobile inference.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/marshmallow_ki\"> /u/marshmallow_ki </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgbl7w/running_whisper_qwen3asr_nemotron_moss_completely/\">[link]</a></span> &#32;…",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "3102ceea36ffa94a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Anyone here working on AI/ML projects? I’d like to join and contribute [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vgcnio/anyone_here_working_on_aiml_projects_id_like_to/",
+    "published": "2026-08-05T16:42:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello, I am currently studying deep learning and have completed several AI/ML projects.</p> <p>I am specifically looking to join an ongoing AI/ML project where I can actively contribute and further develop my skills. I am committed, eager to learn, and open to collaboration.</p> <p>If you have a project and are open to contributors, please feel free to reach out.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Quiet-Cod-9650\"> /u/Quiet-Cod-9650 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgcnio/anyone_here_working_on_aiml_projects_id_like_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgcnio/anyone_here_working_on_aiml_projects_id_like_to/\">[comments]</a></span>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
   }
 ]

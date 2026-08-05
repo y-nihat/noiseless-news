@@ -128,5 +128,105 @@
     "published": "2026-08-05T02:49:24+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>A Qwen3.5-35B derived model with an interesting architectural difference that results in larger throughput and less token consumption (allegedly):</p> <p><a href=\"https://huggingface.co/internlm/Intern-S2-Mobius\">https://huggingface.co/internlm/Intern-S2-Mobius</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Miserable-Dare5090\"> /u/Miserable-Dare5090 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfv27k/intern_s2_mobius/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vfv27k/intern_s2_mobius/\">[comments]</a></span>",
     "fetched_at": "2026-08-05T12:00:43.577868+00:00"
+  },
+  {
+    "id": "889475eb92dbbda4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "MiniMax issues",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg5ugz/minimax_issues/",
+    "published": "2026-08-05T12:22:48+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg5ugz/minimax_issues/\"> <img alt=\"MiniMax issues\" src=\"https://preview.redd.it/urolt08gujhh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=5ec1d3f736abffa8962e7db99726f905c93fec01\" title=\"MiniMax issues\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://www.reddit.com/r/StableDiffusion/s/HrU7odaJe6\">https://www.reddit.com/r/StableDiffusion/s/HrU7odaJe6</a></p> <p>I think this is more important that all the political stuff you share here </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://i.redd.it/urolt08gujhh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg5ugz/minimax_issues/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "44b3b3716e9f66cf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "LFM2.5-2.6B on a OnePlus 13 at 17 tok/s ~ Pure CPU",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg8qfv/lfm2526b_on_a_oneplus_13_at_17_toks_pure_cpu/",
+    "published": "2026-08-05T14:20:47+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg8qfv/lfm2526b_on_a_oneplus_13_at_17_toks_pure_cpu/\"> <img alt=\"LFM2.5-2.6B on a OnePlus 13 at 17 tok/s ~ Pure CPU\" src=\"https://preview.redd.it/oeyr9vuhfkhh1.gif?width=640&amp;crop=smart&amp;s=e37a0906f0628095917da1c12583b390de19494c\" title=\"LFM2.5-2.6B on a OnePlus 13 at 17 tok/s ~ Pure CPU\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>As you all know the model is 2.69B parameters with a 128K context window and purpose-built for multi-step agent workflows.</p> <p>What you are seeing is the Q4_K_M GGUF running on my own inference engine built from scratch.</p> <p>The TUI is my own device probe suite running through ADB (Android Debug Bridge)</p> <p>The whole engine is only 450kb and supports other models arch (Qwen, Gemma, Bonsai etc…)</p> <p>Currently trying to push it at ~30 tok/s</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/trikboomie\"> /u/trikboomie </a> <br /> <span><a href=\"https://i.redd.it/oeyr9vuhfkhh1.gif\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg8qfv/lfm2526b_on_a_oneplus_13_at_17_toks_pure_cpu/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "d98638623bfc6679",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Given the MiniMax H3 LoRAs Debacle - Some Important Context for Censorship enforcement and laws in China",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg8fi1/given_the_minimax_h3_loras_debacle_some_important/",
+    "published": "2026-08-05T14:09:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>*I felt the need to write this post because it seems like very few people on this sub are aware of Chinese laws and how they're enforced, so here's an explainer coming from a Chinese person (myself). I know that this post isn't directly about local models per se, but I'm seeing way too many misconceptions regarding this topic. This is also going to apply to all Chinese entities in general, not just the specific MiniMax LoRAs debacle. This isn't meant to be a political post, but some much needed context to correct a lot of misinformation going around.</p> <p>Guys - they're a Chinese lab following Chinese laws. Pornography is straight up illegal in China. I have no idea how it seems like nobody outside of China is aware of this. While Chinese authorities may not care much about copyright infringement enforcement (especially with foreign IPs), they do indeed regularly crackdown on porn. Heck, Chinese citizens have literally been imprisoned for written pornography. Yes that's right, writing pornographic TEXT (especially with &quot;immoral&quot; themes like LGBTQ+ stuff) can get you sentenced and essentially have your entire life ruined. Of course there's ways to get around these censors if you're just trying to access porn - I think everyone at this point knows about the widespread necessity for VPN usage in China to access the rest of the global internet. But actually distributing a tool that can gain a reputation for being able to easily generate pornographic content? That's just asking for the authorities to crack down on them.</p> <p>Somewhat ironically/paradoxically luckily for these Chinese labs is the fact that online discussion about generating porn is automatically censored and removed from Chinese social media, thus automatically disincentivizing the authorities from doing those potential crackdowns. But if it gets big enough to the point that it overwhelms the automatic censors, then any given Chinese lab could be in a hell o…",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "eb15c2215fb072de",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ling-3.0-flash MXFP4 released and running locally on one DGX Spark.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgawrk/ling30flash_mxfp4_released_and_running_locally_on/",
+    "published": "2026-08-05T15:40:39+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgawrk/ling30flash_mxfp4_released_and_running_locally_on/\"> <img alt=\"Ling-3.0-flash MXFP4 released and running locally on one DGX Spark.\" src=\"https://external-preview.redd.it/cTc4emxzYml0a2hoMb-CvsnPpcXbA0LbMq-4RhGYS6zYpdlG1pOtoq_jEleq.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=754f5408fdc29572f6e087bc0b05b3efca9345ca\" title=\"Ling-3.0-flash MXFP4 released and running locally on one DGX Spark.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In tests:<br /> ~80 tok/s decoding<br /> 2,500–3,500 tok/s long-input prefilling<br /> Smooth use by 3–4 concurrent users </p> <p>Private, on-device inference for coding, agents, and offline batch jobs</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/niacolhealth\"> /u/niacolhealth </a> <br /> <span><a href=\"https://v.redd.it/zwe7kfbitkhh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgawrk/ling30flash_mxfp4_released_and_running_locally_on/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "0beff942ceb1c0ab",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Agent memory layers don't need an LLM deciding what to remember",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgbi5m/agent_memory_layers_dont_need_an_llm_deciding/",
+    "published": "2026-08-05T16:01:45+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgbi5m/agent_memory_layers_dont_need_an_llm_deciding/\"> <img alt=\"Agent memory layers don't need an LLM deciding what to remember\" src=\"https://preview.redd.it/6f555l8gxkhh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c5bfcd3ca75d0a5b2990a470cab5a701337b2e2e\" title=\"Agent memory layers don't need an LLM deciding what to remember\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Most agent memory setups run a model call on the way in. Something reads the turn, decides whether it's worth keeping, rewrites it into a &quot;memory&quot;, tags it with a type and an importance score. That's a second inference pass on every interaction and I think it's the wrong place to spend one.</p> <p>Cost isn't the issue. The judgment being unauditable is. When the agent fails to recall something you can't tell whether retrieval missed it or the extractor decided six days ago it wasn't worth keeping. Two different bugs, same symptom, and separating them means reading logs that mostly don't exist.</p> <p>Take that stage out and you have storage, an embedding, retrieval. Which is what a memory layer is. I run memU partly for this reason. Core is around 500 lines doing those three things, exposed as commit, list, retrieve. What it keeps is readable Markdown, embedded and indexed into a local sqlite db. Apache-2.0.</p> <p>You lose the distillation, obviously. Raw turns are noisier than summarised ones so retrieval has to be better to compensate. I'll take that trade because a noisy store you can read beats a tidy one you can't inspect, but I'd take the other side seriously from anyone who has actually measured it.</p> <p>Being straight about the cost since someone will find it anyway: self-hosting does not get you off the hook for an embedding provider, you still need a key for that. It's single machine too, syncing across boxes is their hosted mode. And recall quality is entirely downstream of whichever embedd…",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "d968f30880703009",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DGX Spark now sells for 6000-8000 euros. I still remember when it was just 4000.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg8g9z/dgx_spark_now_sells_for_60008000_euros_i_still/",
+    "published": "2026-08-05T14:09:59+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg8g9z/dgx_spark_now_sells_for_60008000_euros_i_still/\"> <img alt=\"DGX Spark now sells for 6000-8000 euros. I still remember when it was just 4000.\" src=\"https://preview.redd.it/2t9p48u8dkhh1.jpg?width=140&amp;height=69&amp;auto=webp&amp;s=3869513581ef4961df865fea0579e0be7c8bb99b\" title=\"DGX Spark now sells for 6000-8000 euros. I still remember when it was just 4000.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Afraid-Yoghurt6731\"> /u/Afraid-Yoghurt6731 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vg8g9z\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg8g9z/dgx_spark_now_sells_for_60008000_euros_i_still/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "f579098dcf3051de",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Mistral Releases premier Not-Hotdog model",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vge6yo/mistral_releases_premier_nothotdog_model/",
+    "published": "2026-08-05T17:36:42+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vge6yo/mistral_releases_premier_nothotdog_model/\"> <img alt=\"Mistral Releases premier Not-Hotdog model\" src=\"https://preview.redd.it/kx7xsf7celhh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=c53fbb3c4f9656dee60c54a2a2f7da7aeb89bc98\" title=\"Mistral Releases premier Not-Hotdog model\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/mistralai/Shieldstral-1.0-3B\">https://huggingface.co/mistralai/Shieldstral-1.0-3B</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rpiguy9907\"> /u/rpiguy9907 </a> <br /> <span><a href=\"https://i.redd.it/kx7xsf7celhh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vge6yo/mistral_releases_premier_nothotdog_model/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "c88c8f5a7c8a435f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "MoE CPU-offload benchmark on Deepseek V4/Gemma4/Qwen/GPT-OSS — TensorSharp vs llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg71ci/moe_cpuoffload_benchmark_on_deepseek/",
+    "published": "2026-08-05T13:13:53+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg71ci/moe_cpuoffload_benchmark_on_deepseek/\"> <img alt=\"MoE CPU-offload benchmark on Deepseek V4/Gemma4/Qwen/GPT-OSS — TensorSharp vs llama.cpp\" src=\"https://external-preview.redd.it/76XE3Eq6cgC81N3jyn3S_fZloDlTJxS6MB1O1heOt1I.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=0e0481dc920af6ba5e35ae71f47c2636827afbda\" title=\"MoE CPU-offload benchmark on Deepseek V4/Gemma4/Qwen/GPT-OSS — TensorSharp vs llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>TensorSharp's MoE CPU-offload feature has been merged into main. Here is the parameters description of this feature:</p> <p>Mixture-of-Experts CPU offload:</p> <p><strong>--n-cpu-moe &lt;N&gt; | -ncmoe &lt;N&gt;</strong></p> <p>Keep the routed MoE expert weights of the first N layers in system RAM and multiply them on</p> <p>the CPU; attention, norms, the router and the shared expert stay on the accelerator. This is</p> <p>what makes a 35B-A3B MoE fit beside a long-context KV cache on a 12-16 GB card. Pass 'all' for</p> <p>every layer. Default: 0 (everything on the accelerator; TS_N_CPU_MOE env var overrides).</p> <p>Example: --n-cpu-moe 32</p> <p><strong>--cpu-moe | -cmoe</strong></p> <p>Shorthand for --n-cpu-moe all: every routed expert stays in system RAM. Default: off</p> <p>(TS_CPU_MOE env var overrides).</p> <p>Example: --cpu-moe</p> <p>To measure its performance, I ran benchmark to compare TensorSharp with llama.cpp, and here is the result. The completed benchmark report has been checked-in: <a href=\"https://github.com/zhongkaifu/TensorSharp/blob/main/docs/moe_cpu_offload_benchmark.md\">https://github.com/zhongkaifu/TensorSharp/blob/main/docs/moe_cpu_offload_benchmark.md</a></p> <h1>Host and software</h1> <table><thead> <tr> <th align=\"left\">Component</th> <th align=\"left\">Detail</th> </tr> </thead><tbody> <tr> <td align=\"left\">GPU</td> <td align=\"left\">2 x NVIDIA RTX PRO 6000 Blackwell Server Edition, 97,887 MiB each, driver 580.1…",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "8ffc513f41896176",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "jabbatheduck/DeepSeek-v4-flash-mini · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg7gq9/jabbatheduckdeepseekv4flashmini_hugging_face/",
+    "published": "2026-08-05T13:31:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg7gq9/jabbatheduckdeepseekv4flashmini_hugging_face/\"> <img alt=\"jabbatheduck/DeepSeek-v4-flash-mini · Hugging Face\" src=\"https://external-preview.redd.it/RVbHTctUvhbUomh40LGlWF-LHWLMoq32s33ex6hz2rQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=7aaf4312d4710774ac41092cd5d71df19741b96a\" title=\"jabbatheduck/DeepSeek-v4-flash-mini · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Because why not? How far can we go and make DeepSeek work? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/giveen\"> /u/giveen </a> <br /> <span><a href=\"https://huggingface.co/jabbatheduck/DeepSeek-v4-flash-mini\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg7gq9/jabbatheduckdeepseekv4flashmini_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
+  },
+  {
+    "id": "3c6d7de12216cf56",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The Session You Cannot Take With You | EARENDIL",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vg9jo8/the_session_you_cannot_take_with_you_earendil/",
+    "published": "2026-08-05T14:51:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg9jo8/the_session_you_cannot_take_with_you_earendil/\"> <img alt=\"The Session You Cannot Take With You | EARENDIL\" src=\"https://external-preview.redd.it/17Nr-c4wjcN82Pourd9ZsxKx5204Np0uFHLHgU2co9E.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2a1ca59fa7d0764fa9f4985d9b2fff99d9912688\" title=\"The Session You Cannot Take With You | EARENDIL\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MoneyPowerNexis\"> /u/MoneyPowerNexis </a> <br /> <span><a href=\"https://earendil.com/posts/session-portability/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vg9jo8/the_session_you_cannot_take_with_you_earendil/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-05T17:43:27.371835+00:00"
   }
 ]
