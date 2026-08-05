@@ -328,5 +328,15 @@
     "published": "2026-08-05T21:58:35+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Explicit title, It would be nice to have the ability to have 3 tiers moe offload :( </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/storm1er\"> /u/storm1er </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgldw6/could_we_have_a_diskmoe_or_ndiskmoe_like_cpumoe/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgldw6/could_we_have_a_diskmoe_or_ndiskmoe_like_cpumoe/\">[comments]</a></span>",
     "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "fc74e098a40ae49d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Gemma 4 31b AttnRes Project",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgeslw/gemma_4_31b_attnres_project/",
+    "published": "2026-08-05T17:57:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I had Claude re-draft this for me, thus it has Em Dashes. It's correct with lots of &quot;Claude&quot; simplifications.</p> <p>--- </p> <p>Hey all. It's been a while since I posted about the AttnRes architecture so I figured I'd give an update on where things are.</p> <p>Short version: it's alive. Longer version... it's complicated.</p> <p>So the core idea hasn't changed. Replace the standard residual stream with an attention-based routing mechanism — AttnRes — that lets the model learn WHERE to route information between layers rather than just blindly passing everything forward. Same parameter count as the base model. The hypothesis is that this is a fundamentally better use of the same compute.</p> <p>The part I've spent the most time on is figuring out how to actually GET there without training from scratch. I don't have Google's budget. I'm one person. So the whole strategy is built around distilling from Gemma into the new architecture using a weaning schedule — you start with the standard residual doing all the work, and you gradually shift responsibility to the AttnRes pathway over the course of training. The model learns to route through the new pathway while the old one is slowly pulled away.</p> <p>This sounds simple. It is not simple.</p> <p>The thing that took the longest to figure out was the data. Not volume... diversity. If you distill on a narrow distribution you'll get a model that handles that distribution great and has quietly lost everything else. The model manifold is this massive high-dimensional thing and you have to preserve ALL of it during the transition or you get a model that can code but suddenly responds in mixed Korean and English when you ask it about quantum mechanics. I've seen this happen. It's informative but not ideal.</p> <p>The solution I landed on was using the model itself to generate diverse coverage. Take a news article. Ask the model to summarize it. Then translate that summary to Bulgaria…",
+    "fetched_at": "2026-08-05T23:49:50.271338+00:00"
   }
 ]

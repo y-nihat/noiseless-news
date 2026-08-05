@@ -68,5 +68,15 @@
     "published": "2026-08-05T18:30:00+00:00",
     "summary": "Chinese researchers have shown that AI models have the capacity to act like aggressive and adaptive computer viruses.",
     "fetched_at": "2026-08-05T22:39:50.560631+00:00"
+  },
+  {
+    "id": "db42eb69f44669a3",
+    "source": "Wired AI",
+    "tier": 2,
+    "title": "OpenAI’s Browser Could Be Hijacked to Spam Your WhatsApp Contacts",
+    "url": "https://www.wired.com/story/openais-browser-could-be-hijacked-to-spam-your-whatsapp-contacts/",
+    "published": "2026-08-05T23:30:00+00:00",
+    "summary": "Researchers at security firm Zenity found more than a dozen flaws in AI browsers—and managed to get OpenAI’s Atlas to make an unauthorized Amazon purchase.",
+    "fetched_at": "2026-08-05T23:49:50.271338+00:00"
   }
 ]
