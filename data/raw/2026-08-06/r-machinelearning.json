@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a5e61abba58e7828",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "What are the biggest challenges in collecting high-quality speech and egocentric video datasets? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vgwecq/what_are_the_biggest_challenges_in_collecting/",
+    "published": "2026-08-06T06:35:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>We're currently involved in collecting two types of datasets that seem to be increasingly important for multimodal AI</p> <ul> <li>Studio quality speech/audio datasets (high fidelity recordings)</li> <li>Egocentric household activity video datasets (first person daily task recordings)</li> </ul> <p>One thing that has surprised us is how much the value of a dataset depends on the collection process rather than the model itself.</p> <p>Some of the recurring challenges we've encountered include: - Maintaining consistent recording environments - Device and microphone variability - Annotation quality and inter annotator consistency - Privacy, consent, and participant compliance - Scaling data collection without sacrificing quality</p> <p>I'm curious to hear from others who have worked on speech, video, robotics, embodied AI, or multimodal models.</p> <ul> <li>What turned out to be the biggest bottleneck in your data collection pipeline?</li> <li>Were there any quality issues that only became obvious during model training?</li> <li>If you were starting a new large scale dataset today, what would you do differently? Always happy to exchange ideas w others working in Ai data infrastructure.</li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/FaithlessnessWeak199\"> /u/FaithlessnessWeak199 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgwecq/what_are_the_biggest_challenges_in_collecting/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgwecq/what_are_the_biggest_challenges_in_collecting/\">[comments]</a></span>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "b49d3c77227e8298",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vh235s/roundtrip_consistency_bidirectional_diffusion/",
+    "published": "2026-08-06T11:54:06+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vh235s/roundtrip_consistency_bidirectional_diffusion/\"> <img alt=\"Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors [R]\" src=\"https://preview.redd.it/5xoq42p8uqhh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=53daab1318f6954f3b41d47abfda59dfc1933bf7\" title=\"Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors [R]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Whether generating CELEBV-HQ videos or turbulent plasma fields (digital twins), autoregressive models (such as latent diffusion or flow models) accumulate error over long rollouts, yet at deployment there is no ground truth to measure against.</p> <p>I train a single conditional latent diffusion model that steps a dynamical system forward or backward in time via a direction flag, and show that this bidirectionality supplies a measurement-free test-time error signal: rolling forward steps and then backward steps must return the model to its start, so the round-trip discrepancy is a self-supervised proxy for the unobservable rollout error: no ensembles, no held-out data, no governing equations, for one extra rollout.</p> <p>Furthermore, training both directions in one network is shown to beat two specialist models in both directions.</p> <p>Paper: <a href=\"https://arxiv.org/abs/2608.00675\">https://arxiv.org/abs/2608.00675</a><br /> Code (data generation, training, analysis): <a href=\"https://github.com/alexscheinker/round-trip-consistency\">https://github.com/alexscheinker/round-trip-consistency</a><br /> Project page: <a href=\"https://alexscheinker.github.io/roundtrip.html\">https://alexscheinker.github.io/roundtrip.html</a></p> <p>In my opinion, this could be a useful complementary approach to autoregressive UQ methods such as ensembles. Rather than focusing on output variation, this approach tries to learn prediction error as a function of round-…",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "ce4596739ac602e5",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "[R], Need some best model suggestions for Face Detection,Face Recognition,Body Detection and Body identification. [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vgx5dk/r_need_some_best_model_suggestions_for_face/",
+    "published": "2026-08-06T07:17:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>&#x200b;</p> <p>need those for analysing movies.</p> <p>example let's say I have to find the screentime of the actor over the whole runtime of the movie and i need to do it for the protagonist, antoganist,comedic relief ,love interest etc.</p> <p>currently I'm working with 1fps to find the faces and body or the actors.</p> <p>body detection is hard I need some guidance regarding that.</p> <p>even for Face Detection I used MTCNN it was good. but any other better models available??</p> <p>Any ideas regarding TransNetV2 ?</p> <p>I'm using it for shot boundary detection but there's was one false positive.</p> <p>Any better models??</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/negativedreammachine\"> /u/negativedreammachine </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgx5dk/r_need_some_best_model_suggestions_for_face/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgx5dk/r_need_some_best_model_suggestions_for_face/\">[comments]</a></span>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "504990edd7986063",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "ByteDance is leaning heavily into AI education with Gauth — helpful tutoring or just another shortcut machine? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vgwza5/bytedance_is_leaning_heavily_into_ai_education/",
+    "published": "2026-08-06T07:07:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Saw an article about ByteDance scaling up Gauth using AI-generated animations to walk students through problem-solving.</p> <p>On paper, personalized visual explanations sound great for democratizing tutoring. But in practice, I wonder if tools like this actually help kids grasp core concepts, or if they just create an &quot;illusion of competence&quot; where students confuse watching a slick animation with actually learning.</p> <p>For those working in EdTech or multimodal ML—do you see generative media actually improving comprehension, or are we just building better dopamine loops for homework help?</p> <p>Source:<a href=\"https://www.businessinsider.com/seedance-bytedance-education-push-study-app-gauth-ai-animations-2026-7\">https://www.businessinsider.com/seedance-bytedance-education-push-study-app-gauth-ai-animations-2026-7</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Pleasant-Airport6246\"> /u/Pleasant-Airport6246 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgwza5/bytedance_is_leaning_heavily_into_ai_education/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vgwza5/bytedance_is_leaning_heavily_into_ai_education/\">[comments]</a></span>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  }
+]

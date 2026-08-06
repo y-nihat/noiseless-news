@@ -18,5 +18,95 @@
     "published": "2026-08-06T00:40:40+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgp8y8/zuck_will_share_more_on_open_source_soon/\"> <img alt=\"Zuck will &quot;share more on open source&quot; soon\" src=\"https://preview.redd.it/i3vmb4w2inhh1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=01dedd2ca1f7124da8fc7381244a0e0443b1bacd\" title=\"Zuck will &quot;share more on open source&quot; soon\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/realmvp77\"> /u/realmvp77 </a> <br /> <span><a href=\"https://i.redd.it/i3vmb4w2inhh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgp8y8/zuck_will_share_more_on_open_source_soon/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "d357ba6b04345b2f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-2.4T-A95B (aka Qwen3.8-Max) open release time: next wednesday",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgx8yu/qwen3824ta95b_aka_qwen38max_open_release_time/",
+    "published": "2026-08-06T07:23:10+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgx8yu/qwen3824ta95b_aka_qwen38max_open_release_time/\"> <img alt=\"Qwen3.8-2.4T-A95B (aka Qwen3.8-Max) open release time: next wednesday\" src=\"https://external-preview.redd.it/iKe-VCJuazYu-ktph8_9f-LxjWBn85lDYJa3HX8YIsI.png?width=140&amp;height=75&amp;auto=webp&amp;s=d1f9e36ce601fe4f5f66fd47e34d09ff8c95fe4d\" title=\"Qwen3.8-2.4T-A95B (aka Qwen3.8-Max) open release time: next wednesday\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/9zwlpcushphh1.png?width=972&amp;format=png&amp;auto=webp&amp;s=18cb49c738caba9799d22d4916337c772baa830f\">https://preview.redd.it/9zwlpcushphh1.png?width=972&amp;format=png&amp;auto=webp&amp;s=18cb49c738caba9799d22d4916337c772baa830f</a></p> <p><a href=\"https://modelscope.cn/models/Qwen/Qwen3.8-2.4T-A95B\">https://modelscope.cn/models/Qwen/Qwen3.8-2.4T-A95B</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/HugeConsideration211\"> /u/HugeConsideration211 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgx8yu/qwen3824ta95b_aka_qwen38max_open_release_time/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgx8yu/qwen3824ta95b_aka_qwen38max_open_release_time/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "034dff033cb396e6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "i just spent weeks rewriting my webUI from scratch, getting rid of all AI slop within the codebase and switching it over to a proper lightweight framework (alpine.js). i am now comfortable suggesting it as an alternative to openwebUI, librechat and the like! it is made for local models",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgx9m5/i_just_spent_weeks_rewriting_my_webui_from/",
+    "published": "2026-08-06T07:24:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgx9m5/i_just_spent_weeks_rewriting_my_webui_from/\"> <img alt=\"i just spent weeks rewriting my webUI from scratch, getting rid of all AI slop within the codebase and switching it over to a proper lightweight framework (alpine.js). i am now comfortable suggesting it as an alternative to openwebUI, librechat and the like! it is made for local models\" src=\"https://preview.redd.it/whdwipr1hphh1.png?width=140&amp;height=77&amp;auto=webp&amp;s=334954e1c2df2c34fb44fccc9d12810073f67ce8\" title=\"i just spent weeks rewriting my webUI from scratch, getting rid of all AI slop within the codebase and switching it over to a proper lightweight framework (alpine.js). i am now comfortable suggesting it as an alternative to openwebUI, librechat and the like! it is made for local models\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>[Fully open source under GPL3, made from the ground up for use with local models, no subscriptions, no corporate backing]</p> <p>When i first started this, it was <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1txxgpq/openlumara_a_different_kind_of_ai_agent_written/\">meant to be a fully lightweight, extremely modular alternative to openclaw, hermes and the like</a>, and it still is! But i noticed people especially like the webUI, to the point they'd use it as just a webUI to talk to their local models, negating all the agentic stuff. But the webUI still had a lot of AI generated code, <a href=\"https://github.com/Rose22/openlumara/issues/60\">so that didn't sit right with me!</a></p> <p>So i rewrote the entire thing, from scratch, manually. It is now super fast, stable, uses declarative javascript without javascript framework bloat (no React or Vue or anything.. <a href=\"https://alpinejs.dev/\">alpine.js is super lightweight</a>)</p> <p>There are only a few python dependencies. no models get installed, there is no bundled inference engine, pytorch and transformers aren't even…",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "e55d33ed3bac9f30",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How many people in this sub try to train their own AI from scratch on their systems just for fun and to test out techniques from research papers?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgswl5/how_many_people_in_this_sub_try_to_train_their/",
+    "published": "2026-08-06T03:30:03+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>As for me, I own a system with an RTX 5090, Ryzen 9 9950X3D2, and 64 GB of DDR5. Every time I see research come out with a new way to train AI, I immediately think to try it on my system to see the results I get. Applying things like Titans, that one Deepseek paper on engrams, or even just playing around with experimental ideas. It's kinda like a very technical version of Tamagotchi and has been quite fun.</p> <p>Thoughts?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sadge404\"> /u/Sadge404 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgswl5/how_many_people_in_this_sub_try_to_train_their/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgswl5/how_many_people_in_this_sub_try_to_train_their/\">[comments]</a></span>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "4435153f505d162d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM/Qwen Appreciation Post",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgtkgc/glmqwen_appreciation_post/",
+    "published": "2026-08-06T04:02:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgtkgc/glmqwen_appreciation_post/\"> <img alt=\"GLM/Qwen Appreciation Post\" src=\"https://preview.redd.it/o6ik6qboeohh1.png?width=140&amp;height=78&amp;auto=webp&amp;s=dccb875d21fcdbc2e6c043e7f291a5f1b11824f5\" title=\"GLM/Qwen Appreciation Post\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/o6ik6qboeohh1.png?width=1134&amp;format=png&amp;auto=webp&amp;s=4016f26c50c1d93bd3d0c7e880e9b55a2d75310f\">https://preview.redd.it/o6ik6qboeohh1.png?width=1134&amp;format=png&amp;auto=webp&amp;s=4016f26c50c1d93bd3d0c7e880e9b55a2d75310f</a></p> <p>I have been running Qwen3.6 27b for a little while (mostly coding tasks) and recently trying out V4 flash 0731 in it's place. It was very apparent the new v4 flash will make more stuff up, and confidently. </p> <p>Despite closeish overall benchmarks GLM 5.2 also has been much more pleasant to use (granted it's been over API) and I think this is a big part of that. Saves a lot of time in corrections after review. I only wish I could run it local without selling a kidney.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Prestigious_Thing797\"> /u/Prestigious_Thing797 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgtkgc/glmqwen_appreciation_post/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgtkgc/glmqwen_appreciation_post/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "fb717e74037d89e8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I remember a time when 'flash' meant 32B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgn82g/i_remember_a_time_when_flash_meant_32b/",
+    "published": "2026-08-05T23:13:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I mean, Deepseek V4 Flash is an absolutely fantastic model, even though I can't run it on my machine it's so fascinating to see how it performs. Knowing that potentially it could be run at home is really motivating and makes me hopeful that those capabilities will trickle down to more affordable sizes.</p> <p>At the same time I miss a release for the GPU-peasant that I am. And yes, it's a tall order to complain about not receiving free stuff at the rate we were used to. And yes, 3.6 27B is still goated but it seems in this crazy AI world there's so much going on and progress happens so fast, that it's kinda understandable to be excited about what's next. Let's hope they really do release 3.8 27B, or that we might see again maybe a GLM 5.3 flash 32B, please?</p> <p>What's on your wishlist?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Mr_Moonsilver\"> /u/Mr_Moonsilver </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgn82g/i_remember_a_time_when_flash_meant_32b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgn82g/i_remember_a_time_when_flash_meant_32b/\">[comments]</a></span>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "4bcd387e595471bd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Auto-fit vs tuned MoE offload: 564 → 1330 pp tok/s, unchanged decode (Qwen3.6-35B-A3B Q6 / RTX 3090)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vh22c8/autofit_vs_tuned_moe_offload_564_1330_pp_toks/",
+    "published": "2026-08-06T11:52:59+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>TL;DR: On a Qwen3.6-35B-A3B Q6 setup sized for 64K context on a 24GB RTX 3090, spilling eight MoE expert layers to CPU freed enough VRAM to increase <code>-b</code> from 512 to 1024 and <code>-ub</code> from 128 to 512.</p> <p>Prompt processing improved by 2.36×, while generation speed remained unchanged within measurement noise.</p> <table><thead> <tr> <th align=\"left\">Benchmark</th> <th align=\"left\">Auto-fit baseline</th> <th align=\"left\">Tuned</th> <th align=\"left\">Result</th> </tr> </thead><tbody> <tr> <td align=\"left\">PP4K</td> <td align=\"left\">564.5 tok/s</td> <td align=\"left\">1330.0 tok/s</td> <td align=\"left\"><strong>2.36×</strong></td> </tr> <tr> <td align=\"left\">TG4K</td> <td align=\"left\">97.4 tok/s</td> <td align=\"left\">97.7 tok/s</td> <td align=\"left\">Within noise</td> </tr> <tr> <td align=\"left\">TG32K</td> <td align=\"left\">81.6 tok/s</td> <td align=\"left\">84.0 tok/s</td> <td align=\"left\">Within noise</td> </tr> </tbody></table> <p>These are PP measurements with a 4K prompt and TG measurements at 4K and 32K context depth. The configurations were sized against a 64K context requirement; this is not a 64K-depth throughput benchmark.</p> <p>I first used auto-fit to establish a feasible configuration. Its resulting batch settings were <code>-b 512 -ub 128</code>; I hard-coded them in the baseline command below so the comparison is reproducible.</p> <p>The tuned configuration deliberately moves eight layers’ MoE expert weights to CPU:</p> <pre><code>-ot 'blk\\.(1[2-9])\\.ffn_.*_exps\\.weight=CPU' \\ -b 1024 -ub 512 -ngl 41 </code></pre> <p>This is a joint-configuration result: CPU offload frees VRAM, and the larger batch/micro-batch uses that memory to accelerate prefill. It is not an isolated claim that CPU offload alone improves performance.</p> <p><strong>Full reproduction</strong></p> <p>Baseline, reproduces the auto-fit configuration:</p> <pre><code>llama-bench \\ -m Qwen3.6-35B-A3B-UD-Q6_K.gguf \\ -fitt 1024 -fitc 65536 \\ -t…",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "364b18e62499d887",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Best llama cpp flags to run Deepseek-flash 0731",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgzp0q/best_llama_cpp_flags_to_run_deepseekflash_0731/",
+    "published": "2026-08-06T09:48:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi all. These are my system specs: dual xeon e5 2696 v2 , 160gb DDR3 ram ECC(1600mhz), 3 gpus: 3060 12gb, p100 16gb, 3050 6gb. And a 400gb nvme sdd RAID0, 3000 mb/s. The model is Deepseek-flash-0731 UD_8_X_XL, loseless, 161gb. Now, I'm not too knowledgeable about llama cpp flags, I wish run it without mmap, because its so slow, and I believe it should fit in my system overall. There's also Dspark and MTP which could help with the speee, but do they work with llama? Any recommendations would help.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/No_Farmer_495\"> /u/No_Farmer_495 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgzp0q/best_llama_cpp_flags_to_run_deepseekflash_0731/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgzp0q/best_llama_cpp_flags_to_run_deepseekflash_0731/\">[comments]</a></span>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "5bfdcaffe026447a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Get AI max+ 395 laptop or wait for rtx spark?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgqwyf/get_ai_max_395_laptop_or_wait_for_rtx_spark/",
+    "published": "2026-08-06T01:56:15+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So I can either pull the trigger on a 128gb AI max+ 395 laptop or wait for RTX Spark for LLMs. Maybe I get it now and the price of the spark is super high so it's a good purchase or maybe the Spark shocks everyone with a low price and I forever regret my purchasing decision.</p> <p>What do yall think?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dance-Till-Night1\"> /u/Dance-Till-Night1 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgqwyf/get_ai_max_395_laptop_or_wait_for_rtx_spark/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgqwyf/get_ai_max_395_laptop_or_wait_for_rtx_spark/\">[comments]</a></span>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
+  },
+  {
+    "id": "96b744c5b89d309e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Introducing BetterBench - more accurate PP and TPS measurement",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vgrii0/introducing_betterbench_more_accurate_pp_and_tps/",
+    "published": "2026-08-06T02:23:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgrii0/introducing_betterbench_more_accurate_pp_and_tps/\"> <img alt=\"Introducing BetterBench - more accurate PP and TPS measurement\" src=\"https://external-preview.redd.it/aL-bhSqOv-1GQFdgaIX7rirW0bqG7mw_2zLBGHmfonE.png?width=140&amp;height=70&amp;auto=webp&amp;s=22571c39a4d827ecd97dedb5f0835eac26cda094\" title=\"Introducing BetterBench - more accurate PP and TPS measurement\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I built this because the existing benchmarks were using random data and with MTP content types can vary a lot on what performance you see. 5% or more with content types.</p> <p>BetterBench is designed to have content consistency within 1% and also measures across different content types.</p> <p>Here are the results running Qwen3.6 27B FP8 on dual R9700's for example:</p> <p><a href=\"https://preview.redd.it/atnhjhq20ohh1.png?width=1168&amp;format=png&amp;auto=webp&amp;s=9353f440185373ab02e6cf75db65789f577a0d55\">https://preview.redd.it/atnhjhq20ohh1.png?width=1168&amp;format=png&amp;auto=webp&amp;s=9353f440185373ab02e6cf75db65789f577a0d55</a></p> <p>You can find the repo here:</p> <p><a href=\"https://github.com/GGZ14/BetterBench\">https://github.com/GGZ14/BetterBench</a> </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/whodoneit1\"> /u/whodoneit1 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgrii0/introducing_betterbench_more_accurate_pp_and_tps/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vgrii0/introducing_betterbench_more_accurate_pp_and_tps/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-06T12:04:06.378966+00:00"
   }
 ]
