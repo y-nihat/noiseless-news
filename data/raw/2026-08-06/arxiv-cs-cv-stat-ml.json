@@ -1,0 +1,202 @@
+[
+  {
+    "id": "cb42d554c501adc4",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Canonical Joint Energy-Based Model on CIFAR-10: failure modes and practical indistinguishability of Predictor-Corrector and SGLD samplers",
+    "url": "https://arxiv.org/abs/2608.05025v1",
+    "published": "2026-08-05T16:28:57+00:00",
+    "summary": "Joint Energy-Based Models (JEM) unify classification and generation within a single network and support out-of-distribution (OOD) detection. Canonical JEM training relies on stochastic gradient Langevin dynamics (SGLD); a theoretically motivated alternative, the Predictor-Corrector (PC) sampler, has not previously undergone a systematic replication test on the canonical model. We reproduce canonical JEM on WideResNet-28-10 without normalisation layers on two independent runs and test whether PC retains its theoretical advantage without an annealed noise schedule, across three protocols: PC replacing SGLD throughout the roughly 130 training epochs; cold-start generation (FID); and refinement-style multi-OOD detection (AUROC). The reconstruction reaches 92.88% test accuracy and buffer-FID 44.46 (canonical: 92.9% and 38.40). We document two failure modes: catastrophic late-training divergence via the canonical outlier-buffer mechanism (both SGLD runs and, with the same signature, both PC runs), and run-dependent SVHN OOD-discrimination dynamics. No method-level advantage of PC over SGLD is observed on any protocol: at inference the absolute AUROC difference stays below 0.007 across all ten checkpoint-OOD pairs and the FID difference below 0.5; on the training protocol a hierarchical seed-by-image bootstrap gives a 95% confidence interval on the macro-averaged AUROC difference that contains zero, while a seed-level equivalence test with two runs per method cannot establish formal equivalence. The data are consistent both with equivalence and with a small directional effect. This practical indistinguishability is theoretically expected: under fixed noise the PC predictor step degenerates by construction, so its guarantees do not transfer to canonical JEM.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "8f88d494225a5318",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Algorithm-Driven SVARs: Navigating the Wilderness of Big Data",
+    "url": "https://arxiv.org/abs/2608.05017v1",
+    "published": "2026-08-05T16:23:05+00:00",
+    "summary": "Every SVAR result is conditional on two choices: the restrictions that identify the shock and the variables on which they operate. The literature disciplines the first; the second is chosen by hand. We develop a Bayesian methodology that constructs information sets, uses an out-of-sample criterion, and retains the largest system it admits. Under recursive identification, output rises with housing production rather than household credit alone. For monetary policy, an anchor-free joint Bayesian proxy SVAR with multiple instruments strengthens the credit spread channel. A core system augmented with the selected corporate spread identifies expected default risk as a potent transmission margin.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "7e04933a6ef2f68d",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Stochastic Emulation using Generalized Stratified Sampling for Performance-Based Risk Optimization of Structures",
+    "url": "https://arxiv.org/abs/2608.05006v1",
+    "published": "2026-08-05T16:12:30+00:00",
+    "summary": "Metamodels are instrumental in reducing the computational burden associated with nested reliability analyses and optimization loops in Performance-Based Risk Optimization (PBRO) of structures under stochastic loads. In this context, stochastic emulators are particularly useful because they approximate response distributions while accounting for the intrinsic stochasticity of the simulator. Among these methods, Stochastic Polynomial Chaos Expansion (SPCE) is especially attractive because it does not require replications of nonlinear analyses at fixed input conditions. However, SPCE may present limitations in accurately representing extreme responses in the tails of structural response distributions. To address this limitation, this study proposes a framework that combines Generalized Stratified Sampling (GSS) with SPCE. The GSS scheme partitions the input space into strata according to the intensity of the hazard, improving the representation of extreme responses, while independent SPCE emulators are trained within each stratum. The conditional exceedance probabilities estimated in each stratum are then recombined using the total probability theorem to evaluate the probabilistic constraints. The proposed GSS-SPCE framework is applied to the optimal design of buckling-restrained brace cross-sectional areas in a two-story steel building. The objective is to minimize the initial construction cost while satisfying prescribed probabilistic performance constraints. Results show that the proposed framework accurately estimates structural response distributions, including their tail regions, while substantially reducing the number of nonlinear model evaluations required for PBRO.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "ec4b7879f214f924",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Promptable Animal Pose Tracking Across Species",
+    "url": "https://arxiv.org/abs/2608.04995v1",
+    "published": "2026-08-05T16:04:20+00:00",
+    "summary": "Animal pose estimation and tracking is important for wildlife monitoring and conservation research, and with limited expert time for labelling automated approaches are imperative. While human pose estimation and tracking has seen rapid progress thanks to large annotated datasets, animal pose remain challenging, due to large morphological and behavioural differences between species and limited annotated data. Existing approaches either optimise generic keypoint localisation from annotated datasets (such as APTv2) with poor generalisation, or track custom keypoints using visual tracking, at the cost of performance. In this paper, we demonstrate that vision foundation models trained on large datasets can be used effectively to track animal pose with limited labelled data. We propose two models, one unsupervised and the other supervised, to track user-selected keypoints in videos. The supervised approach delivers superior tracking accuracy by employing a keypoint prompt encoder to explicitly inject structural priors from a reference frame into feature matching. In parallel, the unsupervised route provides strong cross-species robustness by leveraging diverse foundation-model features for training-free correspondence matching. Extensive evaluation on challenging animal video benchmarks APTv2 and TigDog demonstrates that our framework achieves strong performance while maintaining an effective balance between accuracy and generalisation, offering a practical solution for real-world animal behaviour analysis and conservation applications.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "b6300ba78be82a69",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "ContextMaster: Interactive Multi-Shot Video Creation via Fixed-Budget Sparse Context Routing",
+    "url": "https://arxiv.org/abs/2608.04956v1",
+    "published": "2026-08-05T15:27:26+00:00",
+    "summary": "Recent video models increasingly support generation, reference conditioning, and editing within a single model, yet typically expose them as separate operations over fixed inputs. Practical creation unfolds across multiple shots, requiring one model to generate from text, follow a reference, or edit source footage while maintaining shared history. We formalize this setting as interactive multi-shot video creation (IMVC) and introduce ContextMaster, a unified model with a role-aware context representation for these operations. An interactive model must retain access to an expanding history without allowing the context read cost at each denoising step to grow. ContextMaster combines reusable clean context states with fixed budget sparse context routing and uses ConstraintSink to keep task constraints visible. To address the dual challenges of sparse context access and inference with few denoising steps, we propose a two-stage privileged context distillation framework, which transfers full context behavior from a dense teacher through consistency distillation and then refines deployment rollouts with distribution matching. Experiments on the three primitive tasks demonstrate improved task fulfillment and consistency across shots over specialized baselines. User studies further validate flexibly composed workflows, while the model reaches 16 FPS on a single GPU.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "18065b36c9842c8b",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "UG-UMRE: Uncertainty-Guided Modality Augmentation and Distributional Calibration for Unified Multimodal Relation Extraction",
+    "url": "https://arxiv.org/abs/2608.04949v1",
+    "published": "2026-08-05T15:18:16+00:00",
+    "summary": "Unified Multimodal Relation Extraction (UMRE) aims to identify intra-modal and cross-modal relations between textual entities and visual objects. However, existing UMRE studies still encounter two critical issues: ignoring inherent aleatoric uncertainty causes noise propagation, and deep-seated heterogeneity between distinct modal distributions hinders alignment. To address these issues, we propose the Uncertainty-Guided UMRE Network (UG-UMRE). Specifically, we design an Uncertainty-Driven Unimodal Augmentation (UDUA) module, which models features as Gaussian distributions based on the Variational Information Bottleneck. By incorporating an uncertainty-aware self-supervised contrastive learning mechanism, UDUA effectively filters out noise while maintaining semantic consistency. Furthermore, we introduce the Joint Aleatoric Uncertainty Alignment (JAUA) module as a global semantic pre-calibration mechanism. JAUA leverages probabilistic distribution consistency to construct a shared latent space, eliminating the distributional gap by synchronizing cross-modal statistical properties, thereby laying a robust foundation for fine-grained interaction. Experiments on three benchmark datasets (UMRE, MORE, and MNRE) demonstrate that UG-UMRE achieves state-of-the-art performance. Further analysis validates the pluggable and effective performance of the proposed UDUA and JAUA modules.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "0732bed9fc24af4b",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Unleashing the Potential of Vision-Language Models for Generalizable AI-Generated Image Detection",
+    "url": "https://arxiv.org/abs/2608.04935v1",
+    "published": "2026-08-05T15:03:44+00:00",
+    "summary": "Recent work has shown that a simple linear probe on frozen representations from modern vision foundation models (VFMs) can achieve state-of-the-art AIGI detection performance, substantially outperforming specialized detectors in challenging in-the-wild scenarios. This finding has established DINOv3 as the dominant foundation-model baseline for subsequent improvements. However, we find that the vision-language model Perception Encoder (PE) holds greater potential for AIGI detection, because its language-aligned representation preserves high-level provenance semantics. Specifically, PE exhibits stronger local provenance organization than DINOv3 in its frozen feature space. However, semantic-agnostic linear probing fails to exploit this structure, as PE-Linear still underperforms DINOv3-Linear by 4.1% on In-the-Wild. Based on this observation, we propose Semantic Prototype Calibration (SPC), which constructs category prototypes from forensic semantic information and calibrates them with supervised data. We apply SPC to PE and refer to the resulting detector as PE-SPC. Our analysis shows that this simple design achieves stronger generalization. Across cross-generator, post-processing, and in-the-wild benchmarks, PE-SPC surpasses the previous DINOv3 baseline and achieves new state-of-the-art results.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "40b17c84b6c32f19",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "An active-learning framework for real-time depth perception from monocular vision streams",
+    "url": "https://arxiv.org/abs/2608.04917v1",
+    "published": "2026-08-05T14:45:16+00:00",
+    "summary": "Biological visual systems can perceive depth from monocular vision flow, continuously integrating temporal visual cues while maintaining a balance between stability and plasticity in dynamic environments. In contrast, artificial perception models deployed on resource-constrained edge devices are typically trained in a static offline manner and remain frozen after deployment, often suffering severe performance degradation under domain shifts. While large-scale models may encode broad knowledge through massive parameter redundancy, lightweight networks face a static optimization dilemma: forcing compact models to learn universal geometric representations is computationally inefficient and often leads to performance saturation. To resolve this issue, an Online Active Learning (OAL) mechanism is introduced to endow compact neural networks with the capability to adapt continuously during operation. A closed-loop Predict-Evaluate-Correct learning paradigm is established to actively select high-confidence, information-rich signals from streaming visual input. Crucially, Elastic Weight Consolidation (EWC) is employed not merely to prevent catastrophic forgetting, but to enforce Selective Plasticity, preserving parameters that encode globally relevant structural knowledge while allowing local alignment to newly observed environments. Built upon a MobileNetV3-Small backbone, the proposed system achieves approximately a 75% reduction in computational cost while maintaining competitive depth estimation accuracy. Experimental results demonstrate that adaptability is not solely determined by model size, but rather by how effectively parameter plasticity is regulated in dynamic environments.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "9a9df947f7b45b6d",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Visual Representation Matters: Exploiting Temporal Differences in Video-to-Audio Generation",
+    "url": "https://arxiv.org/abs/2608.04902v1",
+    "published": "2026-08-05T14:28:05+00:00",
+    "summary": "Video-to-audio (V2A) generation extends image-to-audio generation (I2A) by introducing consecutive frames that provide essential temporal cues for audio synthesis. However, existing conditional diffusion-based V2A methods typically enhance visual conditioning with additional audio-visual supervision, acoustic structure prediction, or reasoning from large multimodal models, requiring extra networks or strong inductive biases. Inspired by recent advances in visual representation learning, we introduce TD-V2A, which leverages temporal differences (TD) as the key representation that distinguishes V2A from I2A, enriching visual conditioning with minimal architectural modification. We first investigate TD at both the frame and feature levels to identify the most effective representation level at which TD complements visual representations. Based on these findings, we develop a hierarchically continual learning strategy and an annealed temporal differences guidance method to progressively learn and exploit TD information during diffusion training and sampling process, respectively. Extensive experiments on benchmark datasets demonstrate that effectively exploiting TD through our proposed framework significantly improves end-to-end V2A generation quality, even outperforming dedicated V2A representations such as contrastive audio-visual pretraining.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "f9e47c425d9e3163",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "When Shared Rollouts Fail in Defensive Driving Evaluation: A NAVSIM Score Basis Audit",
+    "url": "https://arxiv.org/abs/2608.04896v1",
+    "published": "2026-08-05T14:22:23+00:00",
+    "summary": "Defensive driving scores are useful only when they preserve distinctions between policies that observe surrounding actors and those that do not. Re-simulation benchmarks may use reference-conditioned forgiveness, under which an agent receives credit when the logged human reference fails a compliance channel. When agent and reference share an unstable rollout transformation, this rule can propagate shared reference failures into broad compliance credit.\n  We audit this risk in NAVSIM v2.2 original scene single-stage scoring. Under the affected documented-stack condition on the audited numerical backend, the route-blind Ignore-All probe and a route-aware actor-blind probe outrank human replay and PDM-Closed over the complete 12,146-token navtest split. A fresh installation following the public specification reproduces rollout divergence on a fixed 32-token diagnostic set. A same-source dependency stack control and an exact-input diagnostic isolate dependency-sensitive numerical behavior in the shared velocity refit. On a 450-token control pool, replacing only the solver eliminates rollout divergence and restores blind-last ordering while keeping forgiveness enabled. Thus, the numerical instability is the direct trigger. Reference-conditioned forgiveness propagates the resulting shared reference failures into compliance credit. We contribute an audit protocol requiring score basis and stack disclosure, blind probes, overwrite reporting, and rollout stability tests before using such scores for defensive driving claims.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "cdc3dbce3e69796d",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "STEP-OPD: Rethinking Output Targets and Internal Dynamics in On-Policy Distillation for Diffusion Models",
+    "url": "https://arxiv.org/abs/2608.04887v1",
+    "published": "2026-08-05T14:11:27+00:00",
+    "summary": "On-policy distillation (OPD) has become an effective approach for consolidating multiple task-specialized image generation models into a single student. However, existing OPD methods optimize the student mainly to match the teacher's output velocity, making the teacher the upper limit of the optimization objective. While output-level supervision alone leaves the student's blockwise representation evolution underconstrained, which weakens the transfer of capabilities that must be progressively developed across layers. We propose STEP-OPD, an on-policy distillation framework for image generation that extends the student's learning target beyond the teacher and introduces explicit constraints on its internal representation evolution. Instead of treating the teacher as the final target, we use the velocity difference between each task-specific teacher and the shared base model as a direction for further learning and add a scaled version of this difference to the teacher velocity. In addition, we align the direction and magnitude of representation changes between the student and teacher, enabling the student to learn how representations are progressively transformed across network blocks. Experiments on compositional alignment, text rendering, and human preference show that our method consistently improves Standard OPD methods. In particular, it increases the GenEval score of DiffusionOPD from 0.927 to 0.961, while also improving OCR and all preference-based metrics. The resulting unified student surpasses the corresponding single-task teachers across all three capability groups, showing that output extrapolation enables beyond-teacher learning. And representation change alignment provides complementary guidance for the student's internal transformations.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "fc0692bbbb09de47",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Training Crossroads for Recurrent Vision Transformers: Recurrence, Neural ODEs, and Deep Supervision",
+    "url": "https://arxiv.org/abs/2608.04879v1",
+    "published": "2026-08-05T14:06:50+00:00",
+    "summary": "Vision Transformers (ViTs) achieve strong image-recognition performance, but their parameter count grows linearly with depth when each block is independently parameterized. Single-block recurrent ViTs (bViT) remove this growth by repeatedly applying one shared block. Rather than proposing a new architecture, we fix a bViT and provide a controlled empirical characterization of three training and inference regimes under a common CIFAR-100 protocol, asking: (i)~when does recurrence beat independently parameterized depth---at matched FLOPs or at matched parameter memory? (ii)~when a residual recurrent block is trained through an ODE solver, does solver order act as numerical refinement or as an architectural bias? and (iii)~what does robustness beyond the training horizon cost in nominal accuracy? We find that standard ViTs remain preferable when FLOPs are the primary constraint, whereas recurrent ViTs offer a better accuracy--parameter trade-off under memory constraints. Consistent with the standard view of residual networks as Euler discretizations of ODEs, the continuous-time analogue of a residual recurrent block is the state-subtracted vector field $\\dot{z}=F_θ(z)-z$; although known in principle, this distinction is easy to violate when the block is wrapped as a black-box vector field, and we qualify the cost at few accuracy points. Because the vector field is learned jointly with the solver, higher-order solvers act as a solver-induced architectural bias rather than a numerical-accuracy improvement, and their gains are not uniform. Finally, stage-wise deep supervision traces an accuracy--robustness frontier: it does not improve nominal accuracy, but degrades gracefully far beyond the training horizon, where naive recurrence collapses to near-random performance.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "224a1d317f1764ef",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Persistent Object Narratives for Token-Efficient Video Language Models",
+    "url": "https://arxiv.org/abs/2608.04866v1",
+    "published": "2026-08-05T13:59:04+00:00",
+    "summary": "Video large language models (Video-LLMs) have made strong progress in open-ended video understanding. However, their visual interfaces remain token-intensive and provide limited explicit structure for linking recurring object evidence across time. We introduce SlotNarrative, a slot-based interface that organizes a video into persistent object narratives represented by compact object-state tokens. Rather than compressing frame-wise features before establishing temporal correspondence, SlotNarrative first groups visual features into object-like slots and then associates recurring observations with clip-level object entries through a lightweight, parameter-free memory that integrates multiple complementary matching cues. Each retained entry is serialized into two token types: an identity token that summarizes persistent object appearance and a set of state tokens that encode segment-level appearance, geometry, visibility, and trajectory information. This design yields an interface of only 144 allocated visual-token positions for a frozen Video-LLM, independent of the number of sampled frames. Across multiple datasets, SlotNarrative achieves a favorable trade-off between accuracy and visual-token count compared with prior compact Video-LLM interfaces. Experimental results establish persistent object narratives as a compact, structured, and temporally organized visual interface for Video-LLMs. Our code will be made publicly available.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "b0ce6a3b67bac75e",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Cooking beyond Frames: A Stereo Event Camera Dataset in the Kitchen",
+    "url": "https://arxiv.org/abs/2608.04865v1",
+    "published": "2026-08-05T13:59:01+00:00",
+    "summary": "Event cameras, also known as neuromorphic cameras, have gained significant attention in recent years due to their high temporal resolution, high dynamic range, and low power consumption. While many studies and datasets in neuromorphic vision have focused on automotive and drone applications, human-centric daily-life scenarios remain largely underrepresented, despite their importance for developing and benchmarking event-based perception systems. Moreover, the few existing event-based human activity datasets are typically recorded with scripted human actions, limiting their ability to capture natural human behaviors. In this paper, we introduce EventKitchen, a large-scale stereo event camera benchmark dataset of human cooking activities in the kitchen. EventKitchen is egocentrically collected from 10 participants in 13 diverse kitchens, where the participants wear a helmet with multiple sensors and naturally perform cooking activities, without any scripted actions. EventKitchen comprises 5.5 hours of stereo event recordings with synchronized RGB, depth, and IMU data. We provide human annotations for 10,762 action segments and 13,482 bounding boxes. We train baseline models on EventKitchen to perform multiple event-based tasks, including action recognition, object detection, and stereo depth estimation. By capturing natural, real-world human activities, EventKitchen establishes a challenging benchmark for neuromorphic vision beyond autonomous driving.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "e51b45cf25108f7b",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Towards a satellite image manipulation and deepfake localization benchmark dataset",
+    "url": "https://arxiv.org/abs/2608.04840v1",
+    "published": "2026-08-05T13:36:42+00:00",
+    "summary": "Verifying the authenticity of satellite imagery has become increasingly critical given advances in generative artificial intelligence. Highly realistic synthetic imagery produced for malicious purposes (deepfakes) can have major consequences in the remote sensing domain, where this data is a fundamental source of information for science applications, planning, logistics, and monitoring. The remote sensing community lacks high-quality, fine-grained manipulation datasets suitable for training and evaluating detection and image forensics algorithms. Existing datasets are lacking and those that do exist either provide no ground truth masks for evaluating manipulation localization, or consist of entire images generated by GANs or diffusion models, which are inadequate for measuring localization performance. To address this gap, we describe a preliminary dataset construction process and prototype benchmark dataset for satellite image manipulation detection and localization. The dataset contains 60 images total, with 30 images carefully manipulated using three manipulation types including copy-paste splicing and diffusion model inpainting, and 30 authentic images. Each image is accompanied by a ground-truth mask and acquisition metadata, enabling both pixel-level localization metrics, image metadata studies, and analyses of how manipulation detection performance relates to image collection parameters. We describe the dataset construction process and present this initial release to support further research in image forensics and geospatial deepfake detection. The prototype dataset can be downloaded at https://huggingface.co/datasets/geodf/fmow-fake-small.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "b8e8cf805aadb0aa",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Intrinsic-Hybrid Latent Diffusion Models for Generative Modeling on Unknown Manifolds",
+    "url": "https://arxiv.org/abs/2608.04827v1",
+    "published": "2026-08-05T13:28:08+00:00",
+    "summary": "We introduce the Intrinsic Hybrid Latent Diffusion Model (ILDM), a generative framework that integrates probabilistic dimensionality reduction with geometry-aware diffusion on unknown manifolds. While diffusion models (DMs) have achieved state-of-the-art results in high-dimensional data synthesis, they rely on large training datasets and ignore intrinsic geometric structure. Latent diffusion models (LDMs) address the high dimensionality by learning a latent space, but they typically impose a Euclidean structure, failing to capture the underlying manifold geometry, especially problematic in data-sparse regimes. ILDM addresses these limitations by interpreting the latent space as a chart of an unknown Riemannian manifold, with geometry and uncertainty quantified through a probabilistic decoder. The forward process is a hybrid diffusion that switches between Riemannian and Euclidean dynamics based on local uncertainty, where the Riemannian component is governed by a probabilistic metric tensor derived from the decoder. To learn the generative dynamics, we introduce an approximate denoising score matching method tailored to the hybrid diffusion setting, enabling a backward process defined by hybrid Langevin dynamics. Experiments on COIL-100, MNIST, and cardiac MRI datasets demonstrate that ILDM significantly improves generation quality, achieving lower FID and LPIPS scores compared to standard diffusion and latent diffusion models.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "837b09b067671ddf",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Global Attention-Fused Image Cropping with Attention-Guided and Global-Aligned Crop Evaluator",
+    "url": "https://arxiv.org/abs/2608.04821v1",
+    "published": "2026-08-05T13:23:51+00:00",
+    "summary": "Image cropping aims to improve image aesthetics by preserving important content within an appropriately composed region. However, most existing methods focus primarily on salient regions and therefore have limited sensitivity to the global relationships among the main image components. To address this limitation, we propose Global Attention-Fused Image Cropping (GAFIC), which consists of an Attention-Guided Feature Fusion (AGFF) and a Global-Aligned Crop Evaluator (GACE). AGFF aggregates the importance of local regions to construct a global representation that captures both image structure and local details. GACE aligns candidate crop features with this global representation, enabling crop evaluation to remain sensitive to boundary changes. We further combine three ranking losses across multiple scales to obtain accurate and stable crop scores. Extensive experiments on the GAIC and CPC datasets demonstrate that GAFIC outperforms existing image-cropping methods, particularly in terms of accuracy and stability. Unlike pixel-level retargeting methods such as seam carving, inpainting, and diffusion-based synthesis, GAFIC does not synthesize or modify the retained pixels; instead, it selects an aesthetically preferred crop from the source image, making it suitable for scenarios where pixel integrity and efficient batch processing are important. The source code is available at https://github.com/AIVRC/GAFIC.git.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "863624ba793f6805",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Rethinking Pixel Mean Flows via Interval Denoiser",
+    "url": "https://arxiv.org/abs/2608.04818v1",
+    "published": "2026-08-05T13:22:43+00:00",
+    "summary": "Modern diffusion and flow-based models are increasingly moving toward few-step, latent-free generation to bypass the computational overhead of multi-step sampling and the reconstruction bottlenecks of external autoencoders. We propose the Interval Denoiser, a theoretically rigorous framework for latent-free generation. Derived directly from the flow matching ODE, it establishes an exact analytical mapping for intermediate trajectory states. Unlike prior formulations, our prediction is shown to reside on a low-dimensional manifold across any time interval, making the regression tractable for a network operating directly on pixels. Furthermore, by avoiding empirical algebraic substitutions, our formulation correctly isolates the pure time derivative to prevent biased gradient evaluations and ensure exact first-order optimization. By analyzing this objective, we equip our framework with residual clipping and a time-sampling curriculum, enabling effective long-interval training and improving few-step performance. Trained from scratch on ImageNet 256x256, our model achieves an FID of 4.55 in one step (1-NFE) and 3.98 in two steps (2-NFE) without perceptual losses.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "f4f8e4674e6d46e3",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "StaticSegFormer: An Efficient High-Performance Semantic Segmentation Based on Static Structured Pruning",
+    "url": "https://arxiv.org/abs/2608.04811v1",
+    "published": "2026-08-05T13:14:50+00:00",
+    "summary": "Structured pruning enhances the efficiency of deep neural networks (DNNs) by eliminating groups of parameters during inference. Previous methods mostly reduce computational complexity (FLOPs), while semantic segmentation performance (mIoU) slightly drops. Accordingly, recent dynamic structured pruning methods aim at reducing the performance drop, while lowering the FLOPs even more. However, on the ADE20K and Cityscapes benchmarks, our study reveals that on a GPU platform such dynamic methods exhibit a surprisingly low frame rate far below a simple static approach, while having comparable results in mIoU and FLOPs. To address this issue, we propose a static structured pruning method for attention layers, that achieves both, a lower FLOPs and a high frame rate [fps] of the SegFormer network, the latter increased by up to 34% relative on the Cityscapes dataset, while having no mIoU performance drop at all. Our so-called StaticSegFormer method is strongest for small encoders and large images.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  },
+  {
+    "id": "a43589de21611b16",
+    "source": "arXiv cs.CV+stat.ML",
+    "tier": 1,
+    "title": "Segmentation Pre-training for Label-Efficient Lumbar Spine Degeneration Grading",
+    "url": "https://arxiv.org/abs/2608.04810v1",
+    "published": "2026-08-05T13:14:46+00:00",
+    "summary": "Automated assessment of degenerative pathology in the lumbar spine on magnetic resonance imaging (MRI) requires access to large-scale datasets of expert-annotated radiological gradings. In contrast, segmentation pseudo-labels can be generated by automated tools at negligible radiologist cost. We examine whether pre-training on segmentation can effectively replace a fraction of the manual grading annotations required for downstream supervision. We pre-train a 3D ResNet encoder to segment the vertebrae, intervertebral discs (IVDs), and the spinal canal, then fine-tune lightweight task-specific grading heads using different proportions of the available training data, ranging from $10\\%$ to $100\\%$. On a multicentre dataset of ${\\sim}2{,}000$ subjects across 11 pathologies, segmentation pre-training, achieving a Dice score of $0.94$ against pseudo-labels, improved the task-averaged (macro) one-vs-rest ROC-AUC at all proportions. With only 20\\% of grading labels after pre-training, the method achieved near full-supervision performance, with the largest gains observed for either low-prevalence or spatially grounded pathologies.",
+    "fetched_at": "2026-08-06T00:59:50.785420+00:00"
+  }
+]
