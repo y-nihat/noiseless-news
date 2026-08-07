@@ -916,5 +916,16 @@
       ],
       "context": "Named quality-press wire/outlet, used as an independent Tier-2 source (alongside axios.com, already a candidate) for the openai-astra-critical-cyber-capabilities story. Propose Tier 2, type html; frequently the origin of exclusives that other outlets relay, so watch for the wire-exclusive independence-collapse rule when citing Bloomberg-sourced coverage elsewhere."
     }
+  ],
+  "candidates_2026-08-07_c3": [
+    {
+      "domain": "newsroom.amd.com",
+      "first_seen": "2026-08-07",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://newsroom.amd.com/news/amd-acquires-taalas-ai-inference/"
+      ],
+      "context": "AMD's official newsroom/press-release domain (ir.amd.com/news-events/press-releases mirrors the same content) -- used as the Tier-0 primary source for the amd-taalas-acquisition announcement. AMD is not currently a registered source at all despite being a major lab/hardware vendor; propose Tier 0, type html or rss if a feed exists."
+    }
   ]
 }

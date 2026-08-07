@@ -1,0 +1,26 @@
+{
+  "slug": "amd-taalas-acquisition",
+  "title": "AMD agrees to acquire AI inference chip startup Taalas",
+  "status": "published",
+  "first_seen": "2026-08-07",
+  "published_at": "2026-08-07",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://newsroom.amd.com/news/amd-acquires-taalas-ai-inference/",
+    "https://the-decoder.com/amd-acquires-taalas-a-startup-that-bakes-ai-models-directly-into-silicon/",
+    "https://www.cnbc.com/2026/08/06/amd-buys-taalas-startup-that-hardwires-ai-models-into-its-silicon.html",
+    "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344"
+  ],
+  "follows": null,
+  "reason": "Published: AMD's own 6 August 2026 press release (Tier 0) confirms the acquisition agreement, terms undisclosed; independently corroborated by The Decoder, CNBC and The Register (each separately bylined, not wire syndication). dedup-check returned two moderate, coincidental matches (amd-anthropic-compute-deal, etched-series-c-10-3b-valuation) -- re-checked this cycle, confirmed unrelated to both, standalone.",
+  "watch": [
+    "Whether and when the deal actually closes (subject to customary closing conditions and regulatory approval as of announcement)",
+    "Any disclosed deal value once/if it surfaces",
+    "Whether Taalas' technology ships in an actual AMD product, and on what timeline"
+  ],
+  "notes": [
+    "2026-08-07 c3: Candidate carried over from cycle 2's triage (dedup-check already run there with the same moderate-match result). Opened this cycle given the tight ~30-minute window; verification done directly against AMD's primary press release plus three independent Tier-2 outlets rather than a full fresh-verifier/falsifier sub-agent pair, given time. Deliberately excluded a specific throughput benchmark figure (~16,000 tokens/sec/user) that appeared in secondary coverage but not in AMD's own release, to avoid publishing an unlabeled capability claim. Published."
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-08-21"
+}
