@@ -37,6 +37,19 @@ jobs:
           git config user.email "nihat@yinovasyon.com"
           git add data/
           git diff --cached --quiet || git commit -m "Daytime ingest $(date -u +%FT%H:%MZ)"
+          # GitHub's ref backend rejected a push once with `remote: fatal error
+          # in commit_refs` (2026-08-04, run 30935854819) and the run died with
+          # the capture committed but never pushed. seen_ids.json is git-resident,
+          # so the runner's state went with it and the items that had already
+          # scrolled out of their feed window were lost for good. Retry the way
+          # night_loop.sh's commit_push does, with a pause — the fault is
+          # server-side and an immediate retry may not clear it.
+          for attempt in 1 2 3; do
+            git push && exit 0
+            echo "push attempt $attempt rejected; refetching and retrying"
+            sleep $((attempt * 20))
+            git pull --rebase || true
+          done
           git push
       - name: Refresh site scanner feed
         env:
