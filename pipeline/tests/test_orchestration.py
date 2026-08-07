@@ -13,6 +13,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+import pytest
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 NIGHT_LOOP = REPO_ROOT / ".github" / "scripts" / "night_loop.sh"
 CYCLE_PROMPT = REPO_ROOT / ".github" / "cycle-prompt.md"
