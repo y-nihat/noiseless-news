@@ -3,13 +3,16 @@ name: Tests
 # The pipeline's only automated safety net. Runs on every push and pull request
 # so a broken build or a regressed duplicate gate is caught before it reaches
 # main — and therefore before the deploy workflow ships it to the live site.
+#
+# This deliberately includes the nightly agent's own commits. It used to skip
+# data/ and content/ to save CI minutes, which meant the repo-data tests — the
+# ones that check the live archive rather than a fixture — never ran against the
+# thing they exist to check. A held story stating an unverified rumour as fact
+# sat on the public site for two days behind that exemption (2026-08-05).
 
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'data/**'
-      - 'content/**'
   pull_request:
   workflow_dispatch:
 
