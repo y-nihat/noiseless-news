@@ -48,6 +48,22 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
         run: bash .github/scripts/night_loop.sh
 
+      # Final backstop deploy — per-cycle deploys are dispatched by the loop.
+      - name: Build site
+        if: always()
+        run: PYTHONPATH=pipeline python -m noiseless.run publish
+      - uses: actions/configure-pages@v5
+        if: always()
+      - uses: actions/upload-pages-artifact@v3
+        if: always()
+        with:
+          path: site/dist
+      - uses: actions/deploy-pages@v4
+        if: always()
+
+      # Last, deliberately: `if: failure()` is evaluated in step order, so a
+      # handler placed mid-job cannot see a later step fail — a run that dies in
+      # `configure-pages` or `deploy-pages` filed no issue at all.
       - name: Open failure issue
         if: failure()
         env:
@@ -64,16 +80,3 @@ jobs:
           gh issue create \
             --title "Nightly run failed $(date -u +%F)" \
             --body-file /tmp/issue-body.md || true
-
-      # Final backstop deploy — per-cycle deploys are dispatched by the loop.
-      - name: Build site
-        if: always()
-        run: PYTHONPATH=pipeline python -m noiseless.run publish
-      - uses: actions/configure-pages@v5
-        if: always()
-      - uses: actions/upload-pages-artifact@v3
-        if: always()
-        with:
-          path: site/dist
-      - uses: actions/deploy-pages@v4
-        if: always()
