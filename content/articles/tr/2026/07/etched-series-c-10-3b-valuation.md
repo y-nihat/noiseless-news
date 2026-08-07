@@ -14,7 +14,7 @@ tldr: >
   söylüyor.
 sources:
   - name: TechCrunch
-    url: https://techcrunch.com/
+    url: https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/
   - name: Etched (GlobeNewswire)
     url: https://www.globenewswire.com/
 claims:

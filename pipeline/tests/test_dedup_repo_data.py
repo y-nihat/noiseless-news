@@ -58,12 +58,45 @@ def test_open_stories_are_visible(index):
         assert entry.date, f"{entry.slug}: no date"
 
 
-def test_no_bare_domain_is_used_as_story_identity(index):
-    """Bare origins make every future story from that outlet a duplicate."""
-    offenders = {
-        url for entry in index for url in entry.urls if url.rstrip("/").count("/") < 3
-    }
-    assert not offenders, f"bare-origin identity URLs: {sorted(offenders)}"
+# Open entries with no recoverable identity URL. Each was checked against the
+# whole committed raw capture and the entry's own notes on 2026-08-07; none is
+# present anywhere in the archive, and inventing a plausible link on a site whose
+# proposition is that citations can be checked is worse than recording the gap.
+# Clear a slug from this list the moment a real URL turns up for it.
+NO_RECOVERABLE_URL = {
+    "anthropic-meta-compute-deal",   # origin is a paywalled exclusive, never captured
+    "bytedance-seed-audio-1-0",      # vendor blog post, never captured
+    "cohere-north-automations",      # dropped; nothing in the archive matches the story
+}
+
+
+def test_every_published_story_has_at_least_one_deep_link(index):
+    """A published article with no identity URL is invisible to the URL half.
+
+    Replaces an assertion that could never fail: `identity_urls` drops bare
+    origins while building the index, so a test looking for them in the built
+    index was vacuous.
+    """
+    offenders = [e.slug for e in index if e.state == "published" and not e.urls]
+    assert not offenders, f"published with no identity URL: {offenders}"
+
+
+def test_open_stories_carry_an_identity_url(index):
+    """Watching entries are exactly what the archive-wide index exists for.
+
+    With no URL, only the title half of the gate can match them — and naming
+    divergence between a story and its re-reporting is precisely the case the
+    URL half was added to catch.
+    """
+    offenders = [
+        e.slug
+        for e in index
+        if e.state != "published" and not e.urls and e.slug not in NO_RECOVERABLE_URL
+    ]
+    assert not offenders, (
+        f"open stories with no identity URL: {offenders} — "
+        "policy/article-template.md requires deep-link source_urls on every entry"
+    )
 
 
 def test_no_two_published_stories_strong_match_each_other(index):
