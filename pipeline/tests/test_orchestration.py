@@ -13,6 +13,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+import pytest
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 NIGHT_LOOP = REPO_ROOT / ".github" / "scripts" / "night_loop.sh"
 CYCLE_PROMPT = REPO_ROOT / ".github" / "cycle-prompt.md"
@@ -126,3 +128,38 @@ class TestDeployRace:
         )
         assert workflow["concurrency"]["group"] == "nightly"
         assert workflow["concurrency"]["cancel-in-progress"] is False
+
+
+class TestPushResilience:
+    """Every workflow that pushes to main must survive a server-side rejection.
+
+    GitHub's ref backend rejected a push once with `remote: fatal error in
+    commit_refs` (2026-08-04, run 30935854819). The run died with the capture
+    committed but never pushed, and because seen_ids.json is git-resident the
+    runner's state went with it — the items that had already scrolled out of
+    their feed window were lost for good.
+    """
+
+    WRITERS = ["ingest.yml", "source-health.yml"]
+
+    @pytest.mark.parametrize("workflow", WRITERS)
+    def test_a_rejected_push_is_retried(self, workflow):
+        text = (REPO_ROOT / ".github" / "workflows" / workflow).read_text("utf-8")
+        assert "git push" in text, f"{workflow} no longer pushes — update this test"
+        assert "for attempt in" in text, f"{workflow} has an unretried push"
+        assert "git pull --rebase" in text, f"{workflow} retries without refetching"
+
+    @pytest.mark.parametrize("workflow", WRITERS)
+    def test_the_retry_still_fails_the_step_when_it_never_succeeds(self, workflow):
+        """A swallowed push is worse than a red run: the work is silently gone."""
+        text = (REPO_ROOT / ".github" / "workflows" / workflow).read_text("utf-8")
+        loop_end = text.rindex("git push")
+        assert "|| true" not in text[loop_end:loop_end + 40], (
+            f"{workflow}'s final push swallows failure"
+        )
+
+    def test_the_night_loop_records_rather_than_swallows(self):
+        """It cannot exit mid-night, so it flags and fails at the end instead."""
+        script = NIGHT_LOOP.read_text(encoding="utf-8")
+        assert "push_failed=1" in script
+        assert 'if [ "$push_failed" -eq 1 ]; then' in script
