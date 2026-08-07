@@ -73,3 +73,56 @@ def test_cycle_prompt_frames_fetched_content_as_untrusted():
         "suspected injection",
     ):
         assert phrase in prompt, f"cycle prompt lost its injection framing: {phrase!r}"
+
+
+class TestDeployRace:
+    """The final cycle must not race the workflow's own backstop deploy.
+
+    GitHub Pages allows one deployment in flight. `nightly.yml` runs its
+    `if: always()` backstop deploy seconds after the script exits, with
+    byte-identical content, so a dispatch on the last cycle and the backstop
+    both try to create a deployment and whichever arrives second gets HTTP 400
+    (2026-08-04, run 30867516175).
+    """
+
+    def test_final_cycle_leaves_the_deploy_to_the_backstop(self):
+        script = NIGHT_LOOP.read_text(encoding="utf-8")
+        before = script.split('gh workflow run "Deploy site"')[0]
+        guard = before[before.rindex("Per-cycle site deploy"):]
+        assert 'is_final" -eq 0' in guard, "dispatch is not gated on is_final"
+        assert 'gate" -ne 3' in guard, "dispatch is not gated on a usage-limit stop"
+        assert before.rstrip().endswith("then"), "the dispatch is outside the guard"
+
+    def test_the_backstop_deploy_is_still_there(self):
+        """It was the only thing that deployed the site on 2026-08-07."""
+        workflow = (REPO_ROOT / ".github" / "workflows" / "nightly.yml").read_text("utf-8")
+        assert "actions/deploy-pages@v4" in workflow
+        assert workflow.count("if: always()") >= 4
+
+    def test_the_failure_handler_runs_after_the_deploy_steps(self):
+        """`if: failure()` is evaluated in step order.
+
+        A handler placed before the build and deploy steps cannot see them fail,
+        so a run that died in `configure-pages` filed no issue at all.
+        """
+        import yaml
+
+        workflow = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / "nightly.yml").read_text("utf-8")
+        )
+        names = [s.get("name") or s.get("uses") for s in workflow["jobs"]["scan"]["steps"]]
+        assert names[-1] == "Open failure issue", f"handler is not last: {names}"
+        assert names.index("Night loop") < names.index("Open failure issue")
+
+    def test_the_nightly_job_is_not_in_the_pages_concurrency_group(self):
+        """deploy.yml cancels in-progress runs in that group.
+
+        Putting the four-hour night in it would let any push to main kill it.
+        """
+        import yaml
+
+        workflow = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / "nightly.yml").read_text("utf-8")
+        )
+        assert workflow["concurrency"]["group"] == "nightly"
+        assert workflow["concurrency"]["cancel-in-progress"] is False

@@ -209,8 +209,18 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   commit_push "Night cycle $cycle artifacts $(date -u +%FT%H:%MZ)"
 
   # Per-cycle site deploy so articles appear through the night (best effort).
-  gh workflow run "Deploy site" --ref main 2>/dev/null \
-    && log "site deploy dispatched" || log "deploy dispatch failed (non-fatal)"
+  # Not on the cycle we are about to break out of: nightly.yml's `if: always()`
+  # backstop deploy runs a few seconds after this script exits, with
+  # byte-identical content, and GitHub Pages allows one deployment in flight —
+  # whichever create call arrives second gets HTTP 400 (2026-08-04, run
+  # 30867516175). Every non-final dispatch is followed by the slot sleep below,
+  # so it is at least fifteen minutes clear of the backstop.
+  if [ "$is_final" -eq 0 ] && [ "$gate" -ne 3 ]; then
+    gh workflow run "Deploy site" --ref main 2>/dev/null \
+      && log "site deploy dispatched" || log "deploy dispatch failed (non-fatal)"
+  else
+    log "last cycle — leaving the deploy to the workflow's backstop step"
+  fi
 
   if [ "$gate" -eq 3 ]; then
     usage_stop=1
