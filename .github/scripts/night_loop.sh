@@ -14,31 +14,44 @@ if [ -f .paused ]; then
 fi
 
 SMOKE="${SMOKE:-false}"
+# The cron fires 21:40 UTC, twenty minutes before the window opens, so no
+# legitimate hold is longer than this. Enforced here, not asserted in a comment.
+MAX_HOLD=1200
+HOLD=0
 if [ "$SMOKE" = "true" ]; then
   MAX_CYCLES=2; CYCLE_INTERVAL=1500; STORIES_PER_CYCLE=1
   MAX_SEARCHES=3; MAX_TURNS=40; NIGHT_STORY_CAP=2; NIGHT_SECONDS=3300
 else
   MAX_CYCLES=6; CYCLE_INTERVAL=2100; STORIES_PER_CYCLE=4
   MAX_SEARCHES=15; MAX_TURNS=120; NIGHT_STORY_CAP=12
-  # Night ends 01:20 UTC (04:20 Istanbul). Cron fires 22:00-23:00 UTC, so
-  # "tomorrow 01:20" is right; the guard handles a post-midnight late start.
-  TARGET=$(date -u -d "tomorrow 01:20" +%s); NOW=$(date -u +%s)
-  [ $((TARGET - NOW)) -gt 14400 ] && TARGET=$(date -u -d "today 01:20" +%s)
-  NIGHT_SECONDS=$((TARGET - NOW))
+  # Window is 22:00 -> 01:20 UTC (01:00-04:20 Istanbul; UTC+3, no DST). Plain
+  # epoch arithmetic, deliberately: `date -d "today 22:00"` resolves against the
+  # ACTUAL start date, so a cron delivered 3h24m late at 01:04 on 2026-08-07
+  # pointed 22 hours forward instead of twenty minutes and slept the job away
+  # until the step timeout killed it (run 31136812347). Every branch below
+  # yields NIGHT_SECONDS <= 12000 by construction, so no start time can ask for
+  # more window than the window has.
+  # NIGHT_NOW is a test hook. It is never set in production.
+  NOW=${NIGHT_NOW:-$(date -u +%s)}
+  DAY=$((NOW - NOW % 86400))                      # 00:00 UTC of the start date
+  OPEN=$((DAY + 79200))                           # 22:00 UTC that same date
+  if [ "$NOW" -ge "$OPEN" ]; then                 # 22:00-23:59 — start now
+    CLOSE=$((OPEN + 12000))
+  elif [ $((OPEN - NOW)) -le "$MAX_HOLD" ]; then  # 21:40-21:59 — wait for 22:00
+    HOLD=$((OPEN - NOW)); CLOSE=$((OPEN + 12000))
+  else                                            # 00:00-21:39 — this run belongs
+    CLOSE=$((DAY + 4800))                         # to last night's window (01:20)
+  fi
+  NIGHT_SECONDS=$((CLOSE - NOW - HOLD))
 fi
 
-# Scheduled runs are cron'd at 21:40 UTC to absorb GitHub's cron delay; hold
-# the actual start until the window opens at 22:00 UTC (01:00 Istanbul).
-if [ "${EVENT_NAME:-}" = "schedule" ] && [ "$SMOKE" != "true" ]; then
-  WINDOW_START=$(date -u -d "today 22:00" +%s); NOW=$(date -u +%s)
-  if [ "$NOW" -lt "$WINDOW_START" ]; then
-    log "holding $((WINDOW_START - NOW))s until the 22:00 UTC window opens"
-    sleep $((WINDOW_START - NOW))
-    # recompute the window from the true start
-    TARGET=$(date -u -d "tomorrow 01:20" +%s); NOW=$(date -u +%s)
-    [ $((TARGET - NOW)) -gt 14400 ] && TARGET=$(date -u -d "today 01:20" +%s)
-    NIGHT_SECONDS=$((TARGET - NOW))
-  fi
+if [ -n "${NIGHT_PLAN_ONLY:-}" ]; then   # test hook: pytest drives the arithmetic
+  echo "hold=$HOLD night_seconds=$NIGHT_SECONDS"; exit 0
+fi
+
+if [ "$HOLD" -gt 0 ]; then
+  log "holding ${HOLD}s until the 22:00 UTC window opens"
+  sleep "$HOLD"
 fi
 
 START=$(date -u +%s)
@@ -96,6 +109,15 @@ commit_push() {
   log "PUSH FAILED — work is committed locally but has NOT reached origin"
 }
 
+# Feed capture is deterministic, free, and takes about three minutes. A missed
+# ingest is the only permanent loss a bad night causes — Techmeme and
+# r/LocalLLaMA roll their windows over within hours and nothing ever re-fetches
+# them — so this runs unconditionally, before the window is even consulted. A
+# night with no runway left still captures the day's feeds.
+log "pre-cycle ingest"
+PYTHONPATH=pipeline python -m noiseless.run ingest || log "ingest reported failures (continuing)"
+commit_push "Night ingest $(date -u +%FT%H:%MZ)"
+
 for cycle in $(seq 1 "$MAX_CYCLES"); do
   NOW=$(date -u +%s)
   if [ $((NIGHT_END - NOW)) -lt 600 ]; then
@@ -103,9 +125,13 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
     break
   fi
 
-  log "cycle $cycle: ingest"
-  PYTHONPATH=pipeline python -m noiseless.run ingest || log "ingest reported failures (continuing)"
-  commit_push "Night ingest $(date -u +%FT%H:%MZ)"
+  # Cycle 1 uses the pre-cycle capture above; re-ingesting would cost it three
+  # minutes of its own agent slot for nothing.
+  if [ "$cycle" -gt 1 ]; then
+    log "cycle $cycle: ingest"
+    PYTHONPATH=pipeline python -m noiseless.run ingest || log "ingest reported failures (continuing)"
+    commit_push "Night ingest $(date -u +%FT%H:%MZ)"
+  fi
 
   published=$(find content/articles/en -name '*.md' -newer /tmp/night-start-marker | wc -l)
   remaining=$((NIGHT_STORY_CAP - published)); [ "$remaining" -lt 0 ] && remaining=0
@@ -256,6 +282,7 @@ commit_push "Night loop footer $(date -u +%F)"
 # These conditions do not fail the job; they raise a hand.
 warnings=()
 [ "$((new_articles + updated_articles))" -eq 0 ] && warnings+=("published nothing tonight")
+[ "$ran_cycles" -eq 0 ] && warnings+=("no agent cycle ran — only ${NIGHT_SECONDS}s of the 22:00-01:20 UTC window remained at start")
 [ "$ok_cycles" -lt "$ran_cycles" ] && warnings+=("$((ran_cycles - ok_cycles)) of $ran_cycles cycles did not complete cleanly")
 [ "$guard_trips" -gt 0 ] && warnings+=("$guard_trips out-of-scope write attempt(s) blocked")
 [ "$usage_stop" -eq 1 ] && warnings+=("night ended early on a usage limit")
