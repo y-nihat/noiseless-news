@@ -1,0 +1,43 @@
+{
+    "slug": "openai-astra-critical-cyber-capabilities",
+    "checked_at": "2026-08-07T22:26:00+00:00",
+    "method": "Fresh verifier sub-agent (confirmed Tier-0 primary + independent Tier-2 corroboration) followed by fresh adversarial falsifier sub-agent (checked freshness, checked for a name collision with the earlier openai-astra-ten-math-proofs story and with Google's unrelated Project Astra, checked for disputing coverage). dedup-check returned zero matches.",
+    "origin_items": [
+        "Surfaced this cycle via the-decoder.json, techmeme.json, and gnews-ai-model-releases.json (all 2026-08-07); traced to OpenAI's own post as the origin."
+    ],
+    "claims": [
+        {
+            "text": "OpenAI said on 7 August 2026 that it cannot rule out that its unreleased Astra model has reached the 'Critical' cybersecurity capability threshold under its Preparedness Framework, the first OpenAI model flagged at that level for cyber capabilities",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Tier-0 primary source (OpenAI's own post) alone meets the announcement standard; independently corroborated without discrepancy by Bloomberg and Axios, both of which report the same hedged 'cannot rule out' framing rather than a confirmed crossing. Falsifier pass found no prior OpenAI model reported at Critical for cyber (GPT-5.3-Codex reached only 'High' per a 2026-07-25 Fortune piece) and no outlet disputing the 'first' framing.",
+            "evidence": [
+                "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+                "https://www.bloomberg.com/news/articles/2026-08-07/openai-pauses-some-work-on-new-astra-model-over-cyber-concerns",
+                "https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks"
+            ]
+        },
+        {
+            "text": "In response, OpenAI is pausing internal activities involving Astra that lack sufficient safeguards, isolating test environments, restricting the model's network and tool access, adding universal monitoring, and working with government agencies and AI safety organizations to test the model further",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Consistent across OpenAI's own post and both independent Tier-2 outlets.",
+            "evidence": [
+                "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+                "https://www.bloomberg.com/news/articles/2026-08-07/openai-pauses-some-work-on-new-astra-model-over-cyber-concerns",
+                "https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks"
+            ]
+        },
+        {
+            "text": "OpenAI's Preparedness Framework defines the Critical cybersecurity threshold as a model that can identify and develop functional zero-day exploits across many hardened real-world systems without human intervention, or devise and execute end-to-end novel cyberattack strategies against hardened targets given only a high-level goal",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Definitional claim sourced to OpenAI's own framework language as quoted/paraphrased identically across the primary post and independent coverage; this is OpenAI describing its own published policy, so the Tier-0 post is sufficient sourcing.",
+            "evidence": [
+                "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities"
+            ]
+        }
+    ],
+    "falsifier_notes": "Verdict: PUBLISH WITH CHANGES, applied. Confirmed this is fresh (all coverage dated 2026-08-07, not a rehash). Confirmed 'Astra' here is the same model line OpenAI first named 2026-08-01 for math-proof work (open, unpublished watching-state ledger entry openai-astra-ten-math-proofs -- a different claim, not a duplicate; dedup-check returned zero matches), and is unrelated to Google's Project Astra -- added a one-line disambiguation to the article per the falsifier's recommendation. Kept OpenAI's hedged 'cannot rule out' / 'may have reached' language rather than asserting the model definitely crossed the threshold, per the falsifier's caution. Did not mention the separate Hugging Face agent-escape incident in the article since OpenAI explicitly denies Astra's involvement and it is not load-bearing for this story. No disputing or 'safety theater' coverage found.",
+    "gaps_closed_from_watching_state": []
+}

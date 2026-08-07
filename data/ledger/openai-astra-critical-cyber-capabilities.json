@@ -1,0 +1,21 @@
+{
+  "slug": "openai-astra-critical-cyber-capabilities",
+  "title": "OpenAI says its unreleased Astra model may cross its highest cyber-risk threshold",
+  "status": "published",
+  "first_seen": "2026-08-07",
+  "published_at": "2026-08-07",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities",
+    "https://www.bloomberg.com/news/articles/2026-08-07/openai-pauses-some-work-on-new-astra-model-over-cyber-concerns",
+    "https://www.axios.com/2026/08/07/openai-astra-model-delay-cybersecurity-risks"
+  ],
+  "follows": null,
+  "reason": "Published: Tier-0 primary (OpenAI's own post) plus independent Tier-2 corroboration (Bloomberg, Axios), no discrepancies, no disputing coverage found. Distinct from the still-watching openai-astra-ten-math-proofs entry (same model, unrelated claim about math-proof capability, not published) -- dedup-check returned zero matches, so treated as standalone, not a follow-up.",
+  "watch": [],
+  "open_obligation": true,
+  "revisit_after": "2026-08-21",
+  "notes": [
+    "2026-08-07 c1: Published. Open obligation set because OpenAI's own classification is provisional ('cannot rule out' Critical, testing ongoing with government agencies/safety orgs) and the eventual release decision for Astra is a pending outcome that should be checked and reported when it lands."
+  ]
+}
