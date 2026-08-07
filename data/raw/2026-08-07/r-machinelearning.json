@@ -98,5 +98,25 @@
     "published": "2026-08-07T10:30:14+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>It's an MLP architecture with around 500K total parameters.</p> <p>Top1</p> <p>Training accuracy: 5.11%</p> <p>Validation accuracy 4.59% </p> <p>Detailed Validation accuracy numbers:</p> <p>Top-1 Acc: 4.59%</p> <p>Top-3 Acc: 9.44%</p> <p>Top-5 Acc: 12.68%</p> <p>Top-10 Acc: 18.53%</p> <p>The model was trained on a downscaled version of the Imagenet-1k dataset (32x32) for 5 epochs.</p> <p>I used pytorch for the training and pyarrow for the dataset, all within termux.</p> <p>Before anyone comes at me for using an MLP instead of a CNN or similar it's mainly because on my phone an MLP was just more stable, and trained 10-30x faster/step (could be my fault but I'm not too sure). This model specifically took around 30 minutes to train (6 minute/epoch)</p> <p>The training was entirely on the CPU which is a Dimensity 9300+ and I used 4 of the Arm Cortex-X4 cores.</p> <p>I might make an improved version later on as this one isn't very accurate.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Tall_Abrocoma_3533\"> /u/Tall_Abrocoma_3533 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vhwwfr/imagenet1k_classifier_trained_entirely_on_an/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vhwwfr/imagenet1k_classifier_trained_entirely_on_an/\">[comments]</a></span>",
     "fetched_at": "2026-08-07T10:54:48.155120+00:00"
+  },
+  {
+    "id": "16b8278adeda6f10",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "2026 NeurIPS: Where are you going? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vi5xz7/2026_neurips_where_are_you_going_d/",
+    "published": "2026-08-07T16:48:43+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>To all those in the US: Are you planning to go Sydney or Atlanta this year for NeurIPS? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rsesrsfh\"> /u/rsesrsfh </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vi5xz7/2026_neurips_where_are_you_going_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vi5xz7/2026_neurips_where_are_you_going_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  },
+  {
+    "id": "14c01ec8da263449",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "​Built a tool to generate slides from research papers using local LLMs (because I hate formatting decks and privacy matters) [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vi0c4k/built_a_tool_to_generate_slides_from_research/",
+    "published": "2026-08-07T13:14:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>​​Hi guys,</p> <p>​Every time I had to prepare a presentation based on a paper or research doc, I found the process super tedious. Plus, I really dislike uploading unpublished stuff or sensitive data to online AI services just to get a draft.</p> <p>​So I put together a tool called academi\\_slide to automate this locally.</p> <p>​Basically, it extracts sections, tables, charts, metrics, and citations from docs, and uses prompt optimization / deck planning to get a solid first draft out of a local model (ollama, llama.cpp, or cloud if you want).</p> <p>​It also handles multilingual input/output if you need to present in another language, and builds both the slide deck and a brief in a few minutes so you don't start from scratch.</p> <p>​It's open source, still early, and I'm sharing it in case anyone else finds it useful or has a similar workflow.</p> <p>​Repo is here if you want to test it out: <a href=\"https://github.com/nicolaslpf/academi%5C%5C%5C_slide\">https://github.com/nicolaslpf/academi\\\\\\_slide</a></p> <p>​Would love to get some feedback or hear what you think!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/nickemlop\"> /u/nickemlop </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vi0c4k/built_a_tool_to_generate_slides_from_research/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vi0c4k/built_a_tool_to_generate_slides_from_research/\">[comments]</a></span>",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
   }
 ]

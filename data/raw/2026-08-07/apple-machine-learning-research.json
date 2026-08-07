@@ -18,5 +18,15 @@
     "published": "2026-08-06T00:00:00+00:00",
     "summary": "Large language models (LLMs) with integrated search tools show strong promise in open-domain question answering (QA), yet they often struggle to produce complete answer set to complex questions such as “Which actor from the film Heat won at least one Academy Award?”, which requires (1) distinguishing between multiple films sharing the same title and (2) reasoning across a large set of actors to gather and integrate evidence. Existing QA benchmarks rarely evaluate both challenges jointly. To address this, we introduce DEEPAMBIGQAGEN, an automatic data generation pipeline that constructs QA…",
     "fetched_at": "2026-08-07T08:56:18.094317+00:00"
+  },
+  {
+    "id": "b3d1173017d6c7da",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Scaling Categorical Flow Maps",
+    "url": "https://machinelearning.apple.com/research/scaling-categorical-flow-maps",
+    "published": "2026-08-07T00:00:00+00:00",
+    "summary": "Continuous diffusion and flow matching models could represent a powerful alternative to autoregressive approaches for language modelling (LM), as they unlock a host of advantages currently reserved for continuous modalities, including accelerated sampling and tilting. Recently, several works have demonstrated the possibility of generating discrete data continuously by a simple flow matching process between a Gaussian and the one-hot encoded data distribution. They have further shown the feasibility of accelerated sampling via Categorical Flow Maps (CFMs), resulting in competitive sample…",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
   }
 ]

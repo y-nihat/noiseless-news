@@ -78,5 +78,35 @@
     "published": "2026-08-06T16:08:12+00:00",
     "summary": "The Amazon SageMaker Python SDK v3 now exposes generative AI inference recommendations in Amazon SageMaker AI directly in your notebook. Benchmark an endpoint, generate data-driven deployment recommendations, and deploy the recommended configuration without leaving your notebook workflow.",
     "fetched_at": "2026-08-07T08:56:18.094317+00:00"
+  },
+  {
+    "id": "746110f504748130",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How Cohere Health digitizes clinical policies using Amazon Bedrock AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-cohere-health-digitizes-clinical-policies-using-amazon-bedrock-agentcore/",
+    "published": "2026-08-07T16:26:58+00:00",
+    "summary": "In this post, you learn how Cohere Health built a multi-tenant agentic architecture on AgentCore using AgentCore Runtime’s secure MicroVM isolation, unified tool access through AgentCore Gateway, AgentCore Memory, and the Agent Skills open standard to rapidly scale policy digitization capabilities, while preserving transparency, version control, and human oversight.",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  },
+  {
+    "id": "99876de038b54581",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How TReNDS automates root-cause analysis with Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-trends-automates-root-cause-analysis-with-amazon-bedrock/",
+    "published": "2026-08-07T16:22:50+00:00",
+    "summary": "TReNDS, a research center at Georgia State University, built an agentic AI pipeline on Amazon Bedrock and the open-source Strands Agents SDK that automatically investigates production errors in real time, reducing root-cause analysis from 15 to 30 minutes of manual work to under 60 seconds.",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  },
+  {
+    "id": "0e46cef28dd5b5f6",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Determining playoff clinching scenarios in the NHL using constraint programming",
+    "url": "https://aws.amazon.com/blogs/machine-learning/determining-playoff-clinching-scenarios-in-the-nhl-using-constraint-programming/",
+    "published": "2026-08-07T16:21:00+00:00",
+    "summary": "The AWS Generative AI Innovation Center built an automated system that uses constraint programming and custom tree search to determine, with mathematical certainty, when and how an NHL team clinches a playoff spot. The approach was validated against four full NHL seasons of officially published results.",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
   }
 ]

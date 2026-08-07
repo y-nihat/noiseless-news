@@ -1,0 +1,42 @@
+[
+  {
+    "id": "4d8df97248019ec7",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Microsoft Open Sources code-testing-generator: a Polyglot Unit-Test Agent That Hits 92.1% Task Completion Versus 78.9% for Stock Copilot",
+    "url": "https://www.marktechpost.com/2026/08/06/microsoft-open-sources-code-testing-generator/",
+    "published": "2026-08-07T05:42:45+00:00",
+    "summary": "<p>Microsoft has open sourced code-testing-generator, a polyglot unit-test agent shipping in the MIT-licensed dotnet/skills repository. It reads a repository before writing anything — detecting the language, test framework, existing conventions, and the real build and test commands — then plans, writes, runs and validates the tests it produces. On Microsoft's internal 152-task benchmark it completed 140 tasks against 120 for stock GitHub Copilot on the same model, with the gain concentrated almost entirely in vague prompts and diff-targeted requests.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/06/microsoft-open-sources-code-testing-generator/\">Microsoft Open Sources code-testing-generator: a Polyglot Unit-Test Agent That Hits 92.1% Task Completion Versus 78.9% for Stock Copilot</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  },
+  {
+    "id": "074f5458ae1cc19d",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Liquid AI Releases LFM2.5-2.6B: An On-Device Agentic Model With 128K Context, Tool Calling, And Open Weights",
+    "url": "https://www.marktechpost.com/2026/08/06/liquid-ai-lfm2-5-2-6b-on-device-agentic-model/",
+    "published": "2026-08-07T03:42:27+00:00",
+    "summary": "<p>Liquid AI released LFM2.5-2.6B, an agentic model that plans, calls tools, and completes multi-step tasks entirely on-device. The 2.69B parameter model pairs 22 double-gated short convolution blocks with 8 GQA blocks across 30 layers, handles 131,072 tokens of context, and decodes at 220 tokens/s on an M5 Max in under 2.5 GB. Open weights ship in GGUF, MLX, and ONNX.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/06/liquid-ai-lfm2-5-2-6b-on-device-agentic-model/\">Liquid AI Releases LFM2.5-2.6B: An On-Device Agentic Model With 128K Context, Tool Calling, And Open Weights</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  },
+  {
+    "id": "c1a4c691b918245d",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Cloudflare Introduces Kitesurf: An Agent-First Web Browser That Runs Entirely in V8 Isolates on Cloudflare Workers",
+    "url": "https://www.marktechpost.com/2026/08/06/cloudflare-introduces-kitesurf-an-agent-first-web-browser-that-runs-entirely-in-v8-isolates-on-cloudflare-workers/",
+    "published": "2026-08-06T19:35:32+00:00",
+    "summary": "<p>Cloudflare has released Kitesurf, a stateless web browser built specifically for AI agents that runs entirely in V8 isolates on Cloudflare Workers, with no Chromium underneath. The browser drops human-facing features like tabs and extensions in favor of what agents need: machine-readable content, scalability, and isolation. Built in 12 weeks using Rust components like Blitz, Stylo, and Boa JS, it already passes 215,000+ Web Platform Tests. Benchmarks show 3.1–3.8× less CPU and 4.7–7.0× less memory than Chromium on screenshots and HTML extraction. Existing Puppeteer, Playwright, and MCP clients work by adding a single browser=kitesurf parameter, free while in beta.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/06/cloudflare-introduces-kitesurf-an-agent-first-web-browser-that-runs-entirely-in-v8-isolates-on-cloudflare-workers/\">Cloudflare Introduces Kitesurf: An Agent-First Web Browser That Runs Entirely in V8 Isolates on Cloudflare Workers</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  },
+  {
+    "id": "877e7ef31bc40ba5",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Adaptive Experimentation with Meta’s Ax: A Practical Coding Guide",
+    "url": "https://www.marktechpost.com/2026/08/06/adaptive-experimentation-with-metas-ax-a-practical-coding-guide/",
+    "published": "2026-08-06T17:17:52+00:00",
+    "summary": "<p>In this tutorial, we explore adaptive experimentation using Meta’s Ax with the modern Client API. We work through a complete workflow where we tune a RandomForest model on a synthetic classification dataset while balancing predictive accuracy against model footprint. We begin by defining a mixed search space with integer, float, log-scaled, and categorical parameters, then [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/06/adaptive-experimentation-with-metas-ax-a-practical-coding-guide/\">Adaptive Experimentation with Meta’s Ax: A Practical Coding Guide</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  }
+]
