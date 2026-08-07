@@ -14,6 +14,7 @@ print. These tests pin that boundary.
 from __future__ import annotations
 
 import json
+import re
 
 import pytest
 
@@ -156,20 +157,84 @@ class TestRendering:
         ).read_text(encoding="utf-8")
 
 
+# §11a: a held subject is the story under review, not the claim. The mechanical
+# half of that rule is that a subject must not make a bare factual assertion — it
+# either has no finite verb at all ("Reports of an in-house Meta AI chip
+# timeline") or it carries a hedge ("OpenAI's *claimed* ten math solutions").
+ASSERTIVE_VERB = re.compile(
+    r"\b(is|are|was|were|will|has|have|had|pauses|paused|launches|launched"
+    r"|starts|started|wins|won|files|filed|buys|bought|raises|raised)\b",
+    re.IGNORECASE,
+)
+HEDGE = re.compile(
+    r"\b(report|reports|reported|reportedly|claim|claims|claimed|alleged"
+    r"|allegedly|unconfirmed|purported|purportedly|said to|whether|possible"
+    r"|apparent|apparently|rumou?red)\b",
+    re.IGNORECASE,
+)
+
+
+def asserts_a_claim(subject: str) -> bool:
+    return bool(ASSERTIVE_VERB.search(subject)) and not HEDGE.search(subject)
+
+
+class TestSubjectAssertionRule:
+    """The rule itself, tested on the cases that motivated it.
+
+    The previous version of this check was a blocklist of name prefixes
+    ("openai's", "meta will"). It was wrong in both directions: it failed a
+    correctly-hedged subject that happened to start with "OpenAI's", and it
+    passed "DeepSeek pauses second funding round…", which asserted as fact a
+    story the pipeline had classified as an unverifiable rumour — and which was
+    live on the public page for two days.
+    """
+
+    @pytest.mark.parametrize(
+        "subject",
+        [
+            "OpenAI's head of safety systems is departing amid a reorganisation",
+            "DeepSeek pauses second funding round after viral remarks",
+            "Meta will start in-house chip production in September",
+        ],
+    )
+    def test_bare_assertions_are_rejected(self, subject):
+        assert asserts_a_claim(subject)
+
+    @pytest.mark.parametrize(
+        "subject",
+        [
+            "Reports of an in-house Meta AI chip timeline",
+            "Reports of a paused DeepSeek funding round",
+            "OpenAI's claimed ten open-problem math solutions from an unreleased model",
+            "ByteDance's Seed Audio 1.0 international rollout",
+            "Reports of a safety-team reorganisation at OpenAI",
+        ],
+    )
+    def test_hedged_or_verbless_subjects_pass(self, subject):
+        assert not asserts_a_claim(subject)
+
+
 class TestRealLedger:
     def test_no_held_subject_asserts_the_claim_it_failed_to_verify(self):
-        """§11a: a held title is the subject under review, not the claim.
+        """§11a, against the live ledger.
 
-        Guards the specific defect found in the audit: one entry's title stated
-        that a named individual was departing — the exact claim the pipeline had
-        decided it could not verify.
+        A held story is one whose claims did not stand up. Stating them as fact
+        on the page that exists to say we could not verify them is the one thing
+        this feature must never do.
         """
         from pathlib import Path
 
         repo = Path(__file__).resolve().parents[2]
+        offenders = [
+            f"{e['slug']}: {e['subject']!r}"
+            for e in load_held_stories(repo / "data")
+            if asserts_a_claim(e["subject"])
+        ]
+        assert not offenders, "held subjects stated as fact: " + "; ".join(offenders)
+
+    def test_every_held_entry_is_dated(self):
+        from pathlib import Path
+
+        repo = Path(__file__).resolve().parents[2]
         for entry in load_held_stories(repo / "data"):
-            subject = entry["subject"].lower()
-            assert not any(
-                subject.startswith(w) for w in ("openai's", "meta will", "anthropic will")
-            ), f"{entry['slug']}: subject reads as an assertion — {entry['subject']!r}"
             assert entry["since"], f"{entry['slug']}: no first_seen date"
