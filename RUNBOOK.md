@@ -49,8 +49,11 @@ claude setup-token                  # generates a new token locally
 gh secret set CLAUDE_CODE_OAUTH_TOKEN --repo y-nihat/noiseless-news
 ```
 
-Then re-run the workflow: `gh workflow run "Nightly scan"`. Note this runs a full
-night immediately; use `-f smoke=true` for a two-cycle, one-story test instead.
+Then verify with `gh workflow run "Nightly scan" -f smoke=true` — two cycles, one
+story, about 55 minutes, and it works at any time of day. A non-smoke dispatch
+only does useful work inside the 22:00–01:20 UTC window: outside it the loop
+captures the feeds, writes its report and exits red within a few minutes, by
+design. That is the correct behaviour, not a failure of the dispatch.
 
 Symptoms of an expired token: the night fails with zero successful cycles, an
 issue is opened automatically, and the agent stream shows an authentication
