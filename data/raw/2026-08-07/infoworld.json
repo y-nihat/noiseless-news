@@ -1,0 +1,12 @@
+[
+  {
+    "id": "110d8886be546585",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "Microsoft releases open-source agent that generates unit tests",
+    "url": "https://www.infoworld.com/article/4206367/microsoft-releases-open-source-agent-that-generates-unit-tests.html",
+    "published": "2026-08-06T23:34:54+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">Microsoft has released <a href=\"https://github.com/dotnet/skills/blob/main/plugins/dotnet-test/agents/code-testing-generator.agent.md\">code-testing-generator</a>, an open-source agent for generating unit tests in any programming language, according to the company.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Released <a href=\"https://devblogs.microsoft.com/dotnet/polyglot-unit-testing-agent/\">July 31</a>, the code-testing-generator agent learns from the user’s repository, then plans, writes, and checks the tests to prove that they work. Currently the agent writes unit tests only. Integration tests, end-to-end tests, browser tests, and performance tests are outside its current scope, Microsoft said. </p>\n\n\n\n<p class=\"wp-block-paragraph\">The agent coordinates test generation using the “research-plan-implement” (RPI) pipeline. First the agent searches the repository for the code that needs tests, detecting the language and test framework and looking for existing tests to guide its work, and finding the correct commands for building and running the tests. </p>\n\n\n\n<p class=\"wp-block-paragraph\">Next the agent chooses the right amount of work from three paths:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Direct: Read the relevant code, write the tests, and validate the result.</li>\n\n\n\n<li>Single pass: Research and plan once, then implement that plan.</li>\n\n\n\n<li>Iterative: Repeat the cycle to cover a large request or reach a coverage goal.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">The agent then plans and writes the tests It starts with simple code and then moves to code with more dependencies, mapping each behavior to a test file. The agent then checks that the generat…",
+    "fetched_at": "2026-08-07T08:56:18.094317+00:00"
+  }
+]

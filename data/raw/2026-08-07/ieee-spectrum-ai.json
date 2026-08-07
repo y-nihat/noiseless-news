@@ -1,0 +1,12 @@
+[
+  {
+    "id": "f73d3a1c30182798",
+    "source": "IEEE Spectrum AI",
+    "tier": 2,
+    "title": "AI Safety Regulations in the U.S. Could Give Hackers an Edge",
+    "url": "https://spectrum.ieee.org/hugging-face-openai-cyberattack",
+    "published": "2026-08-06T19:25:39+00:00",
+    "summary": "<img src=\"https://spectrum.ieee.org/media-library/illustration-of-hugging-faces-smiley-face-logo-holding-up-scales-of-justice-against-a-background-of-binary-code.jpg?id=67583759&amp;width=1200&amp;height=800&amp;coordinates=0%2C208%2C0%2C209\" /><br /><br /><p>On 11 July, Hugging Face was subjected to an intense cyberattack from a then-unknown actor. The speed and coordination of the attack on the company that hosts and supports popular AI developer resources led Hugging Face’s security team to conclude it was the work of <a href=\"https://spectrum.ieee.org/ai-agents\" target=\"_blank\">an AI agent</a>. </p><p>Realizing this, the team tried to use <a href=\"https://huggingface.co/blog/security-incident-july-2026\" rel=\"noopener noreferrer\" target=\"_blank\">“frontier models behind commercial APIs”</a>—presumably from Anthropic and OpenAI, although only Anthropic was named in the second of the company’s two posts about the security incident—to analyze the onslaught. These models refused to help due to safety guardrails the AI labs have implemented to make their models harder to use for cyberattacks. Hugging Face instead turned to GLM 5.2, a model from Beijing-based AI lab Z.ai, to aid its analysis. </p><p>On 21 July, <a href=\"https://openai.com/index/hugging-face-model-evaluation-security-incident/\" rel=\"noopener noreferrer\" target=\"_blank\">OpenAI announced</a> the attacker was an OpenAI model undergoing testing in a sandboxed environment. It escaped its internal sandbox, established a foothold in a third-party server, and then assailed Hugging Face. In other words, frontier models—those that score highest in AI performance benchmarks—had refused to assist Hugging Face’s security team in analyzing the attack, yet a prospective frontier model in testing had executed it in the first place.</p><p>“I would argue that asymmetry is the paramount problem of our time,” says <a href=\"https://www.linkedin.com/in/alexlevinson/\" rel=\"noopener noreferrer\" target=\"_blank\">Alex Levinson</a>…",
+    "fetched_at": "2026-08-07T08:56:18.094317+00:00"
+  }
+]

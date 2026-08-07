@@ -1,0 +1,22 @@
+[
+  {
+    "id": "3911ae4f80259ae6",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Locking Pretrained Weights via Deep Low-Rank Residual Distillation",
+    "url": "https://machinelearning.apple.com/research/locking-pretrained-weights",
+    "published": "2026-08-06T00:00:00+00:00",
+    "summary": "The quality of open-weight language models has dramatically improved in recent years. Sharing weights greatly facilitates model adoption by enabling their use across diverse hardware and software platforms. They also allow for more open research and testing, to the extent that users can use them as checkpoints, fine-tune them according to their needs, and potentially redistribute them. In some cases, however, concerns on modifying these weights towards unauthorized uses may outweigh the pros of giving users such a freedom. Defending against such adaptation is non-trivial: since an adaptive…",
+    "fetched_at": "2026-08-07T08:56:18.094317+00:00"
+  },
+  {
+    "id": "c9a3fec6ff09eaff",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "DeepAmbigQA: Ambiguous Multi-hop Questions for Benchmarking LLM Answer Completeness",
+    "url": "https://machinelearning.apple.com/research/deepambigqa-multihop-questions",
+    "published": "2026-08-06T00:00:00+00:00",
+    "summary": "Large language models (LLMs) with integrated search tools show strong promise in open-domain question answering (QA), yet they often struggle to produce complete answer set to complex questions such as “Which actor from the film Heat won at least one Academy Award?”, which requires (1) distinguishing between multiple films sharing the same title and (2) reasoning across a large set of actors to gather and integrate evidence. Existing QA benchmarks rarely evaluate both challenges jointly. To address this, we introduce DEEPAMBIGQAGEN, an automatic data generation pipeline that constructs QA…",
+    "fetched_at": "2026-08-07T08:56:18.094317+00:00"
+  }
+]
