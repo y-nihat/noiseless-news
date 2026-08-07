@@ -108,5 +108,45 @@
     "published": "2026-08-07T12:45:32+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_logo_large_right.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        OpenAI's planned smart speaker is taking shape. The company's first hardware device will be donut-shaped, roughly the size of a hockey puck, and priced above $300, according to Bloomberg. </p>\n<p>The article <a href=\"https://the-decoder.com/openais-hockey-puck-sized-smart-speaker-with-moving-parts-is-set-to-ship-in-2027/\">OpenAI&#039;s hockey-puck-sized smart speaker with moving parts is set to ship in 2027</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-07T16:56:52.540896+00:00"
+  },
+  {
+    "id": "6e196b4a79cfcbde",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI flags its new Astra model as potentially reaching the highest cybersecurity risk level for the first time",
+    "url": "https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/",
+    "published": "2026-08-07T19:41:06+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_kraken_cyber.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Internal tests of OpenAI's new AI model Astra show cybersecurity capabilities so strong that the company can no longer rule out the highest risk level in its own safety framework. Parts of Astra's development have been paused. The move follows recently disclosed incidents in which autonomous AI agents infiltrated OpenAI's own infrastructure undetected for weeks.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-flags-its-new-astra-model-as-potentially-reaching-the-highest-cybersecurity-risk-level-for-the-first-time/\">OpenAI flags its new Astra model as potentially reaching the highest cybersecurity risk level for the first time</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-07T22:16:31.083643+00:00"
+  },
+  {
+    "id": "af0580c81b7a1c86",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AI music generator Suno tightens rules to fight spam and address growing copyright concerns",
+    "url": "https://the-decoder.com/ai-music-generator-suno-tightens-rules-to-fight-spam-and-address-growing-copyright-concerns/",
+    "published": "2026-08-07T18:35:42+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/suno_ai_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Suno CEO Mikey Shulman has announced new guidelines and tighter download limits after its AI-generated music was used to game streaming platforms for profit. The company also faces pressure from a German copyright ruling and an admission by one of its investors that AI music competes directly with human artists.</p>\n<p>The article <a href=\"https://the-decoder.com/ai-music-generator-suno-tightens-rules-to-fight-spam-and-address-growing-copyright-concerns/\">AI music generator Suno tightens rules to fight spam and address growing copyright concerns</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-07T22:16:31.083643+00:00"
+  },
+  {
+    "id": "b7c20be210bc6115",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AMD acquires Taalas, a startup that bakes AI models directly into silicon",
+    "url": "https://the-decoder.com/amd-acquires-taalas-a-startup-that-bakes-ai-models-directly-into-silicon/",
+    "published": "2026-08-07T18:01:32+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/amd_logowall.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        AMD is buying Canadian startup Taalas, which hard-codes model weights directly into inference chips. That makes them extremely fast but locks each chip to a single model. A demo chip hit over 16,000 tokens per second per user running Llama 3.1-8B. Google is reportedly working on a similar approach for Gemini.</p>\n<p>The article <a href=\"https://the-decoder.com/amd-acquires-taalas-a-startup-that-bakes-ai-models-directly-into-silicon/\">AMD acquires Taalas, a startup that bakes AI models directly into silicon</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-07T22:16:31.083643+00:00"
+  },
+  {
+    "id": "30a0b584b9c1234c",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Anthropic loosens Fable 5's biology restrictions but keeps the guardrails on for virology and toxicology",
+    "url": "https://the-decoder.com/anthropic-loosens-fable-5s-biology-restrictions-but-keeps-the-guardrails-on-for-virology-and-toxicology/",
+    "published": "2026-08-07T17:35:45+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/anthropic_bio.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Anthropic has cut false positives in its biology safety filters for Fable 5 by about 85 percent. Previously, nearly all biology-related queries got blocked and rerouted to the less capable Opus 5. The restrictions stay in place for sensitive dual-use topics like virology and toxicology.</p>\n<p>The article <a href=\"https://the-decoder.com/anthropic-loosens-fable-5s-biology-restrictions-but-keeps-the-guardrails-on-for-virology-and-toxicology/\">Anthropic loosens Fable 5&#039;s biology restrictions but keeps the guardrails on for virology and toxicology</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-07T22:16:31.083643+00:00"
   }
 ]
