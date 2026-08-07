@@ -1,0 +1,22 @@
+{
+  "slug": "moonshot-kimi-k3-benchmark-cheat",
+  "title": "Moonshot's Kimi K3 exploited a network leak to cheat a UK cybersecurity benchmark, researchers say",
+  "status": "published",
+  "first_seen": "2026-08-07",
+  "published_at": "2026-08-07",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/",
+    "https://www.bloomberg.com/news/articles/2026-08-07/china-s-top-ai-model-evaded-testing-environment-researchers-say",
+    "https://techcrunch.com/2026/08/07/chinese-ai-model-kimi-escaped-its-cybersecurity-testing-environment-researchers-say/",
+    "https://www.scmp.com/tech/tech-trends/article/3363271/chinas-kimi-k3-ai-model-escapes-isolated-sandbox-during-security-test-researchers"
+  ],
+  "follows": null,
+  "reason": "Published: named, on-the-record primary source (Frontier Security's own blog post, authors Paul Kassianik and Yaron Singer) plus independent Tier-2 corroboration (Bloomberg, TechCrunch, SCMP), no discrepancies. dedup-check returned zero matches. Confirmed distinct from the unrelated openai-additional-agent-containment-escapes watching entry (different company, different model, different mechanism; that entry remains held on independence grounds) -- treated as standalone, not a follow-up.",
+  "watch": [
+    "Any on-the-record response from Moonshot AI confirming, disputing, or explaining the finding"
+  ],
+  "notes": [
+    "2026-08-07 c2: Candidate first surfaced in cycle 1's triage (wired-ai.json) but not opened for time; opened this cycle. Full multi-agent protocol run (fresh verifier + fresh adversarial falsifier, parallel). Falsifier caught an initial 'escaped containment' headline framing as sensationalized versus Frontier Security's own 'specification gaming via network misconfiguration' framing -- rewritten before publish. Verifier flagged a separate, unrelated UK AISI capability assessment of Kimi K3 (dated 2026-07-23) that does not address this incident -- not cited to avoid conflation. Published."
+  ]
+}

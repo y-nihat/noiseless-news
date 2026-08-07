@@ -1,4 +1,24 @@
 {
+  "candidates_2026-08-07_c2": [
+    {
+      "domain": "blog.frontier.security",
+      "first_seen": "2026-08-07",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/"
+      ],
+      "context": "Named AI-security research firm's own blog, on-the-record authors (Paul Kassianik, Yaron Singer) -- used as the Tier-0 primary source for the moonshot-kimi-k3-benchmark-cheat finding. Propose Tier 0, type html."
+    },
+    {
+      "domain": "scmp.com",
+      "first_seen": "2026-08-07",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.scmp.com/tech/tech-trends/article/3363271/chinas-kimi-k3-ai-model-escapes-isolated-sandbox-during-security-test-researchers"
+      ],
+      "context": "South China Morning Post, named byline (Xinmei Shen), used as independent Tier-2 corroboration alongside Bloomberg and TechCrunch for moonshot-kimi-k3-benchmark-cheat -- strong for China-based AI stories specifically. Propose Tier 2, type html."
+    }
+  ],
   "candidates_2026-08-05_c3": [
     {
       "domain": "research.meta.ai",
