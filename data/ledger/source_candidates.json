@@ -927,5 +927,17 @@
       ],
       "context": "AMD's official newsroom/press-release domain (ir.amd.com/news-events/press-releases mirrors the same content) -- used as the Tier-0 primary source for the amd-taalas-acquisition announcement. AMD is not currently a registered source at all despite being a major lab/hardware vendor; propose Tier 0, type html or rss if a feed exists."
     }
+  ],
+  "candidates_2026-08-08_c5": [
+    {
+      "domain": "code.claude.com",
+      "first_seen": "2026-08-08",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://code.claude.com/docs/en/cross-session-messaging",
+        "https://code.claude.com/docs/en/changelog"
+      ],
+      "context": "Anthropic's own Claude Code documentation/changelog domain -- used as the Tier-0 primary source for claude-code-cross-session-messaging (a first-party product-feature announcement). Propose Tier 0, type html."
+    }
   ]
 }
