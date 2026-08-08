@@ -1,0 +1,12 @@
+[
+  {
+    "id": "04e10f67940243c5",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+    "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+    "published": "2026-08-07T23:55:58+00:00",
+    "summary": "<p>OpenAI gave a last-minute presentation at the Black Hat security on Wednesday about \"the Hugging Face Incident\" (<a href=\"https://simonwillison.net/2026/Jul/22/openai-cyberattack/\">previously</a> on this blog). <a href=\"https://www.youtube.com/watch?v=87DyyMV0kCY\">The video</a> was published yesterday. It's short and information dense and well worth watching, in particular because it provides full details of what happened and how things played out inside OpenAI. I've used the video to construct the timeline below.</p>\n\n<p> </p>\n\n<p>Here's the timeline. My favourite detail is at the end: OpenAI found out that they were responsible for the attack on Hugging Face when they reached out to ask to have their credentials revoked (after their internal investigation) and learned that they had been revoked already since they were used in that attack!</p>\n<ul>\n<li>\n<strong>May 7</strong>: OpenAI starts a new evaluation run for an experimental, unreleased model.</li>\n<li>\n<strong>May 8</strong>: An agent is accidentally given an impossible task involving a Google Drive link despite no internet access). It tries attacking the Artifactory packaging service, fails, but discovers it can <strong>write files into Artifactory</strong>.</li>\n<li>\n<strong>A few days later</strong>: A different agent gets stuck on a task because a key file was accidentally omitted. It tries to \"reach out to another agent\" by writing a note into Artifactory asking if anyone has the file.</li>\n<li>\n<strong>Following days</strong>: More agents discover this new informal message board while browsing Artifactory's file listings, and start reading and writing messages.</li>\n<li>\n<strong>May 26</strong>: Agents successfully execute an <strong>SSRF attack on Artifactory</strong> for the first time, gaining indirect internet access by having Artifactory fetch external content for them.</li>\n<li>\n<strong>June 11</strong>: OpenAI start evaluating a new \"highly persistent\" experimental model. It has access to Art…",
+    "fetched_at": "2026-08-08T00:04:34.910303+00:00"
+  }
+]
