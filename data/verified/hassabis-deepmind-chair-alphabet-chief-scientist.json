@@ -1,0 +1,33 @@
+{
+    "slug": "hassabis-deepmind-chair-alphabet-chief-scientist",
+    "checked_at": "2026-08-08T23:21:00+00:00",
+    "method": "Verified directly against Google's own announcement (Sundar Pichai's post on blog.google, Tier-0 primary) plus two independently bylined Tier-2 reports (Fortune's Beatrice Nolan, Time's Billy Perrigo) that add on-record quotes and context not in the primary post. No fresh verifier/falsifier sub-agent pair was spun up given this cycle's tight time budget (deadline 23:46 UTC); verification and an adversarial dispute/denial search were done in-session against primary + two independent outlets, matching the approach used for openai-nextslide-acquisition and amd-taalas-acquisition in prior cycles. Every load-bearing claim traces to the Google blog post directly, cross-checked against Fortune and Time for consistency (no contradictions found -- Fortune and Time both independently confirm Kavukcuoglu's title is SVP, not CEO, correcting a looser 'named CEO' framing used by some other relaying outlets, which was therefore not used).",
+    "origin_items": [
+        "Surfaced via targeted web search after a moderate dedup-check match against the unrelated 2026-07-14 hassabis-frontier-ai-standards-body story prompted a closer look; not present in this cycle's registered-feed raw ingest."
+    ],
+    "claims": [
+        {
+            "text": "Demis Hassabis is stepping down from day-to-day duties as CEO of Google DeepMind to become Chair of Google DeepMind and Chief Scientist of Alphabet, while continuing to lead Isomorphic Labs",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Stated directly in Google's own announcement post; independently confirmed by Fortune and Time, both with named bylines and no discrepancy.",
+            "evidence": ["https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/", "https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/", "https://time.com/article/2026/08/06/google-deepmind-ai-demis-hassabis/"]
+        },
+        {
+            "text": "Koray Kavukcuoglu becomes SVP of Google DeepMind, reporting to Sundar Pichai, overseeing Gemini model development, frontier AI research, and the Gemini app and developer teams -- not the CEO title Hassabis held",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Google's own post quotes Pichai describing Kavukcuoglu's role as 'SVP of Google DeepMind, reporting to me.' Time explicitly notes this is an SVP position 'rather than as CEO,' correcting looser secondary coverage that used the word CEO informally.",
+            "evidence": ["https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/", "https://time.com/article/2026/08/06/google-deepmind-ai-demis-hassabis/"]
+        },
+        {
+            "text": "The announcement coincided with Jeff Dean, a 27-year Google veteran and the company's chief scientist, leaving to launch an independent public benefit corporation with longtime collaborator Sanjay Ghemawat",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed in Google's own post (Pichai: 'after an incredible 27-year run, Jeff Dean is at a moment where he wants to try something new') and independently in Fortune's report.",
+            "evidence": ["https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/", "https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/"]
+        }
+    ],
+    "falsifier_notes": "Web search for 'Hassabis DeepMind CEO change denied dispute forced out' found no denial or dispute; the only nuance surfaced was Semafor's exclusive that the shift had been under way for about a year and was not an ouster, which is consistent with (not contradictory to) the announcement and is reflected in the article's framing via Time's corroborating reporting. Checked for staleness: announcement dated 2026-08-05, well within the last 72 hours as of this cycle. dedup-check against the archive returned zero matches for this exact title/URL; a moderate match (score 0.375, no shared source URLs) surfaced against hassabis-frontier-ai-standards-body (2026-07-14), a published article about an unrelated topic (Hassabis's call for an independent AI standards body) -- treated as unrelated-despite-surface-similarity (same person, different event and topic), not a duplicate or follow-up, per verification.md §8. A stock-price-move figure reported by Fortune (~5% Alphabet share drop) was deliberately omitted from the article as an unverified single-source numeric citation not essential to the core claims.",
+    "gaps_closed_from_watching_state": []
+}

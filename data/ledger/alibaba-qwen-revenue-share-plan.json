@@ -1,0 +1,22 @@
+{
+  "slug": "alibaba-qwen-revenue-share-plan",
+  "title": "Alibaba reportedly plans revenue-sharing terms for large commercial users of its next Qwen model",
+  "status": "watching",
+  "first_seen": "2026-08-08",
+  "source_urls": [
+    "https://www.investing.com/news/stock-market-news/alibaba-plans-revenuesharing-for-commercial-users-of-next-qwen-ai-model--reuters-4845019",
+    "https://technode.com/2026/08/07/alibaba-reportedly-plans-revenue-sharing-terms-for-next-qwen-model/"
+  ],
+  "follows": null,
+  "reason": "Not published: this is a rumor/unnamed-sources claim per verification.md §3 (Reuters 'citing people familiar with the matter,' no Alibaba confirmation) rather than a confirmed business claim. TechNode's coverage traces to a separate origin (IT Home) but is itself also unconfirmed by Alibaba and gives no percentage or firm date. Same pattern the ledger already treats as watching elsewhere (e.g. openai-safety-heidecke-departure, openai-additional-agent-containment-escapes): single-chain exclusives with no on-record company statement. Percentage and exact launch timing are explicitly described as unresolved by both outlets checked.",
+  "watch": [
+    "Any on-the-record Alibaba/Qwen team statement confirming or denying the revenue-share plan",
+    "Official terms published alongside the open-weight Qwen3.8-Max release, reported by Reuters as expected \"next week\" as of 2026-08-07",
+    "A finalized revenue-share percentage or threshold"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-08-15",
+  "notes": [
+    "2026-08-08 c3: Considered and held as watching. dedup-check returned zero matches (new candidate). Verified sourcing chain via WebFetch on the Investing.com/Reuters relay and TechNode: both explicitly unnamed-sources reporting, no company confirmation, no finalized percentage. Set open_obligation and a one-week revisit given Reuters' own reporting that the open-weight Qwen3.8-Max release (and the terms with it) was expected within about a week of 2026-08-07."
+  ]
+}

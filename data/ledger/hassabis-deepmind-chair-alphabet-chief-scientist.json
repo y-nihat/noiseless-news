@@ -1,0 +1,24 @@
+{
+  "slug": "hassabis-deepmind-chair-alphabet-chief-scientist",
+  "title": "Demis Hassabis steps down as Google DeepMind CEO, becomes Alphabet chief scientist",
+  "status": "published",
+  "first_seen": "2026-08-08",
+  "published_at": "2026-08-08",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+    "https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/",
+    "https://time.com/article/2026/08/06/google-deepmind-ai-demis-hassabis/"
+  ],
+  "follows": null,
+  "reason": "Published: Google's own announcement (Pichai post on blog.google, Tier-0 primary) plus two independently bylined Tier-2 reports (Fortune, Time), all consistent, no dispute or denial found. Moderate dedup-check match against hassabis-frontier-ai-standards-body (2026-07-14) reviewed and judged unrelated -- same person, different event/topic (leadership reshuffle vs. regulatory-standards advocacy) -- so treated as standalone per verification.md §8, not a follow-up.",
+  "watch": [
+    "Whether DeepMind's safety/responsibility teams are formally moved into Google's broader org, and how that affects frontier-AI safety oversight",
+    "Kavukcuoglu's track record running Gemini day-to-day, and whether Gemini 3.5 Pro ships on a revised timeline",
+    "Jeff Dean and Sanjay Ghemawat's new venture (reported name: Discovery Loop) launching or naming further details"
+  ],
+  "open_obligation": false,
+  "notes": [
+    "2026-08-08 c3: Published. Surfaced via web search (not this cycle's registered-feed ingest) after a moderate dedup-check match against an unrelated July 14 Hassabis story prompted a closer look. Verified in-session against Google's own post plus Fortune and Time (no fresh verifier/falsifier sub-agent pair spun up given this cycle's time budget, deadline 23:46 UTC, same pattern as openai-nextslide-acquisition in cycle 2). No pending ruling or unresolved outcome in the core claims themselves, so open_obligation left false; the watch list above covers follow-on developments worth checking in a later cycle without treating them as an unresolved claim in this article."
+  ]
+}
