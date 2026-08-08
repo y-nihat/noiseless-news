@@ -18,5 +18,55 @@
     "published": "2026-08-08T15:17:06+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>What's your commitment submission ID? My submission number is ~150 (submitted two days ago) and I'm wondering what the total number of commitments is. Did anyone commit near the deadline?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/hepiga\"> /u/hepiga </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1viyloc/aaclijcnlp_commitment_submission_number_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1viyloc/aaclijcnlp_commitment_submission_number_d/\">[comments]</a></span>",
     "fetched_at": "2026-08-08T16:37:48.192675+00:00"
+  },
+  {
+    "id": "b642de415a5ffad3",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS OpenReview Modified Timeline [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vj6ov3/neurips_openreview_modified_timeline_d/",
+    "published": "2026-08-08T20:49:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I just wonder if “modified: 04 Aug 2026 at 22:21” time part in the Reviewer’s official review still remain unchanged, then is that mean reviewer not add final justification, or any change of their rating?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Responsible-Read-138\"> /u/Responsible-Read-138 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj6ov3/neurips_openreview_modified_timeline_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj6ov3/neurips_openreview_modified_timeline_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-08T22:00:06.158699+00:00"
+  },
+  {
+    "id": "d1460ce4e969600d",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS AI Assisted Review authors/reviewers? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vj3oqr/neurips_ai_assisted_review_authorsreviewers_d/",
+    "published": "2026-08-08T18:42:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Out of curiosity, if you were a reviewer or author, how did the review period go?</p> <p>For me, it was weird, because I gave reviews with specific details (what specifically could have been better, how to fix it), but realized other reviewers gave similar superficial reviews. Even the paper which was a control for me (no LLM), I gave specific comments, but other reviewers focused on minor things. </p> <p>During the discussion period for one paper, one reviewer broke the double blindness condition, and gave specific examples of what the LLM gave and justified their reject…..but they didn’t even state that in their initial review (nor engaged with the author rebuttals). There was no also no sense of: “author said this was unclear, check with the LLM to see what’s the issue”</p> <p>For one of my own papers, we had great scores for originality and significance, but had low scores for clarity, with at least two reviewers finding difficulty understanding established notation and concepts, and I’m wondering whether it would have been better to break the double blindness and said: look, the point of an LLM assisted review is that if you don’t even know this material, you can ask it questions, like if other papers use the same notation, how our paper compares with them, etc…</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/OutsideSimple4854\"> /u/OutsideSimple4854 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj3oqr/neurips_ai_assisted_review_authorsreviewers_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj3oqr/neurips_ai_assisted_review_authorsreviewers_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-08T22:00:06.158699+00:00"
+  },
+  {
+    "id": "56a9327edda6c640",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Evaluation metrics - [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vj1ke5/evaluation_metrics_d/",
+    "published": "2026-08-08T17:18:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I wanted to ask about the selection of evaluation metrics. In which scenario we use ROC-AUC score and in which scenario we use f1 score as an evaluation metric in a classification problem to define the model's performance on a specific dataset.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/okbro_9\"> /u/okbro_9 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj1ke5/evaluation_metrics_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj1ke5/evaluation_metrics_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-08T22:00:06.158699+00:00"
+  },
+  {
+    "id": "11e95c3ee14e3cc4",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Synthesizing and formally verifying a SWAR bit-hack for INT4 dot products using Z3 and Lean 4 [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vj870x/synthesizing_and_formally_verifying_a_swar/",
+    "published": "2026-08-08T21:55:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>INT4 quantization is ubiquitous in ML right now, but evaluating dot products on hardware without native SIMD/vector instructions (like WebAssembly or older ARM chips) usually requires slow sequential loops. A classic workaround is SWAR (SIMD Within A Register), but deriving the bitwise operations by hand to unpack, multiply, and sum eight 4-bit integers packed into a single 32-bit register is tedious and error-prone.</p> <p>Instead of writing the bit-hack manually, I wrote a pipeline that uses an SMT solver to discover the exact bitwise formula from scratch, and then uses a theorem prover to mathematically guarantee its correctness.</p> <p>Here is a breakdown of the technical process:</p> <p><strong>1. Synthesis via CEGIS Loop (Z3)</strong> I set up a Counter-Example Guided Inductive Synthesis (CEGIS) loop in Python using the Z3 SMT solver. The solver is given a ground-truth specification (naive loop: extract nibbles, sign-extend, multiply, sum) and a bounded set of allowed instructions (AND, OR, XOR, ADD, SUB, MUL, shifts). Z3 searches the space of possible instruction sequences. If it finds a candidate, we test it against random inputs. If it fails, the failing input is added to Z3's constraints, and it tries again. Eventually, it converges on a pure, branchless sequence of operations.</p> <p><strong>2. The Generated Math</strong> The resulting algorithm utilizes a known multiplier trick for byte-reversals, but Z3 managed to perfectly interleave the even/odd nibble extraction. For example, part of the generated code handles even/odd multiplications by exploiting 32-bit hardware multiplications: <code>(ea_low * eb_low_rev) &gt;&gt;&gt; 16</code> This evaluates two 4-bit multiplications at opposite ends of the register simultaneously without cross-talk.</p> <p><strong>3. Formal Proof in Lean 4</strong> Passing a million random tests is nice, but it’s not a mathematical guarantee for bit-hacks. To prove there are absolutely no edge c…",
+    "fetched_at": "2026-08-08T22:00:06.158699+00:00"
+  },
+  {
+    "id": "31c89ad9426abbd2",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "ICDE Results [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vj1oq6/icde_results_d/",
+    "published": "2026-08-08T17:22:57+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello! Let's use this thread to discuss ICDE results which should be coming out shortly today (hopefully).</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mythrowaway0852\"> /u/mythrowaway0852 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj1oq6/icde_results_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vj1oq6/icde_results_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-08T22:00:06.158699+00:00"
   }
 ]
