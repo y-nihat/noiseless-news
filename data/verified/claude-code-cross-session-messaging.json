@@ -1,0 +1,47 @@
+{
+    "slug": "claude-code-cross-session-messaging",
+    "checked_at": "2026-08-08T00:47:00+00:00",
+    "method": "Direct verification against Anthropic's own Tier-0 primary sources (Claude Code documentation page and changelog, both fetched live) plus Anthropic's own ClaudeDevs account announcement on X, cross-checked against independent Tier-2 coverage (9to5Mac). No fresh verifier/falsifier sub-agent pair was spun up this pass -- verification was done in-session directly against the primary source, given this cycle's ~29-minute time budget -- but every load-bearing claim traces to Anthropic's own documentation of its own product, which is the strongest possible source type for a first-party feature announcement. A separate search for security criticism or dispute of this specific shipped feature found only generic/pre-existing feature-request discussion and unrelated Claude Desktop coverage, nothing disputing what was announced.",
+    "origin_items": [
+        "Surfaced from this cycle's fresh ingest (data/raw/2026-08-08/techmeme.json), a Techmeme item citing 9to5Mac's coverage of Anthropic's announcement."
+    ],
+    "claims": [
+        {
+            "text": "Anthropic released cross-session messaging in Claude Code version 2.1.224, dated 7 August 2026, letting one Claude Code session send a text message to another using a new SendMessage tool, with ListAgents used to discover reachable sessions",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed directly from Anthropic's own Claude Code changelog (version 2.1.224, dated 2026-08-07) and the dedicated cross-session-messaging documentation page, both first-party Tier-0 sources describing Anthropic's own product.",
+            "evidence": ["https://code.claude.com/docs/en/cross-session-messaging", "https://code.claude.com/docs/en/changelog"]
+        },
+        {
+            "text": "The feature is available on macOS and Linux (including Linux inside WSL 2); it is not available on native Windows, and is not available on Amazon Bedrock, Claude Platform on AWS, Google Cloud's Agent Platform, or Microsoft Foundry",
+            "type": "capability",
+            "verdict": "confirmed",
+            "reasoning": "Stated explicitly in the documentation's 'Availability' section.",
+            "evidence": ["https://code.claude.com/docs/en/cross-session-messaging"]
+        },
+        {
+            "text": "A message is plain text only, never the sender's conversation history or files; same-machine delivery uses a local per-session socket, cross-machine delivery goes through Anthropic's servers via Remote Control and is reply-only on the receiving side",
+            "type": "capability",
+            "verdict": "confirmed",
+            "reasoning": "Stated explicitly in the documentation's message-delivery and cross-machine-messaging sections.",
+            "evidence": ["https://code.claude.com/docs/en/cross-session-messaging"]
+        },
+        {
+            "text": "Delivery of an incoming message is controlled per-session by the crossSessionInbound setting and the sessions' permission modes, with held messages defaulting to a five-minute expiry (dialogExpiry) if not approved",
+            "type": "capability",
+            "verdict": "confirmed",
+            "reasoning": "Stated explicitly in the documentation's 'Control inbound messages' section.",
+            "evidence": ["https://code.claude.com/docs/en/cross-session-messaging"]
+        },
+        {
+            "text": "Anthropic's own ClaudeDevs account publicly announced the feature the same day, describing it as sending a summary rather than history or files",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Direct quote from ClaudeDevs' own X post, matching the documentation's description.",
+            "evidence": ["https://x.com/ClaudeDevs/status/2085817074816070014"]
+        }
+    ],
+    "falsifier_notes": "Targeted search for 'Claude Code cross-session messaging security concern criticism' found only pre-existing GitHub feature-request threads (predating this shipped release) and generic Claude Code security best-practice writeups, plus an unrelated Claude Desktop browser-access story -- nothing disputing the accuracy of what Anthropic shipped or announced. dedup-check returned zero matches against the archive -- standalone story, not a duplicate or follow-up of any existing entry. This is a first-party product-feature story (Anthropic describing its own shipped product), which is a different evidentiary category from the business-deal/personnel-rumor stories held in watching -- the independence rule (verification.md policy/independence) applies to third-party claims about a company; a company's own accurate self-description of a shipped feature is itself the Tier-0 primary confirmation.",
+    "gaps_closed_from_watching_state": []
+}

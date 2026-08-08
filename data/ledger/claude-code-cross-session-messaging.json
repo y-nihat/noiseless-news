@@ -1,0 +1,20 @@
+{
+  "slug": "claude-code-cross-session-messaging",
+  "title": "Anthropic adds cross-session messaging to Claude Code",
+  "status": "published",
+  "first_seen": "2026-08-08",
+  "published_at": "2026-08-08",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://code.claude.com/docs/en/cross-session-messaging",
+    "https://code.claude.com/docs/en/changelog",
+    "https://x.com/ClaudeDevs/status/2085817074816070014",
+    "https://9to5mac.com/2026/08/07/claude-code-now-lets-sessions-talk-to-each-other-on-macos/"
+  ],
+  "follows": null,
+  "reason": "Published. First-party product-feature announcement: Anthropic's own Claude Code documentation and changelog (both fetched live) plus its own ClaudeDevs X account confirm every load-bearing claim about a feature Anthropic itself shipped, cross-checked against independent Tier-2 coverage (9to5Mac) for consistency. dedup-check returned zero archive matches -- standalone. A targeted search for security criticism/dispute found nothing disputing the announcement itself.",
+  "watch": [],
+  "notes": [
+    "2026-08-08 c5: Surfaced via this cycle's fresh Techmeme ingest (9to5Mac coverage). Dedup-check clean. Verified directly against Anthropic's own documentation and changelog (Tier 0) rather than a fresh verifier/falsifier sub-agent pair, given the ~29-minute cycle window -- judged appropriate given the primary source is the company describing its own shipped product, the lowest-risk evidentiary category. Published same cycle. style-gate: claude-code-cross-session-messaging EN pass / TR pass."
+  ]
+}
