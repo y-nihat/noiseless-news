@@ -950,5 +950,16 @@
       ],
       "context": "Anthropic's own Claude Code documentation/changelog domain -- used as the Tier-0 primary source for claude-code-cross-session-messaging (a first-party product-feature announcement). Propose Tier 0, type html."
     }
+  ],
+  "candidates_2026-08-08_night4_c4": [
+    {
+      "domain": "klaviyo.com",
+      "first_seen": "2026-08-08",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.klaviyo.com/newsroom/agency-elias-torres"
+      ],
+      "context": "Klaviyo's own newsroom domain -- used as the Tier-0 primary source for klaviyo-acquires-agency-ai (a company acquisition announcement). Not currently a registered source; one-off use for now, not proposed for full registration."
+    }
   ]
 }

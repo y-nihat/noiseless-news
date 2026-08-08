@@ -1,0 +1,40 @@
+{
+    "slug": "klaviyo-acquires-agency-ai",
+    "checked_at": "2026-08-08T23:56:00+00:00",
+    "method": "Verified directly against Klaviyo's own newsroom announcement (Tier-0 primary, one-off company domain not in sources.yaml) plus TechCrunch's independently bylined report (Marina Temkin, Tier-2, includes original quotes from Bialecki and Torres beyond the press release). No fresh verifier/falsifier sub-agent pair was spun up given this cycle's tight time budget (deadline 00:21 UTC); verification and an adversarial dispute search were done in-session against primary + one independent outlet, matching the approach used for hassabis-deepmind-chair-alphabet-chief-scientist and openai-nextslide-acquisition in prior cycles. dedup-check against the archive returned zero matches.",
+    "origin_items": [
+        "Surfaced via targeted web search from cycle 3's discovery-sweep carryover list ('AI acquisition deal confirmed' query), not present in this cycle's registered-feed raw ingest."
+    ],
+    "claims": [
+        {
+            "text": "Klaviyo is acquiring the team and technology of Agency, an AI-native customer-success startup founded by Elias Torres in 2023",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Stated directly in Klaviyo's own newsroom post; independently confirmed by TechCrunch with no discrepancy.",
+            "evidence": ["https://www.klaviyo.com/newsroom/agency-elias-torres", "https://techcrunch.com/2026/08/05/klaviyo-acquires-elias-torres-agency-in-full-circle-reunion-for-tech-founders/"]
+        },
+        {
+            "text": "Torres becomes chief product officer, leading Agency's 25-person team and Klaviyo's agent product line (Composer, Customer Agent), reporting to co-CEO Andrew Bialecki",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed in both the Klaviyo newsroom post and TechCrunch's independent reporting, including quotes from Bialecki and Torres.",
+            "evidence": ["https://www.klaviyo.com/newsroom/agency-elias-torres", "https://techcrunch.com/2026/08/05/klaviyo-acquires-elias-torres-agency-in-full-circle-reunion-for-tech-founders/"]
+        },
+        {
+            "text": "Deal terms were not disclosed; the transaction is expected to close in Q3 2026",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Both sources state no purchase price was disclosed and cite the same Q3 2026 closing timeline.",
+            "evidence": ["https://www.klaviyo.com/newsroom/agency-elias-torres", "https://techcrunch.com/2026/08/05/klaviyo-acquires-elias-torres-agency-in-full-circle-reunion-for-tech-founders/"]
+        },
+        {
+            "text": "Agency had raised $32 million from Sequoia, Menlo Ventures and Felicis before the acquisition",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Reported by TechCrunch; not a load-bearing headline claim, single independent Tier-2 source is sufficient for this contextual funding-history detail.",
+            "evidence": ["https://techcrunch.com/2026/08/05/klaviyo-acquires-elias-torres-agency-in-full-circle-reunion-for-tech-founders/"]
+        }
+    ],
+    "falsifier_notes": "Web search for 'Klaviyo Agency acquisition dispute deny controversy' found no denial or dispute; the only Klaviyo-related legal item surfacing was an unrelated California class-action suit about data privacy practices, not connected to this acquisition. Checked for staleness: announcement dated 2026-08-05, well within the last 72 hours as of this cycle (2026-08-08 23:56 UTC). dedup-check against the archive returned zero matches for this exact title/URL.",
+    "gaps_closed_from_watching_state": []
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "klaviyo-acquires-agency-ai",
+  "title": "Klaviyo acquires AI customer-success startup Agency, names founder Elias Torres chief product officer",
+  "status": "published",
+  "first_seen": "2026-08-08",
+  "published_at": "2026-08-08",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.klaviyo.com/newsroom/agency-elias-torres",
+    "https://techcrunch.com/2026/08/05/klaviyo-acquires-elias-torres-agency-in-full-circle-reunion-for-tech-founders/"
+  ],
+  "follows": null,
+  "reason": "Published: Klaviyo's own newsroom announcement (Tier-0 primary, one-off domain) plus TechCrunch's independently bylined report (Marina Temkin), consistent facts, no dispute or denial found. dedup-check returned zero matches.",
+  "watch": [
+    "Whether a purchase price is later disclosed",
+    "Whether the deal closes as expected in Q3 2026"
+  ],
+  "open_obligation": false,
+  "notes": [
+    "2026-08-08 c4: Published. Surfaced via web search following up cycle 3's discovery-sweep carryover ('AI acquisition deal confirmed' query hit). Verified in-session against Klaviyo's own post plus TechCrunch (no fresh verifier/falsifier sub-agent pair spun up given this cycle's tight time budget, deadline 00:21 UTC). No pending outcome in the core claims, so open_obligation left false; deal-closing and price-disclosure tracked in the watch list instead."
+  ]
+}
