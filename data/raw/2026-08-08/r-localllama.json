@@ -1,0 +1,12 @@
+[
+  {
+    "id": "bd6aa4604ede0b04",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why no good external multi gpu solutions?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vicjm8/why_no_good_external_multi_gpu_solutions/",
+    "published": "2026-08-07T20:55:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I guess we are a small market, but I would love a turnkey external dual and quad GPU box with built in pcie5 full 16 lane support for all GPUs so you get full p2p.</p> <p>Then I could just plug the thing into a mini pc instead of contemplating a giant eatx xeon or threadripper build.</p> <p>Best approach for dual looks like a highpoint adapter which seems ok I guess but going quad looks like a huge pain of ordering stuff from Germany and whatnot.</p> <p>Anybody come up with a quad GPU solution that gives full 64 lane pcie5 p2p and doesn't require ecc ddr5 purchasing in this market?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmotiveforce\"> /u/pmotiveforce </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vicjm8/why_no_good_external_multi_gpu_solutions/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vicjm8/why_no_good_external_multi_gpu_solutions/\">[comments]</a></span>",
+    "fetched_at": "2026-08-08T00:39:34.720607+00:00"
+  }
+]
