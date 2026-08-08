@@ -1,0 +1,12 @@
+[
+  {
+    "id": "4417dac555843d52",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "Rust preps improved borrow checker for stabilization",
+    "url": "https://www.infoworld.com/article/4206875/rust-preps-improved-borrow-checker-for-stabilization.html",
+    "published": "2026-08-08T02:55:04+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">The Rust team has announced that it is enabling the Polonius Alpha borrow checker on nightly releases for testing. The team expects to fully stabilize Polonius Alpha later in the year. </p>\n\n\n\n<p class=\"wp-block-paragraph\">The announcement was made in a <a href=\"https://blog.rust-lang.org/2026/08/04/enabling-polonius-alpha-on-nightly/\">blog post on August 4</a>. In the blog post, Rust team member Jack Huey said there are no known remaining issues with Polonius Alpha and performance is generally acceptable for stabilization.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Enabling the Polonius Alpha borrow checker on nightly for testing is being done to help find serious performance regressions, unsoundness in the formulation, and diagnostic issues that need to be improved, Huey said. Issues can be reported in <a href=\"https://github.com/rust-lang/rust/issues/160456\">GitHub</a> or <a href=\"https://blog.rust-lang.org/2026/08/04/enabling-polonius-alpha-on-nightly/\">Zulip.</a> </p>\n\n\n\n<p class=\"wp-block-paragraph\">Developers can disable Polonius Alpha and use the stable NLL borrow checker by passing <code>-Zpolonius=off</code> to <code>rustc</code> , using <code>RUSTFLAGS=-Zpolonius=off</code>, or including the following in a project’s <a href=\"https://doc.rust-lang.org/cargo/reference/config.html\"><code>.cargo/config.toml</code></a> configuration file:</p>\n\n\n\n<pre class=\"wp-block-code\"><code>[target.x86_64-unknown-linux-gnu]\nrustflags = [\"-Zpolonius=off\"]</code></pre>\n\n\n\n<p class=\"wp-block-paragraph\">The <a href=\"https://github.com/rust-lang/polonius\">Polonius borrow checker</a> has been in the works since 2018. In 2023, <a href=\"https://smallcultfollowing.com/bab…",
+    "fetched_at": "2026-08-08T10:36:19.699491+00:00"
+  }
+]
