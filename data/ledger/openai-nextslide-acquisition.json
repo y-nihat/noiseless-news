@@ -1,0 +1,19 @@
+{
+  "slug": "openai-nextslide-acquisition",
+  "title": "OpenAI acquires presentation startup NextSlide, folds team into ChatGPT",
+  "status": "published",
+  "first_seen": "2026-08-08",
+  "published_at": "2026-08-08",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://nextslide.ai/",
+    "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/"
+  ],
+  "follows": null,
+  "reason": "Published: primary confirmation from NextSlide's own site (the acquired party itself) plus TechCrunch's independently bylined report with on-record founder quotes. No dispute or denial found; dedup-check returned zero matches, so treated as standalone. OpenAI itself has issued no separate public statement, typical for small acqui-hires and not treated as undermining the claim since the acquired party's own confirmation is the primary source.",
+  "watch": [],
+  "open_obligation": false,
+  "notes": [
+    "2026-08-08 c2: Published. Surfaced via triage of this cycle's fresh techcrunch-ai.json ingest; verified directly against NextSlide's own site and TechCrunch (no fresh verifier/falsifier sub-agent pair spun up given this cycle's time budget, same pattern as amd-taalas-acquisition). Deal already closed (financial terms undisclosed, no pending outcome), so no open_obligation."
+  ]
+}

@@ -928,6 +928,17 @@
       "context": "AMD's official newsroom/press-release domain (ir.amd.com/news-events/press-releases mirrors the same content) -- used as the Tier-0 primary source for the amd-taalas-acquisition announcement. AMD is not currently a registered source at all despite being a major lab/hardware vendor; propose Tier 0, type html or rss if a feed exists."
     }
   ],
+  "candidates_2026-08-08_night2_c2": [
+    {
+      "domain": "nextslide.ai",
+      "first_seen": "2026-08-08",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://nextslide.ai/"
+      ],
+      "context": "Acquired startup's own site -- used as the Tier-0-equivalent primary confirmation for the openai-nextslide-acquisition story (the acquired party's own on-the-record 'joining OpenAI' statement, same treatment as newsroom.amd.com for amd-taalas-acquisition). One-off single-page site, unlikely to recur as a general source; noting for the record rather than proposing full registration."
+    }
+  ],
   "candidates_2026-08-08_c5": [
     {
       "domain": "code.claude.com",

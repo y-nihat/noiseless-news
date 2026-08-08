@@ -1,0 +1,40 @@
+{
+    "slug": "openai-nextslide-acquisition",
+    "checked_at": "2026-08-08T22:50:00+00:00",
+    "method": "Direct verification against NextSlide's own site (Tier-0-equivalent primary, the acquired party's on-the-record confirmation) plus TechCrunch's independently bylined report (founder Ahmed Beshry's own quotes and background), cross-checked for dispute/denial via web search. No fresh verifier/falsifier sub-agent pair was spun up this pass -- verification done in-session against the primary source directly, given this cycle's tight time budget, matching the approach used for amd-taalas-acquisition. Every load-bearing claim traces to NextSlide's own confirmation and/or TechCrunch's on-record quotes from the founder; a separate search for dispute/denial/OpenAI-side statement turned up none (OpenAI itself has not issued a separate public statement, which is typical for small acqui-hires).",
+    "origin_items": [
+        "Surfaced from this cycle's fresh ingest (data/raw/2026-08-08/techcrunch-ai.json)."
+    ],
+    "claims": [
+        {
+            "text": "OpenAI acquired NextSlide, a startup that built an app turning prompts, notes, documents and research into polished, editable presentations, and the NextSlide team is now working on ChatGPT",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed directly by NextSlide's own site ('NextSlide is joining OpenAI') and by TechCrunch's report, which quotes founder Ahmed Beshry describing the product and confirming the team is now working on ChatGPT.",
+            "evidence": ["https://nextslide.ai/", "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/"]
+        },
+        {
+            "text": "The acquisition closed earlier in 2026 but was announced publicly by NextSlide on 8 August 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "TechCrunch reports Beshry stated the deal closed earlier this year and was only announced now; consistent with NextSlide's own site posting the announcement on 8 August 2026.",
+            "evidence": ["https://nextslide.ai/", "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/"]
+        },
+        {
+            "text": "Financial terms of the acquisition were not disclosed",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Stated explicitly in TechCrunch's report.",
+            "evidence": ["https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/"]
+        },
+        {
+            "text": "NextSlide founder Ahmed Beshry previously co-founded Caper AI, a cashier-less checkout startup acquired by Instacart in 2021",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Reported directly by TechCrunch as background on the founder.",
+            "evidence": ["https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/"]
+        }
+    ],
+    "falsifier_notes": "Web search for 'NextSlide OpenAI acquisition disputed denied' turned up no pushback, dispute, or denial -- only routine acqui-hire coverage repeating the same NextSlide/TechCrunch-sourced facts (several relaying outlets, e.g. cryptobriefing.com and techbuzz.ai, are on the blocked_evidence_domains list and were not used as evidence). No OpenAI-side public statement or blog post was found (site:openai.com search returned nothing on NextSlide); this is normal for small acqui-hires and does not undermine the claim since NextSlide, the acquired party, is itself the primary confirming source. dedup-check returned zero matches against the archive -- standalone, not a duplicate or follow-up.",
+    "gaps_closed_from_watching_state": []
+}
