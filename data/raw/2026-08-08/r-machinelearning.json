@@ -8,5 +8,15 @@
     "published": "2026-08-08T09:06:01+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p><strong>Real-Time Conversational Agents (RTCA)</strong> workshop at NeurIPS 2026 (Sydney, Dec 11–12). Submissions are now open on OpenReview. </p> <p><strong>What the workshop is about</strong></p> <p>Conversational AI has crossed into real-time deployment — voice modes, embodied avatars, full-duplex speech agents — but the published record is still dominated by <em>offline</em> benchmarks, and deployed agents still feel robotic (stilted turn-taking, missing backchannels, monotone prosody, awkward interruptions). Methods that work offline (non-causal attention, large beam search, multi-pass refinement, slow diffusion) often don't transfer to streaming, and the field lacks shared vocabulary and benchmarks for <em>interactional</em> naturalness as distinct from per-utterance quality.</p> <p>The workshop is organised around three intertwined questions:</p> <ol> <li><strong>Real-time generation</strong> under hard latency budgets — streaming speech, video, and language</li> <li><strong>Naturalness in interaction</strong> — prosody, gaze, timing, grounding, turn-taking, backchannels</li> <li><strong>Evaluation of live systems</strong>, where standard offline metrics fall short</li> </ol> <p><strong>Topics of interest</strong> (non-exhaustive)</p> <ul> <li>Streaming/low-latency speech synthesis, ASR, and full-duplex audio–language models</li> <li>Real-time talking-head, avatar, and embodied video generation</li> <li>Streaming language models; incremental and speculative decoding for dialogue</li> <li>Turn-taking, backchanneling, interruption handling, floor management</li> <li>Multimodal alignment under latency and partial-observation constraints</li> <li>Prosody, emotion, and paralinguistic generation in interactive settings</li> <li>Memory, grounding, and tool use during live conversation</li> <li>Evaluation of naturalness: perceptual studies, turn-taking metrics, perceived latency, interactive Turing-style tests</li> <li>Datasets and b…",
     "fetched_at": "2026-08-08T10:36:19.699491+00:00"
+  },
+  {
+    "id": "8db0862cb2b6ad9c",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "AACL-IJCNLP Commitment Submission Number [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1viyloc/aaclijcnlp_commitment_submission_number_d/",
+    "published": "2026-08-08T15:17:06+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>What's your commitment submission ID? My submission number is ~150 (submitted two days ago) and I'm wondering what the total number of commitments is. Did anyone commit near the deadline?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/hepiga\"> /u/hepiga </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1viyloc/aaclijcnlp_commitment_submission_number_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1viyloc/aaclijcnlp_commitment_submission_number_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-08T16:37:48.192675+00:00"
   }
 ]
