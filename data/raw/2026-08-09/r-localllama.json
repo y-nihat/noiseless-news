@@ -238,5 +238,15 @@
     "published": "2026-08-09T22:57:18+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p><strong>*SupraLabs released a new experimental model!\\</strong>*</p> <p><strong>SupraElegans-500K</strong> is a ~500,000-parameter causal language model built around a <strong>sparse, signed, recurrent neural graph.</strong> No Transformer, no attention mechanism, no positional encoding, no KV cache. Context is carried by a persistent per-neuron membrane potential updated token by token.</p> <p>The architecture is loosely inspired by ideas from the <em>C. elegans</em> nervous system: sparse connectivity, distinct neuron populations, excitatory/inhibitory signaling, and persistent recurrent state. It is <strong>not</strong> a biological simulation and makes no claim of biological equivalence.</p> <p>This is an experimental first release. The goal is to test whether this kind of architecture can do useful language modeling at very small scale — not to compete with Transformers on quality.</p> <p>🤗 <a href=\"https://huggingface.co/SupraLabs/SupraElegans-500k\">SupraLabs/SupraElegans-500k</a></p> <h1>🧠 Architecture</h1> <pre><code>token → embedding → sensory neurons → sparse recurrent graph → output neurons → vocab logits </code></pre> <ul> <li><strong>Neuron populations</strong>: sensory, interneuron/association, output — contiguous index ranges over a fixed pool of neurons.</li> <li><strong>Connectivity</strong>: sparse, directed, signed edge list (fan-in/out ~10–20 per neuron). No dense weight matrix is ever materialized; propagation is a scatter-add over edges.</li> <li><strong>Neuron dynamics</strong>: for each neuron <code>i</code>, at every propagation micro-step:</li> </ul> <p>&#8203;</p> <pre><code>v[t+1] = clamp(leak_i * v[t] + incoming[t] + bias_i, -6, 6) a[t+1] = tanh(v[t+1] - threshold_i) </code></pre> <p><code>leak</code>, <code>bias</code>, and <code>threshold</code> are learned per neuron. <code>incoming</code> is the scatter-summed signal from all edges pointing at neuron <code>i</code>, scaled by <code>1/sqrt(average fan…",
     "fetched_at": "2026-08-09T23:15:39.086007+00:00"
+  },
+  {
+    "id": "6555b27d51b0ccf4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DGX Spark Cluster management interface",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vk4gu1/dgx_spark_cluster_management_interface/",
+    "published": "2026-08-09T23:20:46+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have 4x dgx sparks connected to a microtik switch. Is there any point in connecting the 10gb ports for management? Or is it fine to share the fabric interfaces with separate ips for management?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Annual_Award1260\"> /u/Annual_Award1260 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk4gu1/dgx_spark_cluster_management_interface/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk4gu1/dgx_spark_cluster_management_interface/\">[comments]</a></span>",
+    "fetched_at": "2026-08-09T23:50:39.144562+00:00"
   }
 ]
