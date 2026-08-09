@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bc92c9f488a911a7",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AI is flooding Britain's employment courts with lawsuits",
+    "url": "https://the-decoder.com/ai-is-flooding-britains-employment-courts-with-lawsuits/",
+    "published": "2026-08-09T10:26:43+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/lawyer_ai_slop_spam.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Britain's employment courts saw 39 percent more claims in the year through March 2026, many written with ChatGPT or Grok. The backlog jumped 55 percent to 64,000 unresolved cases, with AI-generated filings often running hundreds of pages and citing fabricated laws. The Economist calls it a \"tragedy of the commons, AI edition,\" where workers with real grievances wait longer for justice.</p>\n<p>The article <a href=\"https://the-decoder.com/ai-is-flooding-britains-employment-courts-with-lawsuits/\">AI is flooding Britain&#039;s employment courts with lawsuits</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "46a304205767771d",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Google's DiffusionGemma proves you don't need to train from scratch to build a text diffusion model",
+    "url": "https://the-decoder.com/googles-diffusiongemma-proves-you-dont-need-to-train-from-scratch-to-build-a-text-diffusion-model/",
+    "published": "2026-08-09T10:01:26+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/01/deepmind_logo_wall-2.jpeg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Instead of training a new model from scratch, Google DeepMind retrofitted Gemma 4 into a diffusion model using less than 10 percent of the original training budget. DiffusionGemma generates 256 tokens in parallel instead of one at a time, hitting about 1,500 tokens per second. Quality still trails the original autoregressive model in benchmarks, especially on reasoning tasks.</p>\n<p>The article <a href=\"https://the-decoder.com/googles-diffusiongemma-proves-you-dont-need-to-train-from-scratch-to-build-a-text-diffusion-model/\">Google&#039;s DiffusionGemma proves you don&#039;t need to train from scratch to build a text diffusion model</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "6727b37b40126304",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AI's energy appetite drives Nvidia and Amazon to pour billions into massive power infrastructure",
+    "url": "https://the-decoder.com/ais-energy-appetite-drives-nvidia-and-amazon-to-pour-billions-into-massive-power-infrastructure/",
+    "published": "2026-08-09T09:26:28+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/energy_pollution-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        The AI industry's hunger for power keeps growing. Nvidia is investing up to $3 billion in Lancium, a power infrastructure developer that already has four gigawatts under contract in Texas. Amazon, meanwhile, is building a gas-fired power plant in the state with a capacity of up to 7.65 gigawatts that could emit 33 million tons of CO₂ per year, making it the dirtiest in the country.</p>\n<p>The article <a href=\"https://the-decoder.com/ais-energy-appetite-drives-nvidia-and-amazon-to-pour-billions-into-massive-power-infrastructure/\">AI&#039;s energy appetite drives Nvidia and Amazon to pour billions into massive power infrastructure</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "5cccff0c8810f6c0",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Google dismantles Deepmind and bets on a fresh start as Hassabis heads for the exit",
+    "url": "https://the-decoder.com/google-dismantles-deepmind-and-bets-on-a-fresh-start-as-hassabis-heads-for-the-exit/",
+    "published": "2026-08-09T08:56:12+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"608\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/google_logo_wall-2.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1088\" /></p>\n<p>        Google Deepmind is losing its autonomy, and founder Demis Hassabis may leave the AI lab for good in the coming months. AI researcher Koray Kavukcuoglu will take over day-to-day operations without the CEO title, and all Gemini development is moving to the Bay Area. Internally, Google is apparently struggling with serious problems training frontier models, even as its cloud business generates billions. The question is whether the company is deliberately betting on infrastructure or simply can't catch the leaders.</p>\n<p>The article <a href=\"https://the-decoder.com/google-dismantles-deepmind-and-bets-on-a-fresh-start-as-hassabis-heads-for-the-exit/\">Google dismantles Deepmind and bets on a fresh start as Hassabis heads for the exit</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  }
+]

@@ -18,5 +18,95 @@
     "published": "2026-08-09T00:28:40+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Intel's Optane technology as we know it has been discontinued. But while that's the case, I see it being highly promising still due to its role (or where it was meant to be) right in between system RAM and NVME SSDs. As far as I understand, it sits much closer to the RAM in access speed rather than NVME. In a theoretical scenario, couldn't this serve as a tertiary layer of accessible weights for say... for the sake of this idea... A nested Mixture of Experts?</p> <p>A used P5800X isn't terrible in pricing at all. But say if there's an architecture that can somehow utilize three layers of sparsity in this way, I say that those 400GB(More if you want to shill out the premium) can be used really well to enhance the capability of local models.</p> <p>Maybe Deepseek Conditional Engram Memory? I'd like to hear opinions on this because I've been really looking into it.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sadge404\"> /u/Sadge404 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjbjib/intel_optane_potential/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjbjib/intel_optane_potential/\">[comments]</a></span>",
     "fetched_at": "2026-08-09T00:58:14.343962+00:00"
+  },
+  {
+    "id": "a043bec409e09d39",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "RTX 5090 96GB spotted on Alibaba?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjcljq/rtx_5090_96gb_spotted_on_alibaba/",
+    "published": "2026-08-09T01:20:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjcljq/rtx_5090_96gb_spotted_on_alibaba/\"> <img alt=\"RTX 5090 96GB spotted on Alibaba?\" src=\"https://preview.redd.it/rzunb9uu39ih1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8a871629ca059e9bc1e608f1db7ec33ef070cdc9\" title=\"RTX 5090 96GB spotted on Alibaba?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/panchovix\"> /u/panchovix </a> <br /> <span><a href=\"https://i.redd.it/rzunb9uu39ih1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjcljq/rtx_5090_96gb_spotted_on_alibaba/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "a89051133edc3fe2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash 0731 hits 82.7% on Terminal-Bench 2.1 in an independent public-harness run (445 trials)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjklwo/deepseek_v4_flash_0731_hits_827_on_terminalbench/",
+    "published": "2026-08-09T08:39:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Disclosure: I’m the author of Ante.</p> <p>DeepSeek recently reported an 82.7% score on Terminal-Bench 2.1 for DeepSeek V4 Flash 0731. Its evaluation used “DeepSeek Harness minimal mode,” which hasn’t been released yet.</p> <p>We wanted to see whether the reported result could be independently matched using a public, downloadable harness.</p> <p>With Ante 0.preview.71, we got:</p> <ul> <li><strong>368 successful trials out of 445</strong></li> <li><strong>82.7% accuracy (±1.79 SE)</strong></li> <li>89 Terminal-Bench 2.1 tasks</li> <li>5 trials per task</li> <li>max reasoning effort</li> <li>no skills enabled</li> <li><code>deepseek/deepseek-v4-flash-0731</code> through OpenRouter</li> </ul> <p>The complete Harbor job is public. It includes the pinned configuration and all 445 trial records, with rewards, exceptions, durations, and token usage.</p> <p>Deep seek v4 seems to be sensitive to harness and this is probably useful data for anyone who is interested </p> <p>Sources:</p> <ul> <li>DeepSeek’s reported result: <a href=\"https://api-docs.deepseek.com/updates/\">https://api-docs.deepseek.com/updates/</a></li> <li>Public Harbor run and configuration: <a href=\"https://hub.harborframework.com/jobs/b2a14e4b-a422-45f2-832e-cf2eec5c8bff\">https://hub.harborframework.com/jobs/b2a14e4b-a422-45f2-832e-cf2eec5c8bff</a></li> <li>Ante benchmark page: <a href=\"https://antigma.ai/eval\">https://antigma.ai/eval</a></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Exciting-Camera3226\"> /u/Exciting-Camera3226 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjklwo/deepseek_v4_flash_0731_hits_827_on_terminalbench/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjklwo/deepseek_v4_flash_0731_hits_827_on_terminalbench/\">[comments]</a></span>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "fcc2a5cc9cd90254",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "LFM 2.6B is a lot of fun.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjgp6r/lfm_26b_is_a_lot_of_fun/",
+    "published": "2026-08-09T04:53:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’m reaching speeds of 260T/s tg and 20k pp on my 3090s lol, because this model is small and meant to run on phones. </p> <p>From what I‘ve been trying it’s surprisingly great for incredibly quick things like “read this massive thing and tell me if it mentions x” or “what’s the summary of this dumb pop sci article” or “what’s that one command that does y on Linux” or for quick autocomplete of something that has similar structure that you don’t feel like typing out (like when someone pastes a long command with backslashes and you want them removed). Obviously for anything important you want to use something else, but for essentially something similar to the AI overview in Google (which does indeed suck lmao) it’s great. You can also throw massive amounts of data at it - though context only goes up to 128k :(</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Borkato\"> /u/Borkato </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjgp6r/lfm_26b_is_a_lot_of_fun/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjgp6r/lfm_26b_is_a_lot_of_fun/\">[comments]</a></span>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "5f7b17674bfdfa21",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Best Embedding + Reranking Model",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjk57h/best_embedding_reranking_model/",
+    "published": "2026-08-09T08:10:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>What Local Embedding + Reranking Models are you guys running for RAG? </p> <p>I went down this rabbit hole because I wanted a Embedding Model + Reranker for a Translation Memory Server. </p> <p>Essentially, given X phrase/word/sentence/paragraph in English, can it find a similar phrase/word/sentence/paragraph in the target language that's already translated. This is for 15 different languages - both western and eastern. </p> <p>For this particular use case, <a href=\"https://huggingface.co/codefuse-ai/F2LLM-v2-4B\">F2LLM V2:4b</a> + <a href=\"https://huggingface.co/zeroentropy/zerank-2-reranker\">Zerank 2:4b</a> pretty much destroys anything else in the market. Here are my benchmarks: </p> <table><thead> <tr> <th align=\"left\">Embed Model</th> <th align=\"left\">Reranker Model</th> <th align=\"left\">MRR</th> <th align=\"left\">Re-Δ</th> <th align=\"left\">R@20</th> </tr> </thead><tbody> <tr> <td align=\"left\">BGE M3 0.6B</td> <td align=\"left\">BGE M3 Reranker V2 0.6B</td> <td align=\"left\">0.821</td> <td align=\"left\">-1.60%</td> <td align=\"left\">91.90%</td> </tr> <tr> <td align=\"left\">BGE M3 0.6B</td> <td align=\"left\">Qwen 3 Reranker 0.6B</td> <td align=\"left\">0.776</td> <td align=\"left\">-7.50%</td> <td align=\"left\">91.90%</td> </tr> <tr> <td align=\"left\">F2LLM 1.7B</td> <td align=\"left\">Zerank 1 1.7B</td> <td align=\"left\">0.871</td> <td align=\"left\">-2.20%</td> <td align=\"left\">96.80%</td> </tr> <tr> <td align=\"left\">Qwen 3 Embed 4B</td> <td align=\"left\">Qwen 3 Reranker 4B</td> <td align=\"left\">0.739</td> <td align=\"left\">11.00%</td> <td align=\"left\">77.50%</td> </tr> <tr> <td align=\"left\">Zembed 4B</td> <td align=\"left\">Zerank 2 4B</td> <td align=\"left\">0.664</td> <td align=\"left\">25.80%</td> <td align=\"left\">67.10%</td> </tr> <tr> <td align=\"left\">F2LLM 4B</td> <td align=\"left\">Zerank 2 4B</td> <td align=\"left\"><strong>0.919</strong></td> <td align=\"left\">2.40%</td> <td align=\"left\"><strong>98.40%</strong></td> </tr> <tr> <td align=\"left\">F2LLM…",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "79a2d84d2900bf52",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "300b on 32gb MoE-streaming findings + optimisations",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjm6dn/300b_on_32gb_moestreaming_findings_optimisations/",
+    "published": "2026-08-09T10:14:06+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The past week I've been running DSv4 inference on my laptop by keeping everything RAM-resident except the MXFP4-experts (since expert pool is ~147GB and won't fit)</p> <p>TL;DR - read speed is the limiter more than the kernels; repacking to enable sequential reads rather than random reads works, pipelining to hide reads behind compute is possible at prefill time (less so at decode time), speculative expert prefetch at prefill works and does help, caching can counterintuitively slow things down by double-buffering, and even tiny prompts hit most of the experts so TTFT is always going to be slow<br /> --</p> <p>Read speed is the biggest limiter unsurprisingly, which has meant pipelining has been the biggest thing to attack (as opposed to kernel / compute optimisations). I wanted to share various optimisations I've been working on that have helped or been informative:</p> <p>- Repacking the model to be sequential rather than random read: repacking to a layer-major style means each layer's experts are now one contiguous blob, so a layer's reads are big sequential slabs at full device rate (~7GB/s) instead of slower random reads</p> <p>- Weirdly enough caching was sometimes worse on my laptop than no caching: From my tests page cache actually double-buffers 100GB+ streams because it goes from SSD to CPU, then CPU to GPU, instead of just straight to GPU, which made everything ~3× worse since it chewed up a lot of byte transfer bandwidth</p> <p>- At prefill, attention/router compute is big enough to hide reads under if the prompt is big, say &gt;2k toks. But it's a bit of a catch-22 since you don't know what experts will be needed until the router has run. The solution was largely speculative expert prefetch - using router hints to predict layer l+1's experts and have the SSD read them during the current layer l's compute</p> <p>- If the prompt is small, say ~30toks, the opposite is true - even a 30tok prompt still touches a huge fraction…",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "09b75386aab8a13b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Updated benchmark: Deepseek V4 Flash on SlopCodeBench (local)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjiypj/updated_benchmark_deepseek_v4_flash_on/",
+    "published": "2026-08-09T07:01:43+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Howdy - I posted a benchmark here - <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtiy7/deepseek_v4_flash_on_slopcodebench/\">https://www.reddit.com/r/LocalLLaMA/comments/1vbtiy7/deepseek_v4_flash_on_slopcodebench/</a></p> <p>This was using the hosted API - since then I've been playing around with quants</p> <p>Here is the lastest benchmark - <a href=\"https://github.com/michaelasper/benchmarks/blob/main/deepseek-v4-flash-0731-pi-on-slop-code-bench.md\">https://github.com/michaelasper/benchmarks/blob/main/deepseek-v4-flash-0731-pi-on-slop-code-bench.md</a></p> <p>This uses antirez q2-q4 imatrix quant - i switched from opencode to pi</p> <p>Very interesting results! Much slower on a macbook m5 max than the hosted API, but switching the harness made up for some of the intelligence lost </p> <h2>Compared with the other reported runs</h2> <table><thead> <tr> <th>Reported run</th> <th>Serving</th> <th>Harness</th> <th align=\"right\">Strict</th> <th align=\"right\">Isolated</th> <th align=\"right\">Core</th> </tr> </thead><tbody> <tr> <td>DeepSeek V4 Flash 0731 (run B)</td> <td>local quant (antirez, higher cap)</td> <td>pi 0.84.0</td> <td align=\"right\">5/17 (29.4%)</td> <td align=\"right\">6/17</td> <td align=\"right\">10/17</td> </tr> <tr> <td>Opus 5</td> <td>hosted API</td> <td>Claude Code</td> <td align=\"right\">4/17 (23.5%)</td> <td align=\"right\">—</td> <td align=\"right\">—</td> </tr> <tr> <td>DeepSeek V4 Flash</td> <td>hosted API</td> <td>OpenCode 1.18.10</td> <td align=\"right\">3/17 (17.6%)</td> <td align=\"right\">6/17</td> <td align=\"right\">11/17</td> </tr> <tr> <td>Opus 4.8</td> <td>hosted API</td> <td>Claude Code</td> <td align=\"right\">1/17 (5.9%)</td> <td align=\"right\">—</td> <td align=\"right\">—</td> </tr> <tr> <td>Sonnet 5</td> <td>hosted API</td> <td>Claude Code</td> <td align=\"right\">1/17 (5.9%)</td> <td align=\"right\">—</td> <td align=\"right\">—</td> </tr> <tr> <td>DeepSeek V4 Flash 0731 (run A)</td> <td>local quant (unsloth, miscon…",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "23e0839411083094",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "ds4 flash 0731 UD-IQ2_M wrote a custom metal kernal for kimi k2 IQ1_0 in about 50 minutes",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vje00y/ds4_flash_0731_udiq2_m_wrote_a_custom_metal/",
+    "published": "2026-08-09T02:31:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>as a programming ignoramus this kind of thing seems extremely impressive to me... maybe others can shed light on whether this is expected from this level model at q2.</p> <p>DS4 IQ2_M just spent about 50 minutes writing a custom metal kernel after it could not find one on github for unsloth's IQ1_0 Kimi k3 quant for my mac studio 512 gb.</p> <p>Performance is meh but much better than cpu. About 4 t/s decode and 20 prefill for k3 Q1_0 (mac studio 512gb)</p> <p>I've also run 0731 on mlx at 8 and 4 bits... the 2 bit unsloth seems within common sampling settings-level margin of error across these quants for my tasks. Runs at about 1k prefill and 50 decode on 1x rtx pro 6000 via lm studio.</p> <p>I still find 4 bit glm 5.2 better but it's kinda close. Crazy for a 90 gb file.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/technaturalism\"> /u/technaturalism </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vje00y/ds4_flash_0731_udiq2_m_wrote_a_custom_metal/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vje00y/ds4_flash_0731_udiq2_m_wrote_a_custom_metal/\">[comments]</a></span>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "87564a777dc3274f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Trustfactor in training data?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjim3i/trustfactor_in_training_data/",
+    "published": "2026-08-09T06:42:04+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Would it be possible and make sense to add metadata to training data e.g. a trustfactor (0.0 - 1.0)? </p> <p>For example: the older data is the less trustworthy it is. And data after 2022 gets less trustworthy over time (because of ai). </p> <p>With the right rules it would maybe be possible to use any data of the internet without having to sort out bad data first. </p> <p>Source, Age, Referencecount, and alot more informations could be used to calculate a trustfactor.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/freehuntx\"> /u/freehuntx </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjim3i/trustfactor_in_training_data/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjim3i/trustfactor_in_training_data/\">[comments]</a></span>",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
+  },
+  {
+    "id": "c428860dbf50c538",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AMD llama.cpp: reducing MTP buffer overhead gave me 64K → 149K context for Qwen 27B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjmay5/amd_llamacpp_reducing_mtp_buffer_overhead_gave_me/",
+    "published": "2026-08-09T10:21:35+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Available context length with and without the patch:</p> <table><thead> <tr> <th align=\"left\">Model: QWEN 27B</th> <th align=\"left\">ROCm stock</th> <th align=\"left\">patched</th> <th align=\"left\">Vulkan stock</th> <th align=\"left\">patched</th> </tr> </thead><tbody> <tr> <td align=\"left\">IQ4_XS Pure, single 16GB GPU</td> <td align=\"left\">20,480</td> <td align=\"left\">58,112</td> <td align=\"left\">68,352</td> <td align=\"left\">78,592</td> </tr> <tr> <td align=\"left\">Q6_K_L on 16GB + 12GB</td> <td align=\"left\">64,256</td> <td align=\"left\">149,248</td> <td align=\"left\">68,864</td> <td align=\"left\">151,296</td> </tr> </tbody></table> <p>The issue is that llama.cpp overestimates the memory needed for MTP compute-buffer/scheduler allocation during auto-fit, that leaves much less ctx available to the user than what actually needed by MTP. This patch stops the fitter from throwing away context based on an inflated MTP memory estimate</p> <p>Patch, launch scripts used for llama-server and raw logs: <a href=\"https://store.piffa.net/lm/bug/\">https://store.piffa.net/lm/bug/</a><br /> Tested against: llama.cpp version: 909, based on master commit 7bd8282 , ROCm 7.14</p> <p>Especially for ROCm with double GPU (16GPU + 12GB here) the amount of ctx gain is substantial, with longer session ROCm allows almost double prefill performances vs Vulkan yet on the mainline code the price to pay in ctx reduction for the extra compute is taxing.</p> <p>You can build for both vulkan and ROCm backends at the same time, the idea is that Vulkan saves some more vRAM while ROCm gives better prefill performance.<br /> With a single 16GB GPU and limited ctx size you may wanna use Vulkan while when using 2 GPUs with layer splitting ROCm is worth the expense with this patch as you have much more ctx length for long sessions.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ea_man\"> /u/ea_man </a> <br /> <span><a href=\"https://www.reddit…",
+    "fetched_at": "2026-08-09T10:37:03.735723+00:00"
   }
 ]
