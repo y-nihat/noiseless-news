@@ -1,0 +1,40 @@
+{
+    "slug": "amazon-texas-gas-plant-ai-datacenter-emissions",
+    "checked_at": "2026-08-09T00:40:00+00:00",
+    "method": "Verified against two independently bylined Tier-2 outlets (TechCrunch -- Anthony Ha, includes an on-record Amazon spokesperson quote -- and South China Morning Post) both live-fetched this cycle. Both trace the original investigation to the New York Times (Hiroko Tabuchi); a working nytimes.com URL could not be retrieved (paywalled, not indexed in search results) so it is not cited directly, but the two relays independently confirm the same figures (7.65GW, 35 turbines, GW Ranch/Pacifico Energy, Pecos County TX, >30M tons CO2/year) with no discrepancy. The emissions-superlative claim traces to a single origin (Cleanview's satellite-and-permit analysis) regardless of how many outlets relay it, so it is marked verdict single-source per the independence rule rather than confirmed, even though evidence is cited from two outlets. No fresh verifier/falsifier sub-agent pair was spun up given this cycle's time budget (deadline 00:56 UTC); matches the in-session-verification pattern used for klaviyo-acquires-agency-ai, hassabis-deepmind-chair-alphabet-chief-scientist and openai-nextslide-acquisition in prior cycles this week. dedup-check returned one moderate, unrelated match (zai-1gw-domestic-chip-datacenter -- different company, country and topic) and was judged standalone.",
+    "origin_items": [
+        "Carried forward from cycle 2's triage as a deferred high-value candidate (NYT/TechCrunch/Verge/Techmeme multi-source lead); not present in this cycle's registered-feed raw ingest, surfaced via targeted web search."
+    ],
+    "claims": [
+        {
+            "text": "Amazon is financing a 7.65-gigawatt, 35-turbine natural gas power plant ('GW Ranch'), developed by Pacifico Energy, in Pecos County, Texas, to power a planned off-grid AI data center campus",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Reported with matching figures by two independently bylined outlets; Amazon's own spokesperson statement to TechCrunch confirms the financing arrangement directly.",
+            "evidence": ["https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/", "https://www.scmp.com/news/world/united-states-canada/article/3363393/amazon-finance-huge-us-gas-plant-data-centres"]
+        },
+        {
+            "text": "Permit filings reviewed by Cleanview show the plant is authorized to emit more than 30 million metric tons of CO2 a year, found to be the largest permitted emissions source at any US power plant currently operating",
+            "type": "research",
+            "verdict": "single-source",
+            "reasoning": "Both outlets relay the same origin analysis (Cleanview's satellite/permit review, first reported by the New York Times) -- one origin under the independence rule, so marked single-source and attributed explicitly in the article rather than stated as established fact.",
+            "evidence": ["https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/", "https://www.scmp.com/news/world/united-states-canada/article/3363393/amazon-finance-huge-us-gas-plant-data-centres"]
+        },
+        {
+            "text": "Amazon confirmed financing the on-site generation and said its climate-pledge commitment 'hasn't changed', without disputing the emissions figures",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Direct on-record quote from an Amazon spokesperson given to TechCrunch.",
+            "evidence": ["https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/"]
+        },
+        {
+            "text": "The plant is designed to run off-grid initially, transitioning to grid-connected service 'as interconnection timelines allow'",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Direct Amazon quote, corroborated by both outlets' description of the plant as behind-the-meter/off-grid.",
+            "evidence": ["https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/", "https://www.scmp.com/news/world/united-states-canada/article/3363393/amazon-finance-huge-us-gas-plant-data-centres"]
+        }
+    ],
+    "falsifier_notes": "Searched for Amazon dispute/denial of the emissions figures or the Cleanview analysis -- none found; Amazon's statement addresses the climate-pledge tension but does not contest the numbers. Checked for a bigger counter-example: SCMP notes a larger 9.2GW gas plant planned in Ohio (SoftBank-led), which could complicate a flat 'largest' claim if its emissions profile turned out comparable or higher -- no emissions figure for the Ohio plant was found in either source, so the article attributes the 'largest' superlative explicitly to Cleanview's analysis rather than asserting it outright, and does not compare capacity (GW) to emissions (tons CO2), which are not directly comparable. Confirmed story is within the 72-hour triage window (event/reporting dated 2026-08-08, checked 2026-08-09 00:40 UTC).",
+    "gaps_closed_from_watching_state": []
+}

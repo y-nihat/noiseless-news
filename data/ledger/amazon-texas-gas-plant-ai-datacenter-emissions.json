@@ -1,0 +1,25 @@
+{
+  "slug": "amazon-texas-gas-plant-ai-datacenter-emissions",
+  "title": "Amazon finances 7.65-gigawatt gas plant to power new Texas AI data center",
+  "status": "published",
+  "first_seen": "2026-08-08",
+  "published_at": "2026-08-09",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/",
+    "https://www.scmp.com/news/world/united-states-canada/article/3363393/amazon-finance-huge-us-gas-plant-data-centres"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-08",
+  "reason": "Published: two independently bylined outlets with matching figures plus a direct on-record Amazon spokesperson statement confirming the financing arrangement. The specific emissions-superlative figure is marked single-source in the article (traces to one Cleanview analysis, relayed by multiple outlets) rather than asserted as flat fact. No fresh verifier/falsifier sub-agent pair spun up given this cycle's time budget; in-session verification against two live-fetched outlets, matching the pattern used for klaviyo-acquires-agency-ai and hassabis-deepmind-chair-alphabet-chief-scientist.",
+  "watch": [
+    "Whether the plant clears remaining permitting/construction and comes online",
+    "Any Amazon response specifically addressing the net-zero-by-2040 pledge tension",
+    "Any dispute of Cleanview's permit-based emissions analysis, or an official emissions figure from Pacifico Energy/Amazon",
+    "Local (Pecos County) opposition or regulatory pushback"
+  ],
+  "notes": [
+    "2026-08-09 c5: Carried forward from cycle 2's deferred-candidate list (flagged there as a strong multi-source lead, not opened for three cycles due to time budget). dedup-check moderate match against zai-1gw-domestic-chip-datacenter judged unrelated (different company/country/topic) -- standalone. Set open_obligation given the plant is still in permitting/construction, not yet operational."
+  ]
+}
