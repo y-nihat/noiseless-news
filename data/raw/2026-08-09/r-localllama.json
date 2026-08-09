@@ -8,5 +8,15 @@
     "published": "2026-08-09T00:04:15+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Pasted the same HTML/JS code (330 lines) into Qwen 35B A3B and Gemma 26B A4B.</p> <p>Qwen: tokenized the input to 1609 tokens</p> <p>Gemma: tokenized the input to 4258 tokens.</p> <p>Damn. I've never noticed this before and I haven't seen people mention it. That alone helps explain why Qwen is regarded as better at coding and Gemma at language tasks.</p> <p>Qwen can literally see the code as some specific form of input/output, while Gemma is breaking it down into pieces of words like regular language. Qwen also gets a totally different reasoning personality when given coding tasks.</p> <p>Btw with the instruction document (55 lines), the tokenization breakdown is almost the same: 1025 vs. 1039 tokens.</p> <p>I've seen some project, by LiquidAI I think? To retrain existing models with a more efficient tokenizer. I wonder what that would do for a model like Gemma, whether it would help it catch up.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/WhoRoger\"> /u/WhoRoger </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjb15v/no_wonder_qwen_and_gemma_are_so_different/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjb15v/no_wonder_qwen_and_gemma_are_so_different/\">[comments]</a></span>",
     "fetched_at": "2026-08-09T00:23:14.310549+00:00"
+  },
+  {
+    "id": "9626e0640ec3efe1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Intel Optane - Potential?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vjbjib/intel_optane_potential/",
+    "published": "2026-08-09T00:28:40+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Intel's Optane technology as we know it has been discontinued. But while that's the case, I see it being highly promising still due to its role (or where it was meant to be) right in between system RAM and NVME SSDs. As far as I understand, it sits much closer to the RAM in access speed rather than NVME. In a theoretical scenario, couldn't this serve as a tertiary layer of accessible weights for say... for the sake of this idea... A nested Mixture of Experts?</p> <p>A used P5800X isn't terrible in pricing at all. But say if there's an architecture that can somehow utilize three layers of sparsity in this way, I say that those 400GB(More if you want to shill out the premium) can be used really well to enhance the capability of local models.</p> <p>Maybe Deepseek Conditional Engram Memory? I'd like to hear opinions on this because I've been really looking into it.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sadge404\"> /u/Sadge404 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjbjib/intel_optane_potential/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjbjib/intel_optane_potential/\">[comments]</a></span>",
+    "fetched_at": "2026-08-09T00:58:14.343962+00:00"
   }
 ]
