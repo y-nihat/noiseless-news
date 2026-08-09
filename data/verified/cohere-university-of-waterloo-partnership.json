@@ -1,0 +1,35 @@
+{
+  "slug": "cohere-university-of-waterloo-partnership",
+  "checked_at": "2026-08-09T23:58:00+00:00",
+  "method": "Direct fetch of Cohere's and University of Waterloo's own announcement pages (both dated 6 August 2026), cross-checked for consistency, plus a targeted web search for criticism, dispute, delay, or cancellation. Given a short cycle window, this cycle combined the verifier and falsifier roles rather than using two separate sub-agent contexts; risk was judged low because both primaries are the two announcing parties themselves and no third party's account needed reconciling.",
+  "origin_items": [
+    "Found via cycle-1 Tier-0 sweep of Cohere Blog; dedup-checked (strong match against cohere-university-of-toronto-partnership, ruled coincidental in cycle 2); carried to cycle 4 for verification."
+  ],
+  "claims": [
+    {
+      "text": "On 6 August 2026, Cohere and the University of Waterloo announced a partnership under which Waterloo's Future of Work Institute will develop a non-credit 'AI Transformation and Change Management' certificate, launching in fall 2026, covering AI literacy, human-centered design, ethics, business strategy, and change management",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Both parties' own pages state this consistently. No independent (non-reprint) third-party outlet coverage found via search as of verification time.",
+      "evidence": [
+        "https://cohere.com/blog/cohere-university-of-waterloo-announcement",
+        "https://uwaterloo.ca/news/partnering-lead-ai-transformation-across-organizations"
+      ]
+    },
+    {
+      "text": "The first cohort is scheduled to start in January 2027, with 20 co-op positions dedicated to structured AI-transformation work with private, public-sector, and non-profit organizations, open to students from any faculty",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Direct quote from University of Waterloo's own page; Cohere's blog does not repeat the January 2027 detail but does not contradict it either.",
+      "evidence": ["https://uwaterloo.ca/news/partnering-lead-ai-transformation-across-organizations"]
+    },
+    {
+      "text": "Cohere Chief AI Officer Joelle Pineau said Waterloo 'has played a defining role' in building Canada's AI talent pipeline; Future of Work Institute executive director Edith Law said 'AI adoption is not the point, but solving problems is'",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Direct attributed quotes on University of Waterloo's own page.",
+      "evidence": ["https://uwaterloo.ca/news/partnering-lead-ai-transformation-across-organizations"]
+    }
+  ],
+  "falsifier_notes": "Search for criticism/dispute/delay/cancellation of the partnership returned nothing beyond the two primary announcement pages and unrelated Cohere news (Bell, Quebec government partnerships). Dedup gate returned exit 2 (strong, score 0.8) against cohere-university-of-toronto-partnership on title-template similarity alone (zero shared source URLs, unrelated universities and programs) -- read in full in cycle 2 and judged coincidental, not a duplicate or follow-up, satisfying verification.md 0a's requirement to justify outcome (c) against a strong match. No dollar figure disclosed by either party."
+}

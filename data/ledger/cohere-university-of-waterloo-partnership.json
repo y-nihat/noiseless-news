@@ -1,0 +1,23 @@
+{
+  "slug": "cohere-university-of-waterloo-partnership",
+  "title": "Cohere and University of Waterloo partner on an AI transformation certificate",
+  "status": "published",
+  "first_seen": "2026-08-06",
+  "published_at": "2026-08-09",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://cohere.com/blog/cohere-university-of-waterloo-announcement",
+    "https://uwaterloo.ca/news/partnering-lead-ai-transformation-across-organizations"
+  ],
+  "follows": null,
+  "reason": "Published: both parties' own announcement pages (Cohere blog, University of Waterloo news) confirm the same facts consistently; no dispute or contradicting account found. No independent (non-reprint) third-party outlet coverage found as of publication.",
+  "watch": [
+    "Any independent (non-reprint) outlet coverage of the deal",
+    "Launch of the certificate's first cohort in January 2027 -- worth a follow-up check on actual uptake"
+  ],
+  "notes": [
+    "2026-08-06 c1: surfaced via cycle-1 Tier-0 sweep of Cohere Blog; dedup-check flagged strong match (score 0.8) against cohere-university-of-toronto-partnership on title-template similarity, zero shared source URLs.",
+    "2026-08-06 c2: read matched Toronto article in full; ruled standalone, not follow-up -- separate multi-year partnership with a different Canadian university, no shared thread a reader of one needs to understand the other (verification.md section 8 follow-up test). Queued for verification.",
+    "2026-08-09 c4: verified directly against both primary announcement pages (Cohere blog dated 6 Aug 2026, University of Waterloo news page dated 6 Aug 2026); one adversarial web search for criticism/dispute/delay found none. Exit-2 dedup match against cohere-university-of-toronto-partnership judged coincidental (identical announcement-title template Cohere uses for university partnerships, zero shared source URLs, unrelated universities/programs) per verification.md 0a outcome (c). Published as standalone. Style gate: EN pass / TR pass, no cuts needed."
+  ]
+}
