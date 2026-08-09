@@ -1,0 +1,58 @@
+{
+    "slug": "anthropic-fable-5-biology-safeguards-update",
+    "checked_at": "2026-08-09T23:35:00+00:00",
+    "method": "Single-agent verifier + adversarial-search pass this cycle (time-constrained short cycle window): fetched Anthropic's own announcement directly, cross-checked against an independent outlet (The Decoder) and a second independent write-up (TheNextWeb) for consistency, then ran a targeted adversarial search for criticism/disputes/contradictions before drafting. Applied verification.md §3: announcement claims (the update itself, what remains restricted, methodology, trusted-access-pathway plan) held to the one-Tier-0-source bar and confirmed; the self-reported 85%/per-platform reduction numbers held to the capability-claim bar and labeled vendor-claim since they are Anthropic's own unreproduced internal metric, not independently verifiable.",
+    "origin_items": [
+        "Surfaced in cycle 1's Tier-0 sweep of Anthropic News (2026-08-09 22:05-22:12 UTC); dedup-checked clean at that point (no matches). Carried through cycle 2 untouched. Opened for full verification in cycle 3."
+    ],
+    "claims": [
+        {
+            "text": "Anthropic updated Claude Fable 5's biology-safeguard classifier on 7 August 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Anthropic's own news post, dated 7 August 2026, Tier-0 primary source -- sufficient alone for an announcement claim.",
+            "evidence": [
+                "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+            ]
+        },
+        {
+            "text": "Anthropic says the update cut biology-related fallbacks by about 85% across product surfaces in its own testing, with per-platform figures of roughly 67% (Claude.ai), 55% (Cowork), 17% (Claude Code), 7% (Claude Platform API)",
+            "type": "capability",
+            "verdict": "vendor-claim",
+            "reasoning": "This is Anthropic's self-reported internal test metric about its own product change, not independently reproduced or reproducible by an outside party (the underlying fallback rate isn't observable externally). No independent outlet offers its own measurement -- all coverage (The Decoder, TheNextWeb, Unite.ai, etc.) relays Anthropic's own figures. Labeled vendor-claim per verification.md §3; excluded from the headline per style.md Gate 1 (headlines must rest only on confirmed claims).",
+            "evidence": [
+                "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+            ]
+        },
+        {
+            "text": "Fable 5 continues to block and fall back to Opus 5 for queries involving virology, toxicology, and molecular design",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Stated directly in Anthropic's post and corroborated independently by The Decoder's write-up, which frames its own headline around exactly this residual restriction.",
+            "evidence": [
+                "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+                "https://the-decoder.com/anthropic-loosens-fable-5s-biology-restrictions-but-keeps-the-guardrails-on-for-virology-and-toxicology/"
+            ]
+        },
+        {
+            "text": "Anthropic rewrote the classifier's constitution, gathered expert feedback, and retrained the classifier on updated training data",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Methodology description as stated in Anthropic's own post; Tier-0 sufficient for an announcement/methodology claim about their own process.",
+            "evidence": [
+                "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+            ]
+        },
+        {
+            "text": "Anthropic is developing a 'trusted access pathway' for vetted researchers in the still-restricted areas, with no launch date set",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Forward-looking statement made directly by Anthropic; reported as a plan, not a shipped feature, and written into the article as such.",
+            "evidence": [
+                "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH with the 85%/per-platform figures labeled vendor-claim. Adversarial search ('Anthropic Fable 5 biology safeguards criticism concern dual-use risk') surfaced no reports disputing the facts of the change; independent coverage (The Decoder, TheNextWeb) converges on the same account and adds only framing (opacity of fallback mechanism to end users, timing amid other AI-safety incidents) rather than contradiction. dedup-check returned zero matches (exit 0, empty array) against the full archive. No third-party numeric leaderboard/benchmark citation is used, so the live-fetch rule (verification.md §5) does not apply here -- the only numbers are Anthropic's own, correctly labeled vendor-claim rather than treated as requiring a third-party live fetch.",
+    "gaps_closed_from_watching_state": []
+}
