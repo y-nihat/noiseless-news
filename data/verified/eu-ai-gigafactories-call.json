@@ -1,0 +1,25 @@
+{
+  "slug": "eu-ai-gigafactories-call",
+  "checked_at": "2026-08-10T23:07:00+00:00",
+  "method": "Direct WebFetch of the European Commission's own announcement page for the primary claim. Fresh verifier sub-agent independently re-fetched the same page, confirmed figures verbatim, and located independent corroboration (Euronews, and AP/Washington Post) plus checked for a more-recent superseding development (none found -- formal call closes 12 Nov 2026, decisions expected early 2027). Fresh adversarial falsifier sub-agent checked for contradictions, disputes and date issues.",
+  "origin_items": [
+    "Surfaced in cycle 1's Tier-0 sweep of European Commission Digital Strategy News as a new lead not yet in the ledger. Triaged and opened in cycle 2."
+  ],
+  "claims": [
+    {
+      "text": "On 30 July 2026, the European Commission opened a formal call for tenders to establish up to seven 'AI Gigafactories' across the EU -- large-scale compute facilities combining AI processors, software, cloud infrastructure and energy-efficient data centres for training, inference and fine-tuning of frontier AI models -- complementing an existing network of 19 smaller 'AI Factories'; the call closes 12 November 2026, with site selections expected in early 2027",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly on the Commission's own Tier-0 page (sufficient alone for an announcement claim) and independently corroborated by Euronews' same-day report with matching figures. Falsifier confirmed the date and found no evidence the call was later paused or withdrawn.",
+      "evidence": ["https://digital-strategy.ec.europa.eu/en/news/eu-launches-ai-gigafactories-call-boost-europes-computing-capacity-and-unlock-more-eu30-billion", "https://www.euronews.com/my-europe/2026/07/30/eu-opens-call-for-seven-gigafactories-to-train-next-generation-ai-technologies"]
+    },
+    {
+      "text": "The Commission is backing the AI Gigafactories program with up to €10 billion in EU and national public funding, which it projects will unlock at least €20 billion in private investment, for more than €30 billion in total investment",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Figures stated verbatim on the Commission's own page and independently repeated (not merely wire-syndicated) by Euronews. Article explicitly frames the €20bn/€30bn total as the Commission's own projection tied to tender outcomes, not disbursed money, per verifier's finding that the source language itself says 'is expected to unlock'.",
+      "evidence": ["https://digital-strategy.ec.europa.eu/en/news/eu-launches-ai-gigafactories-call-boost-europes-computing-capacity-and-unlock-more-eu30-billion", "https://www.euronews.com/my-europe/2026/07/30/eu-opens-call-for-seven-gigafactories-to-train-next-generation-ai-technologies"]
+    }
+  ],
+  "falsifier_notes": "PASS with caveats, both deliberately excluded from the published article given evidence-bar and time constraints: (1) AP/Washington Post reported gigafactories will house 100,000+ chips at ~4x the power of existing EU data centers, targeting operational mid-2028 -- the falsifier could not confirm this specific figure traces to the Commission's own primary source, so it was left out rather than published as confirmed. (2) This call is a larger relaunch of an earlier, smaller pilot version of the same program (reportedly 5 facilities, ~€4.1bn EU subsidy) that multiple outlets (Bloomberg, Digitimes, TheNextWeb, Techzine per the falsifier's search, not independently re-verified by us) reported saw applicant interest drop sharply; there is also on-record criticism (Mistral CEO Arthur Mensch on national-champion framing; 18 MEPs on single-supplier/Nvidia dependency) not yet verified with primary URLs by us. Neither omission makes the published claims false, but both are flagged in the ledger `watch` list as a stronger follow-up angle for a future cycle with time to verify them properly. Dedup-check run before opening: no matches (clean)."
+}

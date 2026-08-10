@@ -1,0 +1,22 @@
+{
+  "slug": "eu-ai-gigafactories-call",
+  "title": "EU opens formal call for up to seven AI Gigafactories, targeting over €30 billion",
+  "status": "published",
+  "first_seen": "2026-08-10",
+  "published_at": "2026-08-10",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://digital-strategy.ec.europa.eu/en/news/eu-launches-ai-gigafactories-call-boost-europes-computing-capacity-and-unlock-more-eu30-billion",
+    "https://www.euronews.com/my-europe/2026/07/30/eu-opens-call-for-seven-gigafactories-to-train-next-generation-ai-technologies"
+  ],
+  "follows": null,
+  "reason": "Published: European Commission's own announcement (Tier 0) is sufficient for the program/funding-call claim, independently corroborated by Euronews. Both load-bearing claims are announcement-type and confirmed; the private-investment total is explicitly framed as the Commission's own projection, not committed money.",
+  "watch": [
+    "Formal call closes 12 November 2026, with site selections expected in early 2027 -- follow up then for which bids were selected",
+    "The program's rockier precursor history (an earlier, smaller pilot version reportedly saw applicant interest drop) and on-record criticism (Mistral CEO on national-champion framing; MEPs on Nvidia/single-supplier dependency) were flagged by this cycle's falsifier but not independently verified with primary sources in the time available -- worth a follow-up angle if verified",
+    "The AP/Washington Post-reported technical spec (100,000+ chips per site, ~4x current EU data-center power, mid-2028 operational target) was not confirmed against a primary source and was deliberately left out of the published article -- verify before including in any update"
+  ],
+  "notes": [
+    "2026-08-10 c2: surfaced via cycle-1 Tier-0 sweep lead list; dedup-check clean (no matches). Fresh verifier + fresh adversarial falsifier sub-agents both run. Falsifier surfaced meaningful uncovered context (precursor program's applicant-interest collapse, named on-record critics) that this cycle did not have time to verify against primary sources -- explicitly held out of the published claims rather than asserted, and logged to `watch` for a future cycle."
+  ]
+}
