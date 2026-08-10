@@ -1,0 +1,32 @@
+{
+  "slug": "mistral-shieldstral-safety-classifier",
+  "checked_at": "2026-08-10T00:35:00+00:00",
+  "method": "Direct fetch of Mistral's own announcement page (mistral.ai/news/shieldstral/, 4 August 2026) and The Decoder's independent coverage (5 August 2026), cross-checked for consistency, plus a targeted web search for independent benchmark/criticism coverage. Given the short cycle window, this cycle combined the verifier and falsifier roles rather than using two separate sub-agent contexts; judged acceptable because the only load-bearing claims are a Tier-0 self-announcement (single-source-sufficient per verification.md's announcement standard) and a vendor capability claim that is labeled, not asserted as fact.",
+  "origin_items": [
+    "Found via cycle-1 Tier-0 sweep of Mistral AI News; dedup-checked in cycle 1 (moderate match against samsung-mistral-ai-stake, read as coincidental -- different story, funding stake vs. product release); carried through cycles 2-4 unopened; verified and published cycle 5."
+  ],
+  "claims": [
+    {
+      "text": "On 4 August 2026, Mistral AI released Shieldstral, a 3-billion-parameter open-weights AI content-safety classifier under the Apache 2.0 license, runnable on a single 16GB GPU, which evaluates text and image content against plain-language policies specified at inference time rather than a fixed, retrained taxonomy",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Mistral's own page states this directly (Tier 0, sufficient alone for an announcement claim). The Decoder's independent 5 August article corroborates size, license, and mechanism with no contradiction.",
+      "evidence": ["https://mistral.ai/news/shieldstral/", "https://the-decoder.com/mistrals-open-model-shieldstral-matches-much-larger-safety-models/"]
+    },
+    {
+      "text": "Mistral reports Shieldstral matches or outperforms open guard models up to seven times its size across text safety, refusal detection, policy adaptability, and multimodal benchmarks, including an 84.9% F1 score on text safety that ties OpenAI's 20-billion-parameter GPT-OSS-Safeguard-20B; on a separate adaptability benchmark using unseen policies, Mistral's own reported score for Shieldstral (91.3%) trails that same 20B model's (94.1%)",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "All figures trace to Mistral's own research paper/announcement; The Decoder's coverage explicitly notes no independent third-party validation exists and cites the same figures from the same source, including the adaptability shortfall Mistral's own numbers show against the 20B rival -- kept in to avoid presenting the vendor's benchmark selection as uniformly favorable. Live-fetch rule (verification.md 5) does not apply -- these are not third-party leaderboard/tracker numbers.",
+      "evidence": ["https://mistral.ai/news/shieldstral/", "https://the-decoder.com/mistrals-open-model-shieldstral-matches-much-larger-safety-models/"]
+    },
+    {
+      "text": "Mistral is a founding member of the Open Secure AI Alliance, the NVIDIA-led AI-security coalition formed in late July 2026, and describes Shieldstral as released under that alliance",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly on Mistral's own announcement page.",
+      "evidence": ["https://mistral.ai/news/shieldstral/"]
+    }
+  ],
+  "falsifier_notes": "Search for independent benchmark/criticism of Shieldstral found no third-party evaluation as of publication; multiple outlets (unite.ai, marktechpost, aiweekly, The Decoder) converge on the same vendor figures with no dispute, several explicitly noting the vendor-only nature of the benchmarks and the model's lack of stated multilingual performance at launch (not made a formal claim here since it's an absence, not an assertion). One search result (mlq.ai) is a blocked_evidence_domains entry -- excluded. Dedup gate re-run with final title/URL: one moderate match (cisco-antares-vulnerability-models, score 0.375, no shared URL) -- coincidental title-template similarity ('releases open-weight AI models'), unrelated companies and products, does not block standalone/follow-up treatment. Treated as a follow-up (`follows: open-secure-ai-alliance-formation`) rather than standalone: the alliance-formation ledger entry's own `watch` list named 'concrete output from the alliance (actual tool releases, not just the founding announcement)' as the specific signal to watch for, and this is that signal materializing -- judged to satisfy the saga/follow-through test in verification.md 8 even though a reader could parse the Shieldstral release on its own."
+}

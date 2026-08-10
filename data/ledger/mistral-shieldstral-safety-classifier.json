@@ -1,0 +1,22 @@
+{
+  "slug": "mistral-shieldstral-safety-classifier",
+  "title": "Mistral releases Shieldstral, an open-weight AI content-safety classifier",
+  "status": "published",
+  "first_seen": "2026-08-04",
+  "published_at": "2026-08-10",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://mistral.ai/news/shieldstral/",
+    "https://the-decoder.com/mistrals-open-model-shieldstral-matches-much-larger-safety-models/"
+  ],
+  "follows": "open-secure-ai-alliance-formation",
+  "reason": "Published: Mistral's own announcement (Tier 0) is sufficient for the release/spec claims; The Decoder independently corroborates with no contradiction. The comparative-benchmark claim is labeled vendor-claim since all figures trace to Mistral's own paper and no independent evaluation exists yet.",
+  "watch": [
+    "Any independent third-party benchmark of Shieldstral, since all current figures are Mistral's own",
+    "Further tool releases from other Open Secure AI Alliance members, which would make this the start of a pattern rather than a single event"
+  ],
+  "notes": [
+    "2026-08-04 c1: surfaced via Tier-0 sweep of Mistral AI News; dedup-check moderate match against samsung-mistral-ai-stake, ruled coincidental (funding-stake story, not a product release).",
+    "2026-08-10 c5: verified and published. Treated as a follow-up to open-secure-ai-alliance-formation rather than standalone -- that entry's watch list named exactly this ('concrete output from the alliance') as the signal to check for; this release is that signal. dedup-check re-run at final title: one moderate, coincidental match (cisco-antares-vulnerability-models, score 0.375, no shared URL). Combined verifier/falsifier roles given cycle time budget; judged low-risk since the only load-bearing claims are a Tier-0 self-announcement and a labeled vendor-claim."
+  ]
+}
