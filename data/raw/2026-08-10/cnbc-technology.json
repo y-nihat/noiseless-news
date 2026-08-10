@@ -88,5 +88,55 @@
     "published": "2026-08-10T14:06:08+00:00",
     "summary": "A group of House Democrats is calling on leaders of Anthropic, OpenAI and other AI companies to testify in Congress about recent hacking incidents.",
     "fetched_at": "2026-08-10T16:56:54.514989+00:00"
+  },
+  {
+    "id": "5aed1e85a36270b4",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Trump Media posts $238 million second-quarter loss as crypto declines",
+    "url": "https://www.cnbc.com/2026/08/10/trump-media-djt-tmtg-earnings-truth-social-crypto.html",
+    "published": "2026-08-10T22:15:05+00:00",
+    "summary": "TMTG said it has signed more than 10 customer agreements for Truth API, the service offering faster access to President Donald Trump's posts.",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "820e72d2fe11d8aa",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Nvidia lines up $500 billion in financing as CEO Jensen Huang tells CNBC his chips are ‘investable asset’",
+    "url": "https://www.cnbc.com/2026/08/10/nvidia-wall-street-asset-managers-500-billion-ai-push.html",
+    "published": "2026-08-10T22:09:00+00:00",
+    "summary": "Nvidia CEO Jensen Huang argued that because its hardware is broadly adopted, flexible and transferable, lenders can underwrite compute as revenue-generating.",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "e5a19d69201ce28c",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "OpenAI expands Daybreak cybersecurity initiative as AI agent threats evolve",
+    "url": "https://www.cnbc.com/2026/08/10/open-ai-daybreak-cybersecurity.html",
+    "published": "2026-08-10T18:43:17+00:00",
+    "summary": "The company introduced Daybreak in May as a way for its ecosystem partners to use its most advanced AI models to adapt to a rapidly changing threat landscape.",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "674f0840288e9c1b",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "Don't let a Wall Street analyst's downgrade of Apple scare you out of the stock",
+    "url": "https://www.cnbc.com/2026/08/10/dont-let-a-wall-street-analysts-downgrade-of-apple-scare-you-out-of-the-stock.html",
+    "published": "2026-08-10T18:06:55+00:00",
+    "summary": "Jefferies analyst Edison Lee cited supply chain checks.",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "16625b1bca7da3c6",
+    "source": "CNBC Technology",
+    "tier": 2,
+    "title": "CrowdStrike, Palo Alto hit records after Black Hat cyber conference illuminates rising AI threat",
+    "url": "https://www.cnbc.com/2026/08/10/crowdstrike-palo-alto-stock-black-hat.html",
+    "published": "2026-08-10T21:43:37+00:00",
+    "summary": "The industry's annual Black Hat conference renewed demand for AI-powered cybersecurity tools.",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
   }
 ]

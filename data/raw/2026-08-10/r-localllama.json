@@ -268,5 +268,125 @@
     "published": "2026-08-10T12:06:18+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been building a personal project and wanted to check with the community on multi-modal inputs since I can't find a lot of material around this online. Ultimately I'm trying to build something that can ingest massive length (almost like a full stream - 6-10 hours) and accurately do multimodal analysis.</p> <p>How are you guys working with long (atleast 2+ hour) videos? I understand local LLMs with ViT designs can help do this but they usually suffer in quality (diffusion patches can rack up context really quickly) or require you to do some sort of frame sampling (which defeats the native multimodal aspects). I saw some work around vllm-omni which uses qwen3-omni to video input stuff, but ofcourse the context is severely limited so it's not very usable OOTB.</p> <p>So far what's worked for me:</p> <p>- get mp3 audio file -&gt; transcribe with qwen3-asr -&gt; get a full timestamped vtt file</p> <p>- summarize this vtt file with verbatim timestamped cliff notes (important for next steps)</p> <p>- calculate the max dynamic frame rate using context window length and the video length</p> <p>- sample at this rate then perform absdiff on the frames to eliminate frames where there's not a lot of change happening; downscale every frame to 720p max resolution or 540p</p> <p>- calculate the number of chunks you need to split into to fit into 64k context per chunk; each chunk is basically the relevant image frames for this part of the video + the transcript data for this part of the video</p> <p>- use transcript summary (which has verbatim timestamped stuff) + each chunk -&gt; summarize keeping the verbatim aspects and global summary information + local transcript information.</p> <p>So essentially when I ingest a video I end up with [transcript summary] + [summary of chunk 1/N + summary of chunk 2/N + ... + summary of chunk N/N ]</p> <p>I'm experimenting with using the qwen3-asr output text + mp3 file directly to gemma4 12B to do appropriat…",
     "fetched_at": "2026-08-10T16:56:54.514989+00:00"
+  },
+  {
+    "id": "2fed5e3c28fe2f17",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Muse glimmer benchmark",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkxpnd/muse_glimmer_benchmark/",
+    "published": "2026-08-10T21:19:10+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkxpnd/muse_glimmer_benchmark/\"> <img alt=\"Muse glimmer benchmark\" src=\"https://preview.redd.it/h7tyoi3p6mih1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=bfdb27ed7cc7552a299c8e1e33546a7aaaafa465\" title=\"Muse glimmer benchmark\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Little less smart than Qwen, but way fewer tokens per task.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NoFaithlessness951\"> /u/NoFaithlessness951 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vkxpnd\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkxpnd/muse_glimmer_benchmark/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "84b7601c35c3015f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "inclusionAI/Ling-3.0-tiny · 8B A1.3B MoE· Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkqwso/inclusionailing30tiny_8b_a13b_moe_hugging_face/",
+    "published": "2026-08-10T17:11:27+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkqwso/inclusionailing30tiny_8b_a13b_moe_hugging_face/\"> <img alt=\"inclusionAI/Ling-3.0-tiny · 8B A1.3B MoE· Hugging Face\" src=\"https://external-preview.redd.it/-W9E8wIes37LVjlOsySQwQoPCsCCBxgfutu0uAUT5WA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2966586092ef194547e6d2748f64f6c38260446b\" title=\"inclusionAI/Ling-3.0-tiny · 8B A1.3B MoE· Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Looks like the Ling team open weighted a much smaller version of the Ling-3.0-flash they open weighted a few days ago. It's 8B params with 1.3B active, and seems to fall between the 4B and 8-12B Qwen and Gemma models in terms of performance. </p> <p>Should have a massive tokens/sec on most systems. I quite like tiny MoE's conceptually.</p> <p>Edit: looks like the model card actually reports speeds:</p> <blockquote> <p>With FP8, Ling-3.0-tiny reaches around 100-105 tokens/s on DGX Spark and 86-90 tokens/s on an M4 Pro MacBook, with approximately 8.34 GiB peak memory usage at an 8K context length.</p> </blockquote> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/-Cubie-\"> /u/-Cubie- </a> <br /> <span><a href=\"https://huggingface.co/inclusionAI/Ling-3.0-tiny\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkqwso/inclusionailing30tiny_8b_a13b_moe_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "0d3aa679971932be",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I trained a 1B-parameter LLM from scratch on 20B tokens for about $200",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkydi5/i_trained_a_1bparameter_llm_from_scratch_on_20b/",
+    "published": "2026-08-10T21:44:43+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkydi5/i_trained_a_1bparameter_llm_from_scratch_on_20b/\"> <img alt=\"I trained a 1B-parameter LLM from scratch on 20B tokens for about $200\" src=\"https://preview.redd.it/r1rf94r57mih1.png?width=140&amp;height=105&amp;auto=webp&amp;s=30eb5358b5336dcb6a02fa7175527f1d6fd86392\" title=\"I trained a 1B-parameter LLM from scratch on 20B tokens for about $200\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>A few months ago, I had the idea of making a LLM from scratch as a personal project (for learning and partly for improving my resume).</p> <p>Since I learned a lot from other posts on here over the past year, I wanted to share the results.</p> <p>TLDR: I trained a 1.1B param model on 20B tokens from fineweb-edu, then finetuned it on openhermes with LoRA to get a chat model. Total cost was about $200 (in February/March though, so it would probably be more expensive now).</p> <ul> <li>code: <a href=\"https://github.com/Ni-co-la-s/gemmeh\">https://github.com/Ni-co-la-s/gemmeh</a></li> <li>base model safetensors: <a href=\"https://huggingface.co/ni-co-la-s/gemmeh\">https://huggingface.co/ni-co-la-s/gemmeh</a></li> <li>instruction-tuned model safetensors: <a href=\"https://huggingface.co/ni-co-la-s/gemmeh-it\">https://huggingface.co/ni-co-la-s/gemmeh-it</a></li> <li>gguf for base and it model (requires my llama.cpp fork so probably not that useful to you): <a href=\"https://huggingface.co/ni-co-la-s/gemmeh-GGUF\">https://huggingface.co/ni-co-la-s/gemmeh-GGUF</a> and <a href=\"https://huggingface.co/ni-co-la-s/gemmeh-it-GGUF\">https://huggingface.co/ni-co-la-s/gemmeh-it-GGUF</a> </li> <li>demo website: <a href=\"https://gemmeh.com/\">https://gemmeh.com/</a></li> </ul> <p>The architecture is based on Gemma3 since it was my most used model when I started. There are a few differences: - I have a smaller context length (4096) and because of that I didn't use sliding window attention. - I have a smaller vocabulary (32k,…",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "25c83c522ac5b60d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Muse Spark 1.2 Open Source before Llama 4 Behemoth!!?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkw0f7/muse_spark_12_open_source_before_llama_4_behemoth/",
+    "published": "2026-08-10T20:15:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkw0f7/muse_spark_12_open_source_before_llama_4_behemoth/\"> <img alt=\"Muse Spark 1.2 Open Source before Llama 4 Behemoth!!?\" src=\"https://preview.redd.it/j2a0ydrbvlih1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=6e11eda8b8b4523aaad74017e456b10d3a074d3f\" title=\"Muse Spark 1.2 Open Source before Llama 4 Behemoth!!?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I can’t believe it!! When Muse Spark just came out, I was already thinking they might consider open sourcing this. And now they’re actually gonna open source it!!<br /> And ever since Alexandr Wang took over, they’d be releasing anything but Llama 4 Behemoth!</p> <p>What’s next? Llama 5 release before Llama 4 Behemoth?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/aero-spike\"> /u/aero-spike </a> <br /> <span><a href=\"https://i.redd.it/j2a0ydrbvlih1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkw0f7/muse_spark_12_open_source_before_llama_4_behemoth/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "261b7df20dcd3335",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Please Share Your Experience About Muse Glimmer",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vku03t/please_share_your_experience_about_muse_glimmer/",
+    "published": "2026-08-10T19:02:08+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have a classic test for local LLM's. I asked for 8 ball pool game with only one HTML file and Muse Glimmer spend 21k Token(I m using full context so 128k) and only created a 220 lines of HTML and said its done. With my experience its not even close to Qwen 3.6 27B and we are waiting for Qwen 3.8 27B already. What is your toughts about this model. I was so hopeful until this test.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BarberIcy366\"> /u/BarberIcy366 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vku03t/please_share_your_experience_about_muse_glimmer/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vku03t/please_share_your_experience_about_muse_glimmer/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "e4046857dab19e2a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I made a web-design benchmark for local models (Muse Glimmer 30B vs Qwen 3.6 27b vs Deepseek V4 Flash 0731)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkvdg0/i_made_a_webdesign_benchmark_for_local_models/",
+    "published": "2026-08-10T19:52:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkvdg0/i_made_a_webdesign_benchmark_for_local_models/\"> <img alt=\"I made a web-design benchmark for local models (Muse Glimmer 30B vs Qwen 3.6 27b vs Deepseek V4 Flash 0731)\" src=\"https://preview.redd.it/jre0e7p3rlih1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=47b8bc9f29ea29f79f630c43393da6f749b4f1c4\" title=\"I made a web-design benchmark for local models (Muse Glimmer 30B vs Qwen 3.6 27b vs Deepseek V4 Flash 0731)\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ShadyShroomz\"> /u/ShadyShroomz </a> <br /> <span><a href=\"https://i.redd.it/jre0e7p3rlih1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkvdg0/i_made_a_webdesign_benchmark_for_local_models/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "4d0aff670c11cec5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I compared GGUF quants of Qwen3.6 27B to NVFP4, AWQ, AutoRound, and FP8",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vksqju/i_compared_gguf_quants_of_qwen36_27b_to_nvfp4_awq/",
+    "published": "2026-08-10T18:16:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vksqju/i_compared_gguf_quants_of_qwen36_27b_to_nvfp4_awq/\"> <img alt=\"I compared GGUF quants of Qwen3.6 27B to NVFP4, AWQ, AutoRound, and FP8\" src=\"https://preview.redd.it/lsiuc2pp5lih1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=217b485761b26cd609c4ec8a296ea9b2f4939c18\" title=\"I compared GGUF quants of Qwen3.6 27B to NVFP4, AWQ, AutoRound, and FP8\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><blockquote> <p>There's an interactive chart and some extra data in the <a href=\"https://erli.xyz/posts/qwen36-27b-quant-comparison/\">blog post</a> if you're interested.</p> </blockquote> <p>There are plenty of KL-divergence benchmarks for GGUF models, but most of them compare one GGUF quant against another. I wanted to know how those quants stack up against other commonly used formats (especially NVFP4).</p> <p>I tested 16 quantizations of Qwen3.6 27B: GGUF models in llama.cpp and the others in vLLM. At each token in the test set, I compared the quantized model’s next-token probability distribution with that of an unquantized reference. The resulting KL divergence measures how far the quant has drifted from the original model; lower is better.</p> <h1>Weight-only GGUFs have the best quality-size tradeoffs</h1> <p>GGUF results occupy most of the lower envelope of the chart. For almost every size, a GGUF running in llama.cpp has the lowest measured KL divergence among nearby weight sizes. The main factor here is likely the activation quantization - GGUFs don’t quantize activations at all. Several vLLM checkpoints quantize weights, activations, and sometimes the KV cache.</p> <h1>vLLM quants vary substantially</h1> <p>Quantizations of similar size do not preserve the reference distribution equally well. Particularly of note is the Sakamakismile NVFP4 (W4A4) quant, which has substantially higher KLD compared to similarly sized (and even smaller) quants.</p> <p>The two conventional <code>Q4</code> GGU…",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "52096ff2bc105475",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DiffusionGemma Technical Report",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkqqjx/diffusiongemma_technical_report/",
+    "published": "2026-08-10T17:05:25+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkqqjx/diffusiongemma_technical_report/\"> <img alt=\"DiffusionGemma Technical Report\" src=\"https://preview.redd.it/0ma3m9a9wkih1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=61c35cd30504166e9f20e4933333587968293788\" title=\"DiffusionGemma Technical Report\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>arXiv</strong> : <a href=\"https://arxiv.org/abs/2608.00146\">https://arxiv.org/abs/2608.00146</a></p> <p><strong>Full Paper</strong> : <a href=\"https://arxiv.org/pdf/2608.00146\">https://arxiv.org/pdf/2608.00146</a></p> <p><strong>Tweet</strong> : <a href=\"https://xcancel.com/googlegemma/status/2086849199052845451#m\">https://xcancel.com/googlegemma/status/2086849199052845451#m</a></p> <p>FYI both (llama.cpp) PRs ( <a href=\"https://github.com/ggml-org/llama.cpp/pull/24423\">24423</a> &amp; <a href=\"https://github.com/ggml-org/llama.cpp/pull/24427\">24427</a> ) went to Draft mode. I'm still waiting for this one as I could get faster t/s on my 8GB VRAM.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://i.redd.it/0ma3m9a9wkih1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkqqjx/diffusiongemma_technical_report/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "4e8209cff423388e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Needle 2: 14MB agentic LLM for phones, wearables, smart home and robots.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkqy66/needle_2_14mb_agentic_llm_for_phones_wearables/",
+    "published": "2026-08-10T17:12:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkqy66/needle_2_14mb_agentic_llm_for_phones_wearables/\"> <img alt=\"Needle 2: 14MB agentic LLM for phones, wearables, smart home and robots.\" src=\"https://preview.redd.it/j7au03xcykih1.png?width=140&amp;height=101&amp;auto=webp&amp;s=424032412fb64c1b909a34b41674cd93f302a7af\" title=\"Needle 2: 14MB agentic LLM for phones, wearables, smart home and robots.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey LocalLlaMa, Henry from Cactus here!</p> <p>We previously released Cactus Needle, a 14MB agentic LLM for tool call, device use, and structured extraction for phones, wearables, smart homes, small robots and microcontrollers. We got really great feedback here, and have now incorporated the suggestions to release Needle 2.</p> <p>The whole model is a single 14MB binary that runs a full session in 28MB of RAM; 45m parameters at 2bit compression. Needle hits 500 tokens/sec decode speed on a Raspberry Pi 5, sits between 400-1,500 tokens/sec on VR devices like Meta Quest 3S and Apple Vision Pro, and ranges 300-700 on sub-$200 phones such as the Samsung A-Series.</p> <p>On the tool call and mobile device use benchmarks, Needle 2 trades wins with closest small models like LFM2.5 230M and Apple Foundation Model, at 5x to 70x smaller, both at f16 vs Needle 2 at 2bit. Needle is based on Simple Attention Networks from our paper (<a href=\"https://arxiv.org/abs/2607.18363\">https://arxiv.org/abs/2607.18363</a>). </p> <p>Edge AI has lately meant Macs and PCs, but that is just 1.5 billion of over 21 billion connected IoT devices in the world today, and in emerging markets most phones ship under $200, no NPU, cheap GPUs. These include budget phones, Raspberry Pis, microcontrollers, wearables, small robots like Reachy Mini, and connected home devices. </p> <p>A conventional transformer of Needle's width and depth spends 164 MFLOPs per token, and even one squeezed down to Needle's parameter count spends 87, Need…",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "c5e6b9fafb877623",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Best open-source harness like Claude Code?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vktpl2/best_opensource_harness_like_claude_code/",
+    "published": "2026-08-10T18:51:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Avid claude code user here looking to do equivalent things with local models. Just want to plug in something like Qwen and have the interface be 1:1 with claude code. Any suggestion?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Neighbor_\"> /u/Neighbor_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vktpl2/best_opensource_harness_like_claude_code/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vktpl2/best_opensource_harness_like_claude_code/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "82e8da960634355f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Tested Muse Glimmer locally on coding with OpenCode & agentic work",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkvc1z/tested_muse_glimmer_locally_on_coding_with/",
+    "published": "2026-08-10T19:51:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Ran the model with quants (Q4) by Unsloth with latest (build from master) llama.cpp server.</p> <p>It takes ~20GB ram running on M5 Pro with 48GB at about 17t/s. Didn't do any reasoning loops/overthinking.</p> <p>Overall, sits below Qwen3.6 27B, wasn't able to get good code (frontend and backend) results. On the positive side, it didn't fail any tool calls.</p> <p>Your opinions/findings?</p> <p>Watch more: <a href=\"https://www.youtube.com/watch?v=_5wKhkUT438\">https://www.youtube.com/watch?v=_5wKhkUT438</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/curiousily_\"> /u/curiousily_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkvc1z/tested_muse_glimmer_locally_on_coding_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkvc1z/tested_muse_glimmer_locally_on_coding_with/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "50dc8407061d0c0b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Achievable 253 t/s - unsloth/Muse Glimmer 30B UD-Q5_K_M on a 5090",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkuyju/achievable_253_ts_unslothmuse_glimmer_30b_udq5_k/",
+    "published": "2026-08-10T19:37:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Benchmarked Muse Glimmer 30B on my RTX 5090 (32GB), 262k context, UD-Q5_K_M + dflash-kquant + mmproj.</p> <table><thead> <tr> <th align=\"left\">Workload</th> <th align=\"left\">Stock master + DFlash</th> <th align=\"left\">ngram-simple</th> <th align=\"left\">PR #26842 + DFlash</th> </tr> </thead><tbody> <tr> <td align=\"left\">Code patch</td> <td align=\"left\">78 t/s</td> <td align=\"left\">57 t/s</td> <td align=\"left\">220-253 t/s</td> </tr> <tr> <td align=\"left\">Mixed agent turn</td> <td align=\"left\">77 t/s</td> <td align=\"left\">68 t/s</td> <td align=\"left\">188-213 t/s</td> </tr> <tr> <td align=\"left\">Tool-call JSON</td> <td align=\"left\">71 t/s</td> <td align=\"left\">75 t/s</td> <td align=\"left\">155-181 t/s</td> </tr> <tr> <td align=\"left\">Heavy reasoning</td> <td align=\"left\">52 t/s</td> <td align=\"left\">58 t/s</td> <td align=\"left\">120-130 t/s</td> </tr> </tbody></table> <p>PR #26842 moves the DFlash draft argmax from CPU to GPU, which was the bottleneck. I cherry-picked it onto master (it branched before the Muse merge, one conflict to resolve manually) and it builds clean. Code generation now matches Meta's published 233 t/s, which I could not reproduce on stock master.</p> <p>Notes:</p> <ul> <li>ngram-simple loses to DFlash on every coding workload.</li> <li>Server caps context at the model's metadata context_length, use <code>--override-kv</code> for 262k.</li> <li>The reasoning budget flags do not work with this template. This is verified: with the budget set to 64, the model still burned 2000+ chars thinking and the budget message never appeared. Leave max_tokens headroom for the reasoning block.</li> </ul> <p>Flags:</p> <pre><code>llama-server ^ --model Muse-Glimmer-30B-UD-Q5_K_M.gguf ^ --mmproj mmproj-kquant.gguf ^ -c 262144 --parallel 1 ^ --override-kv &quot;muse-glimmer.context_length=int:262144,dflash.context_length=int:262144&quot; ^ --kv-unified -ngl all -ngld all -fa on --warmup ^ -b 4096 -ub 512 --cache-prompt --cache-reuse 25…",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
   }
 ]

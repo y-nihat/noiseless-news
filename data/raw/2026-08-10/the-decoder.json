@@ -38,5 +38,25 @@
     "published": "2026-08-10T13:21:49+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/Australia-Gym-Hack-OpenClaw.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        An Australian user just wanted a spot in a class. His AI agent found a security hole instead and exploited it.</p>\n<p>The article <a href=\"https://the-decoder.com/told-to-book-a-gym-class-an-ai-agent-hacked-the-site-instead-to-move-its-user-up-the-waitlist/\">Told to book a gym class, an AI agent hacked the site instead to move its user up the waitlist</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-10T16:56:54.514989+00:00"
+  },
+  {
+    "id": "64e5b0f27d5c6244",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Old OCR text cripples language model training, and FineBooks wants to fix that at scale",
+    "url": "https://the-decoder.com/old-ocr-text-cripples-language-model-training-and-finebooks-wants-to-fix-that-at-scale/",
+    "published": "2026-08-10T18:20:39+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/ocr_page_scanning.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        The FineBooks project from Hugging Face and EleutherAI tested 14 open-source OCR models on more than 2,000 historical book pages. The top model, dots.mocr, hits 97.6 percent character accuracy at under two dollars per thousand pages. That's good enough for AI training data, but not yet for scholarly transcriptions, the team says.</p>\n<p>The article <a href=\"https://the-decoder.com/old-ocr-text-cripples-language-model-training-and-finebooks-wants-to-fix-that-at-scale/\">Old OCR text cripples language model training, and FineBooks wants to fix that at scale</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
+  },
+  {
+    "id": "f86f68dff2cfb3c8",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI launches GPT-5.6-Cyber to help defenders find vulnerabilities before attackers do",
+    "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+    "published": "2026-08-10T18:01:30+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/06/openai_logo_background_dark.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        OpenAI aims to give cybersecurity defenders a head start: The new GPT-5.6-Cyber model answers up to 98.5 percent of security queries that would otherwise be blocked and has already uncovered two previously unknown Chrome vulnerabilities. According to OpenAI, the window of opportunity for defenders is shrinking. Access requires identity verification.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/\">OpenAI launches GPT-5.6-Cyber to help defenders find vulnerabilities before attackers do</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-10T22:17:44.088156+00:00"
   }
 ]
