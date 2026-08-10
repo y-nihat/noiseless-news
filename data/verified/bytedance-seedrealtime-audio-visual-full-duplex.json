@@ -1,0 +1,25 @@
+{
+  "slug": "bytedance-seedrealtime-audio-visual-full-duplex",
+  "checked_at": "2026-08-10T23:02:00+00:00",
+  "method": "Direct WebFetch/WebSearch of ByteDance Seed's own blog and product page for the announcement claim (Tier 0, sufficient alone). Fresh verifier sub-agent independently confirmed the announcement text and searched for independent benchmark coverage of the capability claim (found none -- all coverage traces back to ByteDance's own figures). Fresh adversarial falsifier sub-agent checked for date/rehash issues, contradicting reports, and novelty-positioning risk; found none blocking, but flagged that academic systems (e.g. MiniCPM-o 4.5) have made similar simultaneous audio-visual claims around the same period, so the article avoids any 'first' framing.",
+  "origin_items": [
+    "Surfaced in cycle 1's Tier-0 sweep as a new lead not yet in the ledger; also referenced in bytedance-seed-audio-1-0's 2026-08-05 note as a separate, unrelated product. Triaged and opened in cycle 2."
+  ],
+  "claims": [
+    {
+      "text": "On 5 August 2026, ByteDance's Seed team released SeedRealtime, a native audio-visual full-duplex model that natively fuses audio, video and text streams to enable real-time, proactive conversational interaction, deployed through the Doubao app; it extends Seed's audio-only full-duplex model ('Seed Full-Duplex Speech LLM'), released in April 2026, by adding vision",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "ByteDance's own blog post states this directly and is a Tier-0 primary source, sufficient alone for an announcement claim. Verifier sub-agent independently fetched the same page and product page and confirmed the date, name, and description with no embellishment. Falsifier sub-agent independently confirmed the April 2026 Seeduplex predecessor date and found no evidence of an earlier release under this name.",
+      "evidence": ["https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction"]
+    },
+    {
+      "text": "ByteDance says SeedRealtime uses visual context to resolve spoken-word ambiguity and, per its own human evaluation, substantially reduces awkward pacing and interruption problems compared with older cascaded (non-end-to-end) voice-assistant pipelines",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Verifier sub-agent searched for independent benchmark/hands-on coverage and found none -- all secondary coverage (MarkTechPost, TestingCatalog, DataNorth, an explainx Substack) restates ByteDance's own reported human-evaluation figures with no disclosed methodology or third-party test, and cryptobriefing.com (a blocked_evidence_domain) also only restated the vendor claim. Labeled vendor-claim, not confirmed.",
+      "evidence": ["https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction"]
+    }
+  ],
+  "falsifier_notes": "PASS with caveat. No evidence of date manipulation, rehash, or denial. Confirmed ByteDance Seed is a real, active lab. Flagged that academic systems (e.g. MiniCPM-o 4.5, arXiv 2604.27393) claim similar simultaneous audio-visual full-duplex interaction around the same period -- article deliberately avoids implying industry-first novelty, only that it extends ByteDance's own April 2026 audio-only model. Dedup-check run before opening: no matches (clean)."
+}

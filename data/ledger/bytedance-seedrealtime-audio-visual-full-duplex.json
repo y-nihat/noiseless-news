@@ -1,0 +1,20 @@
+{
+  "slug": "bytedance-seedrealtime-audio-visual-full-duplex",
+  "title": "ByteDance's Seed team releases SeedRealtime, an audio-visual full-duplex model",
+  "status": "published",
+  "first_seen": "2026-08-10",
+  "published_at": "2026-08-10",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction"
+  ],
+  "follows": null,
+  "reason": "Published: ByteDance's own announcement (Tier 0) is sufficient for the release/spec claim. The capability claim (pacing improvement, homophone resolution via vision) is labeled vendor-claim -- no independent benchmark or reproduction found by either the verifier or falsifier sub-agent.",
+  "watch": [
+    "Any independent (non-ByteDance) benchmark or hands-on evaluation of SeedRealtime's audio-visual interaction quality",
+    "Whether this becomes a pattern -- e.g. a public API/pricing announcement, or adoption/integration coverage"
+  ],
+  "notes": [
+    "2026-08-10 c2: surfaced via cycle-1 Tier-0 sweep lead list; dedup-check clean (no matches). Distinct from the still-watching bytedance-seed-audio-1-0 entry (a different product, Doubao-Seed-Audio 1.0). Fresh verifier + fresh adversarial falsifier sub-agents both run given the short cycle window; falsifier passed with a novelty-framing caveat (academic systems like MiniCPM-o 4.5 claim similar capabilities around the same period), which the published article avoids overclaiming against."
+  ]
+}
