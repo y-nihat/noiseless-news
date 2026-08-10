@@ -1,0 +1,12 @@
+[
+  {
+    "id": "d05b6441838cc13a",
+    "source": "YouTube — Machine Learning Street Talk",
+    "tier": 3,
+    "title": "Why Deep Networks Don’t Need to Memorize Everything — Matthieu Wyart",
+    "url": "https://www.youtube.com/watch?v=revreN8LZ_M",
+    "published": "2026-08-10T22:55:05+00:00",
+    "summary": "This episode is sponsored by Notion. Learn more about Notion's Developer Platform today at https://notion.com/mlst\n\nWhy can deep networks discover abstractions that shallow models miss? Statistical physicist Matthieu Wyart joins Tim Scarfe to argue that the answer lies in the hidden hierarchy of data. Language and images are built from parts within parts; depth lets a network recover those coarse-grained variables and escape the curse of dimensionality.\n\nThe conversation moves from jamming transitions and rough loss surfaces to Chomsky, context-free grammars and machine creativity. Wyart explains why next-token prediction can still recover compositional structure, where current systems fall short of genuine scientific invention, and why predicting latent representations rather than raw tokens could make learning far more sample-efficient.\n\nThey also examine diffusion models, neural scaling laws and the limits of physics-inspired theory. The final question is on a personal note: if mistakes are the price of leaving the beaten path, how much scientific risk is worth taking?\n\n---\nTIMESTAMPS:\n00:00:00 Can machines learn abstractions from data?\n00:02:00 Notion agentic workspace\n00:02:49 From statistical physics to machine learning\n00:06:40 What physics can explain about learning\n00:16:37 From Carnot to Chomsky bulldozer\n00:21:21 How deep networks recover hidden hierarchies\n00:32:43 Where machine creativity still falls short\n00:40:48 How deep nets escape the curse of dimensionality\n00:52:19 Why predict latents instead of tokens\n01:02:49 The sample-efficiency case for latent prediction\n01:08:31 Diffusion, scaling laws and text entropy\n01:16:40 The scientists we learn from and the mistakes we make\n\n---\nREFERENCES:\nperson:\n[00:00:43] Noam Chomsky\nhttps://linguistics.mit.edu/user/chomsky/\ntool:\n[00:02:08] Notion Developer Platform\nhttps://www.notion.com/en-gb/blog/introducing-developer-platform\npaper:\n[00:04:43] Mastering the game of Go with deep neural networks and tree sear…",
+    "fetched_at": "2026-08-10T23:30:47.965205+00:00"
+  }
+]
