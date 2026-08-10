@@ -18,5 +18,125 @@
     "published": "2026-08-10T00:31:18+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://www.forbes.com/sites/sandycarter/2026/08/09/kpmg-says-nearly-half-of-executives-pulled-back-ai-agents-over-cost/\">https://www.forbes.com/sites/sandycarter/2026/08/09/kpmg-says-nearly-half-of-executives-pulled-back-ai-agents-over-cost/</a></p> <p>Bubble started to burst?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MoodDelicious3920\"> /u/MoodDelicious3920 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk60uz/kpmg_says_nearly_half_of_executives_pulled_back/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk60uz/kpmg_says_nearly_half_of_executives_pulled_back/\">[comments]</a></span>",
     "fetched_at": "2026-08-10T01:00:39.465339+00:00"
+  },
+  {
+    "id": "68e984d47d6fe59f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Introducing Muse Glimmer: an open-weight model optimized for always-on local agent workflows",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkgsum/introducing_muse_glimmer_an_openweight_model/",
+    "published": "2026-08-10T10:14:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkgsum/introducing_muse_glimmer_an_openweight_model/\"> <img alt=\"Introducing Muse Glimmer: an open-weight model optimized for always-on local agent workflows\" src=\"https://preview.redd.it/d61pdytdviih1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=a9bd06548c930452218a339ca26a79de14dd13cd\" title=\"Introducing Muse Glimmer: an open-weight model optimized for always-on local agent workflows\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hi <a href=\"/r/LocalLLaMA\">r/LocalLLaMA</a> 👋 </p> <p>Today we’re excited to release Muse Glimmer, a 30B open-weight model built specifically for local agent workflows. We’re releasing the weights to the community under a permissive Apache 2.0 license.</p> <p><strong>A few specs</strong></p> <ul> <li>30B params, dense</li> <li>Multimodal: interleaved text + images via a dedicated perception encoder</li> <li>Trained on 100+ languages</li> <li>Controllable reasoning effort (quality/speed tradeoff)</li> </ul> <p><strong>Memory footprint</strong><br /> At full precision, 30B needs 55+ GB, which is out of reach for consumer hardware. We quantize weights to ~4-bit, bringing the LM under 20 GB. That leaves headroom in a 24 GB or 32 GB envelope for the KV cache, the perception encoder, and the speculative decoding drafter running simultaneously. We validated minimal to no degradation on agentic tasks under compression. </p> <p><strong>Speculative decoding</strong><br /> Ships with a lightweight DFlash-based drafter that proposes blocks of tokens which the main model verifies in parallel. Significantly faster than token-by-token generation with identical output quality. We're also shipping quantized drafter versions so the memory overhead stays small. </p> <p><strong>A few capabilities</strong><br /> We trained Muse Glimmer for agentic loop tasks, including:</p> <ul> <li>End-to-end task completion (strong performance on DeepSearch QA, MCP-Atlas, 𝛕<…",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "1d7d96c9d80c7c20",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Meta open sources new on-device model Muse Glimmer & Muse spark 1.2 also coming soon!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkgqnn/meta_open_sources_new_ondevice_model_muse_glimmer/",
+    "published": "2026-08-10T10:10:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkgqnn/meta_open_sources_new_ondevice_model_muse_glimmer/\"> <img alt=\"Meta open sources new on-device model Muse Glimmer &amp; Muse spark 1.2 also coming soon!\" src=\"https://external-preview.redd.it/8zMekffq4f0U2Dw9zjCXzEICATIPv6EOrWNKDWiJwLk.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=fae5116ef33efbc45347120cac50c40fec7de0ff\" title=\"Meta open sources new on-device model Muse Glimmer &amp; Muse spark 1.2 also coming soon!\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/provoloner09\"> /u/provoloner09 </a> <br /> <span><a href=\"https://www.nytimes.com/2026/08/10/technology/meta-ai-open-source.html\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkgqnn/meta_open_sources_new_ondevice_model_muse_glimmer/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "46ecf611135816a0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "So... did we give up on the rule against AI posts?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vk8mxt/so_did_we_give_up_on_the_rule_against_ai_posts/",
+    "published": "2026-08-10T02:35:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Sub is drowning in slop posts. Shortly after the new rule it was better. But it's gotten unbearable in the past month or so. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kevin_1994\"> /u/kevin_1994 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk8mxt/so_did_we_give_up_on_the_rule_against_ai_posts/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk8mxt/so_did_we_give_up_on_the_rule_against_ai_posts/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "52634435f798e24f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "unsloth/Muse-Glimmer-30B-GGUF · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkhbuc/unslothmuseglimmer30bgguf_hugging_face/",
+    "published": "2026-08-10T10:43:36+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkhbuc/unslothmuseglimmer30bgguf_hugging_face/\"> <img alt=\"unsloth/Muse-Glimmer-30B-GGUF · Hugging Face\" src=\"https://external-preview.redd.it/giFGvGlpJ8p7UIxxxdT9jYWibVuEo-iLYhgcac3gbsA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9dccca7a2c7bff012ac9dc22fe653d77ebd3a959\" title=\"unsloth/Muse-Glimmer-30B-GGUF · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Guide: <a href=\"https://unsloth.ai/docs/models/muse-glimmer\">https://unsloth.ai/docs/models/muse-glimmer</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://huggingface.co/unsloth/Muse-Glimmer-30B-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkhbuc/unslothmuseglimmer30bgguf_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "edd26473d4630f65",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "ByteDance vows to avoid AI distillation, develop new model its own way",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vk7o93/bytedance_vows_to_avoid_ai_distillation_develop/",
+    "published": "2026-08-10T01:48:47+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk7o93/bytedance_vows_to_avoid_ai_distillation_develop/\"> <img alt=\"ByteDance vows to avoid AI distillation, develop new model its own way\" src=\"https://preview.redd.it/75bfjglsdgih1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=11ca900fc71507a4c4cc6cb3f3b61b22e8f017e4\" title=\"ByteDance vows to avoid AI distillation, develop new model its own way\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/etherd0t\"> /u/etherd0t </a> <br /> <span><a href=\"https://i.redd.it/75bfjglsdgih1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vk7o93/bytedance_vows_to_avoid_ai_distillation_develop/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "26b85df3447668a5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "omlab/VLX-Seek-1.5-10B · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkaypz/omlabvlxseek1510b_hugging_face/",
+    "published": "2026-08-10T04:32:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkaypz/omlabvlxseek1510b_hugging_face/\"> <img alt=\"omlab/VLX-Seek-1.5-10B · Hugging Face\" src=\"https://external-preview.redd.it/RRRKj_79WNmuVZ7Q28kzp8kCRw8Jo4xGcQetJiu-1Ik.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8164de4988da07de1f5a5fd17161e96de9526f0d\" title=\"omlab/VLX-Seek-1.5-10B · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><h1>VLX-Seek-1.5-10B</h1> <p>VLX-Seek-1.5-10B is the open-source 10B model in the VLX-Seek 1.5 family, designed for fine-grained perception and visual grounding in embodied scenarios. It targets practical settings such as drones, robots, robotic dogs, surveillance cameras, inspection systems, and other edge-side visual intelligence applications where a model must identify what is present, localize the right instance, and avoid grounding objects that are absent.</p> <p>Unlike coordinate-generation-based VLMs that directly decode bounding-box numbers, VLX-Seek reformulates localization as region retrieval and region reference. Candidate visual regions are represented as addressable entities, and the model answers by selecting, comparing, and referring to those regions. This makes localization more aligned with the strengths of language models: comparison, selection, reference, and reasoning.</p> <p>For technical details, inference code, and runnable examples, please visit the project repository:</p> <p><strong>GitHub:</strong> <a href=\"https://github.com/om-ai-lab/VLX-Seek\"><strong>om-ai-lab/VLX-Seek</strong></a></p> <h1><a href=\"https://huggingface.co/omlab/VLX-Seek-1.5-10B#model-highlights\"></a>Model Highlights</h1> <ul> <li><strong>💡 Embodied visual grounding:</strong> Optimized for real-world embodied scenes, including drone-view, surveillance-view, robot-view, and other edge-side perception scenarios.</li> <li><strong>🧩 Region-reference localization:</strong> Converts candidate regions into language-addressable region tokens, reducing relian…",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "1890cbfd58cc517c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why Speculative Decoding went mature in 2026?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkem3y/why_speculative_decoding_went_mature_in_2026/",
+    "published": "2026-08-10T08:02:43+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Spec-dec has been a thing for a while, in fact, it's wasn't an idea that was born for LLM inference. E.g. Uber's <a href=\"https://github.com/uber/submitqueue\">https://github.com/uber/submitqueue</a> applied it to a merge queue. Apple &amp; GDM had been releasing papers on it since already 2022.</p> <p>Seeing it being mature enough for the big frameworks to adopt it, and watching it in action is really jaw-dropping. I'm here running Kimi-K2.5 as if it was a fucken small model.</p> <p>Recently I watched a podcast with Baseten folks, and they very much implied that they are huge on spec-dec, talking about how custom deployments for some clients had problems with it because of their own custom tool-calling basically killed off the gains from the drafter model.</p> <p>I wonder, if speculative decoding for LLM inference was an idea that was already being explored years ago, why we saw it being mature in 2026? Was the paper by Tri Dao et al (Speculative Speculative Decoding [1]) a breakthrough that resulted in the above?</p> <p>Are there any major cons? Do you use it in your day-to-day?</p> <p>IMO, it might be the most important milestone for (local) LLM inference since FlashAttn</p> <p>[1] <a href=\"https://arxiv.org/abs/2603.03251\">https://arxiv.org/abs/2603.03251</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-River5924\"> /u/Ok-River5924 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkem3y/why_speculative_decoding_went_mature_in_2026/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkem3y/why_speculative_decoding_went_mature_in_2026/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "ec090c4bba63c4a5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Comparing how Cline, Kilo, and Qwen Code handle long-task context/state (and why context loops keep happening)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkh2k0/comparing_how_cline_kilo_and_qwen_code_handle/",
+    "published": "2026-08-10T10:28:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been comparing Cline / Kilo / Qwen Code lately since they all handle long-task state differently.</p> <p>Cline: has Focus Chain, a markdown file kept outside the conversation that gets reinjected on a cadence, plus Memory Bank for project context, plus a standalone gRPC server so it's not fully tied to VS Code. probably the most mature of the three on this specific problem (about context management), though restore still has some sync bugs between the file and what the model actually sees.</p> <p>Kilo: TODO state is literally an XML block living inside the conversation history, so when compaction kicks in it gets flattened into a prose summary and the agent sometimes has to reread source files just to figure out where it stopped. It causes an infinite read-analysis-compaction loop sometimes once it hits context limits. they're mid-migration onto the opencode engine now which might fix some of this eventually, but isn't there yet.</p> <p>Qwen Code: keeps TODO state in a plain file ('~/.qwen/todos/') completely separate from the conversation, so no matter how much compaction runs, nothing gets lost or reconstructed. It works well for 2~3 hrs long running tasks, where I'd usually hit that Kilo loop by then or human intercept.</p> <p>the bigger reason I ended up settling on Qwen Code wasn't just the TODO file though. it's the hooks system and how flexible the config layer is in general. it exposes lifecycle events like 'PreToolUse', 'PostToolUse', 'Stop', 'UserPromptSubmit', etc, and each one can run a command/http/prompt-based hook that actually gets to allow/deny/ask, not just log. that's a pretty different level of control compared to Cline/Kilo, where you're mostly stuck hoping the system prompt gets followed. combine that with settings.json supporting custom model providers and per-tool permission rules, plus extension manifests with their own hooks, and it's the only one of the three where I could bolt on enforcement logic wi…",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "e8c95be6fc142bc4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Running Qwen 3.5 35B A3B-Q8_0 gguf on a cheap radeon 7600 at 18 token/s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkbe48/running_qwen_35_35b_a3bq8_0_gguf_on_a_cheap/",
+    "published": "2026-08-10T04:56:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I also have 64 gb ddr4 ryzen 5600 Using llama.cpp Ubuntu distro</p> <p>Settings are as follows</p> <p>--n-gpu-layers 999 \\</p> <p>--n-cpu-moe 37 \\</p> <p>--no-mmap \\</p> <p>-ctk q8_0 \\</p> <p>-ctv q8_0 \\</p> <p>-fa 1 \\</p> <p>-c 9000 \\</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sweaty_Perception655\"> /u/Sweaty_Perception655 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkbe48/running_qwen_35_35b_a3bq8_0_gguf_on_a_cheap/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkbe48/running_qwen_35_35b_a3bq8_0_gguf_on_a_cheap/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "dfd87e687071f124",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Mature/better alternatives to pi-web?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkgose/maturebetter_alternatives_to_piweb/",
+    "published": "2026-08-10T10:07:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm looking for a web interface for my <code>pi</code> harness without the CLI, but this was the only one I found. Are there any others? I'm not looking for any chat interface like Open WebUI that's rather bloated, requiring accounts/logins for certain features, etc. It would be great if it was dedicated for <code>pi</code> or is even bundled with it.</p> <p>I was considering to just vibe-coding a web UI/UX of the <code>pi</code> CLI, but just wondering if there are already tools out there.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jinnyjuice\"> /u/jinnyjuice </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkgose/maturebetter_alternatives_to_piweb/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkgose/maturebetter_alternatives_to_piweb/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "bba2d46c33c52458",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Chat UIs with native audio input for multimodal models?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkfo8f/chat_uis_with_native_audio_input_for_multimodal/",
+    "published": "2026-08-10T09:08:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been running Gemma 4 E4B with oMLX and I can't find any chat interfaces that directly send the audio file to the model instead of running the audio through a separate STT layer. I can confirm the audio layers work because I ran a couple of requests through Pydantic AI in the Python REPL.</p> <p>Thanks in advance.</p> <p>EDIT: I know that <code>llama-server</code>'s web UI can do this, but I don't feel like running an instance of <code>llama-cpp</code> just for the UI.</p> <p>EDIT2: Reason why I am asking is because I want to try using Gemma 4 as a lower-latency voice assistant.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/banana_slurp_jug\"> /u/banana_slurp_jug </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkfo8f/chat_uis_with_native_audio_input_for_multimodal/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vkfo8f/chat_uis_with_native_audio_input_for_multimodal/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "34cf13fe59cac9cc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I've added Maple-Preview to Mference, got 40 tps generation with 500MB of used RAM on Air M4",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vkglog/ive_added_maplepreview_to_mference_got_40_tps/",
+    "published": "2026-08-10T10:03:03+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I like the idea of running local models, but I don’t like the idea of having them eat up all of my memory. I’ve always thought that the best way to build an edge model would be to make something smart enough to reason over data, but without requiring much knowledge of its own. Why should a model carry all that knowledge around when web search and tool calling are trivial to set up? My former colleagues at AIRI had a similar idea and built <a href=\"https://huggingface.co/collections/occ-ai/occ-rag\">Optimal Cognitive Core</a>, which I’ve written about before: fine-tuned reasoning versions of Qwen3-0.6B and Qwen3-1.7B optimized for working with external context and RAG. Hardware-wise, they’re pretty close to what I want. The weights take up 1.2 and 3.4 GB in native BF16, respectively, plus roughly the same amount for a long context — since this is Qwen3 with GQA rather than one of the fashionable hybrid architectures. So, with a bit of optimism, they fit. The problem is that these models are simply too small for general-purpose tasks. They’re still 600M and 1.7B dense models. At this scale, you usually get amusing little parrots that can paraphrase text or do a simple classification task after fine-tuning, but not much beyond that. </p> <p>The next way to squeeze a model into my MacBook Air M4 is quantization. PrismML did something interesting here with <a href=\"https://prismml.com/news/bonsai-27b\">Bonsai-27B</a>, binary and ternary quantizations of Qwen-3.6-27B. The ternary version of this 27B model takes just 7.2 GB of memory once inference is running, and it does actually run on Macs. Unfortunately, Qwen-3.6-27B is a dense model, so it’s painfully slow on my machine. Based on the numbers I could find online, I’d expect around 13–14 tokens/s for generation and 100–150 tokens/s for prompt processing. It’s also QAT — or possibly even PTQ; there aren’t many details available — and, most likely, the optimization wasn’t specifically desig…",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "66a1174ccef656f0",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Comparing embedding models with synthetic query probing [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vkh1ul/comparing_embedding_models_with_synthetic_query/",
+    "published": "2026-08-10T10:27:45+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vkh1ul/comparing_embedding_models_with_synthetic_query/\"> <img alt=\"Comparing embedding models with synthetic query probing [R]\" src=\"https://preview.redd.it/eauhd4hdyiih1.png?width=140&amp;height=47&amp;auto=webp&amp;s=7594a52bcc580426082f61ebb75cecded686b9a9\" title=\"Comparing embedding models with synthetic query probing [R]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Say you want to swap out your embedding models, for instance from ADA to Titan. Are these embedding models comparable? How do similarity score ranges compare? Where to put a threshold for minimum match when doing retrieval? Or more from a research point of view how can we relate and fundamentally understand these embedding spaces better?</p> <p>This is what we aim to solve with Synthetic Query Probing, a fancy name for essentially (and intentionally) a very simple approach: embedding spaces are not directly comparable by definition, so compare similarity spaces instead, similarity match scores for pairs of content (synthetic question, chunk for instance) across multiple embedding models.</p> <p>For example, similarity scores of Titan models of different dimensionalities are related, whereas the relation between Titan and Ada scores is non-linear, with different ranges, see figure.</p> <p><a href=\"https://preview.redd.it/eauhd4hdyiih1.png?width=4767&amp;format=png&amp;auto=webp&amp;s=e424c836c48962928d9505cf747e7cd9fb0b719f\">https://preview.redd.it/eauhd4hdyiih1.png?width=4767&amp;format=png&amp;auto=webp&amp;s=e424c836c48962928d9505cf747e7cd9fb0b719f</a></p> <p>See <a href=\"https://arxiv.org/pdf/2608.05857\">https://arxiv.org/pdf/2608.05857</a>, Marcin Rozmus and Peter van der Putten. Similarity Spaces across Embedding Models with Synthetic Query Probing. Discovery Science 2026, October 5-9, 2026, Mainz, Germany</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pppeer\"> /u/pppeer…",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "8d1aa2da4d475105",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "3 Collapsing models [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vkg921/3_collapsing_models_r/",
+    "published": "2026-08-10T09:42:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Trying to train 3 models for birads detection using cross entropy and center loss + class weights but all of them seem to collapse between birads 1 as the dataset (VinDr) im using is heavily unbalanced towards it, Would like to ask for input and opinion on what seems to be the case, am I using the wrong loss function?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Rihitwo\"> /u/Rihitwo </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vkg921/3_collapsing_models_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vkg921/3_collapsing_models_r/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "cb17f18fb446fd2b",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Semi Edge Inference Idea [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vkhl99/semi_edge_inference_idea_d/",
+    "published": "2026-08-10T10:58:11+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Today the most important factor in AI is cost. My idea is to split ML models inference (closed ones, proprietary) across server and edge computing on clients, and I would like to hear what do you think about this thing.</p> <p>For example some of model weights/modules would be on client, and some on the server side (where user has no access to them). This could potentially un-load some processing from datacenters, moving part of the cost to the client hardware. Probbably the most important question here will be how to achieve this - and I believe one hypothetical option will be to train like two separate models - client model and server model, and they will communicate through tensors/latent representations across network protocol.</p> <p>Secondly such split of server side and client side model ends, can provide later some beneficial outcomes I hope (because in between &quot;talk&quot; protocol can be maybe kind of standarized one in some future development, but this is only more like brainstorm now). Such split might not only be one-to-one, but one-to-many, many-to-many etc.</p> <p>What do you think about this idea?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/komorra\"> /u/komorra </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vkhl99/semi_edge_inference_idea_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vkhl99/semi_edge_inference_idea_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  }
+]
