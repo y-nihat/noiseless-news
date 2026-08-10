@@ -1,0 +1,41 @@
+{
+  "slug": "meta-muse-glimmer-launch",
+  "checked_at": "2026-08-10T23:39:00+00:00",
+  "method": "Fresh verifier sub-agent (confirmed Muse Glimmer release specs and the essay's existence/URL against Meta's own primary sources plus independent outlets) run in parallel with a fresh adversarial falsifier sub-agent (checked for repackaged-announcement risk, inconsistent numbers, stock-price/PR conflation, and hedge-worthy language on the open-weighting pledge), under a tight cycle-deadline window.",
+  "origin_items": [
+    "data/raw/2026-08-10/techmeme.json (Muse Glimmer / Zuckerberg essay items, surfaced via 'meta'/'zuckerberg' keyword scan of fresh ingest)",
+    "data/raw/2026-08-10/gnews-ai-model-releases.json (dozens of independent outlets covering the same event)"
+  ],
+  "claims": [
+    {
+      "text": "Meta released Muse Glimmer, a 30-billion-parameter dense model, under an Apache 2.0 license on Hugging Face on 10 August 2026, distilled from Muse Spark 1.2 and built to run locally on a single consumer GPU (around 24GB VRAM) for agentic workloads such as tool calling, coding and multi-step reasoning",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed against Meta's own primary source (research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model) by the verifier sub-agent, with the 24GB VRAM / single-GPU figure and speculative-decoding (DFlash) detail independently corroborated by MarkTechPost and AMD's own technical blog (not just PR relay). Announcement claim on a Tier-0 primary source; independence gate additionally cleared via 4+ outlets (CNBC, VentureBeat, Neowin, The Register) adding own framing rather than relaying only.",
+      "evidence": [
+        "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+        "https://venturebeat.com/technology/meta-returns-to-open-source-with-muse-glimmer-an-apache-2-0-licensed-30b-parameter-ai-model-optimized-for-agents-available-now"
+      ]
+    },
+    {
+      "text": "The same day, Mark Zuckerberg published an essay, 'The Future Is for Everyone,' on Meta's own site arguing that AI capability should be broadly distributed rather than concentrated among a handful of labs, and criticizing 'closed' AI model makers",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Title, ~6,500-word length (independently measured by 404 Media per verifier), publish date and thesis confirmed by both sub-agents against secondary reporting plus the primary about.fb.com URL; full primary text could not be fetched directly within the cycle's time budget (WebFetch truncated), so exact wording is attributed to Meta's own reporting-corroborated summary rather than a direct quote.",
+      "evidence": [
+        "https://about.fb.com/news/2026/08/the-future-is-for-everyone/"
+      ]
+    },
+    {
+      "text": "Zuckerberg said Meta plans to release open weights for Muse Spark 1.2 -- the model Meta launched via paid API on 5 August alongside its Muse Code coding agent -- in the coming weeks",
+      "type": "statement",
+      "verdict": "vendor-claim",
+      "reasoning": "Kept as vendor-claim rather than confirmed: the falsifier sub-agent found this framed with hedged language elsewhere ('resume releasing some open source models soon') and noted Meta's 2025 precedent of saying it would not open-source all of its most capable models. The Spark-1.2-specific open-weighting claim is corroborated by multiple independent aggregator headlines ('Muse Spark 1.2 Open Weights Coming') dated the same day, giving reasonable confidence this is what was said, but neither sub-agent could confirm exact primary-text wording or a firm date, so the article states it as a stated plan, not a fact, and does not put it in the headline (style.md Gate 1).",
+      "evidence": [
+        "https://about.fb.com/news/2026/08/the-future-is-for-everyone/",
+        "https://venturebeat.com/technology/meta-returns-to-open-source-with-muse-glimmer-an-apache-2-0-licensed-30b-parameter-ai-model-optimized-for-agents-available-now"
+      ]
+    }
+  ],
+  "notes": "dedup-check before opening returned two moderate matches (thinking-machines-inkling-release, score 0.444; meta-muse-spark-1-1, score 0.4) -- neither strong. Read the Muse-saga ledger chain (meta-muse-spark-1-1 -> meta-muse-code-muse-spark-1-2) and judged this a NEW event in the same product saga (new model + new essay, one day after the saga's most recent entry), so published as a follow-up with follows: meta-muse-code-muse-spark-1-2, not an in-place update or unlinked standalone. Deliberately excluded from the article: a widely-reported 'Future Is for Everyone Fund' ~$1B community-investment figure (verifier could only confirm it against secondary sources, not Meta's primary essay text) and the reported Meta stock-price rise (falsifier flagged this as a market/PR signal that must not be conflated with technical validation of Muse Glimmer) -- both left out rather than under-verified. Because the open-weighting-Spark-1.2 claim is an unfulfilled pledge, this story should be tracked with open_obligation/revisit_after in the ledger. 2 sub-agents dispatched in parallel (1 verifier, 1 falsifier), each ~6 tool calls, well under the 15-search/story budget; no usage-limit errors."
+}

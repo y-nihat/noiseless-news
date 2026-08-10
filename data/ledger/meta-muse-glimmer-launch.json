@@ -1,0 +1,25 @@
+{
+  "slug": "meta-muse-glimmer-launch",
+  "title": "Meta releases Muse Glimmer, a 30-billion-parameter open-weight AI model",
+  "status": "published",
+  "first_seen": "2026-08-10",
+  "published_at": "2026-08-10",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+    "https://about.fb.com/news/2026/08/the-future-is-for-everyone/",
+    "https://venturebeat.com/technology/meta-returns-to-open-source-with-muse-glimmer-an-apache-2-0-licensed-30b-parameter-ai-model-optimized-for-agents-available-now"
+  ],
+  "follows": "meta-muse-code-muse-spark-1-2",
+  "open_obligation": true,
+  "revisit_after": "2026-08-31",
+  "reason": "Published: Muse Glimmer release confirmed against Meta's own primary source plus independent corroboration (VentureBeat, MarkTechPost, AMD technical blog); Zuckerberg's essay confirmed via Meta's own newsroom URL and independent reporting. Fresh verifier and fresh adversarial falsifier sub-agents ran in parallel; falsifier flagged the essay's pledge to open-weight Muse Spark 1.2 as hedged/unconfirmed against primary text, so that claim is published as a stated plan (vendor-claim), not fact, and kept out of the headline.",
+  "watch": [
+    "Whether Meta actually releases open weights for Muse Spark 1.2 'in the coming weeks' as Zuckerberg said",
+    "Independent benchmark evaluation of Muse Glimmer (none available at publish time)",
+    "Full primary text of the Zuckerberg essay, not yet directly fetched this cycle"
+  ],
+  "notes": [
+    "2026-08-10 c3: dedup-check returned two moderate, non-strong matches (thinking-machines-inkling-release 0.444, meta-muse-spark-1-1 0.4). Read the Muse-saga chain and judged this a new event in the same saga (new model + new essay one day after meta-muse-code-muse-spark-1-2), so published as a follow-up (follows) rather than an in-place update or unlinked standalone. Deliberately excluded from the article: a widely-reported ~$1B 'Future Is for Everyone Fund' figure and Meta's stock-price rise on the news, both unconfirmed against primary text or risking conflation of a market/PR reaction with technical validation."
+  ]
+}
