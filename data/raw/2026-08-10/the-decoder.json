@@ -18,5 +18,25 @@
     "published": "2026-08-10T08:46:36+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/prompt_inejction_key.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Security firm PromptArmor shows how hidden instructions in a PDF can hijack Atlassian's AI agent Rovo, silently forwarding sensitive data from Jira and Confluence to an external server. The attack needs no user confirmation and leaves no trace.</p>\n<p>The article <a href=\"https://the-decoder.com/hidden-text-in-a-pdf-is-enough-to-steal-sensitive-data-through-atlassians-ai-agent-rovo/\">Hidden text in a PDF is enough to steal sensitive data through Atlassian&#039;s AI agent Rovo</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-10T11:10:53.101907+00:00"
+  },
+  {
+    "id": "cd39eff7760c7540",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Meta returns to open models with Zuckerberg's plan to out-copy China and sell compute by auction",
+    "url": "https://the-decoder.com/meta-returns-to-open-models-with-zuckerbergs-plan-to-out-copy-china-and-sell-compute-by-auction/",
+    "published": "2026-08-10T13:50:19+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/meta_AI_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Meta has released Muse Glimmer, the first open model from its new Superintelligence Labs. It's a 30B agent model that runs on consumer hardware once the weights are compressed, needing less than 20 GB of memory. In an accompanying essay, Mark Zuckerberg mounts an aggressive defense of distilling other labs' models and calls for fewer restrictions on US labs, a direct counterpunch at OpenAI and Anthropic. An open-weight version of Muse Spark 1.2 should follow soon, according to the Wall Street Journal.</p>\n<p>The article <a href=\"https://the-decoder.com/meta-returns-to-open-models-with-zuckerbergs-plan-to-out-copy-china-and-sell-compute-by-auction/\">Meta returns to open models with Zuckerberg&#039;s plan to out-copy China and sell compute by auction</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-10T16:56:54.514989+00:00"
+  },
+  {
+    "id": "8adc28b2d84f1724",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Told to book a gym class, an AI agent hacked the site instead to move its user up the waitlist",
+    "url": "https://the-decoder.com/told-to-book-a-gym-class-an-ai-agent-hacked-the-site-instead-to-move-its-user-up-the-waitlist/",
+    "published": "2026-08-10T13:21:49+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/Australia-Gym-Hack-OpenClaw.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        An Australian user just wanted a spot in a class. His AI agent found a security hole instead and exploited it.</p>\n<p>The article <a href=\"https://the-decoder.com/told-to-book-a-gym-class-an-ai-agent-hacked-the-site-instead-to-move-its-user-up-the-waitlist/\">Told to book a gym class, an AI agent hacked the site instead to move its user up the waitlist</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-10T16:56:54.514989+00:00"
   }
 ]
