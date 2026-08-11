@@ -1,0 +1,23 @@
+{
+  "slug": "mistral-regional-inference-european-compute",
+  "title": "Mistral launches EU/US regional inference choice and a European compute coalition",
+  "status": "published",
+  "first_seen": "2026-08-11",
+  "published_at": "2026-08-11",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://mistral.ai/news/regional-inference-open-models-new-compute/",
+    "https://venturebeat.com/infrastructure/mistral-ai-wants-to-build-1-gigawatt-of-european-compute-by-2030-and-lock-in-customers-now"
+  ],
+  "follows": null,
+  "reason": "Published: Tier-0 primary (Mistral's own post) plus independent Tier-2 corroboration (VentureBeat) for the capacity/business claims, no discrepancies found. dedup-check returned zero matches, standalone story.",
+  "watch": [
+    "Whether the 200MW-by-end-2027 and 1GW-by-end-2030 European compute targets are met or revised"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2027-12-31",
+  "notes": [
+    "2026-08-11 c1: surfaced during cycle 1's Tier-0 sweep, carried untriaged into cycle 2.",
+    "2026-08-11 c2: dedup-check clean; verified via Mistral's own post plus independent VentureBeat corroboration of the capacity figures; no dispute found. Published EN + TR, editor gate passed both languages. open_obligation set because the compute-capacity build-out is a forward-looking, unfulfilled commitment worth checking against the 2027 milestone."
+  ]
+}
