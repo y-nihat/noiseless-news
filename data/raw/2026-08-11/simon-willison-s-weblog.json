@@ -1,0 +1,12 @@
+[
+  {
+    "id": "4d017e94e1958835",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Introducing Muse Glimmer",
+    "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/",
+    "published": "2026-08-10T23:56:03+00:00",
+    "summary": "<p><strong><a href=\"https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model\">Introducing Muse Glimmer</a></strong></p>\nMeta are back in the open weights game! Muse Glimmer is a brand new 30B model under a clean Apache 2.0 license (a step up from the janky Llama licenses of old).</p>\n<p>They claim to have optimized it for exactly the kind of things I'm looking for in a local model:</p>\n<blockquote>\n<ul>\n<li><strong>End-to-end Agentic Task Completion.</strong> Muse Glimmer achieves strong success rates on full-task benchmarks including DeepSearch QA, MCP-Atlas, 𝛕-Bench and SWE-Bench, which measure its ability to work within scaffolds, write and debug code, and resolve multi-turn requests from start to finish.</li>\n<li><strong>Reliable Tool Use.</strong> The model handles a wide range of function calls, invoking tools with precise schemas throughout extended workflows.</li>\n<li><strong>Multi-Step Reasoning.</strong> Muse Glimmer chains reasoning over long horizons, sustaining coherent plans across complex, extended workflows. [...]</li>\n</ul>\n</blockquote>\n<p>Here's <a href=\"https://gist.github.com/simonw/f20d4cd0ea7596990f7910ead616493e\">a pelican</a> which I generated using LM Studio's <a href=\"https://lmstudio.ai/models/muse-glimmer\">18.16 GB version of the model</a>:</p>\n<p><img alt=\"All the pieces are there but they are pretty jumbled together.\" src=\"https://static.simonwillison.net/static/2026/glimmer-pelican.png\" /></p>\n<p>I also tried it out with my <a href=\"https://github.com/simonw/llm-coding-agent\">llm-coding-agent</a> plugin, running against a fresh checkout of Datasette with the prompt:</p>\n<blockquote>\n<p><code>how does auth work?</code></p>\n</blockquote>\n<p><a href=\"https://gist.github.com/simonw/3623676275da1a6078b2500dcc78116f#response-24\">Here's the response</a>, at the end of a long transcript showing all of the tool calls it made to explore the codebase. I ran this using <code>llm-lmstudio</code> with <a href=\"https://github.com/ag…",
+    "fetched_at": "2026-08-11T00:05:47.377661+00:00"
+  }
+]
