@@ -148,5 +148,125 @@
     "published": "2026-08-11T00:51:12+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>These numbers were captured during a real feature implementation task in Next.js and Nest.js (adding a theme switching system across components). The structural predictability of UI/state refactoring is likely why DFlash hit such a high draft acceptance rate (~97%).</p> <p>Here is a quick log analysis and performance summary running Muse-Glimmer-30B (UD-<br /> Q6_K_XL) paired with DFlash (Speculative Decoding) via llama.cpp (llama-server + single RTX 5090).</p> <p>-ngl 99 -c 200000 --host <a href=\"http://0.0.0.0\">0.0.0.0</a> --port 8080 --timeout 600 --cache-reuse 256 --parallel 1 --flash-attn on --spec-type draft-dflash --spec-draft-n-max 16 --spec-draft-p-min 0.7 --spec-draft-ngl 99 --cache-type-k q8_0 --cache-type-v q8_0 --no-webui --load-mode none --cache-ram 12192 --temperature 0.8 --top-k 30 --top-p 0.95 --min-p 0.05 --repeat-penalty 1.1 --repeat-last-n 64 --reasoning on --chat-template-kwargs {&quot;enable_thinking&quot;:true}</p> <p>Compared to Qwen 3.6 27B: No Chinese language-mixing bugs, no overthinking loops, and concise responses. Its lighter memory footprint at Q6 also freed up more VRAM/RAM for a much larger context size.</p> <table><thead> <tr> <th align=\"left\"><strong>Metric</strong></th> <th align=\"left\"><strong>Measured Value</strong></th> <th align=\"left\"><strong>Notes</strong></th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>Generation Speed (Peak)</strong></td> <td align=\"left\"><strong>100 – 287 tokens/sec</strong></td> <td align=\"left\">Average ~173 t/s across all tasks; ideal for IDE completion</td> </tr> <tr> <td align=\"left\"><strong>Prompt Processing (Short)</strong></td> <td align=\"left\"><strong>1,000 – 2,100 t/s</strong></td> <td align=\"left\">~100–1,000 tokens evaluated in 0.1s – 0.5s</td> </tr> <tr> <td align=\"left\"><strong>Prompt Processing (Long)</strong></td> <td align=\"left\"><strong>2,654 tokens/sec</strong></td> <td align=\"left\">14.3k tokens evaluated in <strong>~5.35 seconds</strong></td> </…",
     "fetched_at": "2026-08-11T10:52:16.594718+00:00"
+  },
+  {
+    "id": "f71b6d2281e73302",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Introducing Unsloth Desktop app",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlj87v/introducing_unsloth_desktop_app/",
+    "published": "2026-08-11T14:36:02+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlj87v/introducing_unsloth_desktop_app/\"> <img alt=\"Introducing Unsloth Desktop app\" src=\"https://external-preview.redd.it/Z3J5Zm50ZWRicmloMTYBeDWCK4xeu5RSagED4X3V45DmVqtj8jdzgTMEyWCB.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=358f4006aab83cdaa7ec385a75d9ce47b4647baa\" title=\"Introducing Unsloth Desktop app\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hi LocalLlama, we're super excited to release Unsloth Desktop today! 🦥<br /> It's the first desktop app that enables you to run and train models locally.</p> <p>Open-source. Available on Mac, Windows, and Linux</p> <ul> <li>Supports MLX, diffusion image/video models, audio models, and GGUF</li> <li>You can run MiniMax-H3, Muse Glimmer, soon Qwen 3.8 etc</li> <li>Connect Claude Code and Codex to local LLMs</li> <li>50% more accurate with self-healing tool calls and sandboxed code execution</li> <li>Supports CPU and multi-GPU setups across NVIDIA, AMD, Intel, and Mac</li> <li>Train models <strong>2× faster</strong> while using <strong>70% less VRAM</strong></li> <li>Includes private web search, deep research, RAG, MCP, and exports (NVFP4, GGUF)</li> <li>Use Unsloth’s OpenAI-compatible API with OpenAI and Anthropic cloud models</li> <li>Securely deploy LLMs remotely and access them anywhere via Cloudflare HTTPS</li> </ul> <p>We do not collect any telemetry or data.</p> <p>Unsloth Desktop is now available on <a href=\"http://unsloth.ai/\">unsloth.ai</a> and GitHub.</p> <ul> <li>GitHub: <a href=\"https://github.com/unslothai/unsloth\">https://github.com/unslothai/unsloth</a></li> <li>Blog &amp; Guide: <a href=\"https://unsloth.ai/docs/desktop\">https://unsloth.ai/docs/desktop</a></li> </ul> <p>Thanks for the support as always and we're here to answer any questions! 💗</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/danielhanchen\"> /u/danielhanchen </a> <br /> <span><a href=\"https://v.redd.it/i8b4n5ddbrih1\">[l…",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "5af527496b9d90db",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlh9fg/nvidianvidianemotron35lightning30ba3bbf16_hugging/",
+    "published": "2026-08-11T13:19:16+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlh9fg/nvidianvidianemotron35lightning30ba3bbf16_hugging/\"> <img alt=\"nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 · Hugging Face\" src=\"https://external-preview.redd.it/dc2AVPC-egdMJjqMDzvWUmXYzGoOs7Vtz8RIlSWDrEA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c76a5d620837bee4d47ba0a7d68792b4f69cd658\" title=\"nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 · Hugging Face\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/coder543\"> /u/coder543 </a> <br /> <span><a href=\"https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlh9fg/nvidianvidianemotron35lightning30ba3bbf16_hugging/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "a8b1d1c6631a28e0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Encrypted reasoning from ClosedAI et al 100% recoverable",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vllbjh/encrypted_reasoning_from_closedai_et_al_100/",
+    "published": "2026-08-11T15:52:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Interesting examples in the link</p> <p>Paper here: <a href=\"https://arxiv.org/abs/2608.09867\">https://arxiv.org/abs/2608.09867</a></p> <p>This is your prompt to go out and give us 10mil rows of Opus 5 traces on hf before they fix this workaround</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dany0\"> /u/Dany0 </a> <br /> <span><a href=\"https://stolen-thoughts.com/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vllbjh/encrypted_reasoning_from_closedai_et_al_100/\">[comments]</a></span>",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "9fd261edf546eff7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The small open weight models are scarier in AI development",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlfyn4/the_small_open_weight_models_are_scarier_in_ai/",
+    "published": "2026-08-11T12:23:56+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Imagine if your everyday laptop could run an AI model smart enough to take care of 90% of your work—totally private, lightning fast, and completely free of monthly fees. That is the exact tipping point of history where the AI bubble bursts completely.</p> <p>I bet this is the nightmare for OpenAI and Anthropic. Not everybody has resources to host big open weight models, but everybody can host small ones like Qwen 3.6.</p> <p>Are we reaching there soon 🔜 </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Informal-Trouble2183\"> /u/Informal-Trouble2183 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlfyn4/the_small_open_weight_models_are_scarier_in_ai/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlfyn4/the_small_open_weight_models_are_scarier_in_ai/\">[comments]</a></span>",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "cd5951b7a2a7dd59",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "We even got a fgn manifesto!! Meta is on a run!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlemgr/we_even_got_a_fgn_manifesto_meta_is_on_a_run/",
+    "published": "2026-08-11T11:19:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlemgr/we_even_got_a_fgn_manifesto_meta_is_on_a_run/\"> <img alt=\"We even got a fgn manifesto!! Meta is on a run!\" src=\"https://external-preview.redd.it/dywf8cQP_7wsiEnac1YYP1TvJmn_73MvakYvULV63yo.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=98a9fb3170d409c0000a69d8a3202863e2871b55\" title=\"We even got a fgn manifesto!! Meta is on a run!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Zuck argues for releasing more open-weight models and invites governments to work with AI makers to test safety..who's I have yet to figure. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/uhuge\"> /u/uhuge </a> <br /> <span><a href=\"https://about.fb.com/news/2026/08/the-future-is-for-everyone/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlemgr/we_even_got_a_fgn_manifesto_meta_is_on_a_run/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "c3bd39c18f1e036e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I built a weird, low-power llama.cpp server using an Intel N100 + RTX 5060Ti",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vljtv2/i_built_a_weird_lowpower_llamacpp_server_using_an/",
+    "published": "2026-08-11T14:58:36+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vljtv2/i_built_a_weird_lowpower_llamacpp_server_using_an/\"> <img alt=\"I built a weird, low-power llama.cpp server using an Intel N100 + RTX 5060Ti\" src=\"https://preview.redd.it/txkvu6dafrih1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=eb84a82ab2a96c710e680fe7e0581f218dcd074a\" title=\"I built a weird, low-power llama.cpp server using an Intel N100 + RTX 5060Ti\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Everything started with the sudden death of my old ASRock J1900. While looking for the perfect ITX replacement, I stumbled upon the Chinese CW-NAS-ADLN-K motherboard, which looked perfect on paper: Intel N100, DDR5, 6x SATA, 2x NVMe. The extra power allowed me to experiment more seriously with Docker and start self-hosting more services.</p> <p>My AI journey on this server began with Immich's Machine Learning tasks, where the iGPU performed flawlessly using OpenVINO to process my entire media library.</p> <p>In parallel, my first experience with LLMs was on an MSI GS65 laptop with a GTX 1070 (8GB). Like many of us, running what is now the old Llama 3 felt like magic back then, even if, to be honest, it wasn't particularly useful for practical tasks. From that point on, I kept testing every new release up to the present day, where I've started incorporating Qwen 3.5 and Gemma 4 into my daily workflow.</p> <p>That's when the need to &quot;take the leap&quot; arose. My inference sessions were getting longer and more frequent, and I wasn't comfortable keeping my laptop's GPU hovering around 90°C with the risk of breaking my primary machine. Then came the big question: which GPU is right for me? I initially looked for a second-hand RTX 3060 12GB, but I felt those 12GB of VRAM would leave me right on the edge of running models that are actually worth using.</p> <p>By chance, while browsing my usual hardware retailer, I spotted a refurbished ASUS RTX 5060 Ti for €450 and i…",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "3aa299ba07754824",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I put Gemma 4 E4B and E2B into an e-reader so I can ask my weird questions and share my thoughts in private directly in app.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlicb0/i_put_gemma_4_e4b_and_e2b_into_an_ereader_so_i/",
+    "published": "2026-08-11T14:02:34+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlicb0/i_put_gemma_4_e4b_and_e2b_into_an_ereader_so_i/\"> <img alt=\"I put Gemma 4 E4B and E2B into an e-reader so I can ask my weird questions and share my thoughts in private directly in app.\" src=\"https://preview.redd.it/h18uq6ks3rih1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=4e6c8ad4c7617a7cb397cdca7769781d40be4dbf\" title=\"I put Gemma 4 E4B and E2B into an e-reader so I can ask my weird questions and share my thoughts in private directly in app.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Here's how it works in the app:</p> <ul> <li><strong>Framework:</strong> Runs on LiteRT-LM (like Google's AI Edge).</li> <li><strong>Models:</strong> Downloads either the E2B (~2.5 GB) or E4B (~3.6 GB) INT4 quantized models directly from ungated litert-community repos without API keys, tokens, or accounts.</li> <li><strong>Execution &amp; Memory:</strong> Defaults to GPU execution with a CPU fallback. To preserve RAM, the model only initializes into memory while the AI chat UI is active and unloads when closed.</li> <li><strong>Context Pipeline:</strong> Book's metadata and current passage position is automatically injected so it provides accurate answers without user prompt engineering.</li> <li><strong>Features:</strong> Includes a Deep Think toggle (trades speed for context depth), a Spoilers toggle to prevent plot leaks in story books and automatic response language matching based on the selection.</li> <li><strong>Other stuff:</strong> You can save responses and add them to the note &amp; highlight system. </li> </ul> <p>The app is not just AI, it's a full-featured e-reader. More details here: <a href=\"https://gardenreads.app/\">https://gardenreads.app/</a></p> <p>I'd love your feedback on this!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Boopity_Boob\"> /u/Boopity_Boob </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1v…",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "acc1644d818c59f6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vllhz2/nvidianvidianemotron35lightning30ba3bbf16/",
+    "published": "2026-08-11T15:58:47+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vllhz2/nvidianvidianemotron35lightning30ba3bbf16/\"> <img alt=\"nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16\" src=\"https://external-preview.redd.it/dc2AVPC-egdMJjqMDzvWUmXYzGoOs7Vtz8RIlSWDrEA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c76a5d620837bee4d47ba0a7d68792b4f69cd658\" title=\"nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TheRealMasonMac\"> /u/TheRealMasonMac </a> <br /> <span><a href=\"https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vllhz2/nvidianvidianemotron35lightning30ba3bbf16/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "d48b91531b871da3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek-V4-Flash-0731 (284B MoE) at 75 tok/s on 2× DGX Spark — full recipe, 11 gotchas, reboot-proof cluster, Codex CLI integration",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlifge/deepseekv4flash0731_284b_moe_at_75_toks_on_2_dgx/",
+    "published": "2026-08-11T14:06:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Spent two nights getting <code>deepseek-ai/DeepSeek-V4-Flash-0731</code> (284B MoE, 13B active, native FP4/FP8, 1M context) running production-grade on two DGX Sparks connected by one QSFP DAC cable. Everything — scripts, tuning data, raw benchmarks — is in the repo: <a href=\"https://github.com/raullenchai/twinspark\"><strong>https://github.com/raullenchai/twinspark</strong></a></p> <p><strong>Headline numbers</strong> (TP=2 over RoCE, vLLM 0.25 + DSpark speculative decoding + NVFP4 MLA KV cache):</p> <ul> <li><strong>74.8 tok/s single-stream</strong> on real coding prompts (spec decode = 2.74× over the 27.3 tok/s bandwidth floor)</li> <li>~1.7–1.9k tok/s prefill, 42 s TTFT on a 64k prompt, decode holds 50 ms/tok at long context</li> <li>KV capacity 2.74M tokens → 1M context actually usable</li> <li>Dual power-cycle → back to serving in ~9 min, zero manual steps (self-healing containers, actually tested by rebooting both nodes)</li> </ul> <p><strong>Things that surprised us</strong> (full gotcha table in the README):</p> <ol> <li><strong>The single QSFP cage is wired to TWO ConnectX-7 controllers.</strong> One 400G cable lights up 2× 200G links — and each controller sits on PCIe Gen5 <strong>x4</strong>, so per-rail RDMA caps at ~109 Gb/s. Give NCCL both rails (<code>NCCL_IB_HCA=rocep1s0f0,roceP2p1s0f0</code>) → 21.7 GB/s bus bandwidth.</li> <li><strong>Ray's memory monitor kills your workers on unified memory.</strong> vLLM's &quot;GPU&quot; allocation counts as host RAM on GB10; Ray OOM-kills the worker while 117 GiB sits free. <code>RAY_memory_monitor_refresh_ms=0</code>.</li> <li><strong>Garbled chat output with random Chinese = missing DSpark env vars</strong>, not a broken model. <code>VLLM_DSPARK_GPU_REJECTED_CONTEXT_MASK=1</code> + <code>VLLM_USE_BREAKABLE_CUDAGRAPH=0</code>. (<code>/v1/completions</code> works fine the whole time, which makes it extra confusing.)</li> <li><strong>Speculative decoding inverts under concurrenc…",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "86ee0b33e2cda395",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash 0731 at 27+ t/s decode on Strix Halo — Vulkan + DSpark full guide",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlmh0b/deepseek_v4_flash_0731_at_27_ts_decode_on_strix/",
+    "published": "2026-08-11T16:33:30+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Been benchmarking DSv4 Flash 0731 on a Flow Z13 (Ryzen AI MAX+ 395, Radeon 8060S / gfx1151, 128GB LPDDR5X) for the past week. Figured I'd share what actually works and what doesn't — there are a lot of gotchas on this hardware.</p> <h2>Results</h2> <table><thead> <tr> <th>Metric</th> <th>Value</th> </tr> </thead><tbody> <tr> <td>Decode (sustained, 4096 tok)</td> <td><strong>26.76 t/s</strong></td> </tr> <tr> <td>Decode (peak 3s window)</td> <td><strong>35.27 t/s</strong></td> </tr> <tr> <td>Prefill</td> <td><strong>236 t/s</strong> (2209-token prompt)</td> </tr> <tr> <td>DSpark acceptance</td> <td>0.586, mean accepted len 3.93</td> </tr> <tr> <td>Context</td> <td>131,072 (q8_0 KV)</td> </tr> <tr> <td>GPU util</td> <td>~92%, CPU ~1%</td> </tr> </tbody></table> <h2>Cross-platform comparison</h2> <p>Both Strix Halo and DGX Spark are unified-memory APUs with similar LPDDR5X bandwidth (~256 GB/s vs 273 GB/s).</p> <table><thead> <tr> <th>Platform</th> <th>Engine</th> <th>Spec</th> <th>Decode @12K</th> <th>Prefill @2K</th> </tr> </thead><tbody> <tr> <td>Strix Halo</td> <td>ds4 (upstream)</td> <td>none</td> <td>15.7 t/s</td> <td>232 t/s</td> </tr> <tr> <td>DGX Spark (GB10)</td> <td>ds4 (upstream)</td> <td>none</td> <td>14.2 t/s</td> <td>392 t/s</td> </tr> <tr> <td><strong>Strix Halo</strong></td> <td><strong>llama.cpp Vulkan v0.6.1</strong></td> <td><strong>DSpark</strong></td> <td><strong>26.76 t/s</strong></td> <td><strong>~236 t/s</strong></td> </tr> <tr> <td><strong>DGX Spark</strong></td> <td><strong>Entrpi/ds4 fork v0.5.6</strong></td> <td><strong>DSpark</strong></td> <td><strong>27.3 t/s</strong></td> <td><strong>~960 t/s</strong></td> </tr> </tbody></table> <p>Raw decode without speculative decoding is nearly identical (15.7 vs 14.2) — both bandwidth-bound at similar GB/s. With DSpark on both platforms, decode is again nearly tied (26.76 vs 27.3 t/s). The DSpark boost is larger on Strix Halo (1.70× vs ~1.34×) because the ds4 fork's…",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "09445b5a3d6f15f0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "CJK Manga/Manhwa/Manhua 150M OCR model (hayai-ocr-v2) outperforming PaddleOCR-VL-For-Manga",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlhjb3/cjk_mangamanhwamanhua_150m_ocr_model_hayaiocrv2/",
+    "published": "2026-08-11T13:30:31+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlhjb3/cjk_mangamanhwamanhua_150m_ocr_model_hayaiocrv2/\"> <img alt=\"CJK Manga/Manhwa/Manhua 150M OCR model (hayai-ocr-v2) outperforming PaddleOCR-VL-For-Manga\" src=\"https://preview.redd.it/o7794vsszqih1.png?width=140&amp;height=100&amp;auto=webp&amp;s=ca29b0a4bab1f2abfe506ae40443d4b7a9441599\" title=\"CJK Manga/Manhwa/Manhua 150M OCR model (hayai-ocr-v2) outperforming PaddleOCR-VL-For-Manga\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/o7794vsszqih1.png?width=687&amp;format=png&amp;auto=webp&amp;s=3b217db46fb51c517e103d12e2e2ca9813b7774f\">https://preview.redd.it/o7794vsszqih1.png?width=687&amp;format=png&amp;auto=webp&amp;s=3b217db46fb51c517e103d12e2e2ca9813b7774f</a></p> <p><a href=\"https://preview.redd.it/ci1as7nmzqih1.png?width=800&amp;format=png&amp;auto=webp&amp;s=811e0b30de0f76ee548ef7701359674d8f8bf32a\">https://preview.redd.it/ci1as7nmzqih1.png?width=800&amp;format=png&amp;auto=webp&amp;s=811e0b30de0f76ee548ef7701359674d8f8bf32a</a></p> <p>I trained a custom model with a custom decoder and siglip2-naflex vision encoder that performs better than PaddleOCR-VL-For-Manga while being more than 10x faster and smaller. Please try it out at <a href=\"https://huggingface.co/JustANormalTinkerer/hayai-ocr-v2\">hayai-ocr-v2</a> and let me know if it's any good for your particular task. I will integrate this model soon in the hayai-ocr python library.</p> <p>NOTE: Finetune and Pretrain refers to different eval datasets.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/KingDutchIsBad455\"> /u/KingDutchIsBad455 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlhjb3/cjk_mangamanhwamanhua_150m_ocr_model_hayaiocrv2/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlhjb3/cjk_mangamanhwamanhua_150m_ocr_model_hayaiocrv2/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "390c279b987beb9c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What can us 8 GB VRAM poors do?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlc4wn/what_can_us_8_gb_vram_poors_do/",
+    "published": "2026-08-11T08:59:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I want to hook up a local model to Cline, but it seems the best model is still just Qwen 3.5 9B. <em>Please</em> can we have a Qwen 3.8 9B that gets close to Qwen 3.6 27B?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Aggravating-Push-207\"> /u/Aggravating-Push-207 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlc4wn/what_can_us_8_gb_vram_poors_do/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlc4wn/what_can_us_8_gb_vram_poors_do/\">[comments]</a></span>",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
   }
 ]

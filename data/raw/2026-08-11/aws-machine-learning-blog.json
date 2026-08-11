@@ -1,0 +1,42 @@
+[
+  {
+    "id": "3e0620feedda5f9b",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How ONESTRUCTION built the Ishigaki-IDS foundation model with AWS GenAIIC",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-onestruction-built-the-ishigaki-ids-foundation-model-with-aws-genaiic/",
+    "published": "2026-08-11T16:14:33+00:00",
+    "summary": "ONESTRUCTION, with technical advisory from the AWS Generative AI Innovation Center, built Ishigaki-IDS, a foundation model specialized for construction and BIM workflows. This architectural case study shows how they combined synthetic data, a three-stage training pipeline, and verifiable rewards on Amazon EC2 to build a domain model in a data-scarce field.",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "b566c1759ca6e56c",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How Pixieset achieved 35% AI feature adoption by solving the right problem with Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-pixieset-achieved-35-ai-feature-adoption-by-solving-the-right-problem-with-amazon-bedrock/",
+    "published": "2026-08-11T16:11:15+00:00",
+    "summary": "Photographers are among the most skeptical audiences for generative AI. Learn how Pixieset used Amazon Bedrock to launch an AI-generated alt text feature to millions of users in four months, reaching 35% adoption by automating the tedious image SEO work photographers avoid, without touching the creative craft they take pride in.",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "c002b743c6fb2412",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "First Orion accelerates QA automation using Amazon Nova Act",
+    "url": "https://aws.amazon.com/blogs/machine-learning/first-orion-accelerates-qa-automation-using-amazon-nova-act/",
+    "published": "2026-08-11T16:09:06+00:00",
+    "summary": "Learn how First Orion, a branded communications company, shifted from brittle script-based UI testing to AI-driven QA automation with Amazon Nova Act. By describing tests in plain English instead of maintaining selector-based code, they cut QA cycle times, freed engineering capacity, and caught regressions earlier.",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  },
+  {
+    "id": "bb0525b3df19b290",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Deploying Anthropic Claude apps gateway for AWS for enterprise workloads",
+    "url": "https://aws.amazon.com/blogs/machine-learning/deploying-anthropic-claude-apps-gateway-for-aws-for-enterprise-workloads/",
+    "published": "2026-08-11T15:59:22+00:00",
+    "summary": "Claude apps gateway is a self-hosted governance layer between Claude Code and Claude Desktop and Amazon Bedrock or Claude Platform on AWS. This post presents a production reference deployment covering end-to-end architecture, enterprise deployment patterns, cost, and implementation resources.",
+    "fetched_at": "2026-08-11T17:00:27.639333+00:00"
+  }
+]
