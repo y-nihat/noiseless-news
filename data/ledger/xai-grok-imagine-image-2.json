@@ -1,0 +1,21 @@
+{
+  "slug": "xai-grok-imagine-image-2",
+  "title": "xAI ships Grok Imagine Image 2.0, a new image-editing mode",
+  "status": "published",
+  "first_seen": "2026-08-11",
+  "published_at": "2026-08-11",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://x.ai/news/grok-imagine-image-2",
+    "https://the-decoder.com/xais-imagine-image-2-0-lands-just-behind-openais-gpt-image-2-in-arena-benchmarks/"
+  ],
+  "follows": null,
+  "reason": "Published: xAI's own post (Tier 0, recovered via cache -- direct fetch 403-blocked, known blocker) confirms the release and feature set, independently corroborated by The Decoder. dedup-check returned zero matches, standalone story. LMArena leaderboard-ranking claim (#2 behind OpenAI's gpt-image-2) deliberately excluded from the article -- would need a live, timestamped fetch under verification.md §5 that wasn't completed in this cycle's window.",
+  "watch": [
+    "Whether xAI ships API access for Imagine Image 2.0 and what it costs"
+  ],
+  "notes": [
+    "2026-08-11 c1: surfaced during cycle 1's Tier-0 sweep (site-scoped search, x.ai fetch blocked), carried untriaged into cycle 2 and cycle 3.",
+    "2026-08-11 c3: dedup-check clean; verified via xAI's own post (cache-recovered) plus independent The Decoder corroboration; adversarial pass found no disputes or denials, confirmed this is a genuinely new release (not a relabel of the 2025 Grok Imagine or the Jan 2026 Grok Imagine API). Published EN + TR, editor gate passed both languages. LMArena ranking figures reported by The Decoder/TestingCatalog were left out of the article to respect the live-fetch rule for third-party numeric leaderboard citations."
+  ]
+}

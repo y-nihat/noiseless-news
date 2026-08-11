@@ -1,0 +1,50 @@
+{
+    "slug": "xai-grok-imagine-image-2",
+    "checked_at": "2026-08-11T23:43:00+00:00",
+    "method": "Tier-0 primary source (x.ai/news/grok-imagine-image-2) blocked for direct fetch (403, known blocker); recovered via search-engine cache/snippets and cross-checked verbatim against an independent Tier-2 outlet (The Decoder), per policy/verification.md §1. Announcement-type claims about xAI's own product are Tier-0-sufficient once the primary text is confirmed via cache; feature-list details independently corroborated by The Decoder rather than resting on xAI's framing alone.",
+    "origin_items": [
+        "Surfaced during cycle 1's Tier-0 sweep (site-scoped search for x.ai, known 403 blocker) as 'Grok Imagine Image 2.0 (Aug 7) -- corroborated by etvbharat.com, tbreak.com, x.ai/news/grok-imagine-api live'; carried untriaged into cycle 2, opened for verification this cycle."
+    ],
+    "claims": [
+        {
+            "text": "xAI released Grok Imagine Image 2.0 as a new Quality Mode on grok.com/imagine and its iOS and Android apps, around 7-8 August 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "xAI's own post (x.ai/news/grok-imagine-image-2) states this directly, recovered via cache since direct fetch is 403-blocked; independently corroborated by The Decoder and TestingCatalog, both dating the launch to Aug 7-8, 2026. Confirmed distinct from the earlier 'Grok Imagine' (2025) and the separate 'Grok Imagine API' (Jan 2026) products -- not a relabeling of old news.",
+            "evidence": [
+                "https://x.ai/news/grok-imagine-image-2",
+                "https://the-decoder.com/xais-imagine-image-2-0-lands-just-behind-openais-gpt-image-2-in-arena-benchmarks/"
+            ]
+        },
+        {
+            "text": "The release adds region-based ('magic wand') edits, subject segmentation, background removal with transparent export, multi-reference editing from up to five input images, layout-aware resizing across aspect ratios, and preset workflow templates",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Feature list matches xAI's own post and is independently corroborated by both The Decoder and TestingCatalog descriptions.",
+            "evidence": [
+                "https://x.ai/news/grok-imagine-image-2",
+                "https://the-decoder.com/xais-imagine-image-2-0-lands-just-behind-openais-gpt-image-2-in-arena-benchmarks/"
+            ]
+        },
+        {
+            "text": "API access for Imagine Image 2.0 is described by xAI as 'coming soon', with no date or pricing disclosed",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Explicitly stated on xAI's own post and echoed by The Decoder's independent write-up.",
+            "evidence": [
+                "https://x.ai/news/grok-imagine-image-2"
+            ]
+        },
+        {
+            "text": "xAI describes the model as delivering higher fidelity across photography, design and illustration use cases",
+            "type": "capability",
+            "verdict": "vendor-claim",
+            "reasoning": "Subjective marketing language sourced only to xAI; no independent evaluation found. Labeled vendor-claim, kept out of the headline per style.md Gate 1.",
+            "evidence": [
+                "https://x.ai/news/grok-imagine-image-2"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: PUBLISHABLE. dedup-check returned zero matches (standalone). No corrections, denials or contradicting reports found for any claim. A specific LMArena leaderboard ranking claim (#2 behind OpenAI's gpt-image-2, with Elo figures) was reported by The Decoder and TestingCatalog but deliberately EXCLUDED from the published article: it is a third-party numeric/leaderboard citation subject to the verification.md §5 live-fetch rule, and a live, timestamped fetch of the LMArena leaderboard was not completed within this cycle's deadline. Several SEO/affiliate content-marketing sites recycling the same press release (techspecsmart.com, orcarouter.ai, basenor.com, bleap.finance, ascendants.in, omniart.studio, morphic.com, releasebot.io) were identified during falsification and explicitly NOT used as evidence.",
+    "gaps_closed_from_watching_state": []
+}
