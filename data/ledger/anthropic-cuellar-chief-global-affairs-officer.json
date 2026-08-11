@@ -1,0 +1,19 @@
+{
+  "slug": "anthropic-cuellar-chief-global-affairs-officer",
+  "title": "Anthropic names Mariano-Florentino Cuéllar its first Chief Global Affairs Officer",
+  "status": "published",
+  "first_seen": "2026-08-06",
+  "published_at": "2026-08-11",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/news/tino-cuellar",
+    "https://www.cnbc.com/2026/08/04/anthropic-names-global-affairs-chief-as-trump-tensions-persist.html"
+  ],
+  "follows": null,
+  "reason": "Published: Tier-0 primary (Anthropic's own post) plus independent Tier-2 corroboration (CNBC), no discrepancies, no disputing coverage found. dedup-check returned zero matches, standalone story.",
+  "watch": [],
+  "notes": [
+    "2026-08-06 c?: surfaced during Tier-0 sweep, carried untriaged across several nightly reports as a clean single-source-sufficient announcement candidate.",
+    "2026-08-11 c2: dedup-check clean; verified via Anthropic's own post plus independent CNBC corroboration; no dispute found in adversarial search. Published EN + TR, editor gate passed both languages."
+  ]
+}

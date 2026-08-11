@@ -1,0 +1,41 @@
+{
+    "slug": "anthropic-cuellar-chief-global-affairs-officer",
+    "checked_at": "2026-08-11T23:20:00+00:00",
+    "method": "Tier-0 primary source (anthropic.com/news) fetched directly and cross-checked against an independent Tier-2 outlet (CNBC) per policy/verification.md §1 (announcement claims are confirmable by a single Tier-0 primary alone); adversarial search run for any dispute or correction.",
+    "origin_items": [
+        "Carried untriaged in prior cycle reports since at least 2026-08-06 as a clean single-source-sufficient announcement candidate; opened for verification this cycle."
+    ],
+    "claims": [
+        {
+            "text": "Anthropic announced on 4 August 2026 that Mariano-Florentino 'Tino' Cuéllar is joining as the company's first Chief Global Affairs Officer, leading policy, strategic international engagement and government relationships, and reporting to Anthropic President Daniela Amodei",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed directly from Anthropic's own news post (Tier 0, sufficient alone for announcement claims) and independently corroborated by CNBC with no discrepancy in title, scope, or reporting line.",
+            "evidence": [
+                "https://www.anthropic.com/news/tino-cuellar",
+                "https://www.cnbc.com/2026/08/04/anthropic-names-global-affairs-chief-as-trump-tensions-persist.html"
+            ]
+        },
+        {
+            "text": "Cuéllar was previously a Justice of the Supreme Court of California and, most recently, president of the Carnegie Endowment for International Peace; he will take a leave of absence from his roles as a professor at Stanford Law School and senior fellow at Stanford's Institute for Human-Centered Artificial Intelligence",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Biographical details consistent across Anthropic's own post and CNBC's independent reporting.",
+            "evidence": [
+                "https://www.anthropic.com/news/tino-cuellar",
+                "https://www.cnbc.com/2026/08/04/anthropic-names-global-affairs-chief-as-trump-tensions-persist.html"
+            ]
+        },
+        {
+            "text": "Cuéllar previously served as a trustee of Anthropic's Long-Term Benefit Trust before joining the company",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Stated directly in Anthropic's own announcement; single Tier-0 source is sufficient for this announcement-type detail.",
+            "evidence": [
+                "https://www.anthropic.com/news/tino-cuellar"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH as confirmed. Adversarial search for 'Cuéllar Anthropic appointment dispute OR criticism OR withdrawn' surfaced no contradicting reports; multiple independent outlets (CNBC, PYMNTS, EdTech Innovation Hub, Harvard Crimson, Business Standard, TechTimes) corroborate the same facts with no discrepancy. dedup-check returned zero matches (exit 0, empty matches array) -- standalone story, not a duplicate.",
+    "gaps_closed_from_watching_state": []
+}
