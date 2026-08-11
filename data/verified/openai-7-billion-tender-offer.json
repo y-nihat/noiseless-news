@@ -1,0 +1,36 @@
+{
+  "slug": "openai-7-billion-tender-offer",
+  "checked_at": "2026-08-11T00:52:00+00:00",
+  "method": "Fresh verifier sub-agent (WebSearch) confirmed the core amount/valuation/buyer-structure facts against Bloomberg and CNBC, checked source independence and prior-tender history. Fresh adversarial falsifier sub-agent, run separately, re-checked CNBC's independence from Bloomberg's framing, checked for disputed figures, a primary source, and any legal/regulatory angle.",
+  "origin_items": [
+    "Surfaced directly in this cycle's fresh ingest (techcrunch-ai.json, 2026-08-11 pull, 'OpenAI reportedly completed a $7 billion employee tender offer' item)."
+  ],
+  "claims": [
+    {
+      "text": "OpenAI completed a $7 billion tender offer on 10 August 2026, buying back shares from current and former employees using its own funds rather than outside investors",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Reported with matching detail by Bloomberg (origin, 'person familiar with the matter') and CNBC (separate byline, 'CNBC confirmed', no citation of Bloomberg found in its own text). Two outlets with independent reporting tracks on OpenAI's finances, neither an explicit relay of the other -- treated as confirmed per the independence rule despite both ultimately relying on unnamed sourcing.",
+      "evidence": ["https://www.bloomberg.com/news/articles/2026-08-10/openai-buys-back-7-billion-of-employee-shares-in-tender-offer", "https://www.cnbc.com/2026/08/10/openai-wraps-7-billion-share-sale-ahead-of-potential-ipo-.html"]
+    },
+    {
+      "text": "The tender priced OpenAI at an $852 billion valuation, unchanged from the valuation set by OpenAI's $122 billion primary funding round that closed in March 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Consistently reported across both outlets and corroborated in secondary aggregation (Forbes, Yahoo Finance); no dispute found on this figure."
+    },
+    {
+      "text": "Neither outlet names an on-record OpenAI source; OpenAI has not issued its own statement confirming the tender",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Both Bloomberg and CNBC rely on unnamed 'people/person familiar with the matter' sourcing; no OpenAI blog post, spokesperson quote, or SEC filing specific to this tender was found by either sub-agent."
+    },
+    {
+      "text": "The deal differs structurally from OpenAI's two prior employee tenders -- $1.5B in November 2024 (SoftBank-led) and $6.6B in October 2025 (600+ employees, ~75 each selling ~$30M, outside investor syndicate) -- because OpenAI itself was the buyer this time",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Historical figures corroborated across both outlets and secondary sources (Yahoo Finance, Sherwood News); the buyback-vs-outside-investor distinction was independently confirmed by both the verifier and falsifier passes."
+    }
+  ],
+  "falsifier_notes": "PASS, no blocking issues. Direct fetch of both Bloomberg and CNBC URLs returned HTTP 403 (paywalled); independence assessment for CNBC vs Bloomberg relies on search-result excerpts of CNBC's own article text ('CNBC confirmed on Monday', no Bloomberg citation found) rather than a full-text read -- noted as good-not-perfect confirmation. No disputed figures, no SEC/regulatory angle, no primary source (filing or OpenAI statement) beyond the two press reports. One low-quality outlet (secondarylink.com, citing a different '$10 billion' figure) surfaced in search but returned no fetchable content and is not corroborated elsewhere -- excluded as noise, not used as evidence."
+}
