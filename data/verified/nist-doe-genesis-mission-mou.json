@@ -1,0 +1,40 @@
+{
+    "slug": "nist-doe-genesis-mission-mou",
+    "checked_at": "2026-08-11T23:14:00+00:00",
+    "method": "Tier-0 primary source (nist.gov) fetched directly and cross-checked against independent Tier-2 corroboration (HPCwire) per policy/verification.md §1; announcement-type claims about the MOU and named initiatives are Tier-0-sufficient.",
+    "origin_items": [
+        "Surfaced during cycle 1's Tier-0 sweep of nist.gov; carried untriaged into cycle 2, opened for verification this cycle."
+    ],
+    "claims": [
+        {
+            "text": "NIST announced on 4 August 2026 that it signed a memorandum of understanding with the Department of Energy's Office of Science to collaborate on AI-accelerated innovation under the White House-led Genesis Mission",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Stated directly on NIST's own news post (Tier 0, sufficient alone) and independently corroborated by HPCwire's own reporting of the same MOU.",
+            "evidence": [
+                "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation",
+                "https://www.hpcwire.com/off-the-wire/nist-joins-does-genesis-mission-to-accelerate-ai-innovation/"
+            ]
+        },
+        {
+            "text": "NIST will execute two initiatives through its Centers for AI in Manufacturing and Critical Infrastructure (a partnership with MITRE): a manufacturing-productivity center including a drone-production project targeting a tenfold scale-up in two years, and a critical-infrastructure cyberthreat-detection center, both structured as two-year sprints",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Initiative names, scope and two-year sprint structure stated directly on NIST's own post; Tier-0-sufficient for this announcement-type detail.",
+            "evidence": [
+                "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation"
+            ]
+        },
+        {
+            "text": "NIST Director Arvind Raman said: 'Our contribution to the Genesis Mission exemplifies NIST's ongoing commitment to advancing U.S. leadership in critical technologies'",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Direct quote attributed to a named official on NIST's own post.",
+            "evidence": [
+                "https://www.nist.gov/news-events/news/2026/08/nist-joins-national-genesis-mission-accelerate-ai-innovation"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: CLEAR TO PUBLISH as confirmed. dedup-check returned zero matches. Checked specifically against the already-published `meta-synaps-genesis-mission` (Meta's SAM3/DINOv3 role in DOE's Berkeley-Lab-led SYNAPS-I sub-project under the same Genesis Mission umbrella) -- treated as a separate standalone story, not a follow-up: the two describe different agencies/initiatives under the same broad program, not a continuation of the same narrower story thread, and a reader of this NIST story does not need the Meta article's specifics to understand it (only brief Genesis Mission context, given in the body). No dispute or correction found.",
+    "gaps_closed_from_watching_state": []
+}
