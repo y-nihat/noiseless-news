@@ -1,0 +1,42 @@
+{
+  "slug": "openai-gpt-5-6-cyber-daybreak-red",
+  "checked_at": "2026-08-11T00:16:00+00:00",
+  "method": "Fresh verifier sub-agent (site-scoped searches, since openai.com blocks direct WebFetch as a known blocker) cross-checked OpenAI's own announcement against TechCrunch, Axios, Neowin, The Decoder, Unite.AI, sqmagazine, eesel AI, and the public NVD/CVE record. Fresh adversarial falsifier sub-agent, run in parallel, checked for overclaiming, the timing tension against the Astra pause, partner-list accuracy and PR-driven framing.",
+  "origin_items": [
+    "Surfaced directly in this cycle's fresh ingest (techcrunch-ai.json, 2026-08-10 item 'As AI-led attacks multiply, OpenAI launches a new cyber model')."
+  ],
+  "claims": [
+    {
+      "text": "On 10 August 2026, OpenAI announced GPT-5.6-Cyber, a model built on GPT-5.6 Sol and released through a new 'Daybreak Red' access tier for authorized offensive-security work, alongside a 'Daybreak Blue' tier for defensive work",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed on OpenAI's own page (via site-scoped search snippets) and independently corroborated with matching detail across TechCrunch, Axios, Neowin, The Decoder.",
+      "evidence": ["https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/", "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/", "https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders"]
+    },
+    {
+      "text": "OpenAI's own internal 'Advanced Cybersecurity Completion Rate' evaluation reports 95% for GPT-5.6-Cyber vs 57.3% for GPT-5.5-Cyber and 1.5-2% for GPT-5.6 Sol; the metric measures response rate, not correctness/effectiveness of the response, and no independent lab has reproduced it",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figures traced only to OpenAI's own materials as relayed by press; verifier found no independent benchmark reproduction. One outlet explicitly characterized the metric as measuring willingness to respond, not capability -- included in the article as an editorial caveat."
+    },
+    {
+      "text": "CVE-2026-15903, a high-severity Chrome V8 out-of-bounds read/write vulnerability, is real, publicly tracked and was fixed by Google; OpenAI's claim that GPT-5.6-Cyber specifically found it (plus a second, chainable vulnerability) is not independently credited by Google",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "The CVE and Google's fix are independently verifiable via NVD/threat-intel trackers -- genuine third-party corroboration that the vulnerability was real. The attribution to GPT-5.6-Cyber specifically is OpenAI's own account only; Google has not credited OpenAI or the model by name. Only one of the two claimed chained vulnerabilities' CVE numbers was independently located."
+    },
+    {
+      "text": "Access to GPT-5.6-Cyber is limited to vetted 'trusted customer partners'; press coverage relaying OpenAI's own materials names partners including Accenture, IBM, CrowdStrike and Cloudflare",
+      "type": "business",
+      "verdict": "vendor-claim",
+      "reasoning": "Falsifier could not independently confirm the canonical partner list directly against OpenAI's own page (403 on direct fetch) and found overlapping but non-identical rosters across secondary sources. No partner company itself confirmed access. Published attributed to OpenAI/press, not stated as independently confirmed."
+    },
+    {
+      "text": "The release follows OpenAI's 7 August 2026 statement that its unreleased Astra model may have crossed the 'Critical' cyber-capability threshold; OpenAI attributes the apparent tension to its Preparedness Framework's High vs Critical distinction, with both GPT-5.6 Sol and GPT-5.6-Cyber self-classified 'High'",
+      "type": "statement",
+      "verdict": "vendor-claim",
+      "reasoning": "Falsifier confirmed this timing tension is real and already noted in trade press (sqmagazine, TheNextWeb), and that OpenAI's own resolution rests entirely on its self-reported classification with no independent audit. No named safety researcher or lab has publicly challenged the release as inconsistent -- avoided overstating this as 'backlash' in the article."
+    }
+  ],
+  "falsifier_notes": "PASS, no blocking issues. Story correctly distinguished from two related but separate published articles (openai-astra-critical-cyber-capabilities, microsoft-mai-cyber-1-flash-launch) -- dedup-check returned two 'strong' matches on shared OpenAI/cyber/model keywords but both are substantively different events (different products, different subjects: risk-flagging vs product launch vs a different vendor's model), justified as standalone rather than a follow-up. Recommended and applied: (a) explicit attribution of all completion-rate benchmark numbers to OpenAI; (b) the Astra-timing tension surfaced with OpenAI's explanation clearly attributed to OpenAI, not stated as settled; (c) partner list attributed to OpenAI/press, not implied as independently confirmed; (d) V8/CVE claim split so the vulnerability's existence is stated as confirmed while GPT-5.6-Cyber's discovery of it is marked vendor-claim."
+}

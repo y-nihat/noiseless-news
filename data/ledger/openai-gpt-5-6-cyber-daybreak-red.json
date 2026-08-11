@@ -1,0 +1,26 @@
+{
+  "slug": "openai-gpt-5-6-cyber-daybreak-red",
+  "title": "OpenAI launches GPT-5.6-Cyber, a more permissive model for authorized offensive-security work",
+  "status": "published",
+  "first_seen": "2026-08-11",
+  "published_at": "2026-08-10",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+    "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/",
+    "https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders",
+    "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-15903"
+  ],
+  "follows": null,
+  "reason": "Published. Dedup-check returned two 'strong' matches (openai-astra-critical-cyber-capabilities 0.75, microsoft-mai-cyber-1-flash-launch 0.75) on shared OpenAI/cyber/model keywords; read both matched articles and judged this a distinct, standalone event -- different product (GPT-5.6-Cyber vs Astra), different subject (a shipping product launch vs a risk-threshold disclosure about an unreleased model), and different vendor context from the Microsoft article. No saga/follow-up link warranted.",
+  "watch": [
+    "Independent (non-OpenAI-sourced) reproduction of the 95%/57.3%/1.5-2% completion-rate benchmark",
+    "Google or another independent party crediting GPT-5.6-Cyber by name for CVE-2026-15903 or the second, still-unlocated chained vulnerability",
+    "Any named partner (Accenture, IBM, CrowdStrike, Cloudflare) itself confirming Daybreak Red access",
+    "Named safety-research or red-team criticism of shipping GPT-5.6-Cyber days after the Astra Critical-threshold disclosure"
+  ],
+  "notes": [
+    "2026-08-11 c4: Opened and published this cycle. Fresh verifier and fresh adversarial falsifier sub-agents ran in parallel (verifier: 7 tool calls; falsifier: 10 tool calls). Falsifier flagged the partner list as not directly confirmable against OpenAI's primary page (403 on direct fetch, only site-scoped search snippets available) -- published attributed to OpenAI/press rather than as independently confirmed. style-gate: openai-gpt-5-6-cyber-daybreak-red EN pass / TR pass (no padding; headline is a falsifiable statement about the launch and access tier, not the vendor-claimed benchmark; TL;DR stands alone)."
+  ]
+}
