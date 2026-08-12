@@ -1,0 +1,19 @@
+{
+  "slug": "eu-transparency-code-signing-reddit-resurface",
+  "title": "EU Code of Practice on Transparency of AI-Generated Content signatory list (Anthropic, OpenAI, Google, Meta, Microsoft, Mistral)",
+  "status": "dropped",
+  "first_seen": "2026-08-12",
+  "source_urls": [
+    "https://digital-strategy.ec.europa.eu/en/news/strong-backing-code-practice-transparency-ai-generated-content",
+    "https://blog.google/company-news/outreach-and-initiatives/public-policy/eu-ai-act-transparency-code-of-practice/"
+  ],
+  "follows": null,
+  "reason": "Triaged from a r/LocalLLaMA post (tier-3, discovery only) claiming Anthropic/OpenAI/Google/Meta/Microsoft/Mistral signed the EU Code of Practice on Transparency of AI-generated Content. dedup-check: zero matches (not a duplicate). Verifier sub-agent confirmed the underlying facts are accurate (distinct from the July-2025 GPAI Code of Practice; ~190 signatories including the named six; EU official page is authoritative) but the signing occurred by end of July 2026 and the Article 50 transparency obligations it supports took effect 2026-08-02 -- roughly 10 days before this Reddit resurfacing. Not fresh news; dropped rather than published as if it happened tonight. Not a candidate for follow-up/in-place-update against any existing article since no prior noiseless-news coverage of this code exists.",
+  "watch": [
+    "A dedicated retrospective/explainer angle on Article 50 enforcement now that it is in force, if a concrete enforcement action or dispute emerges",
+    "Any company that signed the GPAI Code of Practice (July 2025) but not this transparency code, or vice versa, if that divergence becomes newsworthy (e.g. Meta signed this one but not the July 2025 GPAI code)"
+  ],
+  "notes": [
+    "2026-08-12 c5: Considered and dropped as stale. See reason field. No open_obligation (no pending outcome, obligations already in force)."
+  ]
+}
