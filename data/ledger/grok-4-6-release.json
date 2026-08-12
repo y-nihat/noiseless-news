@@ -1,0 +1,22 @@
+{
+  "slug": "grok-4-6-release",
+  "title": "SpaceXAI releases Grok 4.6, tying GPT-5.6 Sol on an independent benchmark score",
+  "status": "published",
+  "first_seen": "2026-08-12",
+  "published_at": "2026-08-12",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://x.ai/news/grok-4-6",
+    "https://artificialanalysis.ai/models/grok-4-6",
+    "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis"
+  ],
+  "follows": "grok-4-5-release",
+  "reason": "Published -- see data/verified/grok-4-6-release.json for full claim-by-claim reasoning.",
+  "watch": [
+    "Independent human-preference arena (LMSYS/Arena.ai) score for Grok 4.6, once published -- all capability figures currently trace to Artificial Analysis only",
+    "Any denial/dispute of the Aug 12 release or figures (none found by the falsifier pass)"
+  ],
+  "notes": [
+    "2026-08-12 c3: Published as a follow-up to grok-4-5-release. Dedup-check strong match (exit 2) against grok-4-5-release and xai-spacexai-rebrand, resolved per verification.md 8 as a new event in the same saga. Verifier + adversarial falsifier both fresh contexts; falsifier recommendation was GO. Style gate: EN pass / TR pass (no cuts needed)."
+  ]
+}

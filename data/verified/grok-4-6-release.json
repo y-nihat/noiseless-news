@@ -1,0 +1,32 @@
+{
+  "slug": "grok-4-6-release",
+  "checked_at": "2026-08-12T23:43:00+00:00",
+  "method": "fresh verifier sub-agent (direct fetch of x.ai + live fetch of Artificial Analysis model/article pages) followed by a fresh adversarial falsifier sub-agent; dedup-check run before opening (strong match on grok-4-5-release and xai-spacexai-rebrand, resolved as follow-up per verification.md 8)",
+  "origin_items": [
+    "Raw ingest 2026-08-12: gnews-ai-model-releases.json, techmeme.json, the-decoder.json all surfacing SpaceXAI's Grok 4.6 launch"
+  ],
+  "claims": [
+    {
+      "text": "SpaceXAI released Grok 4.6 on 12 August 2026, priced at $2/1M input tokens and $6/1M output tokens (cache-hit $0.50/1M) for the high-reasoning tier; a separate 'fast' variant costs 2x",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary (x.ai/news/grok-4-6, direct fetch succeeded) states the release date and pricing; independently corroborated by Artificial Analysis's own model page, live-fetched at 2026-08-12T23:40Z, which lists the same figures for the 'high' variant and confirms the 'fast' variant is a separate, double-priced SKU (not a mixed-variant error).",
+      "evidence": [
+        "https://x.ai/news/grok-4-6",
+        "https://artificialanalysis.ai/models/grok-4-6"
+      ]
+    },
+    {
+      "text": "Grok 4.6 scores 61 on Artificial Analysis's Intelligence Index, effectively tied with GPT-5.6 Sol (61) and one point ahead of Kimi K3 (60), while trailing Claude Opus 5 (63) and Claude Fable 5 (62)",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Live-fetched from Artificial Analysis (independent evaluator, not xAI) at 2026-08-12T23:40Z: artificialanalysis.ai/models/grok-4-6 (score 61), artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis (narrative confirming 'effectively the same' as GPT-5.6 Sol, 'just ahead of' Kimi K3, behind Opus 5/Fable 5), artificialanalysis.ai/models/kimi-k3 (score 60). Satisfies verification.md 5 live-fetch rule for third-party numeric citations. Falsifier pass corroborated all figures via a second independent fetch and found one additional unrelated independent data point (Vals AI Harvey LAB legal benchmark) but no contradiction.",
+      "evidence": [
+        "https://artificialanalysis.ai/models/grok-4-6",
+        "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
+        "https://artificialanalysis.ai/models/kimi-k3"
+      ]
+    }
+  ],
+  "notes": "Dedup-check (exit 2, strong match) returned grok-4-5-release and xai-spacexai-rebrand; treated as a follow-up (`follows: grok-4-5-release`) per verification.md 8 -- new event (new model release) in the same saga, not an in-place update or standalone. The already-published xai-spacexai-rebrand article means the SpaceXAI branding needed no fresh verification here. Independence-collapse check (verification.md 2): VentureBeat, The Decoder and Techmeme all trace back to only xAI's own announcement and Artificial Analysis's own benchmark article -- treated as a 2-source story throughout, not corroborated by the apparent breadth of press coverage. Dropped a 'world's third/fourth best' ordinal claim seen in secondary press (VentureBeat's own headline was internally inconsistent between versions) -- published only the raw Intelligence Index scores per policy 4.3 (no superlative the claims don't cleanly support). Falsifier recommendation: GO, publish as framed. No usage-limit errors."
+}
