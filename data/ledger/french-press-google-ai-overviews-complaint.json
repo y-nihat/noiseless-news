@@ -1,0 +1,26 @@
+{
+  "slug": "french-press-google-ai-overviews-complaint",
+  "title": "French press alliance files antitrust complaint against Google over AI Overviews",
+  "status": "published",
+  "first_seen": "2026-08-12",
+  "published_at": "2026-08-12",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.alliancepresse.fr/actualite/services-dia-de-google-lalliance-saisit-lautorite-de-la-concurrence/",
+    "https://www.euronews.com/next/2026/08/11/google-ai-summaries-french-dailies-file-complaint-with-competition-authority",
+    "https://www.journaldunet.com/business/1553629-google-annonce-avoir-modifie-sa-methode-de-remuneration-de-la-presse-apres-la-saisie-de-l-autorite-de-la-concurrence-par-pres-de-300-titres-francais/"
+  ],
+  "follows": null,
+  "reason": "Published: fact of the filing (11 Aug 2026 saisine to the Autorite de la concurrence) is confirmed via APIG's own primary statement plus independently-sourced reporting (Journal du Net, not wire-derived) on Google's response. Broad ~15-outlet Google News coverage is largely one AFP wire dispatch (wire-exclusive check applied) and was NOT counted as multiple independent sources. APIG's underlying harm allegations (2022-commitment breach, 33-38% traffic loss citing Arcom) are published strictly attributed to APIG, verdict single-source, never stated as fact, per the Legal/litigation claim-type rule. No ruling yet from the competition authority.",
+  "watch": [
+    "Any statement or procedural update from the Autorite de la concurrence on whether it opens a formal investigation",
+    "Independent verification of the 33-38% traffic-loss figure against Arcom's own published data",
+    "Google's fuller response or any counter-filing",
+    "Whether the July 8 2026 Meta precedent is followed with comparable interim measures against Google"
+  ],
+  "notes": [
+    "2026-08-12 c1: Traced from Tier-3 Google News aggregation to origin. Dedup-check (title+URL) returned no matches -- standalone story. Wire-exclusive check applied per verification.md 2: most aggregated outlets (Euronews byline 'with AFP', MLex brief, likely others) trace to one AFP dispatch; treated as one source. Cleared publish bar via APIG's own primary statement + Journal du Net's independently-sourced reporting on Google's on-record response."
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-10-01"
+}

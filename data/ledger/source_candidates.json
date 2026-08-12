@@ -972,5 +972,25 @@
       ],
       "context": "Klaviyo's own newsroom domain -- used as the Tier-0 primary source for klaviyo-acquires-agency-ai (a company acquisition announcement). Not currently a registered source; one-off use for now, not proposed for full registration."
     }
+  ],
+  "candidates_2026-08-12_c2": [
+    {
+      "domain": "alliancepresse.fr",
+      "first_seen": "2026-08-12",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.alliancepresse.fr/actualite/services-dia-de-google-lalliance-saisit-lautorite-de-la-concurrence/"
+      ],
+      "context": "Official site of the Alliance de la presse d'information generale (APIG), the French press body -- used as the Tier-0 primary source for its own competition-authority filing against Google (french-press-google-ai-overviews-complaint). Propose Tier 0, type html."
+    },
+    {
+      "domain": "journaldunet.com",
+      "first_seen": "2026-08-12",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.journaldunet.com/business/1553629-google-annonce-avoir-modifie-sa-methode-de-remuneration-de-la-presse-apres-la-saisie-de-l-autorite-de-la-concurrence-par-pres-de-300-titres-francais/"
+      ],
+      "context": "French business/tech outlet, named byline (Alexandre Mathiot); non-AFP-derived reporting on Google's response -- the independent source that cleared the wire-exclusive check for french-press-google-ai-overviews-complaint. Propose Tier 2, type html."
+    }
   ]
 }

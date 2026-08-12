@@ -1,0 +1,43 @@
+{
+  "slug": "french-press-google-ai-overviews-complaint",
+  "checked_at": "2026-08-12T00:00:00+00:00",
+  "method": "traced from Tier-3 Google News aggregation (~15 outlets) back to origin; verifier + adversarial falsification pass in the same session given hard deadline, explicitly checking wire-exclusivity of the broad coverage",
+  "origin_items": [
+    "Google News AI query feed surfacing Euronews, Firstpost, Business Standard, TechRepublic, Silicon UK, PPC Land, mlex.com and others on 2026-08-12 (Tier 3, discovery only)"
+  ],
+  "claims": [
+    {
+      "text": "APIG (~300 French dailies) filed a formal complaint (saisine) with the Autorité de la concurrence on 11 August 2026 over Google's AI Overviews and AI Mode",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via APIG's own official statement (Tier 0, names Marc Feuillée) plus independent original reporting: Journal du Net (named byline Alexandre Mathiot, 12 Aug, sourced to a direct Google statement to franceinfo, no AFP credit) and Euronews. Note: Euronews's byline is 'Serge Duchêne with AFP' and several of the ~15 aggregated outlets (MLex brief, Boursorama, likely France24) appear to carry the same AFP wire dispatch -- under the wire-exclusive check (verification.md 2), that cluster counts as ONE source, not many. What clears the bar here is the combination of APIG's own primary statement plus Journal du Net's independently-sourced reporting on Google's response, which is not wire-derived.",
+      "evidence": [
+        "https://www.alliancepresse.fr/actualite/services-dia-de-google-lalliance-saisit-lautorite-de-la-concurrence/",
+        "https://www.euronews.com/next/2026/08/11/google-ai-summaries-french-dailies-file-complaint-with-competition-authority",
+        "https://www.journaldunet.com/business/1553629-google-annonce-avoir-modifie-sa-methode-de-remuneration-de-la-presse-apres-la-saisie-de-l-autorite-de-la-concurrence-par-pres-de-300-titres-francais/"
+      ]
+    },
+    {
+      "text": "APIG alleges Google's deployment breaches its 2022 neighboring-rights commitments (prior authorization + negotiated remuneration)",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "This is APIG's own allegation, sourced only to APIG's statement -- correctly attributed as allegation, not stated as fact, per the Legal/litigation claim-type standard (verification.md 3).",
+      "evidence": ["https://www.alliancepresse.fr/actualite/services-dia-de-google-lalliance-saisit-lautorite-de-la-concurrence/"]
+    },
+    {
+      "text": "33-38% traffic loss figure, attributed by APIG to Arcom data",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Reported by Euronews as APIG's characterization of an Arcom estimate; Arcom's own report was not located and independently checked within the research window. Presented in the article as an attributed claim, not verified fact.",
+      "evidence": ["https://www.euronews.com/next/2026/08/11/google-ai-summaries-french-dailies-file-complaint-with-competition-authority"]
+    },
+    {
+      "text": "Google says it changed how it accounts for protected content in AI Overviews/AI Mode and that publishers can opt out",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Google's own on-record statement, independently reported by Journal du Net (sourced to a direct Google communication to franceinfo, 11 Aug) -- this is the adversarial/Google-side check.",
+      "evidence": ["https://www.journaldunet.com/business/1553629-google-annonce-avoir-modifie-sa-methode-de-remuneration-de-la-presse-apres-la-saisie-de-l-autorite-de-la-concurrence-par-pres-de-300-titres-francais/"]
+    }
+  ],
+  "notes": "Dedup-check returned no matches (fresh story). Adversarial pass: checked for Google's side (found -- Google disputes the premise, says it already changed remuneration accounting and gave 450+ publishers advance notice and opt-out); checked the July 8 2026 Meta ruling cited as precedent (consistent with APIG's own statement, used as context only, not independently re-verified given time budget); no ruling exists yet from the Autorite de la concurrence on this specific complaint -- open_obligation set with a revisit date. Headline and claims restrict themselves to the fact of the filing and Google's response, not APIG's underlying harm allegations, per the Legal/litigation attribution rule."
+}
