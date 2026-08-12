@@ -1,0 +1,42 @@
+[
+  {
+    "id": "713aef1f419f8c81",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Would you choose a PhD advisor who gives you complete freedom but almost no guidance? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vmhks7/would_you_choose_a_phd_advisor_who_gives_you/",
+    "published": "2026-08-12T15:36:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>It’s an ML PhD with secure funding for 4–5 years and a senior, respected advisor. You get almost complete freedom to choose your own topics, projects, and collaborations, with very little micromanagement.<br /> The downside is that the advisor is also very hands-off. You should expect little guidance, feedback, or technical input. In practice, you would mostly be on your own.<br /> Would you see that as a dream setup because of the freedom, or as a dealbreaker because of the lack of mentorship?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Hope999991\"> /u/Hope999991 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmhks7/would_you_choose_a_phd_advisor_who_gives_you/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmhks7/would_you_choose_a_phd_advisor_who_gives_you/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T16:59:34.087307+00:00"
+  },
+  {
+    "id": "da1f076e66406d09",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "I built an \"honest\" CS conference ranking: sorted by how good the trip is, not the CORE ranking [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vmbdk6/i_built_an_honest_cs_conference_ranking_sorted_by/",
+    "published": "2026-08-12T11:23:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Once the paper is ready, everyone checks the venue location before the acceptance rate anyway. So I built:<a href=\"https://honestcsrankings.org\">https://honestcsrankings.org</a></p> <p>It maps ~540 upcoming CORE-ranked conferences, but ranks them by how good the destination actually is. It factors in:</p> <ul> <li><strong>Weather</strong> during the actual conference month (using real climate data)</li> <li><strong>Safety</strong> (Global Peace Index)</li> <li><strong>Cost</strong> (World Bank price levels)</li> <li><strong>Accessibility &amp; &quot;City Vibe&quot;</strong></li> </ul> <p>I also added an <strong>Upsets</strong> tab for A* venues in terrible destinations. Great for your CV, bad for your holiday.</p> <p>You can filter by field, rank, or open deadlines. If you set your home city, you can rank by distance to either maximize that funded long-haul trip or minimize it, your call. You can also export deadlines to .ics and share deep links with coauthors.</p> <p>ICML/ICLR 2027 are missing because they aren't announced yet, and COLM is missing because CORE hasn't ranked it. The long tail of smaller conferences is scraped from WikiCFP, so there will be some errors.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JohnAZoidberg77\"> /u/JohnAZoidberg77 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmbdk6/i_built_an_honest_cs_conference_ranking_sorted_by/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmbdk6/i_built_an_honest_cs_conference_ranking_sorted_by/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T16:59:34.087307+00:00"
+  },
+  {
+    "id": "897386e168f5d968",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "The Loss Does Not See the Basis, But Adam Does [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vmjb3p/the_loss_does_not_see_the_basis_but_adam_does_r/",
+    "published": "2026-08-12T16:39:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmjb3p/the_loss_does_not_see_the_basis_but_adam_does_r/\"> <img alt=\"The Loss Does Not See the Basis, But Adam Does [R]\" src=\"https://preview.redd.it/cldvfu1oyyih1.png?width=140&amp;height=54&amp;auto=webp&amp;s=61d65e0f3ac17cc14df5849e09b0d2fb4da4f34f\" title=\"The Loss Does Not See the Basis, But Adam Does [R]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In a factored model W = UV^T, the loss is invariant to rotations (U,V) → (UQ, VQ). GD respects that. Adam's per-coordinate second moment doesn't, because it depends on which basis you happen to write the factors in.</p> <p>The claim is that this one property is what sorts optimizers into keeping or losing GD's implicit low-rank bias.</p> <p>I ran nine update rules on underdetermined matrix sensing, all compared at matched training loss so nothing wins by fitting less. Two clean clusters. GD, shared-scalar Adam, Muon and Shampoo keep the bias. Adam, RMSProp, Lion, signum and Adafactor lose it.</p> <p>To find the actual lever, there's a one-parameter family that turns Adam's denominator from per-coordinate into a single shared scalar. Recovery improves monotonically along it, which pins the damage on the anisotropy rather than on adaptivity in general.</p> <p>Muon was the part I didn't expect. It's exact on truly low-rank targets, then degrades fastest as you add a spectral tail and cedes to GD in a crossover near 4% tail energy. Recent work disagrees about Muon here, with some reporting a strong spectral simplicity bias and others reporting it fits spurious features in deep-linear models. My sweep shows both, on the same axis.</p> <p>I also ran the criterion on my own earlier optimizer and found its per-coordinate clip was breaking the structure it existed to inject. Global norm clip instead: recovery error 0.347 → 0.220.</p> <p>One caveat up front. The 43-44% held-out error reduction on hyperspectral data uses a train-only learning r…",
+    "fetched_at": "2026-08-12T16:59:34.087307+00:00"
+  },
+  {
+    "id": "b30ee25a4b4ea862",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Looking for real-world examples of predictive analytics in mortgage lending [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vmf7xu/looking_for_realworld_examples_of_predictive/",
+    "published": "2026-08-12T14:10:08+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p> I'm researching predictive analytics for a graduate project and mortgage lending came up as an interesting use case. </p> <p> I understand lenders try to predict who might refinance, but what kinds of variables are actually useful? </p> <p> Is it mostly credit activity, property appreciation, interest rates, life events, or something else? </p> <p> Would love to hear from anyone who's worked on these models. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Feeling-Emergency469\"> /u/Feeling-Emergency469 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmf7xu/looking_for_realworld_examples_of_predictive/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmf7xu/looking_for_realworld_examples_of_predictive/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T16:59:34.087307+00:00"
+  }
+]

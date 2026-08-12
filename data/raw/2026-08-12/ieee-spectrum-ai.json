@@ -8,5 +8,15 @@
     "published": "2026-08-12T11:00:01+00:00",
     "summary": "<img src=\"https://spectrum.ieee.org/media-library/illustration-of-a-translucent-gavel-against-a-background-of-legal-books.jpg?id=67600001&amp;width=1245&amp;height=700&amp;coordinates=0%2C156%2C0%2C157\" /><br /><br /><p>Judges around the world have <a href=\"https://www.bbc.com/news/articles/c178zzw780xo\" rel=\"noopener noreferrer\" target=\"_blank\">made headlines</a> for <a href=\"https://www.judiciary.senate.gov/press/rep/releases/grassley-scrutinizes-federal-judges-apparent-ai-use-in-drafting-error-ridden-rulings\" rel=\"noopener noreferrer\" target=\"_blank\">illicitly using generative AI</a> in their work. But in Pakistan, a large-scale trial of a specially designed AI tool for judges found the technology–together with appropriate training–boosted the number of cases resolved by 6.3% with no obvious drop in the quality of judgements.</p><p>With a backlog of 2.26 million cases and fewer than two judges per 100,000 people – compared to 22 in the EU and 8 in Brazil – Pakistan’s judiciary was in sore need of help. So, in consultation with the judiciary,<a href=\"https://sites.google.com/view/sultan-mehmood/home\" rel=\"noopener noreferrer\" target=\"_blank\"> economist Sultan Mehmood</a>, of the New Economic School in Moscow, Russia, and collaborators tested whether AI could ease the burden.</p><p>They built a custom tool combining OpenAI’s GPT-4 large language model (LLM) with a knowledge base of nearly 130,000 Pakistani judicial opinions and statutes, to help judges with legal research and drafting judgements. They began offering the tool in 2024 to 1,559 trial judges – roughly half the country’s justices. </p><p>“We do find an increase in cases resolved, and we don’t find any corresponding decrease in decision quality,” Mehmood says. </p><h2>First of its kind</h2><p>“It’s pretty amazing that he’s able to pull this off,” says David Autor, an economics professor at the Massachusetts Institute of Technology. “It’s not easy to do large-scale field experiments in civil service, but…",
     "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "5ba5976e8648c28b",
+    "source": "IEEE Spectrum AI",
+    "tier": 2,
+    "title": "Inside the Data Bottleneck Slowing Visual and Physical AI",
+    "url": "https://content.knowledgehub.wiley.com/the-2026-state-of-visual-and-physical-ai-a-survey-of-700-practitioners-on-data-models-and-production/",
+    "published": "2026-08-12T14:18:05+00:00",
+    "summary": "<img src=\"https://spectrum.ieee.org/media-library/voxel51-logo-with-geometric-cube-icon-and-stylized-text.png?id=67607900&amp;width=980\" /><br /><br /><p>A survey of over 700 professionals examines how visual and physical AI teams build systems, why models fail, and where data work drives production.</p><p><span><a href=\"https://content.knowledgehub.wiley.com/the-2026-state-of-visual-%20and-physical-ai-a-survey-of-700-practitioners-on-data-models-and-production/\" target=\"_blank\">Download this free whitepaper now!</a></span></p>",
+    "fetched_at": "2026-08-12T16:59:34.087307+00:00"
   }
 ]

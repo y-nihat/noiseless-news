@@ -18,5 +18,15 @@
     "published": "2026-08-11T20:35:13+00:00",
     "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/datasette-upload-dbs/releases/tag/0.5a0\">datasette-upload-dbs 0.5a0</a></p>\n        <p>This plugin has been around for a while - it lets users upload a brand new SQLite database to a hosted Datasette instance, at which point that database will start being served by that instance.</p>\n<p>It can also be used to atomically swap a database with a more recent version. The uploaded database is saved to a file, verified, then swapped in so <code>/name</code> starts serving the new one.</p>\n<p>The new release adds a formalized API, so you can replace an existing database (or add a new one) like this:</p>\n<pre><code>curl -X POST \\\n  -H \"Authorization: Bearer $API_TOKEN\" \\\n  -H \"Accept: application/json\" \\\n  -F \"db=@content.db\" \\\n  -F \"db_name=content\" \\\n  https://your-instance.example.com/-/upload-dbs\n</code></pre>\n<p>This means you can build fresh databases in an environment such as GitHub Actions and swap them in production as soon as that build has completed.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/datasette\">datasette</a></p>",
     "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "46642bc6105696ed",
+    "source": "Simon Willison's Weblog",
+    "tier": 3,
+    "title": "Quoting Florian Herrengt",
+    "url": "https://simonwillison.net/2026/Aug/12/florian-herrengt/",
+    "published": "2026-08-12T15:08:47+00:00",
+    "summary": "<blockquote cite=\"https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html\"><p>But then users start to report a weird bug. It's the 4th time your team has been trying to fix it. I mean... asking AI to fix it. Unfortunately, it seems like not even Fable can figure it out.</p>\n<p>You go talk to the person who worked on this feature.</p>\n<p>\"So where does the data come from?\"</p>\n<p>\"Hmm... actually I don't know. Let me ask Claude.\"</p>\n<p>You sit next to each other watching an endless wall of text appear on the screen. Neither of you has any idea whether any of it is true but Claude seems very confident. [...]</p>\n<p>This project has become so convoluted, with so many layers and services, that no one on your team could possibly start to understand what's going on.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html\">Florian Herrengt</a>, AI is removing the middle class of software engineering</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/ai-misuse\">ai-misuse</a>, <a href=\"https://simonwillison.net/tags/cognitive-debt\">cognitive-debt</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/ai-assisted-programming\">ai-assisted-programming</a></p>",
+    "fetched_at": "2026-08-12T16:59:34.087307+00:00"
   }
 ]
