@@ -1,0 +1,12 @@
+[
+  {
+    "id": "350e7ce9d3473d4b",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "JetBrains fixes IntelliJ IDEA bugs",
+    "url": "https://www.infoworld.com/article/4208245/jetbrains-fixes-intellij-idea-bugs.html",
+    "published": "2026-08-12T00:25:53+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">JetBrains has released a minor update to IntelliJ IDEA 2026.2, the latest edition of its IDE for <a href=\"https://www.infoworld.com/article/4202901/jdk-27-the-new-features-of-java-27.html\">Java</a> and <a href=\"https://www.infoworld.com/article/2256390/what-is-kotlin-the-java-alternative-explained.html\">Kotlin</a>. The update fixes several bugs impacting Markdown shell scripts, undo actions, terminal sessions, Java code formatting, and more.</p>\n\n\n\n<p class=\"wp-block-paragraph\">IntelliJ IDEA 2026.2.1 was <a href=\"https://blog.jetbrains.com/idea/2026/08/intellij-idea-2026-2-1/\">announced August 10</a>. The most notable updates include the following: </p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Markdown shell scripts now execute in the correct order.</li>\n\n\n\n<li>Undo now works correctly after applying <em>Optimize imports on the fly</em>.</li>\n\n\n\n<li>Dragging a terminal tab after using the <em>Move to Editor</em> action no longer restarts the terminal session.</li>\n\n\n\n<li>The IDE no longer throws exceptions caused by the new <em>Resolve Conflicts</em> mechanism for Mercurial projects.</li>\n\n\n\n<li>Java code formatting now correctly respects the <em>Smart tabs</em> setting.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">Updating to IntelliJ IDEA 2026.2.1 can be done from inside the IDE, using the Toolbox App, or using snaps in the case of Ubuntu users. The update also can be downloaded from the <a href=\"https://www.jetbrains.com/idea/download/\">JetBrains website</a>. </p>\n</div></div></div></div>",
+    "fetched_at": "2026-08-12T00:46:07.034863+00:00"
+  }
+]
