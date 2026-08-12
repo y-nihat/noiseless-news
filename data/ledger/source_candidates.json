@@ -951,6 +951,17 @@
       "context": "Anthropic's own Claude Code documentation/changelog domain -- used as the Tier-0 primary source for claude-code-cross-session-messaging (a first-party product-feature announcement). Propose Tier 0, type html."
     }
   ],
+  "candidates_2026-08-12_c1": [
+    {
+      "domain": "engadget.com",
+      "first_seen": "2026-07-18",
+      "occurrences": 3,
+      "sample_urls": [
+        "https://www.engadget.com/2234618/deepmind-newest-model-allows-pixel-11-devices-to-transcribe-sign-language-into-text/"
+      ],
+      "context": "Third occurrence logged for engadget.com (see also candidates_2026-07-13_night2_c2 and candidates_2026-07-18_night_c5) -- used this cycle for the DeepMind SL2T launch (deepmind-sl2t-sign-language-model), corroborating product details, though this piece itself derives from DeepMind's own announcement rather than separate reporting (noted in the article per the independence rule). Third recurrence across a month strengthens the case for Tier 2 registration."
+    }
+  ],
   "candidates_2026-08-08_night4_c4": [
     {
       "domain": "klaviyo.com",
