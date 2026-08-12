@@ -8,5 +8,115 @@
     "published": "2026-08-12T00:28:51+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlyzi6/anthropic_openai_google_meta_microsoft_and/\"> <img alt=\"Anthropic, OpenAI, Google, Meta, Microsoft, and Mistral all signed the EU Code of Practice on Transparency of AI-Generated Content\" src=\"https://preview.redd.it/f9jt8fh79uih1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=94a2ca64f968166390bf8c39f36b4fe852739a18\" title=\"Anthropic, OpenAI, Google, Meta, Microsoft, and Mistral all signed the EU Code of Practice on Transparency of AI-Generated Content\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Even open source local models from these companies will be watermarking code and text since it's required by law.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Bestlife73\"> /u/Bestlife73 </a> <br /> <span><a href=\"https://i.redd.it/f9jt8fh79uih1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vlyzi6/anthropic_openai_google_meta_microsoft_and/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-12T00:46:07.034863+00:00"
+  },
+  {
+    "id": "359a197c5cfb4afb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "It's the final countdown, baby! Qwen is out in just over 7 hours!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm7iqx/its_the_final_countdown_baby_qwen_is_out_in_just/",
+    "published": "2026-08-12T07:45:19+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm7iqx/its_the_final_countdown_baby_qwen_is_out_in_just/\"> <img alt=\"It's the final countdown, baby! Qwen is out in just over 7 hours!\" src=\"https://preview.redd.it/dqfzpcs2fwih1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=835eef2456dd1a218485e3ca3e27b2b257cc1fe4\" title=\"It's the final countdown, baby! Qwen is out in just over 7 hours!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Historic event! We're ready! Google Translate, on the other hand, is not ready!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LegacyRemaster\"> /u/LegacyRemaster </a> <br /> <span><a href=\"https://i.redd.it/dqfzpcs2fwih1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm7iqx/its_the_final_countdown_baby_qwen_is_out_in_just/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "5435a4cecaec5d54",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "RTX 6000 PRO price raised to $16,000 USD on the Nvidia website",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm5e14/rtx_6000_pro_price_raised_to_16000_usd_on_the/",
+    "published": "2026-08-12T05:42:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm5e14/rtx_6000_pro_price_raised_to_16000_usd_on_the/\"> <img alt=\"RTX 6000 PRO price raised to $16,000 USD on the Nvidia website\" src=\"https://external-preview.redd.it/OGE9Nh3fr41ae8E7eJo80rTyoHs5dAhv1RL0WLkQ79E.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5e1496b6fa34044e3b2b1a700a1ec14d86fca431\" title=\"RTX 6000 PRO price raised to $16,000 USD on the Nvidia website\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Norwood_Reaper_\"> /u/Norwood_Reaper_ </a> <br /> <span><a href=\"https://marketplace.nvidia.com/en-us/enterprise/laptops-workstations/nvidia-rtx-pro-6000-blackwell-workstation-edition/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm5e14/rtx_6000_pro_price_raised_to_16000_usd_on_the/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "4ae442291bef4ff2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "FYI: Muse Glimmer Chat Template Got Updated Recently",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm6had/fyi_muse_glimmer_chat_template_got_updated/",
+    "published": "2026-08-12T06:44:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Source: <a href=\"https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/chat_template.jinja\">https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/chat_template.jinja</a></p> <p>Seems to be a deduplication. Not sure how it alters model performance but it did get updated FWIW.</p> <p>Side note: good orchestrator model, Meta!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TacticalRock\"> /u/TacticalRock </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm6had/fyi_muse_glimmer_chat_template_got_updated/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm6had/fyi_muse_glimmer_chat_template_got_updated/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "f07b69665eb606e6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New Muse-Glimmer-30B SoTA Quants - hopefully a new lineup :)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm2116/new_museglimmer30b_sota_quants_hopefully_a_new/",
+    "published": "2026-08-12T02:49:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm2116/new_museglimmer30b_sota_quants_hopefully_a_new/\"> <img alt=\"New Muse-Glimmer-30B SoTA Quants - hopefully a new lineup :)\" src=\"https://external-preview.redd.it/1uMnP6Gux8a7kieSuDOpF48IboIt8KkzY7YmkDvG1D4.png?width=140&amp;height=75&amp;auto=webp&amp;s=23a00d271251aaa9d0dd301cc9331d220e7119b6\" title=\"New Muse-Glimmer-30B SoTA Quants - hopefully a new lineup :)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey Folks,</p> <p>I've been making quants for a while - recently I took a short break to get into hardcore research (submitted my first EMNLP paper during it!). Along the way, I built up a little arsenal of quant-optim techniques: everything from novel, paper-pending tricks to some genuinely sick tensor-mapping algos.</p> <p>I threw some of the secret sauce into the newly released Muse Glimmer 30B (META IS BACK!) and compared it to several OGs. I'm honestly shocked by how it never loses to any quant out there in every single VRAM class!</p> <p>One of the coolest ones is my Q8 quant, it is smaller than UD-Q8_K_XL and 21% closer to BF16.</p> <p>Full methodology is on the card - eval setup, CIs, held-out slices, the lot. Happy to answer questions in the comments.</p> <p>Model: <a href=\"https://huggingface.co/AaryanK/Muse-Glimmer-30B-GGUF\">https://huggingface.co/AaryanK/Muse-Glimmer-30B-GGUF</a></p> <p>I still had headroom left but ran out of compute credits :( Being a solo undergrad sophomore, I can't exactly spend H100 money that often, which is why the &quot;hopefully&quot; in the title :)</p> <p>I'm looking for internships in AI agent orchestration and model inference. If this work looks relevant to your team: <a href=\"http://linkedin.com/in/theaaryankapoor\">linkedin.com/in/theaaryankapoor</a></p> <p>I plan on doing a write-up soon to describe some of the secret sauce!</p> <p><a href=\"https://preview.redd.it/yzf6n2fyuuih1.png?width=1860&amp;format=png&amp;auto=webp&amp;s=aa8b615918…",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "02dcffec71c5ff19",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "According to AMD, Arm, and Microsoft, agentic AI could push CPU-to-GPU ratios from 1:4 to even1:1",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm9w5x/according_to_amd_arm_and_microsoft_agentic_ai/",
+    "published": "2026-08-12T10:05:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>In OCP APAC 2026, Tai AMD SVP of compute and enterprise AI said agents don't cut GPU demand but they just pile on a whole extra layer of orchestration, retrieval, and tool-calling work that runs on CPUs instead</p> <p>And the usual 1:4 CPU-to-GPU ratio could move toward 1:2 or even 1:1 and also Arm gave the reasoning of why as their Taiwan/SEA president said AI agents can fire off 15x more requests than a human ever would, since they run nonstop &amp; can spawn other agents and that's what actually chokes CPUs in current setups</p> <p>Microsoft's take lines up too. Their new Cobalt 200 chip is basically marketed as an &quot;agent-native CPU&quot; cutting agent-call latency 33% and boosting throughput 23% on agentic workloads, while they keep investing in GPUs on top of it</p> <p>So it's not just GPUs mainly but CPUs, memory, storage, networking might need to scale just as fast once AI stops being single-prompt chatbots and starts being agents doing multi-step work on their own</p> <p>Sauce: <a href=\"https://www.digitimes.com/news/a20260812VL224/amd-apac-cpu-2026-infrastructure.html\">https://www.digitimes.com/news/a20260812VL224/amd-apac-cpu-2026-infrastructure.html</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ocean_protocol\"> /u/ocean_protocol </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm9w5x/according_to_amd_arm_and_microsoft_agentic_ai/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm9w5x/according_to_amd_arm_and_microsoft_agentic_ai/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "26f66503b55d858e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "RAG for regular users?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm8kev/rag_for_regular_users/",
+    "published": "2026-08-12T08:49:06+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>One of the reasons I got into local LLMs was the possibility of getting answers using my own documents and books (a few hundreds) instead of having to search through them manually. However since I'm not a data specialist or an engineer, RAG projects were too difficult for me, out-of-the-box solutions like AnythingLLM didn't quite work (couldn't find what was in the docs), and fine-tuning models was out of the question...</p> <p>With so many new tools dropping over the last few months (many claiming to have built-in RAG or chat-with-docs functionality) I was wondering if there are any options out there that actually work well for non-technical folks?</p> <p>Thanks in advance!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TheGlobinKing\"> /u/TheGlobinKing </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm8kev/rag_for_regular_users/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm8kev/rag_for_regular_users/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "b1afcbe903a04f0c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What unique, custom QOL upgrades have you given your local agents?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm3fvr/what_unique_custom_qol_upgrades_have_you_given/",
+    "published": "2026-08-12T03:58:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm3fvr/what_unique_custom_qol_upgrades_have_you_given/\"> <img alt=\"What unique, custom QOL upgrades have you given your local agents?\" src=\"https://preview.redd.it/ffgdfcplfvih1.png?width=140&amp;height=37&amp;auto=webp&amp;s=864a94c6cf01b717946d56d23844dae58f8dd41f\" title=\"What unique, custom QOL upgrades have you given your local agents?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><blockquote> <p><strong>Warning</strong>: Kinda long post. If you don't like reading, please skip for your own sanity. Also, I've got nothing to sell, just a tinkerer, so I just want to share ideas and learn from you guys too.</p> </blockquote> <p>When I recently started my agentic journey, I hit a number of walls, the first being tool use eating up way too much context. Also, LM Studio had super slow prompt processing speeds w/Qwen 3.6 27B. I ended up switching to llama.cpp, and then started reading up on harnesses like pi, hermes agent, open code, etc. Eventually, I decided on building my own framework/harness around it so I could have more freedom.</p> <p>It's been rough; I clearly took the hard path going the custom route, but I prefer the hands-on approach, which has taught me a lot and now I wouldn't have traded the experience for anything, considering how much I've learned.</p> <p>Anyway, a few bread-and-butter features I've designed for my own system:</p> <p><strong>MCP Broker.</strong> I run a LOT of mcp tools. It was eating up my context just loading them, over 20K tokens on startup. The broker hides the tools behind a proxy, and then uses a single mcp tool to run the others. That eliminated the 20K load on startup, and the tool can then read/run the other mcp tools. It's super cool and it works fast.</p> <p><strong>Temporal awareness.</strong> My agent knows the date, time, session duration, context length, the model it's running on, the stack its running on (llama.cpp vs lm studio), how many tokens…",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "f799145f9794000b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Intel LLM-Scaler ready with Muse Glimmer support, other LLMs & features",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vmaofu/intel_llmscaler_ready_with_muse_glimmer_support/",
+    "published": "2026-08-12T10:47:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vmaofu/intel_llmscaler_ready_with_muse_glimmer_support/\"> <img alt=\"Intel LLM-Scaler ready with Muse Glimmer support, other LLMs &amp; features\" src=\"https://external-preview.redd.it/2-UNwyNZomjn63oZR-3ih1IDirAC1HMF1uVTAgZXaqk.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=897c56910aec6071d9e24c7aab740b0c25fdfb07\" title=\"Intel LLM-Scaler ready with Muse Glimmer support, other LLMs &amp; features\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fcking_Chuck\"> /u/Fcking_Chuck </a> <br /> <span><a href=\"https://www.phoronix.com/news/Intel-LLM-Scaler-Muse-Glimmer\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vmaofu/intel_llmscaler_ready_with_muse_glimmer_support/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "e3fa43d2178973fa",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Meta glasses with local models",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm31js/meta_glasses_with_local_models/",
+    "published": "2026-08-12T03:39:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Are there any glasses from meta or anyone else that allow you to use local models rather then sending data to a 3rd party? I am blind and have seen how useful the meta glasses are for accessing visual content but am not fully comfortable with meta having access to everything I want to look at.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CloudsOfMagellan\"> /u/CloudsOfMagellan </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm31js/meta_glasses_with_local_models/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm31js/meta_glasses_with_local_models/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "dd4a11ebcd502bb9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is the future of AI selling hardware for Open Source/Models?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vm3cej/is_the_future_of_ai_selling_hardware_for_open/",
+    "published": "2026-08-12T03:53:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’m not super knowledgeable of the entire AI industry, but as we see this industry grow and the Cold War that is happening between the US and China on AI development, I can’t help but notice what US companies are backing open source vs those not in support. </p> <p>Those encouraging Open Source/Weight models are those that can develop and sell hardware: Meta, Google, Nvidia, while companies like Anthropic and OpenAI are against open source because then why would they stay in business? </p> <p>Would, and will the move for AI be to create affordable hardware for the average consume to run their own local models? Figuring out a way to mass produce Mini CPUs, then develop open source models to run on that hardware? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/New-Pressure-6932\"> /u/New-Pressure-6932 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm3cej/is_the_future_of_ai_selling_hardware_for_open/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vm3cej/is_the_future_of_ai_selling_hardware_for_open/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "d628f0a2845c050c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Tested Nemotron 3.5 Lightning locally on coding, Hermes Agent and agentic work",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vma27w/tested_nemotron_35_lightning_locally_on_coding/",
+    "published": "2026-08-12T10:15:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Ran the model with quants (Q5) and MTP by <a href=\"https://huggingface.co/bartowski/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF\">bartowski</a> with llama.cpp server.</p> <p>It takes ~24GB ram running on M5 Pro with 48GB at about 65t/s. On some tasks it was quite the overthinker.</p> <p>Overall, the quality of the code output was way below what you can expect for the size (but this is somewhat disclosed by the authors and what this model was optimized for). In Hermes Agent, it did very well in both speed and tool calling capabilities.</p> <p>Watch more: <a href=\"https://www.youtube.com/watch?v=I8Ypa3yK91s\">https://www.youtube.com/watch?v=I8Ypa3yK91s</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/curiousily_\"> /u/curiousily_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vma27w/tested_nemotron_35_lightning_locally_on_coding/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vma27w/tested_nemotron_35_lightning_locally_on_coding/\">[comments]</a></span>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
   }
 ]

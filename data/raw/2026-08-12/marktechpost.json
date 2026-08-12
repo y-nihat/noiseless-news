@@ -1,0 +1,62 @@
+[
+  {
+    "id": "77c42709a5914823",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router",
+    "url": "https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/",
+    "published": "2026-08-12T06:59:40+00:00",
+    "summary": "<p>NVIDIA's open 30B MoE targets the agent execution layer, with Switchyard routing each step to the cheapest capable model.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/\">NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "517b7d11e669674d",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Xiaomi’s MiLM Plus Releases PROVE: Perception-Aligned Object Removal Metrics RC-S and RC-T With a Real-World Video Benchmark",
+    "url": "https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/",
+    "published": "2026-08-12T05:05:52+00:00",
+    "summary": "<p>Object removal models have improved faster than the metrics used to judge them. Diffusion erasers now reconstruct shadows, reflections and occluded structure convincingly, yet PSNR, SSIM, LPIPS, ReMOVE and CFD frequently rank their outputs the wrong way. The root cause is structural: erasure is an ill-posed, one-to-many task, so no single ground truth exists to [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/\">Xiaomi&#8217;s MiLM Plus Releases PROVE: Perception-Aligned Object Removal Metrics RC-S and RC-T With a Real-World Video Benchmark</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "661dd1c49f7288f9",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "The Video Production Stack Now Fits on One Desk: LTX-2.5 Launches as NVIDIA-Accelerated Open Weights World Model",
+    "url": "https://www.marktechpost.com/2026/08/11/the-video-production-stack-now-fits-on-one-desk-ltx-2-5-launches-as-nvidia-accelerated-open-weights-world-model/",
+    "published": "2026-08-11T20:02:03+00:00",
+    "summary": "<p>LTX-2.5 brings frontier video generation to local NVIDIA hardware: 6.8-second clips, native multishot, day-one ComfyUI, open weights.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/11/the-video-production-stack-now-fits-on-one-desk-ltx-2-5-launches-as-nvidia-accelerated-open-weights-world-model/\">The Video Production Stack Now Fits on One Desk: LTX-2.5 Launches as NVIDIA-Accelerated Open Weights World Model</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "48c0fa77c9b9545b",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Building and Validating a Quantitative Trading Strategy with OctoBot, Walk-Forward Backtesting, Parameter Optimization, and Interactive Analysis",
+    "url": "https://www.marktechpost.com/2026/08/11/building-and-validating-a-quantitative-trading-strategy-with-octobot-walk-forward-backtesting-parameter-optimization-and-interactive-analysis/",
+    "published": "2026-08-11T15:17:29+00:00",
+    "summary": "<p>In this tutorial, we build a complete quantitative backtesting workflow with OctoBot and OctoBot-Script while keeping the environment isolated from Colab’s preinstalled dependencies. We configure a rule-based trading strategy that combines RSI-based oversold signals, EMA trend confirmation, and ATR-driven adaptive stop-loss and take-profit levels, and we execute it through OctoBot’s native market-order and backtesting APIs. [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/11/building-and-validating-a-quantitative-trading-strategy-with-octobot-walk-forward-backtesting-parameter-optimization-and-interactive-analysis/\">Building and Validating a Quantitative Trading Strategy with OctoBot, Walk-Forward Backtesting, Parameter Optimization, and Interactive Analysis</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "0fefae1120e82768",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "webAI Releases TwIL-LM: A 1.7B and 3B Formal-Logic Model Family for Autoformalization on Local Hardware",
+    "url": "https://www.marktechpost.com/2026/08/10/webai-releases-twil-lm-a-1-7b-and-3b-formal-logic-model-family-for-autoformalization-on-local-hardware/",
+    "published": "2026-08-11T06:20:09+00:00",
+    "summary": "<p>webAI has released TwIL-LM, a family of formal-logic models at 1.7B and 3B parameters that translate English into first-order logic and check whether conclusions follow from premises. The 3B runs on CPU or 4GB of VRAM; the 1.7B downloads at 1.06GB. Both ship under a non-commercial license. The model card also shows that the headline benchmark scores belong to an unreleased checkpoint, not the weights on the Hub.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/10/webai-releases-twil-lm-a-1-7b-and-3b-formal-logic-model-family-for-autoformalization-on-local-hardware/\">webAI Releases TwIL-LM: A 1.7B and 3B Formal-Logic Model Family for Autoformalization on Local Hardware</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  },
+  {
+    "id": "6584d092e579a6c9",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Implementing a MiniMax-H3 Multimodal Video and Audio Generation Pipeline with ComfyUI APIs",
+    "url": "https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis/",
+    "published": "2026-08-11T05:44:38+00:00",
+    "summary": "<p>In this comprehensive guide, we demonstrate how to implement a complete, programmable MiniMax-H3 multimodal generation pipeline. By leveraging ComfyUI as a headless backend, we walk through setting up an automated inference environment that handles hardware profiling, model weight downloading, dynamic graph construction, and joint video-audio decoding. </p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis/\">Implementing a MiniMax-H3 Multimodal Video and Audio Generation Pipeline with ComfyUI APIs</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-12T11:01:21.733906+00:00"
+  }
+]
