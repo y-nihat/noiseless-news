@@ -1,7 +1,7 @@
 {
   "slug": "bytedance-seed-audio-1-0",
   "title": "ByteDance's Seed Audio 1.0 international rollout",
-  "status": "watching",
+  "status": "dropped",
   "first_seen": "2026-07-23",
   "published_at": null,
   "langs": [],
@@ -38,6 +38,7 @@
     "2026-08-09 c1: Re-checked (1 web search). Same result: no official numeric benchmarks published, coverage still dominated by directory/vendor pages (baike.baidu, Digital Journal PR, glbgpt.com, kie.ai, Atlas Cloud, qwen3tts.com) describing features/pricing; glbgpt.com's automated-listening-evaluation review is the closest to independent testing found but explicitly is not a human MOS study. No independent A/B, WER, or MOS study against ElevenLabs/Suno/Seed-TTS found. Gate still fails. Still watching.",
     "2026-08-10 c6: Mandatory final-cycle recheck (1 web search). Same directory/vendor coverage (kie.ai, remio.ai, glbgpt.com, MindStudio, theresanaiforthat.com, morphic.com, Segmind) still repeats company-reported usability/naturalness figures with no independent quantitative A/B, WER, or MOS study against ElevenLabs/Suno/Seed-TTS. Gate still fails. Still watching.",
     "2026-08-10 c1: Recheck (1 search). GLBGPT review (already an existing recurring vendor/directory source) found a repeatability weakness (alternate takes can garble speech/change voice identity) but is not an independent quantitative benchmark against a named baseline. No new independent A/B, WER, or MOS study found. Gate still fails. Still watching.",
-    "2026-08-11 c1: recheck -- no change after ~7 weeks. Still no independent A/B/WER/MOS study against ElevenLabs/Suno/Seed-TTS; BytePlus's own promotional posts confirm international/enterprise access but remain vendor material, not independent coverage. No independent benchmark looks imminent (no arXiv paper, no press event, no third-party lab test scheduled). Recommend the owner decide between continued indefinite watching vs. dropping."
+    "2026-08-11 c1: recheck -- no change after ~7 weeks. Still no independent A/B/WER/MOS study against ElevenLabs/Suno/Seed-TTS; BytePlus's own promotional posts confirm international/enterprise access but remain vendor material, not independent coverage. No independent benchmark looks imminent (no arXiv paper, no press event, no third-party lab test scheduled). Recommend the owner decide between continued indefinite watching vs. dropping.",
+    "2026-08-12 c1: Re-checked (1 web search). Same result as every prior cycle: no independent A/B, WER, or MOS study against ElevenLabs/Suno/Seed-TTS exists anywhere; coverage remains comparison/directory-style content (kie.ai, seedaudio.im, aicreatoru, arcloop) with no quantitative measurement. No signal of an imminent benchmark. Dropping per 08-11's flagged decision point: ~7 weeks and 15+ rechecks with no independent evaluation and no scheduled one -- indefinite watching with no path to resolution. If an independent A/B/WER/MOS study or ByteDance benchmark paper surfaces later, this can be reopened as a fresh candidate via the normal triage/dedup path."
   ]
 }
