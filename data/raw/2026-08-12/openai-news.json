@@ -8,5 +8,45 @@
     "published": "2026-08-12T06:00:00+00:00",
     "summary": "OpenAI research reveals how enterprises are adopting agentic AI, using ChatGPT and Codex, and how frontier firms are pulling ahead in AI adoption.",
     "fetched_at": "2026-08-12T16:59:34.087307+00:00"
+  },
+  {
+    "id": "9bafa93fe08b847d",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "How RingCentral builds AI-native work from engineering to ops",
+    "url": "https://openai.com/index/ringcentral",
+    "published": "2026-08-12T00:00:00+00:00",
+    "summary": "See how RingCentral uses ChatGPT Work and Codex to accelerate AI product development and centralize operational intelligence across engineering and operations.",
+    "fetched_at": "2026-08-12T22:23:00.365565+00:00"
+  },
+  {
+    "id": "a8fe7ab45085b1b3",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "How data science teams use ChatGPT Work",
+    "url": "https://openai.com/academy/chatgpt-work/how-data-science-teams-use-codex",
+    "published": "2026-07-14T00:00:00+00:00",
+    "summary": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+    "fetched_at": "2026-08-12T22:23:00.365565+00:00"
+  },
+  {
+    "id": "1018915a22e8f7b1",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "How sales teams use ChatGPT Work",
+    "url": "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex",
+    "published": "2026-07-14T00:00:00+00:00",
+    "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
+    "fetched_at": "2026-08-12T22:23:00.365565+00:00"
+  },
+  {
+    "id": "083efae304f8dcca",
+    "source": "OpenAI News",
+    "tier": 0,
+    "title": "How business operations teams use ChatGPT Work",
+    "url": "https://openai.com/academy/chatgpt-work/how-business-operations-teams-use-codex",
+    "published": "2026-05-15T00:00:00+00:00",
+    "summary": "See how business operations teams can use ChatGPT Work to create initiative briefs, strategy updates, leadership decision packets, progress updates, and more from real work inputs",
+    "fetched_at": "2026-08-12T22:23:00.365565+00:00"
   }
 ]

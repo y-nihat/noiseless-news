@@ -8,5 +8,35 @@
     "published": "2026-08-12T15:19:17+00:00",
     "summary": "AI firms quietly bulk buying rare books face resistance from booksellers.",
     "fetched_at": "2026-08-12T16:59:34.087307+00:00"
+  },
+  {
+    "id": "3b89f2c1b247bf21",
+    "source": "Ars Technica AI",
+    "tier": 2,
+    "title": "The web’s newest weapon against AI scrapers is a font",
+    "url": "https://arstechnica.com/ai/2026/08/new-font-turns-ordinary-webpages-into-nonsense-for-ai-scrapers/",
+    "published": "2026-08-12T22:02:25+00:00",
+    "summary": "“ShieldFont” aims to poison AI training data without making pages unreadable for people.",
+    "fetched_at": "2026-08-12T22:23:00.365565+00:00"
+  },
+  {
+    "id": "50a8f76b8fcc86cd",
+    "source": "Ars Technica AI",
+    "tier": 2,
+    "title": "Terabytes of credentials leaked in massive supply-chain attack",
+    "url": "https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/",
+    "published": "2026-08-12T21:43:21+00:00",
+    "summary": "The data was scraped and exfiltrated from 2,500 users of a compromised AI package.",
+    "fetched_at": "2026-08-12T22:23:00.365565+00:00"
+  },
+  {
+    "id": "54035baf4f33398c",
+    "source": "Ars Technica AI",
+    "tier": 2,
+    "title": "Twitch content has trained Amazon AI for years, but users can opt out now",
+    "url": "https://arstechnica.com/ai/2026/08/twitch-content-has-trained-amazon-ai-for-years-but-users-can-opt-out-now/",
+    "published": "2026-08-12T21:00:30+00:00",
+    "summary": "Streaming platform says user-generated content \"may be used for future Gen AI model improvements.\"",
+    "fetched_at": "2026-08-12T22:23:00.365565+00:00"
   }
 ]
