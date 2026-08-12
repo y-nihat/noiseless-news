@@ -1,0 +1,49 @@
+{
+    "slug": "nvidia-nemotron-3-5-lightning",
+    "checked_at": "2026-08-12T22:34:00+00:00",
+    "method": "Fresh verifier sub-agent (Tier-0 primary fetch + Artificial Analysis live-fetch for the independent benchmark) followed by a fresh adversarial falsifier sub-agent (separate context, did not see the draft) attempting to break each claim via targeted searches.",
+    "origin_items": [
+        "Surfaced via discovery-sweep triage cross-check against today's raw ingest (marktechpost.com, gnews items, r/LocalLLaMA); dedup-check against the archive returned only moderate/coincidental matches against unrelated model releases."
+    ],
+    "claims": [
+        {
+            "text": "Nvidia released Nemotron 3.5 Lightning, a 30-billion-parameter open-weight mixture-of-experts model with 3 billion active parameters, on 11 August 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via direct WebFetch of the Tier-0 NVIDIA Technical Blog post. Falsifier independently corroborated across CNBC, MarkTechPost, SiliconANGLE, and the model's own Hugging Face repos, all dated 2026-08-11, and confirmed it is a genuine new release (successor to Nemotron 3 Nano 30B), not a repackaging.",
+            "evidence": [
+                "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/"
+            ]
+        },
+        {
+            "text": "The model is released under the permissive OpenMDW-1.1 license, free for commercial use, with weights available on Hugging Face and Nvidia's build.nvidia.com platform",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed on the Tier-0 primary source and independently verified by the falsifier directly against the Hugging Face model card text.",
+            "evidence": [
+                "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/"
+            ]
+        },
+        {
+            "text": "Independent testing by Artificial Analysis scored the model 24 on its Intelligence Index, tying gpt-oss-120b; a pre-release measurement on a single provider's endpoint put output speed at roughly 670 tokens/second, though Artificial Analysis's own post-launch aggregate figure is lower",
+            "type": "capability",
+            "verdict": "confirmed",
+            "reasoning": "Live-fetched from Artificial Analysis (registered Tier 1) at verification time, satisfying the §5 live-fetch rule. The falsifier flagged that the 670 tok/s figure was specifically a pre-release, single-provider (DeepInfra NVFP4) measurement, and that Artificial Analysis's live post-launch page (aggregated across providers) shows a lower median of ~292 tok/s, fastest provider ~594 tok/s. The article was revised to state this explicitly rather than imply 670 tok/s is the general sustained figure.",
+            "evidence": [
+                "https://artificialanalysis.ai/articles/nemotron-3-5-lightning-launch",
+                "https://the-decoder.com/nvidias-open-weight-nemotron-3-5-lightning-prioritizes-speed-over-maximum-intelligence/"
+            ]
+        },
+        {
+            "text": "Nvidia says the model completes 86% of PinchBench agentic tasks correctly while finishing 30% faster than Qwen3.6 35B",
+            "type": "capability",
+            "verdict": "vendor-claim",
+            "reasoning": "PinchBench is Nvidia's own benchmark suite; no independent reproduction found by either the verifier or falsifier. Correctly labeled vendor-claim rather than stated as fact, per verification.md §3.",
+            "evidence": [
+                "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: PUBLISH WITH CHANGES, applied. All four claims survived adversarial search (no disputes, corrections, or recalls found; genuinely a new release, not a repackaging). The falsifier's one substantive finding -- that the headline 670 tok/s throughput figure was a pre-release, single-provider measurement rather than the general/sustained figure -- was incorporated into both the claim text and article body before publish. No prompt-injection content encountered in any fetched source.",
+    "gaps_closed_from_watching_state": []
+}

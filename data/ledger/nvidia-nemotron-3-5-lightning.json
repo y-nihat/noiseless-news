@@ -1,0 +1,21 @@
+{
+  "slug": "nvidia-nemotron-3-5-lightning",
+  "title": "Nvidia releases Nemotron 3.5 Lightning, an open-weight 30B model built for speed on agent tasks",
+  "status": "published",
+  "first_seen": "2026-08-12",
+  "published_at": "2026-08-12",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/",
+    "https://artificialanalysis.ai/articles/nemotron-3-5-lightning-launch",
+    "https://the-decoder.com/nvidias-open-weight-nemotron-3-5-lightning-prioritizes-speed-over-maximum-intelligence/"
+  ],
+  "follows": null,
+  "watch": [
+    "Whether real-world sustained throughput settles nearer Artificial Analysis's post-launch aggregate (~292 tok/s) than the pre-release single-provider figure (~670 tok/s)",
+    "Any independent reproduction of Nvidia's PinchBench 86%/30%-faster-than-Qwen3.6-35B figures"
+  ],
+  "notes": [
+    "2026-08-12 c1: New standalone story. Surfaced via discovery-sweep cross-check against today's raw ingest; dedup-check returned only moderate/coincidental matches against unrelated model releases (thinking-machines-inkling-release, meta-muse-glimmer-launch, cisco-antares-vulnerability-models, open-weight-ai-restrictions-letters, mistral-shieldstral-safety-classifier), all confirmed unrelated. Full multi-agent protocol run: fresh verifier (Tier-0 primary fetch + live Artificial Analysis fetch for the independent benchmark, satisfying the §5 live-fetch rule) then fresh adversarial falsifier (separate context). Falsifier's one substantive finding -- the headline 670 tok/s figure was a pre-release, single-provider measurement, with a lower post-launch aggregate available -- was incorporated into the article before publish. style-gate: nvidia-nemotron-3-5-lightning EN pass / TR pass (falsifiable headline, standalone TL;DR noting the vendor-claim caveat, no padding, Turkish mirrors structure)."
+  ]
+}
