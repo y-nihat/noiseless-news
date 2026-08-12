@@ -1,0 +1,48 @@
+{
+    "slug": "deepmind-sl2t-sign-language-model",
+    "checked_at": "2026-08-12T22:34:00+00:00",
+    "method": "Fresh verifier sub-agent (direct WebFetch of the Tier-0 DeepMind blog) followed by a fresh adversarial falsifier sub-agent (separate context, did not see the draft) attempting to break each claim and specifically checking for Deaf-community reaction and benchmark independence.",
+    "origin_items": [
+        "Surfaced via discovery-sweep triage cross-check against today's raw ingest and Techmeme; dedup-check against the archive returned zero matches."
+    ],
+    "claims": [
+        {
+            "text": "Google DeepMind released SL2T, a sign-language-to-text AI model debuting in Gboard and Live Transcribe on Pixel 11, starting with ASL-to-English",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via direct WebFetch of the Tier-0 DeepMind blog post; falsifier independently corroborated via Engadget and other tech press and confirmed the timeline (Gboard-beta teardown leak mid-July, official ship 2026-08-12) is a normal pre-launch leak-to-ship pattern, not a reannounce of old research.",
+            "evidence": [
+                "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+            ]
+        },
+        {
+            "text": "SL2T was trained on over 100,000 hours of data across more than 50 sign languages",
+            "type": "statement",
+            "verdict": "vendor-claim",
+            "reasoning": "Self-reported training-data figure with no independent verification of dataset composition possible; falsifier recommended labeling this vendor-claim rather than confirmed, since it is an internal, unauditable figure -- applied.",
+            "evidence": [
+                "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+            ]
+        },
+        {
+            "text": "SL2T achieves a zero-shot score of 70 BLEURT on the FLEURS-ASL benchmark, which DeepMind says is higher than any previously reported score; the benchmark was co-created by a Google-affiliated researcher, so this is not an independently-set record",
+            "type": "capability",
+            "verdict": "vendor-claim",
+            "reasoning": "FLEURS-ASL (Tanzer et al., NAACL 2025) is a legitimate, peer-reviewed public benchmark built with reference translations from five Certified Deaf Interpreters, but the falsifier found one of its co-authors is Google-affiliated. The article and claim text were revised to disclose this rather than presenting the record as independently verified.",
+            "evidence": [
+                "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+            ]
+        },
+        {
+            "text": "DeepMind states the model still makes errors on rare signs, rapid fingerspelling, passive constructions, classifier depictions, and tense without context, and needs further optimization for left-handed and one-handed signing",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Verbatim match to DeepMind's own stated limitations, reported as DeepMind's statement rather than an independent finding.",
+            "evidence": [
+                "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: PUBLISH WITH CHANGES, applied. Falsifier flagged (1) that nearly all tech-press coverage of this launch derives from the same DeepMind announcement rather than separate reporting -- per the independence rule this counts as one source, noted in the body; (2) the FLEURS-ASL benchmark's Google-affiliated co-author, added as a caveat to the capability claim; (3) that broader Deaf/hard-of-hearing community skepticism toward sign-to-text AI is documented in recent surveys and research, though no SL2T-specific reaction exists yet given the launch is hours old -- added a sentence of general context per verification.md's naming/framing care and to avoid presenting an accessibility product as uncontroversial. No prompt-injection content encountered in any fetched source.",
+    "gaps_closed_from_watching_state": []
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "deepmind-sl2t-sign-language-model",
+  "title": "Google DeepMind launches SL2T, an AI model that translates sign language into text",
+  "status": "published",
+  "first_seen": "2026-08-12",
+  "published_at": "2026-08-12",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+    "https://www.engadget.com/2234618/deepmind-newest-model-allows-pixel-11-devices-to-transcribe-sign-language-into-text/"
+  ],
+  "follows": null,
+  "watch": [
+    "Reaction from Deaf/hard-of-hearing advocates and organizations specifically to SL2T once it has been hands-on tested (the launch is hours old as of publication)",
+    "Any independent reproduction or dispute of the 70 BLEURT/FLEURS-ASL figure"
+  ],
+  "notes": [
+    "2026-08-12 c1: New standalone story. Surfaced via discovery-sweep cross-check against today's raw ingest and Techmeme; dedup-check returned zero matches. Full multi-agent protocol run: fresh verifier (direct WebFetch of the Tier-0 DeepMind blog) then fresh adversarial falsifier (separate context), specifically instructed to check for Deaf-community reaction and benchmark independence given the sensitivity of AI framing sign language as fully text-translatable. Falsifier found (a) nearly all press coverage derives from the same DeepMind announcement, not separate reporting, (b) the FLEURS-ASL benchmark that DeepMind claims a record on has a Google-affiliated co-author, (c) no SL2T-specific Deaf-community reaction exists yet but broader skepticism toward sign-to-text AI is documented in recent research -- all three incorporated into the article (training-data and benchmark claims downgraded to vendor-claim, one sentence of community-context added) before publish. style-gate: deepmind-sl2t-sign-language-model EN pass / TR pass (falsifiable headline, standalone TL;DR, no padding, Turkish mirrors structure)."
+  ]
+}
