@@ -1,0 +1,22 @@
+{
+  "slug": "nvidia-500b-ai-financing-platform",
+  "title": "Nvidia announces $500 billion AI financing platform with six Wall Street asset managers",
+  "status": "published",
+  "first_seen": "2026-08-12",
+  "published_at": "2026-08-12",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+    "https://www.blackstone.com/news/press/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital/",
+    "https://www.cnbc.com/2026/08/11/wall-street-endorsed-jensen-huangs-big-concept-for-ai-what-now.html"
+  ],
+  "follows": null,
+  "reason": "Published: Nvidia's own newsroom release confirms non-binding MOUs with six asset managers (Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR) targeting over $500B in third-party financing capital, independently corroborated by Blackstone's own release. Huang's 25%-cap remarks confirmed via consistent cross-outlet paraphrase (CNBC, Motley Fool); verbatim CNBC transcript blocked (403). dedup-check returned zero matches. Falsifier confirmed this is a distinct initiative from the still-open nvidia-openai-250b-guarantee watching entry, not the same deal resurfacing.",
+  "watch": [
+    "Whether any of the six MOUs convert into definitive, signed financing agreements, and for which specific data-center projects",
+    "Whether this platform is later reported as connected to or funding the OpenAI/Ohio project covered in nvidia-openai-250b-guarantee"
+  ],
+  "notes": [
+    "2026-08-12 c4: surfaced via fresh ingest (gnews-ai-chips-and-compute). dedup-check clean. Verified via Nvidia + Blackstone primary/counterparty releases plus CNBC; adversarial falsifier pass found no disputes of the six-partner list or $500B figure, and confirmed no source connects this platform to the separate nvidia-openai-250b-guarantee story. Circular-financing market commentary noted but left out of the article body for lack of a specific, citable rebuttal (unattributed-vibes rule). Published EN + TR, editor gate passed both languages."
+  ]
+}

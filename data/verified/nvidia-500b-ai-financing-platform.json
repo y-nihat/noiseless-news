@@ -1,0 +1,50 @@
+{
+    "slug": "nvidia-500b-ai-financing-platform",
+    "checked_at": "2026-08-12T00:21:00+00:00",
+    "method": "Fresh verifier sub-agent plus adversarial falsifier sub-agent, both Sonnet 5. Primary sources: Nvidia's own newsroom release and Blackstone's independent press release (a counterparty confirming the same six-name partner list and $500B figure). CNBC (exclusive interview venue for Huang's 25% remarks) blocked direct fetch (403, consistent with prior-cycle CNBC blocks); the 25% claim rests on consistent cross-outlet paraphrase (CNBC's own follow-up piece, Motley Fool) rather than a verbatim transcript -- treated as confirmed-in-substance per multi-source corroboration, attributed loosely rather than quoted verbatim.",
+    "origin_items": [
+        "Surfaced via this cycle's fresh ingest (gnews-ai-chips-and-compute: 'Nvidia Credit Risk Eases After CEO Clarifies $500 Billion Plan - Yahoo Finance')."
+    ],
+    "claims": [
+        {
+            "text": "Nvidia announced non-binding memoranda of understanding with six asset managers -- Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR -- on 10 August 2026, to establish 'AI Compute Infrastructure Financing Platforms' aiming to mobilize over $500 billion in third-party capital for data-center and GPU-cluster financing",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Nvidia's own newsroom release states this directly; independently corroborated by Blackstone's own press release (a deal counterparty, not a relay) naming the identical six partners and figure. Also consistently covered by CNBC, Bloomberg, Fortune, DataCenterDynamics.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+                "https://www.blackstone.com/news/press/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital/"
+            ]
+        },
+        {
+            "text": "The agreements are memoranda of understanding subject to definitive agreements, not committed or signed capital",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Nvidia's own release frames the partnerships as subject to execution of definitive agreements; independently echoed by Motley Fool and TradingKey describing these as preliminary, non-binding deals.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+            ]
+        },
+        {
+            "text": "CEO Jensen Huang said, in a CNBC interview, that Nvidia's own financial backstop would be capped at roughly 25% of any individual project's financing, with the six firms making their own independent lending decisions",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "CNBC's own follow-up piece and Motley Fool both attribute this ~25%/$125B figure and the independent-underwriting framing to Huang's CNBC remarks (Becky Quick, Closing Bell: Overtime, 10 Aug 2026), consistently across two independent outlets. Verbatim CNBC transcript could not be fetched (403, known-pattern blocker); treated as confirmed via consistent multi-outlet paraphrase, not quoted verbatim in the article.",
+            "evidence": [
+                "https://www.cnbc.com/2026/08/11/wall-street-endorsed-jensen-huangs-big-concept-for-ai-what-now.html"
+            ]
+        },
+        {
+            "text": "Nvidia's announcement describes the platforms as financing for frontier AI labs, enterprises and AI clouds generally, without naming OpenAI or any specific project -- distinct from Nvidia's earlier, still-unconfirmed talks to guarantee around $250 billion in financing for OpenAI's Ohio data-center project, first reported in late July 2026",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Nvidia's release itself names no specific customer or project. No source found (including Fortune's Aug 11 coverage, which treats the two as separate stories) connects this platform to the OpenAI/Ohio guarantee still open on our watching ledger (nvidia-openai-250b-guarantee). Included for reader clarity given the coincidental $500B/$250B figures in circulation about Nvidia within the same three-week span.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+                "https://finance.yahoo.com/technology/ai/articles/nvidia-talks-openai-guarantee-250-233930971.html"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: PUBLISHABLE. dedup-check returned zero matches (standalone, distinct from the open nvidia-openai-250b-guarantee watching entry -- confirmed no source merges the two). No outlet disputes the six-partner list or the $500B figure. Circular/vendor-financing criticism exists in the market commentary (Bloomberg, TradingKey, 24/7 Wall St) and Nvidia stock fell ~3% on the announcement, but this is attributed to general investor sentiment/analyst commentary rather than a named, citable rebuttal of any specific claim -- left out of the article body per the no-unattributed-vibes rule (style.md Gate 3) rather than included as a vague 'some analysts worry' line. No bond-yield or CDS-spread numbers used in the article since no solidly-sourced, dated figures were found within the cycle's time budget.",
+    "gaps_closed_from_watching_state": []
+}
