@@ -1,0 +1,21 @@
+{
+  "slug": "deepseek-v4-pro-0813-quiet-update",
+  "title": "DeepSeek's V4 Pro API model quietly updated to an 0813 version",
+  "status": "watching",
+  "first_seen": "2026-08-13",
+  "source_urls": [
+    "https://api-docs.deepseek.com/quick_start/first_api_call",
+    "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
+    "https://huggingface.co/deepseek-ai"
+  ],
+  "follows": null,
+  "reason": "Surfaced via Simon Willison's Weblog (tier 3, discovery only): the deepseek-v4-pro API alias was silently repointed to an 0813-dated version, no dedicated changelog or announcement page found on DeepSeek's own site -- confirmed only via a footnote on the 'Your First API Call' docs page ('the deepseek-v4-pro model has been updated to DeepSeek-V4-Pro-0813'). No open-weights repo for this version found on huggingface.co/deepseek-ai as of this check (only DeepSeek-V4-Flash-0731, DeepSeek-V4-Flash-DSpark and DeepSeek-V4-Pro-DSpark listed, all July or earlier). dedup-check: zero matches against the existing deepseek-v4-flash-0731-beta article (that story covered the Flash variant only). Residual-substance test not yet clearable: no stated changelog, no benchmark claims, no confirmation of what changed technically or whether weights will be released -- there is a version-bump fact but no article-worthy claim set yet. Held rather than rushed given this cycle's tight time budget; would need either an official DeepSeek changelog entry or a substantive third-party diff (benchmark delta, capability change) to clear the bar.",
+  "watch": [
+    "A DeepSeek News (api-docs.deepseek.com/news) entry or updates-log line describing what changed in the 0813 version",
+    "Open-weights release of DeepSeek-V4-Pro-0813 on Hugging Face",
+    "Independent benchmark delta versus the prior V4-Pro (DSpark) version"
+  ],
+  "notes": [
+    "2026-08-13 c4: opened as watching-only; not run through full verify/falsify given thin substance and cycle time budget. Revisit in a later cycle's triage if fresh evidence appears."
+  ]
+}
