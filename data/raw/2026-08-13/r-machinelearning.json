@@ -68,5 +68,15 @@
     "published": "2026-08-13T22:52:35+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vnq08v/reproducible_canvasaligned_lowlevel_patterns_in/\"> <img alt=\"Reproducible canvas-aligned low-level patterns in somerandomllm-generated images and their possible relation to iterative editing artifacts [D]\" src=\"https://preview.redd.it/6y81in1w08jh1.png?width=140&amp;height=93&amp;auto=webp&amp;s=f3f68a4a6a484161f988ac1d47c988e74ed50114\" title=\"Reproducible canvas-aligned low-level patterns in somerandomllm-generated images and their possible relation to iterative editing artifacts [D]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I may have stumbled onto something interesting while trying to figure out a recurring artifact in ChatGPT image generation and editing (maybe applicable to other models as well?).</p> <p>It started with a very practical problem:</p> <p>After several rounds of <strong>generative editing</strong> on portraits, I would sometimes get this faint <strong>cloudy / mottled texture</strong> in areas that should have stayed smooth — backgrounds, walls, skin, and other low-detail regions.</p> <p>At first I wrote it off as normal denoising or regeneration noise. But the more I tested it, the less random it looked.</p> <h1>What first caught my attention</h1> <ul> <li>Running essentially the same edit again could make the artifact <strong>better or worse</strong></li> <li>The <strong>background</strong> sometimes became cleaner after another pass</li> <li>The <strong>face and body</strong> often seemed partly protected from whatever was happening</li> <li>Sometimes the wall improved while the face actually got worse</li> </ul> <p>That made me wonder whether different parts of the image were being handled differently during editing — preserved in some areas, regenerated in others, perhaps based on some internal mask or segmentation step.</p> <h1>The first useful experiment: shifting the image</h1> <p>Then I tried something slightly odd.</p> <p>Instead of repairing t…",
     "fetched_at": "2026-08-13T22:59:42.390997+00:00"
+  },
+  {
+    "id": "3a11de34dc19d137",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "TMLR Relevance and Prestige [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vnqk4k/tmlr_relevance_and_prestige_d/",
+    "published": "2026-08-13T23:16:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I recently had a paper accepted to TMLR and was wondering how prestigious it is, in comparison to A* conferences (ie. NeurIPS, ICLR, ICML), but also vs journals like JMLR. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Awesome_Nerd10\"> /u/Awesome_Nerd10 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vnqk4k/tmlr_relevance_and_prestige_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vnqk4k/tmlr_relevance_and_prestige_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-13T23:34:42.779974+00:00"
   }
 ]
