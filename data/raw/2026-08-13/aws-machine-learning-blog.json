@@ -1,0 +1,42 @@
+[
+  {
+    "id": "8604957f27c25879",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Monitor on-premises and multi-cloud AI agents with AgentCore Observability",
+    "url": "https://aws.amazon.com/blogs/machine-learning/monitor-on-premises-and-multi-cloud-ai-agents-with-agentcore-observability/",
+    "published": "2026-08-13T16:02:10+00:00",
+    "summary": "Set up Amazon Bedrock AgentCore Observability for AI agents running outside AWS: on-premises, on GCP, on Azure, or on developer machines. This walkthrough uses the AWS Distro for OpenTelemetry (ADOT) and IAM credentials to route session traces, span metrics, and token usage to the same AgentCore Observability dashboard.",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "8f7b1fab64281ea8",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Automate legacy web applications with Amazon Bedrock AgentCore Browser Tool",
+    "url": "https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/",
+    "published": "2026-08-13T15:56:07+00:00",
+    "summary": "Learn how to automate legacy web applications that need human-like interaction using Amazon Bedrock AgentCore Browser Tool and Strands Agents. This walkthrough covers a reference architecture for an AI-powered digital worker that drives legacy interfaces through secure, isolated browser sessions while preserving human oversight and full audit trails.",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "243ae33756cd9491",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Accelerating M&A due diligence with Amazon Bedrock AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/accelerating-ma-due-diligence-with-amazon-bedrock-agentcore/",
+    "published": "2026-08-13T15:52:44+00:00",
+    "summary": "Learn how to build a multi-agent M&amp;A due diligence system on Amazon Bedrock AgentCore. This post walks through a reference architecture that combines agent orchestration, knowledge retrieval, and governance controls, then deploys a complete sample you can run in your own AWS account.",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "0c6231ad2f2aee52",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Amazon Quick for Microsoft 365: Agentic AI where you work",
+    "url": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-for-microsoft-365-agentic-ai-where-you-work/",
+    "published": "2026-08-13T15:48:15+00:00",
+    "summary": "Amazon Quick is now available directly inside Microsoft Word, Excel, PowerPoint, and Outlook. These extensions bring connected data access and agentic document editing into the Microsoft 365 apps your teams already use, so you can analyze data, draft content, and reach enterprise knowledge without switching applications.",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  }
+]

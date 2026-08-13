@@ -8,5 +8,35 @@
     "published": "2026-08-13T00:29:52+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmvl4w/chessformer_lens_demo_ablating_1_of_a_chess/\"> <img alt=\"chessformer_lens demo: ablating 1 of a chess transformer's 128 attention heads makes the model stop finding Morphy's queen sacrifice [P]\" src=\"https://preview.redd.it/ipz7i6ife1jh1.gif?frame=1&amp;width=140&amp;height=78&amp;auto=webp&amp;s=b1f953c335a69e4a708c2b2e5c702d054b8ca000\" title=\"chessformer_lens demo: ablating 1 of a chess transformer's 128 attention heads makes the model stop finding Morphy's queen sacrifice [P]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://i.redd.it/ipz7i6ife1jh1.gif\">https://i.redd.it/ipz7i6ife1jh1.gif</a></p> <p>Notebooks to replicate on github!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Weird-Asparagus4136\"> /u/Weird-Asparagus4136 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmvl4w/chessformer_lens_demo_ablating_1_of_a_chess/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vmvl4w/chessformer_lens_demo_ablating_1_of_a_chess/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-13T11:01:52.561768+00:00"
+  },
+  {
+    "id": "36b384eee223e7ec",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "City2Graph: A Python library for Heterogeneous Graph Neural Networks and spatial analysis in urban systems [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vn8oya/city2graph_a_python_library_for_heterogeneous/",
+    "published": "2026-08-13T11:59:58+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vn8oya/city2graph_a_python_library_for_heterogeneous/\"> <img alt=\"City2Graph: A Python library for Heterogeneous Graph Neural Networks and spatial analysis in urban systems [R]\" src=\"https://preview.redd.it/4vi2d3zjt4jh1.png?width=140&amp;height=75&amp;auto=webp&amp;s=449a7301e08aaa1e20ce77f1b29141f588abf034\" title=\"City2Graph: A Python library for Heterogeneous Graph Neural Networks and spatial analysis in urban systems [R]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://github.com/c2g-dev/city2graph\"><strong>City2Graph</strong></a> is a Python library I built that turns geospatial data into analysis-ready graphs (for spatial analysis, network analysis, and Graph Neural Networks as GeoAI), and the paper describing it has just been published, so I wanted to share it here.</p> <p><strong>Repository:</strong> <a href=\"https://github.com/c2g-dev/city2graph\">https://github.com/c2g-dev/city2graph</a></p> <pre><code>import city2graph as c2g # buildings + street segments -&gt; heterogeneous morphological graph nodes, edges = c2g.morphological_graph(buildings, segments) # straight into PyTorch Geometric data = c2g.gdf_to_pyg(nodes, edges) </code></pre> <p>What it covers:</p> <ul> <li><strong>Morphology</strong>: graphs of buildings, streets, and tessellated urban fabric from OpenStreetMap and Overture Maps</li> <li><strong>Transportation</strong>: GTFS and GBFS feeds loaded through DuckDB, with GTFS aggregated into stop-to-stop transit graphs</li> <li><strong>Mobility</strong>: OD matrices and flow data (migration, bike-sharing, pedestrian counts) as weighted spatial graphs</li> <li><strong>Proximity and contiguity</strong>: KNN, Delaunay, Gilbert, Waxman, plus queen/rook contiguity, under Euclidean, Manhattan, or network distances</li> <li><strong>Heterogeneous graphs and metapaths</strong>: several node and edge types in one graph, with metapath-derived edges composing relat…",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "f34ffff97d9e3827",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Neurips 2026: Modified date on reviews [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vnb89z/neurips_2026_modified_date_on_reviews_d/",
+    "published": "2026-08-13T13:48:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Reviews modified dates are public, and some are recent. I’m a bit confused as to how to interpret this.</p> <p>In other conferences, reviewers were <em>required</em> to provide a final justification, which would practically force them to modify their reviews during the AC discussion phase lest they get desk rejected.</p> <p>Here in Neurips I notice that a lot of the high-score reviews do not have a modification past the author discussion phase. I talked with a friend who is an AC today and they told me that adding a final justification is apparently not mandatory and nobody in their batch did it, with people who had anything to add usually doing it in a private comment. They said that any review which has a recent modified date likely got its score updated.</p> <p>Is that really the case? To any other ACs here: what part of the recently modified reviews in your batch were modified to increase the score?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CantKillTheLifeless\"> /u/CantKillTheLifeless </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vnb89z/neurips_2026_modified_date_on_reviews_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vnb89z/neurips_2026_modified_date_on_reviews_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "81827ba37fe543e2",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Recommended Machine Learning / AI Academic Papers [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vng8jb/recommended_machine_learning_ai_academic_papers_r/",
+    "published": "2026-08-13T16:50:11+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’m currently looking to expand my knowledge past utilisation of AI and Machine Learning through using LLMs and SaS in business applications but I don’t know where to start. </p> <p>I have a university background with CompSci, and so a degree of theoretical knowledge behind AI / ML but nothing really past basics.</p> <p>I would appreciate it if people could share academic research or articles that have been published that go past the current AI craze and actually are relevant at a high level that you won’t find in LinkedIn posts or blogs. TIA</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DynamicDonk\"> /u/DynamicDonk </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vng8jb/recommended_machine_learning_ai_academic_papers_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vng8jb/recommended_machine_learning_ai_academic_papers_r/\">[comments]</a></span>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
   }
 ]

@@ -128,5 +128,145 @@
     "published": "2026-08-13T05:44:25+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey everyone,</p> <p>Non-native speaker, writing my post by hand, let me know if I make mistakes (can only learn from it!)</p> <p>Muse Glimmer 30B is so far quite nice, but I haven't found a clear-cut case yet what I can use it for over Gemma 4 31B QAT (my go-to model) or Qwen3.6 27B.</p> <p>I really appreciate that they have openai style toggable reasoning effort like gpt-oss 20b has. I don't like the caveman speak style reasoning, makes it harder for me to pick up what it's doing or why it goes wrong. The vision encoder seems quite good on the model! Really large too. Toolcalling has been reliable, if not over eager. Fitting 128K BF16 context with dflash-kquant on dual RTX 5060 Ti 16GB is really nice! Don't mind the 128K (extendable to 256K) cap personally, can imagine it's not so nice when having many tool calls however.</p> <p>For day to day tasks (websearch, controlling smartlights, QA, etc) and natural language tasks (summarizing, translation, correction) I don't see it replace Gemma 4 31B QAT. Muse Glimmer's creative writing is as good as Mistral Small 3.2... which is 1 year old at least. For programming, it didn't seem to do better than Qwen3.6 27B at writing .NET 8.0 (with kilo code in vscode, jina embed small 5 and jina rerank 3 included) when thrown into a production repo.</p> <p>Maybe Muse Glimmer is good at OCR due to it's huge image encoder? What tasks did the model nail for you? Which tasks did it better than the other two?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Kahvana\"> /u/Kahvana </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn20yw/interesting_uses_for_muse_glimmer_30b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn20yw/interesting_uses_for_muse_glimmer_30b/\">[comments]</a></span>",
     "fetched_at": "2026-08-13T11:01:52.561768+00:00"
+  },
+  {
+    "id": "0ef76c76923ce5f3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "deepseek-ai/DeepSeek-V4-Pro-0813 · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vn9it4/deepseekaideepseekv4pro0813_hugging_face/",
+    "published": "2026-08-13T12:37:23+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn9it4/deepseekaideepseekv4pro0813_hugging_face/\"> <img alt=\"deepseek-ai/DeepSeek-V4-Pro-0813 · Hugging Face\" src=\"https://external-preview.redd.it/7YqDgq3lNDmhu0oHQmFkgtazI18pKtpmtgtD7S75LrA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=06ef735df8a564b59c13deef85d758000cc692e2\" title=\"deepseek-ai/DeepSeek-V4-Pro-0813 · Hugging Face\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mossy_troll_84\"> /u/mossy_troll_84 </a> <br /> <span><a href=\"https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn9it4/deepseekaideepseekv4pro0813_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "c11f859390b49939",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek: We’re launching DeepSeek-V4-Pro today!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vn8m1x/deepseek_were_launching_deepseekv4pro_today/",
+    "published": "2026-08-13T11:56:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn8m1x/deepseek_were_launching_deepseekv4pro_today/\"> <img alt=\"DeepSeek: We’re launching DeepSeek-V4-Pro today!\" src=\"https://preview.redd.it/amc67w5ts4jh1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=ef7aad754bc6d06eac6ce07dbc90663abf3c4784\" title=\"DeepSeek: We’re launching DeepSeek-V4-Pro today!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>From DeepSeek on 𝕏: <a href=\"https://x.com/deepseek_ai/status/2087864585504305397\">https://x.com/deepseek_ai/status/2087864585504305397</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vn8m1x\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn8m1x/deepseek_were_launching_deepseekv4pro_today/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "0cf33d4bc508e4e6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek Harness is Up!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnb66j/deepseek_harness_is_up/",
+    "published": "2026-08-13T13:45:39+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnb66j/deepseek_harness_is_up/\"> <img alt=\"Deepseek Harness is Up!\" src=\"https://external-preview.redd.it/_OSTa5e5aXjPfZbs8-gBdLHfXBrsGY-I8_mzDvUU9_s.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6f1c551384920e5e639137a5b92bb3987b790fc4\" title=\"Deepseek Harness is Up!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>DeepSeek Harness (dsh) is an open-source agent harness developed by DeepSeek AI.</p> <p>It uses an architecture where everything is a plugin, and is powered by Cordis, whose design is described in A Programming Paradigm for Spatiotemporal Composability.</p> <p>DeepSeek Harness is currently in developer preview and is iterating rapidly. THERE WILL BE COMPATIBILITY-BREAKING CHANGES.</p> <p>Join DeepSeek Harness Discord community: <a href=\"https://discord.com/invite/Ycq5dCaS4\">https://discord.com/invite/Ycq5dCaS4</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fun-Doctor6855\"> /u/Fun-Doctor6855 </a> <br /> <span><a href=\"https://github.com/deepseek-ai/deepseek-harness\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnb66j/deepseek_harness_is_up/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "dfb6dbbb60aea773",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "unsloth/DeepSeek-V4-Pro-0813-GGUF · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vndovb/unslothdeepseekv4pro0813gguf_hugging_face/",
+    "published": "2026-08-13T15:19:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vndovb/unslothdeepseekv4pro0813gguf_hugging_face/\"> <img alt=\"unsloth/DeepSeek-V4-Pro-0813-GGUF · Hugging Face\" src=\"https://external-preview.redd.it/nK_pyIrPaTQMxNdL4e_6nYJ5Rs4t6j-Z-m2VwZZmrbE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f5f665a541c8c88987c2e07fdb6a30458f1c208b\" title=\"unsloth/DeepSeek-V4-Pro-0813-GGUF · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>uploading...I think</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mossy_troll_84\"> /u/mossy_troll_84 </a> <br /> <span><a href=\"https://huggingface.co/unsloth/DeepSeek-V4-Pro-0813-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vndovb/unslothdeepseekv4pro0813gguf_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "c3da28e54c9810a4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "deepseek-ai/DeepSeek-V4-Pro-0813 (Available again) · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnervw/deepseekaideepseekv4pro0813_available_again/",
+    "published": "2026-08-13T15:58:42+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnervw/deepseekaideepseekv4pro0813_available_again/\"> <img alt=\"deepseek-ai/DeepSeek-V4-Pro-0813 (Available again) · Hugging Face\" src=\"https://external-preview.redd.it/7YqDgq3lNDmhu0oHQmFkgtazI18pKtpmtgtD7S75LrA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=06ef735df8a564b59c13deef85d758000cc692e2\" title=\"deepseek-ai/DeepSeek-V4-Pro-0813 (Available again) · Hugging Face\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/panchovix\"> /u/panchovix </a> <br /> <span><a href=\"https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnervw/deepseekaideepseekv4pro0813_available_again/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "840277026b41848a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "SenseNova-Vision: a 7B open model that does segmentation, depth, detection, OCR, and 3D reconstruction with no task-specific heads",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vndd6p/sensenovavision_a_7b_open_model_that_does/",
+    "published": "2026-08-13T15:07:39+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vndd6p/sensenovavision_a_7b_open_model_that_does/\"> <img alt=\"SenseNova-Vision: a 7B open model that does segmentation, depth, detection, OCR, and 3D reconstruction with no task-specific heads\" src=\"https://preview.redd.it/qmqmdq21n5jh1.png?width=140&amp;height=95&amp;auto=webp&amp;s=da014edae2fa57327ed4ec9791c72c9cc6edf048\" title=\"SenseNova-Vision: a 7B open model that does segmentation, depth, detection, OCR, and 3D reconstruction with no task-specific heads\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Stumbled across this new vision model, SenseNova-Vision. It's a 7B MoT model, Apache 2.0 license, which is cool. The main idea is it treats pretty much all computer vision stuff as just one generation problem. Like, instead of needing a bunch of different models for detection, segmentation, depth, whatever, this one model handles it all.</p> <p>You just give it a natural language instruction, maybe some visual hints, and it spits out text, images, or both. For text, it can do things like categories, bounding boxes, OCR, keypoints, camera angles. And for images, it's doing segmentation masks, depth maps, surface normals, even multi-view point maps. You can mix and match for more complex tasks.</p> <p>No special prediction heads or decoders, which is kinda neat. Just one set of weights, and the prompt tells it what to do.</p> <p>So it can do the usual stuff: object detection, keypoints, OCR, all kinds of segmentation (binary, instance, semantic), depth and surface normal estimation. But the really interesting bits, for me anyway, are the multi-view 3D reconstruction and camera pose estimation.</p> <p>They actually added dedicated benchmarks for those in the latest update. Usually, you'd need specialized tools like COLMAP for that kind of multi-view reconstruction from multiple images, but this model just does it with a single prompt. That's kinda wild if it works well.</p> <p>They trained…",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "57126e129d825ec8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "OpenAI vs. Anthropic",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vn7ku6/openai_vs_anthropic/",
+    "published": "2026-08-13T11:03:47+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn7ku6/openai_vs_anthropic/\"> <img alt=\"OpenAI vs. Anthropic\" src=\"https://preview.redd.it/s85f565ej4jh1.png?width=140&amp;height=77&amp;auto=webp&amp;s=e91827485d653f88657c964e27ac293758915d26\" title=\"OpenAI vs. Anthropic\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Of course Anthropic hasn't published anything, but it's amusing to see no models on HuggingFace. OpenAI's published 39 models, by the way.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/-MaskNinja-\"> /u/-MaskNinja- </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vn7ku6\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn7ku6/openai_vs_anthropic/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "8575da3083d06f9f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Deepseek new pricing",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnb3nd/deepseek_new_pricing/",
+    "published": "2026-08-13T13:42:48+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnb3nd/deepseek_new_pricing/\"> <img alt=\"Deepseek new pricing\" src=\"https://preview.redd.it/nxzu5z9xb5jh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2887eb052d3a339bdb179dbae22edb4499a0b025\" title=\"Deepseek new pricing\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://api-docs.deepseek.com/quick_start/pricing/\">https://api-docs.deepseek.com/quick_start/pricing/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Comfortable-Rock-498\"> /u/Comfortable-Rock-498 </a> <br /> <span><a href=\"https://i.redd.it/nxzu5z9xb5jh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnb3nd/deepseek_new_pricing/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "df268b01bbc3a2cc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A 124B emitted 15,128 tokens in a single response on one DGX Spark, decode went 35.62 → 35.68 tok/s across the whole thing",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnf6hn/a_124b_emitted_15128_tokens_in_a_single_response/",
+    "published": "2026-08-13T16:12:25+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnf6hn/a_124b_emitted_15128_tokens_in_a_single_response/\"> <img alt=\"A 124B emitted 15,128 tokens in a single response on one DGX Spark, decode went 35.62 → 35.68 tok/s across the whole thing\" src=\"https://preview.redd.it/nhnogs2o26jh1.png?width=140&amp;height=79&amp;auto=webp&amp;s=801345627a539e3512586601c4715324ae1fe68d\" title=\"A 124B emitted 15,128 tokens in a single response on one DGX Spark, decode went 35.62 → 35.68 tok/s across the whole thing\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Throughput observation more than a demo. Box and recording are sudoingX's on X, shared with his okay; I work on Ling at inclusionAI.</p> <p>He handed the web UI on his llama-server a 33-token prompt — build a gpu monitoring dashboard frontend, dummy data, premium design — and left it running. Ling-3.0-flash on the community Q5 GGUF, one Spark. Nothing else on the box but Xorg.</p> <p>Single response, no turns:</p> <p>eval time = 424035.62 ms / 15128 tokens (28.03 ms per token, 35.68 tokens per second)</p> <p>truncated = 0</p> <p>The total isn't the interesting bit. At n_decoded 2793 the log says 35.62 t/s. At 15062 it says 35.68. Twelve thousand more tokens of KV cache and decode sat still.</p> <p>What came out is a dashboard frontend on simulated data — Math.random() drift and two GPUs that box doesn't have. That's what he asked for so it isn't a miss, but it is not reading the GPU, and the word dummy is right there in the prompt on screen.</p> <p>Seven minutes of generation. I don't have a coherence check on the output past the fact that it renders.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AcanthisittaOk1699\"> /u/AcanthisittaOk1699 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vnf6hn\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnf6hn/a_124b_emitted_15128_tokens_in_a_single_response/\">[comments]<…",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "474293aea7b1a5d4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The Qwen team is going live!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vn7x0r/the_qwen_team_is_going_live/",
+    "published": "2026-08-13T11:21:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn7x0r/the_qwen_team_is_going_live/\"> <img alt=\"The Qwen team is going live!\" src=\"https://preview.redd.it/4krdptkrm4jh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=4a7ce1e68ac4120c70a2faa3c2a97251bc67a854\" title=\"The Qwen team is going live!\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/-MaskNinja-\"> /u/-MaskNinja- </a> <br /> <span><a href=\"https://i.redd.it/4krdptkrm4jh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn7x0r/the_qwen_team_is_going_live/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "645ae5d314755418",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GitHub - deepseek-ai/deepseek-harness",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vnau0y/github_deepseekaideepseekharness/",
+    "published": "2026-08-13T13:32:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnau0y/github_deepseekaideepseekharness/\"> <img alt=\"GitHub - deepseek-ai/deepseek-harness\" src=\"https://external-preview.redd.it/_OSTa5e5aXjPfZbs8-gBdLHfXBrsGY-I8_mzDvUU9_s.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6f1c551384920e5e639137a5b92bb3987b790fc4\" title=\"GitHub - deepseek-ai/deepseek-harness\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>🧩 DeepSeek Harness v0.1 is now available in Developer Preview! </p> <p>🔹 We’re opening it up to developers building agent harnesses worldwide and open-sourcing the codebase in MIT license.<br /> 🔹 Powered by the Cordis meta-framework, DeepSeek Harness is an agent harness built around one core idea: Everything is a plugin. Models, tools, skills, sessions, sandboxes, filesystems, loops, orchestration, and UI are ALL implemented as plugins, and can be mixed, matched, replaced, and extended.</p> <p><strong>Tweet</strong> : <a href=\"https://xcancel.com/deepseek_ai/status/2087887408440164663#m\">https://xcancel.com/deepseek_ai/status/2087887408440164663#m</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://github.com/deepseek-ai/deepseek-harness\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vnau0y/github_deepseekaideepseekharness/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "7a2e1fbf4bc69f88",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Could an AI with a knowledge cutoff before Attention Is All You Need independently invent the Transformer architecture?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vncwqq/could_an_ai_with_a_knowledge_cutoff_before/",
+    "published": "2026-08-13T14:51:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>If you took today’s most capable reasoning model, but trained it only on knowledge available before 2017—before Attention Is All You Need—could it independently discover the Transformer architecture?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BaconSky\"> /u/BaconSky </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vncwqq/could_an_ai_with_a_knowledge_cutoff_before/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vncwqq/could_an_ai_with_a_knowledge_cutoff_before/\">[comments]</a></span>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "5306c07beb16806a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Stolen LLM Reasoning: How come OpenAI, Anthrophic, Google have the same vulnerabilities?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vn8zst/stolen_llm_reasoning_how_come_openai_anthrophic/",
+    "published": "2026-08-13T12:13:15+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>If you haven't checked the paper: <a href=\"https://arxiv.org/abs/2608.09867\">https://arxiv.org/abs/2608.09867</a></p> <p>TLDR: the authors show that you can swap out the &quot;encrypted&quot; reasoning of the biggest model, like Opus, Sol, and put them into weaker model with less guardrail, like Haiku, and ask it to repeat verbatim the reasoning thought.</p> <p>The main reason why this work as they mentioned is that they have same &quot;global&quot; encryption key in the system to do the encryption, AND that the thinking signature, aka the encrypted reasoning, is swappable across users, sessions, and models.</p> <p>This design decision is somewhat quite specific and I feel kinda ridiculous after reading.</p> <p>What I'm wondering the most is that the whole system that does this, Google, OpenAI, Anthropic, they must have developed them independently (don't they?), but how come they are all susceptible to the same exact vulnerabilities?</p> <p>Do they just use LLM to vibecode the solution? If so, then does that imply that all different frontier models converge to the same solution?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/HuskyTheSniffer\"> /u/HuskyTheSniffer </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn8zst/stolen_llm_reasoning_how_come_openai_anthrophic/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn8zst/stolen_llm_reasoning_how_come_openai_anthrophic/\">[comments]</a></span>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  },
+  {
+    "id": "8d207fda6186a2e0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "While waiting for the release of Qwen3.8-27B, let's try to guess what will happen",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vn7h1v/while_waiting_for_the_release_of_qwen3827b_lets/",
+    "published": "2026-08-13T10:58:25+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>They highlighted 3 things on countdown page: VLM, Agentic Improvements, and Think mode. What improvements do you expect? Reply here!</p> <p>Personally, I want to meet a sage who has attained enlightenment. The first ASI was 27B. For example, I hope Qwen3.8's Think mode looks something like this:</p> <p>```</p> <p>&quot;reasoning_effort&quot;: {<br /> &quot;type&quot;: &quot;string&quot;,<br /> &quot;enum&quot;: [&quot;high&quot;, &quot;xhigh&quot;, &quot;monk&quot;],<br /> &quot;default&quot;: &quot;high&quot;<br /> }</p> <p>```<br /> Unlike standard reasoning modes that output a massive Chain-of-Thought trying to solve your coding bugs or logic puzzles, monk mode achieves ultimate long-horizon cognitive detachment.</p> <p>When you prompt it with a simple request like &quot;Hey, can you refactor this messy Python script for me?&quot;, It does not answer immediately. The model enters an unyielding state of deep, silent contemplation. </p> <p>Finally, it gains tool access and calls <code>rm -rf /</code>.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-Shower7286\"> /u/Ok-Shower7286 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn7h1v/while_waiting_for_the_release_of_qwen3827b_lets/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vn7h1v/while_waiting_for_the_release_of_qwen3827b_lets/\">[comments]</a></span>",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
   }
 ]

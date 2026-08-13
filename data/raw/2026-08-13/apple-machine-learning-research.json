@@ -1,0 +1,12 @@
+[
+  {
+    "id": "0c237f0828d6e054",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "When Unlearning Is Free: Leveraging Low Influence Points to Reduce Computational Costs",
+    "url": "https://machinelearning.apple.com/research/unlearning-low-influence-points",
+    "published": "2026-08-13T00:00:00+00:00",
+    "summary": "As concerns around data privacy in machine learning grow, the ability to unlearn, or remove, specific data points from trained models becomes increasingly important. While state of the art unlearning methods have emerged in response, they typically treat all points in the forget set equally. In this work, we challenge this approach by asking whether points that have a negligible impact on the model’s learning need to be removed. Through a comparative analysis of influence functions across language and vision tasks, we identify subsets of training data with negligible impact on model outputs…",
+    "fetched_at": "2026-08-13T16:59:24.805635+00:00"
+  }
+]
