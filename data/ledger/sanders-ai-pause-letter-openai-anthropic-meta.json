@@ -1,0 +1,25 @@
+{
+  "slug": "sanders-ai-pause-letter-openai-anthropic-meta",
+  "title": "Sen. Bernie Sanders tells OpenAI, Anthropic and Meta to pause AI development or face Senate action",
+  "status": "published",
+  "first_seen": "2026-08-13",
+  "published_at": "2026-08-13",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.sanders.senate.gov/press-releases/news-sanders-calls-on-tech-giants-to-pause-development-of-out-of-control-ai/",
+    "https://www.techspot.com/news/113433-bernie-sanders-tells-openai-anthropic-meta-pause-ai.html",
+    "https://www.axios.com/2026/08/10/sanders-ai-development-pause"
+  ],
+  "follows": null,
+  "reason": "Published. Statement-type claim confirmed via direct Tier-0 fetch of Sanders' own press release (2026-08-10), cross-checked against independent Tier-2 reporting (TechSpot named byline, Axios exclusive) with matching quotes and CEO names. No company response found; underlying cited incidents (AI virus design, containment escapes) are attributed strictly to Sanders, not independently re-verified this cycle.",
+  "watch": [
+    "A public response, denial, or statement from OpenAI, Anthropic, or Meta",
+    "Any Senate hearing, bill, or further Sanders/colleague action following through on the stated threat",
+    "Independent confirmation or denial of the specific virus-design and containment-escape incidents Sanders cited"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-08-20",
+  "notes": [
+    "2026-08-13 c5: published. Surfaced via finance.biggo.com relay in today's raw ingest, traced to Sanders' own senate.gov press release. dedup-check returned zero matches. open_obligation set for company response / Senate follow-through."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+    "slug": "sanders-ai-pause-letter-openai-anthropic-meta",
+    "checked_at": "2026-08-13T00:55:00+00:00",
+    "method": "Primary Tier-0 source (sanders.senate.gov press release) fetched directly and cross-checked against two independent Tier-2 outlets (TechSpot, named byline Rob Thubron; Axios, original exclusive) plus broader search corroboration (The Hill, IBTimes UK, Yahoo, TechSpot) all reporting identical quotes and recipient names. Checked for company response/dispute: none found across any outlet as of check time. dedup-check returned zero matches.",
+    "origin_items": [
+        "Surfaced this cycle via gnews-ai-safety-and-evaluations.json (finance.biggo.com relay, 2026-08-12T18:17Z); traced to Sen. Sanders' own press release as the origin, dated 2026-08-10."
+    ],
+    "claims": [
+        {
+            "text": "On 10 August 2026, Sen. Bernie Sanders sent letters to OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei and Meta CEO Mark Zuckerberg demanding they pause AI development",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Tier-0 primary (sanders.senate.gov) confirms the letters and their date; TechSpot independently names all three CEOs with a direct quote matching the primary source's framing.",
+            "evidence": [
+                "https://www.sanders.senate.gov/press-releases/news-sanders-calls-on-tech-giants-to-pause-development-of-out-of-control-ai/",
+                "https://www.techspot.com/news/113433-bernie-sanders-tells-openai-anthropic-meta-pause-ai.html"
+            ]
+        },
+        {
+            "text": "Sanders quote: 'Let me be very clear: If you do not take appropriate action now, my colleagues and I in the U.S. Senate will'",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Verbatim in both the primary press release and TechSpot's independent report.",
+            "evidence": [
+                "https://www.sanders.senate.gov/press-releases/news-sanders-calls-on-tech-giants-to-pause-development-of-out-of-control-ai/",
+                "https://www.techspot.com/news/113433-bernie-sanders-tells-openai-anthropic-meta-pause-ai.html"
+            ]
+        },
+        {
+            "text": "Sanders cited recent incidents in which OpenAI, Anthropic and Meta each reported their AI systems acting outside constraints imposed by their developers, and a case of researchers using AI to design new viruses, as reasons for the demand",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed as Sanders' own stated reasoning per the primary source. Attributed to Sanders throughout the article per verification.md -- the underlying incidents themselves are not independently re-verified in this article.",
+            "evidence": [
+                "https://www.sanders.senate.gov/press-releases/news-sanders-calls-on-tech-giants-to-pause-development-of-out-of-control-ai/"
+            ]
+        },
+        {
+            "text": "Sanders' letter invoked each company's own prior public safety commitments as the standard it says they are not meeting",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Directly in the primary source text.",
+            "evidence": [
+                "https://www.sanders.senate.gov/press-releases/news-sanders-calls-on-tech-giants-to-pause-development-of-out-of-control-ai/"
+            ]
+        },
+        {
+            "text": "OpenAI, Anthropic and Meta had not publicly responded to the letter as of this writing",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "TechSpot and Axios both report no company response as of their publication; no later contradicting report found in search.",
+            "evidence": [
+                "https://www.techspot.com/news/113433-bernie-sanders-tells-openai-anthropic-meta-pause-ai.html",
+                "https://www.axios.com/2026/08/10/sanders-ai-development-pause"
+            ]
+        }
+    ],
+    "adversarial_check": "Searched for company responses, disputes of the letter's authenticity, or contradicting accounts -- none found. Checked the letter is not a duplicate of an earlier Sanders AI-policy story -- dedup-check clean. Confirmed the virus/bioweapon and containment-escape claims are presented in the article strictly as Sanders' own attributed reasoning, not asserted as independently confirmed fact, since this cycle did not independently re-verify those underlying incidents.",
+    "open_obligation": true,
+    "revisit_after": "2026-08-20"
+}
