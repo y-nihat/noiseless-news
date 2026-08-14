@@ -1,0 +1,60 @@
+{
+  "slug": "deepseek-v4-pro-0813-quiet-update",
+  "checked_at": "2026-08-14T00:20:00+00:00",
+  "method": "Story carried over as a watching entry across four prior cycles (2026-08-13 c1/c2/c3, 2026-08-14 c1). This cycle: dedup-check against the archive returned only the story's own watching entry (moderate match, expected). Fresh verifier sub-agent live-fetched DeepSeek's own GA announcement page, updates log and pricing page, Nikkei Asia's article, Artificial Analysis's live model page, and the South China Morning Post article in full. Fresh adversarial falsifier sub-agent independently ran the same fetches plus searched for denials/corrections, a rumored 12 August 'quiet release', and a claimed retracted release note. Both sub-agents were run in parallel without seeing each other's output; findings converged (GO with caveats).",
+  "origin_items": [
+    "Continuation of watching entry opened 2026-08-13 via Simon Willison's Weblog (tier 3, discovery); substance accumulated across cycles from DeepSeek's own changelog, Reuters (via TradingView), Nikkei Asia, and a South China Morning Post independent-benchmark piece"
+  ],
+  "claims": [
+    {
+      "text": "DeepSeek moved V4-Pro out of API preview to general availability across app, web interface and API on 13 August 2026, with the release centered on agent capabilities and new configurable reasoning-effort levels",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (DeepSeek's own dedicated GA announcement page and updates log) states this directly with a dated entry; independently corroborated same-day by Reuters (via TradingView reprint) and Nikkei Asia (byline Cissy Zhou, distinct framing/details not present in the wire text). Falsifier specifically checked and rejected a content-farm claim of a separate, unconfirmed '12 August quiet release' -- no credible primary or Tier 0-2 source supports that date; DeepSeek's own changelog states 13 August.",
+      "evidence": [
+        "https://api-docs.deepseek.com/news/news260813/",
+        "https://api-docs.deepseek.com/updates",
+        "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN44A0IU:0-deepseek-says-launching-deepseek-v4-pro-today/",
+        "https://asia.nikkei.com/business/technology/artificial-intelligence/deepseek-releases-official-v4-pro-model-with-sharply-higher-user-prices"
+      ]
+    },
+    {
+      "text": "DeepSeek is raising V4-Pro API output-token pricing from a flat $0.87 per million tokens to a peak/off-peak structure ($3.96/M peak, $1.98/M off-peak), effective 16:00 UTC on 16 August 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Live-fetched directly from DeepSeek's own pricing page; matches the GA announcement page's stated mechanism (off-peak = 50% of peak) and effective timestamp; independently reported by Reuters/TradingView and Nikkei Asia. Falsifier resolved a prior cycle's ambiguity: an earlier vague Bloomberg 'significant price increase' story (2026-08-06) is an early preview of this same policy, not a conflicting separate event.",
+      "evidence": [
+        "https://api-docs.deepseek.com/quick_start/pricing",
+        "https://api-docs.deepseek.com/news/news260813/"
+      ]
+    },
+    {
+      "text": "DeepSeek reports V4-Pro-0813 scoring 87.9 on Terminal-Bench 2.1, 62.7 on DeepSWE, 83.3 on CyberGym, 61.5 on NL2Repo, and 42.7/60.0 on Humanity's Last Exam without/with tools",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "All figures live-fetched directly from DeepSeek's own updates log; no independent evaluator has reproduced these specific benchmark results. Not independently confirmed -- labeled vendor-claim per policy.",
+      "evidence": [
+        "https://api-docs.deepseek.com/updates"
+      ]
+    },
+    {
+      "text": "An independent Artificial Analysis evaluation scores V4-Pro-0813 at 53 on its Intelligence Index, ranking it third among comparable open-weight models but behind current frontier proprietary systems",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Live-fetched directly from artificialanalysis.ai at publication time (verification.md section 5 live-fetch rule), timestamp 2026-08-14. Matches the figure South China Morning Post separately cited, cross-confirming both.",
+      "evidence": [
+        "https://artificialanalysis.ai/models/deepseek-v4-pro"
+      ]
+    },
+    {
+      "text": "South China Morning Post reported that Vals AI's independent evaluation found V4-Pro-0813 notably weaker than rivals on sandboxed-terminal and complex financial-spreadsheet tasks, despite comparatively strong cybersecurity performance",
+      "type": "capability",
+      "verdict": "single-source",
+      "reasoning": "Verified by fetching the SCMP article in full. SCMP's account rests on different, non-overlapping benchmarks (Artificial Analysis Index, Vals AI Index) than DeepSeek's own reported deltas, so it does not directly contradict the vendor figures above -- it is a separate, independent read on general capability, not a rebuttal of the specific vendor numbers. The specific Vals AI numeric rank was not independently live-fetched by us (only relayed via SCMP), so per the live-fetch rule for third-party numbers it is presented as SCMP's attributed reporting (single-source) rather than as our own confirmed figure; the qualitative weak-spot findings are cited as SCMP's characterization. A NIST/CAISI cybersecurity figure (32% vs 71%) found in some coverage was excluded -- it tested the April preview build, not this GA release, and would misattribute stale data to the new model.",
+      "evidence": [
+        "https://www.scmp.com/tech/big-tech/article/3363895/deepseeks-updated-v4-pro-ai-model-struggles-benchmarks-shines-cybersecurity"
+      ]
+    }
+  ],
+  "notes": "Falsifier checked and rejected two low-quality claims circulating on content-farm sites (novcog.us.com, lovableapp.org, kingy.ai, thecherrycreeknews.com, digitalapplied.com, modemguides.com, northdenvertribune.com -- none registered, none cited as evidence): (1) a '12 August quiet release' predating the 13 August GA date -- no primary or Tier 0-2 corroboration, contradicted by DeepSeek's own changelog; (2) a claim that DeepSeek posted then quietly retracted an in-app release note -- no archive.org or credible reporting found to support this, dropped entirely. A Tier-3 X/Twitter post claiming an 87.5% CVE-recall figure was noted as discovery-only color, not used as evidence. techstartups.com's 'up to 1,100%' price-increase framing and qz.com (a blocked_evidence_domain) were not used -- our own calculation from DeepSeek's primary pricing page gives a peak-hour increase of roughly 4.5x (355%), not 1,100%; the higher figure appears to be a miscalculation or conflation with a different pricing tier and was not corroborated. Falsifier go/no-go: GO WITH CAVEATS -- launch and pricing facts confirmed, capability claims split between labeled vendor-claim and single-source-attributed independent color, no claim published as flatly 'disputed' since the vendor and independent benchmark sets do not overlap."
+}
