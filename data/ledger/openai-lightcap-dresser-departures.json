@@ -1,21 +1,24 @@
 {
   "slug": "openai-lightcap-dresser-departures",
-  "title": "OpenAI loses two senior executives within days: COO Brad Lightcap and CRO Denise Dresser",
-  "status": "candidate",
+  "title": "OpenAI's Brad Lightcap and Denise Dresser both leave within two days",
+  "status": "published",
   "first_seen": "2026-08-14",
+  "published_at": "2026-08-14",
+  "langs": ["en", "tr"],
   "source_urls": [
-    "https://www.cnbc.com/2026/08/13/openai-denise-dresser-executive-exits.html",
+    "https://openai.com/index/dali-rajic-chief-revenue-officer/",
+    "https://techcrunch.com/2026/08/11/brad-lightcap-openais-longtime-coo-is-leaving-to-start-something-new/",
     "https://www.cnbc.com/2026/08/11/longtime-openai-executive-brad-lightcap-leaves-as-shakeup-at-ai-lab-continues.html",
-    "https://fortune.com/2026/08/11/openai-exec-brad-lightcap-leaving-start-something-new/"
+    "https://fortune.com/2026/08/11/openai-exec-brad-lightcap-leaving-start-something-new/",
+    "https://www.cnbc.com/2026/08/13/openai-denise-dresser-executive-exits.html",
+    "https://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues/",
+    "https://www.bloomberg.com/news/articles/2026-08-13/openai-hires-new-chief-revenue-officer-after-less-than-a-year"
   ],
   "follows": null,
-  "reason": "Not yet verified -- surfaced this cycle (00:11Z gnews-ai-regulation-and-policy ingest, The Verge item) with a ~20-minute cycle window remaining after publishing the deepseek-v4-pro-0813-quiet-update story, not enough time to safely run the full verify+falsify+bilingual-write+editor-gate protocol. Preliminary web search shows this is DISTINCT from the still-watching openai-safety-heidecke-departure entry (that one is about the safety org, Mia Glaese/Saachi Jain reshuffle, single-sourced to a Wired exclusive) -- Lightcap (long-time COO, 8 years at OpenAI, reported leaving 'to start something new') and Dresser (Chief Revenue Officer, under a year in role) are business-side executives, and initial coverage (CNBC, Fortune) appears independently bylined rather than a single wire relay, which would likely clear the >=2-independent-source business-claim bar. dedup-check returned zero matches against the archive. Worth a fast verify pass next cycle: confirm CNBC and Fortune are genuinely independent (not both relaying one press release/scoop), check for an OpenAI on-the-record statement on either departure, and check whether Dresser's replacement (reportedly Dali Rajic, ex-Wiz president/COO) is itself independently confirmed.",
-  "watch": [
-    "OpenAI on-the-record statement or spokesperson comment on either departure",
-    "Independent confirmation of Dali Rajic as Dresser's replacement",
-    "Whether any outlet connects this to the same reorg described in the still-open openai-safety-heidecke-departure entry (currently believed unrelated -- business side vs. safety org)"
-  ],
+  "reason": "Published: both departures independently confirmed by 2+ genuinely independent outlets each (TechCrunch/CNBC/Fortune for Lightcap; OpenAI's own site plus CNBC/TechCrunch/Bloomberg for Dresser/Rajic), unrelated to the still-watching openai-safety-heidecke-departure entry.",
+  "watch": [],
   "notes": [
-    "2026-08-14 c4: Opened as candidate from this cycle's fresh ingest (The Verge, via GNews regulation/policy query: 'OpenAI is losing its second executive this week'). Quick web search found CNBC (2026-08-11 Lightcap, 2026-08-13 Dresser) and Fortune (2026-08-11 Lightcap) as the lead independent outlets. Not verified or published this cycle -- flagging as a promising next-cycle pickup, similar in shape to how deepseek-v4-pro-0813-quiet-update was carried across cycles before publishing."
+    "2026-08-14 c4: Opened as candidate from fresh ingest (The Verge via GNews). Not verified this cycle -- flagged as top priority handoff.",
+    "2026-08-14 c5: Full multi-agent protocol run -- fresh verifier and fresh adversarial falsifier sub-agents in parallel, plus main-cycle live search/fetch to confirm OpenAI's own Dali Rajic announcement page (direct fetch 403'd, confirmed via site-scoped search). Falsifier's key finding: Lightcap was not OpenAI's sitting COO at the time of his August departure -- he moved to a special-projects role in an April 2026 reorganization; framing corrected accordingly in the article. Confirmed unrelated to the openai-safety-heidecke-departure entry. No denial or dispute found. Published EN+TR. style-gate: EN pass / TR pass (headline dated/falsifiable; TL;DR standalone; no padding; TR natural mirror)."
   ]
 }

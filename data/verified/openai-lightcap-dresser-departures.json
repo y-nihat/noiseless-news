@@ -1,0 +1,34 @@
+{
+  "slug": "openai-lightcap-dresser-departures",
+  "checked_at": "2026-08-14T00:55:00+00:00",
+  "method": "Story carried over as a candidate from cycle 4 (opened from a GNews/The Verge lead, not verified that cycle). This cycle: dedup-check against the archive returned only the story's own candidate entry (expected). Fresh verifier and fresh adversarial falsifier sub-agents were run in parallel, neither having drafted the story. Both independently searched for and read coverage of both departures; the main cycle additionally live-fetched/searched TechCrunch's Lightcap piece directly and confirmed OpenAI's own site post naming Dali Rajic as Dresser's successor via a site-scoped search (openai.com direct fetch returned HTTP 403, a known blocker per the night's cycle prompt). Findings converged (GO, with one framing correction: Lightcap was not OpenAI's sitting COO at the time of his August departure -- he had already moved to a special-projects role in April 2026).",
+  "origin_items": [
+    "Opened 2026-08-14 c4 via The Verge (GNews regulation/policy query, 'OpenAI is losing its second executive this week'); substance built from CNBC, Fortune, TechCrunch, Bloomberg and OpenAI's own site"
+  ],
+  "claims": [
+    {
+      "text": "Brad Lightcap, OpenAI's COO from 2022 until an April 2026 reorganization moved him into a special-projects role reporting to Sam Altman, announced on 11 August 2026 via his own post that he is leaving OpenAI entirely, saying he is departing to 'start something new'",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Independently reported same-day by TechCrunch, CNBC and Fortune, each with distinct bylines quoting Lightcap's own announcement post rather than relaying a single wire story or press release -- clears the >=2-independent-source business-claim bar. TechCrunch's piece, fetched in full, states directly that he moved to special projects earlier in 2026 during an executive reorganization, correcting an initial framing (carried from the candidate entry) that would have called him the sitting COO. Falsifier specifically checked for and found no denial, correction or retraction.",
+      "evidence": [
+        "https://techcrunch.com/2026/08/11/brad-lightcap-openais-longtime-coo-is-leaving-to-start-something-new/",
+        "https://www.cnbc.com/2026/08/11/longtime-openai-executive-brad-lightcap-leaves-as-shakeup-at-ai-lab-continues.html",
+        "https://fortune.com/2026/08/11/openai-exec-brad-lightcap-leaving-start-something-new/"
+      ]
+    },
+    {
+      "text": "OpenAI announced on 13 August 2026 that Chief Revenue Officer Denise Dresser -- in the role since December 2025 -- is leaving to pursue other opportunities, and named Dali Rajic, formerly president and COO of Wiz, as her successor",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary: OpenAI's own site post (openai.com/index/dali-rajic-chief-revenue-officer/) names Rajic as Dresser's successor and states Dresser is leaving to pursue other opportunities; confirmed via a site-scoped search after direct fetch returned HTTP 403 (a listed known blocker this run). Independently corroborated same-day by CNBC, TechCrunch and Bloomberg with distinct bylines and reporting detail (e.g. Bloomberg's 'after less than a year' framing, TechCrunch's enterprise-revenue context), not a single relayed scoop.",
+      "evidence": [
+        "https://openai.com/index/dali-rajic-chief-revenue-officer/",
+        "https://www.cnbc.com/2026/08/13/openai-denise-dresser-executive-exits.html",
+        "https://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues/",
+        "https://www.bloomberg.com/news/articles/2026-08-13/openai-hires-new-chief-revenue-officer-after-less-than-a-year"
+      ]
+    }
+  ],
+  "notes": "Verifier and falsifier both confirmed this is unrelated to the still-watching openai-safety-heidecke-departure ledger entry (that one covers a safety-org reshuffle -- Mia Glaese/Saachi Jain -- single-sourced to a Wired exclusive); no outlet connects the two threads. Falsifier's main finding was the Lightcap-COO framing correction folded into the claim above (he departed from a special-projects role, not the COO seat itself, at the time of the August announcement) and noted this is one of several senior OpenAI departures since the April 2026 reorganization, without a company statement giving a reason for either August exit beyond the executives' own posts. No denial, dispute or conflicting account of either departure was found by either sub-agent. Go/no-go: GO -- both departures and the Rajic succession clear the independent-sourcing bar; framing corrected to avoid a stale 'sitting COO' claim."
+}
