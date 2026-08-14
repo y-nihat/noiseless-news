@@ -1,0 +1,32 @@
+[
+  {
+    "id": "3f4f8411092c451a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Building text to ASCII diffusion model , need advice and guidance [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vo3m71/building_text_to_ascii_diffusion_model_need/",
+    "published": "2026-08-14T10:33:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>i wanna build a text diffusion model which interpret text and convert it into ascii images </p> <p>so like </p> <p>Text : build a cat </p> <p>Output : </p> <p>/\\\\\\_/\\\\</p> <p>( o.o )</p> <p>\\&gt; \\^ &lt;</p> <p>So , i have a decent background of ml algo ( completed cs229 , cs230 , Ml architecture and basic CNN and diffusion model )</p> <p>ik making a project like this is tricky and making diffusion model like that from scratch is hard but i wanna try it because that's wot make me excited lol ...</p> <p>I am currently reading GANs research paper , can u guys help me in finding more papers which helps me in making this project or guide me through this good title for this </p> <p>Thx in adv</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Udbhav96\"> /u/Udbhav96 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vo3m71/building_text_to_ascii_diffusion_model_need/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vo3m71/building_text_to_ascii_diffusion_model_need/\">[comments]</a></span>",
+    "fetched_at": "2026-08-14T10:59:27.888348+00:00"
+  },
+  {
+    "id": "fb392ac11ff23ee4",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "A collision-entropy floor for watermark/retrieval AI-text detection. Looking for a sanity check before I take this further [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vo2nfc/a_collisionentropy_floor_for_watermarkretrieval/",
+    "published": "2026-08-14T09:38:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello everyone!</p> <p>I've been working through a formalization of why similarity-based AI-text detectors (watermarking, retrieval-based matching) hit a hard floor on false-positive rate, and I'd like holes poked in it before I put more time in.</p> <p>Self-verified only so far, no external review. Below you can find the core argument inline but if interested I can link the full PDF with proof.</p> <p><strong>SETUP</strong></p> <p>Fix a distribution P over possible texts given some constraint C (a topic, a set of facts, a genre). A similarity-based detector computes some statistic T from a candidate text and compares it to a reference. Watermarking's green-list count and retrieval's embedding vector are both instances of T; different implementations, same abstract move: coarsen the text down to something comparable.</p> <p><strong>THE BOUND</strong></p> <p>For any deterministic T, let H2 denote Rényi-2 (collision) entropy. If X, Y are i.i.d. draws from P, then applying T to both gives i.i.d. draws from the pushforward T*P, and:</p> <p>H2(T*P) ≤ H2(P)</p> <p>Proof is three lines: partition the domain by T's preimages, note that (Σp_i)² ≥ Σp_i² for nonnegative p_i (cross terms are nonnegative), sum over the partition. That's it. No hidden machinery.</p> <p><strong>WHY THIS MATTERS FOR DETECTION</strong></p> <p>Collision probability for i.i.d. draws from any discrete distribution Q is exactly 2^(-H2(Q)). Not asymptotic, exact. So the false-positive rate of any detector built on statistic T satisfies:</p> <p>FPR_T(C) ≥ 2^(-H2(raw text | C))</p> <p>for every possible T, including ones nobody's designed yet.</p> <p>As the constraint tightens (H2 → 0, i.e. the topic only admits a small number of &quot;correct&quot; outputs — think a product spec sheet with a fixed list of facts), this floor rises to 1 for every detector simultaneously. TPR ≤ 1 always, so TPR − FPR → 0: the ROC curve of any collision-based detector collapses to chance, and…",
+    "fetched_at": "2026-08-14T10:59:27.888348+00:00"
+  },
+  {
+    "id": "5af3228cf5c7ef0a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Are supervised and unsupervised learning still relevant today? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vo08wd/are_supervised_and_unsupervised_learning_still/",
+    "published": "2026-08-14T07:14:31+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey everyone,</p> <p>I'm trying to get a better sense of where classic ML fits in the current landscape, dominated by LLMs and deep learning. Are supervised and unsupervised learning still considered important skills/topics to learn in 2026, or have they become mostly a &quot;foundations&quot; step before moving to more advanced techniques?</p> <p>Also, if you have any book recommendations for Python that cover these topics well, I'd really appreciate it. </p> <p>Thanks in advance!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CriticalJackfruit404\"> /u/CriticalJackfruit404 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vo08wd/are_supervised_and_unsupervised_learning_still/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vo08wd/are_supervised_and_unsupervised_learning_still/\">[comments]</a></span>",
+    "fetched_at": "2026-08-14T10:59:27.888348+00:00"
+  }
+]

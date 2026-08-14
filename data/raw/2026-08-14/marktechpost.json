@@ -1,0 +1,32 @@
+[
+  {
+    "id": "04b34a03c927583e",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Z.ai Ships GLM-5.3 Without Retraining the Base Model: Better at Complex Coding and Long-Horizon Tasks",
+    "url": "https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/",
+    "published": "2026-08-14T08:03:22+00:00",
+    "summary": "<p>Z.ai released GLM-5.3 on August 14, 2026. The model reuses the 743B GLM-5.2 base unchanged. Every reported gain comes from scaled post-training: more long-horizon task environments, more environment types, longer training. Terminal-Bench 3.0 moves from 4.6 to 28.3, and DeepSWE v1.1 from 46.2 to 66.9. Cybersecurity moved further than Z.ai says it planned, with CyberGym at 84.5% and ExploitBench more than doubling to 54.4%. Weights arrive in about two weeks.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/14/z-ai-ships-glm-5-3-without-retraining-the-base-model-better-at-complex-coding-and-long-horizon-tasks/\">Z.ai Ships GLM-5.3 Without Retraining the Base Model: Better at Complex Coding and Long-Horizon Tasks</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-14T10:59:27.888348+00:00"
+  },
+  {
+    "id": "fc69a2e01387736a",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Meet Needle 2: An Open 45M-Parameter Tool-Calling Model That Ships as a 14MB Binary and Runs a Full Session in 28MB of RAM",
+    "url": "https://www.marktechpost.com/2026/08/13/cactus-compute-needle-2-45m-parameter-tool-calling-model/",
+    "published": "2026-08-14T05:45:47+00:00",
+    "summary": "<p>Cactus Compute released Needle 2, an open 45M-parameter model for tool calling, device use, and structured extraction. The full model is a single 14MB binary that runs a session in about 28MB of RAM. It leads both Seal-Tools splits while targeting hardware with no GPU and no NPU.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/13/cactus-compute-needle-2-45m-parameter-tool-calling-model/\">Meet Needle 2: An Open 45M-Parameter Tool-Calling Model That Ships as a 14MB Binary and Runs a Full Session in 28MB of RAM</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-14T10:59:27.888348+00:00"
+  },
+  {
+    "id": "de609d0f992e985f",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Create a Reasoning-Focused LLM: A Practical Guide to Streaming, Curating, and Fine-Tuning the SupraLabs Reasoning Corpus",
+    "url": "https://www.marktechpost.com/2026/08/13/a-practical-guide-to-streaming-curating-and-fine-tuning-the-supralabs-reasoning-corpus/",
+    "published": "2026-08-14T03:09:45+00:00",
+    "summary": "<p>This tutorial provides a complete workflow for building a compact, reasoning-focused language model. By streaming the SupraLabs reasoning corpus from Hugging Face, we apply quality filters and curate data for Supervised Fine-Tuning (SFT). Using SmolLM2-135M-Instruct and LoRA, we demonstrate an end-to-end pipeline—from dataset analysis and heuristic cleaning to efficient training and inference—enabling the development of specialized small models without excessive resource requirements</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/13/a-practical-guide-to-streaming-curating-and-fine-tuning-the-supralabs-reasoning-corpus/\">Create a Reasoning-Focused LLM: A Practical Guide to Streaming, Curating, and Fine-Tuning the SupraLabs Reasoning Corpus</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-14T10:59:27.888348+00:00"
+  }
+]
