@@ -1,21 +1,23 @@
 {
   "slug": "alibaba-qwen-revenue-share-plan",
-  "title": "Alibaba reportedly plans revenue-sharing terms for large commercial users of its next Qwen model",
-  "status": "watching",
+  "title": "Alibaba releases open-weight Qwen3.8 models, sets $50 million revenue threshold for commercial license",
+  "status": "published",
   "first_seen": "2026-08-08",
+  "published_at": "2026-08-14",
+  "langs": ["en", "tr"],
   "source_urls": [
-    "https://www.investing.com/news/stock-market-news/alibaba-plans-revenuesharing-for-commercial-users-of-next-qwen-ai-model--reuters-4845019",
-    "https://technode.com/2026/08/07/alibaba-reportedly-plans-revenue-sharing-terms-for-next-qwen-model/"
+    "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+    "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model",
+    "https://www.investing.com/news/stock-market-news/alibaba-plans-revenuesharing-for-commercial-users-of-next-qwen-ai-model--reuters-4845019"
   ],
   "follows": null,
-  "reason": "Not published: this is a rumor/unnamed-sources claim per verification.md §3 (Reuters 'citing people familiar with the matter,' no Alibaba confirmation) rather than a confirmed business claim. TechNode's coverage traces to a separate origin (IT Home) but is itself also unconfirmed by Alibaba and gives no percentage or firm date. Same pattern the ledger already treats as watching elsewhere (e.g. openai-safety-heidecke-departure, openai-additional-agent-containment-escapes): single-chain exclusives with no on-record company statement. Percentage and exact launch timing are explicitly described as unresolved by both outlets checked.",
+  "reason": "Published: the open-weight Qwen3.8 release landed with Alibaba's own published license text (Tier 0 primary document) plus SCMP corroboration (Tier 2), meeting the business-claim bar (filing/primary document). Resolves the original Reuters unnamed-sources framing as a fixed revenue-threshold gate, not a percentage revenue share.",
   "watch": [
-    "Any on-the-record Alibaba/Qwen team statement confirming or denying the revenue-share plan",
-    "Official terms published alongside the open-weight Qwen3.8-Max release, reported by Reuters as expected \"next week\" as of 2026-08-07",
-    "A finalized revenue-share percentage or threshold"
+    "Whether Alibaba issues any amendment to the Qwen3.8-Max License terms",
+    "Whether any company is publicly reported crossing the $50M/12-month threshold and negotiating a commercial license"
   ],
-  "open_obligation": true,
-  "revisit_after": "2026-08-15",
+  "open_obligation": false,
   "notes": [
     "2026-08-08 c3: Considered and held as watching. dedup-check returned zero matches (new candidate). Verified sourcing chain via WebFetch on the Investing.com/Reuters relay and TechNode: both explicitly unnamed-sources reporting, no company confirmation, no finalized percentage. Set open_obligation and a one-week revisit given Reuters' own reporting that the open-weight Qwen3.8-Max release (and the terms with it) was expected within about a week of 2026-08-07.",
     "2026-08-09 c1: Re-checked (1 web search). Same recurring outlet set (americanbazaaronline, Blockonomi, Parameter, qz.com, TechNode, MarketScreener, Yahoo/Reuters relay) still all trace to the same Reuters exclusive; revenue-share rate still explicitly described as undecided, no Alibaba on-record confirmation. Gate still fails. Still watching (revisit_after 2026-08-15 unchanged).",
@@ -27,6 +29,7 @@
     "2026-08-14 c1: Re-checked (1 web search). Revenue-share percentage still explicitly described as under negotiation/unfinalized; Qwen3.8-Max release coverage unchanged from prior cycles. No Alibaba/Qwen on-record statement. Gate still fails. Still watching (revisit_after 2026-08-15 unchanged).",
     "2026-08-14 c1: Re-checked (1 web search). Revenue-share percentage still explicitly described as under negotiation/unfinalized; Qwen3.8-Max release coverage unchanged from prior cycles. No Alibaba/Qwen on-record statement. Gate still fails. Still watching (revisit_after 2026-08-15 unchanged).",
     "2026-08-13 c2 (23:03Z ingest): SCMP (direct, not the Reuters-relay chain this entry has tracked) now reports Alibaba's actual published Qwen3.8-Max licence terms, and they are NOT the percentage-of-revenue structure this entry was opened to track. The real terms: core weights are free for anyone to download/use/modify; a separate paid commercial licence is required only for 'model as a service' or 'AI work assistant' businesses (or affiliates) whose aggregate revenue exceeds US$50M over any trailing 12 months; purely internal use is exempt; paid API access is priced separately (China: 12 yuan/M input, 36 yuan/M output; international: $2/M input, $6/M output). This is an on-the-record Alibaba release (license text), not an unnamed-sources claim, so it resolves the open question -- but the answer is 'revenue-threshold licensing gate,' not 'revenue share.' The original Reuters exclusive's percentage-based revenue-share framing appears to not be what shipped. Did not run a full verify/falsify/write pass this cycle (time budget). Next cycle should verify the SCMP terms against Alibaba's actual published licence text and Qwen's own announcement, then either publish this as a resolution (correcting the original rumor's framing) or fold it into a fresh dedup-checked story -- do not just flip this entry to 'confirmed as originally framed.' Still watching; revisit_after 2026-08-15 unchanged pending that pass.",
-    "2026-08-14 c1: Re-checked (1 web search). No new development beyond the 08-13 SCMP finding: Forkast News and DigitalToday now also describe the published Qwen3.8-Max license as a revenue-THRESHOLD gate ($50M/12mo, separate commercial licence), while qz.com/Yahoo still frame it via the original Reuters percentage-based \"revenue-sharing\" narrative. No fresh Alibaba/Qwen on-record statement beyond the already-logged license text. Still pending the verify/falsify pass flagged 08-13. Still watching (revisit_after 2026-08-15 unchanged)."
+    "2026-08-14 c1: Re-checked (1 web search). No new development beyond the 08-13 SCMP finding: Forkast News and DigitalToday now also describe the published Qwen3.8-Max license as a revenue-THRESHOLD gate ($50M/12mo, separate commercial licence), while qz.com/Yahoo still frame it via the original Reuters percentage-based \"revenue-sharing\" narrative. No fresh Alibaba/Qwen on-record statement beyond the already-logged license text. Still pending the verify/falsify pass flagged 08-13. Still watching (revisit_after 2026-08-15 unchanged).",
+    "2026-08-14 c2: Reopened -- fresh ingest (techmeme.json, the-decoder.json, r-localllama.json) showed the Qwen3.8 open-weight release had actually landed. Ran the deferred verify/falsify pass: WebFetch on both official Hugging Face model cards confirmed Qwen3.8-27B is Apache 2.0 and Qwen3.8-2.4T-A95B carries the distinct custom 'qwen3.8-max' license (the $50M/12mo threshold gate). A fresh adversarial falsifier sub-agent independently re-derived the same license split, checked for a hidden more-restrictive Apache-2.0 override, recycled-news risk, fraud/pulled-weights claims, and official denials -- found none; flagged and we corrected an early framing risk (stating both models as Apache 2.0, which is false for the 2.4T-A95B model). Published as a resolution of the original rumor: the terms Alibaba actually shipped are a fixed revenue-threshold gate, not a percentage revenue share. style-gate: alibaba-qwen-revenue-share-plan EN pass / TR pass (falsifiable headline stating the $50M threshold, standalone TL;DR, no padding, Turkish mirrors structure and sourcing)."
   ]
 }

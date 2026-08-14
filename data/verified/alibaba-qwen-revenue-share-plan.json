@@ -1,0 +1,45 @@
+{
+    "slug": "alibaba-qwen-revenue-share-plan",
+    "checked_at": "2026-08-14T22:47:00+00:00",
+    "method": "Reopened a watching entry after fresh ingest (techmeme.json, the-decoder.json, r-localllama.json) showed the Qwen3.8 open-weight release had landed. Verifier pass: direct WebFetch of both official Hugging Face model cards (Tier 0, primary license text) confirmed Qwen3.8-27B is Apache 2.0 and Qwen3.8-2.4T-A95B carries a distinct custom license. Adversarial falsifier sub-agent (general-purpose) independently searched for license misstatement, recycled-news risk, fraud/pulled-weights claims, and official denials; it separately fetched the HF model cards and found the same license split, plus corroborating SCMP coverage. WebFetch on the SCMP article confirmed publish date and terms directly.",
+    "origin_items": [
+        "Watching ledger entry opened 2026-08-08 (cycle 3) on a Reuters unnamed-sources report; this cycle's fresh ingest (techmeme.json, the-decoder.json, r-localllama.json, all 2026-08-14) surfaced the actual open-weight Qwen3.8 release, triggering the mandatory recheck."
+    ],
+    "claims": [
+        {
+            "text": "Alibaba's Qwen team released open weights for Qwen3.8-27B under the Apache 2.0 license and Qwen3.8-2.4T-A95B, the open-weight version of Qwen3.8-Max, in mid-August 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed directly via both official Hugging Face model cards (Tier 0, primary source) -- license fields and citation dates checked by WebFetch.",
+            "evidence": [
+                "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+                "https://huggingface.co/Qwen/Qwen3.8-27B"
+            ]
+        },
+        {
+            "text": "Qwen3.8-2.4T-A95B ships under a custom \"Qwen3.8-Max License\": free for internal commercial use, but businesses (and affiliates) whose aggregate model-as-a-service or AI-work-assistant revenue exceeds $50 million over any trailing 12-month period must obtain a separate paid commercial license",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Primary document (the model's own license field/text on Hugging Face) plus independent Tier 2 corroboration from South China Morning Post (fetched directly, 2026-08-13 publish date, terms match exactly including the $50M/12-month threshold and internal-use exemption). Satisfies verification.md 3's 'filing/primary document' bar for business claims.",
+            "evidence": [
+                "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+                "https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model"
+            ]
+        },
+        {
+            "text": "This is a fixed revenue-threshold gate, not the percentage-based revenue-share arrangement described in earlier Reuters reporting from unnamed sources on 7 August 2026",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Direct comparison of the terms Alibaba actually published (SCMP, primary license text) against the original Reuters/Investing.com framing already on file in this ledger entry's history -- the two accounts describe different mechanisms (fixed threshold vs. percentage cut), and no source found a percentage-based clause in the final terms.",
+            "evidence": [
+                "https://www.scmp.com/tech/tech-trends/article/3363927/alibaba-adds-commercial-restrictions-open-weight-qwen38-max-ai-model",
+                "https://www.investing.com/news/stock-market-news/alibaba-plans-revenuesharing-for-commercial-users-of-next-qwen-ai-model--reuters-4845019"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: PUBLISHABLE WITH CAVEAT, caveat applied. The falsifier's initial framing check flagged that the draft claim risked stating BOTH open-weight models ship under Apache 2.0, which is false for Qwen3.8-2.4T-A95B (custom 'qwen3.8-max' license, not Apache 2.0) -- the published article and claims were written to state the license split explicitly per-model rather than blanket 'Apache 2.0'. Checked and ruled out: (1) no evidence of a hidden more-restrictive license replacing the stated Apache 2.0 grant on Qwen3.8-27B; (2) the open-weight release itself is new (~2026-08-13/14), though the Qwen3.8-Max cloud/API model was previewed ~11 days earlier (2026-08-03) -- noted, not misleading, since the article is about the open-weight release and its license, not the model's existence; (3) a stray Reddit claim that Qwen3.8-27B is 'identical to Qwen3.6-27B' found no corroboration anywhere and was not used; (4) no official Qwen denial, correction, or weight pull found; real community frustration exists (HF discussion #13) that the open weights lack Vision/full 1M context vs. the cloud Max model, which is a capability gap, not a license-accuracy problem, and is out of scope for this article's claims.",
+    "gaps_closed_from_watching_state": [
+        "Whether Alibaba would confirm the revenue-share plan on the record: closed -- Alibaba's own published license text is now the primary source, replacing the unnamed-sources Reuters framing.",
+        "Whether the mechanism is a percentage revenue share or something else: closed -- it is a fixed $50M/12-month revenue threshold gate, not a percentage."
+    ]
+}
