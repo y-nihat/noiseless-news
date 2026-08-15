@@ -1,0 +1,53 @@
+{
+    "slug": "openai-astra-ten-math-proofs",
+    "checked_at": "2026-08-15T22:44:00+00:00",
+    "method": "Story tracked across 20+ cycles since 2026-08-01 in watching state, held for lack of independent mathematician assessment. This cycle: verifier pass run directly by the drafting agent (confirmed OpenAI's original post, located and read the Scientific American piece via a Yahoo News mirror since scientificamerican.com returns 403 to direct fetch, cross-checked Miller's 2016 sphere-packing co-authorship via arXiv), then a fresh adversarial-falsifier sub-agent (separate context, did not draft the story) attempted to break each claim with 7 additional web searches.",
+    "origin_items": [
+        "2026-08-01 c2: triaged from openai-news.json ingest.",
+        "2026-08-15 c2: publishable angle (research-misconduct dispute, not the original 'ten problems solved' framing) confirmed ready; drafted and published this cycle."
+    ],
+    "claims": [
+        {
+            "text": "OpenAI published a post on 1 August 2026 claiming an internal, unreleased model called 'Astra' produced Lean-certified results on ten open problems in mathematics and theoretical computer science",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Tier-0 primary source (openai.com/index/ten-advances-in-mathematics/), confirmed live by both this cycle's drafting agent and the falsifier sub-agent independently. Lean certificates on github.com/openai/ten-proofs (Apache-2.0, zero 'sorry's per prior cycles' checks).",
+            "evidence": [
+                "https://openai.com/index/ten-advances-in-mathematics/"
+            ]
+        },
+        {
+            "text": "Steven Miller (Yeshiva University) alleges the sphere-packing proof reuses an argument from his own 2016 paper without proper credit, calling the pattern 'research misconduct'",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Named, on-record quote in Scientific American (2026-08-06), read via a Yahoo News mirror (direct scientificamerican.com fetch returns 403). Falsifier sub-agent independently corroborated the quote's substance and first clause verbatim via multiple secondary relays (AI Weekly among others); could not load SciAm's primary text directly either, so the article hedges the fuller quote as reported by Scientific American rather than asserting it as directly re-verified word-for-word. Miller's standing as a sphere-packing researcher with 2016-era publications in the area is corroborated via arXiv (he is listed as a co-author on 2016 sphere-packing-adjacent work).",
+            "evidence": [
+                "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/"
+            ]
+        },
+        {
+            "text": "Francesco Fournier-Facio (Cambridge) separately says the non-sofic-groups result combines ideas from a 2016 and a 2019 paper, says the paper itself attributes them correctly, and criticizes OpenAI's publicity framing for overstating novelty -- a materially milder complaint than Miller's, not an allegation of misconduct",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Same Scientific American piece. Falsifier sub-agent specifically flagged and confirmed the precise, load-bearing distinction: Fournier-Facio says OpenAI's mathematicians 'did their best to attribute these ideas correctly' in the paper itself, and his criticism targets the PR framing, not the paper's citations. This is written into the article explicitly to prevent the conflation the falsifier found already happening in at least one secondary aggregator (AI Weekly lumping both mathematicians together as alleging misconduct).",
+            "evidence": [
+                "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/"
+            ]
+        },
+        {
+            "text": "An OpenAI spokesperson responded that the company takes responsibility for the correctness of the results and is meeting the standards generally expected of human mathematicians, and plans small updates to the paper",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Same Scientific American piece; response quote corroborated independently by the falsifier sub-agent. Whether the promised update specifically resolves Miller's citation complaint is NOT confirmed as of publication -- the article states only that OpenAI did not dispute the underlying claims, and does not assert the update landed or fixed anything, per the falsifier's explicit flag not to overstate this.",
+            "evidence": [
+                "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Adversarial falsifier sub-agent (fresh context, 7 web searches/fetches) verdict: 'Safe to publish as framed, provided you (a) keep Miller's misconduct framing and Fournier-Facio's PR-overstatement framing explicitly separate, (b) note the OpenAI paper-update outcome is unresolved rather than stating it addressed Miller's complaint, and (c) attribute the Miller quote with a slight hedge since the primary SciAm text could not be directly re-verified (403).' All three conditions applied to the published draft: the two mathematicians' claims are kept in separate claim entries with distinct severity language, the article states the response 'did not dispute' the claims rather than that it resolved them, and Miller's fuller quote is not presented as independently re-verified word-for-word beyond the load-bearing 'research misconduct' characterization. No contradicting reports, retractions, or disputes of either mathematician's claim were found.",
+    "gaps_closed_from_watching_state": [
+        "Second named independent mathematician obtained (Fournier-Facio, alongside Miller and the earlier Bloom 'big news' reaction) -- the entry's longest-standing watch item.",
+        "OpenAI's own response to the specific citation allegations obtained and quoted.",
+        "Adversarial falsification pass completed by a fresh sub-agent that did not draft the story."
+    ]
+}
