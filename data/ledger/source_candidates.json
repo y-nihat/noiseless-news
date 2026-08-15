@@ -1,4 +1,15 @@
 {
+  "candidates_2026-08-15_c2": [
+    {
+      "domain": "scientificamerican.com",
+      "first_seen": "2026-08-06",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/"
+      ],
+      "context": "Named-byline science journalism with editorial standards; used as the sole quality-press source (via a Yahoo News mirror, since scientificamerican.com itself returns 403 on direct fetch) for two named mathematicians' on-record attribution criticism of OpenAI's Astra math results in openai-astra-ten-math-proofs. A recurring, citable outlet for AI/research-integrity stories. Propose Tier 2, type html; note the same 403-direct-fetch workaround (site search + mirror/republication) other blocked Tier-0/1 sites need."
+    }
+  ],
   "candidates_2026-08-07_c2": [
     {
       "domain": "blog.frontier.security",
