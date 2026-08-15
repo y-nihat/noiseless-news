@@ -1,0 +1,26 @@
+{
+  "slug": "deepseek-harness-open-source-agent-framework",
+  "title": "DeepSeek open-sources Harness, a plugin-based coding-agent framework",
+  "status": "published",
+  "first_seen": "2026-08-14",
+  "published_at": "2026-08-14",
+  "date": "2026-08-13",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://github.com/deepseek-ai/deepseek-harness",
+    "https://github.com/deepseek-ai/deepseek-harness/blob/master/LICENSE",
+    "https://x.com/deepseek_ai/status/2087887408440164663",
+    "https://thenewstack.io/deepseek-harness-open-source-plugins/",
+    "https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices"
+  ],
+  "follows": null,
+  "reason": "Published: MIT-licensed open-source agent framework release, confirmed directly from DeepSeek's own GitHub repo/LICENSE/announcement plus independent reporting (The New Stack). Fresh verifier + adversarial falsifier converged. 'Rival to Claude Code/Cowork' framing attributed to press, not DeepSeek, since outlets disagree on which product is meant.",
+  "watch": [
+    "Whether DeepSeek Harness exits developer preview / reaches a stable release",
+    "Any independent hands-on evaluation of the framework beyond press rewrites",
+    "Whether DeepSeek itself ever makes an explicit competitor comparison"
+  ],
+  "notes": [
+    "2026-08-14 c4: published EN+TR. dedup-check clean. Verifier and falsifier sub-agents run sequentially (not parallel, to conserve a tight cycle window), each with independent live-fetches of the GitHub repo/LICENSE/README. Editor gate passed both languages -- see run-report-2026-08-15-2200Z.md Cycle 4 for the gate note."
+  ]
+}

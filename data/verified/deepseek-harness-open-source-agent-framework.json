@@ -1,0 +1,55 @@
+{
+  "slug": "deepseek-harness-open-source-agent-framework",
+  "checked_at": "2026-08-14T23:59:00+00:00",
+  "method": "Surfaced via fresh ingest (Techmeme, VentureBeat/Carl Franzen, 2026-08-14). dedup-check returned zero matches (clean of the unrelated deepseek-v4-pro-0813-quiet-update entry, a different product). Fresh verifier sub-agent live-fetched the GitHub repo, LICENSE file (raw + GitHub API license.spdx_id), README, and cross-checked an independent outlet (The New Stack) plus DeepSeek's own X announcement via search snippet (direct fetch 402). Fresh adversarial falsifier sub-agent, run separately without seeing the verifier's output, independently re-fetched the GitHub API and LICENSE blob, confirmed the org/repo is genuine (not a typosquat), checked npm package provenance (maintainer with @deepseek.com email), searched for retraction/hoax/malware reports (none found), and flagged that the 'rival to Claude Code' framing is press-only, with two outlets naming two different Anthropic products. Both sub-agents converged: publish, but attribute the competitor framing to press coverage, not DeepSeek.",
+  "origin_items": [
+    "Techmeme 2026-08-14T10:40Z, via VentureBeat (Carl Franzen): 'DeepSeek releases DeepSeek Harness under the MIT license in developer preview'"
+  ],
+  "claims": [
+    {
+      "text": "DeepSeek released Harness (CLI alias `dsh`), an open-source agent-runtime framework for building and running coding agents, on GitHub on 13 August 2026, in developer preview",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "GitHub API (repos/deepseek-ai/deepseek-harness) confirms org deepseek-ai (id 148330874, matches DeepSeek's known org), created_at 2026-08-13T11:56:32Z, not a fork, not archived. README verbatim states developer-preview status and warns of breaking changes. DeepSeek's own X post (retrieved via search snippet, direct fetch blocked HTTP 402) independently uses matching language ('v0.1 is now available in Developer Preview'). Independently reported beyond DeepSeek's own channels by The New Stack (Frederic Lardinois, 2026-08-13).",
+      "evidence": [
+        "https://github.com/deepseek-ai/deepseek-harness",
+        "https://x.com/deepseek_ai/status/2087887408440164663",
+        "https://thenewstack.io/deepseek-harness-open-source-plugins/"
+      ]
+    },
+    {
+      "text": "The Harness codebase is released under the MIT license",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Verified at the byte level: LICENSE file fetched raw (both via web and base64-decoded from the GitHub API by the falsifier independently) reads standard MIT text, 'Copyright (c) 2026 DeepSeek'. GitHub API license.spdx_id = MIT. THIRD_PARTY_NOTICES.md exists for dependency disclosure (normal for MIT projects with dependencies, not a carve-out); its contents were not fetched, so a restrictive sub-component cannot be fully ruled out, but the top-level LICENSE covering the codebase is unambiguous.",
+      "evidence": [
+        "https://github.com/deepseek-ai/deepseek-harness/blob/master/LICENSE"
+      ]
+    },
+    {
+      "text": "Harness's architecture implements models, tools, skills, sessions, sandboxes, filesystems, the agent loop, orchestration and the UI as swappable plugins",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "This is DeepSeek's own description, appearing independently and near-verbatim in both the GitHub README (fetched raw) and DeepSeek's own X announcement -- not a VentureBeat paraphrase.",
+      "evidence": [
+        "https://github.com/deepseek-ai/deepseek-harness",
+        "https://x.com/deepseek_ai/status/2087887408440164663"
+      ]
+    },
+    {
+      "text": "DeepSeek's own release materials make no comparison to any competitor; press coverage framing Harness as a rival to Anthropic's coding tools disagrees on which product",
+      "type": "announcement",
+      "verdict": "single-source",
+      "reasoning": "Direct read of the GitHub README and DeepSeek's X post found zero mentions of Anthropic, Claude Code, or Claude Cowork. VentureBeat's headline says 'rival to Claude Code'; TechNode's headline instead frames it against 'Claude Cowork', a different, verified-real Anthropic product launched January 2026. Two outlets naming two different rivals is itself evidence the comparison is each outlet's own framing, not sourced from DeepSeek. Labeled single-source/press-framing rather than a confirmed DeepSeek claim; article attributes it explicitly to press coverage.",
+      "evidence": [
+        "https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices"
+      ]
+    }
+  ],
+  "excluded": [
+    "GitHub star/fork counts (95k+/8.8k, ~36h after repo creation) -- fast-moving, unverifiable for bot-inflation, not cited as a credibility signal per falsifier recommendation.",
+    "36kr.com claim that Harness 'outperforms Claude Code' -- unsubstantiated performance claim, not from DeepSeek, not corroborated by any Tier 0-2 source.",
+    "deepseek-harness.org / deepseek-harness.app -- unofficial fan sites that explicitly disclaim DeepSeek affiliation; not used as sources.",
+    "Content-farm domains surfaced in search (deepseek-code.com, lovableapp.org, byteiota.com, kingy.ai, pandaily.com framing pieces) -- not used as evidence for any claim."
+  ]
+}
