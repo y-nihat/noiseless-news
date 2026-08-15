@@ -28,5 +28,65 @@
     "published": "2026-08-14T23:09:22+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vomibf/qwen_38_27b_note_the_new_recommended_sampling/\"> <img alt=\"Qwen 3.8 27B - Note the new recommended sampling parameters (from the official HF page)\" src=\"https://external-preview.redd.it/SHsu78lUMQIzvvFu0nPy0syR3-mz1tG_sUXDIIxx3AY.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=bd1d29a2de9920adcb14a842b6bfe3852acebb64\" title=\"Qwen 3.8 27B - Note the new recommended sampling parameters (from the official HF page)\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Thrumpwart\"> /u/Thrumpwart </a> <br /> <span><a href=\"https://i.imgur.com/km9antC.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vomibf/qwen_38_27b_note_the_new_recommended_sampling/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-15T00:57:41.918039+00:00"
+  },
+  {
+    "id": "50bf5caacd5c2376",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 35BA3B spotted",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1voxppd/qwen_38_35ba3b_spotted/",
+    "published": "2026-08-15T08:49:06+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voxppd/qwen_38_35ba3b_spotted/\"> <img alt=\"Qwen 3.8 35BA3B spotted\" src=\"https://external-preview.redd.it/HP6NuR30rVZuR18nagK5w6YdfM0ZaUtuImBvlJzBNYI.png?width=140&amp;height=70&amp;auto=webp&amp;s=7c42d7c0e027e5f059012ccc9e7a0a7d711d3631\" title=\"Qwen 3.8 35BA3B spotted\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/xwbkbbj55ijh1.png?width=1554&amp;format=png&amp;auto=webp&amp;s=abd354c8a6bef033d5fb8383c49e4a682ab22105\">https://preview.redd.it/xwbkbbj55ijh1.png?width=1554&amp;format=png&amp;auto=webp&amp;s=abd354c8a6bef033d5fb8383c49e4a682ab22105</a></p> <p>Just wait and see </p> <p><a href=\"https://github.com/modelscope/ms-swift/commit/ab726e9d445a6520a70df2c831177d46adb1f589\">https://github.com/modelscope/ms-swift/commit/ab726e9d445a6520a70df2c831177d46adb1f589</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BazzyIm\"> /u/BazzyIm </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voxppd/qwen_38_35ba3b_spotted/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voxppd/qwen_38_35ba3b_spotted/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "bf6fb4c487df700a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Fable 5 refuses to touch Qwen deployments?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1voynzn/fable_5_refuses_to_touch_qwen_deployments/",
+    "published": "2026-08-15T09:47:33+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>It could be just me and my setup, but I just tried to get fable to adjust my Qwen 3.8 deployment script and (simple task, mostly knob turning).... and it outright refused. Censor box immediately kicks in.<br /> Not reading too much into it, but it did make me giggle.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NotumRobotics\"> /u/NotumRobotics </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voynzn/fable_5_refuses_to_touch_qwen_deployments/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voynzn/fable_5_refuses_to_touch_qwen_deployments/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "3620cc78ef5a161b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GPU prices haven't stopped climbing for 3 weeks straight across the EU, here's the data",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vowi2d/gpu_prices_havent_stopped_climbing_for_3_weeks/",
+    "published": "2026-08-15T07:35:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>hey again! I run a EU PC hardware price tracker <a href=\"https://www.pricesquirrel.com\">PriceSquirrel</a>, 25+ stores across 9 countries, and wanted to check: are GPU prices actually rising, or does it just feel that way?</p> <p>To make this defensible, I didn't just average &quot;whatever's in stock&quot; each day, that inflates the trend if cheap cards sell out and drop off the average. Instead I built a fixed basket: 176 GPU models tracked at 3+ different retailers, every single day for the last 30 days, no gaps, no swapping in or out.</p> <p><strong>Result:</strong></p> <ul> <li>July 15: €808.57 average</li> <li>August 14: €963.56 average</li> <li>+19.2% in one month, same 176 cards throughout</li> </ul> <p>The rise wasn't sudden, it started climbing around July 24-25 and has been steady since, not one spike from a single event:</p> <ul> <li>July 15-23: flat, €805-815</li> <li>July 24-31: climbing, €826 → €906</li> <li>Aug 1-14: continued rise, plateauing slightly in the last week, €910 → €964</li> </ul> <p><strong>By country, since it varies a bit:</strong></p> <ul> <li>Germany: +19.6%</li> <li>France: +18.1%</li> <li>EU-wide: +19.2%</li> </ul> <p>Pretty consistent across markets, not a single-country anomaly.</p> <p><strong>Methodology, upfront:</strong> &quot;price&quot; here is each product's average price across whichever 3+ retailers carried it that day (not the single cheapest, not a blended market average across a shifting product list). Basket is fixed, same 176 SKUs day 1 and day 30, verified daily.</p> <p>Happy to break this down by tier (5080/5090) or AMD vs NVIDIA if there's interest, this is currently the aggregate number.</p> <p>Source: <a href=\"http://pricesquirrel.com\">pricesquirrel.com</a>, updated every 6 hours</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/egudegi\"> /u/egudegi </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vowi2d/gpu_prices_hav…",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "5b066ef2fd63ac42",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Try out this \"high\" reasoning mode for 27B (tested on VLLM)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vox89e/try_out_this_high_reasoning_mode_for_27b_tested/",
+    "published": "2026-08-15T08:19:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>After a lot of tweaking, I have come to the conclusion that 27B lacks a reasoning mode that is between low and xhigh.</p> <p>The &quot;medium&quot; mode isn't actually medium, it erases the explicit instructions to the model. When medium is enabled, the model acts very differently - to me it looks like it regresses to behaving more like 3.6, and loses some of the 3.8 gains.</p> <p>Low and high mode behavior in the model seem to be triggered almost exclusively by using certain keywords in the reasoning instructions, and act in a surprisingly binary manner. You can add all the additional instructions you want to the reasoning instructions, and tweak the prompt, but the model mostly ignores those changes. You can ask it for medium effort and it just won't do it.</p> <p>Because of this weird behavior, I experimented with blending the words in the low and xhigh prompts together, until the model would output reasoning that was a more reasonable length.</p> <p>It seemed to work pretty well, and the end result is a high reasoning mode, with a reasoning block that is typically around 1/5 the size of the xhigh reasoning.</p> <p>Output quality seems good, more like xhigh than low or medium, and the reasoning is definitely much shorter, which makes the model much more enjoyable to use.</p> <p>Play around with the chat template modification below, add &quot;high&quot; to your reasoning effort, and see if you can improve it further or if it makes the model worse</p> <pre><code>-- add high to reasoning_effort -- {%- if resolved_reasoning_effort not in ('xhigh', 'high', 'medium', 'low') %} {{- raise_exception('Unexpected reasoning effort ' ~ reasoning_effort ~ '. Supported types are xhigh (default), high, medium, and low.') }} {%- endif %} -- add new blended prompt for high, which mixes the low &amp; xhigh prompts -- {%- elif resolved_reasoning_effort == 'high' %} {%- set reasoning_instructions = 'Reasoning effort is set to halfway between low and…",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "cfcced4a5cd59f75",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GitHub - meta-models/meta-oss-cookbook: All recipes for oss models from Meta Inc.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vovb5a/github_metamodelsmetaosscookbook_all_recipes_for/",
+    "published": "2026-08-15T06:26:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vovb5a/github_metamodelsmetaosscookbook_all_recipes_for/\"> <img alt=\"GitHub - meta-models/meta-oss-cookbook: All recipes for oss models from Meta Inc.\" src=\"https://external-preview.redd.it/ZsyLi8FAlTSwwcY2TDYn528KqdwMVw3K7cZioaiHYPo.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=17ff88f4d63356b0d4328fe29ddebaff401fb8c7\" title=\"GitHub - meta-models/meta-oss-cookbook: All recipes for oss models from Meta Inc.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><h1>Muse Glimmer Cookbook</h1> <p><a href=\"https://github.com/meta-models/meta-oss-cookbook#muse-glimmer-cookbook\"></a></p> <p>Clone it, run it on the GPU you already own, and ship a working agent — one that plans, calls tools, and self-corrects — in a single sitting, fully offline.</p> <p>Muse Glimmer is an open-weight model built for local agentic work on a single GPU. This cookbook is how you go from weights to a running agent.</p> <p>Previously shared <a href=\"https://www.reddit.com/r/LocalLLaMA/s/L4YENIv4iT\">Liquid AI's Cookbook</a>.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://github.com/meta-models/meta-oss-cookbook\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vovb5a/github_metamodelsmetaosscookbook_all_recipes_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "d5580a69b816bb02",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Quantized AI9Stars' G9v3-39A5B to GGUF and created a llama.cpp fork to support it",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1votanb/quantized_ai9stars_g9v339a5b_to_gguf_and_created/",
+    "published": "2026-08-15T04:35:34+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1votanb/quantized_ai9stars_g9v339a5b_to_gguf_and_created/\"> <img alt=\"Quantized AI9Stars' G9v3-39A5B to GGUF and created a llama.cpp fork to support it\" src=\"https://external-preview.redd.it/Dy9L8W5hQg6HVEWtjEuhTkUP0Bv1GNVXgfXslgeq4qg.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b86de974b96d5e7ddde1280d93b4d48e087b1465\" title=\"Quantized AI9Stars' G9v3-39A5B to GGUF and created a llama.cpp fork to support it\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/linuxid10t\"> /u/linuxid10t </a> <br /> <span><a href=\"https://huggingface.co/linuxid10t/G9v3-39A5B-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1votanb/quantized_ai9stars_g9v339a5b_to_gguf_and_created/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
   }
 ]

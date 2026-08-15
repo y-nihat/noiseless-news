@@ -8,5 +8,35 @@
     "published": "2026-08-15T00:32:25+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone, we noticed that the AC's comment, along with our reply, has disappeared, and we are wondering if anyone else has experienced the same thing. </p> <p>The comment was made by the AC on the first day the reviews were released and summarized the reviewers' questions and weaknesses. We addressed all of their questions in our reply, but now both posts (the AC's comment and our response) are gone. </p> <p>I wonder if this is normal, or if the AC deleted it so that if our paper is rejected, their final decision won't look unjustified when people read the OpenReview page.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Terrible-Chicken-426\"> /u/Terrible-Chicken-426 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1voocxf/ac_comment_and_our_reply_disappeared_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1voocxf/ac_comment_and_our_reply_disappeared_on/\">[comments]</a></span>",
     "fetched_at": "2026-08-15T00:57:41.918039+00:00"
+  },
+  {
+    "id": "770c9407a46630ac",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "If you had a bunch of GPUs lying around, what would you actually build with them? (Running LLMs is off the table) [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vowcmb/if_you_had_a_bunch_of_gpus_lying_around_what/",
+    "published": "2026-08-15T07:26:32+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Be honest if someone dropped a stack of high-end GPUs on your desk tomorrow, what would you actually <em>do</em> with them?</p> <p>And before the usual answers roll in: running local LLMs is banned for this thread. It’s been done to death and feels pretty pointless at this point.</p> <p>So… what else?</p> <ul> <li>Some niche scientific/simulation workload?</li> <li>Weird generative stuff that isn’t text?</li> <li>Distributed something-or-other?</li> <li>Rendering / media pipeline?</li> <li>Homelab experiments that actually need the horsepower?</li> <li>Completely unhinged personal projects?</li> </ul> <p>Drop your ideas. The more specific (and slightly unhinged), the better.</p> <p><strong>Great Ideas but are there some with more of research and new tech.</strong></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BadOk2793\"> /u/BadOk2793 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vowcmb/if_you_had_a_bunch_of_gpus_lying_around_what/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vowcmb/if_you_had_a_bunch_of_gpus_lying_around_what/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "ee5cff449bb9d7d0",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "BDH-CQ: IN-CONTEXT LEARNING WITH RECURRENT LATENT REASONING [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/",
+    "published": "2026-08-15T06:18:15+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/\"> <img alt=\"BDH-CQ: IN-CONTEXT LEARNING WITH RECURRENT LATENT REASONING [R]\" src=\"https://external-preview.redd.it/q3evP6JeDpAC2MdSQHWYxnCYTqbJkElIQsLFqVSdkss.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de730fbf7ecace6df0036b21470c16a2d4feacfb\" title=\"BDH-CQ: IN-CONTEXT LEARNING WITH RECURRENT LATENT REASONING [R]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>We introduce BDH-CQ, a reasoning system that brings these capabilities together. Demonstrations of a previously unseen task update recurrent memory; the query is then solved through iterative computation in a high-dimensional latent workspace. <strong>Intermediate reasoning states are not decoded into language.</strong> BDH-CQ makes memory, adaptation, and inference part of the same computational fabric. Inputs presented at inference time continuously update the model’s recurrent memory; the model then solves a query through iterative computation in a high-dimensional latent space, <strong>without verbalizing its intermediate reasoning.</strong> Neither task identifiers nor evaluation-task demonstration pairs participate in training, and no parameters are updated at inference time. A 150M-parameter configuration reaches 29.5% pass@2 on ARC-AGI-1 at a computed $0.00070 per task, breaking through the previously reported cost–accuracy Pareto frontier.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/moschles\"> /u/moschles </a> <br /> <span><a href=\"https://arxiv.org/abs/2608.09888\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vov5r5/bdhcq_incontext_learning_with_recurrent_latent/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "9d7f1ee9cdfc286f",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Do you actually finish setting up a new project? [N]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1voxx8t/do_you_actually_finish_setting_up_a_new_project_n/",
+    "published": "2026-08-15T09:01:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have a bad habit of getting a new project 90% of the way there and then losing interest.</p> <p>Dependencies work, GPU is detected, model downloads, everything finally runs.</p> <p>And then somehow the actual project gets abandoned.</p> <p>I'm starting to think getting things working is half the hobby for me.</p> <p>Does anyone else do this?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Crypton228\"> /u/Crypton228 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1voxx8t/do_you_actually_finish_setting_up_a_new_project_n/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1voxx8t/do_you_actually_finish_setting_up_a_new_project_n/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
   }
 ]

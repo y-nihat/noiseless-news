@@ -1,0 +1,42 @@
+[
+  {
+    "id": "3e87e0f29a969a80",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Plaintiff hid invisible AI instructions in court filings to secretly influence automated review",
+    "url": "https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/",
+    "published": "2026-08-15T08:00:45+00:00",
+    "summary": "<p><img alt=\"A Trojan horse made from court documents feeds data into an AI chip, surrounded by symbols of justice such as the scales and the gavel.\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/trojanisches-pferd-prompt-injection.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        A plaintiff in Connecticut embedded invisible prompt injections in court filings, formatted in 3-point white text on a white background, to manipulate a potential AI review system. Judge Spader compared the attempt to secretly tampering with a jury and revoked the plaintiff's electronic filing privileges. The court stressed that Connecticut doesn't use AI to review filings, but the intent alone was enough to warrant sanctions.</p>\n<p>The article <a href=\"https://the-decoder.com/plaintiff-hid-invisible-ai-instructions-in-court-filings-to-secretly-influence-automated-review/\">Plaintiff hid invisible AI instructions in court filings to secretly influence automated review</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "5c81334f23aec617",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "World Labs turns one real-world robot task into thousands of simulated variations for training",
+    "url": "https://the-decoder.com/world-labs-turns-one-real-world-robot-task-into-thousands-of-simulated-variations-for-training/",
+    "published": "2026-08-15T07:30:48+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"753\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/worldlabs-r2s2r-06-scenix-brand.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1280\" /></p>\n<p>        World Labs, the startup founded by AI pioneer Fei-Fei Li, has unveiled a simulation engine that trains robot controllers entirely in virtual environments. From a single real-world task, the system generates thousands of controlled variations. The trained models then ran for one hour each on five different robot platforms without human intervention. How well the results hold up in more complex everyday situations remains to be seen.</p>\n<p>The article <a href=\"https://the-decoder.com/world-labs-turns-one-real-world-robot-task-into-thousands-of-simulated-variations-for-training/\">World Labs turns one real-world robot task into thousands of simulated variations for training</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "d2e4667f6f799569",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "The \"tragedy of the cognitive commons\" explains how rational AI adoption could destroy entire professions' expertise",
+    "url": "https://the-decoder.com/the-tragedy-of-the-cognitive-commons-explains-how-rational-ai-adoption-could-destroy-entire-professions-expertise/",
+    "published": "2026-08-15T06:00:52+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/ai_jobs_young_people_cognitive_decline.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        A new research paper frames AI adoption as a \"tragedy of the cognitive commons.\" Every company that cuts entry-level jobs benefits individually, but the collective expertise of entire professions erodes. The consequences may not become visible until 2030 to 2045, when today's missing junior talent should have become tomorrow's experienced workforce.</p>\n<p>The article <a href=\"https://the-decoder.com/the-tragedy-of-the-cognitive-commons-explains-how-rational-ai-adoption-could-destroy-entire-professions-expertise/\">The &quot;tragedy of the cognitive commons&quot; explains how rational AI adoption could destroy entire professions&#039; expertise</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "e9d0c27aa19d6217",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "New benchmark confirms AI models still perform poorly at visual perception",
+    "url": "https://the-decoder.com/new-benchmark-confirms-ai-models-still-perform-poorly-at-visual-perception/",
+    "published": "2026-08-15T05:30:18+00:00",
+    "summary": "<p><img alt=\"Four clocks and colorful stacked cubes set against abstract shapes illustrate phases of time and modular process steps.\" class=\"attachment-full size-full wp-post-image\" height=\"1047\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/perceptionbench-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        Moonshot AI's PerceptionBench tests how well multimodal AI models can actually \"see,\" separate from logical reasoning. No frontier model reaches 60 percent accuracy, and GPT-5.6 Sol leads by a narrow margin. Many supposed reasoning errors actually happen as early as the image-reading stage.</p>\n<p>The article <a href=\"https://the-decoder.com/new-benchmark-confirms-ai-models-still-perform-poorly-at-visual-perception/\">New benchmark confirms AI models still perform poorly at visual perception</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  }
+]
