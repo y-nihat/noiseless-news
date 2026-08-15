@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ebed36ae361d6eee",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[Megathread] Qwen 3.8 27B Release Day",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1voojjz/megathread_qwen_38_27b_release_day/",
+    "published": "2026-08-15T00:41:13+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Megathread to help with the influx of duplicate / similar posts around the release of the Qwen 3.8 27B release.</p> <ul> <li>Quants</li> <li>Fine-Tunes &amp; Abliterations</li> <li>Chat Templates</li> <li>Inference Server Support &amp; Configuration</li> <li>Experiences, Benchmarks &amp; Model Comparisons</li> </ul> <p>Official:</p> <ul> <li><a href=\"https://huggingface.co/Qwen/Qwen3.8-27B\">https://huggingface.co/Qwen/Qwen3.8-27B</a></li> <li><a href=\"https://huggingface.co/Qwen/Qwen3.8-27B-FP8\">https://huggingface.co/Qwen/Qwen3.8-27B-FP8</a></li> </ul> <p>Popular:</p> <ul> <li><a href=\"https://huggingface.co/unsloth/Qwen3.8-27B-GGUF\">https://huggingface.co/unsloth/Qwen3.8-27B-GGUF</a></li> <li><a href=\"https://huggingface.co/bartowski/Qwen3.8-27B-GGUF\">https://huggingface.co/bartowski/Qwen3.8-27B-GGUF</a></li> <li><a href=\"https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-bf16\">https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-bf16</a></li> <li><a href=\"https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-8bit\">https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-8bit</a></li> <li><a href=\"https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-4bit\">https://huggingface.co/mlx-community/Qwen3.8-27B-MTP-4bit</a></li> </ul> <p>We'll try to clean up future duplicates around the release and point them here.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sammcj\"> /u/sammcj </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voojjz/megathread_qwen_38_27b_release_day/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voojjz/megathread_qwen_38_27b_release_day/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T00:57:41.918039+00:00"
+  },
+  {
+    "id": "fe52f156050954c9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 - 27B is a game changer",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vonuu0/qwen_38_27b_is_a_game_changer/",
+    "published": "2026-08-15T00:09:13+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So a bit of context, I am a cybersecurity senior analyst<br /> I am interested in LLMs for that field especially with MCPs to connect them to the tools or for writing scripts </p> <p>I started this field by doing assembly language reading for hacking games when I was a teenager then that became malware analysis then I started to analyze traffic and logs at work for a living<br /> Before work I competed in cybersecurity competitions known as capture the flag to solve only one category of the challenges and that is malware analysis </p> <p>Now here is the scene in LLM x Cybersecurity </p> <p>Entry-level CTF challenges (I used to solve around 2017-2018, got first job in 2019) were solved and saturated by LLMs a long time ago (See intercode CTF benchmark) </p> <p>Then High level CTFs (NYU CTF Bench, CSAW challenges, and CyBench) these were solved a while ago </p> <p>Today we have<br /> CyberGym (vulnerability description (CVE report not real details) plus code base find vulnerability<br /> That was solved</p> <p>Then ExploitGym (the one recent OpenAI model escaped and hacked hugging face to find solution, the 2 vulnerabilities themselves are trivial (JWT spoofing with no server side checks for Jfrog sandbox and JS + Python template in open source data viewer of Hugging face)<br /> Still impressive for a fully autonomous model </p> <p>ExploitGym gives vulnerability details + exploit technique/details and codebase (I wonder how/why OpenAI model escaped it in the first place those details should manage it this is why I feel it is staged but whatever right) </p> <p>ExploitBench<br /> More realistic threat vector<br /> 1-day not 0-day (0-day is a novel vulnerability no one else knows about it hence the name, 1-day is a known vulnerability patched, if in an open source project you can compare patches before and after and know it but not as valuable as 0-day since people will/should update their software, 0-days can and are used against high p…",
+    "fetched_at": "2026-08-15T00:57:41.918039+00:00"
+  },
+  {
+    "id": "9199600c88713896",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27B - Note the new recommended sampling parameters (from the official HF page)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vomibf/qwen_38_27b_note_the_new_recommended_sampling/",
+    "published": "2026-08-14T23:09:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vomibf/qwen_38_27b_note_the_new_recommended_sampling/\"> <img alt=\"Qwen 3.8 27B - Note the new recommended sampling parameters (from the official HF page)\" src=\"https://external-preview.redd.it/SHsu78lUMQIzvvFu0nPy0syR3-mz1tG_sUXDIIxx3AY.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=bd1d29a2de9920adcb14a842b6bfe3852acebb64\" title=\"Qwen 3.8 27B - Note the new recommended sampling parameters (from the official HF page)\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Thrumpwart\"> /u/Thrumpwart </a> <br /> <span><a href=\"https://i.imgur.com/km9antC.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vomibf/qwen_38_27b_note_the_new_recommended_sampling/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T00:57:41.918039+00:00"
+  }
+]
