@@ -158,5 +158,85 @@
     "published": "2026-08-15T15:09:23+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>So, like many people here I'm trying out Qwen3.8 27B, but I have to say, right now I'm not satisfied: a lot of thinking and a lot of overreaching the task assigned, which ends up in eating up time and context before starting actually working on the assigned task.</p> <p>I hear you say: it's the harness. Well, it might be, but it works much better with other models, and and I remember Q3.6 having still the same willingness to do unasked things but I more or less tamed it... but now it's really out of control.</p> <p>What are your impressions? Not on benchmarks, but on actual usage.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/WhatererBlah555\"> /u/WhatererBlah555 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp59eb/qwen38_much_thinking_for_nothing/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp59eb/qwen38_much_thinking_for_nothing/\">[comments]</a></span>",
     "fetched_at": "2026-08-15T16:28:36.229477+00:00"
+  },
+  {
+    "id": "c0f436412221442c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The perfect way for Google to screw over OAI and Anthropic is by releasing a 120B dense multimodal Gemma model",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpf8j1/the_perfect_way_for_google_to_screw_over_oai_and/",
+    "published": "2026-08-15T21:53:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The two leading labs are already feeling extremely threatened by Qwen &amp; friends, however I think there are tons of enterprises and organizations in the West that don't feel comfortable using Chinese models.</p> <p>I believe these orgs would be all over a near-frontier open-weight model with the Google brand, and it's the perfect way to mess up OAI/Anthropics IPOs.</p> <p>Please do it, Google.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/EducationalCicada\"> /u/EducationalCicada </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpf8j1/the_perfect_way_for_google_to_screw_over_oai_and/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpf8j1/the_perfect_way_for_google_to_screw_over_oai_and/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
+  },
+  {
+    "id": "30702e03d4133083",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "US to tell partners they must pick sides in AI race with China",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp7qrc/us_to_tell_partners_they_must_pick_sides_in_ai/",
+    "published": "2026-08-15T16:49:32+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/johnnyApplePRNG\"> /u/johnnyApplePRNG </a> <br /> <span><a href=\"https://www.reuters.com/world/china/us-tell-partners-they-must-pick-sides-ai-race-with-china-2026-08-14/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp7qrc/us_to_tell_partners_they_must_pick_sides_in_ai/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
+  },
+  {
+    "id": "372ccfcbfbdbdf85",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "club-5060ti refresh: tested RTX 5060 Ti presets, a proper high-context harness, and Qwen3.8 27B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vper67/club5060ti_refresh_tested_rtx_5060_ti_presets_a/",
+    "published": "2026-08-15T21:32:14+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Quick update on the RTX 5060 Ti local LLM repo. It has changed quite a bit since my previous posts. </p> <p>The project started as a collection of practical notes and benchmark results. That was useful, but as the dataset grew it became harder to answer the question most people actually had: </p> <p><strong>What configuration should I run?</strong> </p> <p>I have rebuilt the repo around tested, copyable presets rather than treating every successful benchmark request as a front-page result.</p> <p><strong>What changed?</strong></p> <p>The project now separates three things: </p> <p>• <strong>Presets:</strong> exact configurations intended for people to copy and run.<br /> • <strong>Evidence bundles:</strong> reviewed proof of context fit, retrieval, sustained generation and performance.<br /> • <strong>Raw receipts:</strong> retries, failed experiments and diagnostic runs that are kept separate as engineering material without automatically becoming recommendations. </p> <p>The website now leads with the published preset catalogue. The larger results explorer is still there for comparisons and historical data, but it is no longer the first thing visitors have to decipher. </p> <p>There are currently seven published presets across the 1× and 2× RTX 5060 Ti lanes: </p> <p><strong>1× RTX 5060 Ti 16GB</strong> </p> <p>• Qwen3.8 27B IQ3_XXS at 64K with q8 KV and built-in MTP<br /> • ThinkingCap Qwen3.6 27B IQ3_M at 64K<br /> • Nail 35B-A3B IQ3_XXS on a configured 131K route </p> <p><strong>2× RTX 5060 Ti 16GB</strong> </p> <p>• Qwen3.8 27B Q6_K at 131K<br /> • ThinkingCap Qwen3.6 27B Q6_K at 131K<br /> • Nail 35B-A3B Q4_K_XL at 131K<br /> • Muse Glimmer 30B dynamic Q4 at 131K with DFlash </p> <p>The 1× and 2× lanes are what I can test locally, not a ceiling for the project. The data model and contribution path still support 3×/4× setups, mixed GPUs and other CUDA hardware, provided the topology and serving configuration are reported clearl…",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
+  },
+  {
+    "id": "4fdf9df855115612",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27b - Just a small reminder for people who use builtin UI (or any other UI with same function) in llama.cpp-Server: You can use `Custom JSON` to fast switch thinking modes, disable thinking completely, preserve thinking.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpgrxj/qwen_38_27b_just_a_small_reminder_for_people_who/",
+    "published": "2026-08-15T23:02:34+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpgrxj/qwen_38_27b_just_a_small_reminder_for_people_who/\"> <img alt=\"Qwen 3.8 27b - Just a small reminder for people who use builtin UI (or any other UI with same function) in llama.cpp-Server: You can use `Custom JSON` to fast switch thinking modes, disable thinking completely, preserve thinking.\" src=\"https://preview.redd.it/q86tw0fadmjh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=b8bce4d2655f98dc64275729a4b75bc31d8e585c\" title=\"Qwen 3.8 27b - Just a small reminder for people who use builtin UI (or any other UI with same function) in llama.cpp-Server: You can use `Custom JSON` to fast switch thinking modes, disable thinking completely, preserve thinking.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I'm using this <a href=\"https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates\">Qwen 3.8 Jinja</a></p> <p>``` {</p> <p>&quot;chat_template_kwargs&quot;: {</p> <p>&quot;enable_thinking&quot;: true,</p> <p>&quot;reasoning_effort&quot;: &quot;medium&quot;,</p> <p>&quot;preserve_thinking&quot;: true}</p> <p>} ```</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/-Ellary-\"> /u/-Ellary- </a> <br /> <span><a href=\"https://i.redd.it/q86tw0fadmjh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpgrxj/qwen_38_27b_just_a_small_reminder_for_people_who/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
+  },
+  {
+    "id": "282c7517a6d18e0f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Agentic harness for small models",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpcj2j/agentic_harness_for_small_models/",
+    "published": "2026-08-15T19:59:31+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello; I'm a semi-beginner at local AI. I've been experimenting with this tech for a while, and I still haven't found a proper harness that fits my models, hardware, and needs.</p> <p>My use case is pretty simple: web search, fetching, and browser use. Summarizing websites and having the agent explain stuff to me / Q&amp;A. Potentially some agentic RAG (or whatever RAG-style implementation works best for my specs). Filesystem capabilities and a shell. MCP servers are a must (I use the GitHub, Hugging Face, Reddit, OpenRouter, etc. ones). A sandboxed JS/Python environment would be cool too. PDF reading is highly valuable to me, so that too.</p> <p>So far, I've tried the following:</p> <ol> <li>A large LM Studio plugins/MCP roster. It works, but it's not ideal.</li> <li>Hermes Agent. It injects a ridiculous amount of context and does a bunch of prompt processing and other sci-fi stuff that slows the workflow down way too much.</li> </ol> <p>My specs:</p> <p>RTX 5050 8 GB VRAM<br /> 16 GB DDR5 RAM<br /> 13th-gen i5 CPU</p> <p>My models (best I've found):</p> <ul> <li>Ornith 1 9B; Unsloth Q4 quant; Q4 KV cache; 65,536 ctx</li> <li>Gemma 4 E4B QAT; Unsloth Q4 quant; Q4 KV cache; 131,072 ctx</li> <li>Gemma 4 E2B QAT; Unsloth Q4 quant; Q8 KV cache or full precision; 131,072 ctx</li> <li>Ling 3.0 Tiny; using their custom llama.cpp fork; Q8 KV cache; Q4 quant; 131,072 ctx</li> <li>InternScience_Agents-A1-4B; Bartowski Q6 quant; Q8 KV cache; 131,072 ctx</li> </ul> <p>All running with optimal sampling/settings in LM Studio.</p> <p>Do you guys know of a lightweight harness that fills these needs? I want to finally settle this nonstop tinkering I'm doing so I can actually stick with something good and only switch models when better ones come out.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/_lhz-\"> /u/_lhz- </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpcj2j/agentic_harness_fo…",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
+  },
+  {
+    "id": "022476ed5b5720db",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Which Harness for Local Coding (Qwen 3.8 27b) do you Recommend?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpdrxl/which_harness_for_local_coding_qwen_38_27b_do_you/",
+    "published": "2026-08-15T20:51:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know there are many posts about this, but I would explicitly like to know the harness names instead of having a general discussion. Let's see what the community actually uses!</p> <p>For others, please comment below. Feel free to say why you prefer yours. Thanks</p> <p><a href=\"https://www.reddit.com/poll/1vpdrxl\">View Poll</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DifficultParts\"> /u/DifficultParts </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpdrxl/which_harness_for_local_coding_qwen_38_27b_do_you/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpdrxl/which_harness_for_local_coding_qwen_38_27b_do_you/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
+  },
+  {
+    "id": "f656212dd19538fe",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Before I quantized Qwen3.8-27B, I ran tests to figure out which weight groups actually matter, rather than just looking at where the model falls apart (3 builds: Bedrock / Tightrope / Gambit).",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpgkha/before_i_quantized_qwen3827b_i_ran_tests_to/",
+    "published": "2026-08-15T22:53:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpgkha/before_i_quantized_qwen3827b_i_ran_tests_to/\"> <img alt=\"Before I quantized Qwen3.8-27B, I ran tests to figure out which weight groups actually matter, rather than just looking at where the model falls apart (3 builds: Bedrock / Tightrope / Gambit).\" src=\"https://external-preview.redd.it/QOybt6HLFnaQK1s5CiBtsxjs6ruZ6ZpB3k3JMtP2Tw0.png?width=140&amp;height=75&amp;auto=webp&amp;s=032750f70f40536f60dd14aef488efb93906d44d\" title=\"Before I quantized Qwen3.8-27B, I ran tests to figure out which weight groups actually matter, rather than just looking at where the model falls apart (3 builds: Bedrock / Tightrope / Gambit).\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Went with the same approach I used in my Qwen3.6 post. You quantize one weight group at a time, measure the KL divergence against the source model, and find where the real safe floor sits instead of just pulling a number out of thin air. Built a fresh imatrix specifically for this model.</p> <p>This round I pushed it one step further. After I assembled each combined model, I validated the whole thing as a unit. When the combined results came back worse than what the isolated tests had predicted, I went in with targeted probes to pin down exactly which components were dragging things down, one at a time, until I could account for every single number in the results.</p> <p>Qwen3.8 has a hybrid architecture. The majority of blocks are DeltaNet blocks, which handle state-space sequence mixing and carry their own set of weight groups: attn_qkv (the combined query/key/value projection), attn_gate (the DeltaNet gating signal), ssm_alpha, ssm_beta, ssm_out (the state-space mechanism weights), plus the FFN weights ffn_gate, ffn_up, ffn_down. Every fourth block is a full attention block instead, and those split attn_qkv into separate attn_q, attn_k, attn_v, and attn_output projections. Then on top of all that you have two global weight…",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
+  },
+  {
+    "id": "6ee0ae18ea38497a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "RTX Pro 4500 vs. A100 (x4) - purchase being made today",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpax07/rtx_pro_4500_vs_a100_x4_purchase_being_made_today/",
+    "published": "2026-08-15T18:54:16+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Need some help from the community on this server build: RTX Pro 4500 x4 ($3,299) or used 40GB A100 x4 off eBay (around $4,000/ea).</p> <p>The RTX Pro 4500 means I have to go the route of getting a PCIe switch, inviting a fair amount of complexity.</p> <p>A100 means I just need to find NVLink bridge adapters and hope I’m not buying a GPU from eBay that’s on its last leg.</p> <p>Those are my frantic thoughts after letting four $10k RTX 6000 Pro deals expire in my cart last week. Any feedback is appreciated. What am I missing here? What am I not seeing?</p> <p>EDIT: Other than the fear of waking up and finding out all of these cards cost 10x, i'm in a hurry because I originally purchased x4 Intel B60 open box , and they have to be returned by today. I gave it my best shot, but the scaling an Intel cluster isn't worth the headache. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fakebizholdings\"> /u/fakebizholdings </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpax07/rtx_pro_4500_vs_a100_x4_purchase_being_made_today/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpax07/rtx_pro_4500_vs_a100_x4_purchase_being_made_today/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T23:12:05.454585+00:00"
   }
 ]
