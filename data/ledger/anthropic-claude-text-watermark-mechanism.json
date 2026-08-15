@@ -1,0 +1,24 @@
+{
+  "slug": "anthropic-claude-text-watermark-mechanism",
+  "title": "Anthropic publishes technical details of Claude's text watermark",
+  "status": "published",
+  "first_seen": "2026-08-15",
+  "published_at": "2026-08-15",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/news/claude-text-watermark",
+    "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
+    "https://www.theregister.com/ai-and-ml/2026/08/15/anthropic-says-text-watermarking-scheme-relies-on-inconsequential-words/5288156",
+    "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/"
+  ],
+  "follows": null,
+  "reason": "Published. Anthropic's 11 Aug announcement (EU AI Act transparency compliance) plus its 14 Aug technical follow-up post are the Tier-0 primary sources for the mechanism and limitations; TechCrunch and The Register (both 15 Aug) independently confirm the description. dedup-check clean (no archive match) -- first coverage of this topic. The watermark-detection-API claim is labeled vendor-claim since Anthropic itself says it has not shipped yet. A candidate claim about users canceling subscriptions (Business Insider) was investigated and dropped: anecdote-only, Anthropic denies a measurable trend, no second independent source with real data.",
+  "watch": [
+    "Anthropic ships the watermark detection API -- worth a short follow-up once it's live and independently testable",
+    "A credible outlet or researcher demonstrates the watermark being stripped/evaded at scale using a shipped detector",
+    "Independent data (not anecdote) on subscriber reaction or cancellations tied to the watermark"
+  ],
+  "notes": [
+    "2026-08-15 c3: Surfaced via fresh ingest (the-decoder.com, techcrunch-ai.json, gnews-ai-litigation.json, techmeme.json). Full multi-agent protocol: fresh verifier sub-agent (found the story is a two-stage rollout, 11 Aug announcement + 14 Aug technical detail, not a single new launch as the raw headlines implied; corrected the mistaken premise that a detection API had already launched), then a fresh adversarial falsifier sub-agent (confirmed dates and mechanism, found no dispute of the technical description, confirmed the detection API is still unreleased, recommended dropping the subscription-cancellation angle for weak sourcing). style-gate: anthropic-claude-text-watermark-mechanism EN pass / TR pass -- both TL;DRs got an added why-it-matters closing clause (gate 2)."
+  ]
+}
