@@ -88,5 +88,75 @@
     "published": "2026-08-15T04:35:34+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1votanb/quantized_ai9stars_g9v339a5b_to_gguf_and_created/\"> <img alt=\"Quantized AI9Stars' G9v3-39A5B to GGUF and created a llama.cpp fork to support it\" src=\"https://external-preview.redd.it/Dy9L8W5hQg6HVEWtjEuhTkUP0Bv1GNVXgfXslgeq4qg.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b86de974b96d5e7ddde1280d93b4d48e087b1465\" title=\"Quantized AI9Stars' G9v3-39A5B to GGUF and created a llama.cpp fork to support it\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/linuxid10t\"> /u/linuxid10t </a> <br /> <span><a href=\"https://huggingface.co/linuxid10t/G9v3-39A5B-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1votanb/quantized_ai9stars_g9v339a5b_to_gguf_and_created/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-15T10:25:01.175888+00:00"
+  },
+  {
+    "id": "e0b02e785b0549cc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Aged like fine wine",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp2nmi/aged_like_fine_wine/",
+    "published": "2026-08-15T13:17:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp2nmi/aged_like_fine_wine/\"> <img alt=\"Aged like fine wine\" src=\"https://preview.redd.it/28oikdh4hjjh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=490b14aa3d06d1479d624c4562af859545a92e7e\" title=\"Aged like fine wine\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TigleLive\"> /u/TigleLive </a> <br /> <span><a href=\"https://i.redd.it/28oikdh4hjjh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp2nmi/aged_like_fine_wine/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T16:28:36.229477+00:00"
+  },
+  {
+    "id": "72dee57c08cc2993",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "If you would have told me half a year ago that a local model running in my office would be able to one-shot a Super Mario clone, I would have called you nuts. Qwen3.8-27B is a different beast.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp438p/if_you_would_have_told_me_half_a_year_ago_that_a/",
+    "published": "2026-08-15T14:19:46+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp438p/if_you_would_have_told_me_half_a_year_ago_that_a/\"> <img alt=\"If you would have told me half a year ago that a local model running in my office would be able to one-shot a Super Mario clone, I would have called you nuts. Qwen3.8-27B is a different beast.\" src=\"https://preview.redd.it/ew8ixbz3sjjh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f1b4e141a9b133562cddcf9662f4f670e34bebe5\" title=\"If you would have told me half a year ago that a local model running in my office would be able to one-shot a Super Mario clone, I would have called you nuts. Qwen3.8-27B is a different beast.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Running the Q8 GGUF on my Framework Desktop is not fast, but it's extremely smart for overnight batches and background jobs. Can't wait to play around with MTP and other quants.</p> <p>Have any of you found ways to improve speed while keeping accuracy?</p> <p><a href=\"https://mikeveerman.github.io/qwen38-27b-mario\">https://mikeveerman.github.io/qwen38-27b-mario</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MikeNonect\"> /u/MikeNonect </a> <br /> <span><a href=\"https://i.redd.it/ew8ixbz3sjjh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp438p/if_you_would_have_told_me_half_a_year_ago_that_a/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T16:28:36.229477+00:00"
+  },
+  {
+    "id": "0e4dee6b7e44b080",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8 27B vs Qwen3.6 27B vs Qwen3.5 27B, a slight improvement in oneshotting ability across generations.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp52ct/qwen38_27b_vs_qwen36_27b_vs_qwen35_27b_a_slight/",
+    "published": "2026-08-15T15:01:14+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp52ct/qwen38_27b_vs_qwen36_27b_vs_qwen35_27b_a_slight/\"> <img alt=\"Qwen3.8 27B vs Qwen3.6 27B vs Qwen3.5 27B, a slight improvement in oneshotting ability across generations.\" src=\"https://preview.redd.it/956nmaf3zjjh1.png?width=140&amp;height=121&amp;auto=webp&amp;s=2fc3b5f0e2c6a3cdc79d95d7fec54ffbfcfd51a5\" title=\"Qwen3.8 27B vs Qwen3.6 27B vs Qwen3.5 27B, a slight improvement in oneshotting ability across generations.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Ran Qwen3.8 27B through all 35 oneshot prompts on oneshotlm and compared them to Qwen3.6 27B and Qwen3.5 27B. <a href=\"https://oneshotlm.com/compare/models/?models=qwen%2Fqwen3.8-27b%2Cqwen%2Fqwen3.6-27b%2Cqwen%2Fqwen3.5-27b\">Here</a> are the results.</p> <ul> <li>3.6 was not able to create a working <a href=\"https://oneshotlm.com/compare/game-2048/?q=27b\">2048</a> game but 3.8 did.</li> <li>3.8's <a href=\"https://oneshotlm.com/compare/pelican-on-bicycle/?q=27b\">pelican</a> is accurate</li> <li>3.8 was able to get Wolfenstein mostly correct whereas 3.6 did not draw anything.</li> </ul> <p>I used Sonnet 5 to evaluate the outputs of all these models and looks like the average rating increased across the 27B generations 2.46 -&gt; 2.74 -&gt; 3.00.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kms_dev\"> /u/kms_dev </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vp52ct\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp52ct/qwen38_27b_vs_qwen36_27b_vs_qwen35_27b_a_slight/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T16:28:36.229477+00:00"
+  },
+  {
+    "id": "1120bc31fc6da759",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A nice local vision test",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp3zqc/a_nice_local_vision_test/",
+    "published": "2026-08-15T14:15:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp3zqc/a_nice_local_vision_test/\"> <img alt=\"A nice local vision test\" src=\"https://preview.redd.it/yomr103orjjh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=deb8a99b9381d32fab9449fd7645bc0426496424\" title=\"A nice local vision test\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>What is the meter reading? It should be 37461. What does your favourite vision model give? (Typo fixed)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MrMrsPotts\"> /u/MrMrsPotts </a> <br /> <span><a href=\"https://i.redd.it/yomr103orjjh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp3zqc/a_nice_local_vision_test/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T16:28:36.229477+00:00"
+  },
+  {
+    "id": "f87a3e369ede4c65",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Gemma 4 E4B IQ2_XXS: + 140.54% Reasoning Performance From Tensor Level Quantization Allocation",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp2x49/gemma_4_e4b_iq2_xxs_14054_reasoning_performance/",
+    "published": "2026-08-15T13:29:08+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp2x49/gemma_4_e4b_iq2_xxs_14054_reasoning_performance/\"> <img alt=\"Gemma 4 E4B IQ2_XXS: + 140.54% Reasoning Performance From Tensor Level Quantization Allocation\" src=\"https://preview.redd.it/ozorkp0tijjh1.png?width=140&amp;height=101&amp;auto=webp&amp;s=036c2a1b2b91f60cb157ccdba0d88cdc480b146d\" title=\"Gemma 4 E4B IQ2_XXS: + 140.54% Reasoning Performance From Tensor Level Quantization Allocation\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>iq2_xxs tensor level allocation recovered reasoning from 28.9 -&gt; 69.5 at the same 3.3gb budget. </p> <p><a href=\"https://huggingface.co/ByteOtter/gemma-4-E4B-it-CADA-IQ2_XXS\">https://huggingface.co/ByteOtter/gemma-4-E4B-it-CADA-IQ2_XXS</a></p> <p>I posted my Gemma 4 12B q3 result a couple days ago, where tensor level allocation gave me an +8.55% relative improvement over the category imatrix baseline.</p> <p>I pushed further down to iq2_xxs territory where the damage is more severe and the result is far more dramatic. </p> <p>Same idea as before, build imatrix from a category oriented corpus, measure damage, redistribute precision at the tensor level under a fixed byte budget.</p> <p>The redistribution mattered a lot</p> <p>Reasoning grew +40.625 percentage points over the imatrix only quant.</p> <p>The BF16 source scored 71.875, meaning the allocated iq2 model retained 96.74% of the source reasoning performance while reaching only about 24% of the BF16 size.</p> <p>It was not isolated to reasoning. However, at iq2_xxs with gemma 4 e4b, there is no legal stock model and the imatrix model mostly collapsed. </p> <p>Compared with the same size imatrix baseline 10 of 11 categories improved by point estimate. The only regression being stability.</p> <p>What surprised me most was how much of the source capability came back.</p> <p>Retention versus BF16:</p> <p>Knowledge QA: 97.50%</p> <p>Reasoning: 96.74%</p> <p>Coherence: 95.92%</p> <p>Context: 95.83%</…",
+    "fetched_at": "2026-08-15T16:28:36.229477+00:00"
+  },
+  {
+    "id": "25f78075a379a03a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "model: add Kimi-K3 text model by pwilkin · Pull Request #26185 · ggml-org/llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp6haw/model_add_kimik3_text_model_by_pwilkin_pull/",
+    "published": "2026-08-15T15:59:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp6haw/model_add_kimik3_text_model_by_pwilkin_pull/\"> <img alt=\"model: add Kimi-K3 text model by pwilkin · Pull Request #26185 · ggml-org/llama.cpp\" src=\"https://external-preview.redd.it/pjSDNHbDMQV7Qo_BJkzRTnrTxb8nxK9JyXwi3PDveS0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3670350db4b184ce8f3e8e025aa45d2ec3110e34\" title=\"model: add Kimi-K3 text model by pwilkin · Pull Request #26185 · ggml-org/llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"/u/ilintar\">u/ilintar</a> 👍 </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/26185\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp6haw/model_add_kimik3_text_model_by_pwilkin_pull/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-15T16:28:36.229477+00:00"
+  },
+  {
+    "id": "0f982967e2997963",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8: much thinking for nothing",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vp59eb/qwen38_much_thinking_for_nothing/",
+    "published": "2026-08-15T15:09:23+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So, like many people here I'm trying out Qwen3.8 27B, but I have to say, right now I'm not satisfied: a lot of thinking and a lot of overreaching the task assigned, which ends up in eating up time and context before starting actually working on the assigned task.</p> <p>I hear you say: it's the harness. Well, it might be, but it works much better with other models, and and I remember Q3.6 having still the same willingness to do unasked things but I more or less tamed it... but now it's really out of control.</p> <p>What are your impressions? Not on benchmarks, but on actual usage.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/WhatererBlah555\"> /u/WhatererBlah555 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp59eb/qwen38_much_thinking_for_nothing/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vp59eb/qwen38_much_thinking_for_nothing/\">[comments]</a></span>",
+    "fetched_at": "2026-08-15T16:28:36.229477+00:00"
   }
 ]
