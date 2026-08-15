@@ -1,0 +1,40 @@
+{
+    "slug": "spacex-cursor-acquisition-close",
+    "checked_at": "2026-08-15T23:57:00+00:00",
+    "method": "Fresh verifier sub-agent researched the story independently (found Cursor's own blog post, TechCrunch/CNBC/Bloomberg coverage, and traced the $60B figure to a SpaceX SEC 8-K filing). A fresh adversarial falsifier sub-agent (separate context, no visibility into the verifier's findings) tried to break each claim and found the close date reported by same-day press pickup (15 August) was one day behind the true effective date (14 August) shown in Cursor's own dated blog post and the SEC filing; also flagged that 'SpaceXAI' (SpaceX's internal AI-products brand since its Feb-2026 xAI merger) is not the contracting/acquiring legal entity -- plain 'SpaceX' is, per every primary source. Both corrections applied before publish. A 'second-largest venture-backed acquisition ever' superlative found circulating (inconsistent with June-2026 coverage calling it 'largest') was dropped as unverifiable boilerplate with no named baseline. Cursor's own revenue/customer-count figures were checked and found inconsistent across secondary aggregators (analyst estimates, not independently confirmed) -- omitted from the published article rather than published as fact.",
+    "origin_items": [
+        "Surfaced from this cycle's fresh ingest (data/raw/2026-08-15/techmeme.json, techcrunch-ai.json) covering TechCrunch's same-day report of SpaceX closing its Cursor acquisition."
+    ],
+    "claims": [
+        {
+            "text": "SpaceX's acquisition of Cursor-maker Anysphere became effective on 14 August 2026, with SpaceX's subsidiary X67 Inc. merging into Anysphere, which becomes a wholly owned SpaceX subsidiary",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed directly from SpaceX's own SEC 8-K filing (effective date, merger structure, subsidiary name) and Cursor's own blog post (dated 14 August, 'Cursor has officially been acquired by SpaceX'). Falsifier independently found the same 14 August date via Bloomberg's article URL dateline and a second outlet (TheNextWeb) quoting the filing directly; same-day (15 August) headlines from TechCrunch/Yahoo are next-day press pickup of the 14 August filing/blog post, not a distinct event.",
+            "evidence": ["https://cursor.com/blog/joining-spacex", "https://www.stocktitan.net/sec-filings/SPCX/8-k-space-exploration-technologies-corp-reports-material-event-c660405680ba.html"]
+        },
+        {
+            "text": "The deal is an all-stock transaction: SpaceX issued roughly 391 million Class A shares for Anysphere's outstanding common and preferred stock and vested RSUs, priced off the seven-day volume-weighted average of SpaceX stock before closing, implying a $60.0 billion equity value for Anysphere",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Read directly from the SEC 8-K filing (share counts, pricing methodology, implied equity value stated explicitly). This exceeds the business-claim standard of proof (a filing/court document) independently of the >=2-outlet requirement.",
+            "evidence": ["https://www.stocktitan.net/sec-filings/SPCX/8-k-space-exploration-technologies-corp-reports-material-event-c660405680ba.html"]
+        },
+        {
+            "text": "SpaceX first secured an option to acquire Anysphere in April 2026, then exercised that option and announced the acquisition on 16 June 2026, four days after SpaceX's own IPO",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Independently reported with separate bylines at the time (16 June 2026) by CNBC, Forbes, and TechCrunch, all agreeing on the April-option/June-16-exercise timeline; none traces to a single shared wire story -- CNBC framed it via its own SpaceX-IPO video package, distinct from Forbes' and TechCrunch's angles.",
+            "evidence": ["https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html", "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/"]
+        },
+        {
+            "text": "Cursor says it now has access to SpaceX's compute infrastructure, including its Colossus GPU cluster, which it describes as giving it access to the largest fleet of GPUs in the world",
+            "type": "capability",
+            "verdict": "vendor-claim",
+            "reasoning": "The superlative ('largest fleet ... in the world') is Cursor's own wording in its blog post, not independently verified by noiseless-news for this article -- labeled vendor-claim accordingly, though third-party trade press (e.g. Introl) has separately characterized Colossus as one of the largest single-site AI training installations at very large GPU counts.",
+            "evidence": ["https://cursor.com/blog/joining-spacex"]
+        }
+    ],
+    "falsifier_notes": "dedup-check returned only a coincidental moderate match (title-pattern similarity to an unrelated funding-round story, no shared source URL or subject) -- confirmed standalone, first noiseless-news coverage of this acquisition. Falsifier specifically checked for antitrust/regulatory blockage (found a live but ultimately cleared Hart-Scott-Rodino review, no block) and for date/entity precision -- both the close-date correction (14 not 15 August) and the SpaceX-vs-SpaceXAI entity correction were applied to the published article as a direct result of the falsifier pass. No claim was downgraded to disputed.",
+    "gaps_closed_from_watching_state": []
+}
