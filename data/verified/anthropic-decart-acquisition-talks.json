@@ -1,0 +1,40 @@
+{
+    "slug": "anthropic-decart-acquisition-talks",
+    "checked_at": "2026-08-16T22:51:00+00:00",
+    "method": "Full multi-agent protocol: fresh verifier sub-agent searched and fetched Calcalist/CTech's two articles directly and reconstructed Bloomberg's sourcing via syndicated text (Bloomberg itself 403-blocked); a fresh adversarial falsifier sub-agent stress-tested the independence claim, found the 'Calcalist broke it first' framing itself disputed (Times of Israel says Bloomberg broke it), could not directly fetch a Reuters article to confirm its sourcing, and flagged that the $7B/beat-Nvidia/Sequoia-preference details are single-sourced to Calcalist's 16 August follow-up alone, with a relevant reliability caveat (Calcalist's separate SpaceX-Decart rumor was publicly denied by Elon Musk days earlier). Draft downgrades those specific details to single-source per the falsifier's finding and treats only the $6B/talks-ongoing/unsigned core as independently confirmed via Bloomberg + Calcalist's own 13 August reporting.",
+    "origin_items": [
+        "Surfaced from this cycle's fresh ingest (data/raw/2026-08-16/gnews-ai-chips-and-compute.json, calcalistech.com item) and cross-checked via web search."
+    ],
+    "claims": [
+        {
+            "text": "Anthropic is in talks to acquire Israeli AI startup Decart, in a deal Bloomberg and Calcalist independently reported at roughly $6 billion as of 13 August 2026",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Bloomberg (13 Aug, own 'people familiar with the matter' sourcing) and Calcalist (13 Aug article mrrffazk1, own byline/sourcing, published the same week) both report the $6B figure with distinct sourcing language; neither text cites the other as its source for the figure itself. Reuters is also cited by several secondary outlets as reporting this independently, but the falsifier could not obtain a direct Reuters fetch to confirm sourcing language, so Reuters is not counted as a citable source here -- Bloomberg + Calcalist alone clear the 2-independent-source bar for a business claim.",
+            "evidence": ["https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion", "https://www.calcalistech.com/ctechnews/article/mrrffazk1"]
+        },
+        {
+            "text": "As of 16 August 2026 the talks remained unsigned and could still fall through; Anthropic and Decart both declined to comment",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Stated explicitly and consistently in both the 13 August Bloomberg/Calcalist reporting and the 16 August Calcalist follow-up; no party has confirmed or denied on the record.",
+            "evidence": ["https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion", "https://www.calcalistech.com/ctechnews/article/mrrffazk1", "https://www.calcalistech.com/ctechnews/article/b1evv3aufg"]
+        },
+        {
+            "text": "Calcalist reported on 16 August that the valuation has since risen to about $7 billion, with Anthropic's bid said to have beaten a higher competing offer from Nvidia, and Decart's founders and lead investor Sequoia Capital favoring Anthropic",
+            "type": "business",
+            "verdict": "single-source",
+            "reasoning": "Falsifier found no Bloomberg, Reuters, Fortune, or Axios corroboration of the $7B figure, the Nvidia-beat narrative, or the founders'/Sequoia's stated preference -- all traced to Calcalist's own 16 August reporting ('Calcalist has learned') alone. Downgraded from the verifier's initial framing per the falsifier's finding; also noting for internal record (not in the article body, which already states this is Calcalist's account) that Calcalist's separate, contemporaneous claim of a SpaceX-Decart deal was publicly denied by Elon Musk, a relevant single-outlet reliability caveat for this specific story.",
+            "evidence": ["https://www.calcalistech.com/ctechnews/article/b1evv3aufg"]
+        },
+        {
+            "text": "Decart, founded in 2023 and based in Tel Aviv, builds software that improves AI chip efficiency plus two 'world models' -- Lucy, for real-time video editing, and Oasis, which generates simulated environments for training robotics and autonomous-driving systems; it raised a $300 million Series B in May 2026 at a valuation of about $4 billion, up from $3.1 billion in August 2025, with Nvidia among the investors in that round",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Background facts about Decart's products and funding history are consistent across Bloomberg's syndicated text and Calcalist's reporting with no contradiction found.",
+            "evidence": ["https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion", "https://www.calcalistech.com/ctechnews/article/mrrffazk1"]
+        }
+    ],
+    "falsifier_notes": "Stress-tested the verifier's 'three independent sources' claim (Calcalist + Bloomberg + Reuters) and found it overstated: Calcalist's self-claimed priority over Bloomberg is itself disputed by Times of Israel, and a direct Reuters article could not be located/fetched to confirm independent sourcing language, so Reuters is excluded as a citable evidence source here even though secondary outlets describe it as having reported separately. The $7B valuation, the Nvidia-beat detail, and the Sequoia/founders' preference are all single-sourced to Calcalist's 16 August piece alone and are labeled single-source in the article, attributed explicitly to Calcalist in the body text rather than stated as fact. Flagged Calcalist's recent SpaceX-Decart rumor (denied by Musk) as a relevant, if not disqualifying, reliability caveat for this outlet on this specific company. No denial or newer news found as of the cycle's search time. Bloomberg and Calcalist itself not yet in policy/sources.yaml -- logged as unregistered source candidates.",
+    "gaps_closed_from_watching_state": []
+}

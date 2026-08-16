@@ -1043,5 +1043,17 @@
       ],
       "context": "French business/tech outlet, named byline (Alexandre Mathiot); non-AFP-derived reporting on Google's response -- the independent source that cleared the wire-exclusive check for french-press-google-ai-overviews-complaint. Propose Tier 2, type html."
     }
+  ],
+  "candidates_2026-08-16_c2": [
+    {
+      "domain": "calcalistech.com",
+      "first_seen": "2026-08-16",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.calcalistech.com/ctechnews/article/b1evv3aufg",
+        "https://www.calcalistech.com/ctechnews/article/mrrffazk1"
+      ],
+      "context": "Israeli business/tech outlet (CTech, Calcalist's English edition), named bylines (Golan Hazani, Sophie Shulman); broke original reporting on the Anthropic-Decart acquisition talks used in anthropic-decart-acquisition-talks, with its own sourcing distinct from Bloomberg's. Caveat: a separate, contemporaneous Calcalist claim of SpaceX-Decart talks was publicly denied by Elon Musk on X days before this story -- treat single-outlet Calcalist claims on fast-moving M&A rumors with extra scrutiny even though this specific story's core claim was independently corroborated by Bloomberg. Propose Tier 2, type html."
+    }
   ]
 }

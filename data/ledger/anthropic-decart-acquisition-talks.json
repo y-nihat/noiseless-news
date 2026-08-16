@@ -1,0 +1,25 @@
+{
+  "slug": "anthropic-decart-acquisition-talks",
+  "title": "Anthropic in talks to acquire Israeli AI startup Decart for about $6 billion",
+  "status": "published",
+  "first_seen": "2026-08-16",
+  "published_at": "2026-08-16",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-08-13/anthropic-said-in-talks-to-buy-ai-startup-decart-for-6-billion",
+    "https://www.calcalistech.com/ctechnews/article/mrrffazk1",
+    "https://www.calcalistech.com/ctechnews/article/b1evv3aufg"
+  ],
+  "follows": null,
+  "reason": "Published: Bloomberg and Calcalist independently reported (own sourcing, distinct bylines) that Anthropic is in talks to acquire Decart for ~$6B as of 13 Aug 2026, clearing the business-claim independence bar. Calcalist's 16 Aug follow-up ($7B, beat Nvidia, Sequoia/founders prefer Anthropic) is single-sourced to Calcalist alone -- labeled single-source and attributed explicitly to Calcalist in the article, not stated as confirmed fact. Full verifier + adversarial falsifier pair; falsifier found the verifier's initial 'three independent sources' claim (adding Reuters) overstated -- no direct Reuters article could be fetched to confirm independent sourcing, so Reuters is not cited as evidence. dedup-check: no match.",
+  "watch": [
+    "Whether the deal is signed, and at what final valuation",
+    "Any independent (non-Calcalist) corroboration of the $7B figure, the Nvidia-beat detail, or Sequoia/founders' stated preference",
+    "Any on-record statement or denial from Anthropic, Decart, Nvidia, or Sequoia"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-08-23",
+  "notes": [
+    "2026-08-16 c2: Published. Surfaced via fresh ingest (gnews-ai-chips-and-compute, calcalistech.com item). Full verifier + falsifier sub-agent pair. Unsigned deal with a pending outcome -- open_obligation set, revisit in about a week or sooner if fresh ingest surfaces a signing/collapse."
+  ]
+}
