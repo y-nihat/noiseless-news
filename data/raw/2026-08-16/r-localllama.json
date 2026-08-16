@@ -1,0 +1,12 @@
+[
+  {
+    "id": "92be241fb1ca6b40",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "SOTA Apple Silicon Inference (August 15, 2026)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vphr8u/sota_apple_silicon_inference_august_15_2026/",
+    "published": "2026-08-15T23:48:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><strong>This is a HANDWRITTEN post. I spent way too much time trying to get fast inference on Apple Silicon. This post is for people who want to know what's the latest on running local models on their mac, and why they may not be seeing the performance others in the community claim.</strong></p> <p><strong>TL;DR</strong></p> <p>I've spent the last 2 weeks full-time looking into the state of inference optimization on Apple Silicon, and honestly, the software stack is a mess. There is no framework that has all the inference optimizations that are available on CUDA/NVIDIA for the latest Qwen models: prefix caching, speculative decoding, paged KV cache, continuous batching, dynamic scheduling, flash attention, etc.</p> <p>On CUDA/NVIDIA, a lot of this stuff is already mature and integrated into the inference stacks people actually use. On Apple Silicon, the pieces are scattered across mlx-lm, vllm-metal, forks, custom model conversions, and a bunch of other frameworks, and a lot of them only implement part of the stack.</p> <p>The biggest issue I've found is that the newer Qwen models use a hybrid KV/recurrent state, which makes prefix caching and speculative decoding much harder to combine. On top of that, mlx-lm currently drops the built-in MTP heads during model conversion, so even the models that have built-in speculative decoding support are getting converted without the thing you need.</p> <p>From everything I've tested, vllm-metal is the closest thing I've found to a proper Apple Silicon inference optimization stack right now. I think we should stop making another fork every time something is missing and instead get one stack working properly, then upstream the pieces into mlx-lm and vllm.</p> <p><strong>The Long Version</strong></p> <p>I spent the last 2 weeks digging into this. It should not have taken me this long to understand the space of inference optimizations on Apple Silicon, and I think that's a sign of how bad the spac…",
+    "fetched_at": "2026-08-16T00:22:05.720974+00:00"
+  }
+]
