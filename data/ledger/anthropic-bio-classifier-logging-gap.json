@@ -1,0 +1,20 @@
+{
+  "slug": "anthropic-bio-classifier-logging-gap",
+  "title": "Anthropic discloses an 11-month gap in biological-weapons classifiers on contractor traffic",
+  "status": "published",
+  "first_seen": "2026-08-16",
+  "published_at": "2026-08-16",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.anthropic.com/aug-2026-risk-report",
+    "https://the-decoder.com/anthropics-bio-weapons-filter-was-down-for-nearly-a-year-exposing-133-million-requests/",
+    "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+  ],
+  "follows": null,
+  "reason": "Published: Anthropic's own August 2026 Risk Report (Tier 0, self-disclosure) confirms every load-bearing fact directly; a fresh verifier fetched and read the primary PDF, a fresh adversarial falsifier independently re-downloaded and re-extracted the same PDF to check every quote and figure rather than trust the verifier's transcription. dedup-check returned no matches -- standalone, genuinely new disclosure not previously covered.",
+  "watch": [],
+  "notes": [
+    "2026-08-16 c1: Surfaced from Tier-2 sweep triage (the-decoder.com item in today's raw ingest, cross-referenced with Techmeme). Full multi-agent protocol run: fresh verifier (fetched Anthropic's own Risk Report PDF, Section 4.5.8.2.2), fresh adversarial falsifier (independently re-downloaded and re-extracted the PDF with pypdf, confirmed every quote verbatim, found no contradictions). Falsifier caught and corrected one real risk: some secondary coverage (Unite.AI) flattens Anthropic's hedged 'no clearly concerning misuse... though a handful of potentially dual-use conversations' finding into a cleaner 'no misuse found' -- article preserves the full hedge. Falsifier also confirmed a widely-circulating '90 minutes containment' detail belongs to a separate, adjacent incident in the same report (unauthorized Mythos Preview access, Section 4.5.8.2.1) and excluded it entirely from this article to avoid conflating the two. Editor gate: style-gate: anthropic-bio-classifier-logging-gap EN pass / TR pass -- headline states a falsifiable fact with no superlatives, TL;DR is standalone, no padding, Turkish mirrors structure with natural phrasing (used 'sınıflandırıcı', 'yüklenici', 'çift kullanımlı' as established AI-safety terminology rather than anglicisms). No open obligation: the incident is disclosed-and-already-resolved by Anthropic as of April 2026, not a pending case.",
+    "2026-08-16 c1: Logging thenextweb.com as a new unregistered source candidate in data/ledger/source_candidates.json -- independently reachable (unlike Bloomberg/CNBC/WSJ which repeatedly 403/paywall), used for corroboration alongside the already-registered The Decoder."
+  ]
+}

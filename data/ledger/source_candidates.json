@@ -1,4 +1,24 @@
 {
+  "candidates_2026-08-16_c1": [
+    {
+      "domain": "thenextweb.com",
+      "first_seen": "2026-08-16",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://thenextweb.com/news/anthropic-risk-report-bio-classifiers-human-feedback-gap"
+      ],
+      "context": "Established tech outlet, independently reachable (unlike Bloomberg/CNBC/WSJ which repeatedly 403/paywall this run). Used alongside the already-registered The Decoder as a second Tier-2 corroboration source for anthropic-bio-classifier-logging-gap, confirmed via direct fetch to accurately quote Anthropic's own report rather than distort it. Propose Tier 2, type rss/html."
+    },
+    {
+      "domain": "fortune.com",
+      "first_seen": "2026-08-16",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://fortune.com/2026/08/16/dario-amodei-anthropic-ai-trust-crisis-regulation-frontier-open-models-negative-views/"
+      ],
+      "context": "Major business outlet with named authors; fetched directly and confirmed to quote Amodei's X thread word-for-word identically to TechCrunch's independent fetch -- used as a primary corroboration source for anthropic-amodei-regulation-trust-thread. Propose Tier 2."
+    }
+  ],
   "candidates_2026-08-15_c4": [
     {
       "domain": "cursor.com",

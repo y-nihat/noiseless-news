@@ -1,0 +1,19 @@
+{
+  "slug": "anthropic-amodei-regulation-trust-thread",
+  "title": "Amodei responds to Gavin Baker on AI regulation and trust",
+  "status": "published",
+  "first_seen": "2026-08-16",
+  "published_at": "2026-08-16",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://x.com/DarioAmodei/status/2088758816376807762",
+    "https://fortune.com/2026/08/16/dario-amodei-anthropic-ai-trust-crisis-regulation-frontier-open-models-negative-views/",
+    "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
+  ],
+  "follows": null,
+  "reason": "Published: statement claim type, Amodei's own words are the primary source. Fresh verifier located the originating X thread and cross-checked quotations word-for-word across independent outlets; fresh adversarial falsifier decoded the tweet's own snowflake-ID timestamp to fix the exact date/time, independently confirmed the reality and substance of Gavin Baker's original on-air criticism (not just Amodei's framing of it), and fact-checked the SB 53 and Hassabis references. Passed the residual-substance test (verification.md 4) specifically because of the named, independently-newsworthy public dispute it responds to. dedup-check returned no matches -- standalone.",
+  "watch": [],
+  "notes": [
+    "2026-08-16 c1: Surfaced from Techmeme/TechCrunch triage. Full multi-agent protocol run. Falsifier flagged two precision issues, both applied in the draft: (1) the open-weights quote was only aggregator-sourced, not independently block-quoted verbatim by two outlets -- article paraphrases rather than direct-quotes that specific line; (2) the regulatory positions (SB 53, testing, Hassabis proposal) restate Anthropic's existing June 2026 policy framework rather than announcing anything new -- article's 'why it matters' section says so explicitly rather than implying novelty. Date set to 2026-08-15 (the tweet's own UTC timestamp, decoded from its snowflake ID) rather than 2026-08-16 (when press coverage ran), with published: 2026-08-16 for index ordering. Simon Willison's Weblog (Tier 3, registered discovery-only) was read during verification but explicitly excluded from the numbered sources list per policy -- confirmation relies only on Fortune and TechCrunch (Tier 2) plus the primary tweet. Editor gate: style-gate: anthropic-amodei-regulation-trust-thread EN pass / TR pass -- headline is a falsifiable, specific claim with no superlatives; TL;DR is standalone; no padding; Turkish mirrors structure naturally."
+  ]
+}

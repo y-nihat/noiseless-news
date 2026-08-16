@@ -1,0 +1,24 @@
+{
+  "slug": "stripe-openrouter-acquisition",
+  "title": "Reports of a Stripe-OpenRouter acquisition",
+  "status": "watching",
+  "first_seen": "2026-08-16",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
+    "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/"
+  ],
+  "follows": null,
+  "public": true,
+  "public_note": "One outlet reports Stripe has finalized a deal to acquire the AI model marketplace OpenRouter for more than $7 billion; no second independently-sourced outlet or company confirmation yet.",
+  "reason": "Wire-exclusive check (verification.md §2): Bloomberg (2026-08-16) reports Stripe has finalized a deal to acquire OpenRouter (an AI model marketplace/gateway, ~8M users claimed, 400+ models) for more than $7 billion. TechCrunch's same-day coverage explicitly attributes to Bloomberg ('according to a new report in Bloomberg') and adds no independent sourcing; a Yahoo Finance item is a syndication of the TechCrunch piece, not separate reporting. A separate, earlier report (WSJ via Axios, 2026-07-24) described early-stage talks at a different figure (~$10B) -- this is a different stage (non-binding talks vs. reported-signed deal) and a materially different number (>30% delta), so it does not corroborate today's specific $7B/finalized claim; the two reports are chained rumors from two different single-sourced wires (WSJ then Bloomberg), never simultaneously corroborating the same fact. Stripe told TechCrunch it does not comment on rumors/speculation; no OpenRouter statement found. OpenRouter's $113M Series B / $1.3B valuation (May 2026) is independently well-established background, not part of the rumor chain. This is a business/M&A claim requiring >=2 independent Tier<=2 sources or a filing, not met for the finalized $7B claim.",
+  "watch": [
+    "A second wire/outlet with its own sourcing on the $7B figure or finalized status (not relaying Bloomberg)",
+    "An SEC filing or official Stripe/OpenRouter confirmation",
+    "The deal closing or being officially announced, which would itself be the cleaner news event"
+  ],
+  "notes": [
+    "2026-08-16 c1: Opened this cycle from Tier-2/Techmeme triage. Fresh verifier sub-agent run: confirmed wire-exclusive status at both the July WSJ 'talks' stage and the August Bloomberg 'finalized' stage, with no overlap/corroboration between them since they report different stages and figures. dedup-check clean (no match). Recommended hold. Not published; opened as watching."
+  ]
+}

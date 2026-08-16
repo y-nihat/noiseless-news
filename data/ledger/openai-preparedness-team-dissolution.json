@@ -1,0 +1,23 @@
+{
+  "slug": "openai-preparedness-team-dissolution",
+  "title": "Reports of OpenAI dissolving its Preparedness team",
+  "status": "watching",
+  "first_seen": "2026-08-16",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://the-decoder.com/openai-dissolved-the-team-built-to-catch-catastrophic-ai-risks-reassigning-its-work-to-other-groups/"
+  ],
+  "follows": null,
+  "public": true,
+  "public_note": "A single outlet's report, citing internal sources, that OpenAI folded its catastrophic-risk evaluation team into other groups; no second independent outlet or on-the-record OpenAI statement found yet.",
+  "reason": "Wire-exclusive check (verification.md §2): the Financial Times reported OpenAI dissolved its 'Preparedness' team (the unit evaluating whether OpenAI's models pose serious/catastrophic biological and cyber risks) at the end of July 2026, reassigning its work to existing teams, citing internal sources; Greg Brockman reportedly said the company has 'woven safety work more tightly into model development.' Every other outlet found (the-decoder.com, forum reposts) traces to the single FT report -- no independent second source. FT itself is inaccessible to direct fetch (blocked); the Brockman quote is only known via the-decoder's paraphrase of FT, not confirmed on openai.com, Brockman's own X account, or any OpenAI statement. openai.com's frontier-risk framework page also returned blocked on fetch this cycle, so could not be checked directly for any contradicting or confirming detail. This is a business/organizational claim requiring >=2 independent Tier<=2 sources or a company statement/filing, which is not met. dedup-check returned a moderate match (score 0.4) against openai-safety-heidecke-departure (also watching, unpublished) -- read that entry: it covers a distinct earlier event (Johannes Heidecke's mid-July departure and folding of Safety Systems into Research under Mia Glaese), not the Preparedness team specifically (previously led by Aleksander Madry, then Joaquin Quiñonero Candela). Related (both are 2026 OpenAI safety-org restructuring events in the same broader pattern -- Superalignment 2024, Mission Alignment Feb 2026, Safety Systems/Heidecke mid-July 2026, Preparedness end-of-July 2026/reported mid-Aug) but not the same claim; opened as a standalone watching entry rather than merged into the Heidecke entry, since neither is published and the underlying facts differ.",
+  "watch": [
+    "A second, independently-sourced outlet (not relaying FT) confirming the Preparedness team's dissolution or reassignment details",
+    "An on-the-record OpenAI statement, blog post, or updated frontier-risk framework page addressing this specifically",
+    "Confirmation or denial of the exact Greg Brockman quote and its context"
+  ],
+  "notes": [
+    "2026-08-16 c1: Opened this cycle from Tier-2 sweep triage (the-decoder.com item in fresh ingest). Fresh verifier sub-agent run (not the triaging context): confirmed wire-exclusive status (FT only), no second source, no OpenAI on-the-record statement found, FT and openai.com both blocked to direct fetch this cycle. Recommended hold. Not published; opened as watching."
+  ]
+}
