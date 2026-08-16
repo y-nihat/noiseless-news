@@ -8,5 +8,195 @@
     "published": "2026-08-15T23:48:29+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p><strong>This is a HANDWRITTEN post. I spent way too much time trying to get fast inference on Apple Silicon. This post is for people who want to know what's the latest on running local models on their mac, and why they may not be seeing the performance others in the community claim.</strong></p> <p><strong>TL;DR</strong></p> <p>I've spent the last 2 weeks full-time looking into the state of inference optimization on Apple Silicon, and honestly, the software stack is a mess. There is no framework that has all the inference optimizations that are available on CUDA/NVIDIA for the latest Qwen models: prefix caching, speculative decoding, paged KV cache, continuous batching, dynamic scheduling, flash attention, etc.</p> <p>On CUDA/NVIDIA, a lot of this stuff is already mature and integrated into the inference stacks people actually use. On Apple Silicon, the pieces are scattered across mlx-lm, vllm-metal, forks, custom model conversions, and a bunch of other frameworks, and a lot of them only implement part of the stack.</p> <p>The biggest issue I've found is that the newer Qwen models use a hybrid KV/recurrent state, which makes prefix caching and speculative decoding much harder to combine. On top of that, mlx-lm currently drops the built-in MTP heads during model conversion, so even the models that have built-in speculative decoding support are getting converted without the thing you need.</p> <p>From everything I've tested, vllm-metal is the closest thing I've found to a proper Apple Silicon inference optimization stack right now. I think we should stop making another fork every time something is missing and instead get one stack working properly, then upstream the pieces into mlx-lm and vllm.</p> <p><strong>The Long Version</strong></p> <p>I spent the last 2 weeks digging into this. It should not have taken me this long to understand the space of inference optimizations on Apple Silicon, and I think that's a sign of how bad the spac…",
     "fetched_at": "2026-08-16T00:22:05.720974+00:00"
+  },
+  {
+    "id": "a8317be294201f2f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Newer commits removed the Qwen 35B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpxbm8/newer_commits_removed_the_qwen_35b/",
+    "published": "2026-08-16T13:39:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpxbm8/newer_commits_removed_the_qwen_35b/\"> <img alt=\"Newer commits removed the Qwen 35B\" src=\"https://external-preview.redd.it/tUAD-zXcA8X5TflnoexZVk3qKe8Q4XJpwE7choNBsYQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2abc6f6b3139d23819bf346822056f319f369cfc\" title=\"Newer commits removed the Qwen 35B\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In this commits, the 35B model was removed. Looks like it's confirming the 35B model won't get released.</p> <p>I think they need to be made aware how big the 35 moe is widely used. Think need to make noise on theyre X, huggingface and online places. If they dont know there's no need to release for people group who dont speak up.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Local-Cardiologist-5\"> /u/Local-Cardiologist-5 </a> <br /> <span><a href=\"https://github.com/modelscope/ms-swift/commit/a45f1d4f73157ba59062a7fd1f55a40dae759156\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpxbm8/newer_commits_removed_the_qwen_35b/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "2eb8ab81872d7849",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Paper claims RL for reasoning only changes 1-3% of tokens, and they replicate the gains without RL at ~1000x less compute",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpuhh1/paper_claims_rl_for_reasoning_only_changes_13_of/",
+    "published": "2026-08-16T11:21:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpuhh1/paper_claims_rl_for_reasoning_only_changes_13_of/\"> <img alt=\"Paper claims RL for reasoning only changes 1-3% of tokens, and they replicate the gains without RL at ~1000x less compute\" src=\"https://external-preview.redd.it/q3evP6JeDpAC2MdSQHWYxnCYTqbJkElIQsLFqVSdkss.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de730fbf7ecace6df0036b21470c16a2d4feacfb\" title=\"Paper claims RL for reasoning only changes 1-3% of tokens, and they replicate the gains without RL at ~1000x less compute\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/juanviera23\"> /u/juanviera23 </a> <br /> <span><a href=\"https://arxiv.org/abs/2605.06241\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpuhh1/paper_claims_rl_for_reasoning_only_changes_13_of/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "30dea696f3924c82",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The dream is to reach 200GB VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpwcnf/the_dream_is_to_reach_200gb_vram/",
+    "published": "2026-08-16T12:55:30+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpwcnf/the_dream_is_to_reach_200gb_vram/\"> <img alt=\"The dream is to reach 200GB VRAM\" src=\"https://preview.redd.it/ssk5s2yaiqjh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=84954a55a4be1b1dba0fe18cdfb89a25083f311c\" title=\"The dream is to reach 200GB VRAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Step 1) Find 16k ASAP before it goes up to 20k after a few months</p> <p>Step 2) Buy RTX PRO 6000 (MAXQ)</p> <p>Step 3) Remove RTX PRO 5000 in pcie_1 slot. Replace w/ RTX PRO 6000</p> <p>Step 4) Buy a NVME to PCIE converter and HPPLEX 500W then move RTX PRO 5000 there</p> <p>Step 5) Power limit RTX PRO 6000, RTX 5090 and RTX PRO 4000 so it fits 1300W PSU ATX 3.1</p> <p>4 GPUS<br /> RTX PRO 6000 (MAXQ) (96GB) gen5 x8<br /> RTX 5090 (32GB) gen5 x8<br /> RTX PRO 5000 (48GB) gen4 x4<br /> RTX PRO 4000 (24GB) gen4 x4<br /> =200GB VRAM !!!</p> <p>How to finish Step 1??</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dry_Mortgage_4646\"> /u/Dry_Mortgage_4646 </a> <br /> <span><a href=\"https://i.redd.it/ssk5s2yaiqjh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpwcnf/the_dream_is_to_reach_200gb_vram/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "3532aa0c443c4d20",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8 27B reasoning effort low/medium/xhigh comparison",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpuh7m/qwen38_27b_reasoning_effort_lowmediumxhigh/",
+    "published": "2026-08-16T11:20:58+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpuh7m/qwen38_27b_reasoning_effort_lowmediumxhigh/\"> <img alt=\"Qwen3.8 27B reasoning effort low/medium/xhigh comparison\" src=\"https://preview.redd.it/fkbx5qf41qjh1.png?width=140&amp;height=113&amp;auto=webp&amp;s=2db0560101519671b50a2aa996e0545e4f9650f6\" title=\"Qwen3.8 27B reasoning effort low/medium/xhigh comparison\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I did a short test of the different reasoning efforts, since on default xhigh the model thinks <strong>a lot</strong>.</p> <p>Not very scientific, just a quick &quot;generate an SVG of a pelican on a bicycle&quot; prompt with 3 different seeds. I think the result is interesting none the less: xhigh gives <strong>*much\\</strong>* higher visual fidelity - but it also takes about 7x as long as low. Low and medium seem to be very close to each other.</p> <p><a href=\"https://preview.redd.it/fkbx5qf41qjh1.png?width=1560&amp;format=png&amp;auto=webp&amp;s=bfc1e9679802605c61af203ca27422ed763b6a19\">https://preview.redd.it/fkbx5qf41qjh1.png?width=1560&amp;format=png&amp;auto=webp&amp;s=bfc1e9679802605c61af203ca27422ed763b6a19</a></p> <h1>Hardware and setup</h1> <ul> <li>GPU: NVIDIA RTX 5080 Laptop GPU, 16 GB VRAM</li> <li>Model: <code>unsloth/Qwen3.8-27B-UD-IQ3_XXS</code></li> <li>llama.cpp: build 10451, commit <code>10bf611e5</code></li> <li>Context: 65,536</li> <li>KV cache: Q8_0</li> <li>Flash Attention: enabled</li> <li>MTP speculative decoding: <code>--spec-default --spec-type draft-mtp</code></li> <li><code>--fit off</code></li> <li>One concurrent slot</li> </ul> <p>Prompt:</p> <blockquote> <p>Create a polished SVG graphic of a pelican riding a bicycle. The result must clearly show a recognizable pelican actively riding a recognizable two-wheeled bicycle. Return only one complete, self-contained SVG document with a viewBox; no Markdown fences, prose, external images, JavaScript, or animation.</p> </blockquote> <h1>Average results</h1>…",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "9c53ed5a83af9dca",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B Hybrid IQ4_XS quantization for 16GB gang",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpzhws/qwen3827b_hybrid_iq4_xs_quantization_for_16gb_gang/",
+    "published": "2026-08-16T15:09:25+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpzhws/qwen3827b_hybrid_iq4_xs_quantization_for_16gb_gang/\"> <img alt=\"Qwen3.8-27B Hybrid IQ4_XS quantization for 16GB gang\" src=\"https://external-preview.redd.it/WkHEy86wL96ZJvGTymemKT1_al9R5v4GL3LfkyjZJt0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=415fd541e9f63c15c597f537d15af8163dca92d7\" title=\"Qwen3.8-27B Hybrid IQ4_XS quantization for 16GB gang\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Johnny_Rell\"> /u/Johnny_Rell </a> <br /> <span><a href=\"https://huggingface.co/jrell/Qwen3.8-27B-i1-IQ4_XS-GGUF-Smaller\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpzhws/qwen3827b_hybrid_iq4_xs_quantization_for_16gb_gang/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "77a2251d04716d71",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B vs Qwen3.6-27B writing ray-tracers in BASIC",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpiyj9/qwen3827b_vs_qwen3627b_writing_raytracers_in_basic/",
+    "published": "2026-08-16T00:45:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpiyj9/qwen3827b_vs_qwen3627b_writing_raytracers_in_basic/\"> <img alt=\"Qwen3.8-27B vs Qwen3.6-27B writing ray-tracers in BASIC\" src=\"https://preview.redd.it/cjjqj9n7smjh1.png?width=140&amp;height=105&amp;auto=webp&amp;s=e632a1a28885ca173a47ec8d3ba3aa0ddc4f2e24\" title=\"Qwen3.8-27B vs Qwen3.6-27B writing ray-tracers in BASIC\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>one of my llm hobbies is re-creating graphics demos i used to write in BASIC in the late 1980s. i slopped together an agentic harness and a basic-to-js transpiler in a web page i've been playing with for a few months. the agent can write basic programs, run them, examine the resulting images, and iterate. qwen3.6 could do a ray-tracer with some user input -- often it got something wrong that it couldn't see/didn't notice, and hence wouldn't fix without further prompting. qwen3.8 typically knocks it out of the park on its own, iterating to a good result. both models are running the unsloth UD-Q8_K_XL quants. i'm pretty happy with 3.8 so far.</p> <p>the user prompt was &quot;write a recursive ray-tracing demo to render three metallic spheres (copper, silver, gold) over a glossy checkerboard plane and under a deep blue sky. use the cook-torrance model to render the spheres.&quot; </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-Breakfast1878\"> /u/Ok-Breakfast1878 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vpiyj9\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpiyj9/qwen3827b_vs_qwen3627b_writing_raytracers_in_basic/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "3b4a51afc8041c52",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27b with DSH(DeepSeek Harness) is Amazing!! Experiences so far and perfomance.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpv12b/qwen_38_27b_with_dshdeepseek_harness_is_amazing/",
+    "published": "2026-08-16T11:50:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpv12b/qwen_38_27b_with_dshdeepseek_harness_is_amazing/\"> <img alt=\"Qwen 3.8 27b with DSH(DeepSeek Harness) is Amazing!! Experiences so far and perfomance.\" src=\"https://preview.redd.it/wkg27e152qjh1.png?width=140&amp;height=47&amp;auto=webp&amp;s=f7dd138ae3503aa47c8f27fa0d3193cdf0e6ea67\" title=\"Qwen 3.8 27b with DSH(DeepSeek Harness) is Amazing!! Experiences so far and perfomance.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/wkg27e152qjh1.png?width=853&amp;format=png&amp;auto=webp&amp;s=2e3f8b11ea6393041f501e95c5835f9bea0245dd\">https://preview.redd.it/wkg27e152qjh1.png?width=853&amp;format=png&amp;auto=webp&amp;s=2e3f8b11ea6393041f501e95c5835f9bea0245dd</a></p> <p>So ive been trying different harnesses and coding agents with the new qwen 3.8 , and after trying out many ive been mostly impressed by deekseek harness , paired with qwen i get some mind blowing results , truly feels like i have something of value in my hands.</p> <p>It doesnt stop , it doesnt fail and it doesnt error. I have it running for 10 hours , even tho im at 90k contex it auto compresses on its own and doesnt loose track of where it was and what it was doing.<br /> 10mil input tokens it has gone thro , it does not diviate from its goal and oneshots every problem.</p> <p>The only downside is ofcourse speed , when the contex grows and i have my card running at 230w (rtx 3090) , i get around 37tok/s avarage. In clean new prompt i get around 50 , and in unsloth studio on new chat window i get around 56-60 tk/s.</p> <p>The quant im using is UD q4 k xl + vision F16 and contex is set at 92k , MTP + ngram enabled , GPU layers set to 66 no CPU offloading.</p> <p>The way thinking works from what ive gathered as info around this sub , by default atleast in llama.ccp it is using xHigh thinking , thats why i have such a amazing results but it does indeed think for a lot , sometimes it would think f…",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "c6cb71d0f9ab8981",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How many people have 24gb over gpu here?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpm70f/how_many_people_have_24gb_over_gpu_here/",
+    "published": "2026-08-16T03:27:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I was surprised by the fact that the qwen 3.8 27b download count is about 1 million (globally). This means that even on this subreddit, very few people have used 27b.</p> <p>At most 50k–100k active users, and once you break down the hardware distribution, 8GB, 16GB, 24GB, 32GB cards, Macs, whatever, it's probably under a thousand people who've actually run one on a 24GB+ card.</p> <p>And that figure still counts the tinkerers and casual image-gen gamers. Strip them out and the ones genuinely archieving productivity and developing with local LLMs is vanishingly small.</p> <p>Am I right?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-Shower7286\"> /u/Ok-Shower7286 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpm70f/how_many_people_have_24gb_over_gpu_here/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpm70f/how_many_people_have_24gb_over_gpu_here/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "053206db154a8222",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Genie-style playable world model running 720p at 16 FPS on a single 5090 in 19GB VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpujkc/geniestyle_playable_world_model_running_720p_at/",
+    "published": "2026-08-16T11:24:36+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpujkc/geniestyle_playable_world_model_running_720p_at/\"> <img alt=\"Genie-style playable world model running 720p at 16 FPS on a single 5090 in 19GB VRAM\" src=\"https://external-preview.redd.it/q3evP6JeDpAC2MdSQHWYxnCYTqbJkElIQsLFqVSdkss.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de730fbf7ecace6df0036b21470c16a2d4feacfb\" title=\"Genie-style playable world model running 720p at 16 FPS on a single 5090 in 19GB VRAM\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/juanviera23\"> /u/juanviera23 </a> <br /> <span><a href=\"https://arxiv.org/abs/2607.19191\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpujkc/geniestyle_playable_world_model_running_720p_at/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "a55d935698a0e4c8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Koboldcpp v1.119 released",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpztfu/koboldcpp_v1119_released/",
+    "published": "2026-08-16T15:22:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpztfu/koboldcpp_v1119_released/\"> <img alt=\"Koboldcpp v1.119 released\" src=\"https://external-preview.redd.it/X4qlyojhhPMvBoO7NreF_n-m1TgoGvm39Vpd0ZGxI9c.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=63b2d43a81241e7c391ac696dd9dcc3a9d0ff7f8\" title=\"Koboldcpp v1.119 released\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fcking_Chuck\"> /u/Fcking_Chuck </a> <br /> <span><a href=\"https://github.com/LostRuins/koboldcpp/releases/tag/v1.119\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpztfu/koboldcpp_v1119_released/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "66115aac6c7d1509",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "If you are at the lowest budget, which you can think of.Which hardware would you recommend to run? qwen 3.8 27b oWith like 50 tokens per second. I currently have a RTX 5070 Ti.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vprm64/if_you_are_at_the_lowest_budget_which_you_can/",
+    "published": "2026-08-16T08:29:20+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vprm64/if_you_are_at_the_lowest_budget_which_you_can/\"> <img alt=\"If you are at the lowest budget, which you can think of.Which hardware would you recommend to run? qwen 3.8 27b oWith like 50 tokens per second. I currently have a RTX 5070 Ti.\" src=\"https://external-preview.redd.it/DLgO0_SliX7aB47aKTrOUZF1qVLM1KGairfhh4enxIw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=7d478f742c068b844440de61bb25e4148c5f885e\" title=\"If you are at the lowest budget, which you can think of.Which hardware would you recommend to run? qwen 3.8 27b oWith like 50 tokens per second. I currently have a RTX 5070 Ti.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/InternationalGap3698\"> /u/InternationalGap3698 </a> <br /> <span><a href=\"https://huggingface.co/Qwen/Qwen3.8-27B\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vprm64/if_you_are_at_the_lowest_budget_which_you_can/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "f4146afe4fbf7415",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Quick PSA: Qwen3.8-27B reasoning effort vs reasoning budget in llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpwfpe/quick_psa_qwen3827b_reasoning_effort_vs_reasoning/",
+    "published": "2026-08-16T12:59:26+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>If you are using llama-server with their web-ui for testing, keep in mind, that the reasoning selector is just a reasoning budget aka a hard cap and has, at least to my knowledge, nothing at all to do with Qwen3.8-27B's native reasoning effort capability!</p> <p>Selecting any value for reasoning in the web-ui (default, (off), low, medium, high or max) just introduces different hard cap values and and will truncate your reasoning, if those values are reached.</p> <p>With the exception of the &quot;off&quot;-option which disable reasoning at all and &quot;default&quot; and &quot;max&quot; without any capping.</p> <p>The reasoning effort is independent from that and really changes the thoroughness and the analytic reasoning skills and therefore can massively influence the output quality of the model, instead of just capping reasoning tokens!</p> <p>In older llama.cpp versions, it needs to be set via:</p> <p><code>--chat-template-kwargs &quot;{\\&quot;reasoning_effort\\&quot;:\\&quot;medium\\&quot;}&quot;</code></p> <p><sup>\\</sup> quotation marks are escaped for Windows)</p> <p>For up to date versions, if one doesn't like the chat-template-kwargs variant, it can be set with:</p> <p><code>--reasoning-effort medium</code></p> <p>Or, for external apps, via <code>&quot;reasoning_effort&quot;: &quot;medium&quot;</code> API request.</p> <p>Options are: low, medium and xhigh (default) for any of the above methods.</p> <p>Did only test the chat-template-kwargs variant though!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/bonobomaster\"> /u/bonobomaster </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpwfpe/quick_psa_qwen3827b_reasoning_effort_vs_reasoning/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpwfpe/quick_psa_qwen3827b_reasoning_effort_vs_reasoning/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "b948d8890f30c89b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Show-off Saturday: Intel Arc B140 build.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpkomt/showoff_saturday_intel_arc_b140_build/",
+    "published": "2026-08-16T02:10:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpkomt/showoff_saturday_intel_arc_b140_build/\"> <img alt=\"Show-off Saturday: Intel Arc B140 build.\" src=\"https://preview.redd.it/22apc428anjh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=4361b47544e60507e72d2ba3beca32b52a0130ab\" title=\"Show-off Saturday: Intel Arc B140 build.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>My local inference build, with:<br /> ASUS WS C422 PRO/SE<br /> 10-core Xeon W-2255<br /> 64GB ECC RAM<br /> 64GB VRAM<br /> Pimped case with TurboLEDz indicating the frequencies of the 10 xeon cores.</p> <p>Running llama.cpp with SYCL back-end.<br /> Khronos-stack and MESA stack all built from git sources, running on Ubuntu 26.04</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mazarax\"> /u/mazarax </a> <br /> <span><a href=\"https://i.redd.it/22apc428anjh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpkomt/showoff_saturday_intel_arc_b140_build/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "ed3a43d919ddb5f9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I'm still running Qwen 3.5 122B. Should I switch to Qwen 3.8 27B?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpszpm/im_still_running_qwen_35_122b_should_i_switch_to/",
+    "published": "2026-08-16T09:55:17+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I see everyone gushing over 3.8, I get the impression people find it drastically better than previous Qwen models, but I can't believe it could be better than 3.5 122B. Is it?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MackThax\"> /u/MackThax </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpszpm/im_still_running_qwen_35_122b_should_i_switch_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpszpm/im_still_running_qwen_35_122b_should_i_switch_to/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "1ae013693887a589",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B-int4-AutoRound (18GB) - with working MTP spec decode",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpvwqh/qwen3827bint4autoround_18gb_with_working_mtp_spec/",
+    "published": "2026-08-16T12:34:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpvwqh/qwen3827bint4autoround_18gb_with_working_mtp_spec/\"> <img alt=\"Qwen3.8-27B-int4-AutoRound (18GB) - with working MTP spec decode\" src=\"https://external-preview.redd.it/gr3-Pf0EHJ7HvkEOgHbOMyrNzd6HKK83BEcQgJiEUFw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c35506f772f3e5d08a83bc640e5376c65a419b24\" title=\"Qwen3.8-27B-int4-AutoRound (18GB) - with working MTP spec decode\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BusinessMud9586\"> /u/BusinessMud9586 </a> <br /> <span><a href=\"https://huggingface.co/Frozenlock/Qwen3.8-27B-int4-AutoRound\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpvwqh/qwen3827bint4autoround_18gb_with_working_mtp_spec/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "8d7aabf908ec83d7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Huihui-ai Qwen 3.8 Ablit Available",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpw006/huihuiai_qwen_38_ablit_available/",
+    "published": "2026-08-16T12:38:59+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>At hugging face, this is the model I use for most of my analysis that most of my services have to not be refused. previous versions are quite good. It seems this might have dropped today and pulling right now!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Frizzy-MacDrizzle\"> /u/Frizzy-MacDrizzle </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpw006/huihuiai_qwen_38_ablit_available/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpw006/huihuiai_qwen_38_ablit_available/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "a5bbc506441ee147",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Let's play : guess the model",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpwyem/lets_play_guess_the_model/",
+    "published": "2026-08-16T13:22:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpwyem/lets_play_guess_the_model/\"> <img alt=\"Let's play : guess the model\" src=\"https://preview.redd.it/c9i8kjcslqjh1.png?width=140&amp;height=119&amp;auto=webp&amp;s=04feeeef8adefeec320fa7b4e01f277dca3987b1\" title=\"Let's play : guess the model\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Single prompt &quot;make me a 3d scene of an anime girl&quot; (stolen from someone on discord, I like it a lot since it seems like every model struggles a lot with it)</p> <p>Everything is one shot. No vision, no iterations, no corrections, no going in the browser. </p> <p>Essentially depends on reasoning quality, the model needs to &quot;mentally&quot; calculate everything. Yes I am aware this is slop. </p> <p>Answers : </p> <p><span class=\"md-spoiler-text\">1 : Claude Opus 4.7 </span></p> <p><span class=\"md-spoiler-text\">2 : Claude sonnet 4.6</span></p> <p><span class=\"md-spoiler-text\">3 : GPT 5.6 Sol</span></p> <p><span class=\"md-spoiler-text\">4 : Qwen 3.8 27b, xhigh, Q8</span></p> <p><span class=\"md-spoiler-text\">5 : Claude Opus 5</span></p> <p>Got any ? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Jeanodel\"> /u/Jeanodel </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vpwyem\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpwyem/lets_play_guess_the_model/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "dae5b44efb281dc2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27b - Acquarium Panel Failure - Q8_K_XL Unsloth",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpv0wm/qwen_38_27b_acquarium_panel_failure_q8_k_xl/",
+    "published": "2026-08-16T11:50:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpv0wm/qwen_38_27b_acquarium_panel_failure_q8_k_xl/\"> <img alt=\"Qwen 3.8 27b - Acquarium Panel Failure - Q8_K_XL Unsloth\" src=\"https://preview.redd.it/bft1z61j6qjh1.gif?width=640&amp;crop=smart&amp;s=6d9a17883773edddabd580ab2bfc754b4b50ca93\" title=\"Qwen 3.8 27b - Acquarium Panel Failure - Q8_K_XL Unsloth\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>After: <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vckcue/ds4_flash_0731_acquarium_panel_failure_q3_k_xl/\">https://www.reddit.com/r/LocalLLaMA/comments/1vckcue/ds4_flash_0731_acquarium_panel_failure_q3_k_xl/</a></p> <p>start C:\\llm\\llamaM6\\build\\bin\\llama-server.exe --model &quot;F:\\models\\Qwen3.8-27B-UD-Q8_K_XL.gguf&quot; --temp 1.0 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --reasoning-preserve --repeat-penalty 1.0 --ctx-size 248320 --no-warmup --no-mmap --fit on --parallel 1 --cont-batching --reasoning on --n-cpu-moe 0 -lv 4 --device CUDA0 --mmproj &quot;F:\\models\\mmproj-BF16.gguf&quot; --spec-type draft-mtp --spec-draft-n-max 3 --chat-template-file f:\\models\\chat_template.jinja</p> <p>RTX6000 96gb</p> <p>___</p> <p>Prompt:</p> <p>Create a large glass aquarium whose side panel develops a visible crack and then bursts.</p> <p>The simulation must include:</p> <p>Water escaping through the opening with flow strength based on water depth and decreasing as the tank drains</p> <p>A curved water jet affected by gravity</p> <p>A spreading puddle that collides with the room boundaries</p> <p>Fish, rocks, plants, and a floating toy reacting differently according to density, buoyancy, drag, and current</p> <p>Objects transitioning correctly from underwater motion to airborne motion and then to floor collisions</p> <p>Fish attempting to swim against the current before being swept through the breach</p> <p>Glass fragments with angular velocity, collisions, and water resistance</p> <p>A visible waterline that lowers continuousl…",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "2eec525198bdbd53",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Single 3090 homies, whats your config for Qwen 3.8 ?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vpuhov/single_3090_homies_whats_your_config_for_qwen_38/",
+    "published": "2026-08-16T11:21:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I sadly was not able to follow as much as I wanted the new advancements. Care to share your optimised setups ? Vllm, llama.cpp or any other engine? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sagiroth\"> /u/sagiroth </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpuhov/single_3090_homies_whats_your_config_for_qwen_38/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpuhov/single_3090_homies_whats_your_config_for_qwen_38/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
   }
 ]

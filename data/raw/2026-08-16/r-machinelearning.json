@@ -1,0 +1,42 @@
+[
+  {
+    "id": "33a604f2b213f77a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "SSOG-Attention: Sum Of Separable Gaussians as a sub-quadratic and scalable alternative to SDPA. [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a/",
+    "published": "2026-08-16T10:06:07+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a/\"> <img alt=\"SSOG-Attention: Sum Of Separable Gaussians as a sub-quadratic and scalable alternative to SDPA. [R]\" src=\"https://preview.redd.it/pepwlp93opjh1.gif?width=320&amp;crop=smart&amp;s=2c59acf93fb52e53083ca4ef7d9885451e6c387b\" title=\"SSOG-Attention: Sum Of Separable Gaussians as a sub-quadratic and scalable alternative to SDPA. [R]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>&#x200b;</p> <p>Scaled dot-product attention (SDPA) computes its Attention by computing the similarity-scores of all image-tokens with all query tokens which results in O(N²·d) complexity. SSOG (Sum Of Separable Gaussians) instead learns a few Gaussian atoms for each head and only geometrically steers them based on the query token. Since the atoms can be factorized into a separable sum of Gaussians this leads to a reduced complexity of O(N·√N·d). Experiments show that SSOG clearly beats SDPA on small data (cifar100), and delivers equivalent performance and much faster convergence on bigger datasets like IN1k. All that while being much faster and memory efficient with increasing scale.</p> <p>Have a look at the full blog-post and repo to see more results and ablations and let me know what you think.</p> <p>Blog-post: <a href=\"https://pisoni.ai/posts/ssog\">https://pisoni.ai/posts/ssog</a></p> <p>Repo: <a href=\"https://github.com/4rtemi5/ssog\">https://github.com/4rtemi5/ssog</a></p> <p>*AI was used for some of the code and some of the blog-post but I put a lot of effort into this project and stand behind every word.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/4rtemi5\"> /u/4rtemi5 </a> <br /> <span><a href=\"https://i.redd.it/pepwlp93opjh1.gif\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vpt6ay/ssogattention_sum_of_separable_gaussians_as_a/\">[comments]</a></span> </td><…",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "c7a884a31d1ee763",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "How can we solve long-range recall in linear attention? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vpqwdc/how_can_we_solve_longrange_recall_in_linear/",
+    "published": "2026-08-16T07:47:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Recently, I started working on DNA sequence modeling and decided to explore <strong>linear attention</strong>, mainly because DNA sequences can easily reach <strong>1M tokens</strong>, making standard softmax attention extremely expensive in terms of memory and computation.</p> <p>The model performed reasonably well on several benchmarks, but I ran into a major problem with <strong>long-range recall</strong>. On a Needle in a Haystack-style benchmark, my model was performing around <strong>25% or even below</strong>, which is essentially random chance for a four-token DNA vocabulary (A/C/G/T).</p> <p>I initially thought this might just be a problem with my implementation or model architecture, so I started looking into existing approaches for improving recall in linear attention. Most of what I found relied on <strong>external memory, sliding/recent-token mechanisms, or hybrid architectures combining linear and softmax attention</strong>.</p> <p>I also tried <strong>HyenaDNA</strong> on the same needle benchmark, and surprisingly, it also performed poorly getting around <strong>25–27%</strong>. So this doesn't seem to be limited to my particular linear-attention implementation.</p> <p>What's even more confusing is that when I tested a <strong>very small linear-attention model at only 16K context</strong>, it achieved around <strong>50–60% recall</strong>. But as the context gets longer, the recall problem becomes much more severe.</p> <p>I've also experimented with modifying the linear architecture to improve recall, but the improvement was only around <strong>27%</strong>, which is still basically chance.</p> <p>So I'm wondering:</p> <p><strong>What are the actual ways to solve long-range recall in linear attention, especially for DNA sequences?</strong></p> <p>Is this fundamentally a limitation of the compressed-state representation used by linear attention, or are there architectural approaches that can preserve reliable retrieva…",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "5938280732780072",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Revisiting the Efficient Channel Attention paper (2019, 12k citations) - the central hypothesis isn't quite right [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vptaw9/revisiting_the_efficient_channel_attention_paper/",
+    "published": "2026-08-16T10:13:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://arxiv.org/abs/1910.03151\">ECA</a> was positioned as a successor to <a href=\"https://arxiv.org/abs/1709.01507\">SE</a>.</p> <p>The idea behind ECA is quite simple. Unlike SE which reduces the channel means into a smaller hidden layer, it directly uses a 1d convolution kernel on the channel means themselves, avoiding the need for dimensionality reduction. The results are undeniable: ECA is a clear improvement over SE. The authors claim that cross-channel interaction is a key ingredient. But on a conceptual level, the design of ECA doesn't make much sense.</p> <p>Let's take a step back. Why do we use convolutions in the first place? Convolutions are fundamentally designed for data with an underlying topology (e.g. space or time). They assume locality (adjacent elements interact) and translation invariance (the same kernel applies everywhere). Sliding a kernel across a 2D image works because coordinates have meaning, and the statistical properties of an image are largely stationary across the frame. This isn't perfectly true - which is why modern CNNs have moved towards dynamic convolutions - but it's still good enough to be useful. If you randomly permuted the pixels in an image, a convolution would be meaningless.</p> <p>Now consider tabular data. Suppose we have 32 channels e.g. [cost, weight, material, colour, volume, speed, ...]. Using a CNN architecture for this kind of data is clearly inappropriate. A 1d kernel of width 3 would be moved across the channels, so that [cost, weight, material] was input and also [ weight, material, colour] was input and so on, and have to somehow output something meaningful. ECA is doing exactly this type of computation.</p> <p>ECA does a 1d convolution over the channel dimension. It is a cursed convolution because tabular data does not have a topology to suit it. In practice, if you <em>did</em> use a CNN on tabular data, I would expect better than random performance because neural n…",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "820118a1b81c7bb1",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "ICDM 2026 Results Waiting Place [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vpv9ct/icdm_2026_results_waiting_place_d/",
+    "published": "2026-08-16T12:02:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The results should be out soon.</p> <p>Let’s share them, guys.</p> <p>From my batch (Applied Track)</p> <p>Total 13 submissions:</p> <p>- 2 full papers</p> <p>- 1 short paper accepted</p> <p>Cheers!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/d_edge_sword\"> /u/d_edge_sword </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vpv9ct/icdm_2026_results_waiting_place_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vpv9ct/icdm_2026_results_waiting_place_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  }
+]

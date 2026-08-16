@@ -1,0 +1,12 @@
+[
+  {
+    "id": "fbd5c7f2369a30b9",
+    "source": "IEEE Spectrum AI",
+    "tier": 2,
+    "title": "The CPU Comeback Is Upon Us",
+    "url": "https://spectrum.ieee.org/ai-cpu-comeback",
+    "published": "2026-08-16T13:00:01+00:00",
+    "summary": "<img src=\"https://spectrum.ieee.org/media-library/a-single-computer-chip-balancing-on-the-tip-of-a-pyramid.jpg?id=67615384&amp;width=1200&amp;height=800&amp;coordinates=0%2C208%2C0%2C209\" /><br /><br /><p>Earlier this year, leaders at <a href=\"https://aws.amazon.com/free/?trk=dc9b9d60-cc82-4cd5-8a61-0b33d6a79fab&amp;sc_channel=ps&amp;ef_id=CjwKCAjw1vXTBhB-EiwAEKr_k_57Xoz6QKQSrRqDF4mGRYOudA_A99MTHZL6alVjPDxdliBQfEMPihoC0RUQAvD_BwE&amp;gads_camp=23532472510&amp;gads_ag=199502799824&amp;gads_ad=795877020713&amp;gads_kw=amazon%20web%20services&amp;gads_matchtype=e&amp;gads_network=g&amp;gads_device=c&amp;gads_geo=9198314&amp;gad_campaignid=23532472510&amp;gbraid=0AAAAADjHtp-SgwVQvE7H9V8lK49jVtMDw&amp;gclid=CjwKCAjw1vXTBhB-EiwAEKr_k_57Xoz6QKQSrRqDF4mGRYOudA_A99MTHZL6alVjPDxdliBQfEMPihoC0RUQAvD_BwE\" rel=\"noopener noreferrer\" target=\"_blank\">Amazon Web Services</a> delivered a new mandate to their engineers: they need to conserve CPU cycles at all costs. AWS has <a href=\"https://www.theinformation.com/articles/aws-tells-engineers-cut-cpu-waste-amid-crunch\" rel=\"noopener noreferrer\" target=\"_blank\">reportedly</a> experienced an explosion in wait times for CPU server capacity as AI workloads strain the company’s cloud infrastructure. </p><p>The issue seemingly took AWS off-guard, and for good reason. The AI boom led to a surge in demand for <a href=\"https://spectrum.ieee.org/nvidia-gpu\" target=\"_self\">GPUs</a> and, later, <a href=\"https://spectrum.ieee.org/high-bandwidth-memory-shortage\" target=\"_self\">memory</a>. CPUs were mostly left out of the story, as their relative lack of parallelization made them a poor fit for AI model inference, the process of running and serving large language models (LLM) to users. </p><p>But the rise of agentic AI systems, which allow AI models to operate autonomously and call on sub-agents, is changing the narrative.</p><p><a href=\"https://moorinsightsstrategy.com/team/matt-kimball/\" rel=\"noopener noreferrer\" target=\"_blank\">Matt Kimball</a>, v…",
+    "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  }
+]
