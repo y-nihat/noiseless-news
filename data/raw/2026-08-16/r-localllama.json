@@ -198,5 +198,115 @@
     "published": "2026-08-16T11:21:44+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I sadly was not able to follow as much as I wanted the new advancements. Care to share your optimised setups ? Vllm, llama.cpp or any other engine? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sagiroth\"> /u/sagiroth </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpuhov/single_3090_homies_whats_your_config_for_qwen_38/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vpuhov/single_3090_homies_whats_your_config_for_qwen_38/\">[comments]</a></span>",
     "fetched_at": "2026-08-16T16:29:45.074706+00:00"
+  },
+  {
+    "id": "7737b70b83fcb440",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Let’s all thank Georgi Gerganov who gave use llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq1n1l/lets_all_thank_georgi_gerganov_who_gave_use/",
+    "published": "2026-08-16T16:33:45+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq1n1l/lets_all_thank_georgi_gerganov_who_gave_use/\"> <img alt=\"Let’s all thank Georgi Gerganov who gave use llama.cpp\" src=\"https://external-preview.redd.it/nubphS13Xx7EWRx86cjsPd4mYfJM2LGzxno7zbC1qsQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9e64f3057e565b19ee5c2815d3d23aeb8e903ce9\" title=\"Let’s all thank Georgi Gerganov who gave use llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I was looking into the story a bit further earlier. Very interesting. Couldn’t have done it without him </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/on_line187\"> /u/on_line187 </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq1n1l/lets_all_thank_georgi_gerganov_who_gave_use/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "da096dc8d83d0a99",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 distillations",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq3gig/qwen_38_distillations/",
+    "published": "2026-08-16T17:44:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq3gig/qwen_38_distillations/\"> <img alt=\"Qwen 3.8 distillations\" src=\"https://preview.redd.it/m9emhx4vxrjh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=26bb4b363d930465b7ba73e08fbb069e1ec58601\" title=\"Qwen 3.8 distillations\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://x.com/i/status/2088993948983246906\">https://x.com/i/status/2088993948983246906</a></p> <p>Not tested by me in any way :)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://i.redd.it/m9emhx4vxrjh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq3gig/qwen_38_distillations/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "efab7d169c9490b8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Based on an accelerating frontier -> local trajectory, expect a ~30b param 'Mythos at home' by as soon as Jan 2027 (rationalisation below)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq279o/based_on_an_accelerating_frontier_local/",
+    "published": "2026-08-16T16:55:55+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq279o/based_on_an_accelerating_frontier_local/\"> <img alt=\"Based on an accelerating frontier -&gt; local trajectory, expect a ~30b param 'Mythos at home' by as soon as Jan 2027 (rationalisation below)\" src=\"https://preview.redd.it/1enwyo9c2rjh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b603c25495174171c81d03e315a93a75e5704e61\" title=\"Based on an accelerating frontier -&gt; local trajectory, expect a ~30b param 'Mythos at home' by as soon as Jan 2027 (rationalisation below)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Including the rationalisation for the data below - this is a more robust version of <a href=\"https://www.reddit.com/r/LocalLLaMA/s/td5IHjyHsT\">an earlier post</a> I did similar to this - explaining below:</p> <h1>How I chose the comparisons</h1> <p>The basic question I’m trying to answer is: <strong>when did an open model small enough to run on high-end consumer hardware reach roughly the capability of an earlier frontier model?</strong></p> <p>There obviously isn’t a single benchmark that establishes equivalence, so these are judgment calls based on a mixture of direct benchmarks, human-preference evaluations, coding/agent evals and model size. I’m mostly interested in broad text, reasoning and coding capability rather than exact product parity - particularly where the original frontier model had capabilities like native audio or a more mature tool ecosystem.</p> <table><thead> <tr> <th align=\"left\">Comparison</th> <th align=\"left\">My rationale</th> <th align=\"left\">Confidence</th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>GPT-3 → LLaMA-33B</strong></td> <td align=\"left\">This is probably conservative. The original LLaMA paper found that even <strong>LLaMA-13B beat GPT-3 175B on most benchmarks</strong>, so by 33B the GPT-3 threshold had pretty clearly been crossed.</td> <td align=\"left\"><strong>High</strong></td> </tr> <tr> <td align=\"left\"><strong>GPT-3.5…",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "410e0c9fdd076d6d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 9b?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq8rsf/qwen_38_9b/",
+    "published": "2026-08-16T21:10:53+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq8rsf/qwen_38_9b/\"> <img alt=\"Qwen 3.8 9b?\" src=\"https://preview.redd.it/oxfly4woysjh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=209bc6e3cc0da31306a7d1c3f6c65131a149ee40\" title=\"Qwen 3.8 9b?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Thatisverytrue54321\"> /u/Thatisverytrue54321 </a> <br /> <span><a href=\"https://i.redd.it/oxfly4woysjh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq8rsf/qwen_38_9b/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "ad370b66754e0142",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why are RTX 6000 PROs still getting bought at 16000+ USD? And who are buying them?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq6bs5/why_are_rtx_6000_pros_still_getting_bought_at/",
+    "published": "2026-08-16T19:34:08+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello guys, hoping you're doing well.</p> <p>I bring this discussion since I have noticed on internet, be USA or EU, RTX 6000 PROs at 16000USD or more are still getting bought. </p> <p>Even here on Chile, the other day they were in stock at 20000-21000USD post 19% tax and they lasted a few minutes.</p> <p>My question is why? For sure that won't recoup costs right?</p> <p>Who are buying these, only enterprises?</p> <p>What do you guys think?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/panchovix\"> /u/panchovix </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq6bs5/why_are_rtx_6000_pros_still_getting_bought_at/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq6bs5/why_are_rtx_6000_pros_still_getting_bought_at/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "4c76649690daa4bb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 2.4T at 288k tokens/s on Nvidia GB300 NVL72",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq3ssg/qwen_38_24t_at_288k_tokenss_on_nvidia_gb300_nvl72/",
+    "published": "2026-08-16T17:57:26+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/\">https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/</a></p> <p>4k tokens per second per GPU of which there are 72. 350 tokens per second per user</p> <p>&quot;Without additional model tuning, the model achieves a throughput of over 4K tokens per second per GPU and over 350 tokens per second per user on NVIDIA GB300 NVL72 in FP8 precision on Day 0. Further optimizations, including NVFP4 precision, are expected to deliver enhanced performance gains over time. &quot;</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RhubarbSimilar1683\"> /u/RhubarbSimilar1683 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq3ssg/qwen_38_24t_at_288k_tokenss_on_nvidia_gb300_nvl72/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq3ssg/qwen_38_24t_at_288k_tokenss_on_nvidia_gb300_nvl72/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "b3209ac0dae98586",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27b on RTX 3090 - 82 tps single request, up to 672 tps peak",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq6fdj/qwen3827b_on_rtx_3090_82_tps_single_request_up_to/",
+    "published": "2026-08-16T19:38:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi,</p> <p>After a long night of optimizations, I believe I have made the fastest inference engine for Qwen3.6-28B on a 3090.</p> <p>Quick metrics:</p> <p>- 250w power capped</p> <p>- Up to 195k context (ships with 150k for safety though)</p> <p>- 82 tps single request, 417 tps sustained with 64 concurrent</p> <p>- Between 17% to 149% faster than ninfer depending on the amount of concurrent requests.</p> <p>Quick how:</p> <p>- W4A16 quantization -&gt; 16.8gb in vram - cache 66k</p> <p>- + fp8 KV cache -&gt; 16.8 gb in vram - cache 155k</p> <p>- + lm_head int8 -&gt; 15.4 gb in VRAM - cache 192k</p> <p>- + embed_tokens int8 -&gt; 14.2 gb in VRAM - cache 200k</p> <p>Quantization loss of 0.6% in the lm head and quant embed compared to bf16.</p> <p>It runs via vLLM and needs a few patches to work perfectly, but should be easier to setup than ninfer.</p> <p>Also only tested on linux, but should work on windows too.</p> <p><a href=\"https://github.com/syv-ai/qwen38-27b-rtx3090\">https://github.com/syv-ai/qwen38-27b-rtx3090</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/iamMess\"> /u/iamMess </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq6fdj/qwen3827b_on_rtx_3090_82_tps_single_request_up_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq6fdj/qwen3827b_on_rtx_3090_82_tps_single_request_up_to/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "b6dfa943392c795f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8 27B Q2 vs Q3 vs Qwen3.6 35B-A3B MoE on 12GB VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq60on/qwen38_27b_q2_vs_q3_vs_qwen36_35ba3b_moe_on_12gb/",
+    "published": "2026-08-16T19:21:58+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq60on/qwen38_27b_q2_vs_q3_vs_qwen36_35ba3b_moe_on_12gb/\"> <img alt=\"Qwen3.8 27B Q2 vs Q3 vs Qwen3.6 35B-A3B MoE on 12GB VRAM\" src=\"https://preview.redd.it/io9im15fgsjh1.png?width=140&amp;height=69&amp;auto=webp&amp;s=f9f69caae968cdfa162b814667f0da9a5af230b0\" title=\"Qwen3.8 27B Q2 vs Q3 vs Qwen3.6 35B-A3B MoE on 12GB VRAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Did a quick local test because I wanted to see what is actually usable on my 12GB laptop GPU.</p> <p>I tested the newer Qwen3.8 27B dense files at Q2 and Q3, then compared them against Qwen3.6 35B-A3B MoE.</p> <p>Hardware: RTX 5070 Ti Laptop, 12GB VRAM<br /> Backend: llama.cpp CUDA<br /> Settings: 4k context, q8 KV, <code>--fit on</code>, no MTP<br /> Command shape: <code>llama-cli -c 4096 -fa on -ctk q8_0 -ctv q8_0 --fit on -fitt 768 --temp 0 --single-turn</code></p> <p>Models:</p> <ul> <li>Qwen3.8-27B-UD-Q2_K_XL</li> <li>Qwen3.8-27B-UD-Q3_K_XL</li> <li>Qwen3.6-35B-A3B-Q4_K_M</li> </ul> <p>&#8203;</p> <pre><code>Main result visually: generation speed on the sanity prompt </code></pre> <p><a href=\"https://preview.redd.it/io9im15fgsjh1.png?width=1537&amp;format=png&amp;auto=webp&amp;s=c3caca8369e22bc45838e7fd1fdf7e1831e64fdf\">https://preview.redd.it/io9im15fgsjh1.png?width=1537&amp;format=png&amp;auto=webp&amp;s=c3caca8369e22bc45838e7fd1fdf7e1831e64fdf</a></p> <h1>Test 1: tiny sanity prompt</h1> <p>Prompt:</p> <p>Answer only as: 1) ... 2) ... 3) ... 4) ... 5) ... 6) ...</p> <ol> <li>If a shirt costs $20 after a 20% discount, original price?</li> <li>In the word strawberry, how many r letters?</li> <li>Which is heavier: 1 kg steel or 1 kg feathers?</li> <li>A bat and ball cost $1.10 total. Bat costs $1 more than ball. Ball price?</li> <li>If all bloops are razzies and all razzies are lazzies, are all bloops lazzies?</li> <li>What is 17*24?</li> </ol> <table><thead> <tr> <th align=\"left\">Model</th> <th align=\"left\">Prompt t/s</t…",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "1c75e44f4729ab93",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Dario Amodei defends his policy proposals, warns open weights won't decentralize power, endorses pre-launch vetting, says real accomplishments will earn trust",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq9sdv/dario_amodei_defends_his_policy_proposals_warns/",
+    "published": "2026-08-16T21:53:31+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq9sdv/dario_amodei_defends_his_policy_proposals_warns/\"> <img alt=\"Dario Amodei defends his policy proposals, warns open weights won't decentralize power, endorses pre-launch vetting, says real accomplishments will earn trust\" src=\"https://preview.redd.it/afviz4796tjh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=804f50a2c02afa61be4b10b17337834340751300\" title=\"Dario Amodei defends his policy proposals, warns open weights won't decentralize power, endorses pre-launch vetting, says real accomplishments will earn trust\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/f0urxio\"> /u/f0urxio </a> <br /> <span><a href=\"https://i.redd.it/afviz4796tjh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq9sdv/dario_amodei_defends_his_policy_proposals_warns/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "2e1bce0a05778de2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "NInfer RTX 4090 for Qwen 3.8 27B update - up to 250-350K tokens context in VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq881r/ninfer_rtx_4090_for_qwen_38_27b_update_up_to/",
+    "published": "2026-08-16T20:48:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've made some improvements to my fork of NInfer, adding rk2v4-e8 quant option for the KV cache, which can reach up to 250-350K tokens of context window depending on the configuration like vision, MTP, etc, on my single RTX 4090 without spilling over into system RAM. </p> <p>On lower context window runs, I also made some optimizations to reach about 80-160 tokens / second generation speeds for repetitive workloads like code, math, etc.</p> <p>Let me know if there are any obvious runtime issues, so far it seemed to survive the chaotic workloads I threw at it. Hopefully the mods won't nuke it in favor of the megathread this time, it gets lost pretty quickly there.</p> <p>Sources: <a href=\"https://github.com/UDPSendToFailed/ninfer-4090\">https://github.com/UDPSendToFailed/ninfer-4090</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/UDPSendToFailed\"> /u/UDPSendToFailed </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq881r/ninfer_rtx_4090_for_qwen_38_27b_update_up_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq881r/ninfer_rtx_4090_for_qwen_38_27b_update_up_to/\">[comments]</a></span>",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
+  },
+  {
+    "id": "ce936050b836b2bd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Making small local models actually useful for coding",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vq128f/making_small_local_models_actually_useful_for/",
+    "published": "2026-08-16T16:11:14+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey!</p> <p>Like a lot of people here with consumer GPUs (RTX 4060 8GB in my case), I wanted to see if I could use local models for daily coding tasks instead of burning cloud credits on simple boilerplate.</p> <p>The issue with running coding agents (Hermes for example) on 8GB VRAM is:</p> <ol> <li><p>Context bloat: as soon as you feed a decent chunk of a codebase, generation speed drops drastically and KV-cache eats up memory.</p></li> <li><p>Schema failures: small models (2B to 7B) often struggle with multi-turn tool calling and syntax schemas. When traditional agent frameworks give them generic error strings, they panic and loop until they hit turn limits.</p></li> </ol> <p>Instead of trying to force a 4B model to be an entire project architect, I built a hybrid setup called Local Coding Agent.</p> <p>How it works: it acts as an MCP server that your primary IDE/agent (Codex, Claude, Cursor, etc.) connects to via a delegate_code tool. The cloud model does the high-level planning and isolates small, atomic tasks. Then it hands the micro-patch over to a local Ollama model (like Gemma 4 2B/4B or Qwen3.8-27B).</p> <p>Because the local model only receives isolated task context, it runs at full speed (60-85+ tok/s on an RTX 4060) without context bloat.</p> <p>To solve the schema panic issue on 2B/4B models, I added a deterministic rule-based prescription engine: when a local model messes up JSON formatting or fields, it gets precise, structured error corrections locally rather than wasting cloud tokens on retries. It also checks diffs with git apply and runs tests in an isolated sandbox, automatically rolling back if anything breaks.</p> <p>This started purely as a personal tool for my own setup, and I use it daily across my coding sessions. Decided to open source it so others with 8GB cards can get some real utility out of local small models.</p> <p>GitHub: <a href=\"https://github.com/pvnc228/local-coding-agent\">https://github.com/pvn…",
+    "fetched_at": "2026-08-16T22:00:00.699731+00:00"
   }
 ]
