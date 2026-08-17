@@ -1,0 +1,53 @@
+{
+  "slug": "google-spirit-airlines-data-purchase",
+  "checked_at": "2026-08-17T23:26:00+00:00",
+  "method": "Fresh verifier sub-agent plus adversarial falsifier sub-agent, both Sonnet 5, surfaced via this cycle's discovery sweep (fresh gnews-ai-litigation ingest, multiple outlets same-day). Primary basis: Bloomberg Law's court-filing-anchored reporting (byline James Nani) and Axios's independent court-filing-based reporting (names PJT Partners VP Dylan Friesner's deidentification affidavit), corroborated by the underlying bankruptcy docket itself, independently confirmed real via three separate third-party docket trackers (pacermonitor.com, inforuptcy.com, bankruptcyobserver.com) under debtor name Spirit Aviation Holdings, Inc., case 1:25-bk-11897, SDNY.",
+  "origin_items": [
+    "data/raw/2026-08-17/gnews-ai-litigation.json -- multiple items same-day (Bloomberg Law News, Business Insider, Skift, 9to5Google, Axios, FlightGlobal, Investing.com, reuters.com relay via Google News) all converging on the same $10 million figure."
+  ],
+  "claims": [
+    {
+      "text": "Google won a bankruptcy auction to acquire a batch of Spirit Airlines' internal business data for $10 million, beating a $7.5 million backup bid from AI hiring platform Mercor",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Consistent across Bloomberg Law (named byline, court-filing-anchored) and Axios (independent court-filing-based reporting, names the PJT Partners banker who filed the deidentification affidavit) -- two genuinely independent reporting chains, plus the underlying court case independently verified real via three separate docket-tracking sites. Reuters coverage matching this content circulated via Google News/MarketScreener but no reuters.com-hosted original could be located or fetch-confirmed within budget -- NOT cited as a source in the article for that reason, despite appearing in search snippets.",
+      "evidence": [
+        "https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data",
+        "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy",
+        "https://www.pacermonitor.com/public/case/59856292/Spirit_Aviation_Holdings,_Inc"
+      ]
+    },
+    {
+      "text": "Data included: ~100M emails, ~500M MS Teams chats, code, financial/ops/pricing records. Customer and Free Spirit loyalty data explicitly excluded; remaining records PII-scrubbed before transfer, per a court filing by PJT Partners VP Dylan Friesner",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Axios attributes this directly to a bankruptcy court filing and names the filer (Dylan Friesner, PJT Partners, Spirit's investment bank) -- a specific, checkable detail that is a strong independence signal (not just repeating another outlet's framing). Bloomberg Law corroborates the data categories and PII-scrub design independently.",
+      "evidence": [
+        "https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data",
+        "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy"
+      ]
+    },
+    {
+      "text": "Google's direct quote: data \"can be helpful in improving our products and AI models\"",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Direct quote reported by Bloomberg Law, consistent with framing in other outlets (9to5Google, which explicitly cites Bloomberg Law as its own source -- treated as derivative, not counted toward independence).",
+      "evidence": [
+        "https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data"
+      ]
+    },
+    {
+      "text": "Sale pending court approval: hearing 19 August 2026, Judge Sean H. Lane, U.S. Bankruptcy Court SDNY, case 1:25-bk-11897 (Spirit Aviation Holdings, Inc.)",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Hearing date and judge consistent across Bloomberg Law and Axios; case identity (1:25-bk-11897, SDNY, debtor Spirit Aviation Holdings Inc.) independently confirmed real via three separate non-news docket-tracking services (pacermonitor.com, inforuptcy.com, bankruptcyobserver.com), which serves as the policy-recognized 'filing/court document' alternate qualifying source. This claim is load-bearing for the article's framing as NOT YET a closed deal -- the falsifier flagged this as a headline-falsifiability risk the verifier's first pass under-emphasized.",
+      "evidence": [
+        "https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data",
+        "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy",
+        "https://www.pacermonitor.com/public/case/59856292/Spirit_Aviation_Holdings,_Inc"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict: PUBLISHABLE WITH CHANGES. Falsifier's main finding: could not confirm a reuters.com original exists despite search snippets suggesting Reuters coverage -- recommended NOT citing Reuters, which the article follows. Falsifier also independently confirmed via three separate docket-tracking sites that the underlying court case is real (case 1:25-bk-11897 / informally referenced as '25-11897' in press, debtor Spirit Aviation Holdings Inc.), which is used as the qualifying primary-document source alongside Bloomberg Law's named-byline reporting. Bidding-war detail (Google opened at $5M, Mercor countered $5.2M and offered $7M contingent on anonymization access, before Google's final $10M bid) corroborates genuine court-filing sourcing rather than copy-paste; not included in the article body to keep it concise, but supports confidence in the claims. No dispute, objection, correction, or regulatory challenge to the sale found as of 2026-08-17 -- this is a live risk given the pending 19 August hearing, tracked via open_obligation in the ledger rather than asserted as resolved in the article.",
+  "gaps_closed_from_watching_state": []
+}

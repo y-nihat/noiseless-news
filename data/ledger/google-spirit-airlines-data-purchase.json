@@ -1,0 +1,24 @@
+{
+  "slug": "google-spirit-airlines-data-purchase",
+  "title": "Google wins $10 million bankruptcy auction for Spirit Airlines' internal data, pending court approval",
+  "status": "published",
+  "first_seen": "2026-08-17",
+  "published_at": "2026-08-17",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data",
+    "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy",
+    "https://www.pacermonitor.com/public/case/59856292/Spirit_Aviation_Holdings,_Inc"
+  ],
+  "follows": null,
+  "reason": "PUBLISHED 2026-08-17. Surfaced via fresh gnews-ai-litigation ingest this cycle (cycle 3). Google won a bankruptcy auction ($10M, beating Mercor's $7.5M bid) for a batch of defunct Spirit Airlines' internal business data (emails, Teams chats, code, financial/pricing records) for AI training use; customer/loyalty data excluded and PII-scrubbed. Verified via Bloomberg Law (named byline, court-filing-anchored) and Axios (independent court-filing-based reporting, names the PJT Partners banker who filed the deidentification affidavit) -- two independent reporting chains -- plus the underlying bankruptcy case independently confirmed real via three separate docket-tracking sites (case 1:25-bk-11897, SDNY, debtor Spirit Aviation Holdings Inc.), which serves as the policy's alternate qualifying primary-document source. Reuters coverage was visible in search snippets/aggregator relays but no reuters.com original could be located or fetch-confirmed -- deliberately NOT cited as a source. Falsifier pass focused on the independence gap and on catching a headline-falsifiability risk: the sale is NOT yet closed, only won at auction -- court approval hearing is 19 August 2026. Article and headline framed accordingly (\"wins ... auction, pending court approval\", not \"buys\").",
+  "watch": [
+    "Whether Judge Sean H. Lane approves the sale at the 19 August 2026 hearing, or whether an objection surfaces beforehand",
+    "Whether any privacy/regulatory challenge (e.g. FTC-style bankruptcy-data-sale scrutiny, as seen in past cases like Toysmart/RadioShack) is raised before the hearing"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-08-19",
+  "notes": [
+    "2026-08-17 c3: published. Discovery sweep queries (funding/acquisition/datacenter, index 6-8 per formula) this cycle found nothing new beyond already-published/watching stories; this candidate came from the fresh Tier-3 gnews-ai-litigation ingest delta instead, traced to two independent Tier-2 origins plus the court docket."
+  ]
+}
