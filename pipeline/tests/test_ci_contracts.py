@@ -61,6 +61,48 @@ class TestDispatchesNameSomethingReal:
         assert found, "no dispatches found — did the call sites move?"
 
 
+class TestWorkflowFilesAreValidated:
+    """A YAML parser is not enough, and its silence was mistaken for a check.
+
+    nightly.yml carried `runner.temp` in a job-level env block — a context
+    GitHub does not allow there. PyYAML parsed it happily and the suite stayed
+    green, while GitHub rejected the whole file: no "Nightly scan" workflow, no
+    cron, and the only trace a zero-second run named `.github/workflows/
+    nightly.yml`. The check that catches this has to know Actions' own rules.
+    """
+
+    def test_ci_runs_a_real_workflow_linter(self):
+        steps = workflow("tests.yml")["jobs"]["pytest"]["steps"]
+        linter = next((s for s in steps if s.get("name") == "Workflows are valid"), None)
+        assert linter is not None, "nothing validates the workflow files"
+        assert "actionlint" in linter["run"]
+
+    def test_it_runs_before_anything_slower(self):
+        """A file GitHub will reject should not wait behind a pip install."""
+        names = [s.get("name") or s.get("uses") for s in
+                 workflow("tests.yml")["jobs"]["pytest"]["steps"]]
+        assert names.index("Workflows are valid") < names.index("Unit tests")
+
+    def test_the_linter_is_pinned(self):
+        steps = workflow("tests.yml")["jobs"]["pytest"]["steps"]
+        run = next(s for s in steps if s.get("name") == "Workflows are valid")["run"]
+        assert re.search(r"actionlint/releases/download/v\d+\.\d+\.\d+/", run), (
+            "an unpinned linter changes what CI enforces without a commit"
+        )
+
+    def test_no_job_level_env_uses_a_context_that_is_unavailable_there(self):
+        """The specific rule that broke nightly.yml, kept close to the incident."""
+        allowed = {"github", "inputs", "matrix", "needs", "secrets", "strategy", "vars"}
+        for path in WORKFLOW_DIR.glob("*.yml"):
+            for job_name, job in yaml.safe_load(path.read_text("utf-8"))["jobs"].items():
+                for key, value in (job.get("env") or {}).items():
+                    for context in re.findall(r"\$\{\{\s*(\w+)\.", str(value)):
+                        assert context in allowed, (
+                            f"{path.name}:{job_name}.env.{key} uses the {context!r} "
+                            f"context, which GitHub rejects at job level"
+                        )
+
+
 class TestTheGateOutputContract:
     """One word, written by a shell script and compared by a YAML expression."""
 

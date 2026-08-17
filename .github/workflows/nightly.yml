@@ -36,8 +36,11 @@ jobs:
     # paths the tests wrote the live run's own state files, disarming the
     # failure handler below and resetting the night story counter. A test run
     # inherits none of this, so it cannot reach these paths.
+    # `runner.temp` would be the natural home, but the runner context is not
+    # available in a job-level env block — GitHub rejects the whole file for it,
+    # and the only symptom is a zero-second run named after the file path.
     env:
-      NIGHT_STATE_DIR: ${{ runner.temp }}/night-${{ github.run_id }}
+      NIGHT_STATE_DIR: /tmp/night-${{ github.run_id }}
     steps:
       - uses: actions/checkout@v4
 
