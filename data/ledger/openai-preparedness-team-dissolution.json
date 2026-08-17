@@ -18,6 +18,7 @@
     "Confirmation or denial of the exact Greg Brockman quote and its context"
   ],
   "notes": [
-    "2026-08-16 c1: Opened this cycle from Tier-2 sweep triage (the-decoder.com item in fresh ingest). Fresh verifier sub-agent run (not the triaging context): confirmed wire-exclusive status (FT only), no second source, no OpenAI on-the-record statement found, FT and openai.com both blocked to direct fetch this cycle. Recommended hold. Not published; opened as watching."
+    "2026-08-16 c1: Opened this cycle from Tier-2 sweep triage (the-decoder.com item in fresh ingest). Fresh verifier sub-agent run (not the triaging context): confirmed wire-exclusive status (FT only), no second source, no OpenAI on-the-record statement found, FT and openai.com both blocked to direct fetch this cycle. Recommended hold. Not published; opened as watching.",
+    "2026-08-17 c1: Re-checked (2 web searches). Many new outlets (Engadget, AOL, Calcalistech, Cryptonomist, daily.dev, others) picked up the story, but Engadget's own headline attributes it to FT ('reportedly ... according to The Financial Times') and AOL syndicates Engadget -- still wire-exclusive, no independent primary source or on-record OpenAI statement to a distinct outlet found. New framing surfaced (pre-IPO 'streamlining', Chloe Bakalar departure, a reported Hugging Face incident) but doesn't clear the gate. Still watching."
   ]
 }
