@@ -8,5 +8,105 @@
     "published": "2026-08-16T22:33:32+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I look to Simon for a broad survey of current LLM tech. Here's <a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">his review of playing with Qwen 3.8 27B</a>. His comment <a href=\"https://fedi.simonwillison.net/@simon/117107511994840560\">on Mastodon</a> was &quot;I can't remember the last time I've had this much fun playing with a local model that runs on my own computers&quot;.</p> <p>BTW, the &quot;wildly overthinking&quot; comes from a bad default that's easy to change.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/NelsonMinar\"> /u/NelsonMinar </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqaqgn/simon_willison_qwen_38_27b_is_excellent_but_it/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqaqgn/simon_willison_qwen_38_27b_is_excellent_but_it/\">[comments]</a></span>",
     "fetched_at": "2026-08-17T00:23:12.960562+00:00"
+  },
+  {
+    "id": "b1be0ed0df50dc15",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "…and I’m not afraid of losing my social credits.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqgt0x/and_im_not_afraid_of_losing_my_social_credits/",
+    "published": "2026-08-17T03:16:00+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqgt0x/and_im_not_afraid_of_losing_my_social_credits/\"> <img alt=\"…and I’m not afraid of losing my social credits.\" src=\"https://preview.redd.it/b6rjr50urujh1.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=c568c8e44d48487c5f45006c9f4f4f6bb9e23929\" title=\"…and I’m not afraid of losing my social credits.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JLeonsarmiento\"> /u/JLeonsarmiento </a> <br /> <span><a href=\"https://i.redd.it/b6rjr50urujh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqgt0x/and_im_not_afraid_of_losing_my_social_credits/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "c0dc925b929ec066",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqlh98/stripe_will_reportedly_acquire_ai_gateway_startup/",
+    "published": "2026-08-17T07:29:31+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>another one ..</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ab2377\"> /u/ab2377 </a> <br /> <span><a href=\"https://www.msn.com/en-us/technology/tech-companies/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/ar-AA2aeR3G\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqlh98/stripe_will_reportedly_acquire_ai_gateway_startup/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "0fdfd3401937e7a4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Long Review: Qwen 3.8 27B is VERY good at tapping into it's real-world knowledge. It's \"overthinking\" brings it to Sonnet level performance with the potential for Opus level results.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqm51f/long_review_qwen_38_27b_is_very_good_at_tapping/",
+    "published": "2026-08-17T08:09:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqm51f/long_review_qwen_38_27b_is_very_good_at_tapping/\"> <img alt=\"Long Review: Qwen 3.8 27B is VERY good at tapping into it's real-world knowledge. It's &quot;overthinking&quot; brings it to Sonnet level performance with the potential for Opus level results.\" src=\"https://preview.redd.it/4nx5c98gyujh1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=fc7fccde20f8ef1cd94b20b88acbec177eb89b2f\" title=\"Long Review: Qwen 3.8 27B is VERY good at tapping into it's real-world knowledge. It's &quot;overthinking&quot; brings it to Sonnet level performance with the potential for Opus level results.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hi all! I finally just got around to testing out Qwen 3.8 27b. I'm using Unsloth's UD-Q8_K_XL quant as a sit-in replacement to Qwen 3.6 27b, same quant size. Wow -- this thing isn't messing around.</p> <p>I have many baseline test prompts to gauge the 'intelligence' and usability of the model, but a go-to one is asking it to do a 1:1 recreation of classic arcade games (like Galaga, Donkey Kong, Pac-Man, etc). I do this to see what little details it gets correct.</p> <p>I've tested this process on pretty much every model I could fit on my machine. In total, I have 3x 3090's and 1 Tesla P40 at my disposal, with 128gb of system memory. I've also tested on frontier models both in the webUI and across multiple harnesses.</p> <p>I've been using Qwen 3.6 primarily, and occasionally switching to Deepseek V4 Flash. Now I'm starting to feel like the ladder is not longer necessary.</p> <p>Originally in these games/tests, Qwen 3.6 would get the basics down (maybe a few fancy effects and animations) but it always felt about 75% there. It rarely posed technical issues, but little features and tiny details were either missing or 'half-ass' implemented. I had no problem further instructing it to add these and doing some 'hand-holding' for it. Overall thoug…",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "22e75a9248190523",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Petition to add a rule for people to add their DAMN quant levels to their posts",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqnbhe/petition_to_add_a_rule_for_people_to_add_their/",
+    "published": "2026-08-17T09:20:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Every time I see a post about a newly released model, whether it be a comparison or shitting on it, I have to dig through the endless comments to see what quants they used and what their specs were.</p> <p>Its quite a common occurrence here in this sub to ask someone that's saying a model is underperforming, and when you ask what quantization they are running they say something like &quot;oh im running q0.1bpw from nobodyknowswhothisguyis&quot;.</p> <p>Worst offender is with comparison posts. &quot;Comparing the new Qwen3.8-27B to Qwen3.5-9B and the 9B model is better!&quot; I wonder why?</p> <p>Sorry for bad england</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Su1tz\"> /u/Su1tz </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqnbhe/petition_to_add_a_rule_for_people_to_add_their/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqnbhe/petition_to_add_a_rule_for_people_to_add_their/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "ba0938279eda0b31",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Unpopular opinion : Qwen 3.8 27b is not an overthinker",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqnvfe/unpopular_opinion_qwen_38_27b_is_not_an/",
+    "published": "2026-08-17T09:53:27+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Yes it uses a ton more reasoning tokens than 3.6 did</p> <p>But test in on the same tasks with the other chinese models, glm 5.3, deepseek v4 flash and pro, etc it's really similar, and they are needed</p> <p>The reality is, we're just frustrated because our hardware do not allow most of us to have 1M context (I know that it's not supported yet) with 150 tps decode</p> <p>Furthermore, if you don't mind the quality drop, you can just add a reasoning budget, it will still be better than 3.6</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sukazu\"> /u/sukazu </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqnvfe/unpopular_opinion_qwen_38_27b_is_not_an/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqnvfe/unpopular_opinion_qwen_38_27b_is_not_an/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "d9c0db81c9f070bf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B Q8_0 on Strix Halo is seriously impressive",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqme4y/qwen3827b_q8_0_on_strix_halo_is_seriously/",
+    "published": "2026-08-17T08:24:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqme4y/qwen3827b_q8_0_on_strix_halo_is_seriously/\"> <img alt=\"Qwen3.8-27B Q8_0 on Strix Halo is seriously impressive\" src=\"https://external-preview.redd.it/MHI3NXJsOXVhd2poMXArTNwYs67Fb4dRjJDBvsZQ1H7SH3rcYPPn_cMygVBO.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=510efa8e341dd8af6b208165cef39790cd9a9ec2\" title=\"Qwen3.8-27B Q8_0 on Strix Halo is seriously impressive\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Sorry for the slop, but I was impressed by this model as I have been testing Qwen3.8-27B Q8_0 locally on my ROG Flow Z13 (Ryzen AI Max+ 395, 128 GB unified memory) and this model was the only one who could made this short simulator (and I have tested a lot of models).</p> <p>Prompt:<br /> &quot;Create a beautiful, relaxing flight simulator in a single HTML page.&quot;</p> <p>It generated the whole thing through an agent using file/bash tools.</p> <p>Setup:</p> <p>Lemonade Server + llama.cpp ROCm</p> <p>Q8_0 weights + Q8 KV cache</p> <p>Native MTP speculative decoding</p> <p>64 GB VRAM / 64 GB RAM split</p> <p>~142k context</p> <p>I'm seeing roughly 9-19 tok/s depending on the agent step, with some generations sustaining 16-19 tok/s and MTP acceptance reaching 97-99% and it took ~20min to generate this simulator.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/seti_at_home\"> /u/seti_at_home </a> <br /> <span><a href=\"https://v.redd.it/c8ncw19uawjh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqme4y/qwen3827b_q8_0_on_strix_halo_is_seriously/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "ffdd3410f6d471ac",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ling 3.0 support merged into llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqmxpy/ling_30_support_merged_into_llamacpp/",
+    "published": "2026-08-17T08:58:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Support for the new ling 3.0 models has been merged into llama.cpp:</p> <p><a href=\"https://github.com/ggml-org/llama.cpp/pull/26608#event-29549472828\">https://github.com/ggml-org/llama.cpp/pull/26608#event-29549472828</a></p> <p>Ling tiny 8b1b - <a href=\"https://huggingface.co/inclusionAI/Ling-3.0-tiny\">https://huggingface.co/inclusionAI/Ling-3.0-tiny</a></p> <p>Ling flash 124b5b - <a href=\"https://huggingface.co/inclusionAI/Ling-3.0-flash\">https://huggingface.co/inclusionAI/Ling-3.0-flash</a></p> <p>Both are reasoning models contrary to prior naming.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/parepeg\"> /u/parepeg </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqmxpy/ling_30_support_merged_into_llamacpp/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqmxpy/ling_30_support_merged_into_llamacpp/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "c6cf5a67a2a4f507",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How many tokens/second output are you getting with Qwen3.8-27B?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqjeub/how_many_tokenssecond_output_are_you_getting_with/",
+    "published": "2026-08-17T05:32:19+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Trying to get a feel for where I stand. If you can list your relevant hardware and model used, that would be awesome.</p> <p>Here's mine:</p> <p><strong>Model:</strong> Qwen3.8-27B-heretic-ara, Q5_K_M GGUF</p> <p><strong>T/s</strong>: ~30-32 t/sec (I think, I'll verify in a bit)</p> <p><strong>Hardware:</strong> 3090 GPU | 64 GBs DDR4 RAM | AMD 7950x CPU</p> <p><strong>Harness:</strong> Pi</p> <p><strong>Inference:</strong> llama.ccp</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CooLittleFonzies\"> /u/CooLittleFonzies </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqjeub/how_many_tokenssecond_output_are_you_getting_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqjeub/how_many_tokenssecond_output_are_you_getting_with/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "3249a34dd92e5d5d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "LLM's can't \"jump\" - a paper by Deepmind showing LLMs can't generate novel explanatory hypotheses",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqnyho/llms_cant_jump_a_paper_by_deepmind_showing_llms/",
+    "published": "2026-08-17T09:58:16+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/juanviera23\"> /u/juanviera23 </a> <br /> <span><a href=\"https://openreview.net/forum?id=klU4737opt\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqnyho/llms_cant_jump_a_paper_by_deepmind_showing_llms/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
+  },
+  {
+    "id": "92e4f4d1bed766d2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Muse Glimmer 30B with 512k context",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqntod/muse_glimmer_30b_with_512k_context/",
+    "published": "2026-08-17T09:50:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>My fun weekend project was to try to make the new Muse Glimmer 30B work with a longer context, deciding to go for 512k first. I had expected the usual YaRN shenanigans and maybe a LoRA. I couldn't have been wrong more.</p> <p>Upon closer look, Glimmer turned out to be rather unusual architecturally. The thing that make long-context adaptations painful in other models, full attention layers with token position encoding, it simply not there. Instead, only 2048 tokens-wide SWA layers have RoPE, and full GQA attention layers have no position encoding at all. It appears the model is trained to work with long-distance token relationships inferred from the context and SWA layers. It's a rather bold architecture bet, but it seems Meta managed to pull it off.</p> <p>As a result, the model architecture appears to be uniquely suited for context extension by simple mechanical means. To change model context length from stock 128k to, say, 512k, you need only to change “max_position_embeddings” config setting from 131072 to 524288. What confuses other models, like Qwen3.5 family, Glimmer just takes into its stride.</p> <p>I spent close to 70h of compute on DGX Spark to test stock model with extended context on a variety of benchmarks and found the following on a <em>full-precision model</em>:</p> <ol> <li>Needle in a haystack, both 1 and 4 needles: 100% on up to 512k tokens</li> <li>Multi-hop retrieval: 100% on up to 512k tokens</li> <li>Semantic lookups: 100% on up to 512k tokens</li> <li>Counting instances across whole context: degrades from 95% at 32k to around 60% on 385k, and then drops to 22% on 512k.</li> <li>Memory use in a simulated agentic session: 100% up to 385k, then slight drop.</li> <li>NoLiMa: noisy but seems stable on all context up to 512k.</li> <li>LongBench v2: same performance on up to 512k tokens.</li> <li>LongCodeQA: same performance on up to 512k tokens.</li> </ol> <p>I've also tried InfBench suite, but the results were no…",
+    "fetched_at": "2026-08-17T10:34:11.945874+00:00"
   }
 ]
