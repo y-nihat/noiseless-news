@@ -9,6 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: pages
@@ -33,3 +34,32 @@ jobs:
           path: site/dist
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # Every Pages deployment in the repository now comes through here, which
+      # makes this the one place a publishing failure can be noticed. It had no
+      # handler: both of its historical failures were dispatched by
+      # github-actions[bot], and a bot-dispatched run notifies nobody, so runs
+      # 30867516175 and 31100056995 were red for nine days without a trace
+      # anywhere a person looks. A cancelled run is not a failed one, so the
+      # `cancel-in-progress` supersessions above stay quiet.
+      - name: Say so if the deploy failed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### $(date -u +%FT%H:%MZ) — site deploy failed"
+            echo
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo "Commit: ${{ github.sha }}"
+            echo
+            echo 'Both previous failures were the deploy-pages action hitting its 600s'
+            echo 'poll timeout on a Pages backend stall. If that is what this is, nothing'
+            echo 'is wrong with the build and the site is simply not updated — re-running'
+            echo 'the workflow is the fix. PR #24 declined to raise that timeout on'
+            echo 'purpose: the abort is what releases the stuck Pages lock.'
+          } > /tmp/deploy-failure.md
+          bash .github/scripts/flag_issue.sh \
+            "Site deploy failed" \
+            "Site deploy failed $(date -u +%F)" \
+            /tmp/deploy-failure.md

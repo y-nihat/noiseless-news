@@ -11,6 +11,7 @@ raise the alarm at all ran under `set +e` and derived its verdict from counting
 
 from __future__ import annotations
 
+import re
 import subprocess
 from pathlib import Path
 
@@ -172,6 +173,111 @@ class TestTheWeeklyCheckCannotSucceedSilently:
         assert "live check done — " in run_py, (
             "the workflow greps for a sentinel run.py no longer prints"
         )
+
+
+class TestEveryScheduledJobLeavesATrace:
+    """A red badge is not a report.
+
+    Of the twelve failures in this repository's history, four were in workflows
+    with no failure handler: two daytime ingests (a server-side ref rejection
+    that lost the capture, and a run GitHub never allocated a runner for) and
+    two Pages deploys. Both deploys were dispatched by github-actions[bot],
+    which notifies nobody at all, so they sat red for nine days having produced
+    no issue, no comment and no notification.
+    """
+
+    HANDLERS = {
+        "ingest.yml": ("ingest", "Say so if the capture failed"),
+        "deploy.yml": ("build-deploy", "Say so if the deploy failed"),
+        "nightly.yml": ("scan", "Open failure issue"),
+        "source-health.yml": ("check", "Flag a broken check"),
+    }
+
+    @pytest.mark.parametrize("workflow,job_and_step", sorted(HANDLERS.items()))
+    def test_it_has_a_failure_handler(self, workflow, job_and_step):
+        job, step_name = job_and_step
+        steps = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / workflow).read_text("utf-8")
+        )["jobs"][job]["steps"]
+        handler = next((s for s in steps if s.get("name") == step_name), None)
+        assert handler is not None, f"{workflow} has no failure handler"
+        assert handler["if"] == "failure()"
+
+    @pytest.mark.parametrize("workflow,job_and_step", sorted(HANDLERS.items()))
+    def test_the_handler_is_the_last_step(self, workflow, job_and_step):
+        """`if: failure()` is evaluated in step order and cannot see ahead."""
+        job, step_name = job_and_step
+        steps = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / workflow).read_text("utf-8")
+        )["jobs"][job]["steps"]
+        assert steps[-1].get("name") == step_name, (
+            f"{workflow}'s handler cannot see the steps after it"
+        )
+
+    @pytest.mark.parametrize("workflow", sorted(HANDLERS))
+    def test_it_can_actually_open_an_issue(self, workflow):
+        """A handler without the permission fails silently at the worst moment."""
+        parsed = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / workflow).read_text("utf-8")
+        )
+        assert parsed["permissions"].get("issues") == "write", (
+            f"{workflow} files an issue it has no permission to file"
+        )
+
+    @pytest.mark.parametrize("workflow", ["ingest.yml", "deploy.yml", "source-health.yml"])
+    def test_repeat_failures_land_in_one_thread(self, workflow):
+        text = (REPO_ROOT / ".github" / "workflows" / workflow).read_text("utf-8")
+        assert "flag_issue.sh" in text, (
+            f"{workflow} opens a fresh issue per failure — see #19/#20/#31"
+        )
+
+
+class TestTheHandlersActuallyRun:
+    """Execute each handler's shell body against a stub `gh`.
+
+    A failure handler only ever runs on a day that is already going badly, so a
+    typo in one is invisible until precisely the moment it matters. These render
+    the workflow expressions to placeholders and run the rest for real.
+    """
+
+    HANDLERS = [
+        ("ingest.yml", "ingest", "Say so if the capture failed", "Daytime ingest failed"),
+        ("deploy.yml", "build-deploy", "Say so if the deploy failed", "Site deploy failed"),
+    ]
+
+    @pytest.mark.parametrize("workflow,job,step_name,prefix", HANDLERS)
+    def test_the_body_runs_and_files_an_issue(
+        self, workflow, job, step_name, prefix, tmp_path
+    ):
+        steps = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / workflow).read_text("utf-8")
+        )["jobs"][job]["steps"]
+        body = next(s for s in steps if s.get("name") == step_name)["run"]
+        # GitHub substitutes these before the shell sees them; bash would read
+        # "${{" as a bad substitution.
+        body = re.sub(r"\$\{\{[^}]*\}\}", "PLACEHOLDER", body)
+
+        bindir = tmp_path / "bin"
+        bindir.mkdir()
+        log = tmp_path / "gh.log"
+        (bindir / "gh").write_text(
+            f'#!/bin/sh\necho "$@" >> "{log}"\n'
+            '[ "$1" = "issue" ] && [ "$2" = "list" ] && echo "[]"\nexit 0\n',
+            encoding="utf-8",
+        )
+        (bindir / "gh").chmod(0o755)
+
+        result = subprocess.run(
+            ["bash", "-c", body], cwd=REPO_ROOT, capture_output=True, text=True,
+            timeout=60,
+            env={"PATH": f"{bindir}:/usr/local/bin:/usr/bin:/bin", "HOME": str(tmp_path)},
+        )
+        assert result.returncode == 0, (
+            f"{workflow}'s failure handler is itself broken:\n{result.stderr}"
+        )
+        calls = log.read_text(encoding="utf-8") if log.exists() else ""
+        assert "issue create" in calls, f"{workflow} filed nothing: {calls!r}"
+        assert prefix in calls
 
 
 class TestTheCheckStepAsItWillActuallyRun:
