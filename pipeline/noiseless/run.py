@@ -56,6 +56,13 @@ def main(argv: list[str] | None = None) -> int:
         help="also fetch every non-retired URL and check that it resolves and parses",
     )
 
+    status_parser = subparsers.add_parser(
+        "source-status",
+        help="apply policy/source-lifecycle.md §4 to data/ledger/source_stats.jsonl "
+             "(exit 2 = a source crossed the 14-day threshold)",
+    )
+    status_parser.add_argument("--data-dir", default="data")
+
     ingest_parser = subparsers.add_parser("ingest", help="fetch registered feeds")
     ingest_parser.add_argument(
         "--source",
@@ -106,16 +113,29 @@ def main(argv: list[str] | None = None) -> int:
         tiers = ", ".join(f"tier {t}: {n}" for t, n in sorted(by_tier.items()))
         print(f"OK — {len(sources)} sources ({tiers})")
         if args.live:
-            from noiseless.validate import check_all
+            from noiseless.validate import BLOCKED, FAIL, OK, STALE, check_all
 
-            failures = 0
+            marks = {OK: "ok", STALE: "STALE", FAIL: "FAIL", BLOCKED: "BLOCKED"}
+            tally = {FAIL: 0, STALE: 0, BLOCKED: 0}
             for result in check_all(sources):
-                mark = "ok  " if result.ok else "FAIL"
-                print(f"[{mark}] {result.source.name}: {result.detail}")
-                failures += 0 if result.ok else 1
-            print(f"live check done — {failures} failures")
-            return 0 if failures == 0 else 2
+                print(f"[{marks[result.state]}] {result.source.name}: {result.detail}")
+                if result.state in tally:
+                    tally[result.state] += 1
+            # A frozen feed counts alongside a broken one: both mean the source
+            # is contributing nothing, and only one of them used to be visible.
+            print(
+                f"live check done — {tally[FAIL]} failures, {tally[STALE]} stale, "
+                f"{tally[BLOCKED]} known blocks"
+            )
+            return 0 if tally[FAIL] + tally[STALE] == 0 else 2
         return 0
+
+    if args.command == "source-status":
+        from noiseless.source_status import report
+
+        text, code = report(sources, Path(args.data_dir) / "ledger" / STATS_FILENAME)
+        print(text)
+        return code
 
     if args.command == "ingest":
         summary = ingest_all(sources, args.data_dir, only_sources=args.source)

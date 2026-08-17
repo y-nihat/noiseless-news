@@ -13,6 +13,7 @@ on:
 permissions:
   contents: write
   actions: write
+  issues: write
 
 # Shares the nightly group so pushes never race the night loop.
 concurrency:
@@ -55,3 +56,43 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run "Deploy site" --ref main || true
+
+      # The push above raises no workflow event — GitHub does not trigger
+      # workflows for pushes authenticated with the run's own GITHUB_TOKEN — so
+      # tests.yml's `on: push` never fired for a bot commit and the repo-data
+      # tests went 192 commits without running. Dispatch it the same way the
+      # deploy has to be dispatched.
+      - name: Test the capture
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Tests" --ref main || true
+
+      # Last, so it can see any earlier step fail. This workflow had no failure
+      # handler at all, and two of the twelve failures in this repository's
+      # history were daytime ingests: a server-side ref rejection that lost the
+      # capture (run 30935854819) and a run GitHub never allocated a runner for
+      # (run 31124373444, cancelled with zero steps executed). Neither left
+      # anything behind but a red badge in a mailbox that turned out to be read
+      # nine days late.
+      - name: Say so if the capture failed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### $(date -u +%FT%H:%MZ) — daytime ingest failed"
+            echo
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo 'A missed capture is the only permanent loss a bad run causes: Techmeme'
+            echo 'and r/LocalLLaMA roll their windows over within hours and nothing'
+            echo 'ever re-fetches them.'
+            echo
+            echo 'Worth checking: whether the commit reached origin, and whether'
+            echo 'data/state/seen_ids.json on main still matches the last good run —'
+            echo 'that file is git-resident, so a lost push takes the state with it.'
+          } > /tmp/ingest-failure.md
+          bash .github/scripts/flag_issue.sh \
+            "Daytime ingest failed" \
+            "Daytime ingest failed $(date -u +%F)" \
+            /tmp/ingest-failure.md

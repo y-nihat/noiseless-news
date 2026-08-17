@@ -97,15 +97,42 @@ class TestDeployRace:
 
     def test_the_backstop_deploy_is_still_there(self):
         """It was the only thing that deployed the site on 2026-08-07."""
-        workflow = (REPO_ROOT / ".github" / "workflows" / "nightly.yml").read_text("utf-8")
-        assert "actions/deploy-pages@v4" in workflow
-        assert workflow.count("if: always()") >= 4
+        import yaml
 
-    def test_the_failure_handler_runs_after_the_deploy_steps(self):
+        workflow = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / "nightly.yml").read_text("utf-8")
+        )
+        backstop = next(
+            s for s in workflow["jobs"]["scan"]["steps"]
+            if s.get("name") == "Deploy the night's work"
+        )
+        assert "always()" in backstop["if"]
+        assert 'gh workflow run "Deploy site"' in backstop["run"]
+
+    def test_the_backstop_does_not_publish_what_the_gate_rejected(self):
+        """Publishing "whatever the script left behind" must exclude the bad part."""
+        import yaml
+
+        workflow = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / "nightly.yml").read_text("utf-8")
+        )
+        steps = workflow["jobs"]["scan"]["steps"]
+        loop = next(s for s in steps if s.get("name") == "Night loop")
+        backstop = next(s for s in steps if s.get("name") == "Deploy the night's work")
+        assert loop.get("id") == "loop", "the backstop reads an output this step cannot emit"
+        assert "steps.loop.outputs.content_gate != 'failed'" in backstop["if"]
+
+    def test_the_script_actually_emits_the_output_the_workflow_reads(self):
+        """A condition on an output nothing writes is a condition that never fires."""
+        script = NIGHT_LOOP.read_text(encoding="utf-8")
+        assert 'echo "content_gate=' in script
+        assert 'GITHUB_OUTPUT' in script.split('echo "content_gate=')[0][-400:]
+
+    def test_the_failure_handler_runs_after_every_other_step(self):
         """`if: failure()` is evaluated in step order.
 
-        A handler placed before the build and deploy steps cannot see them fail,
-        so a run that died in `configure-pages` filed no issue at all.
+        A handler placed before the deploy steps cannot see them fail, so a run
+        that died in `configure-pages` filed no issue at all.
         """
         import yaml
 
@@ -115,6 +142,68 @@ class TestDeployRace:
         names = [s.get("name") or s.get("uses") for s in workflow["jobs"]["scan"]["steps"]]
         assert names[-1] == "Open failure issue", f"handler is not last: {names}"
         assert names.index("Night loop") < names.index("Open failure issue")
+
+
+class TestOnePathToPages:
+    """Every Pages deployment in this repository goes through one mutex.
+
+    GitHub allows a single deployment in flight. nightly.yml used to build and
+    deploy Pages inline from the `nightly` concurrency group while deploy.yml
+    deployed the same site from the `pages` group, so the two could not see each
+    other: on 2026-08-04 the last cycle's dispatch and the backstop collided and
+    the second create call got HTTP 400 (run 30867516175). PR #24 stopped the
+    loop racing itself, but a human merge to main inside the 01:00-01:20 UTC
+    window would still have collided.
+    """
+
+    WORKFLOWS = sorted((REPO_ROOT / ".github" / "workflows").glob("*.yml"))
+
+    def test_only_one_workflow_touches_the_pages_backend(self):
+        """Parsed steps, not a text search: the prose explains the incident too."""
+        import yaml
+
+        deployers = []
+        for path in self.WORKFLOWS:
+            workflow = yaml.safe_load(path.read_text(encoding="utf-8"))
+            uses = [
+                step.get("uses", "")
+                for job in workflow.get("jobs", {}).values()
+                for step in job.get("steps", [])
+            ]
+            if any("deploy-pages" in u for u in uses):
+                deployers.append(path.name)
+        assert deployers == ["deploy.yml"], (
+            f"more than one route to Pages: {deployers} — they share no mutex"
+        )
+
+    def test_that_workflow_serialises_on_the_pages_group(self):
+        import yaml
+
+        deploy = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / "deploy.yml").read_text("utf-8")
+        )
+        assert deploy["concurrency"]["group"] == "pages"
+
+    def test_everyone_else_asks_it_rather_than_doing_it(self):
+        for path in self.WORKFLOWS:
+            if path.name == "deploy.yml":
+                continue
+            text = path.read_text(encoding="utf-8")
+            if "Deploy site" not in text:
+                continue
+            assert 'gh workflow run "Deploy site"' in text, (
+                f"{path.name} reaches Pages by some other route"
+            )
+
+    def test_the_night_no_longer_holds_pages_credentials(self):
+        """It stopped deploying; the token scope should say so."""
+        import yaml
+
+        nightly = yaml.safe_load(
+            (REPO_ROOT / ".github" / "workflows" / "nightly.yml").read_text("utf-8")
+        )
+        assert "pages" not in nightly["permissions"]
+        assert "id-token" not in nightly["permissions"]
 
     def test_the_nightly_job_is_not_in_the_pages_concurrency_group(self):
         """deploy.yml cancels in-progress runs in that group.

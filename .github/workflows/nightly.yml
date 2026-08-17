@@ -13,10 +13,12 @@ on:
         type: boolean
         default: false
 
+# No `pages: write` or `id-token: write` any more: this job no longer touches
+# the Pages backend itself, it asks deploy.yml to. Keeping credentials for a
+# thing the job stopped doing is how a four-hour unattended agent session ends
+# up holding more than it needs.
 permissions:
   contents: write
-  pages: write
-  id-token: write
   issues: write
   actions: write
 
@@ -27,7 +29,15 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 245   # up-to-20min window hold + 200min night + deploys
+    timeout-minutes: 245   # up-to-20min window hold + 200min night + slack
+    # Every scratch file the night owns, in one directory scoped to this run.
+    # The loop's content gate runs the test suite on this runner, and the suite
+    # drives the supervisor against scratch repositories — so with fixed /tmp
+    # paths the tests wrote the live run's own state files, disarming the
+    # failure handler below and resetting the night story counter. A test run
+    # inherits none of this, so it cannot reach these paths.
+    env:
+      NIGHT_STATE_DIR: ${{ runner.temp }}/night-${{ github.run_id }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,10 +46,16 @@ jobs:
           python-version: "3.12"
       - run: pip install -r pipeline/requirements.txt
 
+      # Pinned, like pipeline/requirements.txt. An unpinned global install means
+      # a four-hour unattended agent session silently changes version between
+      # one night and the next, and a bad release would show up as an
+      # unexplained night with nothing in the repository saying what changed.
+      # Bump it deliberately — see RUNBOOK.md.
       - name: Install Claude Code
-        run: npm install -g @anthropic-ai/claude-code
+        run: npm install -g @anthropic-ai/claude-code@2.1.233
 
       - name: Night loop
+        id: loop
         timeout-minutes: 235
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -48,35 +64,66 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
         run: bash .github/scripts/night_loop.sh
 
-      # Final backstop deploy — per-cycle deploys are dispatched by the loop.
-      - name: Build site
-        if: always()
-        run: PYTHONPATH=pipeline python -m noiseless.run publish
-      - uses: actions/configure-pages@v5
-        if: always()
-      - uses: actions/upload-pages-artifact@v3
-        if: always()
-        with:
-          path: site/dist
-      - uses: actions/deploy-pages@v4
-        if: always()
+      # Final backstop deploy, for the cycles that were skipped and for a script
+      # that died before its last dispatch.
+      #
+      # This used to build and deploy Pages inline, from a job in the `nightly`
+      # concurrency group, while deploy.yml deploys the same site from the
+      # `pages` group — two routes to one Pages backend with no mutex between
+      # them. GitHub allows a single deployment in flight, so on 2026-08-04 the
+      # final cycle's dispatch and this backstop collided and the second create
+      # call got HTTP 400 (run 30867516175). PR #24 stopped the loop racing
+      # itself, but a human merge to main inside the 01:00-01:20 UTC window
+      # would still have collided (precedent: run 29175086965). Dispatching
+      # instead puts every Pages deployment in this repository through
+      # deploy.yml's single `pages` group, where an overlap cancels a superseded
+      # run rather than failing a live one.
+      #
+      # Not when the content gate is tripped: the step that exists to publish
+      # whatever the script left behind must not publish the one thing the
+      # script decided should not be published. An empty output means the script
+      # never got that far, and then the site should be brought current.
+      - name: Deploy the night's work
+        if: always() && steps.loop.outputs.content_gate != 'failed'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Deploy site" --ref main
 
       # Last, deliberately: `if: failure()` is evaluated in step order, so a
-      # handler placed mid-job cannot see a later step fail — a run that dies in
-      # `configure-pages` or `deploy-pages` filed no issue at all.
+      # handler placed mid-job cannot see a later step fail. When the deploy was
+      # four inline steps, a run that died in `configure-pages` filed no issue at
+      # all; the deploy is one dispatch now, but the ordering rule is unchanged.
       - name: Open failure issue
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # The loop files its own report, and it knows things this step cannot:
+          # which cycles ran, what the gate said, whether the push landed. When
+          # it has already filed, a second issue here just contradicts the first
+          # — that is exactly what #28 and #29 were, ten seconds apart on
+          # 2026-08-07, one of them saying "no agent output captured" because it
+          # tailed a stream file no cycle had written.
+          if [ -f "$NIGHT_STATE_DIR/issue-filed" ]; then
+            echo "the loop already filed this night's report; not filing a second"
+            exit 0
+          fi
           {
+            echo "### $(date -u +%F) — the night job failed before the loop could report"
+            echo
             echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo
             echo '```'
-            latest=$(ls -t /tmp/claude-stream-*.jsonl 2>/dev/null | head -1)
-            if [ -n "$latest" ]; then tail -c 2500 "$latest"; else echo "no agent output captured"; fi
+            latest=$(ls -t "$NIGHT_STATE_DIR"/claude-stream-*.jsonl 2>/dev/null | head -1)
+            if [ -n "$latest" ]; then
+              tail -c 2500 "$latest"
+            else
+              echo "No agent stream on the runner: the job died before any cycle started,"
+              echo "or the step itself failed. The Actions log is the only record."
+            fi
             echo '```'
           } > /tmp/issue-body.md
-          gh issue create \
-            --title "Nightly run failed $(date -u +%F)" \
-            --body-file /tmp/issue-body.md || true
+          bash .github/scripts/flag_issue.sh \
+            "Nightly run failed" \
+            "Nightly run failed $(date -u +%F)" \
+            /tmp/issue-body.md || true
