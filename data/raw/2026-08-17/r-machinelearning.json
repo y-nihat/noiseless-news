@@ -1,0 +1,12 @@
+[
+  {
+    "id": "49bb2914ebf1253f",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "[R] SineKAN: Kolmogorov-Arnold Networks Using Sinusoidal Activation Functions",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vqdode/r_sinekan_kolmogorovarnold_networks_using/",
+    "published": "2026-08-17T00:46:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1vqdode/r_sinekan_kolmogorovarnold_networks_using/\"> <img alt=\"[R] SineKAN: Kolmogorov-Arnold Networks Using Sinusoidal Activation Functions\" src=\"https://external-preview.redd.it/q3evP6JeDpAC2MdSQHWYxnCYTqbJkElIQsLFqVSdkss.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de730fbf7ecace6df0036b21470c16a2d4feacfb\" title=\"[R] SineKAN: Kolmogorov-Arnold Networks Using Sinusoidal Activation Functions\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I couldn't sleep because I couldn't stop wondering if anyone had tried using sinusoids instead of B-splines as activation in a KAN, and fortunately/unfortunately that was already the case. I could not find it posted here, so I though I would share in the hope of some insightful discussion.</p> <p>Arxiv: <a href=\"https://arxiv.org/abs/2407.04149\">https://arxiv.org/abs/2407.04149</a></p> <p>Github repo: <a href=\"https://github.com/ereinha/SineKAN\">https://github.com/ereinha/SineKAN</a></p> <p>Also what appears to be a peer-reviewed &quot;official&quot; publication here: <a href=\"https://www.mdpi.com/2227-7390/13/19/3157\">https://www.mdpi.com/2227-7390/13/19/3157</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacobgorm\"> /u/jacobgorm </a> <br /> <span><a href=\"https://arxiv.org/abs/2407.04149\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vqdode/r_sinekan_kolmogorovarnold_networks_using/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-17T00:58:12.276077+00:00"
+  }
+]
