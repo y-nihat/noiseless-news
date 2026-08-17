@@ -37,10 +37,25 @@ jobs:
           PYTHONPATH=pipeline python -m noiseless.run validate-sources --live \
             | tee /tmp/health.txt
           echo "exit=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
-          grep -c '^\[FAIL\]' /tmp/health.txt > /tmp/failcount || echo 0 > /tmp/failcount
-          echo "failures=$(cat /tmp/failcount)" >> "$GITHUB_OUTPUT"
+          # This step used to swallow everything: `set +e`, an exit code written
+          # to an output that `grep -rn steps.check.outputs.exit .github/` shows
+          # nothing ever read, and a failure count derived from counting [FAIL]
+          # lines. An exception inside check_all — feedparser.parse and
+          # len(response.content) both sit outside check_source's try block —
+          # emits no [FAIL] lines at all, so the count came out 0, no issue was
+          # opened, the job went green, and the committed report carried an
+          # empty code fence. The validator prints this line last and only if it
+          # got to the end, so it is the one thing worth trusting in the file.
+          if ! grep -q '^live check done — ' /tmp/health.txt; then
+            echo "::error::validate-sources did not run to completion — this report is not a clean bill of health"
+            exit 1
+          fi
+          echo "failures=$(grep -c '^\[FAIL\]' /tmp/health.txt)" >> "$GITHUB_OUTPUT"
 
+      # Always: a crashed check still produces evidence, and the partial output
+      # is how you find out what it choked on after the runner is gone.
       - name: Commit the health report
+        if: always()
         run: |
           REPORT="data/ledger/source-health-$(date -u +%F).md"
           {
@@ -49,7 +64,7 @@ jobs:
             echo "\`validate-sources --live\` over every active source."
             echo
             echo '```'
-            cat /tmp/health.txt
+            cat /tmp/health.txt 2>/dev/null || echo "(the check produced no output at all)"
             echo '```'
           } > "$REPORT"
           git config user.name "y-nihat"
@@ -68,20 +83,47 @@ jobs:
           git push
 
       - name: Flag failing sources
-        if: steps.check.outputs.failures != '0'
+        if: always() && steps.check.outputs.failures != '' && steps.check.outputs.failures != '0'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           {
-            echo "${{ steps.check.outputs.failures }} active source(s) failed live validation."
+            echo "### $(date -u +%F) — ${{ steps.check.outputs.failures }} active source(s) failed live validation"
             echo
             echo "Per policy/source-lifecycle.md §4, a feed that keeps failing is flagged"
-            echo "for repair or retirement. Compare against last week's report before acting —"
-            echo "a single transient failure is not a dead feed."
+            echo "for repair or retirement. This thread is the week-on-week record: scroll"
+            echo "up to see whether this is the same set as last week (a dead feed) or a"
+            echo "new one (probably transient)."
             echo
             echo '```'
             grep '^\[FAIL\]' /tmp/health.txt
             echo '```'
+            echo
+            echo "Report: \`data/ledger/source-health-$(date -u +%F).md\`"
           } > /tmp/issue.md
-          gh issue create --title "Source health: failing feeds $(date -u +%F)" \
-            --body-file /tmp/issue.md || true
+          bash .github/scripts/flag_issue.sh \
+            "Source health: failing feeds" \
+            "Source health: failing feeds $(date -u +%F)" \
+            /tmp/issue.md
+
+      # A check that cannot run is a different problem from a feed that is down,
+      # and it used to be reported as neither.
+      - name: Flag a broken check
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### $(date -u +%F) — the weekly source health check did not complete"
+            echo
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo "Whatever it managed to print before stopping:"
+            echo '```'
+            tail -c 2000 /tmp/health.txt 2>/dev/null || echo "(nothing)"
+            echo '```'
+          } > /tmp/broken.md
+          bash .github/scripts/flag_issue.sh \
+            "Source health check failed" \
+            "Source health check failed $(date -u +%F)" \
+            /tmp/broken.md
