@@ -1,0 +1,72 @@
+{
+    "slug": "nvidia-openai-250b-guarantee",
+    "checked_at": "2026-08-17T22:55:00+00:00",
+    "method": "Fresh verifier sub-agent plus adversarial falsifier sub-agent, both Sonnet 5. Primary sources: Nvidia's own newsroom release and the same press release filed as an SEC exhibit (sec.gov), which states the $105B guarantee cap exactly. Independent same-day corroboration from Reuters, Bloomberg, CNBC, TechCrunch, Nikkei Asia. The falsifier caught and corrected a drafting error: the $80M community-benefits fund is split evenly between SB Energy (pre-existing $40M) and OpenAI (incremental $40M) -- Nvidia is not a funder of it, contrary to the verifier's ambiguous first-pass phrasing.",
+    "origin_items": [
+        "Surfaced via cycle 1's mandatory watching-ledger recheck of nvidia-openai-250b-guarantee (this entry has tracked the story since 2026-07-27), which flagged the 2026-08-17 announcement as a same-day breakthrough and the top-priority verify+publish candidate for cycle 2. Cross-checked against this cycle's fresh gnews-ai-chips-and-compute ingest (22:40Z), which carried dozens of same-day independently-bylined items on the announcement."
+    ],
+    "claims": [
+        {
+            "text": "Nvidia will guarantee up to $105 billion in lease-residual-value obligations for OpenAI's new data-center campus in Pike County, Ohio -- an exact figure stated in Nvidia's SEC filing and confirmed by Nvidia's press release, both disclosed 17 August 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Falsifier located the SEC filing directly (sec.gov/Archives/edgar/data/1045810/000104581026000069/sbeoainvidia-portsrelease.htm) and confirmed the filing states the guarantee is 'cumulatively capped at $105 billion' -- not a headline rounding. Independently corroborated same-day, own-byline, by Reuters, Bloomberg, CNBC, TechCrunch, Nikkei Asia (falsifier additionally found Axios, UPI and Dayton Daily News independently).",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute",
+                "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/sbeoainvidia-portsrelease.htm",
+                "https://lufkindailynews.com/news_reuters/business/nvidia-to-provide-up-to-105-billion-guarantee-for-openais-ohio-data-center/article_24892114-acb6-5a9e-867a-3b655e183fd1.html"
+            ]
+        },
+        {
+            "text": "Nvidia will separately invest $1.5 billion directly in SB Energy, additive to (not part of) the $105 billion guarantee",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Verbatim in Nvidia's release; falsifier confirmed consistently described as separate/additive across Nvidia, SB Energy's own site, CNBC and Axios -- no source conflates it with the $105B figure.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute",
+                "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/"
+            ]
+        },
+        {
+            "text": "Capacity: 4.25GW initial, option to extend by 3.75GW, up to 8GW total, phased online starting 2028",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Nvidia's own release states 4.25 IT-GW initial and 8 IT-GW total planned, phased from 2028. Falsifier flagged one outlet (TradingView) paraphrasing the extension as 'about 3.8GW' -- reconciled as loose rounding, not a real dispute, since 8 minus 4.25 equals Nvidia's own 3.75GW figure exactly.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute"
+            ]
+        },
+        {
+            "text": "Jobs and community figures: ~35,000 construction jobs through 2032, ~2,500 permanent jobs, $4.2B+ AEP Ohio grid investment, $80M community-benefits fund split evenly SB Energy/OpenAI (NOT Nvidia)",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "CORRECTED POST-FALSIFIER: the verifier's first pass ambiguously implied Nvidia funded $80M of a $120M total. Falsifier checked Nvidia's release and SB Energy's own site directly and found the actual structure is SB Energy's pre-existing $40M plus OpenAI's incremental $40M = $80M total; Nvidia is not named as a funder of this specific fund (its money is in the guarantee and the SB Energy equity stake). Jobs and AEP Ohio grid figures independently confirmed via Dayton Daily News, a local outlet with no PR incentive to inflate.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute"
+            ]
+        },
+        {
+            "text": "The $105B guarantee is a distinct financing mechanism from Nvidia's 10 August 2026 $500B six-asset-manager platform (Apollo/BlackRock/Blackstone/Brookfield/Goldman Sachs/KKR), already published on this site as nvidia-500b-ai-financing-platform",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Falsifier searched explicitly for any source conflating the two and found none; one analysis piece (MLQ News) explicitly frames the $500B platform as 'a framework, not a loan book,' reinforcing the mechanism is structurally different from today's direct balance-sheet guarantee.",
+            "evidence": [
+                "https://nvidianews.nvidia.com/news/nvidia-guarantees-sb-energy-s-ports-pike-technology-campus-in-ohio-to-exclusively-host-nvidia-ai-compute"
+            ]
+        },
+        {
+            "text": "Prior WSJ-attributed reports (unconfirmed at the time) put the guarantee at ~$250B (late July) then under $120B (14 August) -- superseded, not restated, by today's confirmed $105B",
+            "type": "statement",
+            "verdict": "single-source",
+            "reasoning": "Labeled single-source deliberately: this is exactly why the story sat in `watching` for three weeks. Falsifier located the stale-rumor artifacts (GovConWire, Tom's Hardware, BigGo Finance) matching the claimed progression and confirmed dates are genuine (SEC filing and all major outlet URLs carry 2026-08-17 dates; no recirculated/misdated story).",
+            "evidence": [
+                "https://au.investing.com/news/company-news/nvidia-cuts-planned-openai-data-center-guarantee-to-below-120-billion--wsj-4601533"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: PUBLISHABLE WITH CHANGES. Falsifier's one material finding -- the community-benefits-fund attribution error ($80M SB Energy/OpenAI split, not $80M Nvidia + $40M OpenAI = $120M) -- was corrected in the article before publish. All other claims (guarantee amount and mechanism, SB Energy investment, capacity, jobs/grid figures, distinctness from the Aug 11 platform, staleness of prior WSJ figures) survived adversarial review without contradiction. No correction, walk-back or denial found from Nvidia/OpenAI/SB Energy. Dates independently confirmed genuine (not a recirculated or misdated story).",
+    "gaps_closed_from_watching_state": [
+        "Independence bar (the single blocker across every recheck since 2026-07-27) is now cleared: 5+ independently-bylined Tier-2 outlets plus a Tier-0 SEC filing, none attributing to WSJ.",
+        "Story moves from watching to published; slug retained for continuity with the three-week ledger history."
+    ]
+}
