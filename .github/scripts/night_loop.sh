@@ -373,6 +373,13 @@ commit_push "Night loop footer $(date -u +%F)"
 gh workflow run "Tests" --ref main 2>/dev/null \
   && log "Tests dispatched against main" || log "Tests dispatch failed (non-fatal)"
 
+# nightly.yml's backstop deploy reads this. The backstop exists to publish
+# whatever the script left behind, which must not include the one thing the
+# script decided should not be published.
+if [ -n "${GITHUB_OUTPUT:-}" ]; then
+  echo "content_gate=$([ "$content_gate_ok" -eq 1 ] && echo ok || echo failed)" >> "$GITHUB_OUTPUT"
+fi
+
 {
   echo "### Night loop"
   echo ""
