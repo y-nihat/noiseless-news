@@ -35,6 +35,9 @@ class TestTheGateItself:
         result = drive(scratch, f"content_gate; {REPORT}")
         assert state(result)["gate_ok"] == "1"
         assert state(result)["trips"] == "0"
+        # Both counters are initialised before the source hook, so without this
+        # the test passes with content_gate deleted from the script.
+        assert "content: stub python" in result.stdout, "the gate never ran"
 
     def test_a_failing_test_suite_trips_it(self, scratch):
         result = drive(scratch, f"STUB_PYTEST_EXIT=1 content_gate; {REPORT}")

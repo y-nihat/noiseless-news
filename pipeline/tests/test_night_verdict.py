@@ -19,9 +19,9 @@ from pathlib import Path
 
 import pytest
 from night_harness import (
-    ISSUE_SENTINEL,
     SCRIPT,
     gh_calls,
+    issue_sentinel,
     make_scratch,
     run_night,
 )
@@ -89,9 +89,9 @@ class TestALostScheduledNight:
         run_night(scratch, NIGHT_NOW=OUT_OF_WINDOW, EVENT_NAME="schedule")
         assert "Nightly run failed" in issues_filed(scratch)[0]
 
-    def test_the_report_does_not_claim_the_job_survived(self, scratch, tmp_path):
+    def test_the_report_does_not_claim_the_job_survived(self, scratch):
         run_night(scratch, NIGHT_NOW=OUT_OF_WINDOW, EVENT_NAME="schedule")
-        body = Path("/tmp/night-review.md").read_text(encoding="utf-8")
+        body = (scratch["state"] / "night-review.md").read_text(encoding="utf-8")
         assert "The job itself did not fail" not in body, (
             "the report contradicts the exit code, which is what #28 did"
         )
@@ -100,14 +100,14 @@ class TestALostScheduledNight:
     def test_the_workflow_handler_is_told_to_stand_down(self, scratch):
         """Otherwise nightly.yml files its "no agent output captured" issue too."""
         run_night(scratch, NIGHT_NOW=OUT_OF_WINDOW, EVENT_NAME="schedule")
-        assert ISSUE_SENTINEL.exists()
+        assert issue_sentinel(scratch).exists()
 
     def test_the_handler_actually_checks_for_it(self):
         import yaml
 
         steps = yaml.safe_load(NIGHTLY.read_text("utf-8"))["jobs"]["scan"]["steps"]
         handler = next(s for s in steps if s.get("name") == "Open failure issue")
-        assert "/tmp/night-issue-filed" in handler["run"]
+        assert "$NIGHT_STATE_DIR/issue-filed" in handler["run"]
         assert "exit 0" in handler["run"]
 
 

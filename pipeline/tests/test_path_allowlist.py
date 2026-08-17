@@ -70,13 +70,16 @@ class TestAStagedOutOfScopeEdit:
         assert (scratch["work"] / OUT_OF_SCOPE).read_text(encoding="utf-8") == ORIGINAL
 
     def test_the_index_is_left_clean(self, scratch):
-        """A staged stray survives into the *next* commit if it is only checked out."""
+        """A staged stray survives into the *next* commit if it is only checked out.
+
+        Observed between the guard and the commit: after `git commit` the index
+        always matches HEAD, so a check placed there can never see this.
+        """
         _poison(scratch)
         result = drive(
             scratch,
-            'git add -A\ncommit_push "cycle artifacts"\n'
-            'git diff --cached --name-only > /tmp/staged.txt\n'
-            'echo "STAGED[$(cat /tmp/staged.txt)]"\n'
+            'git add -A\nguard_paths\n'
+            'echo "STAGED[$(git diff --cached --name-only)]"\n'
             f"{REPORT}",
         )
         assert "STAGED[]" in result.stdout, "the stray is still staged after the guard"
@@ -128,6 +131,39 @@ class TestACommitTheAgentMadeItself:
             "a self-committed supervisor edit reached origin"
         )
 
+    def test_a_stray_the_agent_pushed_itself_is_still_caught(self, scratch):
+        """The baseline cannot be the upstream ref, because `git push` moves it.
+
+        cycle-prompt.md tells the agent to push after each commit and it holds
+        the same credential, so anchoring on `@{upstream}` meant the agent's own
+        push advanced the goalposts and the check that exists for this case
+        reported guard_trips=0 with the poisoned file already on origin.
+        """
+        _poison(scratch)
+        result = drive(
+            scratch,
+            'git add -A && git commit -q -m "agent self-commit" && git push -q\n'
+            'echo ok > content/story.md\n'
+            f'commit_push "cycle artifacts"\n{REPORT}',
+        )
+        assert state(result)["push_blocked"] == "1", (
+            "the agent pushed its own stray and the guard saw nothing"
+        )
+        assert state(result)["guard_trips"] != "0"
+
+    def test_the_origin_check_sees_a_stray_that_is_already_pushed(self, scratch):
+        """The guard can only refuse the next push; something must look at origin."""
+        _poison(scratch)
+        result = drive(
+            scratch,
+            'git add -A && git commit -q -m "agent self-commit" && git push -q\n'
+            'git fetch -q origin main\n'
+            'assert_push_scope FETCH_HEAD "already on origin" '
+            '&& echo "ORIGIN_CLEAN" || echo "ORIGIN_DIRTY"\n'
+            f'{REPORT}',
+        )
+        assert "ORIGIN_DIRTY" in result.stdout
+
     def test_the_night_then_fails_rather_than_reporting_success(self, scratch):
         script = SCRIPT.read_text(encoding="utf-8")
         tail = script.split("Loop supervisor footer")[1]
@@ -142,17 +178,16 @@ class TestACommitTheAgentMadeItself:
 
 
 class TestTheCheckCannotFailOpen:
-    def test_no_upstream_means_no_push(self, scratch):
+    def test_no_baseline_means_no_push(self, scratch):
         """An empty diff against nothing is not an all-clear."""
         result = drive(
             scratch,
-            'git remote remove origin\n'
-            'git branch --unset-upstream 2>/dev/null\n'
+            'NIGHT_BASE=""\n'
             'echo ok > content/story.md\n'
             f'commit_push "cycle artifacts"\n{REPORT}',
         )
         assert state(result)["push_blocked"] == "1"
-        assert "no upstream to compare against" in result.stdout
+        assert "no night baseline" in result.stdout
 
 
 class TestTheAllowlistStaysInOnePlace:

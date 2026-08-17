@@ -30,6 +30,14 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     timeout-minutes: 245   # up-to-20min window hold + 200min night + slack
+    # Every scratch file the night owns, in one directory scoped to this run.
+    # The loop's content gate runs the test suite on this runner, and the suite
+    # drives the supervisor against scratch repositories — so with fixed /tmp
+    # paths the tests wrote the live run's own state files, disarming the
+    # failure handler below and resetting the night story counter. A test run
+    # inherits none of this, so it cannot reach these paths.
+    env:
+      NIGHT_STATE_DIR: ${{ runner.temp }}/night-${{ github.run_id }}
     steps:
       - uses: actions/checkout@v4
 
@@ -96,7 +104,7 @@ jobs:
           # — that is exactly what #28 and #29 were, ten seconds apart on
           # 2026-08-07, one of them saying "no agent output captured" because it
           # tailed a stream file no cycle had written.
-          if [ -f /tmp/night-issue-filed ]; then
+          if [ -f "$NIGHT_STATE_DIR/issue-filed" ]; then
             echo "the loop already filed this night's report; not filing a second"
             exit 0
           fi
@@ -106,7 +114,7 @@ jobs:
             echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo
             echo '```'
-            latest=$(ls -t /tmp/claude-stream-*.jsonl 2>/dev/null | head -1)
+            latest=$(ls -t "$NIGHT_STATE_DIR"/claude-stream-*.jsonl 2>/dev/null | head -1)
             if [ -n "$latest" ]; then
               tail -c 2500 "$latest"
             else

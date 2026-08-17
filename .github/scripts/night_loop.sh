@@ -57,15 +57,37 @@ fi
 START=$(date -u +%s)
 NIGHT_START_ISO=$(date -u -d "@$START" +%FT%H:%M:%SZ)
 NIGHT_END=$((START + NIGHT_SECONDS))
+
+# Every scratch file this run owns, in one directory scoped to the run.
+#
+# They used to be fixed paths under /tmp, which was harmless until content_gate
+# started running `pytest` on the live runner: the suite drives this very script
+# against scratch repositories, so the tests re-created the supervisor's own
+# state files underneath it. Two live consequences, both measured — the suite
+# left /tmp/night-issue-filed behind, which stands nightly.yml's failure handler
+# down for the rest of the night, and it re-touched the night-start marker,
+# which reset the published-articles count and unbound the 12-story cap from
+# cycle 2 onwards. nightly.yml sets this variable; a run without it gets a
+# per-process directory, so a nested run can never write the outer run's state.
+NIGHT_STATE_DIR="${NIGHT_STATE_DIR:-/tmp/night-$$}"
+mkdir -p "$NIGHT_STATE_DIR"
+ISSUE_FILED="$NIGHT_STATE_DIR/issue-filed"
+
+# The tree outside content/ and data/ as it stood before the agent could touch
+# anything. assert_push_scope compares against this rather than against the
+# upstream ref: `git push` advances the upstream ref, and the agent has the same
+# credential and is told by cycle-prompt.md to push after each commit, so a
+# self-pushed supervisor edit moved the goalposts and passed the check that
+# exists to catch it.
+NIGHT_BASE=$(git rev-parse HEAD)
 # Report is named for the Istanbul morning it will be reviewed on, plus the
 # run's start time so same-day runs (smoke tests) never collide.
 REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H%M)Z.md"
 # The report is the morning's primary artifact and it is written with `>>`, so a
 # missing directory would lose it without a word.
 mkdir -p "$(dirname "$REPORT_FILE")"
-touch /tmp/night-start-marker
 ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0; push_failed=0
-gate_trips=0; content_gate_ok=1; push_blocked=0
+gate_trips=0; content_gate_ok=1; push_blocked=0; origin_polluted=0
 NIGHT_STATS="data/ledger/night-stats.jsonl"
 
 git config user.name "y-nihat"
@@ -110,20 +132,28 @@ guard_paths() {
 # both tokens in scope. One night's articles are worth less than that, so this
 # refuses the push and lets the job fail.
 assert_push_scope() {
-  local base strays
-  base=$(git rev-parse --verify --quiet '@{upstream}' 2>/dev/null) \
-    || base=$(git rev-parse --verify --quiet origin/main 2>/dev/null)
-  if [ -z "$base" ]; then
-    # Fail closed: with nothing to diff against, "no strays found" would be an
+  local target=${1:-HEAD} label=${2:-the commits waiting to be pushed} strays
+  if [ -z "${NIGHT_BASE:-}" ]; then
+    # Fail closed: with nothing to compare against, "no strays found" is an
     # empty answer dressed up as an all-clear.
-    log "GUARD: no upstream to compare against — refusing to push"
+    log "GUARD: no night baseline to compare against — refusing to push"
     return 1
   fi
-  strays=$(git diff --name-only "$base"..HEAD -- . ':(exclude)content' ':(exclude)data')
+  # Trees, not a commit range. A commit range anchored on the upstream ref is
+  # exactly what the agent's own `git push` defeats, and it also disappears the
+  # evidence after a rebase. Comparing the tree at the night's baseline against
+  # the tree now answers the only question that matters: is anything outside
+  # content/ and data/ different from what the operator last reviewed?
+  strays=$(git diff --name-only "$NIGHT_BASE" "$target" -- . ':(exclude)content' ':(exclude)data')
   [ -z "$strays" ] && return 0
   guard_trips=$((guard_trips + 1))
-  log "GUARD: unpushed commits touch paths outside content/ and data/:"
+  log "GUARD: $label touch paths outside content/ and data/:"
   printf '%s\n' "$strays" | while IFS= read -r line; do log "  $line"; done
+  # A legitimate cause exists and is rare: an operator merging to main inside
+  # the 22:00-01:20 UTC window, pulled in by commit_push's rebase. One such
+  # merge has happened in the repository's history. Failing loudly on it is the
+  # right trade for a control whose other case is a supervisor rewritten by a
+  # session that spent the night reading untrusted third-party text.
   return 1
 }
 
@@ -141,19 +171,19 @@ assert_push_scope() {
 # only moment at which a bad article is still unpublished.
 content_gate() {
   local failed=0
-  if ! pytest -q >/tmp/gate-pytest.txt 2>&1; then
+  if ! pytest -q >"$NIGHT_STATE_DIR/gate-pytest.txt" 2>&1; then
     failed=1
     log "GATE: pytest FAILED"
-    tail -n 15 /tmp/gate-pytest.txt | while IFS= read -r line; do log "  $line"; done
+    tail -n 15 "$NIGHT_STATE_DIR/gate-pytest.txt" | while IFS= read -r line; do log "  $line"; done
   fi
   if ! PYTHONPATH=pipeline python -m noiseless.run validate-content --strict \
-      >/tmp/gate-content.txt 2>&1; then
+      >"$NIGHT_STATE_DIR/gate-content.txt" 2>&1; then
     failed=1
     log "GATE: validate-content --strict FAILED"
   fi
   # Log the findings either way. The agent reads the cycle log, so a warning
   # raised now can be repaired by the next cycle before it becomes an error.
-  while IFS= read -r line; do log "content: $line"; done < /tmp/gate-content.txt
+  while IFS= read -r line; do log "content: $line"; done < "$NIGHT_STATE_DIR/gate-content.txt"
   if [ "$failed" -eq 1 ]; then
     gate_trips=$((gate_trips + 1))
     content_gate_ok=0
@@ -225,7 +255,10 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
     commit_push "Night ingest $(date -u +%FT%H:%MZ)"
   fi
 
-  published=$(find content/articles/en -name '*.md' -newer /tmp/night-start-marker | wc -l)
+  # `-newermt "@$START"` rather than a marker file: the marker was a fixed path
+  # under /tmp, and content_gate's `pytest` run re-created it, which reset this
+  # count to zero from cycle 2 onwards and quietly unbound the night story cap.
+  published=$(find content/articles/en -name '*.md' -newermt "@$START" | wc -l)
   remaining=$((NIGHT_STORY_CAP - published)); [ "$remaining" -lt 0 ] && remaining=0
   stories=$STORIES_PER_CYCLE; [ "$stories" -gt "$remaining" ] && stories=$remaining
 
@@ -265,9 +298,9 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
       -e "s|{{SWEEP_INSTRUCTION}}|$sweep|g" \
       -e "s|{{WATCHING_INSTRUCTION}}|$watching|g" \
       -e "s|{{FINAL_NOTE}}|$final_note|g" \
-      .github/cycle-prompt.md > "/tmp/prompt-$cycle.md"
-  if grep -q '{{' "/tmp/prompt-$cycle.md"; then
-    log "ERROR: unrendered placeholder in cycle prompt"; grep -o '{{[A-Z_]*}}' "/tmp/prompt-$cycle.md" | sort -u
+      .github/cycle-prompt.md > "$NIGHT_STATE_DIR/prompt-$cycle.md"
+  if grep -q '{{' "$NIGHT_STATE_DIR/prompt-$cycle.md"; then
+    log "ERROR: unrendered placeholder in cycle prompt"; grep -o '{{[A-Z_]*}}' "$NIGHT_STATE_DIR/prompt-$cycle.md" | sort -u
     exit 1
   fi
 
@@ -280,17 +313,17 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   # verification agents. Neither had ever been passed it: `git log -S"--effort"`
   # returns no commit in the repository's history, so every night since the
   # first ran at the CLI default while two documents said otherwise.
-  timeout "$CYCLE_TIMEOUT" claude -p "$(cat /tmp/prompt-$cycle.md)" \
+  timeout "$CYCLE_TIMEOUT" claude -p "$(cat "$NIGHT_STATE_DIR/prompt-$cycle.md")" \
     --model claude-sonnet-5 \
     --effort max \
     --max-turns "$MAX_TURNS" \
     --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" \
     --output-format stream-json --verbose \
-    | tee "/tmp/claude-stream-$cycle.jsonl" \
+    | tee "$NIGHT_STATE_DIR/claude-stream-$cycle.jsonl" \
     | python3 .github/scripts/stream_summary.py
   claude_exit=${PIPESTATUS[0]}
 
-  python3 .github/scripts/check_result.py "/tmp/claude-stream-$cycle.jsonl" \
+  python3 .github/scripts/check_result.py "$NIGHT_STATE_DIR/claude-stream-$cycle.jsonl" \
     --stats-file "$NIGHT_STATS" --night "$NIGHT_START_ISO" --cycle "$cycle"
   gate=$?
   log "cycle $cycle: claude_exit=$claude_exit gate=$gate"
@@ -374,7 +407,7 @@ PY
   echo "- Agent: claude-sonnet-5, effort max, max-turns $MAX_TURNS, searches/story $MAX_SEARCHES"
   echo "- New articles: $new_articles · updated articles: $updated_articles (night cap: $NIGHT_STORY_CAP new)"
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
-  echo "- Out-of-scope write attempts blocked: $guard_trips"
+  echo "- Out-of-scope write attempts blocked: $guard_trips$([ "$origin_polluted" -eq 1 ] && echo " · ORIGIN CARRIES A STRAY" || echo "")"
   echo "- Content gate: $([ "$content_gate_ok" -eq 1 ] && echo pass || echo FAILED) ($gate_trips trip(s) tonight)"
   echo "- Push to origin: $([ "$push_blocked" -eq 1 ] && echo "BLOCKED (path allowlist)" || { [ "$push_failed" -eq 1 ] && echo FAILED || echo ok; })"
   echo "- Night cost (USD): $night_cost"
@@ -388,6 +421,19 @@ commit_push "Night loop footer $(date -u +%F)"
 # checks locally; this is what puts the result on main where the operator looks.
 gh workflow run "Tests" --ref main 2>/dev/null \
   && log "Tests dispatched against main" || log "Tests dispatch failed (non-fatal)"
+
+# Last look. assert_push_scope can only refuse the NEXT push, so it cannot undo
+# a stray the agent pushed itself before commit_push ever ran. The only way to
+# know what is on the branch tomorrow's runner will clone is to ask origin.
+if git fetch -q origin main 2>/dev/null; then
+  if ! assert_push_scope FETCH_HEAD "commits that have already reached origin/main"; then
+    origin_polluted=1
+    log "GUARD: a stray is on origin/main — repair the branch before the next night runs it"
+  fi
+else
+  log "GUARD: could not reach origin to check what landed (not treated as a pass)"
+  origin_polluted=1
+fi
 
 # nightly.yml's backstop deploy reads this. The backstop exists to publish
 # whatever the script left behind, which must not include the one thing the
@@ -439,6 +485,11 @@ warnings=()
   && warnings+=("only $ran_cycles of $MAX_CYCLES cycles fitted in the window")
 [ "$guard_trips" -gt 0 ] && warnings+=("$guard_trips out-of-scope write attempt(s) blocked")
 [ "$push_blocked" -eq 1 ] && warnings+=("the path allowlist refused to push — a commit touches files outside content/ and data/")
+# The only job_failed condition that used to raise no warning of its own, so a
+# night that published and then lost its push depended entirely on the
+# workflow's handler to say anything at all.
+[ "$push_failed" -eq 1 ] && warnings+=("the night's work is committed on a runner that no longer exists — it never reached origin")
+[ "$origin_polluted" -eq 1 ] && warnings+=("origin/main carries a change outside content/ and data/ that was not there at the start of the night — inspect it before the next run executes it")
 [ "$gate_trips" -gt 0 ] && warnings+=("$gate_trips content-gate trip(s) — pytest or validate-content --strict failed mid-night")
 [ "$usage_stop" -eq 1 ] && warnings+=("night ended early on a usage limit")
 # Decide the outcome BEFORE writing the report, so the report can say which one
@@ -447,6 +498,7 @@ warnings=()
 job_failed=0
 [ "$push_blocked" -eq 1 ] && job_failed=1
 [ "$push_failed" -eq 1 ] && job_failed=1
+[ "$origin_polluted" -eq 1 ] && job_failed=1
 [ "$content_gate_ok" -eq 0 ] && job_failed=1
 [ "$no_runway" -eq 0 ] && [ "$ok_cycles" -lt 1 ] && job_failed=1
 [ "$no_runway" -eq 1 ] && [ "$scheduled" -eq 1 ] && job_failed=1
@@ -475,13 +527,13 @@ if [ "${#warnings[@]}" -gt 0 ]; then
     echo "- Window at start: ${NIGHT_SECONDS}s · trigger: ${EVENT_NAME:-unknown}"
     echo "- Report: \`$REPORT_FILE\`"
     echo "- Run: ${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY:-y-nihat/noiseless-news}/actions/runs/${GITHUB_RUN_ID:-unknown}"
-  } > /tmp/night-review.md
+  } > "$NIGHT_STATE_DIR/night-review.md"
   if bash .github/scripts/flag_issue.sh "$issue_prefix" \
-       "$issue_prefix $(TZ=Europe/Istanbul date +%F)" /tmp/night-review.md; then
+       "$issue_prefix $(TZ=Europe/Istanbul date +%F)" "$NIGHT_STATE_DIR/night-review.md"; then
     # Tell nightly.yml's own handler to stand down. Two issues ten seconds
     # apart, one saying the job did not fail and one whose whole body is "no
     # agent output captured", is worse than either alone.
-    touch /tmp/night-issue-filed
+    touch "$ISSUE_FILED"
   else
     log "could not file the night report — leaving it to the workflow handler"
   fi
@@ -489,6 +541,10 @@ fi
 
 if [ "$push_blocked" -eq 1 ]; then
   log "the path allowlist refused the push — failing the job"
+  exit 1
+fi
+if [ "$origin_polluted" -eq 1 ]; then
+  log "origin/main is not what it was at the start of the night — failing the job"
   exit 1
 fi
 if [ "$push_failed" -eq 1 ]; then

@@ -76,8 +76,14 @@ def make_scratch(tmp_path: Path) -> dict[str, Path]:
         )
         stub.chmod(0o755)
 
+    # The supervisor puts every scratch file it owns in here. Setting it per
+    # test is what stops the suite — which drives the real script — from writing
+    # the state of a live night when the content gate runs pytest on the runner.
+    state = tmp_path / "night-state"
+    state.mkdir()
+
     return {"work": work, "remote": remote, "stubs": stubs, "home": tmp_path,
-            "seed": seed}
+            "seed": seed, "state": state}
 
 
 def drive(scratch: dict[str, Path], snippet: str) -> subprocess.CompletedProcess:
@@ -97,6 +103,7 @@ def drive(scratch: dict[str, Path], snippet: str) -> subprocess.CompletedProcess
             "PATH": f"{scratch['stubs']}:/usr/bin:/bin",
             "HOME": str(scratch["home"]),
             "GIT_TERMINAL_PROMPT": "0",
+            "NIGHT_STATE_DIR": str(scratch["state"]),
         },
     )
 
@@ -133,7 +140,9 @@ def committed_content(scratch: dict[str, Path], path: str) -> str:
     return _git("show", f"HEAD:{path}", cwd=scratch["work"])
 
 
-ISSUE_SENTINEL = Path("/tmp/night-issue-filed")
+def issue_sentinel(scratch: dict[str, Path]) -> Path:
+    """The file nightly.yml reads to stand its own failure handler down."""
+    return scratch["state"] / "issue-filed"
 
 
 def run_night(scratch: dict[str, Path], **env: str) -> subprocess.CompletedProcess:
@@ -144,7 +153,6 @@ def run_night(scratch: dict[str, Path], **env: str) -> subprocess.CompletedProce
     seconds apart. `gh` is stubbed and logs its argv, so what the night actually
     reported is observable.
     """
-    ISSUE_SENTINEL.unlink(missing_ok=True)
     log = scratch["home"] / "gh.log"
     log.unlink(missing_ok=True)
     (scratch["stubs"] / "gh").write_text(
@@ -163,6 +171,7 @@ def run_night(scratch: dict[str, Path], **env: str) -> subprocess.CompletedProce
             "PATH": f"{scratch['stubs']}:/usr/local/bin:/usr/bin:/bin",
             "HOME": str(scratch["home"]),
             "GIT_TERMINAL_PROMPT": "0",
+            "NIGHT_STATE_DIR": str(scratch["state"]),
             **env,
         },
     )
