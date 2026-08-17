@@ -62,7 +62,7 @@ NIGHT_END=$((START + NIGHT_SECONDS))
 REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H%M)Z.md"
 touch /tmp/night-start-marker
 ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0; push_failed=0
-gate_trips=0; content_gate_ok=1
+gate_trips=0; content_gate_ok=1; push_blocked=0
 NIGHT_STATS="data/ledger/night-stats.jsonl"
 
 git config user.name "y-nihat"
@@ -84,9 +84,44 @@ guard_paths() {
   guard_trips=$((guard_trips + 1))
   log "GUARD TRIPPED: changes outside content/ and data/ — refusing to commit them:"
   printf '%s\n' "$stray" | while IFS= read -r line; do log "  $line"; done
-  # Restore tracked files so the next cycle runs the real scripts, not edited
-  # ones. Untracked strays are left on the runner and simply never staged.
+  # Unstage before restoring. `git checkout -- <paths>` copies the INDEX into
+  # the working tree, so if the agent had already run `git add` the index still
+  # held its version: the checkout wrote that version back over the file and
+  # left it staged, and the `git commit` two lines below carried it to main.
+  # The guard logged the attempt and then committed it anyway — reproduced in a
+  # scratch repo on 2026-08-17. Reset the index to HEAD first, then restore the
+  # tree from it. Untracked strays are left on the runner and never staged.
+  git reset -q -- . ':(exclude)content' ':(exclude)data' 2>/dev/null || true
   git checkout -- . ':(exclude)content' ':(exclude)data' 2>/dev/null || true
+}
+
+# guard_paths only sees what this script is about to stage. It cannot see a
+# commit the agent made on its own — and .github/cycle-prompt.md tells the agent
+# to commit and push its own work, which is how 44 "Publish: …" commits reached
+# main without passing through commit_push at all. This is the check that covers
+# those: whoever wrote it, nothing outside the allowlist may be pushed.
+#
+# A stray here is not untidiness. It is the supervisor, the result gate, the
+# pipeline or the policy being rewritten by a session that spent the night
+# reading untrusted third-party text, and main is executed the next night with
+# both tokens in scope. One night's articles are worth less than that, so this
+# refuses the push and lets the job fail.
+assert_push_scope() {
+  local base strays
+  base=$(git rev-parse --verify --quiet '@{upstream}' 2>/dev/null) \
+    || base=$(git rev-parse --verify --quiet origin/main 2>/dev/null)
+  if [ -z "$base" ]; then
+    # Fail closed: with nothing to diff against, "no strays found" would be an
+    # empty answer dressed up as an all-clear.
+    log "GUARD: no upstream to compare against — refusing to push"
+    return 1
+  fi
+  strays=$(git diff --name-only "$base"..HEAD -- . ':(exclude)content' ':(exclude)data')
+  [ -z "$strays" ] && return 0
+  guard_trips=$((guard_trips + 1))
+  log "GUARD: unpushed commits touch paths outside content/ and data/:"
+  printf '%s\n' "$strays" | while IFS= read -r line; do log "  $line"; done
+  return 1
 }
 
 # The archive's only automated check, moved to where it can still stop
@@ -134,6 +169,11 @@ commit_push() {
   git add "${OWNED_PATHS[@]}"
   git diff --cached --quiet || git commit -m "$1"
   content_gate || true
+  if ! assert_push_scope; then
+    push_blocked=1
+    log "PUSH BLOCKED by the path allowlist — nothing sent to origin"
+    return 1
+  fi
   if git push; then
     return 0
   fi
@@ -320,7 +360,7 @@ PY
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
   echo "- Out-of-scope write attempts blocked: $guard_trips"
   echo "- Content gate: $([ "$content_gate_ok" -eq 1 ] && echo pass || echo FAILED) ($gate_trips trip(s) tonight)"
-  echo "- Push to origin: $([ "$push_failed" -eq 1 ] && echo FAILED || echo ok)"
+  echo "- Push to origin: $([ "$push_blocked" -eq 1 ] && echo "BLOCKED (path allowlist)" || { [ "$push_failed" -eq 1 ] && echo FAILED || echo ok; })"
   echo "- Night cost (USD): $night_cost"
   echo "- Window: $NIGHT_START_ISO → $(date -u +%FT%H:%MZ)"
 } >> "$REPORT_FILE"
@@ -349,6 +389,7 @@ warnings=()
 [ "$ran_cycles" -eq 0 ] && warnings+=("no agent cycle ran — only ${NIGHT_SECONDS}s of the 22:00-01:20 UTC window remained at start")
 [ "$ok_cycles" -lt "$ran_cycles" ] && warnings+=("$((ran_cycles - ok_cycles)) of $ran_cycles cycles did not complete cleanly")
 [ "$guard_trips" -gt 0 ] && warnings+=("$guard_trips out-of-scope write attempt(s) blocked")
+[ "$push_blocked" -eq 1 ] && warnings+=("the path allowlist refused to push — a commit touches files outside content/ and data/")
 [ "$gate_trips" -gt 0 ] && warnings+=("$gate_trips content-gate trip(s) — pytest or validate-content --strict failed mid-night")
 [ "$usage_stop" -eq 1 ] && warnings+=("night ended early on a usage limit")
 if [ "${#warnings[@]}" -gt 0 ]; then
@@ -368,6 +409,10 @@ if [ "${#warnings[@]}" -gt 0 ]; then
     && log "review issue opened" || log "could not open review issue (non-fatal)"
 fi
 
+if [ "$push_blocked" -eq 1 ]; then
+  log "the path allowlist refused the push — failing the job"
+  exit 1
+fi
 if [ "$push_failed" -eq 1 ]; then
   log "work did not reach origin — failing the job"
   exit 1

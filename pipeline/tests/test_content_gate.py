@@ -19,86 +19,22 @@ import subprocess
 from pathlib import Path
 
 import pytest
+from night_harness import REPORT, SCRIPT, drive, make_scratch, state
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SCRIPT = REPO_ROOT / ".github" / "scripts" / "night_loop.sh"
 INGEST_WORKFLOW = REPO_ROOT / ".github" / "workflows" / "ingest.yml"
-
-
-def _git(*args: str, cwd: Path) -> None:
-    subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True)
 
 
 @pytest.fixture
 def scratch(tmp_path: Path) -> dict[str, Path]:
-    """A repo with a real (bare, local) origin, plus stubs for pytest/python.
-
-    A local bare remote means `git push` in commit_push is exercised for real
-    without touching the network.
-    """
-    remote = tmp_path / "remote.git"
-    work = tmp_path / "work"
-    subprocess.run(["git", "init", "--bare", "-b", "main", str(remote)],
-                   check=True, capture_output=True)
-    subprocess.run(["git", "clone", str(remote), str(work)],
-                   check=True, capture_output=True)
-    _git("config", "user.email", "test@example.invalid", cwd=work)
-    _git("config", "user.name", "test", cwd=work)
-    for owned in ("content", "data"):
-        (work / owned).mkdir()
-        (work / owned / "seed.txt").write_text("seed\n", encoding="utf-8")
-    _git("add", "content", "data", cwd=work)
-    _git("commit", "-m", "seed", cwd=work)
-    _git("push", "-u", "origin", "main", cwd=work)
-
-    stubs = tmp_path / "stubs"
-    stubs.mkdir()
-    for tool in ("pytest", "python"):
-        stub = stubs / tool
-        # The gate's own exit code is what is under test, so the tools it calls
-        # are reduced to a settable exit code.
-        stub.write_text(
-            f'#!/bin/sh\necho "stub {tool} $*"\nexit "${{STUB_{tool.upper()}_EXIT:-0}}"\n',
-            encoding="utf-8",
-        )
-        stub.chmod(0o755)
-    return {"work": work, "remote": remote, "stubs": stubs, "home": tmp_path}
-
-
-def drive(scratch: dict[str, Path], snippet: str) -> subprocess.CompletedProcess:
-    """Source the real supervisor in a scratch repo and run `snippet` against it."""
-    program = (
-        "set -uo pipefail\n"
-        f'cd "{scratch["work"]}"\n'
-        f'NIGHT_SOURCE_ONLY=1 source "{SCRIPT}"\n'
-        f"{snippet}\n"
-    )
-    return subprocess.run(
-        ["bash", "-c", program],
-        capture_output=True,
-        text=True,
-        timeout=120,
-        env={
-            "PATH": f"{scratch['stubs']}:/usr/bin:/bin",
-            "HOME": str(scratch["home"]),
-            "GIT_TERMINAL_PROMPT": "0",
-        },
-    )
-
-
-def state(result: subprocess.CompletedProcess) -> dict[str, str]:
-    """Parse the `key=value` line the snippets print as their last line."""
-    line = [l for l in result.stdout.splitlines() if l.startswith("STATE ")][-1]
-    return dict(part.split("=", 1) for part in line[len("STATE "):].split())
-
-
-REPORT = 'echo "STATE gate_ok=$content_gate_ok trips=$gate_trips push_failed=$push_failed"'
+    return make_scratch(tmp_path)
 
 
 class TestTheGateItself:
     def test_a_clean_run_leaves_the_gate_open(self, scratch):
         result = drive(scratch, f"content_gate; {REPORT}")
-        assert state(result) == {"gate_ok": "1", "trips": "0", "push_failed": "0"}
+        assert state(result)["gate_ok"] == "1"
+        assert state(result)["trips"] == "0"
 
     def test_a_failing_test_suite_trips_it(self, scratch):
         result = drive(scratch, f"STUB_PYTEST_EXIT=1 content_gate; {REPORT}")
