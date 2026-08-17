@@ -26,6 +26,22 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+
+      # A workflow file GitHub cannot parse is not reported as a broken
+      # workflow. It is reported as a run named after the file path that fails
+      # in zero seconds, and the workflow simply stops existing — `gh api
+      # .../workflows` lists it by path instead of by name and its cron never
+      # fires again. That happened on 2026-08-17 to nightly.yml, for a
+      # `runner.temp` in a job-level env block, and nothing in the repository
+      # noticed: PyYAML parses the file fine, so the suite stayed green.
+      # actionlint knows the context rules; a YAML parser cannot.
+      - name: Workflows are valid
+        run: |
+          curl -sSL --retry 3 \
+            https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz \
+            | tar -xz actionlint
+          ./actionlint -shellcheck= .github/workflows/*.yml
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

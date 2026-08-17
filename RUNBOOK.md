@@ -111,6 +111,17 @@ docker compose run --rm pipeline python -m noiseless.run source-status
 docker compose run --rm pipeline python -m noiseless.run publish --out site/dist
 ```
 
+Workflow files are checked by CI with actionlint, which knows rules a YAML
+parser does not. Locally:
+
+```sh
+docker run --rm -v "$PWD":/repo -w /repo rhysd/actionlint:latest .github/workflows/*.yml
+```
+
+Worth running before pushing a workflow change: GitHub does not report a file
+it cannot parse as a broken workflow, it reports a zero-second run named after
+the file path and then behaves as though that workflow does not exist.
+
 `validate-sources --live` reports three things, not one: `[FAIL]` cannot be
 fetched, `[STALE]` fetches fine but nobody has published in a while, `[BLOCKED]`
 a known refusal of CI address ranges recorded in the registry.
