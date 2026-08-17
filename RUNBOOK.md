@@ -52,8 +52,12 @@ gh secret set CLAUDE_CODE_OAUTH_TOKEN --repo y-nihat/noiseless-news
 Then verify with `gh workflow run "Nightly scan" -f smoke=true` — two cycles, one
 story, about 55 minutes, and it works at any time of day. A non-smoke dispatch
 only does useful work inside the 22:00–01:20 UTC window: outside it the loop
-captures the feeds, writes its report and exits red within a few minutes, by
-design. That is the correct behaviour, not a failure of the dispatch.
+captures the feeds, writes its report, says so in the log and exits **green**
+within a few minutes. It used to exit red and this runbook called that correct;
+it was not. A red badge for doing exactly what was asked is how a red badge
+stops meaning anything. A *scheduled* run that finds no runway is different —
+the cron was delivered too late to be usable, the night is lost, and that one
+does go red with an issue.
 
 Symptoms of an expired token: the night fails with zero successful cycles, an
 issue is opened automatically, and the agent stream shows an authentication
@@ -68,9 +72,13 @@ Read in this order:
 1. The **run report** for that night: `data/ledger/run-report-<date>-<HHMM>Z.md`.
    Its footer carries cycles run, articles new/updated, cost, push status and
    blocked write attempts.
-2. **Open issues.** The loop opens "Night review needed" for a zero-publish
-   night, an unclean cycle, a blocked out-of-scope write or an early usage stop.
-   A hard failure opens "Nightly run failed" with the tail of the agent stream.
+2. **Open issues.** Exactly one per night. The loop titles it "Night review
+   needed" when the job succeeded but something wants a look — a zero-publish
+   night, an unclean cycle, a content-gate trip, a blocked out-of-scope write,
+   an early usage stop — and "Nightly run failed" when the job failed. Both go
+   through `flag_issue.sh`, so a condition that repeats comments on the open
+   thread instead of opening a new issue every time. The workflow's own handler
+   files only when the loop never got far enough to file for itself.
 3. `data/ledger/night-stats.jsonl` — one record per cycle: gate, turns, duration,
    cost, tokens.
 4. The Actions log, if the above is not enough. Agent stream files live only on
@@ -99,11 +107,25 @@ Everything runs in Docker; no local installs.
 docker compose run --rm pipeline pytest
 docker compose run --rm pipeline python -m noiseless.run validate-sources --live
 docker compose run --rm pipeline python -m noiseless.run validate-content
+docker compose run --rm pipeline python -m noiseless.run source-status
 docker compose run --rm pipeline python -m noiseless.run publish --out site/dist
 ```
 
+`validate-sources --live` reports three things, not one: `[FAIL]` cannot be
+fetched, `[STALE]` fetches fine but nobody has published in a while, `[BLOCKED]`
+a known refusal of CI address ranges recorded in the registry.
+`source-status` applies source-lifecycle.md §4 to our own ingest record.
+
 `data/` belongs to CI. `git pull` before any local run that writes it, and use
 `ingest --data-dir /tmp/nn-data` for experiments so local state never diverges.
+
+### Bumping the agent CLI
+
+`nightly.yml` pins `@anthropic-ai/claude-code` to an exact version, the same way
+`pipeline/requirements.txt` pins everything else. Bump it in a commit of its own
+so a bad night can be traced to the change; verify with
+`gh workflow run "Nightly scan" -f smoke=true` before leaving it to run
+unattended.
 
 ## If you are away
 

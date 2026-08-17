@@ -60,6 +60,9 @@ NIGHT_END=$((START + NIGHT_SECONDS))
 # Report is named for the Istanbul morning it will be reviewed on, plus the
 # run's start time so same-day runs (smoke tests) never collide.
 REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H%M)Z.md"
+# The report is the morning's primary artifact and it is written with `>>`, so a
+# missing directory would lose it without a word.
+mkdir -p "$(dirname "$REPORT_FILE")"
 touch /tmp/night-start-marker
 ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0; push_failed=0
 gate_trips=0; content_gate_ok=1; push_blocked=0
@@ -273,8 +276,13 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   log "cycle $cycle: agent starting (deadline $CYCLE_DEADLINE UTC, stories<=$stories, timeout ${CYCLE_TIMEOUT}s)"
   ran_cycles=$((ran_cycles + 1))
 
+  # CLAUDE.md and policy/verification.md §5 both require max effort for the
+  # verification agents. Neither had ever been passed it: `git log -S"--effort"`
+  # returns no commit in the repository's history, so every night since the
+  # first ran at the CLI default while two documents said otherwise.
   timeout "$CYCLE_TIMEOUT" claude -p "$(cat /tmp/prompt-$cycle.md)" \
     --model claude-sonnet-5 \
+    --effort max \
     --max-turns "$MAX_TURNS" \
     --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" \
     --output-format stream-json --verbose \
@@ -355,7 +363,15 @@ PY
   echo ""
   echo "## Loop supervisor footer"
   echo ""
-  echo "- Cycles run: $ran_cycles (successful: $ok_cycles, max: $MAX_CYCLES)"
+  # "Cycles run: 5 … max: 6" read as though a sixth had been possible. A sixth
+  # needs the window to have opened by 22:10 UTC and it opened later than that
+  # on 31 of 36 nights, so the shortfall is the cron's arrival time, not the
+  # loop giving up. Say which.
+  echo "- Cycles run: $ran_cycles of $MAX_CYCLES (successful: $ok_cycles)$(
+    [ "$ran_cycles" -lt "$MAX_CYCLES" ] \
+      && echo " — the ${NIGHT_SECONDS}s of window left at start did not fit the rest" \
+      || echo "")"
+  echo "- Agent: claude-sonnet-5, effort max, max-turns $MAX_TURNS, searches/story $MAX_SEARCHES"
   echo "- New articles: $new_articles · updated articles: $updated_articles (night cap: $NIGHT_STORY_CAP new)"
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
   echo "- Out-of-scope write attempts blocked: $guard_trips"
@@ -391,29 +407,84 @@ fi
 # news night", "worked, but something upstream is broken" and "flailed for three
 # hours" — and the operator could only tell them apart by reading a 40 KB report.
 # These conditions do not fail the job; they raise a hand.
+# Three different mornings, which the old reporting blurred into two issues ten
+# seconds apart that contradicted each other — "Night review needed", whose
+# first line read "The job itself did not fail", and "Nightly run failed",
+# whose entire body was "no agent output captured" because it tailed a stream
+# file no cycle had written (#28 and #29, both 2026-08-07).
+#
+#   no runway  — the window had already closed when the job started, so nothing
+#                was attempted and nothing failed. A SCHEDULED run reaching this
+#                means GitHub delivered the cron too late to be usable, which is
+#                a lost night and should be red. An operator dispatching outside
+#                the window already knows; that is documented behaviour and has
+#                no business opening an issue or failing a job.
+#   ran badly  — cycles started and none finished cleanly. A failure.
+#   ran fine   — with or without things worth a look in the morning.
+no_runway=0
+[ "$ran_cycles" -eq 0 ] && no_runway=1
+scheduled=0
+[ "${EVENT_NAME:-schedule}" = "schedule" ] && scheduled=1
+
 warnings=()
-[ "$((new_articles + updated_articles))" -eq 0 ] && warnings+=("published nothing tonight")
-[ "$ran_cycles" -eq 0 ] && warnings+=("no agent cycle ran — only ${NIGHT_SECONDS}s of the 22:00-01:20 UTC window remained at start")
+[ "$((new_articles + updated_articles))" -eq 0 ] && [ "$no_runway" -eq 0 ] \
+  && warnings+=("published nothing tonight")
+[ "$no_runway" -eq 1 ] && [ "$scheduled" -eq 1 ] \
+  && warnings+=("the cron arrived with only ${NIGHT_SECONDS}s of the 22:00-01:20 UTC window left, so no cycle could start — the night is lost, not broken")
 [ "$ok_cycles" -lt "$ran_cycles" ] && warnings+=("$((ran_cycles - ok_cycles)) of $ran_cycles cycles did not complete cleanly")
+# Only a badly truncated night, not the routine 5-of-6: a sixth cycle needs the
+# window open by 22:10 UTC and it rarely is, and the sixth slot has produced no
+# article on any night it ran. The footer records the shortfall either way.
+[ "$ran_cycles" -gt 0 ] && [ $((ran_cycles * 2)) -lt "$MAX_CYCLES" ] \
+  && warnings+=("only $ran_cycles of $MAX_CYCLES cycles fitted in the window")
 [ "$guard_trips" -gt 0 ] && warnings+=("$guard_trips out-of-scope write attempt(s) blocked")
 [ "$push_blocked" -eq 1 ] && warnings+=("the path allowlist refused to push — a commit touches files outside content/ and data/")
 [ "$gate_trips" -gt 0 ] && warnings+=("$gate_trips content-gate trip(s) — pytest or validate-content --strict failed mid-night")
 [ "$usage_stop" -eq 1 ] && warnings+=("night ended early on a usage limit")
+# Decide the outcome BEFORE writing the report, so the report can say which one
+# it is. The old one asserted "The job itself did not fail" unconditionally, and
+# was filed ten seconds before the job failed.
+job_failed=0
+[ "$push_blocked" -eq 1 ] && job_failed=1
+[ "$push_failed" -eq 1 ] && job_failed=1
+[ "$content_gate_ok" -eq 0 ] && job_failed=1
+[ "$no_runway" -eq 0 ] && [ "$ok_cycles" -lt 1 ] && job_failed=1
+[ "$no_runway" -eq 1 ] && [ "$scheduled" -eq 1 ] && job_failed=1
+
+if [ "$no_runway" -eq 1 ] && [ "$scheduled" -eq 0 ]; then
+  log "dispatched outside the 22:00-01:20 UTC window (${NIGHT_SECONDS}s of runway), so no cycle ran"
+  log "that is documented behaviour, not a fault — use -f smoke=true to exercise the loop at any hour"
+fi
+
 if [ "${#warnings[@]}" -gt 0 ]; then
   log "review needed: ${warnings[*]}"
+  if [ "$job_failed" -eq 1 ]; then
+    issue_prefix="Nightly run failed"
+    opening="This night failed, and this is the report of it."
+  else
+    issue_prefix="Night review needed"
+    opening="Automated night review flag. The job itself did not fail."
+  fi
   {
-    echo "Automated night review flag. The job itself did not fail."
+    echo "### $(TZ=Europe/Istanbul date +%F) — $opening"
     echo
     for w in "${warnings[@]}"; do echo "- $w"; done
     echo
-    echo "- Cycles: $ran_cycles run, $ok_cycles clean"
+    echo "- Cycles: $ran_cycles run of $MAX_CYCLES, $ok_cycles clean"
     echo "- Articles: $new_articles new, $updated_articles updated"
+    echo "- Window at start: ${NIGHT_SECONDS}s · trigger: ${EVENT_NAME:-unknown}"
     echo "- Report: \`$REPORT_FILE\`"
     echo "- Run: ${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY:-y-nihat/noiseless-news}/actions/runs/${GITHUB_RUN_ID:-unknown}"
   } > /tmp/night-review.md
-  gh issue create --title "Night review needed $(TZ=Europe/Istanbul date +%F)" \
-    --body-file /tmp/night-review.md >/dev/null 2>&1 \
-    && log "review issue opened" || log "could not open review issue (non-fatal)"
+  if bash .github/scripts/flag_issue.sh "$issue_prefix" \
+       "$issue_prefix $(TZ=Europe/Istanbul date +%F)" /tmp/night-review.md; then
+    # Tell nightly.yml's own handler to stand down. Two issues ten seconds
+    # apart, one saying the job did not fail and one whose whole body is "no
+    # agent output captured", is worse than either alone.
+    touch /tmp/night-issue-filed
+  else
+    log "could not file the night report — leaving it to the workflow handler"
+  fi
 fi
 
 if [ "$push_blocked" -eq 1 ]; then
@@ -427,6 +498,17 @@ fi
 if [ "$content_gate_ok" -eq 0 ]; then
   log "the content gate is still tripped at the end of the night — failing the job"
   exit 1
+fi
+if [ "$no_runway" -eq 1 ]; then
+  if [ "$scheduled" -eq 1 ]; then
+    log "the cron arrived too late for any cycle to start — failing the job so a lost night is visible"
+    exit 1
+  fi
+  # RUNBOOK.md used to call this red "the correct behaviour". It was not: a red
+  # badge for doing exactly what was asked is how a red badge stops meaning
+  # anything.
+  log "nothing to do outside the window — exiting clean"
+  exit 0
 fi
 if [ "$ok_cycles" -lt 1 ]; then
   log "no successful cycles tonight — failing the job"

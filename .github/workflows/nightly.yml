@@ -38,8 +38,13 @@ jobs:
           python-version: "3.12"
       - run: pip install -r pipeline/requirements.txt
 
+      # Pinned, like pipeline/requirements.txt. An unpinned global install means
+      # a four-hour unattended agent session silently changes version between
+      # one night and the next, and a bad release would show up as an
+      # unexplained night with nothing in the repository saying what changed.
+      # Bump it deliberately — see RUNBOOK.md.
       - name: Install Claude Code
-        run: npm install -g @anthropic-ai/claude-code
+        run: npm install -g @anthropic-ai/claude-code@2.1.233
 
       - name: Night loop
         id: loop
@@ -85,14 +90,32 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # The loop files its own report, and it knows things this step cannot:
+          # which cycles ran, what the gate said, whether the push landed. When
+          # it has already filed, a second issue here just contradicts the first
+          # — that is exactly what #28 and #29 were, ten seconds apart on
+          # 2026-08-07, one of them saying "no agent output captured" because it
+          # tailed a stream file no cycle had written.
+          if [ -f /tmp/night-issue-filed ]; then
+            echo "the loop already filed this night's report; not filing a second"
+            exit 0
+          fi
           {
+            echo "### $(date -u +%F) — the night job failed before the loop could report"
+            echo
             echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             echo
             echo '```'
             latest=$(ls -t /tmp/claude-stream-*.jsonl 2>/dev/null | head -1)
-            if [ -n "$latest" ]; then tail -c 2500 "$latest"; else echo "no agent output captured"; fi
+            if [ -n "$latest" ]; then
+              tail -c 2500 "$latest"
+            else
+              echo "No agent stream on the runner: the job died before any cycle started,"
+              echo "or the step itself failed. The Actions log is the only record."
+            fi
             echo '```'
           } > /tmp/issue-body.md
-          gh issue create \
-            --title "Nightly run failed $(date -u +%F)" \
-            --body-file /tmp/issue-body.md || true
+          bash .github/scripts/flag_issue.sh \
+            "Nightly run failed" \
+            "Nightly run failed $(date -u +%F)" \
+            /tmp/issue-body.md || true

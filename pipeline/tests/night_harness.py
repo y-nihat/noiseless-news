@@ -13,6 +13,7 @@ at 22:00 UTC, not a Python transcription of them.
 
 from __future__ import annotations
 
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -51,8 +52,11 @@ def make_scratch(tmp_path: Path) -> dict[str, Path]:
     for owned in ("content", "data"):
         (work / owned).mkdir()
         (work / owned / "seed.txt").write_text("seed\n", encoding="utf-8")
+    # The supervisor reads its siblings by relative path — check_result.py and
+    # flag_issue.sh — so a whole-script run needs them where it expects them.
+    shutil.copytree(REPO_ROOT / ".github" / "scripts", work / ".github" / "scripts")
+    shutil.copy(REPO_ROOT / ".github" / "cycle-prompt.md", work / ".github")
     unowned = work / OUT_OF_SCOPE
-    unowned.parent.mkdir(parents=True)
     unowned.write_text(ORIGINAL, encoding="utf-8")
 
     _git("add", "content", "data", ".github", cwd=work)
@@ -127,6 +131,46 @@ def pushed_files(scratch: dict[str, Path]) -> str:
 def committed_content(scratch: dict[str, Path], path: str) -> str:
     """The committed (HEAD) version of a file, which is what the next cycle runs."""
     return _git("show", f"HEAD:{path}", cwd=scratch["work"])
+
+
+ISSUE_SENTINEL = Path("/tmp/night-issue-filed")
+
+
+def run_night(scratch: dict[str, Path], **env: str) -> subprocess.CompletedProcess:
+    """Run the whole supervisor, not just its functions, against the scratch repo.
+
+    Used for the paths that only exist after the cycle loop — the end-of-night
+    verdict, which is where two contradictory issues used to be filed ten
+    seconds apart. `gh` is stubbed and logs its argv, so what the night actually
+    reported is observable.
+    """
+    ISSUE_SENTINEL.unlink(missing_ok=True)
+    log = scratch["home"] / "gh.log"
+    log.unlink(missing_ok=True)
+    (scratch["stubs"] / "gh").write_text(
+        f'#!/bin/sh\necho "$@" >> "{log}"\n'
+        '[ "$1" = "issue" ] && [ "$2" = "list" ] && echo "[]"\nexit 0\n',
+        encoding="utf-8",
+    )
+    (scratch["stubs"] / "gh").chmod(0o755)
+    return subprocess.run(
+        ["bash", str(SCRIPT)],
+        cwd=scratch["work"],
+        capture_output=True,
+        text=True,
+        timeout=300,
+        env={
+            "PATH": f"{scratch['stubs']}:/usr/local/bin:/usr/bin:/bin",
+            "HOME": str(scratch["home"]),
+            "GIT_TERMINAL_PROMPT": "0",
+            **env,
+        },
+    )
+
+
+def gh_calls(scratch: dict[str, Path]) -> list[str]:
+    log = scratch["home"] / "gh.log"
+    return log.read_text(encoding="utf-8").splitlines() if log.exists() else []
 
 
 def origin_content(scratch: dict[str, Path], path: str) -> str:
