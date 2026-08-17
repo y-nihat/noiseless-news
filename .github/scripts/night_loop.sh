@@ -62,6 +62,7 @@ NIGHT_END=$((START + NIGHT_SECONDS))
 REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H%M)Z.md"
 touch /tmp/night-start-marker
 ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0; push_failed=0
+gate_trips=0; content_gate_ok=1
 NIGHT_STATS="data/ledger/night-stats.jsonl"
 
 git config user.name "y-nihat"
@@ -88,10 +89,51 @@ guard_paths() {
   git checkout -- . ':(exclude)content' ':(exclude)data' 2>/dev/null || true
 }
 
+# The archive's only automated check, moved to where it can still stop
+# something.
+#
+# tests.yml triggers `on: push`, but every push below authenticates with the
+# workflow's own GITHUB_TOKEN and GitHub raises no workflow event for such a
+# push. So the gate PR #27 added — "test the nightly agent's commits like
+# everything else" — ran on none of the 192 commits the agent made between
+# 2026-08-07 and 2026-08-17, and 34 articles reached the public site unchecked.
+# Six seconds a push buys the check back. A trip does not block the commit: the
+# night's work must still reach origin, and the repository is the audit trail
+# whether the night went well or badly. It blocks the *deploy*, which is the
+# only moment at which a bad article is still unpublished.
+content_gate() {
+  local failed=0
+  if ! pytest -q >/tmp/gate-pytest.txt 2>&1; then
+    failed=1
+    log "GATE: pytest FAILED"
+    tail -n 15 /tmp/gate-pytest.txt | while IFS= read -r line; do log "  $line"; done
+  fi
+  if ! PYTHONPATH=pipeline python -m noiseless.run validate-content --strict \
+      >/tmp/gate-content.txt 2>&1; then
+    failed=1
+    log "GATE: validate-content --strict FAILED"
+  fi
+  # Log the findings either way. The agent reads the cycle log, so a warning
+  # raised now can be repaired by the next cycle before it becomes an error.
+  while IFS= read -r line; do log "content: $line"; done < /tmp/gate-content.txt
+  if [ "$failed" -eq 1 ]; then
+    gate_trips=$((gate_trips + 1))
+    content_gate_ok=0
+    log "GATE TRIPPED — holding every deploy until a later cycle comes back clean"
+    return 1
+  fi
+  # A later cycle can repair what an earlier one broke, and the site should be
+  # allowed to catch up rather than staying frozen until morning.
+  [ "$content_gate_ok" -eq 0 ] && log "GATE: clean again — deploys resume"
+  content_gate_ok=1
+  return 0
+}
+
 commit_push() {
   guard_paths
   git add "${OWNED_PATHS[@]}"
   git diff --cached --quiet || git commit -m "$1"
+  content_gate || true
   if git push; then
     return 0
   fi
@@ -108,6 +150,13 @@ commit_push() {
   push_failed=1
   log "PUSH FAILED — work is committed locally but has NOT reached origin"
 }
+
+# Test hook: pytest sources this file to drive the functions above against a
+# scratch repository with a local bare remote, so the guard and the gate are
+# asserted by behaviour rather than by grepping for their own source code. The
+# only test that ever covered the path allowlist asserted that the string
+# "guard_paths" appeared in the script. Never set in production.
+if [ -n "${NIGHT_SOURCE_ONLY:-}" ]; then return 0 2>/dev/null || exit 0; fi
 
 # Feed capture is deterministic, free, and takes about three minutes. A missed
 # ingest is the only permanent loss a bad night causes — Techmeme and
@@ -198,14 +247,9 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   gate=$?
   log "cycle $cycle: claude_exit=$claude_exit gate=$gate"
 
-  # Advisory for now: the report goes into the cycle log and the agent can act
-  # on it next cycle, but a finding does not block the commit. Promote to
-  # --strict once the style.md gate-1 / §3 litigation conflict is settled.
-  PYTHONPATH=pipeline python -m noiseless.run validate-content 2>&1 | while IFS= read -r line
-  do
-    log "content: $line"
-  done
-
+  # The content check used to live here, non-strict, with its exit code
+  # discarded. It now runs inside commit_push as `content_gate`, strict, where
+  # tripping it holds the deploy back.
   commit_push "Night cycle $cycle artifacts $(date -u +%FT%H:%MZ)"
 
   # Per-cycle site deploy so articles appear through the night (best effort).
@@ -215,9 +259,11 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   # whichever create call arrives second gets HTTP 400 (2026-08-04, run
   # 30867516175). Every non-final dispatch is followed by the slot sleep below,
   # so it is at least fifteen minutes clear of the backstop.
-  if [ "$is_final" -eq 0 ] && [ "$gate" -ne 3 ]; then
+  if [ "$is_final" -eq 0 ] && [ "$gate" -ne 3 ] && [ "$content_gate_ok" -eq 1 ]; then
     gh workflow run "Deploy site" --ref main 2>/dev/null \
       && log "site deploy dispatched" || log "deploy dispatch failed (non-fatal)"
+  elif [ "$content_gate_ok" -eq 0 ]; then
+    log "content gate tripped — deploy withheld, the site stays on the last clean build"
   else
     log "last cycle — leaving the deploy to the workflow's backstop step"
   fi
@@ -273,11 +319,19 @@ PY
   echo "- New articles: $new_articles · updated articles: $updated_articles (night cap: $NIGHT_STORY_CAP new)"
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
   echo "- Out-of-scope write attempts blocked: $guard_trips"
+  echo "- Content gate: $([ "$content_gate_ok" -eq 1 ] && echo pass || echo FAILED) ($gate_trips trip(s) tonight)"
   echo "- Push to origin: $([ "$push_failed" -eq 1 ] && echo FAILED || echo ok)"
   echo "- Night cost (USD): $night_cost"
   echo "- Window: $NIGHT_START_ISO → $(date -u +%FT%H:%MZ)"
 } >> "$REPORT_FILE"
 commit_push "Night loop footer $(date -u +%F)"
+
+# tests.yml cannot see a single one of tonight's commits — a push made with the
+# workflow's own GITHUB_TOKEN raises no workflow event, which is why `Deploy
+# site` has to be dispatched by hand too. content_gate has already run the same
+# checks locally; this is what puts the result on main where the operator looks.
+gh workflow run "Tests" --ref main 2>/dev/null \
+  && log "Tests dispatched against main" || log "Tests dispatch failed (non-fatal)"
 
 {
   echo "### Night loop"
@@ -295,6 +349,7 @@ warnings=()
 [ "$ran_cycles" -eq 0 ] && warnings+=("no agent cycle ran — only ${NIGHT_SECONDS}s of the 22:00-01:20 UTC window remained at start")
 [ "$ok_cycles" -lt "$ran_cycles" ] && warnings+=("$((ran_cycles - ok_cycles)) of $ran_cycles cycles did not complete cleanly")
 [ "$guard_trips" -gt 0 ] && warnings+=("$guard_trips out-of-scope write attempt(s) blocked")
+[ "$gate_trips" -gt 0 ] && warnings+=("$gate_trips content-gate trip(s) — pytest or validate-content --strict failed mid-night")
 [ "$usage_stop" -eq 1 ] && warnings+=("night ended early on a usage limit")
 if [ "${#warnings[@]}" -gt 0 ]; then
   log "review needed: ${warnings[*]}"
@@ -315,6 +370,10 @@ fi
 
 if [ "$push_failed" -eq 1 ]; then
   log "work did not reach origin — failing the job"
+  exit 1
+fi
+if [ "$content_gate_ok" -eq 0 ]; then
+  log "the content gate is still tripped at the end of the night — failing the job"
   exit 1
 fi
 if [ "$ok_cycles" -lt 1 ]; then

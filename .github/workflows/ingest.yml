@@ -55,3 +55,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run "Deploy site" --ref main || true
+
+      # The push above raises no workflow event — GitHub does not trigger
+      # workflows for pushes authenticated with the run's own GITHUB_TOKEN — so
+      # tests.yml's `on: push` never fired for a bot commit and the repo-data
+      # tests went 192 commits without running. Dispatch it the same way the
+      # deploy has to be dispatched.
+      - name: Test the capture
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Tests" --ref main || true
