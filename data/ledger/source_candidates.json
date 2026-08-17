@@ -1055,5 +1055,16 @@
       ],
       "context": "Israeli business/tech outlet (CTech, Calcalist's English edition), named bylines (Golan Hazani, Sophie Shulman); broke original reporting on the Anthropic-Decart acquisition talks used in anthropic-decart-acquisition-talks, with its own sourcing distinct from Bloomberg's. Caveat: a separate, contemporaneous Calcalist claim of SpaceX-Decart talks was publicly denied by Elon Musk on X days before this story -- treat single-outlet Calcalist claims on fast-moving M&A rumors with extra scrutiny even though this specific story's core claim was independently corroborated by Bloomberg. Propose Tier 2, type html."
     }
+  ],
+  "candidates_2026-08-17_c3": [
+    {
+      "domain": "axios.com",
+      "first_seen": "2026-08-17",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy"
+      ],
+      "context": "Major named-byline outlet; fetch-blocked (403) so used via search-snippet-level confirmation, but demonstrated genuinely independent court-filing-based reporting (named the specific PJT Partners banker who filed the deidentification affidavit) distinct from Bloomberg Law's framing on google-spirit-airlines-data-purchase -- one of two independent sources that cleared the business-claim bar. Propose Tier 2."
+    }
   ]
 }
