@@ -18,5 +18,15 @@
     "published": "2026-08-17T12:18:17+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Original Article - <a href=\"https://x.com/p_nawrot/status/2089315591010079034\">https://x.com/p_nawrot/status/2089315591010079034</a></p> <p>I've spent the last few years working on efficient attention and KV Cache Compression. I've read many papers, dug deep into reference or official implementations of methods, and inspected appendices—and I think I've learned a few things. One of them is definitely &quot;how to make things look good, even when they aren't.&quot;</p> <p>I'm guilty too, but trying to get better every day.</p> <h1>1. For single-hop retrieval, make sure there are no distractors and context is useless</h1> <p>The three most cooperative settings for compression / sparsity are:</p> <ul> <li>Needle in a haystack with a single OOD key-value pair and context built out of a repeated sentence or irrelevant background text.</li> <li>Contaminated benchmarks from years ago for which models don't even look at the context anymore.</li> <li>Few-shot in-context learning, where extra shots are useless and don't improve the accuracy over 0-shot.</li> </ul> <p>With 1) synthetic tasks, 2) real-data QA, and 3) in-context learning, you get a semblance of broad coverage without the inconvenience of testing much diversity within any of them. Most tasks in these settings should pass under Sliding Window Attention, so it doesn't matter that much whether your method works. Combine it with SWA and you should be good to report 5–10x compression or sparsity.</p> <h1>2. NEVER isolate your contribution</h1> <p>Short context: Most of a dense model's performance is recovered by a local window + attention sinks + the ability to retrieve an answer sentence that is largely n-gram matchable with the question. The remaining part is significantly more difficult, but it's neither relevant to nor the subject of this post.</p> <ul> <li>Say prior work developed an algorithm X, and its implementation separately keeps a local window of 256 tokens. You find that…",
     "fetched_at": "2026-08-17T16:31:11.805230+00:00"
+  },
+  {
+    "id": "565f3ae20b859364",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "ICLR numbered citations possible? [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vr6644/iclr_numbered_citations_possible_r/",
+    "published": "2026-08-17T21:56:06+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The instructions say Author Year format. But I was wondering if do numbered instead (no space lol), will it be straight desk rejection? Has anyone submitted with numbered format before? How did it go?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/confirm-jannati\"> /u/confirm-jannati </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr6644/iclr_numbered_citations_possible_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr6644/iclr_numbered_citations_possible_r/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:00:00.900025+00:00"
   }
 ]
