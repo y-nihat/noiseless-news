@@ -102,9 +102,10 @@ sources:
     notes: >
       Moved 2025-09-23; registry corrected 2026-08-17. The old Hugo feed
       (qwenlm.github.io/blog/index.xml) froze at 44 items with lastBuildDate
-      2025-09-23, and its page now meta-refreshes to qwen.ai/research — it read
-      "[ok] 44 entries" in every weekly health report for eleven months while
-      delivering nothing across 154 ingest runs, which is why
+      2025-09-23, and its page now meta-refreshes to qwen.ai/research — it has
+      read "[ok] 44 entries" in every weekly health report since the series
+      began on 2026-07-27, while delivering nothing across all 160 recorded
+      ingest runs, which is why
       alibaba-qwen-revenue-share-plan (2026-08-14) had to be sourced from model
       cards and SCMP instead of the vendor. The destination is a JS-rendered SPA
       returning the same 94 KB shell for every path and publishes no feed at any
@@ -312,9 +313,9 @@ sources:
     verified: true
     notes: >
       Switched from /category/ai/feed/ on 2026-08-17. That section feed
-      stopped in January 2026 while still serving HTTP 200 and seven items
-      (newest 2026-05-19), so it passed the live check and produced nothing for
-      154 runs. The site-wide feed is current and is the exact union of the live
+      still serves HTTP 200 and seven items, but its newest is 2026-05-19 and
+      the six behind it are all from January 2026 — so it passed the live check
+      and produced nothing across all 160 recorded runs. The site-wide feed is current and is the exact union of the live
       section feeds. Being site-wide it carries non-AI stories — verification.md
       §0 scope triage is the filter. It is only seven items deep at roughly two
       posts a day, about a three-day window, so do not widen the ingest interval

@@ -35,7 +35,7 @@ class Source:
     # Optional per-source politeness delay; None means the type default applies.
     delay_seconds: float | None = None
     # How long this feed may go without a new entry before live validation calls
-    # it frozen. None means noiseless.validate.DEFAULT_MAX_AGE_DAYS. Set it where
+    # it frozen. None means DEFAULT_MAX_AGE_DAYS above. Set it where
     # a quiet month is the source's nature — a peer-reviewed journal — rather
     # than a symptom.
     max_age_days: int | None = None
@@ -105,7 +105,10 @@ def _validate_entry(entry: dict, index: int) -> Source:
         raise SourceRegistryError(
             f"source '{name}': runner_blocked must be true or false, got {runner_blocked!r}"
         )
-    notes = str(entry.get("notes", "")).strip()
+    # `str(None)` is the truthy string "None", so a bare `notes:` key would have
+    # satisfied the guard below while recording no explanation at all.
+    raw_notes = entry.get("notes")
+    notes = "" if raw_notes is None else str(raw_notes).strip()
     if runner_blocked and not notes:
         # Suppressing an alarm without writing down why is how a source ends up
         # quietly excused from the checks for a year.

@@ -9,7 +9,7 @@ non-empty entry list and nothing else, so a feed frozen in place passed as
 healthy indefinitely: Qwen Blog's newest post was from September 2025 and it
 read `[ok] 44 entries` in every weekly report, while the site had to source a
 Qwen licensing story from Hugging Face model cards because the Tier-0 vendor
-feed had delivered nothing in 154 consecutive ingest runs. "Still serving" and
+feed had delivered nothing in 160 consecutive ingest runs. "Still serving" and
 "still publishing" are different questions and only the first was ever asked.
 """
 
@@ -18,7 +18,7 @@ from __future__ import annotations
 import re
 import time
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import feedparser
 import httpx
@@ -56,8 +56,16 @@ class CheckResult:
 _BARE_YEAR = re.compile(r"^\s*\d{4}\s*$")
 
 
-def newest_entry_date(parsed) -> datetime | None:
-    """The most recent genuinely parsable date across a feed's entries, or None."""
+def newest_entry_date(parsed, now: datetime | None = None) -> datetime | None:
+    """The most recent genuinely parsable date across a feed's entries, or None.
+
+    Both guards below exist because these are publisher-supplied strings and
+    this now runs over roughly three thousand entries a week.
+    """
+    now = now or datetime.now(timezone.utc)
+    # A publisher stamping local time as UTC can put an entry a few hours ahead
+    # without anything being wrong; a year ahead is a typo or a placeholder.
+    horizon = now + timedelta(days=1)
     newest: datetime | None = None
     for entry in parsed.entries:
         for raw_field, parsed_field in (
@@ -75,7 +83,20 @@ def newest_entry_date(parsed) -> datetime | None:
             # finding and the one worth reporting.
             if _BARE_YEAR.match(str(entry.get(raw_field, ""))):
                 continue
-            when = datetime(*stamp[:6], tzinfo=timezone.utc)
+            try:
+                when = datetime(*stamp[:6], tzinfo=timezone.utc)
+            except ValueError:
+                # feedparser hands back tm_year=0 for "0000-01-01T00:00:00Z" and
+                # tm_year=-1 for "0000-00-00", both outside datetime's range.
+                # ingest_all has always tolerated a broken feed rather than
+                # aborting the run over one; the weekly check must too.
+                continue
+            if when > horizon:
+                # An unbounded max lets one entry dated 2027 mask a feed whose
+                # real posts stopped in 2025 — the Qwen failure this module was
+                # written for, arriving through a different door, and it would
+                # print a negative age into the committed report.
+                continue
             if newest is None or when > newest:
                 newest = when
             break
@@ -108,7 +129,7 @@ def check_source(
         if not count:
             return CheckResult(source, FAIL, "feed parsed but contains no entries")
 
-        newest = newest_entry_date(parsed)
+        newest = newest_entry_date(parsed, now)
         if newest is None:
             # jmlr.org/jmlr.xml carries the bare string "2026" where a date
             # belongs. Unmeasurable is not the same as healthy, and reporting it
@@ -144,6 +165,18 @@ def check_all(sources: list[Source]) -> list[CheckResult]:
             # pass re-checks candidates (policy/source-lifecycle.md §3)
             if source.status != "active":
                 continue
-            results.append(check_source(source, client))
+            try:
+                results.append(check_source(source, client))
+            except Exception as exc:  # noqa: BLE001 — see below
+                # One broken feed must not take the other seventy-nine with it.
+                # ingest_all has said so since the beginning; this did not, and
+                # because the whole list is built before anything is printed, a
+                # single publisher's malformed field would have produced a
+                # health report containing nothing but its header — with the
+                # traceback on stderr, which `| tee` does not capture, so the
+                # offending source would be named nowhere.
+                results.append(
+                    CheckResult(source, FAIL, f"check raised {type(exc).__name__}: {exc}")
+                )
             time.sleep(_delay_for(source))
     return results
