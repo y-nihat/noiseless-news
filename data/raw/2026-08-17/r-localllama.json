@@ -208,5 +208,115 @@
     "published": "2026-08-17T12:39:16+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>for those looking for something small AND powerful, there is a new 1B (they claim, it looks more like 1.7B ...) model that claims to beat qwen 3.5 0.8B &amp; 2B and gemma 4 E2B on a range of benchmarks. the model seems to be english and danish only. math and coding seem to be quite ok-ish. apparently, it builds on sapient's hrm-text model, which does some weird layer-recurrence magic.</p> <p>paper: <a href=\"https://huggingface.co/papers/2608.13517\">https://huggingface.co/papers/2608.13517</a></p> <p>hf: <a href=\"https://huggingface.co/danish-foundation-models/DFM-Mimir\">https://huggingface.co/danish-foundation-models/DFM-Mimir</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ZookeepergameCool173\"> /u/ZookeepergameCool173 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqr70m/mimir_did_the_vikings_train_a_17b_killer_model/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqr70m/mimir_did_the_vikings_train_a_17b_killer_model/\">[comments]</a></span>",
     "fetched_at": "2026-08-17T16:31:11.805230+00:00"
+  },
+  {
+    "id": "85e8969715d08e22",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Artificial Analysis' Qwen3.8-27B benchmarks put it neck and neck with DeepSeek V4 and GPT-5.6 Luna Max",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqyq8r/artificial_analysis_qwen3827b_benchmarks_put_it/",
+    "published": "2026-08-17T17:26:46+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/anderspitman\"> /u/anderspitman </a> <br /> <span><a href=\"https://artificialanalysis.ai/models/qwen3-8-27b\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqyq8r/artificial_analysis_qwen3827b_benchmarks_put_it/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "32e693f1495e548c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "llama.cpp adaptive MTP PR#27210",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqzud4/llamacpp_adaptive_mtp_pr27210/",
+    "published": "2026-08-17T18:05:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqzud4/llamacpp_adaptive_mtp_pr27210/\"> <img alt=\"llama.cpp adaptive MTP PR#27210\" src=\"https://external-preview.redd.it/hbJZ8Js3V8gNd1dhr2FU3jJ6TTVhHQmV3f0Y3zEHkm8.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=4bd1d07874b70695e9075a3e97948c06d59a37e4\" title=\"llama.cpp adaptive MTP PR#27210\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Just wanted to raise some attention to this PR I filed if anyone would like to try it out.</p> <p>This adds an adaptive MTP mode to llama.cpp which employs a fairly simple counting-style state machine to determine the appropriate depth to set the MTP depth to dynamically.</p> <p>The goal here was to make it so people can stop worrying about what the best MTP depth to use is, and just let the server figure it out as it goes.</p> <p>Compared to an MTP of 3, then for very dense hard to predict prose and regular prose the typical performance is about 3% worse than before. In some scenarios it will average higher for regular prose, but I want to set expectations fairly.</p> <p>When generating code though, or when recalling content from earlier in the conversation, then this is where the big wins come. Coding is typically 10-15% better than before, but when recalling code from the thinking phase, then speeds can be greater than 50% faster than regular MTP=3 generation.</p> <p>If the model is asked to change a couple of lines in a file though, and it chooses to rewrite the whole file from memory, which can happen, then in those instances generation can be up to 100% faster than normal MTP=3.</p> <p>When recalling prose, the gains are more modest, being around +20-30%</p> <p>The higher your temperature is, then the more unpredictable the model output is, and in those instances the adaptive MTP won't fare a whole lot better than regular MTP=3, although for code it will generally still do a little better.</p> <p>I'm hope some of the more keen members here can try…",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "3c2c4a4738f04496",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Weirdly, no one talks about Temperature setting for the Qwen3.8 27b",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr3cma/weirdly_no_one_talks_about_temperature_setting/",
+    "published": "2026-08-17T20:09:26+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Mind you, it is <strong>1.0</strong> by default, yet everyone is focused on how much the new model thinks, restricting the reasoning budget and/or dropping the reasoning level.</p> <p>Set the temperature to 0.7 and the model will no longer write a whole book of thoughts before trying to make a small edit in the file.</p> <p>The question is - how much does this affect the model's capabilities? What is the sweet spot for the temp parameter for various tasks?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/bSun0000\"> /u/bSun0000 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr3cma/weirdly_no_one_talks_about_temperature_setting/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr3cma/weirdly_no_one_talks_about_temperature_setting/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "876b81f0da807756",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "\"Opus 4.8 thinks too much\", \"Muse Glimmer sits between Gemma and Qwen, that's boring\", \"Gemma 4 is too lazy\"",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr2oq8/opus_48_thinks_too_much_muse_glimmer_sits_between/",
+    "published": "2026-08-17T19:45:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm starting to think there's no way to make a reasoning model that won't draw persistent vocal complaints on here.</p> <p>EDIT: Qwen 3.8 not Opus 4.8*, freudian slip lol</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MerePotato\"> /u/MerePotato </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr2oq8/opus_48_thinks_too_much_muse_glimmer_sits_between/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr2oq8/opus_48_thinks_too_much_muse_glimmer_sits_between/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "d170d30682c6144d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ling 3.0 Tiny is the strongest, fastest and greatest model on my low end PC!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqx6nd/ling_30_tiny_is_the_strongest_fastest_and/",
+    "published": "2026-08-17T16:34:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqx6nd/ling_30_tiny_is_the_strongest_fastest_and/\"> <img alt=\"Ling 3.0 Tiny is the strongest, fastest and greatest model on my low end PC!\" src=\"https://preview.redd.it/odokmi38qyjh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=099c1cb2b7d23d73bfb4f4a3b9d405833d96c267\" title=\"Ling 3.0 Tiny is the strongest, fastest and greatest model on my low end PC!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>This Ling 3.0 Tiny 8b param with 1.3b active is the fastest, smartest model I can run on my poor old pc, with 4gb vram. It actually runs lightning fast, like 36 token / sec, as smart as Qwen 3.5 9b / Gemma 12, (Very close), and even faster because of 1.3b active parameters.</p> <p>The Qwen 3.5 9b is running with like 5 token / sec, but this with 36 is finally the speed that i want. Very good open source model, I hope we'll get more of this tiny and really fast models, thank you! :)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/cosmos_hu\"> /u/cosmos_hu </a> <br /> <span><a href=\"https://i.redd.it/odokmi38qyjh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqx6nd/ling_30_tiny_is_the_strongest_fastest_and/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "ebf2b3fcd079a7cb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 35bA3b wen?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr0aps/qwen_38_35ba3b_wen/",
+    "published": "2026-08-17T18:21:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Artificial analysis index scores</p> <ul> <li>Qwen 3.5 27b: 35</li> <li>Qwen 3.6 27b: 38</li> <li>Qwen 3.8 27b: 52</li> </ul> <p>What the hell kind of a jump was that? Even if it is benchmaxxed, the jump is insane.</p> <ul> <li>Qwen3.6 35b A3b: 32</li> </ul> <p>That's ~6 points behind its dense 27b model, but is ~5x faster for inference given only 3b active params/token.</p> <p>Imagine having the 3.8 35bA3b land anywhere above Opus 4.5 (~42).</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Gear5th\"> /u/Gear5th </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr0aps/qwen_38_35ba3b_wen/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr0aps/qwen_38_35ba3b_wen/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "c637a1062c36c5bb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "we benchmark models nobody actually runs",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr643w/we_benchmark_models_nobody_actually_runs/",
+    "published": "2026-08-17T21:53:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>qwen3.8-27b looks genuinely impressive on the benchmark tables - beating models many times its size on some of them. but those numbers come from bf16 weights, and nobody here is running a 27b at bf16. we're running the 4-bit at ~17gb because that's what fits on a 4090 or a 24gb mac.</p> <p>so the model that got measured and the model that got downloaded three million times are not the same artifact.</p> <p>what i can't find anywhere: one model, one harness, swept across bf16 / Q8 / Q6_K / Q5_K_M / Q4_K_M / IQ4_XS, with error bars. perplexity charts exist, but ppl can stay nearly flat while something specific - long-context recall, multi-step math, strict tool-call json - quietly falls over. and with a vision model and a 256k window there's a lot more surface area for that to happen than usual.</p> <p>the question i actually care about: is Q4 of the 27b better than a higher-precision smaller model at the same vram? that's the decision everyone makes and i've never seen it measured.</p> <p>yes, red hat/neural magic publish evals for their quants and llama.cpp has kld tooling. nobody does it systematically, at release, on the harness the model card used.</p> <p>does this exist and i've missed it? and if it doesn't - is anyone with spare compute interested? agreeing on a harness and prompt set first is the only hard part; after that it's just a lot of hours.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AuspiciousApple\"> /u/AuspiciousApple </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr643w/we_benchmark_models_nobody_actually_runs/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr643w/we_benchmark_models_nobody_actually_runs/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "1fd0726a3a7bfa1e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Local agentic coding Benchmark : Qwen 3.8 27B (in many weights quants / cache quants / engine / reasoning effort) vs others.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr4bs4/local_agentic_coding_benchmark_qwen_38_27b_in/",
+    "published": "2026-08-17T20:45:23+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr4bs4/local_agentic_coding_benchmark_qwen_38_27b_in/\"> <img alt=\"Local agentic coding Benchmark : Qwen 3.8 27B (in many weights quants / cache quants / engine / reasoning effort) vs others.\" src=\"https://preview.redd.it/n1kxxjgvwzjh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=efc98b2409e439f76cd24c9ecdd293907ce62cb8\" title=\"Local agentic coding Benchmark : Qwen 3.8 27B (in many weights quants / cache quants / engine / reasoning effort) vs others.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In <strong>medium</strong> reasoning mode, it both scores higher than the 3.6 version, AND is very much more efficient (almost half requests needed, and a third less tokens generated) - at DeepSeek v4 Flash 3107 MXFP4 level</p> <p>The <strong>xhigh</strong> mode is advertised to be the best one for hard tasks. In this benchmark, however the gain is clearly not visible. The score are comparable with the medium version, while using more requests (still a little fewer than 3.6) and generating almost 4 times the tokens...</p> <p>N.B. strangely, the NINFER version, configured properly to use medium, behaves like it's xhigh... user error is not to exclude, but I triple checked...</p> <p>For me, the real gain for agentic coding is in medium mode.</p> <p>(xhigh is probably more useful when testing single prompts tasks like we se pop everywhere fast when a model is released.)</p> <p>Many more data and graphs in the public pages for you to dig here : <a href=\"https://wonderrico.github.io/local_llm_benchmark/benchmark-main.html?filter=27b\">https://wonderrico.github.io/local_llm_benchmark/benchmark-main.html?filter=27b</a></p> <p>and even more details here : <a href=\"https://wonderrico.github.io/local_llm_benchmark/benchmark-detail.html?filter=27b\">https://wonderrico.github.io/local_llm_benchmark/benchmark-detail.html?filter=27b</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.red…",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "7dbae091285da058",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why do people like coding harnesses like opencode etc instead of an IDE?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vqxqxm/why_do_people_like_coding_harnesses_like_opencode/",
+    "published": "2026-08-17T16:53:34+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Just curious - I like to be able to see and manage the scripts my agent is working on. I find stuff like Claude Code and Open Code useful for doing stuff on my linux box but I don't understand why people would use that instead of a dedicated IDE where you can actually see the architecture of your project?</p> <p>EDIT: Just for clarification, I use Zed when using my local model or Cursor in IDE mode when working on large projects, which is where I chat to the agent. </p> <p>I only use CLI stuff like OpenCode when running commands on the system itself, like asking it to adjust a server's settings or whatnot.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/InvertedVantage\"> /u/InvertedVantage </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqxqxm/why_do_people_like_coding_harnesses_like_opencode/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqxqxm/why_do_people_like_coding_harnesses_like_opencode/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "a8958b1434974325",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I pushed Qwen3.8-27B to 99 tps single request and 1150 tps with a batch request on a RTX 3090",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr347s/i_pushed_qwen3827b_to_99_tps_single_request_and/",
+    "published": "2026-08-17T20:01:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm back.</p> <p>Yesterday I released <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq6fdj/comment/p46v06y/?screen_view_count=2&amp;ext-referrer=DIRECT&amp;sort=new\">the first version </a>of hyper-optimized Qwen3.8-27B inference engine for a RTX 3090, reaching 82 tps on single request and 672 peak.</p> <p>Over the last 24 hours I've been exploring how to improve it further (without a quality degredation).</p> <p>Yesterday we had these 3 optimizations:<br /> - fp8 kv cache</p> <p>- lm_head int8</p> <p>- embed_tokens in8</p> <p>Now now I added:<br /> - fp16 recurrent state</p> <p>- int8 activations, MLP</p> <p>- int8 activations on everything</p> <p>- draft_sample_method=probablistic (which samples from the MTP distribution rather than taking the argmax) - does not work for greedy sampling.</p> <p>For single user mode, the user can enable ctx=fast, which uses FlashAttention, bf16 kv, 64k context and gives the user 99 tps, but at the tradeoff of less context.</p> <p>Also the prefill is now up to 1812 tps at 1k and 1000 tps at 100k context - an increase of about 50% to 25%.</p> <p>I've updated the repo will everything you need to start flying:<br /> <a href=\"https://github.com/syv-ai/qwen38-27b-rtx3090\">https://github.com/syv-ai/qwen38-27b-rtx3090</a></p> <p>Right now I am working on getting KVarN working, so we can reduce the memory footprint of the context, so we can fit the full 262k instead of 195k.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/iamMess\"> /u/iamMess </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr347s/i_pushed_qwen3827b_to_99_tps_single_request_and/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr347s/i_pushed_qwen3827b_to_99_tps_single_request_and/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "ab75210af23d850c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Benchmarked Qwen3.8-27B on 4x RTX 3090",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vr56r1/benchmarked_qwen3827b_on_4x_rtx_3090/",
+    "published": "2026-08-17T21:17:41+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr56r1/benchmarked_qwen3827b_on_4x_rtx_3090/\"> <img alt=\"Benchmarked Qwen3.8-27B on 4x RTX 3090\" src=\"https://preview.redd.it/xvpbuasl40kh1.png?width=140&amp;height=60&amp;auto=webp&amp;s=d4133b90df33c1fd66369232c45d1a14b3555e19\" title=\"Benchmarked Qwen3.8-27B on 4x RTX 3090\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>A while back I made a post about my <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1ldjyhf/completed_local_llm_rig/\">4x3090 rig in a Silverstone RV-02</a>. Check it out if you're a conoissuer of OG PC cases. With the incredible Qwen 3.8 27B release I ran benchmarks. So in case you are rocking 3090s you might be interested in this. Everything below is entirely LLM generated based on the benchmarks (which were also LLM driven, gotta love agentic harnesses):</p> <p><strong>Setup</strong></p> <ul> <li>4x RTX 3090 24GB, NVLink between pairs (GPU0↔2, GPU1↔3 = NV4), plain PCIe between pairs</li> <li>vLLM 0.20.1, <code>--kv-cache-dtype fp8</code>, gpu-mem-util 0.90</li> <li>cyankiwi/Qwen3.8-27B-AWQ-INT4</li> <li><code>vllm bench serve</code>, random dataset, ignore-eos. Generation runs: 1k in / 512 out. PP runs: 16 out, single wave per concurrency level.</li> </ul> <h2>1. TP=2 on one NVLink pair beats TP=4 on all four cards</h2> <p>Not a typo. From concurrency 12 up, <strong>two GPUs outrun four by 33–41%</strong>, because TP=4 pays a cross-pair PCIe all-reduce on every layer of every step, and that tax scales with batch:</p> <table><thead> <tr> <th>Concurrency</th> <th>1</th> <th>2</th> <th>4</th> <th>8</th> <th>12</th> <th>16</th> <th>24</th> <th>32</th> </tr> </thead><tbody> <tr> <td>TP=4 gen tok/s</td> <td>77.6</td> <td>127.6</td> <td>208.8</td> <td>266.1</td> <td>319.9</td> <td>371.9</td> <td>399.4</td> <td>417.9</td> </tr> <tr> <td>TP=2 gen tok/s</td> <td>66.0</td> <td>111.7</td> <td>201.6</td> <td>252.9</td> <td><strong>428.0</strong></td> <td><strong>495.1</strong><…",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
   }
 ]

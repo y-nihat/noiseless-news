@@ -28,5 +28,25 @@
     "published": "2026-08-17T21:56:06+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>The instructions say Author Year format. But I was wondering if do numbered instead (no space lol), will it be straight desk rejection? Has anyone submitted with numbered format before? How did it go?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/confirm-jannati\"> /u/confirm-jannati </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr6644/iclr_numbered_citations_possible_r/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr6644/iclr_numbered_citations_possible_r/\">[comments]</a></span>",
     "fetched_at": "2026-08-17T22:00:00.900025+00:00"
+  },
+  {
+    "id": "9afa597a8f6bc9bb",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "trying to build a solid math library for stats/ML/DL, need a sanity check on my picks[D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vr76lf/trying_to_build_a_solid_math_library_for/",
+    "published": "2026-08-17T22:36:27+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>engineering student here, decent calc and linear algebra background from continuum mechanics coursework, already comfortable with ML basics through transformers and modern architectures. want to go deep on the actual math now, not just intuition videos, real derivations, and books that build from intuition up to advanced stuff. big thing for me is actually seeing how the math applies inside the models, not just abstract theory sitting next to it. most modern models are fundamentally probabilistic (language models included) so that lens matters a lot to me.</p> <p>content quality over exercises. i'd rather have a book thats amazing at explaining and deriving things with fewer problems than one thats packed with exercises but explains things poorly. if the book is light on problems i can always find sets elsewhere, but if the content itself is weak theres no fixing that.</p> <p>here's my current shortlist:</p> <p><strong>stats / probability:</strong></p> <ul> <li>All of Statistics by Wasserman</li> </ul> <p><strong>machine learning (math heavy):</strong></p> <ul> <li>Foundations of Machine Learning by Mohri, Rostamizadeh, Talwalkar</li> <li>Mathematics for Machine Learning by Deisenroth, Faisal, Ong</li> <li>The Elements of Statistical Learning by Hastie, Tibshirani, Friedman (planning to read Introduction to Statistical Learning first as the easier version)</li> </ul> <p><strong>deep learning:</strong></p> <ul> <li>Deep Learning by Goodfellow, Bengio, Courville</li> </ul> <p>is this solid or would you swap anything out. please tell me ur suggestions </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Commercial-Kale-5271\"> /u/Commercial-Kale-5271 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr76lf/trying_to_build_a_solid_math_library_for/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr76lf/trying_to_build_a_solid_math_li…",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
+  },
+  {
+    "id": "2850584db8b1ef3b",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "We’ve got a workshop on production retrieval-augmented generation with open models, benchmarked end to end, thought it’d be relevant here [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vr6cd2/weve_got_a_workshop_on_production/",
+    "published": "2026-08-17T22:02:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>There’s a hands-on workshop on August 29 that builds and benchmarks this properly, end to end, using entirely open models, no API calls involved. Led by Ben Auffarth, AI Consultant and Founder of Chelsea AI Ventures.</p> <p>What it covers:</p> <p><strong>•</strong> Hybrid retrieval (vector + keyword, not vector alone)<br /> <strong>•</strong> Reranking to catch relevant chunks that vector search alone misses<br /> <strong>•</strong> Evaluation with RAGAS, so quality changes are measured, not assumed<br /> <strong>•</strong> Guardrails built in from the design stage<br /> <strong>•</strong> Actual cost and performance benchmarking for open-model deployments</p> <p>Link if anyone wants to check it out: <a href=\"https://www.eventbrite.co.uk/e/the-genai-build-lab-build-production-ready-rag-on-a-budget-tickets-1994016271345?aff=rml\">https://www.eventbrite.co.uk/e/the-genai-build-lab-build-production-ready-rag-on-a-budget-tickets-1994016271345?aff=rml</a></p> <p>Happy to answer questions on the methodology or content.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/camerongreen95\"> /u/camerongreen95 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr6cd2/weve_got_a_workshop_on_production/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vr6cd2/weve_got_a_workshop_on_production/\">[comments]</a></span>",
+    "fetched_at": "2026-08-17T22:37:19.725060+00:00"
   }
 ]
