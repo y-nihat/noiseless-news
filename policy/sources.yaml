@@ -9,6 +9,15 @@
 #   status:    active (default) | candidate | retired
 #   verified:  true once live validation confirmed the URL resolves and parses
 #   notes:     anything an agent or reviewer should know
+#   delay_seconds:  optional politeness delay, if the type default is too fast
+#   max_age_days:   how long this feed may go without a new entry before the
+#                   live check calls it frozen rather than quiet (default 45).
+#                   Set it where a slow month is the source's nature — a
+#                   peer-reviewed journal — and not a symptom.
+#   runner_blocked: the publisher serves this to ordinary clients but returns
+#                   401/403 to the address ranges CI runs from. Requires notes.
+#                   Reported as a known block instead of a fresh failure every
+#                   week; it does NOT excuse any other fault on the same source.
 #
 # Tier 3 sources are NEVER used to confirm a claim — discovery only (see
 # policy/verification.md §1). Add or change sources via commits only.
@@ -51,6 +60,14 @@ sources:
     type: html
     url: https://x.ai/news
     verified: true
+    runner_blocked: true
+    notes: >
+      HTTP 403 from CI address ranges, HTTP 200 and 246 KB from an ordinary
+      client — verified both ways on 2026-08-17. An address-range block, not a
+      dead source, so it stays registered and the sweep falls back to
+      site-scoped web search (the fallback cycle-prompt.md already names).
+      Recorded here so the weekly check stops reporting it as a new failure:
+      it was in the FAIL list of issues #19, #20 and #31, all three identical.
   - name: Hugging Face Blog
     tier: 0
     type: rss
@@ -79,10 +96,22 @@ sources:
     verified: true
   - name: Qwen Blog
     tier: 0
-    type: rss
-    url: https://qwenlm.github.io/blog/index.xml
+    type: html
+    url: https://qwen.ai/research
     verified: true
-    notes: Alibaba Qwen team blog (Hugo site, per-section blog feed).
+    notes: >
+      Moved 2025-09-23; registry corrected 2026-08-17. The old Hugo feed
+      (qwenlm.github.io/blog/index.xml) froze at 44 items with lastBuildDate
+      2025-09-23, and its page now meta-refreshes to qwen.ai/research — it read
+      "[ok] 44 entries" in every weekly health report for eleven months while
+      delivering nothing across 154 ingest runs, which is why
+      alibaba-qwen-revenue-share-plan (2026-08-14) had to be sourced from model
+      cards and SCMP instead of the vendor. The destination is a JS-rendered SPA
+      returning the same 94 KB shell for every path and publishes no feed at any
+      standard location, hence type html and site-scoped web search as the
+      fallback — same procedure as Zhipu AI and the x.ai blocker. Its own
+      listing API is months behind the vendor's actual releases, so it is not
+      authoritative for release dates: trace those to the model card.
   - name: Cohere Blog
     tier: 0
     type: html
@@ -199,8 +228,15 @@ sources:
     type: rss
     url: https://www.jmlr.org/jmlr.xml
     verified: true
-    notes: Peer-reviewed; low frequency. Conference proceedings (NeurIPS/ICML/ICLR)
+    notes: >
+      Peer-reviewed; low frequency. Conference proceedings (NeurIPS/ICML/ICLR)
       are event-driven — handled via OpenReview lookups during verification, not a feed.
+      Every <pubDate> in this feed is the bare year ("2026"), so entry ages cannot be
+      measured here and the live check reports it stale on exactly that ground; judge
+      freshness by a change in the item set instead. The set has been static at 137
+      papers since 2026-07-08 and matches jmlr.org/papers/v27/ exactly, so the pause is
+      publisher-side, not a fetch problem. Historical rate is about one paper a day
+      (v25: 422 papers, v26: 309), which makes the current gap genuinely anomalous.
   - name: METR
     tier: 1
     type: html
@@ -272,8 +308,17 @@ sources:
   - name: VentureBeat AI
     tier: 2
     type: rss
-    url: https://venturebeat.com/category/ai/feed/
+    url: https://venturebeat.com/feed/
     verified: true
+    notes: >
+      Switched from /category/ai/feed/ on 2026-08-17. That section feed
+      stopped in January 2026 while still serving HTTP 200 and seven items
+      (newest 2026-05-19), so it passed the live check and produced nothing for
+      154 runs. The site-wide feed is current and is the exact union of the live
+      section feeds. Being site-wide it carries non-AI stories — verification.md
+      §0 scope triage is the filter. It is only seven items deep at roughly two
+      posts a day, about a three-day window, so do not widen the ingest interval
+      beyond the existing 13:00/19:00 crons plus the night cycles.
   - name: The Register AI
     tier: 2
     type: rss
@@ -317,6 +362,14 @@ sources:
     type: rss
     url: https://news.mit.edu/rss/topic/artificial-intelligence2
     verified: true
+    runner_blocked: true
+    notes: >
+      HTTP 403 from CI address ranges; HTTP 200 with 50 entries from an
+      ordinary client using this project's own User-Agent — verified both ways
+      on 2026-08-17. Retiring it would record the wrong fact: the feed is
+      healthy and the publisher is not refusing us, only the address we fetch
+      from. Ingest still attempts it every run so the day the block lifts we
+      notice; until then its -1s are this note, not a dead feed.
   - name: Stanford HAI News
     tier: 2
     type: html
@@ -380,7 +433,12 @@ sources:
     type: rss
     url: https://importai.substack.com/feed
     verified: true
-    notes: Jack Clark's newsletter — high-signal weekly analysis.
+    runner_blocked: true
+    notes: >
+      Jack Clark's newsletter — high-signal weekly analysis. HTTP 403 from
+      CI address ranges (Substack's bot defences), HTTP 200 with 20 entries from
+      an ordinary client — verified both ways on 2026-08-17. Same handling as
+      MIT News AI: registered, still attempted, not counted as a weekly failure.
   - name: Last Week in AI
     tier: 3
     type: rss
@@ -411,7 +469,12 @@ sources:
     type: html
     url: https://www.deeplearning.ai/the-batch/
     verified: true
-    notes: Andrew Ng's weekly — analysis/curation, discovery only.
+    runner_blocked: true
+    notes: >
+      Andrew Ng's weekly — analysis/curation, discovery only. HTTP 403 from
+      CI address ranges, HTTP 200 and 174 KB from an ordinary client — verified
+      both ways on 2026-08-17. html, so ingest never fetched it anyway; this only
+      stops the weekly check from reporting it as news for a fourth time.
   - name: MarkTechPost
     tier: 3
     type: rss
@@ -481,9 +544,17 @@ sources:
   - name: YouTube — Yannic Kilcher
     tier: 3
     type: youtube_channel
-    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCHmD-oSpV0sNfAUnpYpj8KA
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew
     verified: true
-    notes: Paper deep-dives and ML news.
+    notes: >
+      Paper deep-dives and ML news. Channel id corrected 2026-08-17:
+      UCHmD-oSpV0sNfAUnpYpj8KA is "Yannic Out Of Distribution", an abandoned side
+      channel of ten vlogs whose last upload was 2023-08-13, and the registry had
+      pointed at it since registration — the feed was perfectly healthy and simply
+      belonged to someone else's content. The main channel's last upload is
+      2026-03-06; at over five months that is well past its 77-day worst historical
+      gap, so expect a stale flag until it resumes. The flag is accurate; it is not
+      a threshold to widen.
   - name: YouTube — AI Explained
     tier: 3
     type: youtube_channel

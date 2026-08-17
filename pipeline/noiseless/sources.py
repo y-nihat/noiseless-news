@@ -8,6 +8,13 @@ from pathlib import Path
 
 import yaml
 
+# How long a feed may go without a new entry before it is called frozen rather
+# than quiet. Deliberately generous: this is the line past which silence is a
+# symptom, not a slow fortnight. Lives here because two different checks read
+# it — the live freshness check and the ingest-record streak — and they must
+# not disagree about what "too quiet" means.
+DEFAULT_MAX_AGE_DAYS = 45
+
 VALID_TIERS = {0, 1, 2, 3}
 VALID_TYPES = {"rss", "arxiv_api", "html", "youtube_channel", "google_news_query"}
 # Lifecycle statuses — see policy/source-lifecycle.md. Only active sources are ingested.
@@ -27,6 +34,16 @@ class Source:
     notes: str = ""
     # Optional per-source politeness delay; None means the type default applies.
     delay_seconds: float | None = None
+    # How long this feed may go without a new entry before live validation calls
+    # it frozen. None means noiseless.validate.DEFAULT_MAX_AGE_DAYS. Set it where
+    # a quiet month is the source's nature — a peer-reviewed journal — rather
+    # than a symptom.
+    max_age_days: int | None = None
+    # The publisher serves this to ordinary clients but returns 401/403 to the
+    # address ranges CI runs from. A known, unactionable condition: recorded so
+    # it stops being reported as a new failure every week, and so the difference
+    # between "blocked from here" and "dead" stays written down.
+    runner_blocked: bool = False
 
     @property
     def slug(self) -> str:
@@ -75,6 +92,27 @@ def _validate_entry(entry: dict, index: int) -> Source:
             f"source '{name}': delay_seconds must be a non-negative number, got {delay!r}"
         )
 
+    max_age = entry.get("max_age_days")
+    if max_age is not None and (
+        not isinstance(max_age, int) or isinstance(max_age, bool) or max_age < 1
+    ):
+        raise SourceRegistryError(
+            f"source '{name}': max_age_days must be a positive integer, got {max_age!r}"
+        )
+
+    runner_blocked = entry.get("runner_blocked", False)
+    if not isinstance(runner_blocked, bool):
+        raise SourceRegistryError(
+            f"source '{name}': runner_blocked must be true or false, got {runner_blocked!r}"
+        )
+    notes = str(entry.get("notes", "")).strip()
+    if runner_blocked and not notes:
+        # Suppressing an alarm without writing down why is how a source ends up
+        # quietly excused from the checks for a year.
+        raise SourceRegistryError(
+            f"source '{name}': runner_blocked requires notes explaining the block"
+        )
+
     return Source(
         name=name,
         tier=tier,
@@ -82,8 +120,10 @@ def _validate_entry(entry: dict, index: int) -> Source:
         url=url,
         status=status,
         verified=bool(entry.get("verified", False)),
-        notes=str(entry.get("notes", "")).strip(),
+        notes=notes,
         delay_seconds=float(delay) if delay is not None else None,
+        max_age_days=max_age,
+        runner_blocked=runner_blocked,
     )
 
 

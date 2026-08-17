@@ -50,7 +50,9 @@ jobs:
             echo "::error::validate-sources did not run to completion — this report is not a clean bill of health"
             exit 1
           fi
-          echo "failures=$(grep -c '^\[FAIL\]' /tmp/health.txt)" >> "$GITHUB_OUTPUT"
+          # STALE counts too. A feed still serving a 2025 post contributes
+          # exactly as much as one returning 403, and only the 403 was visible.
+          echo "failures=$(grep -cE '^\[(FAIL|STALE)\]' /tmp/health.txt)" >> "$GITHUB_OUTPUT"
 
       # Always: a crashed check still produces evidence, and the partial output
       # is how you find out what it choked on after the runner is gone.
@@ -96,10 +98,16 @@ jobs:
             echo "new one (probably transient)."
             echo
             echo '```'
-            grep '^\[FAIL\]' /tmp/health.txt
+            grep -E '^\[(FAIL|STALE)\]' /tmp/health.txt
             echo '```'
             echo
             echo "Report: \`data/ledger/source-health-$(date -u +%F).md\`"
+            echo
+            echo "Fetch-failure streaks against §4's 14-day rule:"
+            echo '```'
+            PYTHONPATH=pipeline python -m noiseless.run source-status 2>&1 \
+              | grep -E '^\[(FLAG|BLOCKED)\]|^source-status done' || true
+            echo '```'
           } > /tmp/issue.md
           bash .github/scripts/flag_issue.sh \
             "Source health: failing feeds" \

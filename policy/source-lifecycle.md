@@ -49,7 +49,20 @@ domain is not re-evaluated every cycle).
 - A source whose claims are repeatedly falsified (guideline: ≥3 contradicted claims in
   a rolling 90 days) is demoted one tier, or retired if already Tier 3.
 - Dead feeds (fail live validation for 14 consecutive days) are flagged for repair or
-  retirement.
+  retirement. Run the rule:
+  `docker compose run --rm pipeline python -m noiseless.run source-status`
+  — it reads `source_stats.jsonl`, counts streaks in **days** (the file holds about
+  seven runs a day), and exits 2 when a source crosses a threshold. The weekly
+  Source health job includes its output in the issue thread.
+- **Frozen is not the same as dead.** A feed that still returns HTTP 200 and a full
+  entry list, but whose newest entry is months old, contributes exactly as much as one
+  returning 403 — and used to be reported as healthy. Live validation now reads the
+  newest entry's date and reports `[STALE]` past the source's `max_age_days`
+  (default 45). Qwen Blog sat at `[ok] 44 entries` for eleven months this way.
+- **Blocked is not the same as dead either.** A publisher that serves a feed to
+  ordinary clients but refuses CI address ranges gets `runner_blocked: true` and a note
+  saying so. That records the fact once instead of rediscovering it every Monday, and
+  keeps the source registered rather than retiring something that is not broken.
 - Demotions and retirements are commits with the rationale in `notes` — never silent.
 
 ## 5. Keyword pool maintenance
