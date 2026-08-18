@@ -1,0 +1,54 @@
+{
+    "slug": "qwen-3-8-27b-release",
+    "checked_at": "2026-08-18T00:37:00+00:00",
+    "method": "Fresh verifier sub-agent (Hugging Face model card fetch, Simon Willison independent hands-on fetch, four live Artificial Analysis fetches for the benchmark comparison) followed by a fresh adversarial falsifier sub-agent (separate context, did not see the draft) attempting to break each claim via targeted searches and a second independent live-fetch of Artificial Analysis.",
+    "origin_items": [
+        "Surfaced via fresh ingest (venturebeat-ai.json, gnews-ai-model-releases.json, r-localllama.json, simon-willison-s-weblog.json, all 2026-08-17/18) during cycle 5 triage; dedup-check against the archive returned only moderate/coincidental matches against unrelated open-weight releases (thinking-machines-inkling-release, meta-muse-glimmer-launch, nvidia-nemotron-3-5-lightning)."
+    ],
+    "claims": [
+        {
+            "text": "Alibaba's Qwen team released Qwen3.8-27B, a 27-billion-parameter dense open-weight multimodal model, on Hugging Face under the Apache 2.0 license, around 14 August 2026",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via direct WebFetch of the Tier-0 Qwen/Alibaba Hugging Face model card (repo Qwen/Qwen3.8-27B): Apache 2.0, 27B params, dense, 64 layers. Independently corroborated by Simon Willison's own hands-on post (2026-08-16), which does not cite the HF card or VentureBeat -- genuinely separate confirmation. Release date pinned to ~14 August (a Friday) via secondary-source convergence and calendar check; not day-stamped on the primary card itself.",
+            "evidence": [
+                "https://huggingface.co/Qwen/Qwen3.8-27B",
+                "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+            ]
+        },
+        {
+            "text": "Qwen3.8-27B has a native 262,144-token context window (extensible to 1 million via YaRN) with native image and video understanding, and can run locally at roughly 56GB of GPU memory at 16-bit precision, about 28GB in FP8, or about 17GB when 4-bit quantized",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Context window and modality confirmed directly on the Tier-0 HF model card. Memory figures attributed to VentureBeat AI (registered Tier-2 source) via our own RSS ingest of that feed (data/raw/2026-08-18/venturebeat-ai.json, fetched 2026-08-18T00:06:53Z, containing the exact figures as body text) -- the verifier could not locate the article via web search (too fresh to be indexed) but the raw ingest content is itself the evidence, no re-fetch needed. The ~17GB 4-bit figure is independently matched by Willison's own hands-on quantized run.",
+            "evidence": [
+                "https://huggingface.co/Qwen/Qwen3.8-27B",
+                "https://venturebeat.com/technology/qwen3-8-27b-runs-frontier-class-coding-agents-and-reasoning-locally-no-cloud-api-required",
+                "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+            ]
+        },
+        {
+            "text": "Independent benchmarking by Artificial Analysis scores Qwen3.8-27B at 52 on its Intelligence Index, level with GPT-5.6 Luna (52) and one point behind GLM-5.2 and DeepSeek V4 Pro 0813 (53 each)",
+            "type": "capability",
+            "verdict": "confirmed",
+            "reasoning": "Live-fetched by the verifier from Artificial Analysis (registered Tier-1 independent tracker) for all four models, satisfying the SS5 live-fetch rule; independently re-fetched by the falsifier as a second live confirmation. Corrected an upstream error: DeepSeek V4 Pro 0813 is 1.6 trillion total parameters / 49B active (MoE), not '1.6B' as an early draft figure had it -- verified directly on Artificial Analysis's own page.",
+            "evidence": [
+                "https://artificialanalysis.ai/models/qwen3-8-27b",
+                "https://artificialanalysis.ai/models/gpt-5-6-luna",
+                "https://artificialanalysis.ai/models/glm-5-2",
+                "https://artificialanalysis.ai/models/deepseek-v4-pro"
+            ]
+        },
+        {
+            "text": "Qwen reports the model scoring 61.7 on SWE-bench Pro and 73.0 on Terminal Bench 2.1",
+            "type": "capability",
+            "verdict": "vendor-claim",
+            "reasoning": "Vendor-run results per Qwen's own model card and secondary aggregator coverage; no independent reproduction found by either the verifier or falsifier. Correctly labeled vendor-claim, not stated as fact.",
+            "evidence": [
+                "https://huggingface.co/Qwen/Qwen3.8-27B"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: PUBLISH WITH CHANGES, applied. All claims survived adversarial search -- no correction, denial, or contradiction found. Falsifier independently re-fetched the HF model card and its raw LICENSE file text (confirmed unmodified Apache 2.0, resolving a stale pre-release rumor that speculated the 27B might ship under Max's custom license) and ran a second independent live-fetch of Artificial Analysis reproducing all four Intelligence Index scores exactly, plus cross-checked our own already-published deepseek-v4-pro-0813-quiet-update article for a conflicting parameter figure (found none). Three changes applied before publish: (1) reframed Willison's reasoning-effort commentary accurately -- he called the default 'a hilarious default' and 'absolutely not a good way to run the model', not a neutral positive; (2) attributed the unverified 56GB/28GB memory figures explicitly to VentureBeat rather than stating them as independently confirmed (VentureBeat blocked the falsifier's re-fetch with HTTP 403; the 17GB figure keeps its independent Willison corroboration); (3) led the GLM-5.2/DeepSeek comparison with active-parameter counts (40B/49B vs Qwen's 27B) rather than total-parameter counts (753B/1.6T), per the falsifier's finding that a total-only comparison invites a misleading 'beats models 50-60x its size' narrative, and added that part of Qwen3.8-27B's AA score reflects generating ~160M output tokens during evaluation versus a ~43M median, not a cost-free efficiency win. Confirmed no Qwen3.8-27B/Qwen3.8-Max spec contamination (Max is a separate, much larger, closed/API-only model). No prompt-injection content found in any fetched source.",
+    "gaps_closed_from_watching_state": []
+}

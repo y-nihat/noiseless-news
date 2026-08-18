@@ -1,0 +1,23 @@
+{
+  "slug": "qwen-3-8-27b-release",
+  "title": "Alibaba's Qwen releases open-weight Qwen3.8-27B",
+  "status": "published",
+  "first_seen": "2026-08-18",
+  "published_at": "2026-08-18",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+    "https://venturebeat.com/technology/qwen3-8-27b-runs-frontier-class-coding-agents-and-reasoning-locally-no-cloud-api-required",
+    "https://artificialanalysis.ai/models/qwen3-8-27b"
+  ],
+  "follows": null,
+  "reason": "PUBLISHED (cycle 5). Alibaba's Qwen team released Qwen3.8-27B (~14 August 2026), a 27B-parameter dense open-weight multimodal model under Apache 2.0. Verified via Qwen's own Hugging Face model card (Tier 0) plus independent hands-on confirmation from Simon Willison; memory-footprint figures sourced from our own registered VentureBeat AI RSS ingest. Benchmark claim (Artificial Analysis Intelligence Index score of 52, tied with GPT-5.6 Luna, one point behind GLM-5.2 and DeepSeek V4 Pro 0813) confirmed via live-fetch, satisfying SS5, with a second independent live-fetch by the falsifier. Corrected an upstream parameter-count error along the way: DeepSeek V4 Pro 0813 is 1.6 trillion total / 49B active, not 1.6B. dedup-check clean (only moderate/coincidental matches against unrelated open-weight releases already published).",
+  "watch": [
+    "Whether Qwen publishes independent-reproducible results for its own SWE-bench Pro / Terminal Bench 2.1 vendor-claim figures",
+    "Whether Artificial Analysis's Intelligence Index scores for any of the four compared models shift materially on re-check"
+  ],
+  "notes": [
+    "2026-08-18 c5: New standalone story. Surfaced via fresh ingest (VentureBeat AI, GNews model-releases, r/LocalLLaMA, Simon Willison's Weblog) during cycle 5 triage. Full multi-agent protocol run: fresh verifier (HF model card + Willison + 4x Artificial Analysis live-fetch) then fresh adversarial falsifier (separate context, second independent AA live-fetch). style-gate: qwen-3-8-27b-release EN pass / TR pass -- headline states the confirmed benchmark tie plainly (no superlatives; explicitly excluded VentureBeat's own 'frontier-class' framing), TL;DR stands alone, no padding, TR mirrors EN structure/claims in natural Turkish (karma-uzman/yoğun model terminology consistent with prior nvidia-nemotron-3-5-lightning usage)."
+  ]
+}
