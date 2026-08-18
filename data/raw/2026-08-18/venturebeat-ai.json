@@ -1,0 +1,12 @@
+[
+  {
+    "id": "0a8db0f8021cbcad",
+    "source": "VentureBeat AI",
+    "tier": 2,
+    "title": "Qwen3.8-27B runs frontier-class coding agents and reasoning locally, no cloud API required",
+    "url": "https://venturebeat.com/technology/qwen3-8-27b-runs-frontier-class-coding-agents-and-reasoning-locally-no-cloud-api-required",
+    "published": "2026-08-18T00:06:53+00:00",
+    "summary": "<p>The biggest AI model release of the past few days, at least among the developers and AI power users on social media, wasn&#x27;t a frontier cloud model from OpenAI, Anthropic or Google.</p><p>It was a 27-billion-parameter model from Alibaba: <a href=\"https://huggingface.co/Qwen/Qwen3.8-27B\">Qwen3.8-27B landed on Hugging Face</a> on Friday under an enterprise-friendly, open source Apache 2.0 license, giving developers downloadable weights for a dense multimodal model.</p><p>But Qwen3.8-27B isn&#x27;t a garden variety small local model: it includes native image and video understanding, a 262,144-token context window, configurable reasoning and support for coding and agentic workflows — a “compact, deployment-friendly” version of the capabilities developed for its Qwen3.8 generation.</p><p>That unusually small hardware footprint is a major part of Qwen3.8-27B’s appeal. Running the model at full 16-bit precision requires roughly 56GB of GPU memory, while an FP8 version needs about 28GB. But 4-bit quantization cuts the model itself to roughly 17GB, putting it within reach of high-end consumer machines such as a powerful gaming desktop or well-equipped laptop. </p><h2><b>Hitting the sweet spot between capability and size</b></h2><p>The outsized reaction among developers has been due to the dynamic combination of its capability and size.</p><p><a href=\"https://huggingface.co/Qwen/Qwen3.8-27B\">Alibaba&#x27;s own launch benchmarks </a>immediately supplied the first jolt. The company reported 61.7 on SWE-bench Pro, 90.3 on LiveCodeBench v6, 70.7 on its CoWorkBench office-work benchmark and 84.3 on OSWorld-Verified. </p><p>In Alibaba&#x27;s published comparison table, the 27B model even beats the listed Claude Opus 4.6 Max result on SWE-bench Pro and LiveCodeBench, although Opus remains ahead on Terminal-Bench, GPQA Diamond and Humanity’s Last Exam. </p><p>Some of Alibaba&#x27;s evaluations are internal, and benchmark harnesses are not identical across every comparison, mak…",
+    "fetched_at": "2026-08-18T00:22:20.826873+00:00"
+  }
+]
