@@ -1,0 +1,22 @@
+{
+  "slug": "zhipu-glm-5-3-launch",
+  "title": "Zhipu launches GLM-5.3, stages open-weight release two weeks behind for safety review",
+  "status": "published",
+  "first_seen": "2026-08-18",
+  "published_at": "2026-08-18",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.zhipuai.cn/zh/research/162",
+    "https://artificialanalysis.ai/models/glm-5-3"
+  ],
+  "follows": null,
+  "reason": "PUBLISHED (cycle 2). Zhipu (Z.ai) released GLM-5.3 on 2026-08-14 ('Built to Code. Ready for Cyber Defense'), via its coding plan/API; full open-weight release and some sensitive cybersecurity features are staged ~2 weeks behind for safety hardening, per Zhipu's own words at launch (not a later-disclosed delay). Live-fetched today: scores 60 on the Artificial Analysis Intelligence Index (#8/181), on par with Kimi K3. Deliberately corrected the framing of tonight's raw-ingest leads: two low-tier aggregators (Analytics Insight, Cyber Magazine) framed this as 'Z.ai delays GLM-5.3 release after unexpected hacking skills emerge' / 'beats US models' -- both fresh verifier and adversarial falsifier sub-agents (parallel, independent, fresh contexts) found this framing false on two counts: (1) the model itself was not delayed, only the open-weight release, on a timeline Zhipu announced at launch, not after the fact; (2) the vulnerability-discovery capability was an intentional, marketed design goal ('Ready for Cyber Defense') validated through Zhipu's own deliberate red-teaming, not something that 'unexpectedly emerged'; no independent safety institute (AISI/METR/SaferAI -- SaferAI's own eval covers GLM-5.2, published before 5.3 existed) has evaluated GLM-5.3, since weights are not yet public. Cybersecurity benchmark claims (CyberGym/ExploitBench) published as explicit Zhipu vendor-claims, with both the benchmark GLM-5.3 leads on and the one it trails badly on shown together, not cherry-picked. Event dated 2026-08-14 (launch date) with published 2026-08-18 (this cycle) per the article-template dating rule.",
+  "watch": [
+    "Independent (AISI/METR/SaferAI-style) evaluation of GLM-5.3's cyber-offense capability once weights are public (~2026-08-28)",
+    "Whether the open-weight release actually lands on the ~2-week timeline Zhipu announced",
+    "Resolution of the 743B vs 753B-total/40B-active parameter-count discrepancy between Zhipu's own description and Artificial Analysis's model card"
+  ],
+  "notes": [
+    "2026-08-18 c2 (night 2): New standalone story. Flagged by cycle 1's Tier-0 sweep (Zhipu site-scoped search fallback found the Aug 14 launch but it was never opened/verified for lack of time) and picked up again in this cycle's fresh ingest via three low-tier/aggregator leads. dedup-check returned zero matches (genuinely new slug, nothing in the archive under any prior GLM-5.3 entry). Fresh verifier (17 tool uses) and fresh adversarial falsifier (23 tool uses) ran in parallel, independently, neither seeing a draft or each other's output; both independently reached the Zhipu primary source directly (zhipuai.cn/zh/research/162, since z.ai/blog is JS-rendered and Axios/CSO Online 403'd) and both independently live-fetched artificialanalysis.ai/models/glm-5-3 this session, converging closely on the same corrected framing (see reason field). Sourcing kept deliberately narrow to the two sources both agents independently fetched and confirmed themselves (Zhipu primary + Artificial Analysis live fetch), rather than citing secondary outlets (SCMP, CSO Online, The Decoder, Axios) named in the agents' reports without a confirmed exact URL for each -- the announcement claim only requires one Tier-0 source and the AA Index claim is independently confirmed by the tracker itself, so this does not weaken the sourcing bar. mlq.ai (a blocked-evidence-domain) surfaced in both agents' searches for the weights-timeline detail; neither cited it, relying instead on Zhipu's own primary page for that fact. style-gate: zhipu-glm-5-3-launch EN pass / TR pass -- headline avoids 'delays' framing per the falsifier's finding (uses 'stages ... behind' instead, factually precise); TL;DR stands alone and states the safety-testing caveat plainly; body presents both cybersecurity benchmark numbers together rather than the one-sided 'beats US models' framing; padding scan clean; TR mirrors EN structure/claims, keeps benchmark/product proper nouns (CyberGym, ExploitBench, GLM Coding Plan) untranslated with the marketing slogan glossed."
+  ]
+}
