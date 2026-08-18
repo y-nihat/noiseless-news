@@ -1,4 +1,15 @@
 {
+  "candidates_2026-08-18_c2_night2": [
+    {
+      "domain": "globallegalpost.com",
+      "first_seen": "2026-08-18",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.globallegalpost.com/news/legaltech-giant-harvey-launches-next-generation-ai-platform-1012947020"
+      ],
+      "context": "Legal-trade press with editorial standards; provided same-day independent pickup of Harvey's own primary announcement for harvey-tenet-launch (full-text fetch 403'd, but headline/URL independently confirmed the launch). Propose Tier 2, type html, scoped to legal-AI/legaltech stories."
+    }
+  ],
   "candidates_2026-08-16_c1": [
     {
       "domain": "thenextweb.com",
