@@ -1,0 +1,29 @@
+{
+  "slug": "openai-chatgpt-for-teens",
+  "title": "OpenAI begins rolling out ChatGPT for Teens",
+  "status": "published",
+  "first_seen": "2026-08-18",
+  "published_at": "2026-08-18",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://openai.com/index/chatgpt-for-teens/",
+    "https://openai.com/index/introducing-parental-controls/",
+    "https://openai.com/index/building-towards-age-prediction/",
+    "https://www.euronews.com/next/2026/08/18/openai-launches-chatgpt-for-teens-with-new-safety-guardrails",
+    "https://www.nbcwashington.com/news/national-international/openai-launches-chatgpt-for-teens-promising-age-appropriate-chatbot/4143417/",
+    "https://fortune.com/2026/08/18/openai-chatgpt-teens-age-assurance-safety/",
+    "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
+    "https://www.nbcnews.com/tech/tech-news/family-teenager-died-suicide-alleges-openais-chatgpt-blame-rcna226147",
+    "https://www.washingtonpost.com/business/2026/08/18/openai-chatgpt-teens-ai-safety/39739860-9af4-11f1-9cc4-2dc9b46e2d5c_story.html"
+  ],
+  "follows": null,
+  "reason": "PUBLISHED (cycle 1). OpenAI began rolling out ChatGPT for Teens on 18 August 2026 -- a 13-17 age-gated version with content restrictions (self-harm, eating disorders, violence, romantic/sexual content), an AI-consciousness-claim ban, teen-specific learning tools, and parental controls (Quiet Hours, Study Hours, flagged-risk notifications only, no direct conversation access). Verified via our own registered OpenAI News RSS ingest (Tier 0, confirms the item and its 2026-08-18T11:00:00Z pubDate) plus a fresh verifier sub-agent (Euronews/Fortune/AP direct fetches; openai.com itself 403'd to WebFetch, a known blocker) and a fresh adversarial falsifier sub-agent (separate context; confirmed this is a genuine same-day launch via ~15 convergent independent outlets, not a re-announcement or mis-dated leak). Falsifier raised and we incorporated: the rollout is phased (~2 weeks to complete globally, Australia by 8 September) rather than instantly complete, and the launch carries real critical-reception context (TechCrunch questions control durability against determined teens; child-safety-advocate skepticism reported; lands amid the Raine v. OpenAI wrongful-death suit, which OpenAI disputes, and California's SB 243). dedup-check returned only moderate/coincidental matches (score 0.5, no shared URLs) against unrelated OpenAI/ChatGPT stories -- read and confirmed none concern teen safety, age prediction, or parental controls.",
+  "watch": [
+    "Whether the phased rollout completes on OpenAI's stated ~2-week timeline, or slips",
+    "Reports of the age-prediction system materially failing in either direction (misflagging adults, or being circumvented by teens) at scale",
+    "Developments in Raine v. OpenAI or other minor-safety litigation that would warrant their own dedicated story"
+  ],
+  "notes": [
+    "2026-08-18 c1 (night 2): New standalone story. Surfaced via fresh ingest (openai-news.json RSS pull, cross-confirmed by Techmeme and gnews-ai-safety-and-evaluations) during cycle 1 triage. Full multi-agent protocol run: own initial research, then a fresh verifier sub-agent (26 tool uses) and a fresh adversarial falsifier sub-agent (14 tool uses, separate context) run concurrently given the cycle's tight ~33-minute deadline rather than strictly sequentially -- both independent and fresh, neither saw the draft. style-gate: openai-chatgpt-for-teens EN pass / TR pass -- headline changed from 'launches' to 'begins rolling out' per the falsifier's phased-rollout finding (avoids implying instant universal availability); TL;DR stands alone and flags the litigation/advocacy backdrop; body carries critical-reception context rather than reporting the launch uncritically; TR mirrors EN structure/claims in natural Turkish (ebeveyn kontrolleri/yaş tahmini terminology)."
+  ]
+}
