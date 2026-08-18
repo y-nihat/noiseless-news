@@ -8,5 +8,15 @@
     "published": "2026-08-18T00:00:00+00:00",
     "summary": "Reinforcement Learning with Verifiable Rewards (RLVR), often optimized with Group Relative Policy Optimization (GRPO), has become a central recipe for improving the reasoning capabilities of pretrained language models but current studies remain heavily English-centric. We conduct a large-scale empirical study of multilingual and non-English GRPO across a wide range of base models, training languages, and different reasoning language rewards. We find that training to reason in the native language often leaves only a small gap to training for English reasoning. We further observe strong…",
     "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "f6d720104a1a5ec3",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "MVICAD2: Multi-View Independent Component Analysis with Delays and Dilations",
+    "url": "https://machinelearning.apple.com/research/mvicad2-delays-dilations",
+    "published": "2026-08-18T00:00:00+00:00",
+    "summary": "Machine learning techniques in multi-view settings face significant challenges, particularly when integrating heterogeneous data, aligning feature spaces, and managing view-specific biases. These issues are prominent in neuroscience, where data from multiple subjects exposed to the same stimuli are analyzed to uncover brain activity dynamics. In magnetoencephalography (MEG), where signals are captured at the scalp level, estimating the brain’s underlying sources is crucial, especially in group studies where sources are assumed to be similar for all subjects. Common methods, such as Multi-View…",
+    "fetched_at": "2026-08-18T22:00:00.892425+00:00"
   }
 ]
