@@ -1,0 +1,12 @@
+[
+  {
+    "id": "fb21149491d2e7f4",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Transfer learning with deployment-covariate recalibration for survival prediction under covariate shift",
+    "url": "https://www.nature.com/articles/s42256-026-01285-x",
+    "published": "2026-08-18T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 18 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01285-x\">doi:10.1038/s42256-026-01285-x</a></p>Pan et al. present CoxRTL, a recalibrated transfer learning strategy that leverages external cohorts to improve survival prediction under covariate shift when target training data are limited and deployment outcomes are unavailable.",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  }
+]

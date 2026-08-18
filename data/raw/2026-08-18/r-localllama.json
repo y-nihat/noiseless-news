@@ -8,5 +8,115 @@
     "published": "2026-08-17T22:18:54+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>So many comments begging for these models, and I get it.</p> <p>People from the labs frequent <a href=\"/r/LocalLLaMA\">r/LocalLLaMA</a>, so maybe the begging comments aren't useless. They make demand known at least. Same with polls, etc.</p> <p>But what could this community do to actually help the lab, or somehow give them real incentive to release a model that the community really wants, but they couldn't quite justify it because of their roadmap or compute budget or whatever?</p> <p>Ideas?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/netherreddit\"> /u/netherreddit </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr6qzp/qwen_38_35b_and_122b_we_hopewaitbeg_for_models/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vr6qzp/qwen_38_35b_and_122b_we_hopewaitbeg_for_models/\">[comments]</a></span>",
     "fetched_at": "2026-08-18T00:22:20.826873+00:00"
+  },
+  {
+    "id": "e766a14bb348706f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen dev says not to wait for 35B-A3B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrdetw/qwen_dev_says_not_to_wait_for_35ba3b/",
+    "published": "2026-08-18T03:11:17+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrdetw/qwen_dev_says_not_to_wait_for_35ba3b/\"> <img alt=\"Qwen dev says not to wait for 35B-A3B\" src=\"https://preview.redd.it/zas0y8dwv1kh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=10ba352cc0832865d19399878bb33232f3ff1f71\" title=\"Qwen dev says not to wait for 35B-A3B\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>What does this mean? Is there something else coming? Maybe 122B? Or no models?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Mean-Ad1493\"> /u/Mean-Ad1493 </a> <br /> <span><a href=\"https://i.redd.it/zas0y8dwv1kh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrdetw/qwen_dev_says_not_to_wait_for_35ba3b/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "48aefa073ed1eb8f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "tencent/UI-Mate-27B · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrhg08/tencentuimate27b_hugging_face/",
+    "published": "2026-08-18T06:42:32+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrhg08/tencentuimate27b_hugging_face/\"> <img alt=\"tencent/UI-Mate-27B · Hugging Face\" src=\"https://external-preview.redd.it/iQVwV4Zp4nxbfWtCl4g74UVSscBFno6ALXOozLR2BQE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=0ea9ff26025c4a71ce2fc519ac5f3218ee47d6d7\" title=\"tencent/UI-Mate-27B · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><h1>Overview</h1> <p><strong>UI-Mate-27B</strong> is an open-weight foundation GUI agent for long-horizon work across applications and operating systems. It observes live screenshots, reasons over the visible state, and produces structured keyboard and mouse actions for native desktop interaction.</p> <p>UI-Mate supports two complementary modes:</p> <ul> <li><strong>General computer use:</strong> execute tasks from natural-language instructions and live screenshots.</li> <li><strong>Demonstration-guided computer use:</strong> adapt a reusable workflow extracted from one successful demonstration to a new task.</li> </ul> <p>A demonstration is treated as guidance rather than a fixed action script. The model continues to re-plan from the live interface when the content, layout, or application state differs.</p> <h1>Model Details</h1> <ul> <li><strong>Parameters:</strong> 27B</li> <li><strong>Base model:</strong> <a href=\"https://huggingface.co/Qwen/Qwen3.6-27B\">Qwen3.6-27B</a></li> <li><strong>Input:</strong> task instruction, screenshots, interaction history, and optional demonstration context</li> <li><strong>Output:</strong> reasoning, a concise action description, and structured computer-use tool calls</li> <li><strong>Action space:</strong> mouse, keyboard, scrolling, waiting, user interaction, and task completion</li> <li><strong>Training:</strong> supervised fine-tuning followed by online reinforcement learning in executable GUI environments</li> <li><strong>License:</strong> Apache-2.0</li> </ul> <h1>Highlights</h1> <ul> <li>Strong general comput…",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "66296cfd1d8bdc72",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "CDW has bumped the MSRP of the RTX Pro 6000 from $16,000 to $19,999",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrbct8/cdw_has_bumped_the_msrp_of_the_rtx_pro_6000_from/",
+    "published": "2026-08-18T01:36:14+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrbct8/cdw_has_bumped_the_msrp_of_the_rtx_pro_6000_from/\"> <img alt=\"CDW has bumped the MSRP of the RTX Pro 6000 from $16,000 to $19,999\" src=\"https://preview.redd.it/5945lnoje1kh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5a7dd375ce8be428b9804f5f15873b7d543e5b0e\" title=\"CDW has bumped the MSRP of the RTX Pro 6000 from $16,000 to $19,999\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Did they slip up and leak future pricing?</p> <p>Live link: <a href=\"https://www.cdw.com/product/pny-nvidia-rtx-pro-6000-graphic-card-96-gb-gddr7/8326705\">https://www.cdw.com/product/pny-nvidia-rtx-pro-6000-graphic-card-96-gb-gddr7/8326705</a></p> <p>Archive link: <a href=\"https://web.archive.org/web/20260818013250/https://www.cdw.com/product/pny-nvidia-rtx-pro-6000-graphic-card-96-gb-gddr7/8326705\">https://web.archive.org/web/20260818013250/https://www.cdw.com/product/pny-nvidia-rtx-pro-6000-graphic-card-96-gb-gddr7/8326705</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/q5sys\"> /u/q5sys </a> <br /> <span><a href=\"https://i.redd.it/5945lnoje1kh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrbct8/cdw_has_bumped_the_msrp_of_the_rtx_pro_6000_from/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "bed3deee962ad382",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27b saved me $650+ in API costs this evening",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrjk4m/qwen_38_27b_saved_me_650_in_api_costs_this_evening/",
+    "published": "2026-08-18T08:47:28+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been experimenting with Qwen3.8-27B using DeepSeek Harness. It's a monster at long-horizon tasks, and the results were pretty wild.</p> <p>DeepSeek Harness ran on my Windows PC and connected over LAN to NInfer on a separate RTX PRO 6000 box. The model was <code>Qwen3.8-27B</code> with a 262K context window. All shell commands and file operations stayed on the client PC. The server did nothing except inference.</p> <p>The quant was NInfer's <code>groupwise-int</code> artifact, which uses a mixed Q4/Q5/Q6 allocation. I plan to try the NVFP4 profile that NInfer supports next.</p> <h2>The 8+ hour run</h2> <ul> <li>966 model calls</li> <li>130.2M task input tokens and 812.5K output tokens</li> <li>131.2M input and 853.3K output after including compaction</li> <li>972 model-facing tool calls</li> <li>1,421 actual local tool operations</li> <li>31 automatic compaction attempts</li> <li>104.83 output tok/s weighted decode speed</li> <li>Zero model-generation failures</li> </ul> <p>The context sizes got huge. The median root request was 136.6K tokens, p95 was 205.9K, and the largest was 231.2K. The harness pushed about 160 input tokens for every output token. No surprise that repeated context became the main workload.</p> <p>The fun part is that generation itself was fast. Dividing the logical input by total time to first token gives about 12.4K prompt tok/s for the root and 8.5K across the root plus subagent. That is not raw GPU PP/s because it includes queue time and possibly reused prefixes, but it is still useful as a client-side number.</p> <p>Root time to first token had a median of 0.8 seconds but a p95 of 136 seconds. The subagent's median was 151 seconds, while its median decode phase was only 5.3 seconds. Once NInfer got a request onto the GPU, it absolutely flew. Running two agents against one endpoint mostly added queueing and prefill contention.</p> <p>The 1,421 local operations included 576 PowerShell calls, 259 reads, 221…",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "02ece35ba3b05db8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AA is the reason for Qwen3.8 27B shipped with xhigh",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrf477/aa_is_the_reason_for_qwen38_27b_shipped_with_xhigh/",
+    "published": "2026-08-18T04:36:17+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I know why Qwen3.8 27B shipped with xhigh reasoning as default, it's to do its best in benchmarks. Models from top labs often get benchmarked at multiple reasoning levels, but that same treatment doesn't apply to other labs. Open models are lucky to even be benchmarked at all. (See Laguna S 2.1)</p> <p>So it makes total sense that Qwen team decided to ship with a default that show the model at its maximum capabilities, assuming Artificial Analysis would benchmark at the default.</p> <p>And before anyone accuses Qwen team, I don't think it's benchmaxxing. That is an actual toggle that you can use if you have high bandwidth (or tolerence), and variable reasoning is pretty standard across the board. Totally reasonable to default to your best if you think you have one shot.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/frontsideair\"> /u/frontsideair </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrf477/aa_is_the_reason_for_qwen38_27b_shipped_with_xhigh/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrf477/aa_is_the_reason_for_qwen38_27b_shipped_with_xhigh/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "e5368de4edadd72f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27B xhigh vs medium small comparison (+ others for fun)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrg907/qwen_38_27b_xhigh_vs_medium_small_comparison/",
+    "published": "2026-08-18T05:36:41+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrg907/qwen_38_27b_xhigh_vs_medium_small_comparison/\"> <img alt=\"Qwen 3.8 27B xhigh vs medium small comparison (+ others for fun)\" src=\"https://preview.redd.it/11gzdnquh2kh1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=64fad2ba6b94f5deb7a322d8a7f453ec97cca2de\" title=\"Qwen 3.8 27B xhigh vs medium small comparison (+ others for fun)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It's a small experiment of mine to check thinking effort on Qwen and I do have to say xhigh does overthink but I'm not sure if it's bad because the result is rather amazing. Although the prompt was very open-ended so it took liberties. TL:DR at the bottom.</p> <p>Images in order:<br /> <strong>Qwen 3.8 27b xhigh, Qwen 3.8 27b medium, DS V4 Flash default thinking, ChatGPT Free with Thinking, Claude Opus 5 Medium, Qwem 3.8 27b medium adjusted prompt</strong></p> <p><em>Qwen 27b is UD_Q4_XL and DS4 Flash is Q2_XXL</em></p> <p>Prompt: <strong>Write a simple html CARD about the benefits of eating apple. paste the code here.</strong></p> <p>So apart from 27b's xhigh effort all models though this is a super simple request. Which it is, but they basically didn't think, or though for a few lines only, even the medium effort. In turn xhigh though very long and produced a result that is way above anything else in this test. I'm a bit torn on if it's good or not, because A) the quality of the xhigh result is insane B) it was a very simple prompt and technically every other model did it.</p> <p>Tokens (all values token output):<br /> 3.8 27b xhigh: 23.8K<br /> 3.8 27b medium: 794<br /> DS V4 Flash: 927<br /> 3.8 27b medium modified prompt: 3.3K</p> <p>For chatgpt and claude I used online versions and as far as I see they hide their tokens right now, but can't be much higher than 1K out.</p> <p>27b medium modified prompt:<br /> <em>Write a simple html CARD about the benefits of eating apple. paste the code h…",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "8baeb146f10230fd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27B is faster than expected",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vriwym/qwen_38_27b_is_faster_than_expected/",
+    "published": "2026-08-18T08:08:11+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>i ran this model on my two 5060 TI 16GB cards at Q4 in unsloth and LM studio ( i downloaded NVFP4 but didn't try it in vLLM ) i think it runs faster than expected it gives me 50 - 60 t/s with MTP.<br /> this is surprising because it's a dense model and Qwen 3.6 was giving me 30t/s with MTP any one noticing this text generation speed peaking or it's a setup thing because i swapped from windows to linux last month and maybe Qwen 3.6 was fast but i had the wrong OS </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/chocofoxy\"> /u/chocofoxy </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vriwym/qwen_38_27b_is_faster_than_expected/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vriwym/qwen_38_27b_is_faster_than_expected/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "20c8716cc87ae2f1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Made this game in two prompts with Q4, Qwen 3.8 is amazing",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrabno/made_this_game_in_two_prompts_with_q4_qwen_38_is/",
+    "published": "2026-08-18T00:49:54+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrabno/made_this_game_in_two_prompts_with_q4_qwen_38_is/\"> <img alt=\"Made this game in two prompts with Q4, Qwen 3.8 is amazing\" src=\"https://external-preview.redd.it/c3l4bmhqcWU1MWtoMXQju_xsxXc82LMLkgjpmBBzZwO_WvHWUlXC0nAQ3ZUD.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=808c49f0012c8c19bf6319fa481be552d013d85f\" title=\"Made this game in two prompts with Q4, Qwen 3.8 is amazing\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>This took one prompt to build, and another follow up prompt to fix two issues (player got stuck with the bomb and broken enemies path-finding), this is only html, css and js, no external assets, all done by Qwen. Using UD-Q4_K_XL in llama.cpp with 128k context and k5_0/v4_1 quantized cache in 2x RTX 3060, Deepseek Harness, around 20 t/s average. The main issue i had wasnt the model but my system RAM (only 32gb), after each context compact i had to restart llama.cpp to release the RAM, but just sending a &quot;continue&quot; put it back on track and it finished the task beautifully.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/lordekeen\"> /u/lordekeen </a> <br /> <span><a href=\"https://v.redd.it/w09e8cqe51kh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrabno/made_this_game_in_two_prompts_with_q4_qwen_38_is/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "a4559104b7c29c4c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27b vs Deepseek Flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrifat/qwen_38_27b_vs_deepseek_flash/",
+    "published": "2026-08-18T07:38:35+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey Guys,</p> <p>What amazing weeks it has been for open source releases. I was really impresssed by DS flash final checkpoint and i have been playing around with it until qwen 3.8 released. I checked the benckmarks, and I dont know what to think anymore how can such a small model apparently compete with a model 10 times ( sure i hear 27B is not MoE but still....) . Did any of you used both and can tell if 3.8 is indeed that good or if its just benchmaxxing? what are your feeling for those who used both?</p> <p>Thanks</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Best_Sail5\"> /u/Best_Sail5 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrifat/qwen_38_27b_vs_deepseek_flash/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrifat/qwen_38_27b_vs_deepseek_flash/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "5d000ad4aae29206",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Optimizing Qwen3.6 / Qwen3.8-27B on 16GB VRAM: Complete Benchmark Results and Setup Guide (~30-50tps at 32k to 72k context)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrchn9/optimizing_qwen36_qwen3827b_on_16gb_vram_complete/",
+    "published": "2026-08-18T02:28:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><em>This post was made with AI. I tried to remove as much slop as possible and keep it straight to the point to save your time as I know how annoying AI slop posts can be, but I still wanted to retain all the details so it can be used as a resource for comparison with other future quants, I advise that any humans just skim through it or read the 1st section and run the balanced profile with a context smart harness like pi or deepseek harness (apparently really good for this)</em></p> <h1>Optimizing Qwen3.6 / Qwen3.8 27B on 16GB VRAM: Complete Experimental Log, Benchmarks, and Deployment Guide</h1> <p>This document records the complete set of benchmarks, quantization evaluations, KV cache sweeps, speculative decoding experiments, and context scaling tests conducted across multiple GPU architectures to determine the optimal configuration for running Qwen 27B hybrid models within a 16GB VRAM constraint.</p> <h1>1. Primary Recommendations (Quick Reference)</h1> <h1>1.1 Balanced Profile (Recommended Default)</h1> <ul> <li><strong>Model:</strong> <code>Qwen3.8-27B-IQ4_XS-pure-MTP.gguf</code> (14.56 GB)</li> <li><strong>Inference Engine:</strong> <code>beellama.cpp</code></li> <li><strong>KV Cache Format:</strong> <code>kvarn4</code> (4-bit variance-normalized KVarN)</li> <li><strong>Speculative Decoding:</strong> Native MTP at draft depth 2 (<code>--spec-type draft-mtp --spec-draft-n-max 2 --spec-draft-p-min 0.0</code>)</li> <li><strong>Maximum Context (100% VRAM):</strong> 32,768 to 48,000 tokens</li> <li><strong>Quality Metric:</strong> 92.55% Top-1 token match, 0.1169 mean KL divergence vs. uncompressed Q8_0 reference</li> </ul> <h1>1.2 Extended Context Profile (For Context &gt; 48K)</h1> <ul> <li><strong>Model:</strong> <code>Qwen3.8-27B-AD-IQ3_S-IQ3_XXS.gguf</code> (12.98 GB)</li> <li><strong>KV Cache Format:</strong> <code>kvarn4</code></li> <li><strong>Speculative Decoding:</strong> Native MTP at draft depth 2</li> <li><strong>Maxi…",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "9f5ccb3673fbe840",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Sparks jumping in price too",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrd6k5/sparks_jumping_in_price_too/",
+    "published": "2026-08-18T03:00:33+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Just had an eBay seller cancel my order at 8300 AUD to relist at 9K flat. This is not a fly by night operator either, it’s a legit org. They said they are going to honour the previous pricing when their new stock arrives, doubt.png but we will see. Everything’s rising everywhere, need a bit more cash to secure more compute before I’m entirely locked out. This isn’t even what I wanted but I can NOT afford a 6000 with these new prices. Absolutely not.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/oldschooldaw\"> /u/oldschooldaw </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrd6k5/sparks_jumping_in_price_too/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrd6k5/sparks_jumping_in_price_too/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T10:30:44.484938+00:00"
   }
 ]
