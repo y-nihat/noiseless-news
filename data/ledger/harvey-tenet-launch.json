@@ -1,0 +1,22 @@
+{
+  "slug": "harvey-tenet-launch",
+  "title": "Harvey launches Tenet, its first proprietary legal-reasoning model",
+  "status": "published",
+  "first_seen": "2026-08-18",
+  "published_at": "2026-08-18",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.harvey.ai/blog/introducing-harvey-ii",
+    "https://www.globallegalpost.com/news/legaltech-giant-harvey-launches-next-generation-ai-platform-1012947020"
+  ],
+  "follows": null,
+  "reason": "PUBLISHED (cycle 2). Harvey announced 'Harvey Tenet', its first AI model post-trained end-to-end for legal reasoning rather than adapted from a third-party general model, as part of a wider 'Harvey II' platform update (adds memory/personalization). Verified via Harvey's own primary blog post (Tier 0, dated 2026-08-18) plus independent same-day pickup from Global Legal Post (Tier 2). Fresh verifier and adversarial falsifier sub-agents ran in parallel (both fresh, neither saw the other's output or a draft): both independently confirmed the core announcement is genuinely new (not recirculated), that Harvey's own 'first' framing is defensible (Harvey's earlier 2022-era custom case-law model, built atop OpenAI's stack, was scrapped years ago and is a different kind of effort), and that capability claims are Harvey's own vendor-reported benchmark results, not independently reproduced.",
+  "watch": [
+    "Independent reproduction or third-party benchmarking of Tenet's legal-reasoning performance",
+    "Confirmation (or contradiction) of which open-weight base model Tenet was post-trained from",
+    "Critical/skeptical legal-trade coverage of Tenet's real-world accuracy once law firms have used it"
+  ],
+  "notes": [
+    "2026-08-18 c2 (night 2): New standalone story, surfaced from a Techmeme/Business Insider lead flagged as a candidate by cycle 1 but not pursued for lack of time. dedup-check returned zero matches (genuinely new slug). Deliberately dropped the original tip's most distinctive detail -- that Tenet was 'trained on mock disputes and case files using a version of Kimi K3' -- from the published article: both the verifier and falsifier sub-agents independently tried and failed to locate or fetch the underlying Business Insider article (extensive search/fetch attempts by both), Harvey's own primary announcement names no base model at all, and the falsifier separately flagged that the reported byline ('Melia Robinson') is very likely wrong (probably 'Melia Russell', an apparent past name change) -- given we could not confirm the claim, the source, or even the byline, the safer editorial choice was to publish only what Harvey's own primary source and independent pickup support, rather than repeat an unconfirmed single-sourced technical detail. Also dropped: falsifier's finding that Kimi K3 is currently the subject of a live, contested US-China distillation/sanctions dispute -- moot once the Kimi K3 claim itself was dropped for lack of confirmation, but worth remembering if a future cycle revisits Tenet's base model with better sourcing. style-gate: harvey-tenet-launch EN pass / TR pass -- headline states a falsifiable fact with no superlatives; TL;DR stands alone; capability claim explicitly framed as Harvey's own vendor claim in both body and frontmatter verdict; no padding; TR mirrors EN structure and claims in natural Turkish."
+  ]
+}
