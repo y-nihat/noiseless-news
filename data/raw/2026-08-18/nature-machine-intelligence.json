@@ -8,5 +8,15 @@
     "published": "2026-08-18T00:00:00+00:00",
     "summary": "<p>Nature Machine Intelligence, Published online: 18 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01285-x\">doi:10.1038/s42256-026-01285-x</a></p>Pan et al. present CoxRTL, a recalibrated transfer learning strategy that leverages external cohorts to improve survival prediction under covariate shift when target training data are limited and deployment outcomes are unavailable.",
     "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "ee817cfe1faecb66",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Agentic AI and cybersecurity, the story so far",
+    "url": "https://www.nature.com/articles/s42256-026-01301-0",
+    "published": "2026-08-18T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 18 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01301-0\">doi:10.1038/s42256-026-01301-0</a></p>Frontier large language models (LLMs) have rapidly developed from helpful coding assistants to highly capable cybersecurity systems. After several security incidents in the past few months, more oversight and a strong focus on safe testing and deployment seem needed.",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
   }
 ]

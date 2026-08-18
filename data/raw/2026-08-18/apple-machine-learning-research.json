@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1b555e620b3576f2",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "GRPO Beyond English: A Large-Scale Study of GRPO in Non-English and Multilingual Settings",
+    "url": "https://machinelearning.apple.com/research/grpo-beyond-english",
+    "published": "2026-08-18T00:00:00+00:00",
+    "summary": "Reinforcement Learning with Verifiable Rewards (RLVR), often optimized with Group Relative Policy Optimization (GRPO), has become a central recipe for improving the reasoning capabilities of pretrained language models but current studies remain heavily English-centric. We conduct a large-scale empirical study of multilingual and non-English GRPO across a wide range of base models, training languages, and different reasoning language rewards. We find that training to reason in the native language often leaves only a small gap to training for English reasoning. We further observe strong…",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  }
+]

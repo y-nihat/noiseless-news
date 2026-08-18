@@ -1,0 +1,12 @@
+[
+  {
+    "id": "d8f0510d40534d2d",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How Axonius built secure multi-tenant AI agents on Bedrock AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-axonius-built-secure-multi-tenant-ai-agents-on-bedrock-agentcore/",
+    "published": "2026-08-18T16:27:07+00:00",
+    "summary": "Learn how Axonius, a cybersecurity SaaS provider, used Amazon Bedrock AgentCore to deploy fully isolated, multi-tenant AI agents across hundreds of customer environments, without building custom compute isolation, authentication, or observability infrastructure from scratch.",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  }
+]

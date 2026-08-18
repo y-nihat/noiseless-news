@@ -118,5 +118,125 @@
     "published": "2026-08-18T03:00:33+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Just had an eBay seller cancel my order at 8300 AUD to relist at 9K flat. This is not a fly by night operator either, it’s a legit org. They said they are going to honour the previous pricing when their new stock arrives, doubt.png but we will see. Everything’s rising everywhere, need a bit more cash to secure more compute before I’m entirely locked out. This isn’t even what I wanted but I can NOT afford a 6000 with these new prices. Absolutely not.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/oldschooldaw\"> /u/oldschooldaw </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrd6k5/sparks_jumping_in_price_too/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrd6k5/sparks_jumping_in_price_too/\">[comments]</a></span>",
     "fetched_at": "2026-08-18T10:30:44.484938+00:00"
+  },
+  {
+    "id": "5f5beaa772b09591",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Running DeepSeek V4 Flash Q4_K_XL at ~100 tok/s prompt processing on 4× RTX 3060 12GB",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrqf4f/running_deepseek_v4_flash_q4_k_xl_at_100_toks/",
+    "published": "2026-08-18T14:15:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrqf4f/running_deepseek_v4_flash_q4_k_xl_at_100_toks/\"> <img alt=\"Running DeepSeek V4 Flash Q4_K_XL at ~100 tok/s prompt processing on 4× RTX 3060 12GB\" src=\"https://preview.redd.it/lav8jwie65kh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=ddf532163434cd330ec06cd079a65abbe8f61e53\" title=\"Running DeepSeek V4 Flash Q4_K_XL at ~100 tok/s prompt processing on 4× RTX 3060 12GB\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I managed to run the 143–144 GiB DeepSeek-V4-Flash-0731 UD-Q4_K_XL GGUF on four RTX 3060 12GB cards while keeping a 360k–376k context window.</p> <p>Hardware:</p> <p>CPU: Intel Core i9-10920X, 12C/24T</p> <p>RAM: 128 GB DDR4-3200, quad-channel</p> <p>GPU: 4× NVIDIA RTX 3060 12GB</p> <p>Total VRAM: 48 GB</p> <p>Storage: NVMe SSD</p> <p>Engine: llama.cpp, build b10181</p> <p>Model: unsloth/DeepSeek-V4-Flash-0731-GGUF</p> <p>Quant: UD-Q4_K_XL, approximately 144 GiB</p> <p>KV cache: Q8_0</p> <p>The best high-speed configuration so far:</p> <p>llama-server \\</p> <p>-m DeepSeek-V4-Flash-0731-UD-Q4_K_XL-00001-of-00005.gguf \\</p> <p>-c 368640 \\</p> <p>-ncmoe 34 \\</p> <p>-ts 100,1,1,1 \\</p> <p>-ot 'blk.(3[4-6]).ffn_.*_exps=CUDA1,blk.(3[7-9]).ffn_.*_exps=CUDA2,blk.(4[0-2]).ffn_.*_exps=CUDA3' \\</p> <p>-ctk q8_0 \\</p> <p>-ctv q8_0 \\</p> <p>-b 2048 \\</p> <p>-ub 2048 \\</p> <p>-np 1 \\</p> <p>-lm none \\</p> <p>--threads 20 \\</p> <p>--flash-attn on</p> <p>Measured with a roughly 20.5k-token prompt:</p> <p>Configured context: 368,640 tokens</p> <p>Prompt processing: 99.4 tok/s</p> <p>Text generation: 10.1 tok/s</p> <p>Minimum free VRAM under load:</p> <p>GPU0: 671 MiB</p> <p>GPU1: 842 MiB</p> <p>GPU2: 1395 MiB</p> <p>GPU3: 1395 MiB</p> <p>Model load time: approximately 198 seconds</p> <p>Other measured context/safety options:</p> <p>Context Prefill Decode Minimum free VRAM</p> <p>376832 99.5 t/s 10.4 t/s 611 MiB</p> <p>368640 99.4 t/s 10.1 t/s 671 MiB</p> <p>360448 99.4 t/s 10.1 t/s 735…",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "5f4452f671e7cb3a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Linux Improves VRAM Management in 7.3 Kernel 🥳",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vro3vf/linux_improves_vram_management_in_73_kernel/",
+    "published": "2026-08-18T12:43:26+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/johnnyApplePRNG\"> /u/johnnyApplePRNG </a> <br /> <span><a href=\"https://pixelcluster.dev/VRAM-Overcommit/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vro3vf/linux_improves_vram_management_in_73_kernel/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "5613feb191dde4ca",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Hugging Face just surpassed 3 million models on the Hub",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrnckt/hugging_face_just_surpassed_3_million_models_on/",
+    "published": "2026-08-18T12:09:54+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrnckt/hugging_face_just_surpassed_3_million_models_on/\"> <img alt=\"Hugging Face just surpassed 3 million models on the Hub\" src=\"https://external-preview.redd.it/cnU0N2kxZXBqNGtoMS5L9QXaVQSsGIYa28lq0ICS51QR5ZDjAGEA4YwyZTfk.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=39f6a7cb8258a5e515f08e1cb5531af4d603f42a\" title=\"Hugging Face just surpassed 3 million models on the Hub\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>From Hugging Face on 𝕏: <a href=\"https://x.com/huggingface/status/2089673018737869242?s=20\">https://x.com/huggingface/status/2089673018737869242?s=20</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://v.redd.it/dky1hwdpj4kh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrnckt/hugging_face_just_surpassed_3_million_models_on/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "1444dbde61319546",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "If the weights never change, is it really recursive self-improvement?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrqamv/if_the_weights_never_change_is_it_really/",
+    "published": "2026-08-18T14:10:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrqamv/if_the_weights_never_change_is_it_really/\"> <img alt=\"If the weights never change, is it really recursive self-improvement?\" src=\"https://preview.redd.it/e0ydm43a55kh1.png?width=140&amp;height=51&amp;auto=webp&amp;s=4f260abe31680d58f24e010f3371c53da6efd5be\" title=\"If the weights never change, is it really recursive self-improvement?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/e0ydm43a55kh1.png?width=2902&amp;format=png&amp;auto=webp&amp;s=8c9b88ff5e4157811e8996ba5a1e96cc55c8ae6a\">https://preview.redd.it/e0ydm43a55kh1.png?width=2902&amp;format=png&amp;auto=webp&amp;s=8c9b88ff5e4157811e8996ba5a1e96cc55c8ae6a</a></p> <p>This paper is using a much narrower definition of recursive self-improvement than the phrase usually suggests.</p> <p>AQuA stores validated evidence in a persistent research state that shapes later hypotheses. The underlying language model and evaluator remain fixed. I still find the narrower claim interesting, even if it sits closer to memory-augmented research automation than to a model rewriting itself.</p> <p>The paper does not establish any weight-level capability gain. Is persistent memory that improves later research decisions enough to call a system RSI, or should the term require changes to the system’s underlying capabilities?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/derspenti\"> /u/derspenti </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrqamv/if_the_weights_never_change_is_it_really/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrqamv/if_the_weights_never_change_is_it_really/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "8699757fe694977f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "OpenCode overrides the samplers for Qwen models to the wrong values",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vroao0/opencode_overrides_the_samplers_for_qwen_models/",
+    "published": "2026-08-18T12:51:35+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>This is invisible with llama.cpp or derivatives, but ninfer helpfully logs the sampler settings on each request and auto-configures the correct ones for the model. Basically, OpenCode will always send top-p=1.0 (which means there is no filtering of low-probability tokens except with top-k) instead of the correct 0.95 (thinking) or 0.80 (no-thinking).</p> <p>The commit that added this is supposedly for another fix and has no explanation for the change whatsoever: <a href=\"https://github.com/anomalyco/opencode/commit/0b132c032aae15a99907a5979f471c3b5bb2e3dc\">https://github.com/anomalyco/opencode/commit/0b132c032aae15a99907a5979f471c3b5bb2e3dc</a></p> <p>You can't easily fix this per/model provider as far as I can tell, though this works, but it will affect all models/providers.</p> <pre><code> &quot;agent&quot;: { &quot;build&quot;: { &quot;top_p&quot;: 0.95 } } </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JadedSession\"> /u/JadedSession </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vroao0/opencode_overrides_the_samplers_for_qwen_models/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vroao0/opencode_overrides_the_samplers_for_qwen_models/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "bc4213cc88ef27da",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What sandbox are you all using for AI agents?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrps78/what_sandbox_are_you_all_using_for_ai_agents/",
+    "published": "2026-08-18T13:51:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone, I use AI agents to code and manage my personal files heavily. However, I am worried that the agents may accidentally delete some important files on my machine, outside of the defined scope. I am wondering what sandboxes people are using. I am looking for a solution that is easy to use, perhaps just one line, e.g. `[sandbox] opencode --allowed_folder=[folder that the agent can work in]`</p> <p>I've done some research and found two popular options, Bubblewrap and Docker Sandboxes. However, Bubblewrap's configuration is quite extensive. Docker Sandboxes seem easy to use, but an account is required to use, which I am not a fan of.</p> <p>I decided to post here as people in the non-local-LLM communities don't seem to care about this, claiming that &quot;frontier models is not too prone to prompt injections&quot; etc. I am mostly using small LLMs, so it does matter a lot to me. </p> <p>Any experience or recommendation will be appreciated. Thank you! </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Agitated_Camel1886\"> /u/Agitated_Camel1886 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrps78/what_sandbox_are_you_all_using_for_ai_agents/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrps78/what_sandbox_are_you_all_using_for_ai_agents/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "094a3b14c1dc3740",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is Ling 3 tiny underrated for its size?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrq3na/is_ling_3_tiny_underrated_for_its_size/",
+    "published": "2026-08-18T14:03:26+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I was checking out benchmarks of this model and apparantly better than Qwen3.5 9b reasoning across the bench on artificial analysis. I have used the 9b model for variety of stuff and it has been amazing, but if this is better then why not switch. I am downloading it rn to test it irl, but ppl are we missing out on other models by hyping a few select open source labs?? Anyone tested this model btw? Is it that good?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Hot_Example_4456\"> /u/Hot_Example_4456 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrq3na/is_ling_3_tiny_underrated_for_its_size/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrq3na/is_ling_3_tiny_underrated_for_its_size/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "e0b83db481041406",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Don't ignore llama.cpp RPC with old hardware. Results of a 5070 Ti and 1080 Ti over gigabit ethernet: it's actually functional.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrkxdt/dont_ignore_llamacpp_rpc_with_old_hardware/",
+    "published": "2026-08-18T10:07:30+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Results up front: I had to prioritize prefill or token generation - there was no happy medium.</p> <p>Using UD-Q4_K_XL, q8 kv cache, and 96k max context:</p> <ul> <li>focus on generation (MTP = 2): 350 pp and 36 tg @ 12k context</li> <li>focus on prefill (disabled MTP): 560 pp and 19 tg @ 12k context</li> </ul> <p>Focus on quality:</p> <ul> <li>using UD-Q5_K_XL, full kv cache, 96k max context, and no MTP: 380 pp and 15 tg @ 12k context</li> </ul> <p>Goals:</p> <ul> <li>I really wanted to be able to try the new Qwen 3.8 27B model, but I didn't want to have to compromise the kv cache or the model. That meant, q4 kv was off the table, as was any model quant under 4-bit. Since my primary GPU only had 16GB VRAM and offloading to CPU was just horrendous, I decided to see what was possible using the GPU in my NAS, but without messing with hardware. </li> <li>Don't need real-time chat. Forum-style interactions and asynchronous work fits my expectations and workstyle.</li> </ul> <p>Lessons learned:</p> <ul> <li>enabling MTP absolutely tanks prefill speeds. Like, a 30% hit immediately. From what I've read, that was supposed to be something that a future PR would fix but the last ticket I looked at about it was 3 months old. It's probably not an easy fix.</li> <li>obvious but worth mentioning: MTP uses VRAM. So, if you need more context and don't mind waiting, then disable MTP.</li> <li>enabling kv quant for the draft MTP model will lower your available context - the complete opposite of expectations. No, seriously, every single time I tested it that was the result. There's even a github issue about it and it was explained that that's expected behaviour. Be aware! (<a href=\"https://github.com/ggml-org/llama.cpp/discussions/24102\">https://github.com/ggml-org/llama.cpp/discussions/24102</a>)</li> <li>MTP applies at the end/tail of each generation loop. That means, you actually want your strongest GPU to be the last card in the RPC chain, not the…",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "51602ca0ab98e621",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What would make an uploader-run refusal table independently reproducible?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrnay3/what_would_make_an_uploaderrun_refusal_table/",
+    "published": "2026-08-18T12:07:49+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>A refusal range in a model card is only reproducible if another person can reconstruct how every prompt reached its label. OrcaRouter's Qwen3.8-27B FP8 card reports 0–6% refusal for the abliterated checkpoint with thinking off, versus 63.6–99% for the base across eight listed sets. The card also says this is an uploader-run, opening-phrase classifier rather than an independent evaluation. The supplied material does not include the raw generations or an independent reproduction. That leaves several results hidden inside each aggregate: the decoding settings, classifier version, per-prompt labels, and how caveated compliance was handled. What is the smallest replication packet you would require before treating a refusal table as a reusable result: raw generations, exact decoding settings, per-prompt labels, executable scoring code, or all four?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dabber43\"> /u/Dabber43 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrnay3/what_would_make_an_uploaderrun_refusal_table/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrnay3/what_would_make_an_uploaderrun_refusal_table/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "5e6fef7138befe9c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AltRouter, an OpenRouter alternative",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrl2ou/altrouter_an_openrouter_alternative/",
+    "published": "2026-08-18T10:15:47+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello!</p> <p>Like many here I also read the recent <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vqlh98/stripe_will_reportedly_acquire_ai_gateway_startup/\">article</a> about OpenRouter getting sold and it was basically the last drop in the barrel to get together with a friend and build an alternative that is open-source, more transparent and also ideally cheaper.</p> <p><strong>&quot;Wait how is this local?&quot;</strong></p> <p>It's not! Which is why I kept this previous section short. We definitely need an OpenRouter alternative, and fast, but that still does not really solve any issues for the local-model community.</p> <p>The main reason OpenRouter is even popular in this community, despite not being local at all, is because it is a way to use open-weight models affordably, and since all the SOTA models (apart from <a href=\"https://artificialanalysis.ai/models/qwen3-8-27b\">Qwen 2.8 27B I guess, wtf</a>) tend to grow in size every year now, that section of people here is getting ever larger. Buying a <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vq6bs5/why_are_rtx_6000_pros_still_getting_bought_at/\">16k(!!!)</a> PRO 6000 for your home rack has in my opinion completely stopped being reasonable, in part because it will always go underutilized almost no matter what you do and majorly because the premium for all the advantages of local (full control over the model, data and offline access) is just getting too high at this point. Personally, I don't even have the resources anymore to run Qwen 27B locally. Full local is becoming basically nonsensical for a lot of people.</p> <p>So that is the main problem we have been stewing on for the past months. The solution we have in mind is basically resource pooling, many people renting a GPU swarm together. &quot;Offline access&quot; is not be possible, but who said we cannot establish a trustless system where you still know exactly what happens with your data and what model…",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "41874ced014a1226",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash 0731 on Strix Halo: draft model, n_max sweep, and a launch line that actually helps",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrm27o/deepseek_v4_flash_0731_on_strix_halo_draft_model/",
+    "published": "2026-08-18T11:07:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrm27o/deepseek_v4_flash_0731_on_strix_halo_draft_model/\"> <img alt=\"DeepSeek V4 Flash 0731 on Strix Halo: draft model, n_max sweep, and a launch line that actually helps\" src=\"https://external-preview.redd.it/lWoTgWD9LY4abYO392JUeF0rqKcxIZSHM83_zHyzfd8.png?width=140&amp;height=70&amp;auto=webp&amp;s=7b18796a68fb136a2ab5de0e274251e555816aef\" title=\"DeepSeek V4 Flash 0731 on Strix Halo: draft model, n_max sweep, and a launch line that actually helps\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I know the front page is completely dominated by the Qwen3.8 27B. I know it's a fantastic model and everyone is rightfully discussing it, but I wanted to shift gears and talk about another model I’ve been experimenting with and got some solid results from: DeepSeek-V4-Flash-0731.</p> <p>I just finished a week of running numbers on a Strix Halo box and figured I'd dump them here before I forget what I actually measured.</p> <p>Hardware is a Strix Halo mini PC, Ubuntu, 128 GB unified memory.</p> <p>Target is Unsloth's UD-IQ3_XXS with Q6 attention (~96 GB). At 264k context, no context quantization, the process sits at about 114 GB.</p> <p>At 64k I see 200–220 tok/s prefill and 20–22 tok/s decode with no draft. That's the baseline I used for everything below: 20.48 tok/s.</p> <p>I compared two DSpark drafters, Q8_0 (10.15 GB) and a Q2_K_S I quantized myself (6.45 GB), over n_max 2–7, 7 prompt types, 5 runs each.</p> <p>Same sampling the whole way: temp 0.9, top_p 0.95, min_p 0.01. Thinking on (<code>reasoning_effort=low</code> for the sweep so it wouldn't take a week). ngram-mod was off during the sweep so <code>draft_n</code> is only the drafter.</p> <p>Short version: n_max=3 is the peak. Average over both drafts is 28.5 tok/s, 1.39× the no-draft baseline. Q2 and Q8 are a wash. Every n_max, every category, they land inside 1–3% of each other. So the 6.45 GB file is the one I'd actually keep.</p> <p>One…",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
+  },
+  {
+    "id": "1e1dade8727a147d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 4 expected for September",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrqrgp/qwen_4_expected_for_september/",
+    "published": "2026-08-18T14:27:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I previously (correctly, if I may say so) predicted the relase of Qwen 3.8 in August. I now confirm the expected release of Qwen 4 in September. Source is Alibaba in both cases. Good times, particularly given how great Qwen 3.8-Max is. I use the 2.4T version as a daily driver in most apps where Sol and Opus don't add anything. It's cheap and fast - and the no think version is sufficient for most cases. And the 27B version is an absolute beast that surprised I think many of us in terms of what a 30B class model can do.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Usual_Maximum7673\"> /u/Usual_Maximum7673 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrqrgp/qwen_4_expected_for_september/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrqrgp/qwen_4_expected_for_september/\">[comments]</a></span>",
+    "fetched_at": "2026-08-18T16:35:25.112899+00:00"
   }
 ]
