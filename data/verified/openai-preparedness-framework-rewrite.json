@@ -1,0 +1,53 @@
+{
+    "slug": "openai-preparedness-framework-rewrite",
+    "checked_at": "2026-08-18T23:29:00+00:00",
+    "method": "Fresh verifier sub-agent (34 tool uses) and fresh adversarial falsifier sub-agent (29 tool uses) ran in parallel, independent, neither seeing a draft or each other's output. dedup-check returned one moderate match (score 0.4) against the still-watching openai-preparedness-team-dissolution entry -- read and confirmed as a distinct claim (Framework document + safety practice vs. team staffing), so this was opened as a follow-up (`follows: openai-astra-critical-cyber-capabilities`) rather than merged or treated as a duplicate.",
+    "origin_items": [
+        "Surfaced via techmeme.json (2026-08-18, Axios/Ina Fried item) and carried forward from prior-cycle scouting notes on the openai-preparedness-team-dissolution and openai-astra-critical-cyber-capabilities ledger entries."
+    ],
+    "claims": [
+        {
+            "text": "OpenAI paused reinforcement-learning (RL) training on its newest models intended for deployment for two weeks, citing July's Hugging Face agent-security breach and preliminary evidence that its unreleased Astra model may have reached the 'Critical' cyber-capability threshold in its Preparedness Framework",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "OpenAI's own X account statement is the primary source for the pause and its stated duration/reason; independently corroborated by TechCrunch (own on-record VP-of-Research quote, not relaying Axios) and Axios's original exclusive. Both agents independently reached this claim.",
+            "evidence": [
+                "https://x.com/OpenAI/status/2089777845187031262",
+                "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
+                "https://www.axios.com/2026/08/18/openai-pause-astra-preparedness-framework"
+            ]
+        },
+        {
+            "text": "The two-week pause has ended; OpenAI has restarted many less-risky training workloads, but says its largest, most advanced frontier RL runs remain on hold pending new safeguards",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "Falsifier flagged a tense error in the original lead (the pause was being described as still in progress) and corrected it: every outlet addressing duration uses completed/past tense for the two-week window itself, with only the largest frontier runs described as still on hold. TechCrunch states OpenAI 'had since restarted many of the less-risky models'; Time quotes OpenAI directly on the largest runs remaining on hold.",
+            "evidence": [
+                "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
+                "https://time.com/article/2026/08/18/openai-slowing-training/"
+            ]
+        },
+        {
+            "text": "During the pause, OpenAI isolated its research environments, restricted network and tool access so a single compromised workload cannot reach the internet or internal networks, and expanded monitoring of models' tool actions and reasoning traces, targeting roughly a 30-minute response time to anomalies",
+            "type": "announcement",
+            "verdict": "confirmed",
+            "reasoning": "OpenAI's own statement plus TechCrunch's direct on-record quote from VP of Research Amelia Glaese, independently fetched.",
+            "evidence": [
+                "https://x.com/OpenAI/status/2089777845187031262",
+                "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/"
+            ]
+        },
+        {
+            "text": "OpenAI plans to evolve and rewrite its Preparedness Framework, the document defining risk thresholds such as 'Critical', and intends to involve outside organizations in revising it, though it has not set a timeline or published a draft",
+            "type": "statement",
+            "verdict": "confirmed",
+            "reasoning": "Axios broke the framework-rewrite intent; Time independently obtained on-record confirmation and elaboration from Chief Scientist Jakub Pachocki in a direct interview. Both agents flagged the Time/journalist-newsletter (Alex Heath / sources.news) attribution as needing care -- treated as one reporting leg, not double-counted as two independent outlets, per falsifier's explicit recommendation.",
+            "evidence": [
+                "https://www.axios.com/2026/08/18/openai-pause-astra-preparedness-framework",
+                "https://time.com/article/2026/08/18/openai-slowing-training/"
+            ]
+        }
+    ],
+    "falsifier_notes": "Verdict: PUBLISH WITH CAVEATS, applied. Confirmed genuinely new (distinct OpenAI post/URL from the already-published 7 August Astra story, same-day bylined coverage across multiple outlets). Corrected pause tense from ongoing to completed-with-a-narrower-ongoing-hold, per above. Dropped Wired and The Verge from sourcing -- neither agent could locate a dedicated article on this specific story despite targeted searches; do not cite on faith. Dropped Fortune -- mentioned by the verifier as also covering the ~2-week figure but no exact deep-link URL was recovered by either agent, so it was not cited (ledger/article sourcing requires deep links). Declined to cite cryptobriefing.com for a granular 'less-risky workloads resumed' nuance since it is a registered blocked_evidence_domain; the same substantive point was independently available from Time's direct OpenAI quote instead, so no coverage was lost. Explicitly checked for conflation with the separate, disputed openai-preparedness-team-dissolution claim (OpenAI denied that one on the record the same day, 18 August) -- no source found merging the two, but flagged the coincidence as a trap for future cycles; a disambiguation line was added to the article. No prompt-injection content found by either agent in any fetched source.",
+    "gaps_closed_from_watching_state": []
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "openai-preparedness-framework-rewrite",
+  "title": "OpenAI says it paused frontier RL training for two weeks, plans to rewrite Preparedness Framework",
+  "status": "published",
+  "first_seen": "2026-08-18",
+  "published_at": "2026-08-18",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://x.com/OpenAI/status/2089777845187031262",
+    "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
+    "https://www.axios.com/2026/08/18/openai-pause-astra-preparedness-framework",
+    "https://time.com/article/2026/08/18/openai-slowing-training/"
+  ],
+  "follows": "openai-astra-critical-cyber-capabilities",
+  "reason": "Published as a follow-up: a reader who missed the 7 August Astra Critical-cyber-threshold disclosure would need that context to understand why OpenAI paused RL training and is rewriting its Preparedness Framework. dedup-check returned one moderate match (score 0.4) against openai-preparedness-team-dissolution (still watching) -- read and confirmed distinct (Framework document + safety practice vs. the disputed team-staffing claim), justified as a follow-up to the astra entry instead. Fresh verifier + fresh adversarial falsifier, run in parallel, independent. Full detail in data/verified/openai-preparedness-framework-rewrite.json.",
+  "watch": [
+    "Publication of an actual revised Preparedness Framework draft/timeline",
+    "Resumption of OpenAI's largest frontier RL runs, still on hold as of 18 August",
+    "Any outlet later conflating this Framework story with the separate, disputed Preparedness-team-dissolution claim"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-09-15",
+  "notes": [
+    "2026-08-18 c3 (night 2): Published. Original tip's attribution of the Framework-rewrite quote to 'Aleksander Pachocki' was wrong -- verifier confirmed the actual on-record speaker is Jakub Pachocki, OpenAI's Chief Scientist; corrected before publication. Falsifier caught and corrected a tense error (the two-week pause is complete, not ongoing; only the largest frontier RL runs remain on hold). Wired, The Verge and Fortune were considered but dropped from sourcing -- neither agent could pin down a citable deep-link URL for this specific story. cryptobriefing.com (blocked_evidence_domain) was surfaced by the verifier but explicitly not used; the same substantive point was independently available from Time instead. open_obligation set because the Framework rewrite has no published draft or timeline yet, and OpenAI's largest frontier RL runs remain on hold pending safeguards -- both are pending outcomes to check. Does NOT resolve the separate open_obligation on openai-astra-critical-cyber-capabilities (Astra's own release decision is still pending) -- cross-referenced there instead of duplicated."
+  ]
+}

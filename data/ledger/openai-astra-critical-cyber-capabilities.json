@@ -16,6 +16,7 @@
   "open_obligation": true,
   "revisit_after": "2026-08-21",
   "notes": [
-    "2026-08-07 c1: Published. Open obligation set because OpenAI's own classification is provisional ('cannot rule out' Critical, testing ongoing with government agencies/safety orgs) and the eventual release decision for Astra is a pending outcome that should be checked and reported when it lands."
+    "2026-08-07 c1: Published. Open obligation set because OpenAI's own classification is provisional ('cannot rule out' Critical, testing ongoing with government agencies/safety orgs) and the eventual release decision for Astra is a pending outcome that should be checked and reported when it lands.",
+    "2026-08-18 c3 (night 2): Follow-up published -- openai-preparedness-framework-rewrite (RL-training pause, hardened environments, Preparedness Framework rewrite intent). Does NOT resolve this entry's open_obligation: that follow-up covers safety-practice/policy changes, not Astra's own release decision, which is still pending. revisit_after 2026-08-21 stands."
   ]
 }

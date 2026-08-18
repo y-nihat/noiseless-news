@@ -1,4 +1,15 @@
 {
+  "candidates_2026-08-18_c3_night2": [
+    {
+      "domain": "time.com",
+      "first_seen": "2026-08-18",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://time.com/article/2026/08/18/openai-slowing-training/"
+      ],
+      "context": "Direct-fetched, on-record Altman + Pachocki interview quotes on the Preparedness Framework rewrite, for openai-preparedness-framework-rewrite. Attribution caveat: overlaps substantially with journalist Alex Heath's own newsletter (sources.news), which is not itself a Time byline -- treated as one reporting leg, not double-counted as independent of it. Propose Tier 2, flag attribution for review before treating as a routine recurring source."
+    }
+  ],
   "candidates_2026-08-18_c2_night2": [
     {
       "domain": "globallegalpost.com",
