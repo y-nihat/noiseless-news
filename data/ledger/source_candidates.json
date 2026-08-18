@@ -1066,5 +1066,17 @@
       ],
       "context": "Major named-byline outlet; fetch-blocked (403) so used via search-snippet-level confirmation, but demonstrated genuinely independent court-filing-based reporting (named the specific PJT Partners banker who filed the deidentification affidavit) distinct from Bloomberg Law's framing on google-spirit-airlines-data-purchase -- one of two independent sources that cleared the business-claim bar. Propose Tier 2."
     }
+  ],
+  "candidates_2026-08-17_c4": [
+    {
+      "domain": "axios.com",
+      "first_seen": "2026-08-03",
+      "occurrences": 6,
+      "sample_urls": [
+        "https://www.axios.com/2026/08/17/stripe-openrouter-paypal"
+      ],
+      "context": "Sixth occurrence logged for this domain across the archive (see candidates_2026-08-03_c4, candidates_2026-07-21_night, candidates_2026-07-19_night_c4 x2, candidates_2026-07-10_night_c1, candidates_2026-08-17_c3) -- this time surfacing its own-sourcing language ('Stripe has agreed to acquire OpenRouter ... Axios has learned') on the stripe-openrouter-acquisition watching story, a plausible independent second source once its ~$8B figure is reconciled against Bloomberg/TechCrunch's ~$7B. Direct fetch returned HTTP 403 again this cycle (consistent pattern across nights) -- search-snippet only. Six independent occurrences across six weeks is a strong recurrence signal; flagging again for Tier 2 registration since it keeps getting used ad hoc anyway.",
+      "recurrence_note": "bloomberg.com (candidates_2026-07-12_night_c1) and asia.nikkei.com (used cycle 2 tonight, 2026-08-17, for nvidia-openai-250b-guarantee, not yet logged here) are the same standing proposal noted in tonight's cycle 3 report -- still not added to sources.yaml. Recommend a dedicated future cycle actually commits the sources.yaml registration for axios.com, bloomberg.com and asia.nikkei.com rather than re-flagging each night; all three have now recurred enough nights to clear any reasonable bar."
+    }
   ]
 }

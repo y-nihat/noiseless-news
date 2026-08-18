@@ -1,0 +1,23 @@
+{
+  "slug": "bytedance-mpa-ai-copyright-agreement",
+  "title": "Motion Picture Association and ByteDance sign agreement on AI video copyright protections",
+  "status": "published",
+  "first_seen": "2026-08-17",
+  "published_at": "2026-08-17",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.motionpictures.org/press/mpa-and-bytedance-announce-global-agreement-to-protect-intellectual-property-on-ai-video-and-image-generation-models/",
+    "https://variety.com/2026/biz/news/motion-picture-association-deal-bytedance-ip-ai-seedance-1236836240/",
+    "https://www.axios.com/2026/02/19/hollywood-chinese-ai-bytedance-seedance"
+  ],
+  "follows": null,
+  "reason": "PUBLISHED 2026-08-18 (cycle 4), story surfaced and dedup-scoped in cycle 3. MPA and ByteDance signed an MOU (2026-08-17) establishing IP-protection guardrails for ByteDance's AI video/image models (Seedance, Seedream) on TikTok/CapCut/Dreamina, following a February 2026 MPA cease-and-desist letter over Seedance 2.0. Verified via MPA's own press release (Tier 0) plus Variety and February-dated Axios background. Considered but rejected linking as a follow-up (`follows`) to the already-published bytedance-seedance-2-5-launch (2026-07-31), whose own watch-list anticipated 'any legal or copyright response' -- rejected because dedup-check returned zero matches, the predecessor covers a product launch not the copyright dispute, and this MOU story is self-contained without it; treated as standalone with the Feb dispute cited as ordinary sourced background instead.",
+  "watch": [
+    "Whether MPA or ByteDance ever publish the MOU's specific enforcement mechanism, license terms, or technical thresholds (none disclosed at publication)",
+    "Any studio, guild, or rights-holder criticism of the deal as insufficient (none found as of publication)",
+    "Whether a comparable MPA-level agreement is struck with another AI video company (OpenAI/Sora, Google, Runway), which would affect the 'first such agreement' framing considered but not used in the article"
+  ],
+  "notes": [
+    "2026-08-17/18 c4: published. Candidate pre-scoped by cycle 3 (dedup-checked clean, sources identified) but not verified for lack of time budget that cycle. Cycle 4 ran the full verifier + adversarial falsifier protocol. Falsifier caught and the article dropped two risks from the verifier's first pass: (1) a face-blocking-filter claim only true of the older Seedance 2.0, wrongly generalized to the current 2.5/5.0 Pro models; (2) C2PA/watermarking technical details that trace to a separate 31 July 2026 ByteDance product announcement, not to this MOU -- both excluded from the published article rather than risk conflating vendor product claims with MOU terms. Also avoided citing a Sen. Markey press release that read as relevant criticism but was confirmed to be about an unrelated Jan 2026 TikTok ownership matter. style-gate: bytedance-mpa-ai-copyright-agreement EN pass / TR pass -- headline is falsifiable with no superlatives (deliberately omitted an uncited 'first-ever' framing despite the falsifier confirming a narrow version of it would be safe, since no single citable source states it directly), TL;DR stands alone, no banned filler found, TR uses correct legal terminology (Mutabakat Zaptı for MOU, ihtarname for cease-and-desist) rather than anglicisms."
+  ]
+}

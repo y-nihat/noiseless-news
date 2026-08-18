@@ -1,0 +1,49 @@
+{
+  "slug": "bytedance-mpa-ai-copyright-agreement",
+  "checked_at": "2026-08-18T00:04:00+00:00",
+  "method": "Fresh verifier sub-agent plus adversarial falsifier sub-agent, both Sonnet 5. Surfaced via cycle 3's fresh gnews-ai-litigation ingest delta (six outlets same-day, 2026-08-17), pre-scoped and carried into cycle 4. Primary basis: the Motion Picture Association's own press release (Tier 0), independently re-fetched by both the verifier and the falsifier, corroborated same-day by Variety (direct fetch, timestamped) and a separate wire/syndication bloc (NBC News, Yahoo, Business Standard, Asharq Al-Awsat, The Star Malaysia).",
+  "origin_items": [
+    "data/raw/2026-08-17/gnews-ai-litigation.json -- multiple items same-day (AOL.com, Hollywood Reporter, Times Now, New York Post, Cryptopolitan) converging on the same MPA-ByteDance MOU announcement."
+  ],
+  "claims": [
+    {
+      "text": "MPA and ByteDance signed a Memorandum of Understanding on 17 August 2026 establishing guardrails to protect film and TV intellectual property from ByteDance's AI video and image generation models",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary: MPA's own press release, independently fetched by both verifier and falsifier, confirmed genuine and correctly described as an MOU (not a license or settlement). Corroborated same-day by Variety (direct fetch, timestamped 2026-08-17 12:35pm EST) and a separate NBC News/wire syndication bloc.",
+      "evidence": [
+        "https://www.motionpictures.org/press/mpa-and-bytedance-announce-global-agreement-to-protect-intellectual-property-on-ai-video-and-image-generation-models/",
+        "https://variety.com/2026/biz/news/motion-picture-association-deal-bytedance-ip-ai-seedance-1236836240/"
+      ]
+    },
+    {
+      "text": "MPA chairman/CEO Charles Rivkin and ByteDance general counsel John Rogovin both issued on-record statements about the agreement",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Direct quotes retrieved verbatim from the MPA press release by both the verifier and, independently, the falsifier; reproduced identically across every outlet checked.",
+      "evidence": [
+        "https://www.motionpictures.org/press/mpa-and-bytedance-announce-global-agreement-to-protect-intellectual-property-on-ai-video-and-image-generation-models/"
+      ]
+    },
+    {
+      "text": "The MOU does not disclose a specific enforcement mechanism, license terms, or technical thresholds",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both verifier and falsifier independently read the full press release and confirmed it cites only 'meaningful guardrails' and 'continued collaboration' without technical or contractual specifics. Falsifier explicitly recommended stating this plainly as fact rather than omitting it.",
+      "evidence": [
+        "https://www.motionpictures.org/press/mpa-and-bytedance-announce-global-agreement-to-protect-intellectual-property-on-ai-video-and-image-generation-models/"
+      ]
+    },
+    {
+      "text": "The agreement follows a February 2026 MPA cease-and-desist letter to ByteDance after its Seedance 2.0 model was used to generate unauthorized video clips depicting copyrighted characters and celebrity likenesses",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Independently corroborated by contemporaneous February 2026 coverage (Axios, Al Jazeera, Hollywood Reporter's own February story), separate from today's news cycle -- confirms this is genuine background, not a fabricated pretext.",
+      "evidence": [
+        "https://www.axios.com/2026/02/19/hollywood-chinese-ai-bytedance-seedance"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict: PUBLISH WITH CHANGES (applied). Falsifier independently re-fetched the MPA press release and confirmed it is genuine, dated 2026-08-17, and correctly described as an MOU. Confirmed 'MPA's first such agreement with an AI company' would be a safe, narrow claim (no prior MPA-trade-group-level deal with any AI company found; Disney's Dec 2025 OpenAI/Sora deal was studio-level, not MPA-level) -- ultimately NOT used in the published article to avoid an uncited superlative, since no single source directly states this and the verify/falsify research was synthesized across many searches rather than one citable article. Flagged and the article DROPPED two things as a result of falsification: (1) a claim that Seedance 2.5/Seedream 5.0 Pro include face-blocking filters -- only confirmed for the older Seedance 2.0, not the current models, so excluded entirely; (2) a claim attributing C2PA/invisible-watermarking technical details to the MOU itself -- these trace to a separate ByteDance CapCut-newsroom product announcement from 31 July 2026, not to today's MOU, and were dropped from the article rather than risk conflating vendor product claims with MOU terms, given the exact URL could not be pinned down within the cycle's time budget. Also flagged and avoided: a Sen. Markey press release that superficially looked like criticism of this deal but was confirmed to be about an unrelated January 2026 TikTok ownership/divestiture matter -- not cited. No genuine on-the-record criticism or dispute of the 17 August MOU itself was found. Both HR and Deadline were confirmed real but gated behind a TollBit bot-paywall on direct fetch; not used as cited sources for that reason (Variety was fetched directly and used instead). One benign fetch artifact (an odd character-count annotation appended to quotes on first fetch) was investigated and ruled not a prompt injection on a second, targeted re-fetch.",
+  "gaps_closed_from_watching_state": []
+}
