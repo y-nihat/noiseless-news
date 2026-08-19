@@ -13,7 +13,6 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from noiseless.ingest import ingest_all
 from noiseless.sources import SourceRegistryError, load_sources
 
 REGISTRY_PATH = Path("policy/sources.yaml")
@@ -173,6 +172,10 @@ def main(argv: list[str] | None = None) -> int:
         return code
 
     if args.command == "ingest":
+        # Imported here, not at module load: `validate-content --staged` runs as
+        # a pre-commit hook and must not depend on the feed-fetching stack.
+        from noiseless.ingest import ingest_all
+
         summary = ingest_all(sources, args.data_dir, only_sources=args.source)
         failures = [name for name, count in summary.items() if count < 0]
         total_new = sum(count for count in summary.values() if count > 0)

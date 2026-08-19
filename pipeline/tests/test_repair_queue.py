@@ -183,8 +183,14 @@ class TestTheHook:
     """The real hook script, invoked by a real `git commit`."""
 
     def _commit_with_hook(self, repo, msg):
+        import os
+        import sys
+
+        # The hook calls plain `python`; put the interpreter running this suite
+        # first on PATH so CI's tool-cache python (with the pipeline's deps) is
+        # what the hook finds, as it is on the runner where PATH already has it.
         env = {
-            "PATH": f"/usr/local/bin:/usr/bin:/bin",
+            "PATH": f"{Path(sys.executable).parent}:{os.environ.get('PATH', '/usr/bin:/bin')}",
             "HOME": str(repo),
             "PYTHONPATH": str(REPO_ROOT / "pipeline"),
             "GIT_CONFIG_COUNT": "1",
