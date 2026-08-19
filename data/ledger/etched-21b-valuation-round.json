@@ -1,0 +1,23 @@
+{
+  "slug": "etched-21b-valuation-round",
+  "title": "Etched raises $700M, reaching $21B valuation a month after its last round",
+  "status": "published",
+  "first_seen": "2026-08-18",
+  "published_at": "2026-08-19",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
+    "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+    "https://www.thestar.com.my/tech/tech-news/2026/08/19/ai-chip-startup-etched-doubles-valuation-to-21-billion-in-under-a-month",
+    "https://www.investing.com/news/company-news/etched-seeks-20-billion-valuation-in-new-ai-chip-funding-round--wsj-reports-4799566"
+  ],
+  "follows": "etched-series-c-10-3b-valuation",
+  "reason": "Published. Full multi-agent protocol run (fresh verifier + fresh adversarial falsifier, concurrent given cycle time budget). Both independently confirmed: (1) Etched raised $700M at a $21B valuation, announced 18 August 2026 -- Tier-0 company statement (GlobeNewswire release, on-record Jane Street quote embedded) plus two independently-reporting Tier-2 outlets (TechCrunch with its own co-founder interview, Reuters with its own bylined report and an independent analyst quote) -- clears the business-claim >=2-independent-source bar comfortably, well past wire-exclusive relay status. (2) This is the closing of the same Jane Street-led round WSJ reported 'in talks' at ~$20B in mid-July -- confirmed by triangulation (same lead investor, contiguous valuation trajectory, no second Jane Street round anywhere), not a relabeled rumor. (3) The >$1B customer-contracts figure is Etched's own, labeled vendor-claim rather than confirmed fact. dedup-check returned a strong (exit 2) match against etched-series-c-10-3b-valuation; treated as a follow-up per §8 (a reader who missed the $10.3B round needs that context), not an in-place update -- the prior article's own 'watch' list anticipated exactly this development. Headline written independently, not reusing Reuters'/TechCrunch's near-identical 'doubles... in a month' framing (verification.md §4.3). cryptobriefing.com (blocked_evidence_domain) surfaced in searches but is not the origin of any claim and was not cited.",
+  "watch": [
+    "Any independent audit or breakdown of Etched's self-reported >$1B customer-contracts figure",
+    "Whether Etched ships hardware at commercial scale beyond the single Jane Street deployment"
+  ],
+  "notes": [
+    "2026-08-19 c4: Published this cycle. Fresh verifier (26 tool uses) and fresh adversarial falsifier (22 tool uses) ran independently and concurrently to fit the ~30-minute cycle window; both reached the same recommendation (publish as follow-up) without seeing each other's output. Neither found any prompt-injection content in fetched sources. WSJ (wsj.com, used via an Investing.com summary since the original is paywalled) is unregistered in sources.yaml -- flagged in this cycle's report for proposed registration, not added directly (policy files off-limits this run)."
+  ]
+}

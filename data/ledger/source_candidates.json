@@ -1,4 +1,15 @@
 {
+  "candidates_2026-08-19_c4": [
+    {
+      "domain": "wsj.com",
+      "first_seen": "2026-08-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.investing.com/news/company-news/etched-seeks-20-billion-valuation-in-new-ai-chip-funding-round--wsj-reports-4799566"
+      ],
+      "context": "Used (via an Investing.com summary, WSJ original paywalled) as evidence for etched-21b-valuation-round to establish that the mid-July 'in talks' report and the 18 August closed round are the same deal. Both the verifier and falsifier sub-agents flagged wsj.com as unregistered in sources.yaml despite being clearly Tier 2 (named-byline, editorial standards); propose registration."
+    }
+  ],
   "candidates_2026-08-18_c3_night2": [
     {
       "domain": "time.com",

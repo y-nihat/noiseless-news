@@ -1,0 +1,61 @@
+{
+    "slug": "etched-21b-valuation-round",
+    "checked_at": "2026-08-19T00:05:00+00:00",
+    "method": "Fresh verifier sub-agent and independent adversarial falsifier sub-agent, run concurrently per policy/verification.md §5 (time-boxed cycle). Business claim type (>=2 independent Tier<=2 sources or company statement required); explicit wire-exclusive check run against the swarm of Reuters-relay aggregator outlets.",
+    "origin_items": [
+        "Surfaced via this cycle's gnews-ai-chips-and-compute feed (Reuters-bylined item and aggregator relays, ~2026-08-18T15:11-19:06 UTC). dedup-check before opening returned a strong (exit 2) match against etched-series-c-10-3b-valuation -- read that entry and its article: it already flagged an unclosed ~$20B Jane Street-led round reported by WSJ in mid-July as a watch item, anticipating this exact follow-up. Treated as a follow-up (follows: etched-series-c-10-3b-valuation) per the §8 follow-up test, not an in-place update -- a reader who missed the original $10.3B round needs that context."
+    ],
+    "claims": [
+        {
+            "text": "Etched raised $700 million in a new funding round, reaching a $21 billion valuation, announced 18 August 2026",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed via three independent origins: Etched's own GlobeNewswire press release (Tier 0, on-record CEO quote), TechCrunch's own reporting (Tier 2, byline Julie Bort, contains an on-record quote from co-founder/COO Robert Wachen not present in the press release -- independent access, not a rewrite), and Reuters' own wire reporting (Tier 2, bylined Prakhar Srivastava and Pragyan Kalita, includes an independent skeptical analyst quote not sourced from the company). The aggregator swarm (wmbdradio, TradingView, Moomoo, marketscreener, Finimize, bitcoinworld, mezha, ascendants, TheNextWeb, Dealroom, PYMNTS, Yahoo UK) all relay either the Reuters wire or the GlobeNewswire release and were not counted as separate sources (wire-exclusive check applied, verification.md §2).",
+            "evidence": [
+                "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
+                "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+                "https://www.thestar.com.my/tech/tech-news/2026/08/19/ai-chip-startup-etched-doubles-valuation-to-21-billion-in-under-a-month"
+            ]
+        },
+        {
+            "text": "The round was led by Jane Street, with Kleiner Perkins, Sequoia Capital, Andreessen Horowitz, Tiger Global, Bain Capital Ventures, Neo, Primary, Stripes, Positive Sum, and Blackstone also participating",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Core investor list consistent across Etched's own release, TechCrunch, and Reuters. Etched's own release used as the canonical this-round list; TechCrunch additionally named Peter Thiel, Diffusion Capital and Argo, which the falsifier assessed as likely cumulative/earlier-round backers (already investors per the July article) rather than a factual conflict -- not included in the headline claim to avoid overstating this round's roster.",
+            "evidence": [
+                "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
+                "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/"
+            ]
+        },
+        {
+            "text": "This is the same Jane Street-led round the Wall Street Journal reported was in talks at roughly $20 billion in mid-July 2026, now closed at $21 billion",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Confirmed by triangulation: same lead investor (Jane Street), same 'existing investor' framing, contiguous valuation trajectory ($5B Dec 2025 -> ~$20B WSJ-reported talks mid-July -> $21B closed 18 Aug), no account anywhere of a second, separate Jane Street round. Both verifier and falsifier independently reached this conclusion.",
+            "evidence": [
+                "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html",
+                "https://www.investing.com/news/company-news/etched-seeks-20-billion-valuation-in-new-ai-chip-funding-round--wsj-reports-4799566"
+            ]
+        },
+        {
+            "text": "Jane Street is Etched's first customer and has taken delivery of and put into production Etched's first hardware rack",
+            "type": "business",
+            "verdict": "confirmed",
+            "reasoning": "Stated in Etched's own release with a direct quote attributed to Jane Street itself ('We tested the chip and are pleased with the early results'), independently repeated by TechCrunch and Reuters.",
+            "evidence": [
+                "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html"
+            ]
+        },
+        {
+            "text": "Etched says it has secured more than $1 billion in customer contracts",
+            "type": "business",
+            "verdict": "vendor-claim",
+            "reasoning": "Company-reported figure, repeated by TechCrunch and Reuters but with no independent audit or breakdown beyond the named Jane Street relationship -- labeled vendor-claim, not stated as independently confirmed fact, consistent with how the July article treated Etched's pre-order figures.",
+            "evidence": [
+                "https://www.globenewswire.com/news-release/2026/08/18/3347095/0/en/etched-raises-700m-at-a-21b-valuation-and-completes-first-customer-delivery-to-jane-street.html"
+            ]
+        }
+    ],
+    "falsifier_notes": "Overall verdict: SAFE TO PUBLISH as a follow-up. Falsifier independently confirmed this is a genuine new event (the closing of the previously-teased WSJ deal, not a relabeled rumor) and found the independence bar clearly cleared via Etched's and Jane Street's own statements plus TechCrunch's and Reuters' own reporting. No contradicting reports found. Flagged cryptobriefing.com (a registered blocked_evidence_domain) as appearing repeatedly in search results for this story but not the origin of any claim -- excluded from citation. Flagged that Reuters' and TechCrunch's own headlines both center on 'doubles... in a month' -- the published headline was written independently per verification.md §4.3 rather than reusing either.",
+    "gaps_closed_from_watching_state": []
+}
