@@ -1,0 +1,43 @@
+{
+  "slug": "harvey-tenet-launch",
+  "checked_at": "2026-08-19T22:11:00+00:00",
+  "method": "Repair, cycle 1 of night 2026-08-20: the article was published in cycle 2 of night 2026-08-18/19 but its evidence log was never written at publication time. This log is written from verification actually performed now: a fresh verifier sub-agent and a fresh adversarial falsifier sub-agent, neither of which drafted the article, ran independently and in parallel this cycle (budget: 4 web search/fetch tool calls each). Not reconstructed from the article text, the run report, or the ledger's prose.",
+  "origin_items": [],
+  "claims": [
+    {
+      "text": "Harvey announced 'Harvey Tenet' on 18 August 2026, describing it as the company's first model post-trained end-to-end for legal reasoning, as part of a wider 'Harvey II' platform update that also adds persistent memory and personalization across Word, Outlook and Harvey's AI agents",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via direct fetch of Harvey's own primary blog post (Tier 0), byline dated Aug 18, 2026, which states verbatim 'For the first time, Harvey has intelligence trained for legal work' and 'our first model, post-trained end-to-end for legal reasoning,' and confirms the Harvey II memory feature following users 'across Harvey, Word, and Outlook' with agents able to use learned preferences. Independently, the falsifier confirmed the same 18 August date across five independent trade-press outlets (Techmeme/Business Insider, Law.com, Artificial Lawyer, Legal IT Insider, Iberian Lawyer), none suggesting recycled or earlier news.",
+      "evidence": [
+        "https://www.harvey.ai/blog/introducing-harvey-ii",
+        "https://www.techmeme.com/260818/p24",
+        "https://www.law.com/legaltechnews/2026/08/18/harvey-launches-next-generation-of-its-platform-harvey-ii-/",
+        "https://www.artificiallawyer.com/2026/08/18/next-gen-harvey-ii-launches-with-memory-at-its-core/",
+        "https://legaltechnology.com/harvey-ii-launches-with-memory-that-learns-how-individual-lawyers-work/"
+      ]
+    },
+    {
+      "text": "Tenet replaces Harvey's prior approach of building products on top of general-purpose third-party foundation models; Harvey had signaled this in-house research effort publicly for months before today's release",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "The 'replaces prior approach' half is confirmed directly by Harvey's own blog post, which frames Tenet as moving 'beyond reliance on general-purpose models.' The verifier initially found the 'signaled publicly for months' clause unverifiable within its budget, but the falsifier located a dated Law.com article from 18 June 2026, 'Harvey Announces Development of Custom Legal-Specific AI Models,' confirming Harvey had publicly announced this in-house effort roughly two months before the Tenet launch -- resolving the gap. The falsifier also confirmed via OpenAI's own page that Harvey's prior products were fine-tuned on OpenAI's foundation models, consistent with the 'general-purpose third-party foundation models' framing.",
+      "evidence": [
+        "https://www.harvey.ai/blog/introducing-harvey-ii",
+        "https://www.law.com/legaltechnews/2026/06/18/harvey-announces-development-of-custom-legal-specific-ai-models/",
+        "https://openai.com/index/harvey/"
+      ]
+    },
+    {
+      "text": "Harvey says Tenet performs at a frontier level on the company's own legal benchmarks, on par with the strongest general-purpose models, at what Harvey describes as open-source-level cost",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Harvey's own blog states verbatim that 'Harvey Tenet is frontier-level on prominent legal benchmarks, performing on par with the strongest general models' 'at an open-source cost.' Both agents independently searched for independent reproduction or dispute and found none -- no independent lab, law firm or competitor has tested, reproduced or challenged the claim as of one day after launch. Correctly labeled vendor-claim, not confirmed; nothing found justifies escalating it to disputed either.",
+      "evidence": [
+        "https://www.harvey.ai/blog/introducing-harvey-ii"
+      ]
+    }
+  ],
+  "falsifier_notes": "Two caveats surfaced that don't break any claim as worded but are worth recording. (1) Global Legal Post, the article's second cited source, returned HTTP 403 on every fetch attempt by both agents, so its independence from Harvey's own press release is unconfirmed -- circumstantial signs (near-identical description, no distinguishing original quotes visible in search snippets) suggest it may be a press-release rewrite, which would collapse it to the same source as Harvey's blog under verification.md's independence rule. This does not change claim 1's verdict since announcement claims need only one Tier-0 source, met by Harvey's blog alone -- but Law.com, Artificial Lawyer or Business Insider/Techmeme would be stronger independent citations if the article's sources list is ever revised. (2) Business Insider (via Techmeme) reports Tenet was post-trained on top of Kimi K3, an open-weight base model from Moonshot AI -- a detail Harvey's own blog omits. This doesn't contradict the article's carefully worded 'post-trained end-to-end for legal reasoning' phrasing, but means 'in-house'/'proprietary' should not be read as 'built from scratch'; worth a clause if the article is ever revised. Neither finding required downgrading any claim.",
+  "dedup_check": "Per the ledger entry's notes (2026-08-18 c2, night 2): dedup-check returned zero matches at drafting time (genuinely new slug). Not re-run this repair cycle since no new article content is being created, only the missing evidence log."
+}
