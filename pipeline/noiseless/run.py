@@ -107,6 +107,16 @@ def main(argv: list[str] | None = None) -> int:
         metavar="PATH",
         help="also write the findings and the held set as JSON here",
     )
+    content_parser.add_argument(
+        "--brief",
+        action="store_true",
+        help="print the repair queue for the next agent cycle (exit 2 if non-empty)",
+    )
+    content_parser.add_argument(
+        "--staged",
+        action="store_true",
+        help="pre-commit mode: validate only the articles in the git index (exit 1 to refuse)",
+    )
 
     dedup_parser = subparsers.add_parser(
         "dedup-check",
@@ -119,11 +129,17 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
 
-    try:
-        sources = load_sources(REGISTRY_PATH)
-    except SourceRegistryError as exc:
-        print(f"source registry invalid: {exc}", file=sys.stderr)
-        return 1
+    # Only the commands that read the registry load it. validate-content and
+    # publish are about the archive, and validate-content also runs as a
+    # pre-commit hook from whatever directory git is in — a content check must
+    # not fail because policy/sources.yaml is not under the cwd.
+    sources = []
+    if args.command in ("validate-sources", "source-status", "ingest"):
+        try:
+            sources = load_sources(REGISTRY_PATH)
+        except SourceRegistryError as exc:
+            print(f"source registry invalid: {exc}", file=sys.stderr)
+            return 1
 
     if args.command == "validate-sources":
         by_tier: dict[int, int] = {}
@@ -185,6 +201,7 @@ def main(argv: list[str] | None = None) -> int:
         return validate_content_main(
             Path("."), strict=args.strict, warn_as_error=args.warn_as_error,
             max_held=args.max_held, github=args.github, json_path=args.json,
+            brief=args.brief, staged=args.staged,
         )
 
     if args.command == "dedup-check":

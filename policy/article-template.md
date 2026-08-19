@@ -93,3 +93,50 @@ Required on every entry: `slug`, `title`, `status`, `first_seen`, `source_urls`.
 - **Dated notes go in the `notes` array**, not in new top-level keys. One entry
   had grown to 37 keys of near-identical nightly prose.
 - `follows` mirrors the article frontmatter for follow-ups (verification.md §8).
+
+## Evidence log format
+
+One file per **published** story at `data/verified/<slug>.json`. This is the
+audit trail the site's credibility rests on: the article page links to it, and
+`publish.py` reads it to show the verifier's reasoning under each claim. Until
+2026-08-19 it was the one deliverable with no written contract, and it was the
+one that got skipped.
+
+```json
+{
+  "slug": "example-story",
+  "checked_at": "2026-08-19T01:07:00+00:00",
+  "method": "Fresh verifier + fresh adversarial falsifier, both run in cycle 5 of 2026-08-19; ...",
+  "origin_items": ["data/raw/2026-08-18/techmeme.json#item-id", "..."],
+  "claims": [
+    {
+      "text": "The exact claim text as it appears in the article, in order",
+      "type": "fact",
+      "verdict": "confirmed",
+      "reasoning": "What was checked, against what, and why this verdict",
+      "evidence": ["https://example.com/the-specific-page", "..."]
+    }
+  ],
+  "falsifier_notes": "What the adversarial pass tried to break and what happened",
+  "dedup_check": "The dedup-check result and the §8 outcome chosen"
+}
+```
+
+- **The build enforces**: the file exists, parses as a JSON object, and
+  `claims` is a non-empty list. An article whose log fails that is **held**
+  from the site (a stub at its URL, absent from index/feed/sitemap) until it is
+  repaired. Nothing else is enforced by machine today — the fields below are the
+  editorial contract.
+- **Written from verification that actually happened.** `method` names the
+  cycle and date; a log written after publication says so ("re-verified in
+  cycle N of <date>; the original log was not written when the article was
+  published in cycle K of <date>"). Never written from the article text, the
+  run report, the ledger prose or memory; never a stub — a log written by a
+  party that did not verify is a fabricated audit trail, worse than an honest
+  hold.
+- **Written FIRST**, before the article: a timeout then leaves a harmless orphan
+  log, never an unauditable article.
+- One `claims[]` entry per article claim, in the article's order, with the same
+  `text`, `type` and `verdict` — that is what lets the site match reasoning to
+  claims. In-place updates that add claims append here too.
+- `evidence` are deep links, never bare origins.

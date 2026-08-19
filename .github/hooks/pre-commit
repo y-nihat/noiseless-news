@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Refuse to commit an article that is not publishable.
+#
+# Runs for the nightly agent's own `git commit` — and only for the agent's:
+# night_loop.sh points core.hooksPath here through GIT_CONFIG_COUNT on the
+# `claude -p` process, so the supervisor's sweep commit never sees this file.
+#
+# On 2026-08-18 the agent committed two articles without their evidence logs.
+# Everything downstream then did its job — the gate held them, the site did
+# not carry them — but the omission itself was already on main. This is the
+# only point at which the producer is still in the room: the check runs on the
+# INDEX (`git show :path`), so a log that exists on disk but was not `git add`ed
+# is refused, another slug's pre-existing defect does not block this commit,
+# and report-only or ledger-only commits pass untouched. Non-zero aborts the
+# commit; the missing twin and the fix are printed into the agent's output.
+set -uo pipefail
+cd "$(git rev-parse --show-toplevel)" || exit 0
+if [ -n "${NIGHT_STATE_DIR:-}" ]; then
+  echo "pre-commit $(date -u +%H:%M:%S) $(git diff --cached --name-only | wc -l) staged" \
+    >> "$NIGHT_STATE_DIR/hooks.log" 2>/dev/null || true
+fi
+# The pipeline lives next to this hook's repository, not necessarily under the
+# committing repo's cwd (the tests commit in a scratch repo); an explicit
+# PYTHONPATH set by the caller wins.
+HOOK_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+PYTHONPATH="${PYTHONPATH:-$HOOK_ROOT/pipeline}" python -m noiseless.run validate-content --staged
+rc=$?
+if [ "$rc" -ne 0 ] && [ -n "${NIGHT_STATE_DIR:-}" ]; then
+  echo "pre-commit REFUSED" >> "$NIGHT_STATE_DIR/hooks.log" 2>/dev/null || true
+fi
+exit "$rc"

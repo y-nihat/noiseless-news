@@ -336,15 +336,209 @@ def github_annotations(findings: list[Finding], blocked: bool) -> list[str]:
     return lines
 
 
+def _first_published(repo_root: Path, path: str) -> str:
+    """The date the article's file was first committed, or "" outside a repo.
+
+    That is when the story was first *on* main and, until 2026-08-19, on the
+    site — the reader-facing "since when" the repair brief needs, and the
+    difference between "fix it tonight" and "second night: decide now".
+    """
+    import subprocess
+
+    try:
+        # No --follow: articles are never renamed, and rename detection would
+        # match a new article to an older one built from the same template and
+        # report the older one's date.
+        out = subprocess.run(
+            ["git", "log", "--diff-filter=A", "--format=%cs", "--", path],
+            cwd=repo_root, capture_output=True, text=True, timeout=30,
+        ).stdout.split()
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    return out[-1] if out else ""
+
+
+def repair_brief(repo_root: Path | str, today: str = "") -> tuple[str, int]:
+    """The repair queue the next cycle's prompt opens with. Returns (markdown, held count).
+
+    Recomputed from the archive at every cycle start, so it carries across
+    nights with no state file to forge, forget or go stale. This is what closes
+    the loop the night of 2026-08-18 lacked: the gate tripped in cycle 2 and
+    cycles 3-6 each ran a fresh session that was never told.
+    """
+    from datetime import date
+
+    repo_root = Path(repo_root)
+    held = held_slugs(validate(repo_root))
+    if not held:
+        return (
+            "REPAIR QUEUE: empty — the archive is clean. Before your first commit "
+            "tonight, run `PYTHONPATH=pipeline python -m noiseless.run validate-content "
+            "--strict` once and keep it clean.",
+            0,
+        )
+    today_d = date.fromisoformat(today) if today else date.today()
+    lines = [
+        f"REPAIR QUEUE — {len(held)} story(ies) are HELD from the site. Do these "
+        "BEFORE step 1, before any new story. A repair does not count against "
+        "your story budget. Repaired stories publish on the next deploy; a story "
+        "still held tomorrow morning is a review item for the owner.",
+        "",
+    ]
+    for slug, findings in sorted(held.items()):
+        checks = sorted({f.check for f in findings})
+        since = _first_published(repo_root, findings[0].path) if findings[0].path else ""
+        nights = ""
+        if since:
+            try:
+                age = (today_d - date.fromisoformat(since)).days
+                nights = f" — first published {since}" + (
+                    f", held for {age} night(s): SECOND-NIGHT RULE applies — complete "
+                    "the repair now or withdraw" if age >= 2 else ""
+                )
+            except ValueError:
+                nights = f" — first published {since}"
+        lines.append(f"- `{slug}` ({', '.join(checks)}){nights}")
+        for finding in findings:
+            lines.append(f"    - {finding.check}: {finding.detail}")
+        for check in checks:
+            fix = FIX_TEXT.get(check)
+            if fix:
+                lines.append(f"    - FIX ({check}): {fix.replace('<slug>', slug)}")
+        lines.append(
+            "    - THEN: `PYTHONPATH=pipeline python -m noiseless.run validate-content "
+            "--strict` must no longer list this slug; commit as `Repair: "
+            f"{slug}`; push; add a `Repair:` line to your report section."
+        )
+    lines.append("")
+    lines.append(
+        "Never write an evidence log from the article text, the run report, the "
+        "ledger prose or memory, and never a stub — a log written by a party that "
+        "did not verify is a fabricated audit trail, which is worse than an honest "
+        "hold. If your budget runs out mid-repair, leave the story held; do not "
+        "withdraw for lack of time."
+    )
+    return "\n".join(lines), len(held)
+
+
+def _staged_slugs(repo_root: Path) -> tuple[set[str], list[str]]:
+    """Slugs touched by the index, and the staged paths, from `git diff --cached`."""
+    import subprocess
+
+    out = subprocess.run(
+        ["git", "diff", "--cached", "--name-only", "--diff-filter=AMD"],
+        cwd=repo_root, capture_output=True, text=True, check=True,
+    ).stdout.split()
+    slugs: set[str] = set()
+    for path in out:
+        parts = Path(path).parts
+        if len(parts) >= 3 and parts[0] == "content" and parts[1] == "articles":
+            slugs.add(Path(path).stem)
+        elif len(parts) == 3 and parts[0] == "data" and parts[1] in ("verified", "ledger"):
+            slugs.add(Path(path).stem)
+    return slugs, out
+
+
+def check_staged(repo_root: Path | str) -> list[Finding]:
+    """Validate what is about to be COMMITTED — the index, not the tree.
+
+    The pre-commit hook. It exports each touched slug's four twins from the
+    index into a temp tree and validates that, so an evidence log that exists
+    on disk but was not `git add`ed fails, and another slug's pre-existing
+    defect does not block this commit. Report-only and ledger-only commits
+    touch no article and pass. Whole-tree checks were rejected for the hook
+    because they refuse an agent's unrelated good commit while another slug
+    is red, and create an incentive to un-publish someone else's story to land
+    your own.
+    """
+    import shutil
+    import subprocess
+    import tempfile
+
+    repo_root = Path(repo_root)
+    slugs, staged = _staged_slugs(repo_root)
+    article_touch = [p for p in staged if p.startswith("content/articles/")]
+    if not article_touch:
+        return []
+
+    tmp = Path(tempfile.mkdtemp(prefix="staged-"))
+    try:
+        for slug in slugs:
+            for rel in (
+                *(f"content/articles/{lang}/{y}/{m}/{slug}.md"
+                  for lang in ("en", "tr")
+                  for y, m in _year_months(repo_root, staged, slug)),
+                f"data/verified/{slug}.json",
+                f"data/ledger/{slug}.json",
+            ):
+                blob = subprocess.run(
+                    ["git", "show", f":{rel}"], cwd=repo_root,
+                    capture_output=True, text=True,
+                )
+                if blob.returncode == 0:
+                    target = tmp / rel
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_text(blob.stdout, encoding="utf-8")
+        found = [f for f in validate(tmp) if f.level == "ERROR" and f.slug in slugs]
+        # Only slugs whose ARTICLE is being committed are this commit's business.
+        touched_articles = {Path(p).stem for p in article_touch}
+        return [f for f in found if f.slug in touched_articles]
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def _year_months(repo_root: Path, staged: list[str], slug: str) -> set[tuple[str, str]]:
+    """The YYYY/MM directories this slug's article lives in — staged or in HEAD."""
+    import subprocess
+
+    found: set[tuple[str, str]] = set()
+    for path in staged:
+        parts = Path(path).parts
+        if len(parts) == 6 and parts[:2] == ("content", "articles") and Path(path).stem == slug:
+            found.add((parts[3], parts[4]))
+    if not found:
+        ls = subprocess.run(
+            ["git", "ls-files", f"content/articles/*/*/*/{slug}.md"],
+            cwd=repo_root, capture_output=True, text=True,
+        ).stdout.split()
+        for path in ls:
+            parts = Path(path).parts
+            if len(parts) == 6:
+                found.add((parts[3], parts[4]))
+    return found
+
+
 def main(repo_root: Path | str, *, strict: bool, warn_as_error: bool,
          max_held: int | None = None, github: bool = False,
-         json_path: Path | str | None = None) -> int:
+         json_path: Path | str | None = None, brief: bool = False,
+         staged: bool = False) -> int:
     """Exit 0 clean, 0 held-within-ceiling, 2 blocked.
 
     --strict alone: any ERROR exits 2 (a code PR should not merge with one).
     --strict --max-held N: ERRORs hold their stories; exit 2 only past N.
     """
     repo_root = Path(repo_root)
+    if brief:
+        text, held_count = repair_brief(repo_root)
+        print(text)
+        return 2 if held_count else 0
+    if staged:
+        found = check_staged(repo_root)
+        if not found:
+            return 0
+        import sys
+
+        print("commit refused — the article(s) being committed are not publishable:",
+              file=sys.stderr)
+        for finding in found:
+            print(f"  [{finding.check}] {finding.slug}: {finding.detail}", file=sys.stderr)
+            if finding.fix:
+                print(f"    FIX: {finding.fix.replace('<slug>', finding.slug)}", file=sys.stderr)
+        print("Stage the missing twin (data/verified, data/ledger, the Turkish "
+              "article) in the SAME commit and try again. Report-only commits are "
+              "never refused.", file=sys.stderr)
+        return 1
+
     findings = validate(repo_root)
     count = len(load_articles(repo_root / "content", "en"))
     print(report(findings, count))

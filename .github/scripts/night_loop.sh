@@ -343,12 +343,25 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
     watching="only re-check a watching-state ledger entry if this cycle's fresh ingest or sweep mentions it — otherwise leave watching stories alone (they were checked in cycle 1 and will be re-checked in the final cycle)."
   fi
 
-  if [ "$stories" -eq 0 ] && [ "$is_final" -eq 0 ]; then
+  # The repair queue: what the archive says is held right now, rendered as the
+  # cycle's step 0. Recomputed from the tree at every cycle start, so it needs
+  # no state file and carries across nights. This is the loop the night of
+  # 2026-08-18 lacked — the gate tripped in cycle 2 and cycles 3-6 each ran a
+  # fresh session that was never told what to fix.
+  PYTHONPATH=pipeline python -m noiseless.run validate-content --brief \
+    > "$NIGHT_STATE_DIR/repair-$cycle.md" 2>/dev/null
+  repairs_pending=$(( $? == 2 ? 1 : 0 ))
+  [ -s "$NIGHT_STATE_DIR/repair-$cycle.md" ] \
+    || echo "REPAIR QUEUE: could not be computed — run validate-content --strict before your first commit." \
+       > "$NIGHT_STATE_DIR/repair-$cycle.md"
+
+  if [ "$stories" -eq 0 ] && [ "$is_final" -eq 0 ] && [ "$repairs_pending" -eq 0 ]; then
     log "night story cap reached — skipping agent cycle $cycle"
     sleep_secs=$((SLOT_END - $(date -u +%s)))
     [ "$sleep_secs" -gt 0 ] && sleep "$sleep_secs"
     continue
   fi
+  [ "$repairs_pending" -eq 1 ] && log "cycle $cycle: repair queue is non-empty — the agent runs even at the story cap"
 
   CYCLE_DEADLINE=$(date -u -d "@$((SLOT_END - 120))" +%H:%M)
   sed -e "s/{{CYCLE_NUMBER}}/$cycle/g" \
@@ -361,6 +374,10 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
       -e "s|{{SWEEP_INSTRUCTION}}|$sweep|g" \
       -e "s|{{WATCHING_INSTRUCTION}}|$watching|g" \
       -e "s|{{FINAL_NOTE}}|$final_note|g" \
+      -e "/{{REPAIR_INSTRUCTION}}/{
+r $NIGHT_STATE_DIR/repair-$cycle.md
+d
+}" \
       .github/cycle-prompt.md > "$NIGHT_STATE_DIR/prompt-$cycle.md"
   if grep -q '{{' "$NIGHT_STATE_DIR/prompt-$cycle.md"; then
     log "ERROR: unrendered placeholder in cycle prompt"; grep -o '{{[A-Z_]*}}' "$NIGHT_STATE_DIR/prompt-$cycle.md" | sort -u
@@ -377,11 +394,25 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   # verification agents. Neither had ever been passed it: `git log -S"--effort"`
   # returns no commit in the repository's history, so every night since the
   # first ran at the CLI default while two documents said otherwise.
+  # The agent's own `git commit` runs .github/hooks/pre-commit, which refuses
+  # an article whose evidence log, ledger entry or Turkish twin is not in the
+  # index and prints the missing file and the fix into the agent's Bash
+  # output. That is the structural prevention: the article that started the
+  # night of 2026-08-18 could not have been committed. It is scoped to the
+  # agent's PROCESS through git's documented GIT_CONFIG_COUNT/KEY/VALUE runtime
+  # config, so the supervisor's own commit_push is never refused — its sweep
+  # commit must land, since the runner is destroyed at the end of the job and
+  # the repository is the audit trail. The bypasses are closed on the agent's
+  # Bash: `--no-verify`, and re-pointing or unsetting core.hooksPath.
+  GIT_CONFIG_COUNT=1 \
+  GIT_CONFIG_KEY_0=core.hooksPath \
+  GIT_CONFIG_VALUE_0="$PWD/.github/hooks" \
   timeout "$CYCLE_TIMEOUT" claude -p "$(cat "$NIGHT_STATE_DIR/prompt-$cycle.md")" \
     --model claude-sonnet-5 \
     --effort max \
     --max-turns "$MAX_TURNS" \
     --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch" \
+    --disallowedTools "Bash(*--no-verify*),Bash(*hooksPath*),Bash(*GIT_CONFIG_*)" \
     --output-format stream-json --verbose \
     | tee "$NIGHT_STATE_DIR/claude-stream-$cycle.jsonl" \
     | python3 .github/scripts/stream_summary.py
@@ -429,6 +460,7 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
 done
 
 new_articles=$(git log --since="$NIGHT_START_ISO" --diff-filter=A --name-only --pretty=format: -- 'content/articles/en/*' | grep -c '\.md$' || true)
+repairs_done=$(git log --since="$NIGHT_START_ISO" --format=%s | grep -c '^Repair: ' || true)
 updated_articles=$(git log --since="$NIGHT_START_ISO" --diff-filter=M --name-only --pretty=format: -- 'content/articles/en/*' | grep -c '\.md$' || true)
 published_total=$new_articles
 # Sum tonight's per-cycle costs. check_result.py writes one record per cycle;
