@@ -1,0 +1,52 @@
+{
+  "slug": "zhipu-glm-5-3-launch",
+  "checked_at": "2026-08-19T22:11:00+00:00",
+  "method": "Repair, cycle 1 of night 2026-08-20: the article was published in cycle 2 of night 2026-08-18/19 but its evidence log was never written at publication time. This log is written from verification actually performed now: a fresh verifier sub-agent and a fresh adversarial falsifier sub-agent, neither of which drafted the article, ran independently and in parallel this cycle (budget: 4 web search/fetch tool calls each). Not reconstructed from the article text, the run report, or the ledger's prose.",
+  "origin_items": [],
+  "claims": [
+    {
+      "text": "Zhipu (Z.ai) released GLM-5.3 on 14 August 2026 via its GLM Coding Plan and API, positioned as 'Built to Code. Ready for Cyber Defense'",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via direct fetch of Zhipu's own primary page (zhipuai.cn/zh/research/162) this cycle, and independently via Z.ai's own X/Twitter account using the exact tagline 'Built to Code. Ready for Cyber Defense.' Both verifier and falsifier independently confirmed the 14 August 2026 date and coding-plan/API distribution; the falsifier additionally found four independent trade/tech outlets (MLQ, ExplainX, StartupFortune, SCMP) corroborating the same date and framing.",
+      "evidence": [
+        "https://www.zhipuai.cn/zh/research/162",
+        "https://x.com/Zai_org/status/2088132965922476159",
+        "https://www.scmp.com/tech/big-tech/article/3364077/zhipu-launches-flagship-model-glm-53-china-seeks-mythos-level-edge-cyber-defence"
+      ]
+    },
+    {
+      "text": "Zhipu is holding back GLM-5.3's open-weight release, and access to some of its more sensitive cybersecurity-related features, for about two weeks after launch to complete additional safety assessment and hardening -- a timeline it announced alongside the launch itself, not a delay from an earlier promised date",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Zhipu's own primary page states weights open two weeks after launch for 'safety assessment and model hardening,' framed as the plan announced at launch. Neither agent found any source describing an earlier promised release date that slipped. The falsifier specifically checked whether some aggregator 'delay' framing (e.g. 'Z.ai Delays GLM-5.3 AI Model Release After Unexpected Hacking Skills Emerge') had substance and found only that a few outlets use loose delay/hold language relative to the norm of immediate open-weight release -- none identify a specific broken earlier commitment, confirming the article's more precise framing over the loose aggregator framing.",
+      "evidence": [
+        "https://www.zhipuai.cn/zh/research/162",
+        "https://mlq.ai/news/zhipu-releases-glm-53-through-its-coding-service-with-weights-still-two-weeks-away/"
+      ]
+    },
+    {
+      "text": "GLM-5.3 in its maximum-reasoning configuration scores 60 on the Artificial Analysis Intelligence Index, ranking it #8 of 181 tracked models and putting it on par with Kimi K3, below Opus 5 (~63) and Fable 5 (~62)",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Live-fetched artificialanalysis.ai/models/glm-5-3 this cycle (2026-08-19): confirmed score 60, rank #8, out of 182 tracked models (the article's '181' is a one-model drift from ordinary leaderboard movement since publication, immaterial to the ranking claim). The falsifier independently re-confirmed the same score/rank/Kimi K3 tie/Opus 5 (63) figures a day after publication via independent outlets and Artificial Analysis's own account, with no drift detected. Neither agent could independently corroborate the specific 'Fable 5 (~62)' comparator within budget -- the verifier found AA renders peer comparison as a chart, not extractable text, and the falsifier's searches didn't surface it, though nothing contradicts it either. Flagged as a minor unconfirmed sub-detail; the load-bearing score/rank/Kimi-K3 comparison is independently confirmed live, so the claim stands as confirmed.",
+      "evidence": [
+        "https://artificialanalysis.ai/models/glm-5-3 (live-fetched 2026-08-19)",
+        "https://www.unite.ai/glm-5-3-scores-60-on-artificial-analysis-intelligence-index-matching-kimi-k3/",
+        "https://x.com/ArtificialAnlys/status/2089830890709135426"
+      ]
+    },
+    {
+      "text": "Zhipu reports GLM-5.3 leads rival models it compared against on a vulnerability-identification benchmark (CyberGym, 84.5%) but trails well behind on a benchmark measuring completion of full exploit chains (ExploitBench, 54.4%, versus a rival score in the high 70s); these are Zhipu's own self-reported, self-benchmarked figures and have not been independently reproduced",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Zhipu's own page lists CyberGym 84.5% (vs GLM-5.2 77.2%, Mythos 5 83.8%, GPT-5.6 Sol 83.6%) and ExploitBench 54.4% (vs Mythos 5 78.0%, GPT-5.6 Sol 76.5%), matching the article's figures exactly; these benchmarks are absent from Artificial Analysis's independent tracker, confirming self-reported status. The falsifier separately confirmed zero independent safety-body (AISI/METR/SaferAI) evaluation of GLM-5.3 itself exists yet -- the only AISI reference found evaluates the earlier GLM-5.2 -- consistent with GLM-5.3's weights not yet being public. Vendor-claim label is correct.",
+      "evidence": [
+        "https://www.zhipuai.cn/zh/research/162",
+        "https://www.developer-tech.com/news/z-ai-glm-5-3-cybergym-cybersecurity-ai-model-benchmark/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Checked whether the 'delay' framing used by some low-tier aggregators has real substance: only partial, and not in the way those headlines imply -- no source shows an earlier promised release date that slipped; a few otherwise-reputable outlets (Axios, the-decoder) use loose 'delay'/'holds' language relative to the norm of immediate open-weight release, which is different from breaking a specific Zhipu commitment, and the article correctly avoids that framing. Separately checked whether the vulnerability-chaining capability 'unexpectedly emerged' or was an intentional design goal: found both are true depending on the sub-capability -- the overall cyber-defense positioning and vulnerability-discovery focus (CyberGym-style) was clearly deliberate and marketed, but Zhipu's own account describes the model's ability to chain discovered vulnerabilities into full autonomous exploit chains (ExploitBench-type capability) as exceeding what was intentionally targeted, i.e. genuinely emergent for that narrower sub-capability. The article does not take a position on this distinction either way, so no change is needed, but it is flagged here for any future follow-up. No independent safety-body evaluation of GLM-5.3 exists yet since weights are not public until roughly 28 August.",
+  "dedup_check": "Per the ledger entry's notes (2026-08-18 c2, night 2): dedup-check returned zero matches at drafting time (genuinely new slug, nothing in the archive under any prior GLM-5.3 entry). Not re-run this repair cycle since no new article content is being created, only the missing evidence log."
+}
