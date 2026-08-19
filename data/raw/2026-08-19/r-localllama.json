@@ -308,5 +308,15 @@
     "published": "2026-08-19T20:42:36+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>After reading this tweet: <a href=\"https://x.com/scaling01/status/2089784644400976254\">https://x.com/scaling01/status/2089784644400976254</a> where the author says Qwen3.8 27B is not comparable to Opus, I had to try it out myself.</p> <p>First of: GPT 5.6 Sol (High) <em>also</em> failed the task and gave me a blank screen on the first try.</p> <p>And the author seemingly tried a one-shot prompt without a coding harness. I used the exact same prompt with pi and my limited hardware aka 5080 16GB. Meaning IQ3_XSS with 96k context only.</p> <p>The result didn't work first try: screen stayed blue/black. After telling that the model though, the second round fixed it and the whole thing works flawlessly. Took 42min.</p> <p>Messages: 2 user, 65 assistant, 62 tool results, 2 compactions Tool Calls: 62 Tokens:↑182k ↓125k R3.6M</p> <ul> <li>Result: <a href=\"https://danmoreng.github.io/qwen3.8-27B-fluid-simulation/\">https://danmoreng.github.io/qwen3.8-27B-fluid-simulation/</a></li> <li>Trace: <a href=\"https://danmoreng.github.io/qwen3.8-27B-fluid-simulation/trace/\">https://danmoreng.github.io/qwen3.8-27B-fluid-simulation/trace/</a></li> <li>Repo: <a href=\"https://github.com/Danmoreng/qwen3.8-27B-fluid-simulation\">https://github.com/Danmoreng/qwen3.8-27B-fluid-simulation</a></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Danmoreng\"> /u/Danmoreng </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsyj2o/fluid_simulation_qwen38_27b_iq3_xxs/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsyj2o/fluid_simulation_qwen38_27b_iq3_xxs/\">[comments]</a></span>",
     "fetched_at": "2026-08-19T22:38:32.263857+00:00"
+  },
+  {
+    "id": "032e856592924edb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anyone NOT on full auto when coding with local LLMs?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vt0y1g/anyone_not_on_full_auto_when_coding_with_local/",
+    "published": "2026-08-19T22:14:52+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Would love to know who's letting a 9B just go ham locally, haha</p> <p>But in all seriousness, how many of you are keeping to manual or manual-ish dev workflows?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BatPlack\"> /u/BatPlack </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vt0y1g/anyone_not_on_full_auto_when_coding_with_local/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vt0y1g/anyone_not_on_full_auto_when_coding_with_local/\">[comments]</a></span>",
+    "fetched_at": "2026-08-19T23:13:32.901082+00:00"
   }
 ]
