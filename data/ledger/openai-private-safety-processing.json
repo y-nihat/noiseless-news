@@ -1,0 +1,25 @@
+{
+  "slug": "openai-private-safety-processing",
+  "title": "OpenAI previews Private Safety Processing, a zero-retention misuse detector",
+  "status": "published",
+  "first_seen": "2026-08-19",
+  "published_at": "2026-08-19",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+    "https://www.bloomberg.com/news/articles/2026-08-19/openai-to-enhance-safety-processes-for-paid-tool-customers",
+    "https://www.axios.com/2026/08/19/openai-previews-zero-retention-safety-system-as-anthropic-requires-data-logs"
+  ],
+  "follows": null,
+  "public": true,
+  "open_obligation": true,
+  "revisit_after": "2026-09-28",
+  "reason": "Published same-day: Tier-0 primary (OpenAI's own post) plus independent Tier-2-qualifying corroboration (Bloomberg, Axios; the verifier also found Reuters, MarketScreener and News.az independently covering it), no discrepancies, no disputing coverage found. open_obligation set because Private Safety Processing is announced-but-unshipped -- currently in early-customer testing only, with a broader rollout and technical white paper OpenAI says are planned for September 2026.",
+  "watch": [
+    "The September 2026 broader rollout and technical white paper actually landing, slipping, or being scoped down",
+    "Any independent technical review of whether the 'safety signal' mechanism can indirectly leak customer content"
+  ],
+  "notes": [
+    "2026-08-19 c3: Published. Fresh verifier + fresh adversarial-falsifier sub-agents run in parallel, neither having drafted the story. All 5 claims confirmed, with independent corroboration beyond the minimum bar (Bloomberg, Reuters, Axios, MarketScreener, News.az). Falsifier flagged that ZDR itself is not new (in place since 2023) -- article frames it as reaffirmed/extended, not new. Falsifier also flagged the same-day context of OpenAI's Astra cyber-risk/RL-pause disclosure (already covered at openai-astra-critical-cyber-capabilities and its follow-up openai-preparedness-framework-rewrite); one context sentence and citation added to Why It Matters rather than let the announcement read as isolated good news. Bloomberg and Axios used as unregistered-but-Tier-2-qualifying sources per verification.md SS1's exception, logged to source_candidates.json for registration review."
+  ]
+}

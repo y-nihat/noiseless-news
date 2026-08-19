@@ -1,0 +1,62 @@
+{
+  "slug": "openai-private-safety-processing",
+  "checked_at": "2026-08-19T23:24:00+00:00",
+  "method": "Fresh verifier and fresh adversarial-falsifier sub-agents, run in parallel in cycle 3 of the night of 2026-08-19/20, neither having drafted the story nor seen the other's output. Both worked from OpenAI's 19 August primary announcement; direct WebFetch of openai.com (and, incidentally, of axios.com, marketscreener.com and techmeme.com) returned HTTP 403 in this environment -- a known blocker for openai.com -- so both agents relied on site-scoped web search and independent press corroboration instead, per the standing fallback for blocked Tier-0 sources.",
+  "origin_items": [
+    "data/raw/2026-08-19/openai-news.json#df8f12302a5b421a (\"Offering Zero Data Retention for frontier models\", published 19:00 UTC)",
+    "data/raw/2026-08-19/techmeme.json (Ina Fried/Axios item, \"OpenAI is testing Private Safety Processing...\", 17:20 UTC)"
+  ],
+  "claims": [
+    {
+      "text": "OpenAI's Zero Data Retention (ZDR) terms mean prompts and responses submitted by eligible API customers are not retained once a request is processed, are not available to OpenAI staff for review, and are not used to train its models unless the customer opts in",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed near-verbatim against OpenAI's own post via search synthesis (direct fetch blocked, 403). The verifier notes one nuance not carried into the claim: the primary source describes a legal carve-out retaining CSAM-flagged images for manual review/reporting even under ZDR -- doesn't contradict the claim as scoped (general prompts/responses) but is why the article doesn't state the policy in absolute terms. The falsifier separately confirmed ZDR itself is not new -- OpenAI has offered a form of it since 2023 -- so the article frames this as a reaffirmation/extension, not a new policy.",
+      "evidence": [
+        "https://openai.com/index/offering-zero-data-retention-for-frontier-models"
+      ]
+    },
+    {
+      "text": "OpenAI is previewing a new system, Private Safety Processing, that aims to detect misuse patterns across a customer's related interactions by sending OpenAI only a narrowly defined safety signal rather than the underlying prompts or responses; customer data can remain on the customer's infrastructure or be stored by OpenAI encrypted with customer-controlled keys, while remaining compatible with ZDR",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed by both agents against the primary source and independently corroborated by Bloomberg, Reuters (via TradingView), Axios and MarketScreener, none citing each other's copy. On whether this is genuinely new rather than a rebrand: the primary source itself frames it as building on and extending existing ZDR-compatible protections, not renaming a shipped feature, and it is explicitly in preview/testing with early customers only -- the falsifier found no evidence it was previously announced under a different name. Both agents looked for named security/privacy researcher critique of the mechanism itself and found none yet (only general, unrelated OpenAI safety-culture criticism) -- flagged as a structurally open question given the announcement is same-day, not a debunked claim.",
+      "evidence": [
+        "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+        "https://www.bloomberg.com/news/articles/2026-08-19/openai-to-enhance-safety-processes-for-paid-tool-customers",
+        "https://www.axios.com/2026/08/19/openai-previews-zero-retention-safety-system-as-anthropic-requires-data-logs"
+      ]
+    },
+    {
+      "text": "Private Safety Processing is currently being tested with early enterprise and API customers; OpenAI says it plans a broader rollout and a technical white paper in September 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed as OpenAI's stated plan, corroborated across Axios and a third outlet (News.az). The falsifier specifically checked OpenAI's track record on self-announced timelines and found a real pattern of slippage elsewhere (ChatGPT 'Adult Mode', a voice-assistant feature) -- no precedent found of a privacy-feature timeline specifically slipping, so this isn't a direct contradiction, but the article reports September as OpenAI's stated intention rather than a guarantee, and the ledger sets an open_obligation to check whether it lands.",
+      "evidence": [
+        "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+        "https://www.axios.com/2026/08/19/openai-previews-zero-retention-safety-system-as-anthropic-requires-data-logs"
+      ]
+    },
+    {
+      "text": "The new system is scoped to enterprise and API customers and does not currently extend to consumer ChatGPT subscription plans",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed cleanly by both agents; Bloomberg's own headline is \"OpenAI to Enhance Safety Processes for Paid Tool Customers\" and no source found suggests consumer ChatGPT inclusion.",
+      "evidence": [
+        "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+        "https://www.bloomberg.com/news/articles/2026-08-19/openai-to-enhance-safety-processes-for-paid-tool-customers"
+      ]
+    },
+    {
+      "text": "OpenAI has separately said its unreleased Astra model may cross its highest cyber-risk threshold, and paused related reinforcement-learning work pending additional safeguards",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Already-verified fact from this site's own published reporting (openai-astra-critical-cyber-capabilities, published 2026-08-07, and its follow-up openai-preparedness-framework-rewrite, published 2026-08-18) -- reused here as same-day editorial context per the falsifier's finding below, citing the original Tier-0 primary rather than re-verifying from scratch.",
+      "evidence": [
+        "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities"
+      ]
+    }
+  ],
+  "falsifier_notes": "Used all 8 allotted tool calls. Searched for any denial or walk-back of the four claims (found none). Checked whether ZDR itself or Private Safety Processing had been announced before under another name (ZDR: yes, in place since 2023, so the article must not present it as new; Private Safety Processing: no prior-name evidence found, Techmeme's own framing calls it 'a new technique'). Checked for named researcher skepticism of the mechanism (none found specific to this feature). Checked OpenAI's history of slipping self-announced timelines (real pattern exists elsewhere, no direct precedent on privacy features -- basis for hedging the September claim as a stated plan). Most significant finding: the same news cycle carries OpenAI's disclosure of a deliberate slowdown -- a pause in RL training on models bound for deployment and stricter controls on the unreleased 'Astra' model after internal testing suggested it could reach 'critical' cybersecurity capability -- which this site already covered at openai-astra-critical-cyber-capabilities and openai-preparedness-framework-rewrite. Recommended the article not present the ZDR/Private Safety Processing news as an isolated feel-good announcement without that context; one sentence and a citation were added to \"Why it matters\" rather than opening this as a separate claim requiring fresh verification. Also flagged, purely as a tooling anomaly and not used in the article: a search-synthesis pass over unrelated Axios framing (an Anthropic-comparison angle this article does not cover) rendered Anthropic's model names as strings that did not match any real Anthropic product -- noted so the synthesis layer isn't trusted blindly if that angle is revisited later, but it did not affect any of the four OpenAI-side claims above, all of which were corroborated consistently across multiple independent named-byline outlets.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"OpenAI offers Zero Data Retention for frontier models, previews Private Safety Processing\" --url \"https://openai.com/index/offering-zero-data-retention-for-frontier-models\" returned exit 0 with one coincidental moderate match (score 0.4) against openai-safety-heidecke-departure (dropped, an unrelated safety-team-reorganization rumor from 2026-07-12) -- no shared source URLs, title similarity only on 'OpenAI'/'safety'. Treated as standalone: new story, no follow-up relationship."
+}
