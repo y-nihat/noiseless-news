@@ -1,4 +1,24 @@
 {
+  "candidates_2026-08-19_c3": [
+    {
+      "domain": "bloomberg.com",
+      "first_seen": "2026-08-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.bloomberg.com/news/articles/2026-08-19/openai-to-enhance-safety-processes-for-paid-tool-customers"
+      ],
+      "context": "Used for openai-private-safety-processing as independent Tier-2-qualifying corroboration of OpenAI's Private Safety Processing preview -- named byline, own reporting (not a relay of another outlet), editorial standards. Bloomberg has recurred as evidence across multiple nights now (also used unregistered in stripe-openrouter-acquisition, cycle 2 tonight); propose registration as a named Tier 2 source rather than continuing to log it ad hoc each time it is used."
+    },
+    {
+      "domain": "axios.com",
+      "first_seen": "2026-08-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.axios.com/2026/08/19/openai-previews-zero-retention-safety-system-as-anthropic-requires-data-logs"
+      ],
+      "context": "Used for openai-private-safety-processing as independent Tier-2-qualifying corroboration (Ina Fried, named byline). Direct WebFetch of axios.com returned HTTP 403 in this environment this cycle; evidence rests on search-snippet synthesis, consistent with the openai.com blocker pattern. Has also surfaced as a candidate lead in earlier nights (e.g. the stripe-openrouter-acquisition watching notes, 2026-08-17). Propose registration as Tier 2, with a note that direct fetch may need the same site-scoped-search fallback as openai.com/x.ai/zhipuai.cn."
+    }
+  ],
   "candidates_2026-08-19_c5": [
     {
       "domain": "forbes.com",
