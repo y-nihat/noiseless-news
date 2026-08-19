@@ -8,17 +8,20 @@
   "source_urls": [
     "https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data",
     "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy",
-    "https://www.pacermonitor.com/public/case/59856292/Spirit_Aviation_Holdings,_Inc"
+    "https://www.pacermonitor.com/public/case/59856292/Spirit_Aviation_Holdings,_Inc",
+    "https://www.forbes.com/sites/suzannerowankelleher/2026/08/18/google-train-ai-spirit-airlines-data/"
   ],
   "follows": null,
   "reason": "PUBLISHED 2026-08-17. Surfaced via fresh gnews-ai-litigation ingest this cycle (cycle 3). Google won a bankruptcy auction ($10M, beating Mercor's $7.5M bid) for a batch of defunct Spirit Airlines' internal business data (emails, Teams chats, code, financial/pricing records) for AI training use; customer/loyalty data excluded and PII-scrubbed. Verified via Bloomberg Law (named byline, court-filing-anchored) and Axios (independent court-filing-based reporting, names the PJT Partners banker who filed the deidentification affidavit) -- two independent reporting chains -- plus the underlying bankruptcy case independently confirmed real via three separate docket-tracking sites (case 1:25-bk-11897, SDNY, debtor Spirit Aviation Holdings Inc.), which serves as the policy's alternate qualifying primary-document source. Reuters coverage was visible in search snippets/aggregator relays but no reuters.com original could be located or fetch-confirmed -- deliberately NOT cited as a source. Falsifier pass focused on the independence gap and on catching a headline-falsifiability risk: the sale is NOT yet closed, only won at auction -- court approval hearing is 19 August 2026. Article and headline framed accordingly (\"wins ... auction, pending court approval\", not \"buys\").",
   "watch": [
-    "Whether Judge Sean H. Lane approves the sale at the 19 August 2026 hearing, or whether an objection surfaces beforehand",
-    "Whether any privacy/regulatory challenge (e.g. FTC-style bankruptcy-data-sale scrutiny, as seen in past cases like Toysmart/RadioShack) is raised before the hearing"
+    "Whether a new hearing date is set for the data-sale portion, and whether Judge Sean H. Lane approves, modifies, or rejects the sale",
+    "Whether the AFA-CWA objection is formally entered on the docket, and how the union's stated privacy/worker concerns are addressed",
+    "Whether press coverage (beyond Forbes) independently corroborates the adjournment and the union objection"
   ],
   "open_obligation": true,
-  "revisit_after": "2026-08-19",
+  "revisit_after": "2026-08-21",
   "notes": [
-    "2026-08-17 c3: published. Discovery sweep queries (funding/acquisition/datacenter, index 6-8 per formula) this cycle found nothing new beyond already-published/watching stories; this candidate came from the fresh Tier-3 gnews-ai-litigation ingest delta instead, traced to two independent Tier-2 origins plus the court docket."
+    "2026-08-17 c3: published. Discovery sweep queries (funding/acquisition/datacenter, index 6-8 per formula) this cycle found nothing new beyond already-published/watching stories; this candidate came from the fresh Tier-3 gnews-ai-litigation ingest delta instead, traced to two independent Tier-2 origins plus the court docket.",
+    "2026-08-19 c5: revisit check (revisit_after was today). The 19 August hearing on the data sale specifically was adjourned before it took place, per the case docket (docket #1488, filed 2026-08-18 17:04, 'Notice of Adjournment of Hearing on the Sale of the Deidentified Data') -- confirmed via two independent fetches of the same PacerMonitor docket (the research sub-agent's and my own), converging on the identical docket number/timestamp/filer, which rules out a one-off summarizer error even though both draw on the same underlying document. No new hearing date found yet. Separately, the Association of Flight Attendants-CWA said (per Forbes, single-outlet, contributor byline, quote not independently re-confirmed) that it is filing a court objection; my own docket fetch shows the union listed only as a creditor party, with no objection filing visible in the entries returned, so the claim is published as single-source/attributed, not confirmed fact. In-place update applied to both EN and TR articles (dated changelog entry, revised sale-approval sentence, new paragraph on the objection) rather than a follow-up article -- same event, new procedural details, no new ruling. open_obligation kept true; revisit_after moved to 2026-08-21 pending either a new hearing date or press corroboration."
   ]
 }

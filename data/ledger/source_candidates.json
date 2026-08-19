@@ -1,4 +1,33 @@
 {
+  "candidates_2026-08-19_c5": [
+    {
+      "domain": "forbes.com",
+      "first_seen": "2026-08-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.forbes.com/sites/suzannerowankelleher/2026/08/18/google-train-ai-spirit-airlines-data/"
+      ],
+      "context": "Contributor-byline piece (Suzanne Rowan Kelleher) carrying the only reporting found of the AFA-CWA flight attendants' union's objection to the google-spirit-airlines-data-purchase sale; URL fetch returned 403, used at search-snippet/AI-summary level only, not independently corroborated by a second outlet -- published as single-source/attributed, not confirmed. Forbes contributor pieces vary widely in editorial rigor; flagging for registration discussion rather than an unqualified Tier 2 recommendation."
+    },
+    {
+      "domain": "cerebras.ai",
+      "first_seen": "2026-08-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.cerebras.ai/blog/introducing-cerebras-cs-4"
+      ],
+      "context": "Company's own blog/newsroom for the CS-4 rack-scale inference system launch (2026-08-19 candidate, verification researched but publication deferred to a later cycle for lack of time). Qualifies as Tier 0 primary per verification.md SS1 (official company blog). Propose registration alongside the existing Chinese-lab and hardware-vendor Tier-0 entries."
+    },
+    {
+      "domain": "finance.yahoo.com",
+      "first_seen": "2026-08-19",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://finance.yahoo.com/technology/article/cerebras-says-latest-offering-is-fastest-ai-accelerator-in-the-industry-as-it-takes-aim-at-nvidia-000000090.html"
+      ],
+      "context": "Named byline (Daniel Howley, Technology Editor); same-day independent report on the Cerebras CS-4 launch, explicitly noted no third-party benchmark validation exists for the vendor's Nvidia speed comparison -- useful independence-check discipline. Propose Tier 2."
+    }
+  ],
   "candidates_2026-08-19_c4": [
     {
       "domain": "wsj.com",
