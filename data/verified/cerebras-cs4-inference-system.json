@@ -1,0 +1,50 @@
+{
+  "slug": "cerebras-cs4-inference-system",
+  "checked_at": "2026-08-19T01:07:00+00:00",
+  "method": "Research and multi-agent verification (fresh verifier + fresh independent adversarial falsifier, both run in cycle 5, concurrent per policy/verification.md §5) completed and handed off as a ready-to-draft package; this cycle (6, final) pinned exact citable deep-link URLs via a fresh WebFetch of Cerebras' own blog post and confirmed content, then drafted and published under the cycle's time constraint.",
+  "origin_items": [
+    "Surfaced via cycle 5's triage of tonight's raw ingest (Bloomberg-aggregator lead traced to a real 2026-08-18 Cerebras SUPERNOVA product announcement). dedup-check before opening (re-run cycle 6): zero matches -- standalone."
+  ],
+  "claims": [
+    {
+      "text": "Cerebras unveiled the CS-4, a new rack-scale AI inference system, on 18 August 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via Cerebras' own primary blog post (Tier-0-qualifying, unregistered -- fetched directly this cycle, 2026-08-19) plus independent Tier-2-qualifying corroboration from Yahoo Finance (named byline, Daniel Howley).",
+      "evidence": [
+        "https://www.cerebras.ai/blog/introducing-cerebras-cs-4",
+        "https://finance.yahoo.com/technology/article/cerebras-says-latest-offering-is-fastest-ai-accelerator-in-the-industry-as-it-takes-aim-at-nvidia-000000090.html"
+      ]
+    },
+    {
+      "text": "CS-4 packages three Wafer Scale Engine 3 (WSE-3) 'Turbo' processors -- the same WSE-3 chip generation used in CS-3 -- into a new rack-scale design",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Directly stated in Cerebras' own blog post ('three new Wafer Scale Engine 3 Turbo processors'). Included deliberately as load-bearing context per cycle 5's falsifier note: the speed/efficiency gains are packaged around an existing WSE-3 chip generation, not a new chip design -- a cited, factual nuance rather than an uncited historical comparison.",
+      "evidence": [
+        "https://www.cerebras.ai/blog/introducing-cerebras-cs-4"
+      ]
+    },
+    {
+      "text": "Cerebras says CS-4 delivers up to 30 times faster inference than GPU-based systems and up to twice the speed of CS-3, with up to 10 times more throughput per watt than CS-3",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Company-reported figures, repeated by Yahoo Finance but not independently reproduced. Cycle 5's falsifier live-fetched artificialanalysis.ai/providers/cerebras (2026-08-19T00:33:50Z) and found no CS-4-specific entry or Nvidia comparison -- no independent benchmark exists yet. Cycle 5's falsifier additionally flagged that Cerebras has published a series of shifting Nvidia-beating multipliers across recent months, arguing for skeptical framing; that specific historical detail was not carried into the published article because no citable URL for it was pinned within this cycle's time budget -- the vendor-claim label and 'why it matters' framing carry the caution instead.",
+      "evidence": [
+        "https://www.cerebras.ai/blog/introducing-cerebras-cs-4",
+        "https://finance.yahoo.com/technology/article/cerebras-says-latest-offering-is-fastest-ai-accelerator-in-the-industry-as-it-takes-aim-at-nvidia-000000090.html"
+      ]
+    },
+    {
+      "text": "Cerebras says the first CS-4 shipments begin this quarter (Q3 2026)",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Company's own stated plan for its own product, Tier-0 primary source -- confirmed as an announcement claim (the company said this), not a claim that shipment has already happened. open_obligation set on the ledger entry to check back after Q3 2026 ends.",
+      "evidence": [
+        "https://www.cerebras.ai/blog/introducing-cerebras-cs-4"
+      ]
+    }
+  ],
+  "falsifier_notes": "Cycle 5's independent verifier (25 tool uses) and adversarial falsifier (18 tool uses) both independently traced the story to the same real event and both reached PUBLISH WITH CAVEATS: treat performance multipliers as vendor-claim only, no independent reproduction found, and frame CS-4 as a system/packaging advance built on the existing WSE-3 chip generation rather than a new chip. Bloomberg's originating article could not be located by either agent after ~10 combined attempts; dropped from sourcing entirely in favor of Cerebras' own blog and Yahoo Finance. This cycle (6) did not re-run a fresh verifier/falsifier pair given the two already-completed independent fresh-context passes from cycle 5 satisfied policy/verification.md §5's substance; cycle 6's own work was limited to pinning exact citable URLs (both fetched directly this cycle) and drafting/gating the article under the final cycle's hard time constraint.",
+  "gaps_closed_from_watching_state": []
+}

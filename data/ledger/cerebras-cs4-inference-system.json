@@ -1,0 +1,23 @@
+{
+  "slug": "cerebras-cs4-inference-system",
+  "title": "Cerebras unveils CS-4, a new rack-scale system for AI inference",
+  "status": "published",
+  "first_seen": "2026-08-19",
+  "published_at": "2026-08-19",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.cerebras.ai/blog/introducing-cerebras-cs-4",
+    "https://finance.yahoo.com/technology/article/cerebras-says-latest-offering-is-fastest-ai-accelerator-in-the-industry-as-it-takes-aim-at-nvidia-000000090.html"
+  ],
+  "follows": null,
+  "reason": "Published. Research and full multi-agent protocol (fresh verifier + fresh adversarial falsifier, both independent, run concurrently) completed in cycle 5 and handed off as a ready-to-draft package; cycle 6 pinned exact citable deep-link URLs via direct WebFetch of Cerebras' own blog and drafted/gated/published under the final cycle's time constraint. Announcement (CS-4 exists, unveiled 18 Aug 2026) confirmed via Cerebras' own primary blog plus independent Yahoo Finance corroboration. Performance multipliers (30x vs GPUs, 2x vs CS-3, 10x/watt vs CS-3) published as vendor-claim -- no independent benchmark yet (artificialanalysis.ai live-fetched by cycle 5's falsifier, 2026-08-19T00:33:50Z, found no CS-4-specific entry). Noted CS-4 packages the same WSE-3 chip generation used in CS-3 (Cerebras' own stated spec) as cited context that the gains are system/packaging-level, not a new chip. dedup-check: zero matches, standalone. cerebras.ai and finance.yahoo.com are unregistered sources, already logged to source_candidates.json by cycle 5 (candidates_2026-08-19_c5); both qualify as Tier 0 / Tier 2 respectively per verification.md §1's unregistered-source rule.",
+  "watch": [
+    "Whether Cerebras actually begins CS-4 shipments in Q3 2026 as stated",
+    "Any independent benchmark (Artificial Analysis, METR, or similar) of CS-4's actual inference speed vs GPU systems and vs CS-3"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-10-10",
+  "notes": [
+    "2026-08-19 c6: Published this cycle from a complete cycle-5 research handoff (fresh verifier + fresh falsifier, both PUBLISH WITH CAVEATS). No new sub-agent research commissioned this cycle given the severe final-cycle time constraint (~16-minute window); cycle 6's own work was limited to pinning exact source URLs via direct WebFetch and drafting/style-gating both language versions. No prompt-injection content found in any fetched source (cycle 5 or cycle 6)."
+  ]
+}
