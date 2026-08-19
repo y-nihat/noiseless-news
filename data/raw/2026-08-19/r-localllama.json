@@ -318,5 +318,15 @@
     "published": "2026-08-19T22:14:52+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Would love to know who's letting a 9B just go ham locally, haha</p> <p>But in all seriousness, how many of you are keeping to manual or manual-ish dev workflows?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BatPlack\"> /u/BatPlack </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vt0y1g/anyone_not_on_full_auto_when_coding_with_local/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vt0y1g/anyone_not_on_full_auto_when_coding_with_local/\">[comments]</a></span>",
     "fetched_at": "2026-08-19T23:13:32.901082+00:00"
+  },
+  {
+    "id": "9c84266c08e945e5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-23B-Mini-Me: A Depth-Pruned Qwen3.8-27B (to ~22.7BB)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vt2jef/qwen3823bminime_a_depthpruned_qwen3827b_to_227bb/",
+    "published": "2026-08-19T23:19:16+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vt2jef/qwen3823bminime_a_depthpruned_qwen3827b_to_227bb/\"> <img alt=\"Qwen3.8-23B-Mini-Me: A Depth-Pruned Qwen3.8-27B (to ~22.7BB)\" src=\"https://external-preview.redd.it/X2t7lxg6XAz4UjgxoVEKFiJ37VFlRqv6D3ZzPgjDZm0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8607a33f053ecf1226f9475f9bb2ebb862928556\" title=\"Qwen3.8-23B-Mini-Me: A Depth-Pruned Qwen3.8-27B (to ~22.7BB)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I've been working on a depth pruning approach and decided to try it out on the new Qwen3.8-27B model. I managed to get the model down to about 22.7B params without severe reasoning degradation. No fine-tuning was done, just strategic removal of layers.</p> <p>It's been working well for my use cases in coding, agentic use, and multi-turn chats, so I figured I'd shared it with the community. I have not run benchmarks so I'm not going to claim this model is better than anything else out there. It's just a smaller version of the 27B dense that is slightly worse at some things but has a smaller footprint and runs faster.</p> <p>If you would like to use it, there are bf16, q8, and q4 versions available. I would also recommend probing and testing it to make sure it's up to the standards of your projects or use cases.</p> <p>Let me know what you think if you do use it, I would appreciate the feedback!</p> <p>Edit: Only have MLX versions at the moment</p> <p>Edit 2: I'd recommend using the same exact recommend chat settings the original model uses, I've had no looping or issues with those settings: <a href=\"https://huggingface.co/Qwen/Qwen3.8-27B\">https://huggingface.co/Qwen/Qwen3.8-27B</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/peplo1214\"> /u/peplo1214 </a> <br /> <span><a href=\"https://huggingface.co/collections/StargazerLabs/mini-me\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vt2jef/qwen3823bmini…",
+    "fetched_at": "2026-08-19T23:48:32.892073+00:00"
   }
 ]
