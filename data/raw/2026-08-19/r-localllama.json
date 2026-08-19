@@ -8,5 +8,85 @@
     "published": "2026-08-18T18:31:51+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrxqf2/i_love_doing_physics_simulations_in_htmljavascript/\"> <img alt=\"I love doing physics simulations in html/javascript\" src=\"https://external-preview.redd.it/MWV5d3h2ZTRmNmtoMX1uslQ_qjJfJXWIGq2lfvfAFsNe6LJyO_sGxjQLNPO5.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=77ae011ec8801496fb4f1463c28288ce10c98646\" title=\"I love doing physics simulations in html/javascript\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Generated with Bucoid-Qwen3.8-27B-IQ4-XS-MTP-16GB-VRAM 76800ctx in pi in 2 shots.</p> <p>First shot got it 95% right. Second prompt was 3 issues like fish swimming backwards and bubbles not making it to the top, fish maneuvrering in the air when they jump and when I break the glass the water not flowing off the screen.</p> <p>It generated a single html file in a few minutes on a 5070 Ti. The animation is much smoother in the browser.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fancy-Snow7\"> /u/Fancy-Snow7 </a> <br /> <span><a href=\"https://v.redd.it/dgmwxce4f6kh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vrxqf2/i_love_doing_physics_simulations_in_htmljavascript/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-19T00:23:25.022128+00:00"
+  },
+  {
+    "id": "22f4b16ef6a2a521",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Thoughts About Scaling Law - Z.ai",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsf9eg/thoughts_about_scaling_law_zai/",
+    "published": "2026-08-19T07:18:00+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsf9eg/thoughts_about_scaling_law_zai/\"> <img alt=\"Thoughts About Scaling Law - Z.ai\" src=\"https://preview.redd.it/mpu6o0zi7akh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=64d7b3208de23d05ca92d815da2bf36a2e600a28\" title=\"Thoughts About Scaling Law - Z.ai\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><blockquote> <p>Thoughts About Scaling Law</p> </blockquote> <p>Scaling, but not only of parameters. Every model release now ends with the same question: how many parameters? It isn't a question that can be answered on its own. Parameter count is only meaningful alongside three others — how much data you have, where you intend to spend your compute, and who will run the model, under what conditions.</p> <p>The field learned this the hard way. Kaplan et al. (2020) fit an exponent that told everyone to grow parameters faster than data — roughly 2.7:1 — and the industry complied: GPT-3, Gopher, MT-NLG. Hoffmann et al. (2022) redid the experiment across four hundred models and found the compute-optimal split is closer to 20 tokens per parameter, and that with sufficient compute the two should grow at the same rate rather than drifting apart. The error in the earlier fit compounded with every order of magnitude of compute, which is why the largest models of that generation were the most misallocated. The trillion-parameter round was, in retrospect, a detour the whole field took together and then reversed.</p> <p>Chinchilla wasn't the end either. It optimized training compute for models that would be trained once and evaluated. Today a model is called billions of times a day and inference dominates lifetime cost. Put inference into the objective and the optimum moves toward smaller models trained far longer — deliberate over-training, which is what Llama-2-7B and Gemma-2-9B were doing at roughly 290 and 889 tokens per parameter.</p> <p>Sparsity moved the target again. In a MoE model two quantitie…",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  },
+  {
+    "id": "2021a7e49f178440",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New midsize Qwen 3.8 model coming next week (hopefully) according to community manager!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vs9zym/new_midsize_qwen_38_model_coming_next_week/",
+    "published": "2026-08-19T02:44:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Community manager mentioned this in the Qwen Ambassador Discord, put an X reaction on someone asking for 35B... and said </p> <blockquote> <p>We'll have a new midsize open weight model coming next week (hopfully), This midsize model won't provide early access due to the schedule</p> </blockquote> <p>Thinking it's going to be over 100B.</p> <p>Exciting!!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sleepy_roger\"> /u/sleepy_roger </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vs9zym/new_midsize_qwen_38_model_coming_next_week/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vs9zym/new_midsize_qwen_38_model_coming_next_week/\">[comments]</a></span>",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  },
+  {
+    "id": "9775b2d0d8e03a17",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B on 2x 3090 + vLLM + DFlash2: 218 tok/s single request",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsccit/qwen3827b_on_2x_3090_vllm_dflash2_218_toks_single/",
+    "published": "2026-08-19T04:39:19+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsccit/qwen3827b_on_2x_3090_vllm_dflash2_218_toks_single/\"> <img alt=\"Qwen3.8-27B on 2x 3090 + vLLM + DFlash2: 218 tok/s single request\" src=\"https://external-preview.redd.it/M3V3MWRlaWlmOWtoMXz34mRKnUDeB65E_9q2f3w9qi5asWsXKauGCeFiUxYl.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=412d878d75c7dd56071e254acd51d2a8185905a1\" title=\"Qwen3.8-27B on 2x 3090 + vLLM + DFlash2: 218 tok/s single request\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I hacked this together so there's probably more on the table in terms of performance.</p> <p>Measured with the Club-3090 <a href=\"https://github.com/noonghunna/club-3090/pull/1056\">canonical bench suite</a> (bench.sh, 3 warmups + 5 measured runs, temp 0.6 / top_p 0.95 / top_k 20).</p> <ul> <li>Prefill: 1342 tok/s @ 10k, 628 tok/s @ 90k</li> <li>Spec-decode: 7 draft tokens, acceptance length 3.35, 47.8% acceptance</li> <li>Peak VRAM: 22.3 GB/card</li> <li>Context ceiling: 131k (DFlash2 drafter eats ~13.5 GB)</li> <li>Used Kimi K3 for all the VLLM fixes</li> </ul> <table><thead> <tr> <th align=\"left\">Metric</th> <th align=\"left\">Narrative</th> <th align=\"left\">Code</th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>Decode TPS</strong></td> <td align=\"left\"><strong>120.1</strong></td> <td align=\"left\"><strong>218.3</strong></td> </tr> <tr> <td align=\"left\">Wall TPS</td> <td align=\"left\">117.7</td> <td align=\"left\">204.8</td> </tr> <tr> <td align=\"left\">TTFT</td> <td align=\"left\">168 ms</td> <td align=\"left\">178 ms</td> </tr> </tbody></table> <p><strong>Stack</strong></p> <ul> <li>2× RTX 3090 (PCIe Gen4 x16/x16, no NVLink, patched P2P)</li> <li>Power capped 220/250 W</li> <li>Bare-metal vLLM v0.26.1rc1 + AutoRound INT4 (group 128) + DFlash2 draft model</li> <li>Custom vLLM changes that made it boot cleanly: <a href=\"https://github.com/oceanplexian/vllm/pull/1\">https://github.com/oceanplexian/vllm/pull/1</a></li> </ul> </div><!-- SC_ON --> &#32; subm…",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  },
+  {
+    "id": "f24c37fb7798da88",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[2511.07885] Intelligence per Watt: Measuring Intelligence Efficiency of Local AI",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsh04u/251107885_intelligence_per_watt_measuring/",
+    "published": "2026-08-19T09:01:01+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsh04u/251107885_intelligence_per_watt_measuring/\"> <img alt=\"[2511.07885] Intelligence per Watt: Measuring Intelligence Efficiency of Local AI\" src=\"https://external-preview.redd.it/q3evP6JeDpAC2MdSQHWYxnCYTqbJkElIQsLFqVSdkss.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de730fbf7ecace6df0036b21470c16a2d4feacfb\" title=\"[2511.07885] Intelligence per Watt: Measuring Intelligence Efficiency of Local AI\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pscoutou\"> /u/pscoutou </a> <br /> <span><a href=\"https://arxiv.org/abs/2511.07885\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsh04u/251107885_intelligence_per_watt_measuring/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  },
+  {
+    "id": "0c63d88808846016",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Why no \"high\" reasoning effort in Qwen 3.8 27b ?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsgrh7/why_no_high_reasoning_effort_in_qwen_38_27b/",
+    "published": "2026-08-19T08:47:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The gap between &quot;medium&quot; and the default &quot;xhigh&quot; is ridiculously huge. Medium barely thinks, xhigh... well there has already been many posts about that.</p> <p>The naming itself seems to point out that there should have been an &quot;high&quot; mode. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/alanoo\"> /u/alanoo </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsgrh7/why_no_high_reasoning_effort_in_qwen_38_27b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsgrh7/why_no_high_reasoning_effort_in_qwen_38_27b/\">[comments]</a></span>",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  },
+  {
+    "id": "20fb2b3fd5e862de",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "HW for DeepSeek-V4-Flash-0731",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsdt09/hw_for_deepseekv4flash0731/",
+    "published": "2026-08-19T05:55:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://www.lucebox.com/blog/deepseek-v4-asymmetric-parallelism\">Lucebox</a> now, or wait for the new <a href=\"https://frame.work/ch/en/desktop?tab=192gb-coming-soon\">Framework Desktop</a> (Ryzen AI Max+ PRO 495 / 192 GB) + PCIe x4-to-x16 adapter &amp; Radeon AI PRO R9700?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MongoWithBongoss\"> /u/MongoWithBongoss </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsdt09/hw_for_deepseekv4flash0731/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsdt09/hw_for_deepseekv4flash0731/\">[comments]</a></span>",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  },
+  {
+    "id": "3d3a667f423ba802",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ling-3.0-tiny is a very interesting model. Run on NVIDIA Orin Nano Super 8GB at 128K context with IQ4_NL quant.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vs9x4r/ling30tiny_is_a_very_interesting_model_run_on/",
+    "published": "2026-08-19T02:41:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have been searching for suitable model to run on my 8GB RAM toy, NVIDIA Orin Nano Super 8GB. This little toy was priced at $249 earlier this year (not any more), and pulls very little power when idle. It was an interesting device that suitable for an agent to host on. It is likely won't do any coding job in meaningful way, but likely can handle simple things just fine.</p> <p>When the llama.cpp support showed up on github, I asked my Hermes to setup it up and run some basic test for me. The result is quite encouraging. Below is the summery from my Hermes run.</p> <p>===============AI content below===================</p> <pre><code># Ling-3.0-tiny at full 128K context on a $249 8GB Orin Nano Super — IQ4_NL, 33 tok/s, on llama.cpp master **Tl;dr:** I got inclusionAI's Ling-3.0-tiny (7.9B total, ~1.4B active MoE) running on an NVIDIA Jetson Orin Nano Super 8GB with the **IQ4_NL quant at its full native 131,072-token context** . Decode runs ~33 tok/s short-context (faster than you can read), prompt eval 220-760 tok/s, and the whole thing fits in 7.4 GiB unified RAM with only ~200 MB of swap. Model + KV + CUDA offload, all on one $249 board. ## The hardware - **Jetson Orin Nano Super Developer Kit** — [official NVIDIA product page](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/nano-super-developer-kit) — was **$249 at launch** (price has risen since; SparkFun lists it at $399 now). 8 GB unified LPDDR5, 67 TOPS, JetPack R39.2 / CUDA 13.2. ## The model + quant - **Original:** [inclusionAI/Ling-3.0-tiny](https://huggingface.co/inclusionAI/Ling-3.0-tiny) — hybrid KDA+MLA reasoning MoE, 128 experts, 8 routed + 1 shared active per token - **GGUF repo:** [bartowski/Ling-3.0-tiny-GGUF](https://huggingface.co/bartowski/Ling-3.0-tiny-GGUF) - **File used:** [`Ling-3.0-tiny-IQ4_NL.gguf`](https://huggingface.co/bartowski/Ling-3.0-tiny-GGUF/blob/main/Ling-3.0-tiny-IQ4_NL.gguf) — 4.40 GB, IQ4_NL (4.5 bpw), imatrix-cali…",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  },
+  {
+    "id": "fc4ab05b0c78e04a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Good result with Qwen3.8 Q6",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vshav4/good_result_with_qwen38_q6/",
+    "published": "2026-08-19T09:17:30+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vshav4/good_result_with_qwen38_q6/\"> <img alt=\"Good result with Qwen3.8 Q6\" src=\"https://preview.redd.it/8i4eixqpsakh1.png?width=140&amp;height=72&amp;auto=webp&amp;s=86c3d0bfbf5beb19f65825be17476caaee1d025e\" title=\"Good result with Qwen3.8 Q6\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/8i4eixqpsakh1.png?width=3637&amp;format=png&amp;auto=webp&amp;s=5b9501308cb045dd44949b8dd2df90b98aa36840\">https://preview.redd.it/8i4eixqpsakh1.png?width=3637&amp;format=png&amp;auto=webp&amp;s=5b9501308cb045dd44949b8dd2df90b98aa36840</a></p> <p>Have been using local models to build a XML/Json editor (JsonV) which is avaloniaui / C#, using only local models, as an experiment but i want the app anyhow. The last request was to colourize the XML view. </p> <p>so much fail on different models just getting confused and totally making a mess.</p> <p>Using my own &quot;harness&quot; Automaton, Q6 Qwen3.8 with q8_0 and tensor split over my 3090 + 3060.</p> <p>Success!</p> <p>just sharing my settings.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/megadonkeyx\"> /u/megadonkeyx </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vshav4/good_result_with_qwen38_q6/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vshav4/good_result_with_qwen38_q6/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
   }
 ]

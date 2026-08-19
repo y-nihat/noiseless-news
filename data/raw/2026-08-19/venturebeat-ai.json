@@ -1,0 +1,12 @@
+[
+  {
+    "id": "0732219f86ad2599",
+    "source": "VentureBeat AI",
+    "tier": 2,
+    "title": "GLM-5.3 hits the API at $1.4/$4.4 per million tokens",
+    "url": "https://venturebeat.com/technology/glm-5-3-hits-the-api-at-1-4-4-4-per-million-tokens",
+    "published": "2026-08-19T02:00:00+00:00",
+    "summary": "<p>After a <a href=\"https://venturebeat.com/technology/glm-5-3-is-here-with-advanced-cyber-capabilities-and-reportedly-already-found-a-serious-vulnerability-in-cursor\">stunning debut last week</a> with cyber capabilities so advanced they reportedly found a previously undetected vulnerability in Cursor, GLM-5.3, the new frontier open source language model from Chinese startup z.ai, has <a href=\"https://x.com/Zai_org/status/2089816129011098048?s=20\">now hit the application programming interface (API)</a> — allowing developers the ability to build atop it and plug it into their agents and applications. </p><p>Developers who previously subscribed to a GLM Coding Plan are currently limited to the OpenAI Chat Completions-compatible protocol. Z.ai said it plans to make the model&#x27;s weights openly available, but a precise date and licensing remain to be seen. </p><p>On the API, the price is unchanged from <b>GLM-5.2: $1.40 per million input tokens and $4.40 per million output tokens</b>. Cached input costs $0.26 per million tokens, while Z.ai currently lists cached-input storage as free for a limited time. </p><p>That means developers can move to the new generation without taking a higher posted per-token rate from Z.ai, even as the company claims substantially stronger coding and long-horizon agent performance.\nAt those rates, GLM-5.3 sits well below several of the highest-end frontier APIs. </p><table><tbody><tr><td><p><b>Model</b></p></td><td><p><b>Input ($/1M)</b></p></td><td><p><b>Output ($/1M)</b></p></td><td><p><b>Total ($/1M)</b></p></td><td><p><b>Source</b></p></td></tr><tr><td><p>Muse Spark 1.2 Contributor</p></td><td><p>$0.10</p></td><td><p>$0.20</p></td><td><p>$0.30</p></td><td><p><a href=\"https://dev.meta.ai/docs/pricing-rate-limits\">Meta</a></p></td></tr><tr><td><p>MiMo-V2.5 Flash</p></td><td><p>$0.10</p></td><td><p>$0.30</p></td><td><p>$0.40</p></td><td><p><a href=\"https://platform.xiaomimimo.com/docs/en-US/pricing\">Xiaomi</a></p></td></tr><tr><td><p>Deep…",
+    "fetched_at": "2026-08-19T10:31:18.440414+00:00"
+  }
+]
