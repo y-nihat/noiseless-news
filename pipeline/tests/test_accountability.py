@@ -10,6 +10,7 @@ corrections page that was never built.
 from __future__ import annotations
 
 import pytest
+from conftest import write_twins
 
 from noiseless.publish import (
     STRINGS,
@@ -44,6 +45,7 @@ Body.
 
 
 def make_site(tmp_path, updated="[]", slug="a-story"):
+    write_twins(tmp_path, slug)
     for lang in ("en", "tr"):
         d = tmp_path / "content" / "articles" / lang / "2026" / "07"
         d.mkdir(parents=True)
@@ -52,7 +54,7 @@ def make_site(tmp_path, updated="[]", slug="a-story"):
             encoding="utf-8",
         )
     ledger = tmp_path / "data" / "ledger"
-    ledger.mkdir(parents=True)
+    ledger.mkdir(parents=True, exist_ok=True)
     (ledger / "run-report-2026-07-24-2235Z.md").write_text("report", encoding="utf-8")
     (ledger / "run-report-2026-07-25-2231Z.md").write_text("report", encoding="utf-8")
     build_site(tmp_path, tmp_path / "site")

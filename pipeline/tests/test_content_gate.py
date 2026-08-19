@@ -30,36 +30,78 @@ def scratch(tmp_path: Path) -> dict[str, Path]:
     return make_scratch(tmp_path)
 
 
+HELD_REPORT = (
+    'echo "STATE gate_ok=$content_gate_ok trips=$gate_trips'
+    ' guard_trips=$guard_trips push_failed=$push_failed push_blocked=$push_blocked'
+    ' held=$held_now suite_ok=$suite_ok"'
+)
+
+
 class TestTheGateItself:
+    """One predicate, three outcomes: clean, held, blocked.
+
+    On 2026-08-18 the gate was all-or-nothing, and two articles without their
+    evidence logs cost the whole night's seven stories their deploy while four
+    later cycles ran without being told what to fix. Now a story with a
+    per-story defect is held from the site by the build; the deploy proceeds
+    without it; only more than MAX_HELD, or a validator that cannot run,
+    withholds the deploy.
+    """
+
     def test_a_clean_run_leaves_the_gate_open(self, scratch):
-        result = drive(scratch, f"content_gate; {REPORT}")
+        result = drive(scratch, f"content_gate; {HELD_REPORT}")
         assert state(result)["gate_ok"] == "1"
-        assert state(result)["trips"] == "0"
+        assert state(result)["held"] == "0"
         # Both counters are initialised before the source hook, so without this
         # the test passes with content_gate deleted from the script.
         assert "content: stub python" in result.stdout, "the gate never ran"
 
-    def test_a_failing_test_suite_trips_it(self, scratch):
-        result = drive(scratch, f"STUB_PYTEST_EXIT=1 content_gate; {REPORT}")
-        assert state(result)["gate_ok"] == "0"
-        assert state(result)["trips"] == "1"
-        assert "pytest FAILED" in result.stdout
+    def test_a_held_story_keeps_the_gate_open_and_names_the_slug(self, scratch):
+        """The night of 2026-08-18, as it should have gone."""
+        result = drive(scratch, f"STUB_HELD=harvey-tenet-launch content_gate; {HELD_REPORT}")
+        assert state(result)["gate_ok"] == "1", "a held story withheld the deploy"
+        assert state(result)["held"] == "1"
+        assert "held from the site — harvey-tenet-launch" in result.stdout
+        assert "deploy proceeds without them" in result.stdout
+        assert "repair queued" in result.stdout
 
-    def test_a_blocking_content_finding_trips_it(self, scratch):
-        """`validate-content --strict` exits 2 on a blocking finding."""
-        result = drive(scratch, f"STUB_PYTHON_EXIT=2 content_gate; {REPORT}")
+    def test_more_than_the_ceiling_blocks(self, scratch):
+        """`validate-content --strict --max-held N` exits 2 past the ceiling."""
+        result = drive(scratch, f"STUB_PYTHON_EXIT=2 content_gate; {HELD_REPORT}")
         assert state(result)["gate_ok"] == "0"
-        assert "validate-content --strict FAILED" in result.stdout
+        assert "GATE BLOCKED — more than 3 stories held" in result.stdout
 
-    def test_a_later_clean_cycle_reopens_it(self, scratch):
+    def test_a_validator_that_cannot_run_blocks(self, scratch):
+        """Fail closed: a build that cannot tell what is safe must not publish."""
+        result = drive(scratch, f"STUB_PYTHON_EXIT=1 content_gate; {HELD_REPORT}")
+        assert state(result)["gate_ok"] == "0"
+        assert "validate-content itself failed" in result.stdout
+
+    def test_a_validator_that_exits_zero_without_findings_is_not_trusted(self, scratch):
+        """Exit 0 and no findings file means the command was not what we think."""
+        result = drive(
+            scratch,
+            'cat > "$(dirname "$(command -v python)")/python" <<\'EOF\'\n'
+            '#!/bin/sh\necho "stub python $*"\nexit 0\nEOF\n'
+            f"content_gate; {HELD_REPORT}",
+        )
+        assert state(result)["gate_ok"] == "0"
+
+    def test_a_later_cycle_within_the_ceiling_reopens_it(self, scratch):
         """A cycle can repair what an earlier one broke; the site should catch up."""
         result = drive(
             scratch,
-            f"STUB_PYTEST_EXIT=1 content_gate\ncontent_gate\n{REPORT}",
+            f"STUB_PYTHON_EXIT=2 content_gate\ncontent_gate\n{HELD_REPORT}",
         )
         assert state(result)["gate_ok"] == "1", "the gate never reopens"
-        assert state(result)["trips"] == "1", "the trip must still be counted"
         assert "deploys resume" in result.stdout
+
+    def test_the_test_suite_is_reported_and_never_a_deploy_predicate(self, scratch):
+        """deploy.yml made this call first; the night was stricter than the deploy."""
+        result = drive(scratch, f"export STUB_PYTEST_EXIT=1; content_gate; suite_check; {HELD_REPORT}")
+        assert state(result)["gate_ok"] == "1", "a red unit test withheld the deploy"
+        assert state(result)["suite_ok"] == "0"
+        assert "reported only" in result.stdout
 
 
 class TestWhatATrippedGateDoesToTheWork:
@@ -75,8 +117,8 @@ class TestWhatATrippedGateDoesToTheWork:
         drive(
             scratch,
             'echo hi > content/new.md\n'
-            'STUB_PYTEST_EXIT=1 commit_push "gated commit"\n'
-            f"{REPORT}",
+            'STUB_PYTHON_EXIT=2 commit_push "gated commit"\n'
+            f"{HELD_REPORT}",
         )
         pushed = subprocess.run(
             ["git", "log", "--oneline", "-1", "--name-only", "origin/main"],
@@ -86,11 +128,12 @@ class TestWhatATrippedGateDoesToTheWork:
         assert "content/new.md" in pushed
 
     def test_the_push_is_not_reported_as_failed(self, scratch):
+        """A blocked archive is a deploy problem, not a push problem."""
         result = drive(
             scratch,
             'echo hi > content/new.md\n'
-            'STUB_PYTEST_EXIT=1 commit_push "gated commit"\n'
-            f"{REPORT}",
+            'STUB_PYTHON_EXIT=2 commit_push "gated commit"\n'
+            f"{HELD_REPORT}",
         )
         assert state(result)["push_failed"] == "0"
         assert state(result)["gate_ok"] == "0"
@@ -122,11 +165,17 @@ class TestTheGateIsWiredIntoTheLoop:
             "the gate must run before the push, not after"
         )
 
-    def test_it_is_strict(self, script):
+    def test_it_is_strict_with_the_deploy_ceiling(self, script):
         """It used to run non-strict with its exit code discarded."""
         gate = script.split("content_gate() {")[1].split("\n}")[0]
         assert "validate-content --strict" in gate
-        assert "pytest -q" in gate
+        assert '--max-held "$MAX_HELD"' in gate
+
+    def test_pytest_lives_in_suite_check_not_in_the_gate(self, script):
+        gate = script.split("content_gate() {")[1].split("\n}")[0]
+        suite = script.split("suite_check() {")[1].split("\n}")[0]
+        assert "pytest" not in gate, "the unit tests are back inside the deploy predicate"
+        assert "pytest -q" in suite
 
     def test_a_tripped_gate_withholds_the_deploy(self, script):
         dispatch = script.split('gh workflow run "Deploy site"')[0]

@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 
 import pytest
+from conftest import write_twins
 
 from noiseless.dedup import load_index
 from noiseless.ingest import _load_seen_ids, _save_seen_ids
@@ -46,6 +47,7 @@ Body.
 
 
 def make_content(tmp_path, **extra_files):
+    write_twins(tmp_path, "good-article")
     art = tmp_path / "content" / "articles"
     for lang in ("en", "tr"):
         (art / lang / "2026" / "07").mkdir(parents=True)
@@ -67,7 +69,7 @@ class TestMalformedArticles:
     def test_broken_article_does_not_disable_the_duplicate_gate(self, tmp_path):
         """The gate must survive precisely the night that produced the bad file."""
         make_content(tmp_path, **{"broken.md": BROKEN_YAML})
-        (tmp_path / "data" / "ledger").mkdir(parents=True)
+        (tmp_path / "data" / "ledger").mkdir(parents=True, exist_ok=True)
         index = load_index(tmp_path)
         assert [e.slug for e in index] == ["good-article"]
 

@@ -88,6 +88,25 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="treat warnings as blocking too (once the known ones are cleared)",
     )
+    content_parser.add_argument(
+        "--max-held",
+        type=int,
+        default=None,
+        metavar="N",
+        help="with --strict: hold defective stories from the site instead of failing, "
+             "and exit 2 only when more than N are held (the deploy ceiling)",
+    )
+    content_parser.add_argument(
+        "--github",
+        action="store_true",
+        help="print GitHub workflow-command annotations for held stories",
+    )
+    content_parser.add_argument(
+        "--json",
+        default=None,
+        metavar="PATH",
+        help="also write the findings and the held set as JSON here",
+    )
 
     dedup_parser = subparsers.add_parser(
         "dedup-check",
@@ -154,14 +173,18 @@ def main(argv: list[str] | None = None) -> int:
         from noiseless.publish import build_site
 
         counts = build_site(Path("."), args.out)
-        print(f"site built at {args.out} — articles: en={counts['en']}, tr={counts['tr']}")
+        print(
+            f"site built at {args.out} — articles: en={counts['en']}, tr={counts['tr']}"
+            f", held={counts.get('held', 0)}"
+        )
         return 0
 
     if args.command == "validate-content":
         from noiseless.validate_content import main as validate_content_main
 
         return validate_content_main(
-            Path("."), strict=args.strict, warn_as_error=args.warn_as_error
+            Path("."), strict=args.strict, warn_as_error=args.warn_as_error,
+            max_held=args.max_held, github=args.github, json_path=args.json,
         )
 
     if args.command == "dedup-check":

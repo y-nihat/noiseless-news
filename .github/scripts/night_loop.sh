@@ -88,6 +88,8 @@ REPORT_FILE="data/ledger/run-report-$(TZ=Europe/Istanbul date +%F)-$(date -u +%H
 mkdir -p "$(dirname "$REPORT_FILE")"
 ok_cycles=0; ran_cycles=0; usage_stop=0; guard_trips=0; push_failed=0
 gate_trips=0; content_gate_ok=1; push_blocked=0; origin_polluted=0
+held_now=0; held_slugs=""; suite_ok=1; suite_failures=0; repairs_done=0; cycle_label="pre"
+MAX_HELD=3   # the deploy ceiling — the same number deploy.yml and tests.yml pass
 NIGHT_STATS="data/ledger/night-stats.jsonl"
 
 git config user.name "y-nihat"
@@ -165,36 +167,96 @@ assert_push_scope() {
 # push. So the gate PR #27 added — "test the nightly agent's commits like
 # everything else" — ran on none of the 192 commits the agent made between
 # 2026-08-07 and 2026-08-17, and 34 articles reached the public site unchecked.
-# Six seconds a push buys the check back. A trip does not block the commit: the
-# night's work must still reach origin, and the repository is the audit trail
-# whether the night went well or badly. It blocks the *deploy*, which is the
-# only moment at which a bad article is still unpublished.
+#
+# One predicate, three outcomes — the same command deploy.yml and tests.yml run,
+# with the same ceiling, so the three gates cannot disagree:
+#   clean   — nothing held; deploy as normal.
+#   held    — up to MAX_HELD stories carry a per-story defect (no evidence log,
+#             broken parity, …). publish.py holds exactly those from the site at
+#             build time, so the deploy PROCEEDS without them and the defect is
+#             queued for the next cycle's agent to repair. This is the case the
+#             night of 2026-08-18 needed: two articles without their evidence
+#             logs cost the whole night's seven stories their deploy, and four
+#             later cycles ran without ever being told what to fix.
+#   blocked — more than MAX_HELD held, or the validator itself failed to run.
+#             Fail closed: deploy withheld, red at dawn if still blocked.
+# A trip never blocks the commit or the push: the night's work must reach
+# origin, and the repository is the audit trail whether the night went well or
+# badly. It blocks the *deploy*, which is the only moment at which a bad
+# article is still unpublished.
 content_gate() {
-  local failed=0
-  if ! pytest -q >"$NIGHT_STATE_DIR/gate-pytest.txt" 2>&1; then
-    failed=1
-    log "GATE: pytest FAILED"
-    tail -n 15 "$NIGHT_STATE_DIR/gate-pytest.txt" | while IFS= read -r line; do log "  $line"; done
+  local out="$NIGHT_STATE_DIR/gate-content.txt" json="$NIGHT_STATE_DIR/findings.json"
+  rm -f "$json"
+  PYTHONPATH=pipeline python -m noiseless.run validate-content --strict \
+    --max-held "$MAX_HELD" --json "$json" >"$out" 2>&1
+  local rc=$?
+  # Log every finding either way, but keep the annotation lines out of the
+  # cycle log — they are for GitHub, printed once at the end of the night.
+  grep -v '^::' "$out" | while IFS= read -r line; do log "content: $line"; done
+
+  if [ "$rc" -eq 0 ] && [ -s "$json" ]; then
+    # Read the held set back with the same interpreter that wrote it, and treat
+    # an unreadable file as "held = unknown", which is blocked, not clean.
+    local summary
+    summary=$(PYTHONPATH=pipeline python - "$json" <<'PYEOF'
+import json, sys
+try:
+    d = json.load(open(sys.argv[1], encoding="utf-8"))
+    held = d.get("held")
+    if not isinstance(held, dict):
+        raise ValueError("no held map")
+    print(len(held), ",".join(sorted(held)) or "-")
+except Exception:
+    print("? -")
+PYEOF
+)
+    read -r held_now held_slugs <<<"$summary"
+    [ "$held_slugs" = "-" ] && held_slugs=""
+    if [ "$held_now" = "?" ]; then
+      gate_trips=$((gate_trips + 1)); content_gate_ok=0; held_now=0
+      log "GATE BLOCKED — the findings file could not be read; refusing to guess"
+      return 1
+    fi
+    if [ "$held_now" -gt 0 ]; then
+      log "GATE: $held_now held from the site — ${held_slugs//,/, } — deploy proceeds without them; repair queued for the next cycle"
+      # First-seen bookkeeping for the footer's lifecycle line.
+      for slug in ${held_slugs//,/ }; do
+        grep -q "^$slug	" "$NIGHT_STATE_DIR/held.tsv" 2>/dev/null \
+          || printf '%s\t%s\n' "$slug" "${cycle_label:-pre}" >> "$NIGHT_STATE_DIR/held.tsv"
+      done
+    fi
+    [ "$content_gate_ok" -eq 0 ] && log "GATE: within the ceiling again — deploys resume"
+    content_gate_ok=1
+    return 0
   fi
-  if ! PYTHONPATH=pipeline python -m noiseless.run validate-content --strict \
-      >"$NIGHT_STATE_DIR/gate-content.txt" 2>&1; then
-    failed=1
-    log "GATE: validate-content --strict FAILED"
+
+  gate_trips=$((gate_trips + 1))
+  content_gate_ok=0
+  if [ "$rc" -eq 2 ]; then
+    log "GATE BLOCKED — more than $MAX_HELD stories held: holding every deploy until a later cycle comes back within the ceiling"
+  else
+    log "GATE BLOCKED — validate-content itself failed (exit $rc): a build that cannot tell what is safe to publish must not publish"
   fi
-  # Log the findings either way. The agent reads the cycle log, so a warning
-  # raised now can be repaired by the next cycle before it becomes an error.
-  while IFS= read -r line; do log "content: $line"; done < "$NIGHT_STATE_DIR/gate-content.txt"
-  if [ "$failed" -eq 1 ]; then
-    gate_trips=$((gate_trips + 1))
-    content_gate_ok=0
-    log "GATE TRIPPED — holding every deploy until a later cycle comes back clean"
-    return 1
+  return 1
+}
+
+# The unit tests, reported and never a deploy predicate. deploy.yml already
+# made that call — "a flaky unit test has no business freezing the public
+# site" — and the agent may not touch pipeline code, so a red suite at 01:00 is
+# something for the operator, not a reason to hold the site. It was inside the
+# gate until 2026-08-19, which made the night stricter than the deploy it was
+# withholding.
+suite_check() {
+  if pytest -q >"$NIGHT_STATE_DIR/gate-pytest.txt" 2>&1; then
+    suite_ok=1
+    return 0
   fi
-  # A later cycle can repair what an earlier one broke, and the site should be
-  # allowed to catch up rather than staying frozen until morning.
-  [ "$content_gate_ok" -eq 0 ] && log "GATE: clean again — deploys resume"
-  content_gate_ok=1
-  return 0
+  suite_ok=0
+  suite_failures=$((suite_failures + 1))
+  log "TESTS: pytest FAILED (reported only — never a deploy predicate)"
+  grep -E '^(FAILED|ERROR) ' "$NIGHT_STATE_DIR/gate-pytest.txt" | head -n 10 \
+    | while IFS= read -r line; do log "  $line"; done
+  return 1
 }
 
 commit_push() {
@@ -202,6 +264,7 @@ commit_push() {
   git add "${OWNED_PATHS[@]}"
   git diff --cached --quiet || git commit -m "$1"
   content_gate || true
+  suite_check || true
   if ! assert_push_scope; then
     push_blocked=1
     log "PUSH BLOCKED by the path allowlist — nothing sent to origin"
@@ -308,6 +371,7 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   [ "$CYCLE_TIMEOUT" -lt 300 ] && CYCLE_TIMEOUT=300
   log "cycle $cycle: agent starting (deadline $CYCLE_DEADLINE UTC, stories<=$stories, timeout ${CYCLE_TIMEOUT}s)"
   ran_cycles=$((ran_cycles + 1))
+  cycle_label="c$cycle"
 
   # CLAUDE.md and policy/verification.md §5 both require max effort for the
   # verification agents. Neither had ever been passed it: `git log -S"--effort"`
@@ -344,7 +408,7 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
     gh workflow run "Deploy site" --ref main 2>/dev/null \
       && log "site deploy dispatched" || log "deploy dispatch failed (non-fatal)"
   elif [ "$content_gate_ok" -eq 0 ]; then
-    log "content gate tripped — deploy withheld, the site stays on the last clean build"
+    log "content gate BLOCKED — deploy withheld, the site stays on the last deployable build"
   else
     log "last cycle — leaving the deploy to the workflow's backstop step"
   fi
@@ -408,12 +472,33 @@ PY
   echo "- New articles: $new_articles · updated articles: $updated_articles (night cap: $NIGHT_STORY_CAP new)"
   echo "- Usage-limit stop: $([ "$usage_stop" -eq 1 ] && echo yes || echo no)"
   echo "- Out-of-scope write attempts blocked: $guard_trips$([ "$origin_polluted" -eq 1 ] && echo " · ORIGIN CARRIES A STRAY" || echo "")"
-  echo "- Content gate: $([ "$content_gate_ok" -eq 1 ] && echo pass || echo FAILED) ($gate_trips trip(s) tonight)"
+  echo "- Content gate: $([ "$content_gate_ok" -eq 1 ] && echo pass || echo "BLOCKED — the archive is not deployable")"
+  # The hold has a lifecycle worth seeing in one line: what is held, since
+  # which cycle. Values come from the LAST gate run before this footer, so the
+  # count cannot disagree with itself the way a running trip tally did.
+  if [ "$held_now" -gt 0 ]; then
+    held_line=""
+    for slug in ${held_slugs//,/ }; do
+      since=$(awk -F'\t' -v s="$slug" '$1==s{print $2; exit}' "$NIGHT_STATE_DIR/held.tsv" 2>/dev/null)
+      held_line="$held_line$slug (held since ${since:-before tonight}) · "
+    done
+    echo "- Held from the site at dawn: $held_now — ${held_line% · } — everything else the night produced is live; tonight's cycle 1 repairs or withdraws"
+  else
+    echo "- Held from the site at dawn: none"
+  fi
+  echo "- Repairs completed tonight: $repairs_done"
+  echo "- Unit tests: $([ "$suite_ok" -eq 1 ] && echo pass || echo "FAILED — reported only, never a deploy predicate")"
   echo "- Push to origin: $([ "$push_blocked" -eq 1 ] && echo "BLOCKED (path allowlist)" || { [ "$push_failed" -eq 1 ] && echo FAILED || echo ok; })"
   echo "- Night cost (USD): $night_cost"
   echo "- Window: $NIGHT_START_ISO → $(date -u +%FT%H:%MZ)"
 } >> "$REPORT_FILE"
 commit_push "Night loop footer $(date -u +%F)"
+
+# One set of GitHub annotations for the run page, from the final gate state.
+if [ -s "$NIGHT_STATE_DIR/gate-content.txt" ]; then
+  grep '^::' "$NIGHT_STATE_DIR/gate-content.txt" || true
+fi
+[ "$suite_ok" -eq 0 ] && echo "::warning title=unit tests::pytest failed on the runner during the night — reported only, see the job log"
 
 # tests.yml cannot see a single one of tonight's commits — a push made with the
 # workflow's own GITHUB_TOKEN raises no workflow event, which is why `Deploy
@@ -490,7 +575,9 @@ warnings=()
 # workflow's handler to say anything at all.
 [ "$push_failed" -eq 1 ] && warnings+=("the night's work is committed on a runner that no longer exists — it never reached origin")
 [ "$origin_polluted" -eq 1 ] && warnings+=("origin/main carries a change outside content/ and data/ that was not there at the start of the night — inspect it before the next run executes it")
-[ "$gate_trips" -gt 0 ] && warnings+=("$gate_trips content-gate trip(s) — pytest or validate-content --strict failed mid-night")
+[ "$held_now" -gt 0 ] && warnings+=("$held_now story(ies) held from the site at dawn — ${held_slugs//,/, } — the site carries everything else; tonight's cycle 1 must repair or withdraw them")
+[ "$content_gate_ok" -eq 0 ] && warnings+=("the archive is BLOCKED — more than $MAX_HELD stories held or the validator could not run; no deploy went out")
+[ "$suite_ok" -eq 0 ] && warnings+=("the unit test suite is red on the runner ($suite_failures run(s)) — reported only, it never withholds a deploy")
 [ "$usage_stop" -eq 1 ] && warnings+=("night ended early on a usage limit")
 # Decide the outcome BEFORE writing the report, so the report can say which one
 # it is. The old one asserted "The job itself did not fail" unconditionally, and
@@ -552,7 +639,7 @@ if [ "$push_failed" -eq 1 ]; then
   exit 1
 fi
 if [ "$content_gate_ok" -eq 0 ]; then
-  log "the content gate is still tripped at the end of the night — failing the job"
+  log "the archive is still BLOCKED at the end of the night — failing the job"
   exit 1
 fi
 if [ "$no_runway" -eq 1 ]; then

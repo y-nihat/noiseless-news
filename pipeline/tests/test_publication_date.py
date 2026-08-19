@@ -10,6 +10,7 @@ updates never resurfaced at all.
 from __future__ import annotations
 
 import pytest
+from conftest import write_twins
 
 from noiseless.publish import Article, build_site, load_articles
 
@@ -31,6 +32,7 @@ Body.
 
 
 def write(tmp_path, slug, date, published=None, updated="[]", title=None):
+    write_twins(tmp_path, slug)
     for lang in ("en", "tr"):
         d = tmp_path / "content" / "articles" / lang / "2026" / "07"
         d.mkdir(parents=True, exist_ok=True)
