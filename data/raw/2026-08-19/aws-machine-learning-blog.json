@@ -18,5 +18,35 @@
     "published": "2026-08-19T20:36:50+00:00",
     "summary": "KnowledgeForge mines resolved ITSM incident tickets into new knowledge base articles and automatically curates the existing library by deduplicating, quality-scoring, and improving content, using Amazon Bedrock, Amazon S3 Vectors, and AWS Step Functions in a multi-tenant, closed-loop pipeline.",
     "fetched_at": "2026-08-19T22:00:00.998126+00:00"
+  },
+  {
+    "id": "b33d02f6e7070697",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Domain and publish date filters for Web Search on AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/domain-and-publish-date-filters-for-web-search-on-agentcore/",
+    "published": "2026-08-19T22:13:20+00:00",
+    "summary": "Web Search on Amazon Bedrock AgentCore now supports runtime domain and published-date filtering. New per-request filters give developers per-call control over which web sources their agents consult and how fresh those sources must be, all enforced server-side. This release also expands Web Search to the Europe (Ireland) and Asia Pacific (Tokyo) Regions.",
+    "fetched_at": "2026-08-19T22:38:32.263857+00:00"
+  },
+  {
+    "id": "410b8288a17375d3",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Automate Document Processing with Quick Automate and the IDP Accelerator",
+    "url": "https://aws.amazon.com/blogs/machine-learning/automate-document-processing-with-quick-automate-and-the-idp-accelerator/",
+    "published": "2026-08-19T22:09:56+00:00",
+    "summary": "Classifying, extracting, and validating high volumes of documents is a challenge across banking, insurance, healthcare, and the public sector. See how a mid-size mortgage lender automates its entire document intake pipeline, from email to validated data, using the AWS GAIIC IDP Accelerator and Amazon Quick Automate.",
+    "fetched_at": "2026-08-19T22:38:32.263857+00:00"
+  },
+  {
+    "id": "ea1ec01987d6856b",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Asynchronous patterns for calling Amazon Bedrock AgentCore agents in serverless pipelines",
+    "url": "https://aws.amazon.com/blogs/machine-learning/asynchronous-patterns-for-calling-amazon-bedrock-agentcore-agents-in-serverless-pipelines/",
+    "published": "2026-08-19T22:06:09+00:00",
+    "summary": "In this post, you learn three serverless patterns (task-token callback, direct service integration, and durable functions) for invoking Amazon Bedrock AgentCore agents asynchronously from AWS Step Functions pipelines, eliminating idle compute costs while your AI agent processes requests.",
+    "fetched_at": "2026-08-19T22:38:32.263857+00:00"
   }
 ]
