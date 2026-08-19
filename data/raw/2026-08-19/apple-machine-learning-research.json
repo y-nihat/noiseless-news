@@ -8,5 +8,15 @@
     "published": "2026-08-18T00:00:00+00:00",
     "summary": "Kernel-based optimal transport (OT) estimators offer an alternative, functional estimation procedure to address OT problems from samples. Recent works suggest that these estimators are more statistically efficient than plug-in (linear programming-based) OT estimators when comparing probability measures in high-dimensions [Vacher et al., 2021]. Unfortunately, that statistical benefit comes at a very steep computational price: because their computation relies on the short-step interior-point method (SSIPM), which comes with a large iteration count in practice, these estimators quickly become…",
     "fetched_at": "2026-08-19T00:23:25.022128+00:00"
+  },
+  {
+    "id": "7ba6c2e15df63364",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Examining Human-Like Behaviors in LLMs: A Multi-Dimensional Analysis of Model Behaviors, User Factors, and System Prompts",
+    "url": "https://machinelearning.apple.com/research/human-like-behaviors-llms",
+    "published": "2026-08-19T00:00:00+00:00",
+    "summary": "Large language models (LLMs) exhibit a wide range of human-like behaviors, from expressing thoughts and emotions, to engaging in relationship-building with users, to refusing requests and maintaining boundaries. Despite their prevalence, researchers and practitioners lack methods and empirical insights to make informed decisions about when and what types of human-like behaviors LLMs should exhibit. To fill this gap, we present a multi-dimensional analysis of the prevalence, potential effects, and controllability of these behaviors using LLM-as-a-judge and human evaluation. Across 21,000…",
+    "fetched_at": "2026-08-19T16:35:18.132664+00:00"
   }
 ]
