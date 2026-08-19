@@ -1,0 +1,12 @@
+[
+  {
+    "id": "841b4e2a79b2cbb5",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "A Specialized Semismooth Newton Method for Kernel-Based Optimal Transport",
+    "url": "https://machinelearning.apple.com/research/semismooth-newton-optimal-transport",
+    "published": "2026-08-18T00:00:00+00:00",
+    "summary": "Kernel-based optimal transport (OT) estimators offer an alternative, functional estimation procedure to address OT problems from samples. Recent works suggest that these estimators are more statistically efficient than plug-in (linear programming-based) OT estimators when comparing probability measures in high-dimensions [Vacher et al., 2021]. Unfortunately, that statistical benefit comes at a very steep computational price: because their computation relies on the short-step interior-point method (SSIPM), which comes with a large iteration count in practice, these estimators quickly become…",
+    "fetched_at": "2026-08-19T00:23:25.022128+00:00"
+  }
+]
