@@ -1,0 +1,52 @@
+{
+  "slug": "stripe-openrouter-acquisition",
+  "checked_at": "2026-08-19T22:54:00+00:00",
+  "method": "Fresh verifier and fresh adversarial-falsifier sub-agents, run in parallel in cycle 2 of the night of 2026-08-19/20, neither having drafted the story. Both independently fetched Stripe's and OpenRouter's own announcement pages; the verifier focused on establishing independent sourcing for the reported price, the falsifier tried to find a denial, a relay-not-independent pattern, or a stale/recirculated story. This story was opened as 'watching' on 2026-08-16 (see ledger notes 2026-08-16 through 2026-08-20) because every report traced to a single Bloomberg wire exclusive; today's on-the-record company announcements from both parties resolve that gate for the fact of the deal, though not for its price.",
+  "origin_items": [
+    "data/raw/2026-08-19/techmeme.json (Bloomberg 'Stripe Agrees to Buy AI Firm OpenRouter; No Terms Disclosed', ~17:27 UTC, and New York Times/Erin Griffith item, ~18:00 UTC)",
+    "data/raw/2026-08-19/cnbc-technology.json ('Stripe to buy OpenRouter as fintech expands deeper into AI', ~20:10 UTC)"
+  ],
+  "claims": [
+    {
+      "text": "Stripe has agreed to acquire OpenRouter, a New York-based startup that operates a marketplace/gateway routing requests across hundreds of third-party AI models",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly from both parties' own on-the-record announcements published today: Stripe's newsroom post ('Stripe...today announced that it has agreed to acquire OpenRouter') and OpenRouter's own blog ('we are excited to announce that we are joining forces with Stripe'). Two independent Tier-0 primary sources, each confirming its own side of the transaction -- stronger than the single anonymous-sourced Bloomberg exclusive this story was held on since 2026-08-16.",
+      "evidence": [
+        "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+        "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"
+      ]
+    },
+    {
+      "text": "Neither company disclosed the deal's financial terms in its announcement",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both primary announcements omit a price figure; the verifier and falsifier sub-agents independently fetched both pages and confirmed neither states a number.",
+      "evidence": [
+        "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+        "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"
+      ]
+    },
+    {
+      "text": "Media reports on the price vary and are not confirmed by either company: Bloomberg first reported 'over $7 billion'; the New York Times later reported about $7.5 billion, split $1.5 billion to OpenRouter's founders and $6 billion to its investors, a figure CNBC's coverage attributes to the Times rather than its own reporting; other outlets have cited over $8 billion",
+      "type": "business",
+      "verdict": "disputed",
+      "reasoning": "The verifier and falsifier independently found a real, unreconciled spread (roughly $7B-$8B+, about a 14% range) across outlets, none corroborated by Stripe or OpenRouter. The falsifier specifically checked whether CNBC's $7.5B figure was independent or relayed and found CNBC's own framing attributes it to the New York Times ('the New York Times said the price tag is about $7.5 billion') rather than reporting it as CNBC's own sourcing -- a relay, not a second independent source on that specific number. Treated as disputed rather than confirmed at any single figure; the article states the range with attribution instead of asserting one number as fact, per verification.md's disagreement-downgrades-to-disputed rule.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
+        "https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html"
+      ]
+    },
+    {
+      "text": "The deal is subject to customary closing conditions and had not closed as of the announcement, with closing expected in the coming weeks",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated explicitly in OpenRouter's own announcement ('The transaction is subject to customary closing conditions. We expect to close in the coming weeks.'). Basis for the open_obligation flag on the ledger entry.",
+      "evidence": [
+        "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Searched specifically for a Stripe/OpenRouter denial or 'no comment' (found none -- the opposite, an affirmative on-the-record company announcement with a named CEO quote); checked whether today's NYT and CNBC coverage was independent reporting or a relay of Bloomberg's original 2026-08-16 exclusive (the deal-is-happening fact now traces to the companies' own primary announcements, not to Bloomberg, so this is moot for that claim; on the specific price figure, found CNBC relaying NYT rather than sourcing independently); checked for stale/recirculated dating (confirmed this is a genuine escalation -- anonymous-sourced rumor on 08-16 to on-the-record company confirmation on 08-19 -- not a republish); checked OpenRouter's public traction claims (8M users, 400+ models) for disputes and found none, though several outlets note the implied revenue multiple (roughly 50-140x) as aggressive analyst commentary, not a factual dispute. qz.com appeared in search results and was excluded as evidence per policy/discovery.yaml's blocked_evidence_domains list.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"Stripe agrees to acquire OpenRouter\" --url \"https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter\" returned exit 0 with a moderate match (score 0.5) against the existing stripe-openrouter-acquisition watching-state ledger entry (open since 2026-08-16) and a separate, coincidental moderate match against amd-taalas-acquisition (unrelated companies, title-similarity only on 'acquisition'/'AI'). Outcome: same story, existing slug -- this is the first publication of an already-open watching entry now that the evidence bar is met, not a new or follow-up article."
+}

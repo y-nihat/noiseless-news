@@ -1,22 +1,24 @@
 {
   "slug": "stripe-openrouter-acquisition",
-  "title": "Reports of a Stripe-OpenRouter acquisition",
-  "status": "watching",
+  "title": "Stripe agrees to acquire AI model marketplace OpenRouter",
+  "status": "published",
   "first_seen": "2026-08-16",
-  "published_at": null,
-  "langs": [],
+  "published_at": "2026-08-19",
+  "langs": ["en", "tr"],
   "source_urls": [
+    "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+    "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
     "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
-    "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/"
+    "https://www.cnbc.com/2026/08/19/stripe-openrouter-fintech-ai-model-marketplace-.html"
   ],
   "follows": null,
   "public": true,
-  "public_note": "One outlet reports Stripe has finalized a deal to acquire the AI model marketplace OpenRouter for more than $7 billion; no second independently-sourced outlet or company confirmation yet.",
-  "reason": "Wire-exclusive check (verification.md §2): Bloomberg (2026-08-16) reports Stripe has finalized a deal to acquire OpenRouter (an AI model marketplace/gateway, ~8M users claimed, 400+ models) for more than $7 billion. TechCrunch's same-day coverage explicitly attributes to Bloomberg ('according to a new report in Bloomberg') and adds no independent sourcing; a Yahoo Finance item is a syndication of the TechCrunch piece, not separate reporting. A separate, earlier report (WSJ via Axios, 2026-07-24) described early-stage talks at a different figure (~$10B) -- this is a different stage (non-binding talks vs. reported-signed deal) and a materially different number (>30% delta), so it does not corroborate today's specific $7B/finalized claim; the two reports are chained rumors from two different single-sourced wires (WSJ then Bloomberg), never simultaneously corroborating the same fact. Stripe told TechCrunch it does not comment on rumors/speculation; no OpenRouter statement found. OpenRouter's $113M Series B / $1.3B valuation (May 2026) is independently well-established background, not part of the rumor chain. This is a business/M&A claim requiring >=2 independent Tier<=2 sources or a filing, not met for the finalized $7B claim.",
+  "open_obligation": true,
+  "revisit_after": "2026-09-02",
+  "reason": "Held watching 2026-08-16 through 2026-08-20 c1 on a wire-exclusive gate: every report traced to a single anonymous-sourced Bloomberg exclusive. Resolved 2026-08-19 (c2) when both Stripe and OpenRouter published matching on-the-record announcements confirming the deal on their own sites -- two independent Tier-0 primaries. Published on the confirmed fact of the acquisition; the reported price ($7B-$8B+ across outlets, none company-confirmed) is carried in the article as a disputed claim, not asserted as fact. open_obligation set because the deal had not closed as of publication (OpenRouter's own post: closing expected 'in the coming weeks').",
   "watch": [
-    "A second wire/outlet with its own sourcing on the $7B figure or finalized status (not relaying Bloomberg)",
-    "An SEC filing or official Stripe/OpenRouter confirmation",
-    "The deal closing or being officially announced, which would itself be the cleaner news event"
+    "Deal closing confirmation from either company",
+    "An official price figure from Stripe or OpenRouter, or a second outlet independently corroborating one of the reported figures ($7B Bloomberg / $7.5B NYT / $8B+ others)"
   ],
   "notes": [
     "2026-08-16 c1: Opened this cycle from Tier-2/Techmeme triage. Fresh verifier sub-agent run: confirmed wire-exclusive status at both the July WSJ 'talks' stage and the August Bloomberg 'finalized' stage, with no overlap/corroboration between them since they report different stages and figures. dedup-check clean (no match). Recommended hold. Not published; opened as watching.",
@@ -24,6 +26,7 @@
     "2026-08-17 c4: Fresh ingest (gnews-ai-model-releases, gnews-ai-regulation-and-policy, r-localllama) surfaced this story again, triggering a mandatory recheck. Notable new lead: Axios ('Stripe strikes mega-deal for OpenRouter', 2026-08-17) uses its own-sourcing language ('Stripe has agreed to acquire ... Axios has learned') rather than attributing to Bloomberg -- a plausible second independent source. BUT Axios states the price as 'more than $8 billion in cash and stock', while Bloomberg/TechCrunch state 'more than $7 billion' -- a >10% figure conflict between the two candidate independent sources that needs resolving (same deal reported two ways, or a genuine error somewhere) before this can clear the 2-independent-source bar. Direct fetch of axios.com returned HTTP 403 this cycle; only a search-snippet was available. Did not pursue further given this cycle's time budget -- flagging for a dedicated future cycle: fetch the Axios piece directly (or via search-snippet quotes) to confirm its sourcing language precisely and try to resolve the $7B/$8B discrepancy before deciding publish vs continue holding. Still watching, no status change.",
     "2026-08-18 c6: Re-checked (1 web search), targeted at resolving the $7B/$8B discrepancy flagged in c4. This sweep found only '$7 billion' figures (Techtimes, Dataconomy, KuCoin, Techstartups, Cryptonomist, Neowin, FourWeekMBA) -- the Axios '$8 billion' figure did not resurface and TechCrunch/Bloomberg remain the consistent source chain, still explicitly attributed to Bloomberg/'people familiar with the matter'. Did not re-fetch Axios directly (403 in c4, no budget this cycle) so the discrepancy is not formally resolved, but no outlet is independently corroborating either figure with its own sourcing. Gate still fails on independence. Still watching. Mandatory final-cycle sweep complete for tonight.",
     "2026-08-19 c6: Re-checked (final-cycle mandatory sweep). No change -- same $7B Bloomberg/TechCrunch chain; Axios's distinct $8B figure remains unfetched (403 persists) and unresolved as independent confirmation vs. cash-vs-cash+stock framing. No SEC filing or company statement.",
-    "2026-08-20 c1: Re-checked (1 web search). No change -- same $7B Bloomberg-sourced chain (Dataconomy, Forkast, PYMNTS, Seeking Alpha, National CIO Review) still explicitly attributes to Bloomberg; Axios's $8B figure did not resurface this search and remains unresolved. No SEC filing or company confirmation. Gate still fails on independence. Still watching."
+    "2026-08-20 c1: Re-checked (1 web search). No change -- same $7B Bloomberg-sourced chain (Dataconomy, Forkast, PYMNTS, Seeking Alpha, National CIO Review) still explicitly attributes to Bloomberg; Axios's $8B figure did not resurface this search and remains unresolved. No SEC filing or company confirmation. Gate still fails on independence. Still watching.",
+    "2026-08-20 c2: Fresh ingest (techmeme, cnbc-technology) surfaced new Bloomberg, New York Times and CNBC coverage, triggering a mandatory recheck. Fresh verifier + fresh adversarial-falsifier sub-agents run in parallel found both Stripe and OpenRouter had published their own on-the-record announcements today confirming the deal -- resolving the independence gate this entry was held on. Price remains unconfirmed by either company and disputed across outlets ($7B-$8B+). Published as stripe-openrouter-acquisition (EN+TR); evidence log at data/verified/stripe-openrouter-acquisition.json."
   ]
 }
