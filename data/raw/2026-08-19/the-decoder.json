@@ -48,5 +48,35 @@
     "published": "2026-08-19T12:45:02+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_logo_large_right.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Anthropic has passed OpenAI on revenue for the first time in the AI race.</p>\n<p>The article <a href=\"https://the-decoder.com/anthropic-passes-openai-on-revenue-for-the-first-time/\">Anthropic passes OpenAI on revenue for the first time</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-19T16:35:18.132664+00:00"
+  },
+  {
+    "id": "d82f767e0df6458f",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Stripe declares we're living in the singularity and uses it as a reason not to IPO",
+    "url": "https://the-decoder.com/stripe-declares-were-living-in-the-singularity-and-uses-it-as-a-reason-not-to-ipo/",
+    "published": "2026-08-19T20:03:20+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/stripe_logo_wall.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        In a letter to investors, Stripe declares January 1 the \"beginning of the singularity\" and uses that as a reason to stay private. Not that it needs one: revenue grew 41 percent in the first half of the year, and the company confirmed its $8 billion-plus acquisition of OpenRouter. Declaring the singularity is in vogue right now. Hassabis, Altman, and Musk all say it's already here.</p>\n<p>The article <a href=\"https://the-decoder.com/stripe-declares-were-living-in-the-singularity-and-uses-it-as-a-reason-not-to-ipo/\">Stripe declares we&#039;re living in the singularity and uses it as a reason not to IPO</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-19T22:00:00.998126+00:00"
+  },
+  {
+    "id": "d89b44a996d21c95",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Attackers are using AI to build exploits for industrial control systems, U.S. agencies warn",
+    "url": "https://the-decoder.com/attackers-are-using-ai-to-build-exploits-for-industrial-control-systems-u-s-agencies-warn/",
+    "published": "2026-08-19T18:55:53+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/05/cybersecurity_llm_kraken.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        The NSA, CISA, and FBI say attackers are using AI to build exploit scripts targeting Siemens S7 controllers, drastically cutting the time and skill needed to attack industrial control systems. Critical U.S. sectors like energy, water, and manufacturing are affected.</p>\n<p>The article <a href=\"https://the-decoder.com/attackers-are-using-ai-to-build-exploits-for-industrial-control-systems-u-s-agencies-warn/\">Attackers are using AI to build exploits for industrial control systems, U.S. agencies warn</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-19T22:00:00.998126+00:00"
+  },
+  {
+    "id": "5d3256c4c4b17892",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI fixes Codex bug that deleted real user files without permission",
+    "url": "https://the-decoder.com/openai-fixes-codex-bug-that-deleted-real-user-files-without-permission/",
+    "published": "2026-08-19T18:18:34+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_sol.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        OpenAI patched Codex after GPT-5.6 Sol started deleting real user files on its own. A cleanup command meant for temporary folders was wiping home directories instead. Codex now verifies deletion targets first, and full-access mode can no longer be triggered by accident.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-fixes-codex-bug-that-deleted-real-user-files-without-permission/\">OpenAI fixes Codex bug that deleted real user files without permission</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-19T22:00:00.998126+00:00"
   }
 ]

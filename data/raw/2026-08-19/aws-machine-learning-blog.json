@@ -1,0 +1,22 @@
+[
+  {
+    "id": "53b0c06d07b19638",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How Fanatics Betting and Gaming built a multi-agent customer support system",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-fanatics-betting-and-gaming-built-a-multi-agent-customer-support-system/",
+    "published": "2026-08-19T20:40:45+00:00",
+    "summary": "Fanatics Betting and Gaming built a multi-agent customer support system on AWS to handle the complexity of sports betting: state-specific rules, real-time responsible gaming, and traffic spikes during major sporting events. This post walks through the architecture, the AWS services involved, and the patterns for your own multi-agent support solution.",
+    "fetched_at": "2026-08-19T22:00:00.998126+00:00"
+  },
+  {
+    "id": "d1fcf352f60d1c6e",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "KnowledgeForge: mining gold from the ITSM ticket graveyard",
+    "url": "https://aws.amazon.com/blogs/machine-learning/knowledgeforge-mining-gold-from-the-itsm-ticket-graveyard/",
+    "published": "2026-08-19T20:36:50+00:00",
+    "summary": "KnowledgeForge mines resolved ITSM incident tickets into new knowledge base articles and automatically curates the existing library by deduplicating, quality-scoring, and improving content, using Amazon Bedrock, Amazon S3 Vectors, and AWS Step Functions in a multi-tenant, closed-loop pipeline.",
+    "fetched_at": "2026-08-19T22:00:00.998126+00:00"
+  }
+]
