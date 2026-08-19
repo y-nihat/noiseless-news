@@ -41,8 +41,16 @@ jobs:
       #
       # Deliberately only the content check, not pytest: a flaky unit test has
       # no business freezing the public site.
+      #
+      # `--max-held 3`: a story with a per-story defect is HELD from the site by
+      # the build (publish.py renders a stub at its URL and leaves it out of the
+      # index, feed and sitemap) while everything else ships; this step fails
+      # only past three held, or if the validator itself cannot run. On
+      # 2026-08-18 the all-or-nothing form withheld a whole night's seven
+      # stories over two missing evidence logs. Same predicate, same ceiling as
+      # tests.yml and the night loop's content gate.
       - name: The archive holds its invariants
-        run: PYTHONPATH=pipeline python -m noiseless.run validate-content --strict
+        run: PYTHONPATH=pipeline python -m noiseless.run validate-content --strict --max-held 3 --github
 
       - run: PYTHONPATH=pipeline python -m noiseless.run publish
       - uses: actions/configure-pages@v5
@@ -77,10 +85,12 @@ jobs:
             echo
             echo 'Which step failed decides what this is:'
             echo
-            echo '- **The archive holds its invariants** — a published article breaks a'
-            echo '  blocking rule. The site is deliberately not updated. Fix the article;'
-            echo '  the next deploy publishes it. Reproduce with'
-            echo '  `docker compose run --rm pipeline python -m noiseless.run validate-content --strict`.'
+            echo '- **The archive holds its invariants** — more than three stories carry a'
+            echo '  blocking defect, or the validator could not run. (Up to three are held'
+            echo '  from the site by the build while everything else publishes; this step'
+            echo '  only fails past that ceiling.) The site is deliberately not updated.'
+            echo '  Reproduce with'
+            echo '  `docker compose run --rm pipeline python -m noiseless.run validate-content --strict --max-held 3`.'
             echo '- **deploy-pages, around 600s** — a Pages backend stall (run 31100056995,'
             echo '  603s, "Timeout reached, aborting!"). Nothing is wrong with the build;'
             echo '  re-run. PR #24 declined to raise that timeout on purpose, because the'

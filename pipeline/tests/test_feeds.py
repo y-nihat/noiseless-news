@@ -11,6 +11,7 @@ from __future__ import annotations
 import xml.etree.ElementTree as ET
 
 import pytest
+from conftest import write_twins
 
 from noiseless.publish import FEED_LIMIT, SITE_URL, build_site
 
@@ -34,6 +35,7 @@ Body.
 
 
 def write(tmp_path, slug, date, published=None, updated="[]"):
+    write_twins(tmp_path, slug)
     for lang in ("en", "tr"):
         d = tmp_path / "content" / "articles" / lang / "2026" / "07"
         d.mkdir(parents=True, exist_ok=True)

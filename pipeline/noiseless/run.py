@@ -13,7 +13,6 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from noiseless.ingest import ingest_all
 from noiseless.sources import SourceRegistryError, load_sources
 
 REGISTRY_PATH = Path("policy/sources.yaml")
@@ -88,6 +87,35 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="treat warnings as blocking too (once the known ones are cleared)",
     )
+    content_parser.add_argument(
+        "--max-held",
+        type=int,
+        default=None,
+        metavar="N",
+        help="with --strict: hold defective stories from the site instead of failing, "
+             "and exit 2 only when more than N are held (the deploy ceiling)",
+    )
+    content_parser.add_argument(
+        "--github",
+        action="store_true",
+        help="print GitHub workflow-command annotations for held stories",
+    )
+    content_parser.add_argument(
+        "--json",
+        default=None,
+        metavar="PATH",
+        help="also write the findings and the held set as JSON here",
+    )
+    content_parser.add_argument(
+        "--brief",
+        action="store_true",
+        help="print the repair queue for the next agent cycle (exit 2 if non-empty)",
+    )
+    content_parser.add_argument(
+        "--staged",
+        action="store_true",
+        help="pre-commit mode: validate only the articles in the git index (exit 1 to refuse)",
+    )
 
     dedup_parser = subparsers.add_parser(
         "dedup-check",
@@ -100,11 +128,17 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
 
-    try:
-        sources = load_sources(REGISTRY_PATH)
-    except SourceRegistryError as exc:
-        print(f"source registry invalid: {exc}", file=sys.stderr)
-        return 1
+    # Only the commands that read the registry load it. validate-content and
+    # publish are about the archive, and validate-content also runs as a
+    # pre-commit hook from whatever directory git is in — a content check must
+    # not fail because policy/sources.yaml is not under the cwd.
+    sources = []
+    if args.command in ("validate-sources", "source-status", "ingest"):
+        try:
+            sources = load_sources(REGISTRY_PATH)
+        except SourceRegistryError as exc:
+            print(f"source registry invalid: {exc}", file=sys.stderr)
+            return 1
 
     if args.command == "validate-sources":
         by_tier: dict[int, int] = {}
@@ -138,6 +172,10 @@ def main(argv: list[str] | None = None) -> int:
         return code
 
     if args.command == "ingest":
+        # Imported here, not at module load: `validate-content --staged` runs as
+        # a pre-commit hook and must not depend on the feed-fetching stack.
+        from noiseless.ingest import ingest_all
+
         summary = ingest_all(sources, args.data_dir, only_sources=args.source)
         failures = [name for name, count in summary.items() if count < 0]
         total_new = sum(count for count in summary.values() if count > 0)
@@ -154,14 +192,19 @@ def main(argv: list[str] | None = None) -> int:
         from noiseless.publish import build_site
 
         counts = build_site(Path("."), args.out)
-        print(f"site built at {args.out} — articles: en={counts['en']}, tr={counts['tr']}")
+        print(
+            f"site built at {args.out} — articles: en={counts['en']}, tr={counts['tr']}"
+            f", held={counts.get('held', 0)}"
+        )
         return 0
 
     if args.command == "validate-content":
         from noiseless.validate_content import main as validate_content_main
 
         return validate_content_main(
-            Path("."), strict=args.strict, warn_as_error=args.warn_as_error
+            Path("."), strict=args.strict, warn_as_error=args.warn_as_error,
+            max_held=args.max_held, github=args.github, json_path=args.json,
+            brief=args.brief, staged=args.staged,
         )
 
     if args.command == "dedup-check":

@@ -51,7 +51,11 @@ jobs:
         run: pytest -q
       - name: Source registry parses
         run: PYTHONPATH=pipeline python -m noiseless.run validate-sources
+      # Same predicate and ceiling as deploy.yml: green with warning annotations
+      # while up to three stories are held from the site, red only when the
+      # archive is undeployable. Red on main means a human must act today; a
+      # held story is repaired by the next night's cycle 1.
       - name: Published content holds its invariants
-        run: PYTHONPATH=pipeline python -m noiseless.run validate-content --strict
+        run: PYTHONPATH=pipeline python -m noiseless.run validate-content --strict --max-held 3 --github
       - name: Site builds from the real archive
         run: PYTHONPATH=pipeline python -m noiseless.run publish --out /tmp/site-check

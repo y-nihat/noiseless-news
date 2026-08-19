@@ -89,6 +89,44 @@ locally on a runner that no longer exists. The job now exits non-zero for this,
 so it is visible; the work itself is lost and the stories will be re-found on a
 later night.
 
+## A story is held from the site
+
+The build refuses to render an article whose evidence log is missing or
+unreadable, whose ledger entry is missing, or whose Turkish twin does not
+mirror it — it renders a `noindex` stub at the URL (so a shared link never
+404s and nothing is asserted) and leaves the story out of the index, feed and
+sitemap. Everything else publishes. This replaced, on 2026-08-19, a gate that
+withheld the whole night's deploy over one such story.
+
+Where to see it: the night report footer ("Held from the site at dawn: …"),
+the "Night review needed" issue, the warning annotations on the Deploy and
+Tests runs, and
+
+```sh
+docker compose run --rm pipeline python -m noiseless.run validate-content --strict --max-held 3
+docker compose run --rm pipeline python -m noiseless.run validate-content --brief   # what the agent will be told
+```
+
+How it clears: the next night's cycle 1 receives every held story as its
+REPAIR QUEUE, before any new work — it re-verifies and writes the log (or
+withdraws the story to `watching` with a reason). Nobody hand-writes a log:
+a log written by a party that did not verify is a fabricated audit trail. A
+story still held after that night is yours to look at.
+
+More than three held, or a validator that cannot run, is a different
+condition: the archive is **blocked**, no deploy goes out, the run is red and
+the issue is titled "Nightly run failed". Red still means a human must act
+today.
+
+To withdraw a story by hand: `git rm` both article files, set the ledger entry
+to `watching` with a `reason`, commit, push. Do not delete the ledger entry.
+
+The agent's own commits go through `.github/hooks/pre-commit`, which refuses an
+article whose log, ledger entry or Turkish twin is not staged with it — that
+is the check that would have stopped the 2026-08-18 commits before they landed.
+It is scoped to the agent's process; your commits and the supervisor's are not
+subject to it.
+
 ## Roll back a bad deploy
 
 ```sh
@@ -122,6 +160,8 @@ Worth running before pushing a workflow change: GitHub does not report a file
 it cannot parse as a broken workflow, it reports a zero-second run named after
 the file path and then behaves as though that workflow does not exist.
 
+`validate-content --strict --max-held 3` is the deploy predicate; `--brief`
+prints the repair queue; `--staged` is the pre-commit hook's mode.
 `validate-sources --live` reports three things, not one: `[FAIL]` cannot be
 fetched, `[STALE]` fetches fine but nobody has published in a while, `[BLOCKED]`
 a known refusal of CI address ranges recorded in the registry.

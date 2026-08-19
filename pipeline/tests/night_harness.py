@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -66,15 +67,38 @@ def make_scratch(tmp_path: Path) -> dict[str, Path]:
 
     stubs = tmp_path / "stubs"
     stubs.mkdir()
+    # The gate's own behaviour is what is under test, so the tools it calls are
+    # reduced to a settable exit code. `python` additionally honours the
+    # `--json PATH` the gate passes to validate-content, writing a findings file
+    # whose held set is driven by STUB_HELD (comma-separated slugs) — without
+    # it the gate correctly reads "no findings file" as "the validator did not
+    # run" and fails closed, which is not the case most tests want to exercise.
+    (stubs / "pytest").write_text(
+        '#!/bin/sh\necho "stub pytest $*"\nexit "${STUB_PYTEST_EXIT:-0}"\n',
+        encoding="utf-8",
+    )
+    (stubs / "python").write_text(
+        '#!/bin/sh\n'
+        '# `python - FILE` with a script on stdin is the supervisor reading its\n'
+        '# own findings file back; hand that to the real interpreter.\n'
+        'if [ "$1" = "-" ]; then exec "$REAL_PYTHON" "$@"; fi\n'
+        'echo "stub python $*"\n'
+        'json=""\n'
+        'while [ $# -gt 0 ]; do [ "$1" = "--json" ] && json="$2"; shift; done\n'
+        'if [ -n "$json" ]; then\n'
+        '  held=""\n'
+        '  for s in $(echo "${STUB_HELD:-}" | tr "," " "); do\n'
+        '    held="$held\\"$s\\": [{\\"level\\": \\"ERROR\\", \\"check\\": \\"evidence-log\\", '
+        '\\"slug\\": \\"$s\\", \\"detail\\": \\"no data/verified entry\\", '
+        '\\"path\\": \\"content/articles/en/2026/08/$s.md\\", \\"fix\\": \\"write it\\"}],"\n'
+        '  done\n'
+        '  printf \'{"articles": 1, "blocked": false, "max_held": 3, "held": {%s}, "findings": []}\\n\' "${held%,}" > "$json"\n'
+        'fi\n'
+        'exit "${STUB_PYTHON_EXIT:-0}"\n',
+        encoding="utf-8",
+    )
     for tool in ("pytest", "python"):
-        # The gate's own exit code is what is under test, so the tools it calls
-        # are reduced to a settable exit code.
-        stub = stubs / tool
-        stub.write_text(
-            f'#!/bin/sh\necho "stub {tool} $*"\nexit "${{STUB_{tool.upper()}_EXIT:-0}}"\n',
-            encoding="utf-8",
-        )
-        stub.chmod(0o755)
+        (stubs / tool).chmod(0o755)
 
     # The supervisor puts every scratch file it owns in here. Setting it per
     # test is what stops the suite — which drives the real script — from writing
@@ -104,6 +128,7 @@ def drive(scratch: dict[str, Path], snippet: str) -> subprocess.CompletedProcess
             "HOME": str(scratch["home"]),
             "GIT_TERMINAL_PROMPT": "0",
             "NIGHT_STATE_DIR": str(scratch["state"]),
+            "REAL_PYTHON": sys.executable,
         },
     )
 
@@ -172,6 +197,7 @@ def run_night(scratch: dict[str, Path], **env: str) -> subprocess.CompletedProce
             "HOME": str(scratch["home"]),
             "GIT_TERMINAL_PROMPT": "0",
             "NIGHT_STATE_DIR": str(scratch["state"]),
+            "REAL_PYTHON": sys.executable,
             **env,
         },
     )

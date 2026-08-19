@@ -68,6 +68,12 @@ STRINGS = {
         "held_since": "held since {date}",
         "held_needs": "What would change the answer",
         "no_held": "Nothing is on hold right now.",
+        "withheld_title": "Temporarily withheld",
+        "withheld_note": (
+            "This story is temporarily withheld from the site while its evidence "
+            "log is completed. Nothing about it is asserted here until every "
+            "verdict can be audited."
+        ),
         "rule_labels": {
             "0": "Outside the AI vertical",
             "0a": "Already covered by an existing story",
@@ -215,6 +221,12 @@ STRINGS = {
         "held_since": "{date} tarihinden beri bekletiliyor",
         "held_needs": "Sonucu ne değiştirir",
         "no_held": "Şu anda bekleyen haber yok.",
+        "withheld_title": "Geçici olarak bekletiliyor",
+        "withheld_note": (
+            "Bu haber, kanıt dosyası tamamlanana kadar siteden geçici olarak "
+            "bekletiliyor. Her hüküm denetlenebilir olana kadar burada hiçbir "
+            "iddia yer almaz."
+        ),
         "rule_labels": {
             "0": "Yapay zekâ alanının dışında",
             "0a": "Mevcut bir haberde zaten ele alınmış",
@@ -731,10 +743,12 @@ def _domain(url: str) -> str:
 
 def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
           description: str = "", prefix: str = "", last_run: str = "",
-          path: str = "", alternate_path: str | None = None) -> str:
+          path: str = "", alternate_path: str | None = None,
+          noindex: bool = False) -> str:
     s = STRINGS[lang]
     desc = html.escape(description or s["tagline"])
     canonical = f"{SITE_URL}/{path}"
+    robots = '<meta name="robots" content="noindex">\n' if noindex else ""
     # Reciprocal hreflang, plus x-default pointing at the canonical English
     # edition. Both index pages previously shipped the identical <title>, so a
     # bookmark or a search result could not tell the two editions apart.
@@ -768,7 +782,7 @@ def _page(*, lang: str, title: str, body: str, home: str, other_lang_href: str,
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{desc}">
-<title>{html.escape(title)}</title>
+{robots}<title>{html.escape(title)}</title>
 <link rel="canonical" href="{canonical}">
 {alternates}<link rel="alternate" type="application/atom+xml" title="{html.escape(s['feed_title'])}" href="{SITE_URL}/{feed_path}">
 <meta property="og:type" content="{'article' if path.count('articles/') else 'website'}">
@@ -1251,6 +1265,35 @@ def build_site(repo_root: Path | str, out_dir: Path | str) -> dict[str, int]:
     return counts
 
 
+def withheld_stories(repo_root: Path) -> dict[str, list]:
+    """slug -> ERROR findings, for every story the site must not carry.
+
+    Computed at build time from the tree, never remembered: no hold file for
+    the agent to forge or delete, and a repaired archive publishes on the next
+    build wherever that build is dispatched from. If the validator itself
+    raises, this raises, and build_site leaves the previous site in place —
+    a build that cannot tell what is safe to publish must not publish.
+    """
+    from noiseless.validate_content import held_slugs, validate  # circular at import time
+
+    return held_slugs(validate(repo_root))
+
+
+def _withheld_html(lang: str) -> str:
+    """The stub at a held story's URL. No headline, no claims, no sources.
+
+    A reader may already hold the link (the RSS entry, a share), so it must
+    not 404 — RUNBOOK's own rule for taken-down articles. And it must assert
+    nothing: listing even the headline would publish exactly the unaudited
+    claim being held.
+    """
+    s = STRINGS[lang]
+    return (
+        f"<article class='withheld'><h1>{html.escape(s['withheld_title'])}</h1>"
+        f"<p>{html.escape(s['withheld_note'])}</p></article>"
+    )
+
+
 def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
     (out_dir / "articles").mkdir(parents=True)
     (out_dir / "tr" / "articles").mkdir(parents=True)
@@ -1258,25 +1301,53 @@ def _render_site(repo_root: Path, out_dir: Path) -> dict[str, int]:
     digest = build_digest(repo_root / "data")
     last_run = latest_run_date(repo_root / "data")
     held = load_held_stories(repo_root / "data")
-    counts = {}
+    # Stories with a per-story defect (no evidence log, broken parity, …) are
+    # held from the site while everything else publishes. On 2026-08-18 two
+    # articles without their evidence logs cost the whole night's seven stories
+    # their deploy; the hold is what makes that a two-story problem.
+    withheld = withheld_stories(repo_root)
+    for slug, findings in sorted(withheld.items()):
+        checks = ", ".join(sorted({f.check for f in findings}))
+        print(f"[publish] HELD {slug}: {checks} — {findings[0].detail}")
+    counts = {"held": len(withheld)}
     sitemap_paths: list[str] = []
     for lang, lang_root, home, base in (
         ("en", out_dir, "index.html", ""),
         ("tr", out_dir / "tr", "index.html", "tr/"),
     ):
         other_base = "tr/" if lang == "en" else ""
-        articles = load_articles(repo_root / "content", lang)
+        all_articles = load_articles(repo_root / "content", lang)
+        articles = [a for a in all_articles if a.slug not in withheld]
+        held_here = [a for a in all_articles if a.slug in withheld]
         threads = resolve_threads(articles)
         counts[lang] = len(articles)
         other = "tr/index.html" if lang == "en" else "../index.html"
 
         def page(title, body, *, path, alternate, home=home, other=other,
-                 prefix="", description=""):
-            sitemap_paths.append(path)
+                 prefix="", description="", noindex=False, listed=True):
+            if listed:
+                sitemap_paths.append(path)
             return _page(lang=lang, title=title, body=body, home=home,
                          other_lang_href=other, description=description,
                          prefix=prefix, last_run=last_run, path=path,
-                         alternate_path=alternate)
+                         alternate_path=alternate, noindex=noindex)
+
+        for article in held_here:
+            counterpart = (
+                f"../../articles/{article.slug}.html"
+                if lang == "tr"
+                else f"../tr/articles/{article.slug}.html"
+            )
+            (lang_root / "articles" / f"{article.slug}.html").write_text(
+                page(f"{STRINGS[lang]['withheld_title']} — noiseless.news",
+                     _withheld_html(lang),
+                     path=f"{base}articles/{article.slug}.html",
+                     alternate=None,
+                     home="../index.html", other=counterpart, prefix="../",
+                     description=STRINGS[lang]["withheld_note"],
+                     noindex=True, listed=False),
+                encoding="utf-8",
+            )
 
         index_body = _article_list_html(articles, lang, "articles/") + _digest_html(
             digest, lang

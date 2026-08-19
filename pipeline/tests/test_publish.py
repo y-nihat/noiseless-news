@@ -2,6 +2,8 @@
 
 import json
 
+from conftest import write_twins
+
 from noiseless.publish import (
     Article,
     build_digest,
@@ -73,6 +75,7 @@ def make_repo(tmp_path):
     (tmp_path / "content/articles/tr/2026/07/example-model-x.md").write_text(
         ARTICLE_TR, encoding="utf-8"
     )
+    write_twins(tmp_path, "example-model-x")
 
     day = tmp_path / "data/raw/2026-07-08"
     day.mkdir(parents=True)
@@ -143,6 +146,7 @@ def test_thread_box_rendered_on_both_members_and_languages(tmp_path):
     (tmp_path / "content/articles/tr/2026/07/model-x-pulled.md").write_text(
         FOLLOWUP_TR, encoding="utf-8"
     )
+    write_twins(tmp_path, "model-x-pulled")
     out = tmp_path / "dist"
     build_site(tmp_path, out)
 
@@ -166,7 +170,7 @@ def test_build_site_renders_bilingual_pages(tmp_path):
     make_repo(tmp_path)
     out = tmp_path / "dist"
     counts = build_site(tmp_path, out)
-    assert counts == {"en": 1, "tr": 1}
+    assert counts == {"en": 1, "tr": 1, "held": 0}
 
     index = (out / "index.html").read_text(encoding="utf-8")
     assert "Example Lab releases Model X" in index
