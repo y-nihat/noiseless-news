@@ -1,0 +1,22 @@
+[
+  {
+    "id": "5fd6522d2cb27fa9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "S1-mini by Superwhisper running 100% locally in the browser on WebGPU with Transformers.js",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vsze11/s1mini_by_superwhisper_running_100_locally_in_the/",
+    "published": "2026-08-19T21:14:53+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsze11/s1mini_by_superwhisper_running_100_locally_in_the/\"> <img alt=\"S1-mini by Superwhisper running 100% locally in the browser on WebGPU with Transformers.js\" src=\"https://external-preview.redd.it/aXpqaWh3c3JkZWtoMUhyPAdy_W2aP8KyVIM-mrmcT5RM9qx3iygVzFnUvbqm.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=25615486e2790776a61f088740bae89184a2277b\" title=\"S1-mini by Superwhisper running 100% locally in the browser on WebGPU with Transformers.js\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It's a 600M-parameter LLM designed to turn raw speech-to-text transcripts into clean written text. It removes false starts and self-corrections, adds punctuation and capitalization, and formats spoken numbers, dates, times, and currencies. </p> <p>Try it out yourself:<br /> - Model: <a href=\"https://huggingface.co/superwhisper/s1-mini\">https://huggingface.co/superwhisper/s1-mini</a><br /> - Demo: <a href=\"https://huggingface.co/spaces/webml-community/s1-mini-webgpu\">https://huggingface.co/spaces/webml-community/s1-mini-webgpu</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/xenovatech\"> /u/xenovatech </a> <br /> <span><a href=\"https://v.redd.it/b4spkrsrdekh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vsze11/s1mini_by_superwhisper_running_100_locally_in_the/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-20T00:58:32.198075+00:00"
+  },
+  {
+    "id": "c423ba8780e84bde",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27B SlopCodeBench results",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vt2cjy/qwen_38_27b_slopcodebench_results/",
+    "published": "2026-08-19T23:11:28+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Howdy, I'm back again - running my favorite benchmark (it's still unsaturated for the time being so might as well!)</p> <p>previous runs <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vbtiy7/deepseek_v4_flash_on_slopcodebench/\">a</a> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vjiypj/updated_benchmark_deepseek_v4_flash_on/\">b</a></p> <p><a href=\"https://github.com/michaelasper/benchmarks/blob/main/qwen3.8-27b-pi-on-slop-code-bench.md\">https://github.com/michaelasper/benchmarks/blob/main/qwen3.8-27b-pi-on-slop-code-bench.md</a></p> <p>I ran this via OpenRouter because my mac would cry running 9 problems </p> <p>It did pretty poorly on the strict checkpoints which means you probably don't want Qwen managing the codebase by itself as it'll grow unwieldy and disorganized, but did fairly well on the core checkpoints so it can solve issues with a copilot and clear direction</p> <p>AI;DR here are the direct results</p> <p><strong>HumanLayer Opus 5 Benchmark Subset</strong> (3 Problems, 17 Checkpoints)</p> <p>Qwen scored <strong>3/17 (17.6%)</strong> strict.</p> <table><thead> <tr> <th>Reported System</th> <th>Strict Score</th> </tr> </thead><tbody> <tr> <td>DeepSeek V4 Flash 0731 · pi (run B)</td> <td>5/17 (29.4%)</td> </tr> <tr> <td>Opus 5 · Claude Code</td> <td>4/17 (23.5%)</td> </tr> <tr> <td>Qwen3.8-27B · pi</td> <td>3/17 (17.6%)</td> </tr> <tr> <td>DeepSeek V4 Flash · OpenCode</td> <td>3/17 (17.6%)</td> </tr> <tr> <td>Opus 4.8 · Claude Code</td> <td>1/17 (5.9%)</td> </tr> <tr> <td>Sonnet 5 · Claude Code</td> <td>1/17 (5.9%)</td> </tr> </tbody></table> <hr /> <p><strong>HumanLayer Fable, Sol, and Kimi Benchmark Subset</strong> (6 Problems, 30 Checkpoints)</p> <p>Qwen scored <strong>4/30 (13.3%)</strong> strict.</p> <table><thead> <tr> <th>Reported System</th> <th>Strict Score</th> </tr> </thead><tbody> <tr> <td>Fable 5 · Claude Code</td> <td>10/30 (33.3%)</td> </tr> <tr> <td>GPT-5.6 Sol · Codex</td> <td>10/30 (33.3%)…",
+    "fetched_at": "2026-08-20T00:58:32.198075+00:00"
+  }
+]
