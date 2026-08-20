@@ -18,5 +18,15 @@
     "published": "2026-08-20T00:00:00+00:00",
     "summary": "As language models scale, the amount of data they require grows – yet many target data sources, such as low-resource languages or specialized domains, are inherently limited in size. A common strategy is to mix this scarce but valuable target data with abundant generic data, which presents a fundamental trade-off: too little target data in the mixture underexposes the model to the target domain, while too much target data repeats the same examples excessively, yielding diminishing returns and eventual overfitting. We study this trade-off across more than 2,000 language-model training runs…",
     "fetched_at": "2026-08-20T16:38:46.369533+00:00"
+  },
+  {
+    "id": "e4e1cd054e249844",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Progressive Refinement: An Iterative Pseudo-Labeling Approach for Mandarin-English Code-Switching ASR",
+    "url": "https://machinelearning.apple.com/research/progressive-refinement-pseudo-labeling",
+    "published": "2026-08-20T00:00:00+00:00",
+    "summary": "Code-switching (CS), alternating languages within the same utterance, poses significant challenges for automatic speech recognition (ASR) due to limited CS training data. This paper applies an iterative pseudo-labeling training approach to CS-ASR for the first time, demonstrating its effectiveness in leveraging unlabeled data to improve CS-ASR performance. The approach comprises three phases: pseudo-label generation, two-stage bilingual model training, and iterative improvements. It begins by generating pseudo-labels from a large unlabeled corpus, creating a semi-supervised dataset. This…",
+    "fetched_at": "2026-08-20T23:48:56.556853+00:00"
   }
 ]
