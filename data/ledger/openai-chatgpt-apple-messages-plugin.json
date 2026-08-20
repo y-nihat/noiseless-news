@@ -1,0 +1,21 @@
+{
+  "slug": "openai-chatgpt-apple-messages-plugin",
+  "title": "OpenAI adds an Apple Messages plugin to ChatGPT's Mac app",
+  "status": "published",
+  "first_seen": "2026-08-20",
+  "published_at": "2026-08-20",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://learn.chatgpt.com/docs/plugins",
+    "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/",
+    "https://finance.yahoo.com/technology/ai/articles/chatgpt-now-control-imessage-potentially-205633657.html"
+  ],
+  "follows": null,
+  "public": true,
+  "open_obligation": false,
+  "reason": "Published same-day: flagged as a probable quick candidate in cycle 2's report (carried from a TechCrunch lead), picked up this cycle once OpenAI's own primary documentation was located. Fresh verifier and fresh adversarial-falsifier sub-agents, neither having drafted the story, independently confirmed the feature, its approval-gating mechanism, and its platform scope against OpenAI's own plugin docs. The falsifier specifically ruled out third-party/unofficial-tool confusion, a stale/re-reported feature, and any denial, and independently reproduced the verifier's doubt that OpenAI's own materials do not use the word 'analyze' (traced to 9to5Mac's own framing instead, so excluded from the article's claims). No open obligation: this is a shipped, present-tense feature, not a pending outcome -- the one unresolved thread (how much message content reaches OpenAI's servers during processing) is presented in the article itself as an open question per Bloomberg's own reporting, not a follow-up item with an expected resolution date.",
+  "watch": [],
+  "notes": [
+    "2026-08-20 c3: Published. dedup-check clean (no matches). Evidence log at data/verified/openai-chatgpt-apple-messages-plugin.json."
+  ]
+}

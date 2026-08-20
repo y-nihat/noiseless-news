@@ -1,0 +1,40 @@
+{
+  "slug": "openai-chatgpt-apple-messages-plugin",
+  "checked_at": "2026-08-20T23:30:00+00:00",
+  "method": "Fresh verifier sub-agent + fresh adversarial falsifier sub-agent, both run in cycle 3 of tonight's loop, neither having drafted the story. Verifier fetched OpenAI's own current plugin documentation directly, cross-checked 9to5Mac and a Bloomberg/Yahoo mirror, and searched for independent corroboration or contradiction. Falsifier independently re-fetched OpenAI's documentation, searched specifically for a denial, a hoax framing, evidence this is an older feature, evidence of third-party (non-OpenAI) origin, and evidence the plugin behaves differently than documented; found none.",
+  "origin_items": [
+    "data/raw/2026-08-20/techmeme.json#ef8913c9e7139913"
+  ],
+  "claims": [
+    {
+      "text": "OpenAI rolled out an Apple Messages plugin for ChatGPT's macOS desktop app, limited to Apple Silicon (arm64) Macs, that can read and search a user's iMessage, SMS and RCS conversations and prepare and send messages on the user's behalf",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against OpenAI's own current plugin documentation (learn.chatgpt.com/docs/plugins), which is sufficient alone for an announcement-type claim under policy. Both verifier and falsifier independently fetched the page and found matching wording ('read and search iMessage, SMS, and RCS chats on your Mac and send messages on your behalf', 'limited to Apple Silicon (arm64) builds'). Independently corroborated same-day by 9to5Mac, TechCrunch and Bloomberg/Yahoo, though those outlets primarily relay OpenAI's own announcement rather than adding independent testing.",
+      "evidence": ["https://learn.chatgpt.com/docs/plugins", "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/"]
+    },
+    {
+      "text": "Sending is gated by a default per-message approval step ('Allow once'), with an optional persistent 'Always allow sending to this chat' override that users can revoke later in ChatGPT's settings; OpenAI's own documentation separately cautions against enabling persistent approval for chats with untrusted instructions",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim from OpenAI's own documentation, independently re-fetched by the falsifier: 'requires per-message approval by default... optionally enable persistent approval for specific chats' and a caution against persistent approval given 'untrusted instructions.' 9to5Mac independently supplies the matching UI labels. Falsifier also confirmed a documented known issue: tasks set to 'Full access' may prevent the approval prompt from displaying, and OpenAI's own guidance is to switch such tasks back to an approval mode.",
+      "evidence": ["https://learn.chatgpt.com/docs/plugins"]
+    },
+    {
+      "text": "The plugin shipped on 20 August 2026, according to OpenAI's own release notes, and is not available on Intel Macs, the web, mobile, or other ChatGPT surfaces",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "OpenAI's changelog dates the release to 2026-08-20; every independent outlet checked (9to5Mac, TechCrunch, Bloomberg/Yahoo, Digital Trends, Unite.AI) is dated the same day, and no source found any earlier mention -- genuinely new, not a re-report. Platform restriction to Apple Silicon macOS, excluding Intel/web/mobile/CLI/IDE-extension, is stated directly in OpenAI's documentation and corroborated by 9to5Mac and TechCrunch.",
+      "evidence": ["https://learn.chatgpt.com/docs/changelog", "https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/"]
+    },
+    {
+      "text": "OpenAI told Bloomberg the plugin processes messages locally on the user's Mac and does not build a full index of a user's message history; Bloomberg's reporting frames how much message content reaches OpenAI's servers during processing as an open question its own reporting could not independently verify",
+      "type": "statement",
+      "verdict": "single-source",
+      "reasoning": "Confirmed as an OpenAI statement made specifically to Bloomberg (Mark Gurman), corroborated via a Yahoo Finance mirror of the Bloomberg piece after bloomberg.com itself returned an access error to the fetch tool. This is the one outlet in the evidence set doing original reporting rather than relaying OpenAI's announcement; no other outlet independently confirmed or disputed the server-side data-handling claim, and no source presented evidence contradicting OpenAI's account. Labeled single-source and framed as an open question, not a resolved fact, per policy.",
+      "evidence": ["https://finance.yahoo.com/technology/ai/articles/chatgpt-now-control-imessage-potentially-205633657.html"]
+    }
+  ],
+  "falsifier_notes": "Attempted to break: (1) first-party origin -- searched for evidence this is a third-party/unofficial plugin rather than OpenAI's own; TechCrunch and Bloomberg both directly attribute it to OpenAI, and OpenAI's own docs host it natively -- ruled out. (2) denial or correction -- none found across 9 outlets and OpenAI's current documentation. (3) stale/re-reported feature -- every source dates it 2026-08-20; no earlier mention found. (4) behavior differing from OpenAI's documented claims (e.g. sending without approval, broader access than stated, a demonstrated injection incident) -- no external report of an actual incident; OpenAI's own docs proactively flag the 'untrusted instructions' risk on persistent approval, which is a first-party caution, not a contradiction. (5) the verifier's flagged doubt on whether OpenAI's own materials use the word 'analyze' -- independently re-fetched OpenAI's documentation and confirmed it describes only read/search/send, not 'analyze'; that framing traces to 9to5Mac's own descriptive language, not an OpenAI claim, and was excluded from this article's claims for that reason. No evidence of hoax, denial, correction, staleness, or third-party-tool confusion. PASS.",
+  "dedup_check": "python -m noiseless.run dedup-check --title \"OpenAI ChatGPT Apple Messages integration macOS\" --url \"https://9to5mac.com/2026/08/20/chatgpt-update-adds-apple-messages-integration-on-mac/\" returned no matches (empty matches list) -- standalone, new story."
+}
