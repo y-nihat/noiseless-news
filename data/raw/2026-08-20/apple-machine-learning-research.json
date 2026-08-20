@@ -1,0 +1,22 @@
+[
+  {
+    "id": "f65c07c326de973a",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Multilingual Knowledge Transfer under Data Constraints via Lexical Interventions",
+    "url": "https://machinelearning.apple.com/research/multilingual-knowledge-transfer-lexical-interventions",
+    "published": "2026-08-20T00:00:00+00:00",
+    "summary": "Cross-lingual knowledge transfer is critical for building high-performing multilingual language models for languages with insufficient training data. When target language data is scarce, the knowledge required for many downstream tasks involving scientific reasoning, commonsense inference, and world knowledge must be acquired primarily from the high-resource language, making effective knowledge transfer essential. Existing methods for improving such cross-lingual knowledge transfer require large amounts of parallel data, translation systems, auxiliary models, or additional training stages that…",
+    "fetched_at": "2026-08-20T16:38:46.369533+00:00"
+  },
+  {
+    "id": "8a292f3e3fd39914",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Scaling Laws for Mixture Pretraining Under Data Constraints",
+    "url": "https://machinelearning.apple.com/research/scaling-laws-mixture-pretraining",
+    "published": "2026-08-20T00:00:00+00:00",
+    "summary": "As language models scale, the amount of data they require grows – yet many target data sources, such as low-resource languages or specialized domains, are inherently limited in size. A common strategy is to mix this scarce but valuable target data with abundant generic data, which presents a fundamental trade-off: too little target data in the mixture underexposes the model to the target domain, while too much target data repeats the same examples excessively, yielding diminishing returns and eventual overfitting. We study this trade-off across more than 2,000 language-model training runs…",
+    "fetched_at": "2026-08-20T16:38:46.369533+00:00"
+  }
+]
