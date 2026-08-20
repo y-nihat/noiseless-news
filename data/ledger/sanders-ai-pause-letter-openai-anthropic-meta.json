@@ -18,8 +18,9 @@
     "Independent confirmation or denial of the specific virus-design and containment-escape incidents Sanders cited"
   ],
   "open_obligation": true,
-  "revisit_after": "2026-08-20",
+  "revisit_after": "2026-09-03",
   "notes": [
-    "2026-08-13 c5: published. Surfaced via finance.biggo.com relay in today's raw ingest, traced to Sanders' own senate.gov press release. dedup-check returned zero matches. open_obligation set for company response / Senate follow-through."
+    "2026-08-13 c5: published. Surfaced via finance.biggo.com relay in today's raw ingest, traced to Sanders' own senate.gov press release. dedup-check returned zero matches. open_obligation set for company response / Senate follow-through.",
+    "2026-08-20 c6: rechecked (2 WebSearches) -- no OpenAI/Anthropic/Meta statement, no Senate hearing or bill, no follow-through action. Same coverage set (Sanders.senate.gov, TechSpot, Axios, IBTimes, TechRepublic, Futurism, Seeking Alpha) recirculating with no new developments; qz.com hit skipped per blocked_evidence_domains. open_obligation remains true; revisit_after pushed 2 weeks."
   ]
 }
