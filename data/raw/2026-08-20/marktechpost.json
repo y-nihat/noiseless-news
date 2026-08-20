@@ -1,0 +1,12 @@
+[
+  {
+    "id": "827e3b52c36cd3fb",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Auditing Preference Biases and Fine-Tuning Language Models with Direct Preference Optimization on Anthropic HH-RLHF Using TRL and LoRA",
+    "url": "https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/",
+    "published": "2026-08-20T08:51:38+00:00",
+    "summary": "<p>This tutorial provides an end-to-end workflow for fine-tuning language models using Direct Preference Optimization (DPO). We demonstrate how to audit the Anthropic HH-RLHF dataset for structural and length-based biases, implement a robust training pipeline using TRL and LoRA, and evaluate model performance to ensure genuine preference learning rather than reliance on lexical shortcuts.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/\">Auditing Preference Biases and Fine-Tuning Language Models with Direct Preference Optimization on Anthropic HH-RLHF Using TRL and LoRA</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-20T10:33:17.279415+00:00"
+  }
+]
