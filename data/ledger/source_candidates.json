@@ -1227,5 +1227,17 @@
       ],
       "context": "Major national outlet, independently bylined; used as broad-reach independent corroboration for pa-shapiro-data-center-executive-order. Note: two other raw leads this cycle (KVIA, LocalNews8-style affiliates) turned out to be literal CNN wire syndication of this same piece -- collapsed to one source per the independence rule, not double-counted. Propose Tier 2."
     }
+  ],
+  "candidates_2026-08-21_c3": [
+    {
+      "domain": "learn.chatgpt.com",
+      "first_seen": "2026-08-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://learn.chatgpt.com/docs/plugins",
+        "https://learn.chatgpt.com/docs/changelog"
+      ],
+      "context": "OpenAI's own current ChatGPT documentation/changelog subdomain -- Tier-0 primary per policy SS1 (vendor's own official docs), load-bearing for openai-chatgpt-apple-messages-plugin. Distinct from the registered 'OpenAI News' entry (openai.com/news/rss.xml); help.openai.com (the older Zendesk-hosted help center) returned HTTP 403 on direct fetch this cycle, and OpenAI appears to have moved at least some release-notes/plugin documentation to this domain. Propose Tier 0, type html, alongside the existing OpenAI News entry."
+    }
   ]
 }
