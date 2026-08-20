@@ -1,0 +1,26 @@
+{
+  "slug": "pa-shapiro-data-center-executive-order",
+  "status": "published",
+  "first_seen": "2026-08-20",
+  "published_at": "2026-08-20",
+  "langs": ["en", "tr"],
+  "title": "Pennsylvania governor signs executive order requiring local approval for new data centers",
+  "date": "2026-08-18",
+  "source_urls": [
+    "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen",
+    "https://www.pa.gov/governor/newsroom/2026-press-releases/gov--shapiro-s-remarks-at-signing-ceremony-for-an-exec--order-on",
+    "https://penncapital-star.com/technology-information/gov-shapiro-signs-data-center-executive-order-critics-say-it-falls-short/",
+    "https://www.thecentersquare.com/pennsylvania/article_8b4e033f-c91d-41ee-8c13-101938e29e8c.html",
+    "https://www.newsweek.com/pennsylvania-moves-rein-ai-data-centers-community-backlash-12340848",
+    "https://www.cnn.com/2026/08/18/politics/josh-shapiro-pennsylvania-data-centers"
+  ],
+  "follows": null,
+  "reason": "Cycle 5: surfaced by fresh ingest (gnews-ai-regulation-and-policy.json) covering Governor Shapiro's Executive Order 2026-05, which conditions Pennsylvania data center permits on local government approval and new GRID standards, and strips AI data centers of fast-track permitting. dedup-check returned exit 2 (strong match, score 0.625) against ny-hochul-data-center-moratorium on generic title-pattern similarity only -- different state, governor, date and legal mechanism; assessed coincidental and published standalone (full reasoning in the evidence log's dedup_check field). Full multi-agent protocol: fresh verifier (direct fetch of pa.gov primary pages) and independent adversarial falsifier (dating check, denial/dispute search, wire-exclusivity check, AI-vs-general scope check, third-state resequencing against NY/TX primaries) ran in parallel -- verdict PUBLISH, with two required edits: attribute the 'nation's strictest' superlative to Shapiro's own quote rather than assert it as fact (a state senator disputed it on the record), and describe scope as data centers broadly with AI-specific provisions rather than AI-exclusive regulation. Editor gate passed EN and TR.",
+  "watch": [
+    "Whether the Pennsylvania legislature codifies these standards into statute, as Shapiro requested in his signing remarks",
+    "Whether a legal challenge is filed -- the order's unusual severability clause suggests the administration anticipates one, but none had been filed as of publication"
+  ],
+  "notes": [
+    "2026-08-20 c5: published."
+  ]
+}

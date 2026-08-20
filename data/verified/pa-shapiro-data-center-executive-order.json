@@ -1,0 +1,72 @@
+{
+  "slug": "pa-shapiro-data-center-executive-order",
+  "checked_at": "2026-08-20T00:36:00+00:00",
+  "method": "Fresh verifier sub-agent (direct fetch of the pa.gov primary press release, the signing-remarks page, and the EO PDF listing page; independent cross-checks against Newsweek, CNN, The Next Web and Townhall) run in parallel with an independent adversarial falsifier sub-agent (re-confirmed the signing date, searched for denial/dispute/legal challenge, ran the wire-exclusivity check, checked AI-specific vs general data-center scope, re-verified the third-state sequencing against the Texas and New York primaries) -- both in cycle 5 of 2026-08-20, neither drafting the story or seeing the other's output. The orchestrating session then ran two additional targeted web searches to obtain exact deep-link URLs for the Pennsylvania Capital-Star critic coverage and the Texas governor's primary announcement, both of which the two sub-agents had described accurately but without a citable link.",
+  "origin_items": [
+    "data/raw/2026-08-20/gnews-ai-regulation-and-policy.json (PA governor executive order coverage relayed via NBC Montana, The Next Web, Newsweek, finance.biggo.com and townhall.com aggregator leads, all traced to origin before use)"
+  ],
+  "claims": [
+    {
+      "text": "On 18 August 2026, Pennsylvania Governor Josh Shapiro signed Executive Order 2026-05, barring the state Department of Environmental Protection from issuing data center permits unless a project has already received all required local government approvals",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against the pa.gov primary press release and signing-remarks page (fetched by the verifier), independently corroborated by Pennsylvania Capital-Star's own reporting (not a relay). The mechanism is a real permit gate, not a vague consultation requirement -- the verifier confirmed DEP 'will not issue any permit unless the project has received all required local approvals.'",
+      "evidence": [
+        "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen",
+        "https://www.pa.gov/governor/newsroom/2026-press-releases/gov--shapiro-s-remarks-at-signing-ceremony-for-an-exec--order-on",
+        "https://penncapital-star.com/technology-information/gov-shapiro-signs-data-center-executive-order-critics-say-it-falls-short/"
+      ]
+    },
+    {
+      "text": "The order removes AI data center projects from Pennsylvania's Permit Fast Track Program, bars state agencies from signing non-disclosure agreements with data center developers, and conditions new permits on the state's 'GRID' standards covering energy-cost pass-through, water use, community benefit agreements and environmental review",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed against the pa.gov primary release; independently corroborated by The Center Square's framing of the order converting 'previously proposed standards that were introduced as voluntary' into binding ones and pulling 'fast track' access. Note: the falsifier flagged that the order governs data centers broadly (GRID requirements, local-approval gate) with AI-specific carve-outs (the Fast Track removal is explicitly AI-scoped) -- the article states this precisely rather than implying the whole order is AI-exclusive.",
+      "evidence": [
+        "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen",
+        "https://www.thecentersquare.com/pennsylvania/article_8b4e033f-c91d-41ee-8c13-101938e29e8c.html"
+      ]
+    },
+    {
+      "text": "The permit conditions apply to applications submitted after 18 August 2026; projects that already hold approvals are not affected retroactively but must comply with new reporting and transparency requirements",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Verifier confirmed via Newsweek's independent write-up, which carried this effective-date detail not present in either pa.gov release page.",
+      "evidence": [
+        "https://www.newsweek.com/pennsylvania-moves-rein-ai-data-centers-community-backlash-12340848"
+      ]
+    },
+    {
+      "text": "In his signing remarks, Shapiro called the order 'the nation's strictest guardrails on AI data centers'",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim in Shapiro's own signing-remarks page and X post per the verifier's direct fetch. Attributed as the governor's own characterization/quote rather than stated as our own editorial assertion, because the falsifier separately found an on-record dispute of the superlative (next claim) -- the two written pa.gov press releases do not repeat this line in body text themselves, only the spoken remarks do.",
+      "evidence": [
+        "https://www.pa.gov/governor/newsroom/2026-press-releases/gov--shapiro-s-remarks-at-signing-ceremony-for-an-exec--order-on"
+      ]
+    },
+    {
+      "text": "Critics, including Democratic state Senator Katie Muth, said the order does not go far enough and called instead for a multi-year moratorium on new data center construction; industry representatives separately objected that it converts previously voluntary standards into binding requirements for projects already under way",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier located Sen. Muth's on-record dispute (cited to Pennsylvania Capital-Star) while adversarially testing the 'nation's strictest' claim; the orchestrating session independently re-searched and confirmed the exact Capital-Star URL and headline ('Critics say it falls short'), which also carries Food & Water Watch's Ginny Marcille-Kerslake making the same under-restriction argument. The Center Square independently carries the industry-side objection (standards shifting from voluntary to binding, fast-track access pulled). Required addition per the falsifier's finding -- without it, the headline superlative would stand unchallenged despite a named, on-record dispute.",
+      "evidence": [
+        "https://penncapital-star.com/technology-information/gov-shapiro-signs-data-center-executive-order-critics-say-it-falls-short/",
+        "https://www.thecentersquare.com/pennsylvania/article_8b4e033f-c91d-41ee-8c13-101938e29e8c.html"
+      ]
+    },
+    {
+      "text": "Pennsylvania is the third US state this year to take gubernatorial executive action restricting data center development: New York's governor signed a temporary permit moratorium for data centers of 50 megawatts or more in July, and Texas's governor ordered a halt to new grid interconnection approvals for data centers pending an audit in early August",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Both sub-agents independently confirmed the NY (14 July, governor.ny.gov EO 62, already a registered story on this site) and TX (early August, gov.texas.gov primary) actions and their dates against primary government sources, not just press framing. The orchestrating session re-confirmed the Texas primary URL and date directly (TechCrunch's own URL and the Texas Governor's press release are dated 3-4 August 2026, not the 13 August figure an AI search summary briefly suggested -- discarded as a synthesis artifact inconsistent with the underlying dated URLs, per this site's standing distrust of recalled/summarized dates over primary-dated sources). The falsifier's caution that the three states used different legal mechanisms (temporary moratorium vs grid-interconnection freeze vs standing permit condition) is carried into the article text rather than implying equivalence.",
+      "evidence": [
+        "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops",
+        "https://gov.texas.gov/news/post/governor-abbott-directs-comprehensive-data-center-audit",
+        "https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Tried to break: (1) recycled/stale dating -- clean, this is a fresh 18 Aug signing, not a re-surfaced draft; (2) denial/dispute/legal challenge -- no denial of the facts, but found a named on-record dispute of the 'strictest' superlative (Sen. Katie Muth, citing New York's moratorium) that required attributing the superlative as Shapiro's own quote rather than our assertion, plus separate industry pushback; the order's unusual severability clause suggests the administration anticipates legal challenges, but none has been filed -- the article does not claim one exists; (3) wire-exclusivity -- not a single source, abundant independent coverage across distinct newsrooms (pa.gov, CNN, Newsweek, Capital-Star, Center Square, WHYY, Inquirer, Washington Post, others); flagged that two of the raw aggregator leads (KVIA/LocalNews8-style relays) are literal CNN wire syndication and would count as one source, not used in the final source list; (4) AI-vs-general scope -- the order covers data centers broadly (GRID standards, local-approval gate) with an AI-specific carve-out (Fast Track removal named for AI data centers specifically, and Shapiro's own quote frames the whole order around AI) -- article states this precisely; (5) third-state sequencing -- confirmed independently against NY and TX primaries, not reliant on Townhall's 'third state' framing alone; flagged the three mechanisms are not equivalent, carried into the article; (6) in-effect-now vs pending -- confirmed immediately binding via executive/DEP authority as of the signing date, not contingent on legislative action, though Shapiro separately asked the legislature to codify it (noted as a future development to watch, not a precondition of current force).",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"Pennsylvania governor signs executive order on AI data centers\" --url \"https://www.pa.gov/governor/newsroom.html\" -> exit 2, strong match (score 0.625) against ny-hochul-data-center-moratorium, no shared source URLs. Assessed as coincidental per policy/verification.md SS8's outcome (c): the match is driven by generic title-pattern similarity ('Governor signs executive order on AI data centers') rather than a shared event or saga -- different state, different governor, signing dates five weeks apart (14 Jul vs 18 Aug 2026), and materially different legal mechanisms (a temporary blanket permit moratorium in New York vs a standing local-approval permit condition with no end date in Pennsylvania). Applying the SS8 follow-up test: a reader who missed the New York story does not need that context to understand what Shapiro's order does, so this is a standalone article, not an in-place update or a follows: link. The comparative context (NY and TX sequencing) is included as supporting claim 6 rather than as a follows relationship."
+}
