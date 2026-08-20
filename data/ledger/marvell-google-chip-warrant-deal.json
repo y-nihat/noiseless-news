@@ -1,0 +1,23 @@
+{
+  "slug": "marvell-google-chip-warrant-deal",
+  "title": "Marvell grants Google warrant to buy up to $12.2 billion in shares in AI chip deal",
+  "status": "published",
+  "first_seen": "2026-08-19",
+  "published_at": "2026-08-19",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.sec.gov/Archives/edgar/data/0001835632/000119312526356217/d412696d8k.htm",
+    "https://www.bloomberg.com/news/articles/2026-08-19/marvell-gives-google-right-to-buy-up-to-12-2-billion-in-shares",
+    "https://www.investing.com/news/stock-market-news/marvell-gives-google-option-to-buy-122-billion-stake-in-custom-chip-deal-4867472",
+    "https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html",
+    "https://www.theregister.com/off-prem/2026/08/19/google-pits-marvell-against-broadcom-as-it-chases-ai-crown/5289902"
+  ],
+  "follows": null,
+  "public": true,
+  "open_obligation": false,
+  "reason": "Published same-day: flagged as a strong candidate in cycle 3's report and picked up first this cycle. Fresh verifier and fresh adversarial-falsifier sub-agents run in parallel, neither having drafted the story. The verifier located Marvell's actual Form 8-K on SEC EDGAR (read via a filings mirror after sec.gov 403'd the fetch tool) and found the deal's real substance differs from the raw leads' generic 'AI chip deal' framing: it covers silicon attached to Google's AI infrastructure (inference accelerators, storage/network/memory-interface controllers, near-memory compute), not Google's TPU chip itself, which remains primarily Broadcom's. The falsifier found no denial or dispute, confirmed the deal is a genuine new disclosure (not a rehash of an unconfirmed April 2026 talks report), and flagged the Marvell stock-move percentage as inconsistent across outlets (7-14% depending on source/time) -- written into the article as a range rather than one asserted figure. No open obligation: the transaction (warrant grant, underlying commercial agreement) is already executed and disclosed, not a pending outcome; multi-year vesting through FY2033 depends on Google's future purchases but is not a near-term follow-up item in the sense of an unshipped product or unresolved case.",
+  "watch": [],
+  "notes": [
+    "2026-08-20 c4: Published. dedup-check clean (no matches). Evidence log at data/verified/marvell-google-chip-warrant-deal.json."
+  ]
+}

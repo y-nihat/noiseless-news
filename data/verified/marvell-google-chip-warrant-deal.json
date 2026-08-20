@@ -1,0 +1,56 @@
+{
+  "slug": "marvell-google-chip-warrant-deal",
+  "checked_at": "2026-08-20T00:10:00+00:00",
+  "method": "Fresh verifier and fresh adversarial-falsifier sub-agents, run in parallel in cycle 4 of the night of 2026-08-19/20, neither having drafted the story and neither seeing the other's output. The verifier's brief was to locate a primary source and establish the deal's actual substance and the wire-exclusivity question; the falsifier's brief was to find a denial, a stale/recycled angle, a numeric inconsistency, or evidence the coverage is a relay rather than independent reporting.",
+  "origin_items": [
+    "data/raw/2026-08-19/techmeme.json (Marvell/Google item, ~13:10 UTC, Dana Wollman/Bloomberg)",
+    "data/raw/2026-08-19/gnews-ai-chips-and-compute.json (Reuters, CNBC, Financial Times, Anadolu Ajansu and other outlet items on the same deal)",
+    "data/raw/2026-08-19/cnbc-technology.json (CNBC's own item, ~15:08 UTC)"
+  ],
+  "claims": [
+    {
+      "text": "Marvell granted Google a warrant to buy up to 58,970,907 Marvell shares at $206.58 per share -- worth up to about $12.2 billion if fully exercised -- issued 18 August 2026 and disclosed in a Form 8-K filed with the SEC on 19 August 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "The verifier located Marvell's actual Form 8-K on SEC EDGAR (accession number matches Marvell's CIK 0001835632); direct WebFetch of sec.gov returned HTTP 403 to the fetch tool (a tooling block, not evidence against the filing -- EDGAR accession URLs of this form are not spoofable), so the filing's exact text was read via a filings-aggregator mirror (StockTitan) that quotes it verbatim, including the share count to the single share. Both the verifier and falsifier independently recomputed 58,970,907 x $206.58 = $12,182,209,968, which rounds to the widely-reported '$12.2B' -- confirms the reported figures rather than merely repeating them. The single-share precision of the share count is itself evidence the press figures trace to the filing, not to each other.",
+      "evidence": [
+        "https://www.sec.gov/Archives/edgar/data/0001835632/000119312526356217/d412696d8k.htm",
+        "https://www.bloomberg.com/news/articles/2026-08-19/marvell-gives-google-right-to-buy-up-to-12-2-billion-in-shares",
+        "https://www.investing.com/news/stock-market-news/marvell-gives-google-option-to-buy-122-billion-stake-in-custom-chip-deal-4867472",
+        "https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html"
+      ]
+    },
+    {
+      "text": "The warrant's vesting is tied to Google's purchases of Marvell 'Custom Products': an initial 1,360,867 shares vest in quarterly installments during the first year, and the remainder vests in up to 240 further tranches of $500 million in qualifying revenue each, running through fiscal year 2033",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Read directly from the 8-K text via the StockTitan mirror by the verifier. The implied $120 billion cumulative-revenue ceiling (240 x $500M) is simple arithmetic on this same disclosed structure, not a separately sourced figure; the verifier separately found it corroborated in Reuters-derived coverage and financial-data summaries (Barchart, Quiver Quantitative) as a sanity check.",
+      "evidence": [
+        "https://www.sec.gov/Archives/edgar/data/0001835632/000119312526356217/d412696d8k.htm"
+      ]
+    },
+    {
+      "text": "The warrant formalizes a commercial agreement the companies signed on 29 July 2026 covering custom silicon that attaches to Google's AI infrastructure -- inference accelerators, storage controllers, network interface controllers, memory interface controllers and near-memory compute -- and not Google's Tensor Processing Unit chip itself, which continues to be built primarily with Broadcom",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "This is the verifier's key finding versus the raw leads, which used generic 'AI chip deal' phrasing that risked implying Marvell now builds Google's core TPU. The 8-K text (via the StockTitan mirror) itemizes the silicon categories directly. The Register's coverage frames this explicitly as Marvell winning a parallel, attached-silicon role rather than displacing Broadcom, and quotes Morningstar analyst William Kerwin (via Reuters) on record: the deal is 'a big win for Marvell' representing 'a growing pie at Google for new sources, rather than a competitive displacement of Broadcom.' The falsifier independently confirmed via the filing that vesting is contractually tied to 'Custom Products revenue,' i.e. actual attached-silicon purchases, which supports treating this as a substantive supply relationship rather than a purely financial instrument -- squarely an AI-chip story under policy S:0's compute/chips scope.",
+      "evidence": [
+        "https://www.sec.gov/Archives/edgar/data/0001835632/000119312526356217/d412696d8k.htm",
+        "https://www.theregister.com/off-prem/2026/08/19/google-pits-marvell-against-broadcom-as-it-chases-ai-crown/5289902"
+      ]
+    },
+    {
+      "text": "Marvell shares rose sharply on the disclosure -- as much as roughly 14% in premarket trading by one outlet's figures, before paring back to high-single or low-double digits during the session -- while Broadcom shares fell and Alphabet's were little changed",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "The falsifier explicitly flagged this as the one genuinely inconsistent number across coverage (7%, 8.2%, 10%, 11%, 12%, 13% and 14% all appeared in different outlets/headlines/timestamps), including one case of a headline changing on the same CNBC URL over the course of the day, and a separate case where '7%' was used by one outlet to describe Alphabet's potential ownership stake if the warrant fully vests -- a different metric entirely from the share-price move, creating a real risk of conflation. Both agents concluded the underlying pattern (a large premarket spike moderating through the session, plus rolling headline updates) is normal market behavior and outlet-timing variance, not a factual conflict, provided the article states a range/timestamp rather than asserting one bare percentage as fact -- which is how it is written here. Broadcom's decline and Alphabet's flat reaction were consistent directionally across all sources checked, with only minor magnitude variance on Broadcom (-3% to -5%+).",
+      "evidence": [
+        "https://www.investing.com/news/stock-market-news/marvell-gives-google-option-to-buy-122-billion-stake-in-custom-chip-deal-4867472",
+        "https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html",
+        "https://www.theregister.com/off-prem/2026/08/19/google-pits-marvell-against-broadcom-as-it-chases-ai-crown/5289902"
+      ]
+    }
+  ],
+  "falsifier_notes": "Searched explicitly for a denial or correction from Marvell, Google/Alphabet or a named analyst -- found none. Checked whether this is recycled news: found a real prior thread (The Information reported preliminary talks on 19 April 2026, unconfirmed and without financial terms) but confirmed the 19 August disclosure is a genuine escalation to a signed, filed, financially-specific event, not a restatement -- flagged that the agreement itself was signed 29 July, so the article should say 'disclosed'/'announced' on 19 August rather than 'signed'. Independently verified the $12.2B math against the primary filing. Could not independently confirm from Reuters'/CNBC's/FT's own article text (403s/crawler blocks) whether they had independent sourcing versus relaying Bloomberg's initial scoop; the verifier's parallel finding (single-share-precision figures matching the public 8-K, a Reuters-exclusive analyst quote not present in Bloomberg's framing, and a distinct CNBC follow-on analysis of the Broadcom competitive angle) was treated as sufficient to conclude the deal-terms claims rest on an independently-accessible primary filing rather than a Bloomberg-only relay. Confirmed the stock-move percentage as the one real precision problem in the coverage (see claim 4 reasoning). Confirmed this is a genuine chip-supply story, not a thin financial-instrument story with a token AI angle, based on the filing's explicit revenue-category language.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"Marvell grants Google warrant in expanded chip deal\" --url \"https://www.techmeme.com/260819/p20\" returned exit 0 with no matches against any existing article or ledger entry. Outcome: new standalone article."
+}
