@@ -1,0 +1,23 @@
+{
+  "slug": "meta-ai-mac-app-launch",
+  "title": "Meta AI Mac app launch",
+  "status": "watching",
+  "first_seen": "2026-08-19",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+    "https://www.engadget.com/ai/metas-desktop-app-for-mac-is-designed-to-help-professionals-and-businesses-171034221.html"
+  ],
+  "follows": null,
+  "public": true,
+  "reason": "Failed the publishing gate on missing a Tier-0 primary source, not on any contradiction. The Verge reported 2026-08-19 that Meta launched a native macOS app for Meta AI, with business/creator-focused connectors for Instagram, Facebook, ad-performance data and Google Workspace. A fresh verifier and fresh adversarial-falsifier sub-agent ran in parallel: both independently full-text-fetched Engadget and 9to5Mac and found consistent, detailed, non-contradictory coverage (native AppKit/SwiftUI/WebKit build, v1.0 beta, professional-account scope, window-context and dictation features, required macOS permissions) -- but neither could locate Meta's own primary announcement despite dedicated attempts (ai.meta.com/blog's most recent visible post predates this by weeks; about.fb.com not directly searched successfully; Meta's official social accounts not checked). Engadget's article quotes a line directly attributed to \"a blog post\" from Meta, which is strong circumstantial evidence a primary post exists and simply wasn't found within budget -- this is not a case of the announcement seeming fabricated. The falsifier separately flagged that the ~8 corroborating outlets published within hours of each other with near-identical specific details (16MB app size, exact tech stack, the same UI-shortcut name), consistent with a shared press briefing/embargo rather than fully independent reporting -- meaning outlet count alone should not be treated as satisfying the independence rule either. This is an announcement-type claim, which policy requires exactly one Tier-0 primary to confirm; that gate is open, not failed on the merits.",
+  "watch": [
+    "Meta's own ai.meta.com or about.fb.com post (or an official Meta social account post) confirming the Mac app launch and its feature set -- a routine Tier-0 sweep of ai.meta.com/about.fb.com in a future cycle may simply catch it once it's indexed",
+    "Any denial, correction or scope walk-back (none found yet, but the story is very fresh)"
+  ],
+  "public_note": "A Mac app launch is reported by several outlets but its own maker's announcement has not yet been located.",
+  "notes": [
+    "2026-08-20 c4: Opened and held. dedup-check clean (no matches). Verifier used 12 tool calls, falsifier 12 (both near the 12-call soft cap given to this pair); neither drafted the story. No contradiction or denial found -- only the missing primary source. A future cycle should try about.fb.com/news/2026/08/ directly and Meta's official X/Instagram/Threads accounts before re-running the full multi-agent pass, to avoid repeating the same search paths that already came up empty twice."
+  ]
+}
