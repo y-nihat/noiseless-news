@@ -1,0 +1,12 @@
+[
+  {
+    "id": "8a2f26df549a7bd7",
+    "source": "VentureBeat AI",
+    "tier": 2,
+    "title": "TrueFoundry's open source AI agent harness TrueForge boasts 30%-75% cheaper task completion than Claude Managed Agents",
+    "url": "https://venturebeat.com/orchestration/truefoundrys-open-source-ai-agent-harness-trueforge-boasts-30-75-cheaper-task-completion-than-claude-managed-agents",
+    "published": "2026-08-19T23:50:00+00:00",
+    "summary": "<p>Another day, another new AI agent harness is released.</p><p>Only this time, it&#x27;s one that aims to solve a growing enterprise problem as AI agents proliferate: enabling greater developer control of agents and tools, while reducing cost. </p><p><a href=\"https://www.truefoundry.com/\">TrueFoundry</a>, a San Francisco B2B machine learning startup co-founded in 2021 by former Meta engineers, has released its own custom <a href=\"https://www.truefoundry.com/blog/engineering/trueforge-open-source-agent-harness/\">TrueForge harness</a> under the permissive MIT License on <a href=\"https://github.com/truefoundry/trueforge\">Github</a>. Thus, it can be used with any of a developer (or their parent enterprise&#x27;s) preferred AI models, forked, modified, self-hosted and incorporated into commercial products. </p><p>The<a href=\"https://www.truefoundry.com/blog/engineering/trueforge-vs-claude-managed-agents-benchmark/\"> company states in a blog post</a> that when it used TrueForge paired with the open source GLM-5.2 LLM to successfully complete 11 of 14 tasks on DevRev’s Enterprise-Bench — testing multi-step tool use across CRM, issue tracking, and document management systems — it cost 75% less than achieving the same results with Anthropic&#x27;s Claude Managed Agents harness powered by Claude Opus 4.8 ($2.90 compared to $11.80). </p><p>Using the same model in each harness, Opus 4.8, TrueFoundry still claims a cost savings of roughly 30% using TrueForge compared to Claude Managed Agents ($8.50 vs $11.80). </p><p>Why is TrueFoundry giving this powerfully efficient harness away for free? </p><p>&quot;We’ve had this ask from a bunch of customers,&quot; said Anuraag Gutgutia, TrueFoundry’s co-founder and COO,  in an exclusive interview with VentureBeat. &quot;You have an ability where you bring in agents and MCPs — can we also get something where you can actually launch these managed agents? I think that is the need we are satisfying. It is not a replacement. People will use t…",
+    "fetched_at": "2026-08-20T00:23:32.786666+00:00"
+  }
+]
