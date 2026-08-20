@@ -19,8 +19,9 @@
     "Whether Taalas' technology ships in an actual AMD product, and on what timeline"
   ],
   "notes": [
-    "2026-08-07 c3: Candidate carried over from cycle 2's triage (dedup-check already run there with the same moderate-match result). Opened this cycle given the tight ~30-minute window; verification done directly against AMD's primary press release plus three independent Tier-2 outlets rather than a full fresh-verifier/falsifier sub-agent pair, given time. Deliberately excluded a specific throughput benchmark figure (~16,000 tokens/sec/user) that appeared in secondary coverage but not in AMD's own release, to avoid publishing an unlabeled capability claim. Published."
+    "2026-08-07 c3: Candidate carried over from cycle 2's triage (dedup-check already run there with the same moderate-match result). Opened this cycle given the tight ~30-minute window; verification done directly against AMD's primary press release plus three independent Tier-2 outlets rather than a full fresh-verifier/falsifier sub-agent pair, given time. Deliberately excluded a specific throughput benchmark figure (~16,000 tokens/sec/user) that appeared in secondary coverage but not in AMD's own release, to avoid publishing an unlabeled capability claim. Published.",
+    "2026-08-21 c1: Obligation recheck (5 web searches). Deal has NOT closed (AMD's own release says expected Q4 2026, subject to customary closing conditions/regulatory approval); no purchase price has been disclosed by any outlet (CNBC, The Register, EE Times, Forbes, GlobeNewswire, BetaKit, AnySilicon all still say 'not disclosed'); no AMD product ships Taalas silicon yet -- Taalas' HC1 chip shipped Feb 2026 as a pre-acquisition standalone Taalas product, unrelated to AMD ownership, and AMD's integration plan (folding Taalas decode silicon into future Helios rack-scale systems via ROCm) remains a roadmap item. None of the three watched outcomes have landed. open_obligation stays true."
   ],
   "open_obligation": true,
-  "revisit_after": "2026-08-21"
+  "revisit_after": "2026-09-15"
 }

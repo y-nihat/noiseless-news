@@ -17,6 +17,9 @@
   "revisit_after": "2026-08-21",
   "notes": [
     "2026-08-07 c1: Published. Open obligation set because OpenAI's own classification is provisional ('cannot rule out' Critical, testing ongoing with government agencies/safety orgs) and the eventual release decision for Astra is a pending outcome that should be checked and reported when it lands.",
-    "2026-08-18 c3 (night 2): Follow-up published -- openai-preparedness-framework-rewrite (RL-training pause, hardened environments, Preparedness Framework rewrite intent). Does NOT resolve this entry's open_obligation: that follow-up covers safety-practice/policy changes, not Astra's own release decision, which is still pending. revisit_after 2026-08-21 stands."
-  ]
+    "2026-08-18 c3 (night 2): Follow-up published -- openai-preparedness-framework-rewrite (RL-training pause, hardened environments, Preparedness Framework rewrite intent). Does NOT resolve this entry's open_obligation: that follow-up covers safety-practice/policy changes, not Astra's own release decision, which is still pending. revisit_after 2026-08-21 stands.",
+    "2026-08-21 c1: Obligation recheck (5 web searches). No release decision announced -- OpenAI has not set a public release date or confirmed whether Astra ships under that name, as a GPT-5 update, or as GPT-6. Latest substantive news remains the already-covered 2026-08-18 Preparedness Framework rewrite/RL-pause follow-up (process/safety-governance, not a release verdict). Prediction markets (Polymarket/Kalshi) still show a spread of outcomes (~18% by Aug 31, ~60-74% by Sept 30, ~87% by Oct 31), consistent with no decision yet made. open_obligation stays true; pushing revisit_after out two weeks given the stable no-decision pattern."
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-09-04"
 }

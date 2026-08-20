@@ -15,8 +15,9 @@ tldr: >
   önce kişisel bilgilerden arındırılacak; Google, verilerin ürünlerini ve
   yapay zeka modellerini geliştirmeye yardımcı olacağını söylüyor. Federal
   bir iflas hakiminin satışı onaylaması gerekiyor; 19 Ağustos 2026'ya
-  planlanan duruşma gerçekleşmeden ertelendi ve Spirit'in kabin memurları
-  sendikası mahkemede itiraz edeceğini açıkladı.
+  planlanan duruşma ertelendi, yeni duruşma 9 Eylül 2026'ya belirlendi ve
+  Spirit'in kabin memurları sendikası mahkeme dosyasına resmi itirazını
+  sundu.
 sources:
   - name: Bloomberg Law
     url: https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data
@@ -39,16 +40,17 @@ claims:
     type: business
     verdict: confirmed
     evidence: [1]
-  - text: "Satış henüz kesinleşmedi: federal bir iflas hakimi (Sean H. Lane, ABD New York Güney Bölgesi İflas Mahkemesi, dava no. 1:25-bk-11897) satışı 19 Ağustos 2026'da yapılacak bir duruşmada onaylamalı"
+  - text: "Satış henüz kesinleşmedi: federal bir iflas hakimi (Sean H. Lane, ABD New York Güney Bölgesi İflas Mahkemesi, dava no. 1:25-bk-11897) satışı onaylamalı; bu satışa ilişkin 19 Ağustos 2026 duruşması gerçekleşmeden ertelendi, dava dosyasına göre yeni duruşma 9 Eylül 2026'ya belirlendi"
     type: business
     verdict: confirmed
     evidence: [1, 2, 3]
-  - text: "Spirit’in kabin memurlarını temsil eden Association of Flight Attendants-CWA, satışa mahkemede itiraz edeceğini açıkladı"
+  - text: "Spirit'in kabin memurlarını temsil eden Association of Flight Attendants-CWA, dava dosyasına satışa resmi itirazını sundu; talep, işgücü ve disiplin kayıtları için bir inceleme protokolü ve verinin tanımlanabilir kabin memurlarını profillemek için kullanılmasının yasaklanması yönünde"
     type: business
-    verdict: single-source
-    evidence: [4]
+    verdict: confirmed
+    evidence: [1, 3]
 updated:
   - "2026-08-19: verinin satışına ilişkin 19 Ağustos duruşması, dava dosyasına göre gerçekleşmeden ertelendi (bu yazı itibarıyla yeni bir duruşma tarihi belirlenmedi); Association of Flight Attendants-CWA, Forbes’a göre satışa mahkemede itiraz edeceğini açıkladı."
+  - "2026-08-21: yeni duruşma tarihi 9 Eylül 2026 olarak belirlendi. Association of Flight Attendants-CWA'nın itirazı artık doğrudan dava dosyasında onaylanmış durumda (18 Ağustos 2026'da sunuldu); talep, satışın tamamen engellenmesi değil, işgücü/disiplin kayıtları için bir inceleme protokolü ve tanımlanabilir kabin memurlarının profillenmesinin yasaklanması."
 ---
 
 ## Ne oldu
@@ -71,11 +73,14 @@ henüz kesinleşmedi: federal iflas hakimi Sean H. Lane'in, ABD New York
 Güney Bölgesi İflas Mahkemesi'nde 1:25-bk-11897 dava numarasıyla görülen
 davada satışı onaylaması gerekiyor [1][2][3]. Verinin satışını görüşmek
 üzere 19 Ağustos 2026'ya planlanan duruşma, dava dosyasına göre
-gerçekleşmeden ertelendi; bu yazı itibarıyla yeni bir tarih belirlenmedi
-[3]. Ayrı bir gelişmede, Spirit'in kabin memurlarını temsil eden
-Association of Flight Attendants-CWA, Forbes'a göre bu adımı "rezalet"
-olarak nitelendirip verinin "satılmaya hiç hakkı olmadığını" savunarak
-mahkemede itiraz edeceğini açıkladı [4].
+gerçekleşmeden ertelendi; yeni duruşma 9 Eylül 2026'ya belirlendi [3].
+Spirit'in kabin memurlarını temsil eden Association of Flight
+Attendants-CWA, Forbes'a bu adımı "rezalet" olarak nitelendirip verinin
+"satılmaya hiç hakkı olmadığını" söylemesinin ardından [4], dava
+dosyasına resmi itirazını sundu [1][3]. Sendikanın talebi satışın
+tamamen engellenmesi değil, işgücü ve disiplin kayıtları için bir
+inceleme protokolü ve verinin tanımlanabilir kabin memurlarını
+profillemek için kullanılmasının yasaklanması [1][3].
 
 ## Neden önemli
 

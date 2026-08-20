@@ -1,0 +1,33 @@
+{
+  "slug": "meta-ai-mac-app-launch",
+  "checked_at": "2026-08-20T22:14:00+00:00",
+  "method": "Fresh verifier + fresh adversarial falsifier both ran in cycle 4 of 2026-08-20 (12 tool calls each), independently full-text-fetching Engadget/9to5Mac and finding consistent, non-contradictory coverage, but neither could locate Meta's own primary announcement within budget -- held as watching for that reason alone. In cycle 1 of 2026-08-21 a dedicated research pass (WebFetch on ai.meta.com/blog and about.fb.com/news/2026/08/, plus targeted site-scoped searches) located Meta's own primary post at facebook.com/business/news/meta-ai-for-small-businesses (2026-08-19), cross-validated against independent coverage (bizsugar.com, dataconomy.com, socialmediatoday.com, afaqs.com all covering the same announcement) confirming it is genuine and not an isolated/fabricated find, then independently re-fetched directly by this cycle before citing.",
+  "origin_items": [
+    "data/raw/2026-08-19/the-verge-ai.json (Meta AI Mac app coverage)"
+  ],
+  "claims": [
+    {
+      "text": "Meta launched a native Meta AI desktop app for Mac, in addition to the existing meta.ai web version and mobile app",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against Meta's own post on its official Meta for Business newsroom (facebook.com/business/news), dated 19 August 2026: 'the new Meta AI desktop app' / 'the new Mac app', explicitly listed alongside meta.ai and the mobile app. This is an unregistered-but-Tier-0-qualifying source (Meta's own company channel, not a third party) per verification.md §1 -- flagged in the cycle report for registration consideration, not yet added to sources.yaml (policy files are off-limits this run).",
+      "evidence": ["https://www.facebook.com/business/news/meta-ai-for-small-businesses"]
+    },
+    {
+      "text": "The Mac app supports screen sharing during a session and system-wide dictation across all Mac apps",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Meta's own post states verbatim: 'With the new Mac app, you can share a window during a session to show what you're working on, and it responds with tailored advice to the work in front of you' and 'You can also use built-in dictation that works across all apps on your Mac.'",
+      "evidence": ["https://www.facebook.com/business/news/meta-ai-for-small-businesses"]
+    },
+    {
+      "text": "Meta AI can now connect directly to a user's Instagram and Facebook accounts for engagement analytics, to Meta ad-campaign performance data, and to Google Workspace (Gmail, Docs, Sheets, Slides)",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Meta's own post confirms all three connector categories: Instagram/Facebook account engagement analytics, Meta ad-campaign performance/optimization insights, and Google Workspace (Gmail, Docs, Sheets, Slides) integration -- framed as business-focused features aimed at small businesses.",
+      "evidence": ["https://www.facebook.com/business/news/meta-ai-for-small-businesses"]
+    }
+  ],
+  "falsifier_notes": "Cycle 4 of 2026-08-20's adversarial falsifier attempted to break the story on two fronts: (1) whether the ~8 outlets corroborating within hours of each other reflected genuine independent reporting or a shared press briefing/embargo (concluded: likely a shared briefing given near-identical specific details, so outlet count alone was NOT treated as satisfying independence -- moot now that a Tier-0 primary is in hand, since announcement claims need only one primary per verification.md §3); (2) searched for any denial, correction, or scope walk-back (found none, story was very fresh at the time). Neither front broke the claim set. This cycle re-confirmed the primary source's content directly (fresh WebFetch) rather than relying solely on the research pass's summary, and found no discrepancy with the bundled claims.",
+  "dedup_check": "Re-run 2026-08-20 c4 (dedup-check clean, no matches) when the story was first opened as watching; no competing coverage or new duplicate risk introduced by the delay, since the only change since then is the primary-source location, not new reporting on a different angle. Not re-run mechanically this cycle given the unchanged subject and slug."
+}

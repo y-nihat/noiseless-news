@@ -13,8 +13,9 @@ tldr: >
   stripped of personal information before transfer; Google says the data
   will help improve its products and AI models. A federal bankruptcy judge
   must still approve the sale; the hearing originally set for 19 August 2026
-  was adjourned before it took place, and Spirit's flight attendants' union
-  says it is filing a court objection.
+  was adjourned, with a new hearing now set for 9 September 2026, and
+  Spirit's flight attendants' union has formally objected in the court
+  docket.
 sources:
   - name: Bloomberg Law
     url: https://news.bloomberglaw.com/bankruptcy-law/google-aims-to-boost-ai-with-purchase-of-spirit-airlines-data
@@ -37,16 +38,17 @@ claims:
     type: business
     verdict: confirmed
     evidence: [1]
-  - text: "The sale is not yet final: a federal bankruptcy judge (Sean H. Lane, U.S. Bankruptcy Court for the Southern District of New York, case no. 1:25-bk-11897) must approve it, though the 19 August 2026 hearing on this specific sale was adjourned before it took place, per the case docket"
+  - text: "The sale is not yet final: a federal bankruptcy judge (Sean H. Lane, U.S. Bankruptcy Court for the Southern District of New York, case no. 1:25-bk-11897) must approve it; the 19 August 2026 hearing on this specific sale was adjourned before it took place, and a new hearing is set for 9 September 2026, per the case docket"
     type: business
     verdict: confirmed
     evidence: [1, 2, 3]
-  - text: "The Association of Flight Attendants-CWA, which represents Spirit's flight attendants, says it is filing a court objection to the sale"
+  - text: "The Association of Flight Attendants-CWA, which represents Spirit's flight attendants, has formally filed an objection to the sale in the court docket, seeking a review protocol for labor and disciplinary records and a bar on using the data to profile identifiable flight attendants"
     type: business
-    verdict: single-source
-    evidence: [4]
+    verdict: confirmed
+    evidence: [1, 3]
 updated:
   - "2026-08-19: the 19 August hearing on the data sale itself was adjourned before it took place, per the bankruptcy case docket (no new hearing date set as of this writing); the Association of Flight Attendants-CWA said it is filing a court objection to the sale, according to Forbes."
+  - "2026-08-21: a new hearing date has been set for 9 September 2026. The Association of Flight Attendants-CWA's objection is now confirmed directly on the court docket (filed 18 August 2026), seeking a review protocol for labor/disciplinary records and a bar on profiling identifiable flight attendants, rather than an outright block on the sale."
 ---
 
 ## What happened
@@ -69,11 +71,14 @@ bankruptcy judge, Sean H. Lane, must approve it in the U.S. Bankruptcy
 Court for the Southern District of New York, case no. 1:25-bk-11897
 [1][2][3]. The hearing originally scheduled for 19 August 2026 to
 consider the data sale specifically was adjourned before it took place,
-according to the case docket; no new date had been set as of this
-writing [3]. Separately, the Association of Flight Attendants-CWA, which
-represents Spirit's flight attendants, says it is filing a court
-objection to the sale, calling it "outrageous" and arguing the data "has
-no business being sold," according to Forbes [4].
+according to the case docket; a new hearing is now set for 9 September
+2026 [3]. The Association of Flight Attendants-CWA, which represents
+Spirit's flight attendants, has since formally filed an objection in the
+court docket [1][3], after telling Forbes it would do so and calling the
+sale "outrageous" [4]. The union's filing seeks a review protocol for
+labor and disciplinary records and a bar on using the data to profile
+identifiable flight attendants, rather than an outright block on the
+sale [1][3].
 
 ## Why it matters
 
