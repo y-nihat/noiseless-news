@@ -68,5 +68,25 @@
     "published": "2026-08-20T12:14:07+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/Rich-Sutton-Big-World-Hypothesis.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Turing Award winner Richard Sutton calls synthetic data a \"big mistake\" for scaling large language models. The world is infinitely complex, and any simulation of it is \"microscopic,\" with human expertise acting as a bottleneck that blocks real scaling. Sutton's alternative is agents that learn continually from their own experience instead of relying on frozen models.</p>\n<p>The article <a href=\"https://the-decoder.com/ki-pioneer-sutton-calls-synthetic-data-a-big-mistake-in-the-face-of-an-infinitely-complex-world/\">KI-Pioneer Sutton calls synthetic data a &quot;big mistake&quot; in the face of an infinitely complex world</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-20T16:38:46.369533+00:00"
+  },
+  {
+    "id": "6a7f48a53bf28a17",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Adobe Firefly adds AI audio tools and Google's Gemini Omni Flash",
+    "url": "https://the-decoder.com/adobe-firefly-adds-ai-audio-tools-and-googles-gemini-omni-flash/",
+    "published": "2026-08-20T19:29:34+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/adobe_logo-1.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Adobe is making three AI audio tools broadly available in Firefly. Generate Music, Generate Speech, and Generate Sound Effects create royalty-free music, voiceovers, and sound effects for video projects. Adobe has also added Gemini Omni Flash to the platform.</p>\n<p>The article <a href=\"https://the-decoder.com/adobe-firefly-adds-ai-audio-tools-and-googles-gemini-omni-flash/\">Adobe Firefly adds AI audio tools and Google&#039;s Gemini Omni Flash</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-20T22:00:27.069196+00:00"
+  },
+  {
+    "id": "e5dd1e8dbfd94387",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "LLMs could write like humans but post-training guardrails make their text detectable",
+    "url": "https://the-decoder.com/llms-could-write-like-humans-but-post-training-guardrails-make-their-text-detectable/",
+    "published": "2026-08-20T17:36:51+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/pangram_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        LLMs don't write in a recognizable style because they can't do better. Post-training and safety guardrails sharply narrow their expressive range, argues Pangram CTO Bradley Emi. Base models without these constraints already write with far more variety.</p>\n<p>The article <a href=\"https://the-decoder.com/llms-could-write-like-humans-but-post-training-guardrails-make-their-text-detectable/\">LLMs could write like humans but post-training guardrails make their text detectable</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-20T22:00:27.069196+00:00"
   }
 ]
