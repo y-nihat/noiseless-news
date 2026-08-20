@@ -1160,5 +1160,61 @@
       "context": "Sixth occurrence logged for this domain across the archive (see candidates_2026-08-03_c4, candidates_2026-07-21_night, candidates_2026-07-19_night_c4 x2, candidates_2026-07-10_night_c1, candidates_2026-08-17_c3) -- this time surfacing its own-sourcing language ('Stripe has agreed to acquire OpenRouter ... Axios has learned') on the stripe-openrouter-acquisition watching story, a plausible independent second source once its ~$8B figure is reconciled against Bloomberg/TechCrunch's ~$7B. Direct fetch returned HTTP 403 again this cycle (consistent pattern across nights) -- search-snippet only. Six independent occurrences across six weeks is a strong recurrence signal; flagging again for Tier 2 registration since it keeps getting used ad hoc anyway.",
       "recurrence_note": "bloomberg.com (candidates_2026-07-12_night_c1) and asia.nikkei.com (used cycle 2 tonight, 2026-08-17, for nvidia-openai-250b-guarantee, not yet logged here) are the same standing proposal noted in tonight's cycle 3 report -- still not added to sources.yaml. Recommend a dedicated future cycle actually commits the sources.yaml registration for axios.com, bloomberg.com and asia.nikkei.com rather than re-flagging each night; all three have now recurred enough nights to clear any reasonable bar."
     }
+  ],
+  "candidates_2026-08-20_c5": [
+    {
+      "domain": "pa.gov",
+      "first_seen": "2026-08-20",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.pa.gov/governor/newsroom/2026-press-releases/governor-shapiro-signs-executive-order-on-data-center-developmen"
+      ],
+      "context": "Commonwealth of Pennsylvania governor's newsroom -- Tier-0 primary, load-bearing for pa-shapiro-data-center-executive-order (announcement text and signing remarks/quotes). Same pattern as the already-proposed governor.ny.gov. Propose Tier 0, type html."
+    },
+    {
+      "domain": "gov.texas.gov",
+      "first_seen": "2026-08-20",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://gov.texas.gov/news/post/governor-abbott-directs-comprehensive-data-center-audit"
+      ],
+      "context": "Office of the Texas Governor's own newsroom -- Tier-0 primary, used for the third-state comparison claim in pa-shapiro-data-center-executive-order (Abbott's data-center grid-interconnection audit order, early August 2026). Propose Tier 0, type html; likely to recur for future Texas AI/energy policy stories given 90%+ of pending grid interconnection requests are data-center-driven per this story's research."
+    },
+    {
+      "domain": "penncapital-star.com",
+      "first_seen": "2026-08-20",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://penncapital-star.com/technology-information/gov-shapiro-signs-data-center-executive-order-critics-say-it-falls-short/"
+      ],
+      "context": "Pennsylvania Capital-Star, state-policy nonprofit newsroom with named bylines; carried the only on-record critic response found (state Sen. Katie Muth, Food & Water Watch) to pa-shapiro-data-center-executive-order, load-bearing for balance per the falsifier's finding. Propose Tier 2, type html; likely useful again for PA state AI/tech-policy stories."
+    },
+    {
+      "domain": "thecentersquare.com",
+      "first_seen": "2026-08-20",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.thecentersquare.com/pennsylvania/article_8b4e033f-c91d-41ee-8c13-101938e29e8c.html"
+      ],
+      "context": "The Center Square, state-policy wire/newsroom with named bylines; independently framed the order as converting voluntary industry standards into binding ones and pulling fast-track access -- used for pa-shapiro-data-center-executive-order. Propose Tier 2, type html."
+    },
+    {
+      "domain": "newsweek.com",
+      "first_seen": "2026-08-20",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.newsweek.com/pennsylvania-moves-rein-ai-data-centers-community-backlash-12340848"
+      ],
+      "context": "Major news magazine with editorial standards; sole source found for the permit effective-date detail (applies to applications submitted after 18 Aug 2026) in pa-shapiro-data-center-executive-order, not present in the pa.gov primary text itself. Propose Tier 2, type rss/html."
+    },
+    {
+      "domain": "cnn.com",
+      "first_seen": "2026-08-20",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.cnn.com/2026/08/18/politics/josh-shapiro-pennsylvania-data-centers"
+      ],
+      "context": "Major national outlet, independently bylined; used as broad-reach independent corroboration for pa-shapiro-data-center-executive-order. Note: two other raw leads this cycle (KVIA, LocalNews8-style affiliates) turned out to be literal CNN wire syndication of this same piece -- collapsed to one source per the independence rule, not double-counted. Propose Tier 2."
+    }
   ]
 }
