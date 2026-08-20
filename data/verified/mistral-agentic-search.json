@@ -1,0 +1,40 @@
+{
+  "slug": "mistral-agentic-search",
+  "checked_at": "2026-08-20T22:49:22+00:00",
+  "method": "Fresh verifier sub-agent + fresh adversarial falsifier sub-agent, both run in cycle 2 of tonight's loop. Verifier fetched the Mistral primary source directly, ran targeted searches for independent coverage of the launch, and checked the benchmark figures against the primary text. Falsifier independently re-fetched the primary source and searched for contradicting reports, an availability/waitlist qualifier, date mismatches, a benchmark-math discrepancy, and prior noiseless-news coverage of the same capability under another name; found none.",
+  "origin_items": [
+    "Not present in data/raw/ ingest (no source polls mistral.ai/news' full listing into raw JSON). Surfaced by this cycle's light Tier-0 sweep: cycle 1 (2026-08-20 c1) already flagged mistral.ai/news as having fresh content and logged 'Mistral Agentic Search' as a quick candidate for a later cycle; this cycle fetched https://mistral.ai/news/agentic-search/ directly to confirm and verify."
+  ],
+  "claims": [
+    {
+      "text": "Mistral launched Agentic Search, a multi-step retrieval capability built into the Mistral Search Toolkit that gives AI models five tools -- search, open, navigate, read and grep -- to find, inspect and verify information across complex documents and data sources",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against the Tier-0 primary source (Mistral's own announcement), which is sufficient alone for an announcement-type claim. Both verifier and falsifier fetched the page independently and found identical wording for the five named tools and the retrieval-loop description.",
+      "evidence": ["https://mistral.ai/news/agentic-search/"]
+    },
+    {
+      "text": "Agentic Search was tested with Mistral Medium 3.5 and Z.ai's GLM-5.2, and is available now through the Mistral Search Toolkit, built into \"Libraries\" in both Studio and Vibe, with a Search Starter App published on GitHub",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed against the primary source, which uses present-tense \"available\" language throughout with no waitlist or limited-access qualifier found by either agent. Falsifier separately confirmed GLM-5.2 is explicitly framed by Mistral itself as a third-party (Z.ai) model, not a misreading, and that this is consistent with prior confirmed reporting (mistral-regional-inference-european-compute, published 2026-08-11, already documents Mistral's platform supporting Z.ai's GLM-5.2).",
+      "evidence": ["https://mistral.ai/news/agentic-search/", "https://mistral.ai/news/regional-inference-open-models-new-compute/"]
+    },
+    {
+      "text": "On Mistral's FinanceBench evaluation (368 SEC filings, 150 questions), Agentic Search raised accuracy from 26.7% to 86%",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figures match the primary source exactly. No independent outlet has reproduced or covered these numbers -- both verifier and falsifier searched independently (VentureBeat, TechCrunch, Reuters, The Verge and fresh generic searches) and found only aggregator/SEO sites restating Mistral's own figures verbatim, no independent journalism or reproduction. Labeled vendor-claim per policy (self-reported capability claim, no independent reproduction). Falsifier checked the math: 26.7%->86% is a 3.22x gain, consistent with Mistral's own \"up to 3x\" framing -- not an inflated rounding.",
+      "evidence": ["https://mistral.ai/news/agentic-search/"]
+    },
+    {
+      "text": "On Mistral's OfficeQA Pro evaluation tested with GLM-5.2 (696 Treasury Bulletins, 133 questions), Agentic Search raised accuracy from 6.3% to 51.9% -- a 45.6-point gain; Mistral separately reports up to a 39.6% reduction in p90 latency and roughly one-third lower token consumption",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figures match the primary source exactly, including the p90 latency worked example (255s->154s = 39.6%). Verifier flagged that the primary source carries a second, smaller OfficeQA Pro figure specific to Mistral Medium 3.5 (+27.1pp) distinct from the GLM-5.2 headline number (+45.6pp); the article attributes the 6.3%->51.9% figure to GLM-5.2 specifically to avoid implying it applies to both tested models. No independent reproduction found; labeled vendor-claim.",
+      "evidence": ["https://mistral.ai/news/agentic-search/"]
+    }
+  ],
+  "falsifier_notes": "Attempted to break: (1) date/availability -- no 'coming soon' or waitlist language found, present-tense 'available' throughout; (2) independent coverage -- fresh searches turned up only aggregator sites restating Mistral's own numbers, no critique or contradiction, consistent with a same-day vendor post rather than a missed source; (3) model attribution -- confirmed GLM-5.2 is explicitly named by Mistral as a third-party model, not our misreading; (4) benchmark math -- all four headline figures check out arithmetically against Mistral's own worked examples; (5) duplicate/rename check -- confirmed the underlying Search Toolkit is an established, separately-launched product (public preview since 2026-05-28) and that noiseless-news has never published on Search Toolkit or Agentic Search before; today's post adds a genuinely new capability, not a rename. No issues found; PASS.",
+  "dedup_check": "python -m noiseless.run dedup-check --title \"Mistral launches Agentic Search\" --url \"https://mistral.ai/news\" returned one moderate match: mistral-regional-inference-european-compute (2026-08-11, score 0.5, no shared source URL). Read the matched article: it covers Regional Endpoints (EU/US inference location choice), Priority Tier SLAs, and a European compute-infrastructure coalition -- a different product announcement with no topical overlap beyond both being Mistral posts roughly a week apart. Treated as standalone per verification.md 0a/8 (unrelated despite surface similarity, both being Mistral announcements)."
+}
