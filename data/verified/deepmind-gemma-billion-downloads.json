@@ -1,0 +1,26 @@
+{
+  "slug": "deepmind-gemma-billion-downloads",
+  "checked_at": "2026-08-21T00:00:00+00:00",
+  "method": "Verified directly in cycle 4 of tonight's loop (2026-08-20/21 night run) against Google's own primary post, given a single-Tier-0-primary announcement claim set; followed by independent searches from a skeptical angle checking for contradicting figures, a stale/previously-announced milestone, or an inflated count before drafting.",
+  "origin_items": [
+    "data/raw/2026-08-20/techmeme.json#3cfbfdf33bfc620c"
+  ],
+  "claims": [
+    {
+      "text": "Google DeepMind said its Gemma family of open models has surpassed one billion cumulative downloads, and outside developers have published more than 100,000 Gemma model variants over the past two years",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against the Tier-0 primary source (Google's own blog, authored by Clement Farabet, VP Google DeepMind, and Olivier Lacombe, Product Director Google DeepMind, published 2026-08-20), which is sufficient alone for an announcement-type claim. Independent same-day tech-press coverage (Unite.AI, and a TradingView/Stocktwits market-reaction piece) restates the same two figures without contradiction, consistent with same-day relay of a vendor announcement rather than independent reproduction -- not counted toward confirmation, since the primary alone already meets the bar. No prior noiseless-news coverage of a Gemma download-count milestone exists (dedup-check clean beyond one unrelated moderate match), and no earlier report of a different cumulative-download figure was found, so this is not a stale or re-reported number.",
+      "evidence": ["https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/"]
+    },
+    {
+      "text": "India's National Health Authority integrated Gemma models and Google's open Medical Data Toolkit into Aarogya Setu 2.0, an app with more than 100 million Android downloads, to convert medical reports into standardized digital formats",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against the same Tier-0 primary source, which names the National Health Authority, the app, its Android download count, and the specific use (standardizing medical reports) explicitly. No independent reproduction sought beyond the primary, per policy the primary alone suffices for an announcement-type claim.",
+      "evidence": ["https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/"]
+    }
+  ],
+  "falsifier_notes": "Checked from a skeptical angle directly (no separate falsifier sub-agent invoked this cycle, given a two-claim announcement resting entirely on one Tier-0 primary -- see budget note in the run report): searched for any contradicting or lower prior download figure (none found -- no earlier noiseless-news or press report of a Gemma cumulative-download milestone at a different number); searched for independent coverage to rule out a misreport of the figures (Unite.AI and a market-reaction piece both same-day, matching the primary's numbers exactly, no contradiction); confirmed the post is dated today (2026-08-20), not a resurfaced older post; confirmed the two named authors and their DeepMind titles are stated in the post itself. No issues found.",
+  "dedup_check": "python -m noiseless.run dedup-check --title \"Google DeepMind's Gemma models pass 1 billion downloads\" --url \"https://deepmind.google/discover/blog/gemma-one-billion-downloads/\" returned one moderate match: hassabis-frontier-ai-standards-body (2026-07-14, score 0.429, no shared URL). Read the matched article: it covers Demis Hassabis calling for an independent frontier-AI standards body -- an unrelated subject (policy/governance proposal vs. today's open-model usage-milestone announcement) beyond both being Google DeepMind stories. Treated as standalone per verification.md 0a/8."
+}

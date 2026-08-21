@@ -1,0 +1,15 @@
+{
+  "slug": "deepmind-gemma-billion-downloads",
+  "title": "Google DeepMind says its Gemma open models have passed 1 billion downloads",
+  "status": "published",
+  "first_seen": "2026-08-20",
+  "published_at": "2026-08-20",
+  "langs": ["en", "tr"],
+  "source_urls": ["https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/"],
+  "follows": null,
+  "reason": null,
+  "watch": [],
+  "notes": [
+    "2026-08-20/21 c4: surfaced via Techmeme in this cycle's fresh ingest (2026-08-20T17:25Z item, linking Google's own blog.google post). dedup-check returned one moderate match (hassabis-frontier-ai-standards-body, 2026-07-14, score 0.429, no shared URL) -- read, confirmed unrelated subject (standards-body governance proposal vs. today's usage-milestone announcement), treated as standalone. Verified directly against the Tier-0 primary (Google AI Blog, registered in sources.yaml), sufficient alone for the two announcement-type claims; corroborated by independent same-day tech-press relay (Unite.AI, a market-reaction piece) with no contradiction, and no earlier/differing download-count milestone found in a skeptical search. Published."
+  ]
+}
