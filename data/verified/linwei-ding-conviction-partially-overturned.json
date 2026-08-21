@@ -1,0 +1,63 @@
+{
+  "slug": "linwei-ding-conviction-partially-overturned",
+  "checked_at": "2026-08-21T23:32:00+00:00",
+  "method": "Fresh verifier and fresh adversarial falsifier sub-agents, both run in cycle 3 of the 2026-08-21 night. Verifier's direct WebFetch attempts on Reuters/justice.gov/Benzinga/Courthouse News all failed (tool-blocked or HTTP 403); its findings rest on WebSearch cross-outlet snippet synthesis converging across DOJ-adjacent reporting, CNBC, The Hill, Fox Business, The Register, NBC News, Benzinga and a Wikipedia case page. Falsifier independently re-searched, got a partial direct fetch of MLex (paywalled legal-specialist wire) that returned Judge Chhabria's quote verbatim from article body text (not a snippet), and flagged a Jan-29-vs-Jan-30 verdict-date discrepancy in its own independent synthesis. The orchestrator then ran one additional targeted WebSearch directly to obtain concrete deep-link URLs (the two sub-agents' searches did not surface citable direct links for a second independent source beyond Reuters) -- this search returned exact URLs for two DOJ press releases (justice.gov/usao-ndca and justice.gov/opa, covering the original guilty verdict) and independent named-outlet coverage of the 20 August ruling itself (MLex, Benzinga), plus a search-result summary that itself corroborated the core facts (acquittal on the 7 espionage counts only, trade-secret counts intact, sentencing 1 September) without resolving the exact Jan 29/30 verdict-date question -- resolved by softening the article's date language rather than asserting an unconfirmed exact day.",
+  "origin_items": [
+    "data/raw/2026-08-21/techmeme.json#9ea9f23447c9e6ef (Tom Hals/Reuters item, published 2026-08-21T00:05:02+00:00)",
+    "data/raw/2026-08-21/gnews-ai-litigation.json (secondary aggregator mirrors of the same Reuters wire story, not used as independent sources)"
+  ],
+  "claims": [
+    {
+      "text": "U.S. District Judge Vince Chhabria, of the Northern District of California, on 20 August 2026 vacated seven economic-espionage counts against former Google software engineer Linwei Ding, ruling that prosecutors had not proven Ding intended or knew his conduct would benefit the Chinese government -- a required element of the charge",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Reuters (named byline, Tom Hals) is the lead report. Independently corroborated by MLex ('Ex-Google engineer acquitted of economic espionage after US jury conviction' / 'Former Google engineer Ding acquitted of economic espionage by US judge') and Benzinga, both separately-bylined outlets not derived from Reuters' wire copy, both dated 2026-08-20/21. The falsifier obtained a direct partial fetch of MLex returning Judge Chhabria's ruling language verbatim ('There was no indication at trial that any of Ding's colleagues in China were affiliated with the government. Nor was there indication that he intended to actually provide trade secrets to anyone in the Chinese government.'), confirming the characterization is accurate and not a search-summary paraphrase artifact.",
+      "evidence": [
+        "https://www.reuters.com/legal/government/ex-google-engineers-conviction-stealing-ai-secrets-partially-overturned-2026-08-20/",
+        "https://www.mlex.com/mlex/artificial-intelligence/articles/2516137",
+        "https://www.benzinga.com/news/legal/26/08/61348337/former-google-engineer-ai-trade-secrets-economic-espionage-charges"
+      ]
+    },
+    {
+      "text": "Seven separate counts of theft of trade secrets from the same trial were not disturbed by the ruling; the judge found the evidence supported those convictions",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated consistently across Reuters, MLex and Benzinga -- this is a partial ruling, not a full acquittal or new trial. Falsifier specifically checked for a mistrial/full-dismissal mischaracterization and found none: every source treats the trade-secret counts as intact and moving to sentencing.",
+      "evidence": [
+        "https://www.reuters.com/legal/government/ex-google-engineers-conviction-stealing-ai-secrets-partially-overturned-2026-08-20/",
+        "https://www.mlex.com/mlex/artificial-intelligence/articles/2516137"
+      ]
+    },
+    {
+      "text": "Ding, a Chinese national who joined Google in 2019, was found guilty on all 14 original counts -- seven economic-espionage and seven trade-secret-theft -- in a jury verdict at the end of January 2026, after an 11-day trial",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via two DOJ press releases on the original verdict (Tier-0 primary, government source) plus consistent cross-outlet reporting (CNBC, Reuters). Exact verdict date deliberately not pinned to a single day: the falsifier's independent search synthesis returned 30 January 2026 from some outlets and 29 January 2026 from others (CNBC's URL slug reads 2026/01/30 but that may be a next-day report of a Jan 29 evening verdict); this could not be resolved with a primary-document read within the cycle's time budget, so the article uses 'at the end of January 2026' rather than asserting an unconfirmed exact date.",
+      "evidence": [
+        "https://www.justice.gov/usao-ndca/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai",
+        "https://www.justice.gov/opa/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai-technology"
+      ]
+    },
+    {
+      "text": "Prosecutors alleged Ding uploaded thousands of pages of confidential information about Google's AI-supercomputing hardware and software to a personal cloud account between 2022 and 2023, while secretly affiliated with two China-based technology companies -- at one he was in talks to become chief technology officer, and he had founded and led the other as chief executive; neither company has been named in reporting",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "The 'thousands of pages' phrasing is drawn directly from the orchestrator's own WebSearch result summary, itself synthesized from the DOJ press release. The two-companies detail (CTO talks at one, founder/CEO of the other) was confirmed convergently by the verifier across multiple outlet snippets and not contradicted by the falsifier's independent pass; no source found names either company, and the article does not invent names.",
+      "evidence": [
+        "https://www.justice.gov/usao-ndca/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai"
+      ]
+    },
+    {
+      "text": "Ding remains convicted on the seven trade-secret-theft counts and is scheduled to be sentenced on those on 1 September 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed independently by both the verifier and falsifier's separate research passes, and by the orchestrator's own search-result summary citing 'the court docket'. Consistent across all sources checked, no conflicting date found.",
+      "evidence": [
+        "https://www.reuters.com/legal/government/ex-google-engineers-conviction-stealing-ai-secrets-partially-overturned-2026-08-20/",
+        "https://www.mlex.com/mlex/artificial-intelligence/articles/2516137"
+      ]
+    }
+  ],
+  "falsifier_notes": "GO, no claim reversed. Falsifier independently attempted primary/near-primary sources (Reuters, justice.gov, CourtListener/RECAP, Courthouse News, Law360, Bloomberg Law) and hit the same blocks the verifier did, except for a partial MLex fetch that returned the judge's quote verbatim -- real independent corroboration the ruling's characterization is accurate, not a search-synthesis artifact. Actively checked for and ruled out: a different judge or date, a full acquittal/mistrial mischaracterization, a stale/resurfaced story, and conflation with a different Google-trade-secrets case or a different 'Ding' (two unrelated Chinese dissidents/lawyers named Ding surfaced in search noise, confirmed irrelevant). Found and flagged a genuine Jan-29-vs-Jan-30 verdict-date discrepancy across its own independent sources -- resolved in the published article by softening to 'at the end of January 2026' rather than publishing an unconfirmed exact date. Recommended the statutory $5M/15-year espionage-count penalty figure either be omitted or framed strictly as now-moot statutory maximum exposure, not a sentencing prediction; the published article omits it entirely as unnecessary to the story. Recommended custody/bail status be omitted as unverifiable; omitted.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"Ex-Google engineer Linwei Ding's AI trade secrets conviction partially overturned\" --url \"https://www.reuters.com/legal/government/ex-google-engineers-conviction-stealing-ai-secrets-partially-overturned-2026-08-20/\" returned zero matches (exit 0, empty matches list) against the full archive. Standalone story, no prior coverage of this case on this site."
+}

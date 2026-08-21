@@ -1,0 +1,25 @@
+{
+  "slug": "linwei-ding-conviction-partially-overturned",
+  "title": "Judge vacates espionage counts against ex-Google engineer convicted of stealing AI trade secrets",
+  "status": "published",
+  "first_seen": "2026-08-21",
+  "published_at": "2026-08-21",
+  "date": "2026-08-20",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.reuters.com/legal/government/ex-google-engineers-conviction-stealing-ai-secrets-partially-overturned-2026-08-20/",
+    "https://www.justice.gov/usao-ndca/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai",
+    "https://www.mlex.com/mlex/artificial-intelligence/articles/2516137",
+    "https://www.benzinga.com/news/legal/26/08/61348337/former-google-engineer-ai-trade-secrets-economic-espionage-charges"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-01",
+  "watch": [
+    "Sentencing on the surviving seven trade-secret-theft counts, scheduled 2026-09-01 -- publish the outcome when it lands (verification.md 10/3)",
+    "Any appeal of the ruling by either side"
+  ],
+  "notes": [
+    "2026-08-21 c3: PUBLISHED (EN + TR). dedup-check returned zero matches (exit 0, empty list) -- standalone, no prior coverage. Fresh verifier and fresh adversarial falsifier sub-agents run in sequence; both had direct WebFetch blocked on Reuters/justice.gov/Benzinga/Courthouse News (tool-blocked or HTTP 403) and relied on WebSearch cross-outlet snippet synthesis, except the falsifier obtained a partial direct fetch of MLex returning Judge Chhabria's ruling language verbatim. Orchestrator ran one additional targeted WebSearch to obtain citable deep-link URLs for a second and third independent source beyond Reuters (MLex, Benzinga) plus the original DOJ press releases (Tier-0 primary) for case background. Falsifier flagged a genuine Jan-29-vs-Jan-30 verdict-date discrepancy across independent outlets, unresolved within the cycle's time budget -- article uses 'at the end of January 2026' rather than an unconfirmed exact date. Omitted per both sub-agents' recommendation: the statutory espionage-count penalty figure (now largely moot, would have been single-sourced) and Ding's custody/bail status (unverifiable within budget). No Chinese company names used -- none found in any source; DOJ's own characterization (CTO talks at one, founder/CEO of the other) used instead. Naming Ding himself is consistent with policy 10: named in DOJ's own Tier-0 release and Reuters' named byline, load-bearing for a story specifically about his case, procedural status (partial vacatur, not acquittal) stated plainly. open_obligation set for the 2026-09-01 sentencing per policy 10's follow-up requirement for criminal proceedings. Editor gate run on both EN and TR: headline states only the confirmed vacatur fact; TL;DR stands alone; no padding found; TR reads as a natural mirror, not a calque. Full claim-by-claim reasoning in data/verified/linwei-ding-conviction-partially-overturned.json."
+  ]
+}
