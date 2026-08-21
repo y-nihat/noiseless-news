@@ -328,5 +328,25 @@
     "published": "2026-08-21T19:28:51+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Basically use Qwen 27B 3.8 in reasoning mode for a plan, and with reasoning off as instruct to apply the plan</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/soyalemujica\"> /u/soyalemujica </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuq4r4/38_reasoning_for_planning_and_instruct_for/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuq4r4/38_reasoning_for_planning_and_instruct_for/\">[comments]</a></span>",
     "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "917a62e6add00f55",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I'm really hoping we're in 2026's 2-month-gap between QwQ and Qwen3 right now",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vutzeu/im_really_hoping_were_in_2026s_2monthgap_between/",
+    "published": "2026-08-21T21:58:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>QwQ was genuine next-gen performance usable on local hardware, but the massive required context (it's reasoning style was akin to <em>&quot;if I say every possible word, I'll notice the right one!&quot;</em>) kinda made it unusable for agentic coding.</p> <p>It was ~2 months later that Qwen3-32B came out which delivered QwQ's peaks with usable amounts of reasoning.</p> <p>I know some people are having a great time with Qwen3.8-27B, and same, but I can't have a good sit-down session with it because the reasoning takes so damn long. Everything I do with it needs to be async or compromise on quality (it's still great when you limit reasoning but definitely loses that next-gen edge). I also have to watch context like a hawk.</p> <p>Maybe 3.8 is 2026's QwQ and a competitive model requiring less reasoning is just around the corner?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ForsookComparison\"> /u/ForsookComparison </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vutzeu/im_really_hoping_were_in_2026s_2monthgap_between/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vutzeu/im_really_hoping_were_in_2026s_2monthgap_between/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T23:13:34.502982+00:00"
+  },
+  {
+    "id": "1f8fe8b78c823a99",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I feel like I finally graduated.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vurjwc/i_feel_like_i_finally_graduated/",
+    "published": "2026-08-21T20:22:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I finally made the move from LM Studio to vLLM thanks to this post <a href=\"https://www.reddit.com/r/LocalLLaMA/s/NmS9CgHvqz\">https://www.reddit.com/r/LocalLLaMA/s/NmS9CgHvqz</a>. I may not know what it all means yet but I’m going to start diving into the docs to learn as much as I can. </p> <p>I’m running an endpoint on each of my 3090s one for chat and one for subagents. This has made qwen3.8’s reasoning bearable because of the increase to 143tok/s. Thank you to Syv-ai. His repo is here <a href=\"https://github.com/syv-ai/qwen38-27b-rtx3090\">https://github.com/syv-ai/qwen38-27b-rtx3090</a>. </p> <p>vLLM feels like I’m finally using my hardware to its full potential, but the craziest thing is my waterblocked GPUs don’t go above 35°C before they were hitting 70°C on hard workflows.</p> <p>Sorry I didn’t have time to ask qwen to write or edit this post for me.</p> <p>tl;dr vLLm it feels good man</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Bpthewise\"> /u/Bpthewise </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vurjwc/i_feel_like_i_finally_graduated/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vurjwc/i_feel_like_i_finally_graduated/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T23:13:34.502982+00:00"
   }
 ]
