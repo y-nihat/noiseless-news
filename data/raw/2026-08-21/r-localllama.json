@@ -238,5 +238,95 @@
     "published": "2026-08-21T14:15:34+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I just updated MagicQuant with the new Unsloth dynamic v3 and utilizing their imatrix:<a href=\"https://huggingface.co/magiccodingman/Qwen3.8-27B-MagicQuant-GGUF\">HuggingFace Repo Here</a></p> <p>Qwen3.8 27B was a more conservative run with some kld and size savings. But it was super interesting seeing the run between dynamic v2 vs v3. The V3 was a pretty substantial boost for sure.</p> <p>If you don't know what MagicQuant is. TLDR, it is a benchmark driven GGUF evaluation and hybrid discovery system. It digests and learns from GGUF models like Unsloth and learns their tensor configurations. It then groups these patterns and builds isolated tests, then begins a prediction phase, and goes through a whole sha bang worth of things to try and find interesting potential hybrids.</p> <p>Sometimes hybrids are really crazy. Sometimes it's boring. Depends on the model and the search. If you want to really dive into the jist of MagicQuant you can learn more on my wiki here:<br /> <a href=\"https://github.com/magiccodingman/MagicQuant-Wiki\">https://github.com/magiccodingman/MagicQuant-Wiki</a></p> <p>Anything appended with &quot;MQ&quot; means it's a MagicQuant mix. But the Qwen3.8 27B results was really interesting with:</p> <table><thead> <tr> <th>Name</th> <th>Provider</th> <th align=\"right\">KLD</th> <th align=\"right\">Size (GB)</th> </tr> </thead><tbody> <tr> <td><del>LM-Q8_0</del></td> <td><del>llama.cpp</del></td> <td align=\"right\"><del>0.000712</del></td> <td align=\"right\"><del>29.05</del></td> </tr> <tr> <td>MQ-Q6_K_1</td> <td>MagicQuant</td> <td align=\"right\">0.000703</td> <td align=\"right\">29.03</td> </tr> <tr> <td>MQ-Q6_K_2</td> <td>MagicQuant</td> <td align=\"right\">0.000873</td> <td align=\"right\">27.26</td> </tr> <tr> <td>MQ-Q6_K_3</td> <td>MagicQuant</td> <td align=\"right\">0.001047</td> <td align=\"right\">25.94</td> </tr> <tr> <td>UD-Unsloth-UD-Q6_K_XL</td> <td>Unsloth</td> <td align=\"right\">0.001238</td> <td align=\"right\">25.33</td>…",
     "fetched_at": "2026-08-21T16:38:39.351582+00:00"
+  },
+  {
+    "id": "3bb8fa28141fe3db",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B Q6 is a beast at agentic coding",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuotqr/qwen3827b_q6_is_a_beast_at_agentic_coding/",
+    "published": "2026-08-21T18:41:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuotqr/qwen3827b_q6_is_a_beast_at_agentic_coding/\"> <img alt=\"Qwen3.8-27B Q6 is a beast at agentic coding\" src=\"https://preview.redd.it/vctqr63gwrkh1.png?width=140&amp;height=57&amp;auto=webp&amp;s=6bcae6cf7c3d8298668999e76ba8edf4dea590f7\" title=\"Qwen3.8-27B Q6 is a beast at agentic coding\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>A quick feedback after a really major test: nearly 20 hours of non-stop goal-oriented work with Qwen3.8-27B Q6, running across an RTX 3090 and an RTX 3060. </p> <p>It maintained a speed of around 60–63 tokens/s throughout the session.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok_Ninja7526\"> /u/Ok_Ninja7526 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vuotqr\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuotqr/qwen3827b_q6_is_a_beast_at_agentic_coding/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "6453e724d45e1b80",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 Low and Medium are goated",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vus4ko/qwen_38_low_and_medium_are_goated/",
+    "published": "2026-08-21T20:45:14+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vus4ko/qwen_38_low_and_medium_are_goated/\"> <img alt=\"Qwen 3.8 Low and Medium are goated\" src=\"https://preview.redd.it/fhcjufhciskh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f41f6ba03ea348e09fb1bd5b0abc601943e90325\" title=\"Qwen 3.8 Low and Medium are goated\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Artificial Analysis just benchmarked them and the scores are crazy good, proving the earlier success wasn't only enabled by overthinking. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Eyelbee\"> /u/Eyelbee </a> <br /> <span><a href=\"https://i.redd.it/fhcjufhciskh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vus4ko/qwen_38_low_and_medium_are_goated/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "d73a4a553a186dbe",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B different thinking levels",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vusds8/qwen3827b_different_thinking_levels/",
+    "published": "2026-08-21T20:55:11+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vusds8/qwen3827b_different_thinking_levels/\"> <img alt=\"Qwen3.8-27B different thinking levels\" src=\"https://preview.redd.it/waf03m5gkskh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=47d1bfbd07294ebfef8264cfd4605e09e15f32df\" title=\"Qwen3.8-27B different thinking levels\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Even the low preset is better than Qwen 3.7 plus or Qwen3.6-27B reasoning</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Tall_Abrocoma_3533\"> /u/Tall_Abrocoma_3533 </a> <br /> <span><a href=\"https://i.redd.it/waf03m5gkskh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vusds8/qwen3827b_different_thinking_levels/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "6aadff81c044db21",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "model: add dots3-note by ngxson · Pull Request #27060 · ggml-org/llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vunrrp/model_add_dots3note_by_ngxson_pull_request_27060/",
+    "published": "2026-08-21T18:03:27+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vunrrp/model_add_dots3note_by_ngxson_pull_request_27060/\"> <img alt=\"model: add dots3-note by ngxson · Pull Request #27060 · ggml-org/llama.cpp\" src=\"https://external-preview.redd.it/e4clN84hebm8e_f68QIRbCF5NiJK3uiDUsU2vlNgLmc.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2506c6c7aafb519dba2c3c2f5c7fa99930ae1399\" title=\"model: add dots3-note by ngxson · Pull Request #27060 · ggml-org/llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>dots3-note preview is the first open-weight model in the dots3 family. It is a Mixture-of-Experts model with 280B total parameters, 16B activated parameters, and support for a context length of up to 512K tokens. The model can understand text, images, video, and audio, and produces text outputs.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/27060\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vunrrp/model_add_dots3note_by_ngxson_pull_request_27060/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "6144c062871a0010",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Llama.cpp DSpark PC Tree Fork (up to 3%-29.5% faster!)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vunqoz/llamacpp_dspark_pc_tree_fork_up_to_3295_faster/",
+    "published": "2026-08-21T18:02:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello gang, I made an implementation of DSpark PC Tree (Parent conditioned drafting tree).<br /> This is an implementation of this research paper: <a href=\"https://arxiv.org/abs/2608.02123\">https://arxiv.org/abs/2608.02123</a><br /> Unaffiliated, just found it and implemented it.<br /> And I have to preface: <strong>This is just a first shot, I have no feedback from anyone yet!</strong></p> <p>These are some stats im getting with Qwen 3.0:</p> <pre><code>GPU: SM120 (RTX5090) llama-bench combined Configuration tok/s vs plain vs DSpark n3 Acceptance ━━━━━━━━━━━━━━━ ━━━━━━━━ ━━━━━━━━━━ ━━━━━━━━━━━━━━ ━━━━━━━━━━━━ Plain 94.27 1.00x -39.43% n/a ─────────────── ──────── ────────── ────────────── ──────────── DSpark n2 138.83 1.47x -10.80% 55.66% ─────────────── ──────── ────────── ────────────── ──────────── DSpark n3 155.64 1.65x baseline 47.19% ─────────────── ──────── ────────── ────────────── ──────────── PCTree k2/n8 152.29 1.62x -2.15% 58.83% ─────────────── ──────── ────────── ────────────── ──────────── PCTree k3/n16 159.00 1.69x +2.16% 67.87% ─────────────── ──────── ────────── ────────────── ──────────── PCTree k4/n22 157.99 1.68x +1.51% 72.16% k3/n16 beat linear DSpark in 9 of 11 categories. Its largest gain was summarization at +6.56%. Only RAG (-0.57%) and multilingual (-1.35%) slightly favored linear. k4/n22 accepted more but drafts but could not repay the larger verifier batch. Benchmark conditions: SPEED-Bench qualitative, all 11 categories, four samples per category, 44/44 completed with zero failures, 512 output tokens, temperature 0, 8K context, one slot, BF16 target and draft. CPU-only llama-bench, 12 threads, three repetitions: Model pp512 tg128 ━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━ BF16 76.59 +/- 0.33 tok/s 3.82 +/- 0.02 tok/s ─────── ────────────────────── ───────────────────── Q8_0 76.07 +/- 0.79 tok/s 7.12 +/- 0.01 tok/s The PCTree launch parameters are: --spec-type draft-dspark --spec-draft-n-max 3…",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "96de43003887d283",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 vs 3.6 27b low reasoning loops way less now",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vulsom/qwen_38_vs_36_27b_low_reasoning_loops_way_less_now/",
+    "published": "2026-08-21T16:51:43+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Have seen some people say Qwen 3.8 still overthinks even when reasoning is set to low. Which on my case has been way better compared to 3.6, eveb on a 3 bit quant.</p> <p>I think it's worth mentioning that the default is actually xhigh, so first make sure to specify it if not already.</p> <p>Also, Qwen 3.8 has an additional parameter <strong><em>preserve_thinking</em></strong>. It allows to keep/discard the reasoning after every turn. </p> <p>So make sure its activated, otherwise the model may end up reasoning through the same stuff again.</p> <p>My personal experience is low loops way less than 3.6 Still not perfect but a significant improvement.</p> <p>TLDR: Qwen 3.8 on &quot;low&quot; loops less than 3.6. Check &quot;preserve_thinking&quot; and make sure you're not still on the default &quot;xhigh&quot;.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Lair98\"> /u/Lair98 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vulsom/qwen_38_vs_36_27b_low_reasoning_loops_way_less_now/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vulsom/qwen_38_vs_36_27b_low_reasoning_loops_way_less_now/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "20373b8052de0d5d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ultrafast Qwen3-TTS at 34 ms Time-to-First-Audio, Handling 10 Requests Per Second [OSS]",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vukf57/ultrafast_qwen3tts_at_34_ms_timetofirstaudio/",
+    "published": "2026-08-21T16:01:06+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vukf57/ultrafast_qwen3tts_at_34_ms_timetofirstaudio/\"> <img alt=\"Ultrafast Qwen3-TTS at 34 ms Time-to-First-Audio, Handling 10 Requests Per Second [OSS]\" src=\"https://external-preview.redd.it/fjVVBJXcVYZYJcUO73uK67SDqq_-1jo6LOMNKGSUbIE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=745e7a1041ab5e9ba5ea7f136e5e50e9feea0aab\" title=\"Ultrafast Qwen3-TTS at 34 ms Time-to-First-Audio, Handling 10 Requests Per Second [OSS]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey locallama! We recently open sourced a Qwen3-TTS 1.7B implementation that achieves <strong>10 requests per second (RPS) and sub-50 ms p95 time-to-first-audio (TTFA)</strong> while maintaining real-time playback on 1 x H100. This extends to <strong>20 RPS at sub-100 ms p95 TTFA.</strong> </p> <p>By adjusting settings, you can get a 4090 to perform at ~50 ms p95 TTFA as well. We were frustrated with locally runnable models having slow response speeds - even slower than some cloud ones (which include network times). We achieve a big speedup compared to popular engines such as vLLM-Omni and SGLang-Omni. </p> <p>We open source the <a href=\"https://github.com/nari-labs/nari-qwen3-tts\">implementation</a> and <a href=\"https://github.com/nari-labs/benchmarks\">benchmark</a>. Our methodology is explained in our <a href=\"https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/\">blog</a>! Hope you enjoy and would love to get feedback :)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Forsaken_Goal3692\"> /u/Forsaken_Goal3692 </a> <br /> <span><a href=\"https://github.com/nari-labs/nari-qwen3-tts\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vukf57/ultrafast_qwen3tts_at_34_ms_timetofirstaudio/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "4ca8aafd8597e152",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Strix Halo (8060S / gfx1151), Qwen-3.8-27B @ Q8 and Q6 UD v3, up to 256K ctx, llama.cpp, DFlash2, vision, real workloads quality and steady performances, optimized recipes, ...",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuqwd8/strix_halo_8060s_gfx1151_qwen3827b_q8_and_q6_ud/",
+    "published": "2026-08-21T19:58:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi fellows fully-local halos,</p> <p>after manually following existing guides, I decided to build an LLM API endpoint installation and optimization guide that works even when autonomously followed by my pi agent, so I can install/experiment/reinstall easily and without babysitting. </p> <p>Q8 is my default citizen, options for Q6 and Q5. Recipes: Quality (Q8), Balanced (Q6), Speed (Q5), Vision (Q8). All with Unsloth Dynamic Quants 3.0, DFlash2 (except vision). Scripts for download the right LLMs, interactive testing, systemd `--user` install, adaptive quality and performances optimization.</p> <p>Repo: <a href=\"https://github.com/PieBru/Qwen-3.8-27B_Strix-Halo_gfx1151\">https://github.com/PieBru/Qwen-3.8-27B_Strix-Halo_gfx1151</a></p> <p><em>Humans architected, verified, sealed. AI assistants built and wrote all the delivered stuff, built with pi and Qwen-3.8-27B.</em></p> <p><em>Piero</em></p> <p>P.S.: constructive proposals and PR are welcome.</p> <p>P.P.S.: no speed races, please. IMO speed is useful, but quality is fundamental - one subtle bug fewer or a better codebase always pays for itself in wall-time gained.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/PieBru\"> /u/PieBru </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuqwd8/strix_halo_8060s_gfx1151_qwen3827b_q8_and_q6_ud/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuqwd8/strix_halo_8060s_gfx1151_qwen3827b_q8_and_q6_ud/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
+  },
+  {
+    "id": "547c9afca22d71de",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "3.8 reasoning for planning and instruct for applying the plan? Anyone tried it this way?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuq4r4/38_reasoning_for_planning_and_instruct_for/",
+    "published": "2026-08-21T19:28:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Basically use Qwen 27B 3.8 in reasoning mode for a plan, and with reasoning off as instruct to apply the plan</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/soyalemujica\"> /u/soyalemujica </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuq4r4/38_reasoning_for_planning_and_instruct_for/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuq4r4/38_reasoning_for_planning_and_instruct_for/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T22:00:00.853567+00:00"
   }
 ]
