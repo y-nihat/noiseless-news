@@ -10,6 +10,26 @@
       "context": "Meta's official Meta-for-Business newsroom channel -- Tier-0 primary, load-bearing for meta-ai-mac-app-launch (the Mac desktop app announcement, business/creator connectors). Distinct from the already-registered ai.meta.com/blog and about.fb.com/news -- neither carried this specific post as of this cycle, suggesting Meta sometimes announces business-tool features here first/only. Propose Tier 0, type html."
     }
   ],
+  "candidates_2026-08-21_c2": [
+    {
+      "domain": "officechai.com",
+      "first_seen": "2026-08-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://officechai.com/ai/deepseek-releases-v4-flash-vision-exp-matches-opus-4-8-on-some-multimodal-benchmarks/"
+      ],
+      "context": "Founded 2015 by ex-Googlers; core beat is Indian workplace/startup/business culture, not specialist AI benchmarking, and runs an open contributor pipeline with no visible editorial masthead. Used only as secondary corroboration alongside the already-registered The Decoder for DeepSeek's own granular per-benchmark figures in deepseek-v4-flash-vision-exp (the numbers live in an image on DeepSeek's X post, not in fetchable primary-page text). Not a content mill, but reporting outside its usual lane -- treat as workable secondary corroboration, not a strong standalone citation. Propose Tier 2 pending review, not registration on this occurrence alone."
+    },
+    {
+      "domain": "thenextweb.com",
+      "first_seen": "2026-08-16",
+      "occurrences": 3,
+      "sample_urls": [
+        "https://thenextweb.com/news/deepseek-v4-flash-vision-exp-opus-benchmarks"
+      ],
+      "context": "Third occurrence this month (see candidates_2026-08-16_c1 and candidates_2026-07-23_night_c3, both proposing Tier 2). Important new finding this cycle: the Financial Times shut down TNW's entire news team and events business at the end of September 2025 (independently corroborated via DutchNews.nl, EU-Startups, Sifted and CoolTechZone reporting on the shutdown), and the brand was reportedly sold to unidentified new ownership afterward. This 2026-08-21 article on deepseek-v4-flash-vision-exp runs roughly 11 months after that shutdown under ownership not identifiable via search. The article itself carries a named byline (Ana Maria Constantin), a clean timestamp and substantive original methodology analysis -- not a content-mill fill-in -- so it was used for this specific piece, but any Tier-2 registration review should verify current ownership/editorial-standards directly rather than crediting the outlet's pre-2025 FT-era reputation by default."
+    }
+  ],
   "candidates_2026-08-19_c3": [
     {
       "domain": "bloomberg.com",
