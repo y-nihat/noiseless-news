@@ -1,0 +1,12 @@
+[
+  {
+    "id": "12a2bee6df7e3dd1",
+    "source": "VentureBeat AI",
+    "tier": 2,
+    "title": "Slack wants to drag AI coding out of the terminal and into the group chat",
+    "url": "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat",
+    "published": "2026-08-21T00:00:00+00:00",
+    "summary": "<p><a href=\"https://slack.com/\">Slack</a> wants to drag AI coding out of the terminal and into the group chat.</p><p>The Salesforce-owned messaging platform today announced <a href=\"https://slack.com/features/code-channels\">Slack Code</a>, a new product that embeds AI coding agents — including Anthropic&#x27;s <a href=\"https://claude.com/product/claude-code\">Claude Code</a>, Cognition&#x27;s <a href=\"https://devin.ai/\">Devin</a>, <a href=\"https://github.com/features/copilot\">GitHub Copilot</a>, and <a href=\"https://vercel.com/agent\">Vercel&#x27;s agent</a> — directly into dedicated Slack channels where entire teams can watch, steer, review, and ship software together. <a href=\"https://slack.com/features/code-channels\">Slack Code</a> is available on any Slack plan at launch, though customers need their own access to the partner agents.</p><p>The pitch is deceptively simple: today, most work with AI coding agents happens between one person and one agent, invisible to everyone else. <a href=\"https://slack.com/features/code-channels\">Slack Code</a> makes that work &quot;<a href=\"https://www.salesforce.com/introducing-slack-code/\">multiplayer</a>.&quot; When someone tags a coding agent from any conversation, the agent spins up a project-specific code channel, does the work in the open — complete with code diffs, live previews, and a running plan visible in dedicated tabs — and archives the channel when the job is done, leaving behind a searchable audit trail.</p><p>&quot;One of the things I love about this is that code is no longer the bottleneck,&quot; Rob Seaman, Slack&#x27;s interim CEO, said in a press briefing ahead of the launch. &quot;Ideas, taste, judgment, craft — those are the things that are the bottleneck, and you&#x27;ve effectively extended the population that can contribute ideas, taste, judgment, and craft to anybody that exists in your Slack.&quot;</p><p>It is a consequential launch for Slack, and a revealing one for the broader enterprise AI market. The…",
+    "fetched_at": "2026-08-21T00:58:56.572853+00:00"
+  }
+]
