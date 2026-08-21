@@ -1,0 +1,21 @@
+{
+  "slug": "cohere-culture-funnel-training-data",
+  "title": "Cohere Labs preprint on cultural-signal decline in LLM training data",
+  "status": "published",
+  "first_seen": "2026-08-21",
+  "published_at": "2026-08-21",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://cohere.com/blog/the-culture-funnel-you-cant-align-what-isnt-in-the-data",
+    "https://arxiv.org/abs/2606.13808"
+  ],
+  "follows": null,
+  "reason": "Published -- research-finding claims confirmed directly against the arXiv preprint itself, per verification.md section 3's standard of proof for research findings. No dispute or independent reproduction found either way.",
+  "watch": [
+    "Peer review or venue acceptance of arXiv 2606.13808",
+    "Independent reproduction of the cultural-funnel measurement or the fine-tuning recovery gains (NormAd/BBQ/GMMLU)"
+  ],
+  "notes": [
+    "2026-08-21 c5: Published. Flagged in cycle 1's Tier-0 sweep (fresh content on cohere.com/blog) and carried unactioned through cycles 2-4 for time budget; picked up cycle 5. dedup-check clean (no matches). Verified directly (no separate sub-agent verifier/falsifier pair spun up given the ~29-minute cycle window) against the Tier-0 blog post and the arXiv preprint itself, plus an independent web search that found no outside coverage, disputes or contradictions -- see data/verified/cohere-culture-funnel-training-data.json for full reasoning. style-gate: EN pass / TR pass."
+  ]
+}

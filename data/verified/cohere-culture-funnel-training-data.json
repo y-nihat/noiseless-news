@@ -1,0 +1,32 @@
+{
+  "slug": "cohere-culture-funnel-training-data",
+  "checked_at": "2026-08-21T00:35:00+00:00",
+  "method": "Direct fetch of the primary source (cohere.com/blog, Tier-0 registered) and the arXiv preprint abstract page (2606.13808) to cross-check authorship, methodology, dataset size and the specific benchmark-gain figures between the two; independent web search for outside coverage, disputes or contradictions. Dedup-check run before opening (title 'The Culture Funnel' vs cohere.com/blog): no match. No separate verifier/falsifier sub-agent pair spun up this cycle given the ~29-minute cycle window (deadline 00:56 UTC, cycle started 00:26 UTC after a thin fresh-ingest triage and watching-story check) -- checks below were run directly and adversarially by this cycle's agent, consistent with cycle 4's precedent for a single-primary/single-paper claim set under time pressure.",
+  "origin_items": [
+    "Carried over from cycle 1's Tier-0 sweep flag (Cohere Blog, 'The Culture Funnel', dated 2026-08-19) -- not yet triaged as of start of cycle 5"
+  ],
+  "claims": [
+    {
+      "text": "Cohere Labs researchers (Ananya Sahu, Mehrnaz Mofakhami, Daniel D'Souza, Thomas Euyang, Julia Kreutzer, Marzieh Fadaee) analyzed 5.6 million training samples across pretraining, supervised fine-tuning, alignment and reasoning stages, tagging cultural signals with Cohere's Command A model and manually validating a subset across six languages, and report that explicit cultural signals decline sharply during post-training while the remaining culturally-tagged data is geographically concentrated -- India, China and the USA dominate, with minimal representation from South America and Africa (preprint -- not peer-reviewed)",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Research-finding claim type per verification.md section 3 -- standard of proof is the paper itself, labeled preprint/not-peer-reviewed. Fetched the arXiv preprint (2606.13808, submitted 11 June 2026) directly: title, six-author byline, 5.6M-sample count, tagging methodology (pretraining/SFT/alignment/reasoning stages, Command A auto-tagging, six-language manual validation) and the geographic-concentration finding all match the blog post's framing. Blog post (cohere.com/blog, 19 August 2026) independently fetched and cross-checked against the paper abstract -- consistent, no embellishment beyond the paper's own claims found. No peer review or venue acceptance stated anywhere; treated as a preprint throughout.",
+      "evidence": [
+        "https://cohere.com/blog/the-culture-funnel-you-cant-align-what-isnt-in-the-data",
+        "https://arxiv.org/abs/2606.13808"
+      ]
+    },
+    {
+      "text": "In follow-up fine-tuning experiments, adding explicit cultural markers back into training data improved performance by +8% on NormAd, +6% on BBQ and +2.3% on GMMLU without a reported drop in general-capability scores (preprint -- not peer-reviewed)",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Same research-finding standard as claim 1. The three benchmark names (NormAd, BBQ, GMMLU) are established third-party cultural/bias/multilingual evaluation sets, not Cohere-invented metrics, which is consistent with an intervention experiment rather than a marketing benchmark. Figures as stated in the blog post fetch; paper abstract confirms the same recovery-experiment framing (explicit cultural markers during fine-tuning) without contradicting the magnitudes. No independent reproduction exists this soon after a preprint release -- none claimed or implied in the article.",
+      "evidence": [
+        "https://cohere.com/blog/the-culture-funnel-you-cant-align-what-isnt-in-the-data",
+        "https://arxiv.org/abs/2606.13808"
+      ]
+    }
+  ],
+  "falsifier_notes": "Searched independently for '\"Culture Funnel\" Cohere cultural diversity training data' to check for outside coverage, disputes, or an earlier/contradicting use of the same term or finding: found only the arXiv paper itself and citation-index mirrors, no independent press coverage and no dispute or correction. Checked publish-order consistency: arXiv submission (11 June 2026) predates the Cohere blog post (19 August 2026) by over two months, a plausible paper-then-publicity order (unlike same-week releases, this rules out the blog recycling an old, already-covered result -- confirmed via archive search this exact paper/finding has no prior noiseless-news entry). Checked that the released dataset (huggingface.co/datasets/CohereLabs/CultureMarkers, 5.6M samples) is named consistently between the web search result and the blog fetch. No contradiction, retraction, or dispute found; nothing to downgrade.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"The Culture Funnel\" --url \"https://cohere.com/blog\" returned no matches (empty array). Standalone article, per policy section 8 outcome (c) implicitly -- no matched story to update or follow."
+}
