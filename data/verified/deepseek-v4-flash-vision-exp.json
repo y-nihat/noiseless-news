@@ -1,0 +1,61 @@
+{
+  "slug": "deepseek-v4-flash-vision-exp",
+  "checked_at": "2026-08-21T22:53:00+00:00",
+  "method": "Fresh verifier and fresh adversarial falsifier sub-agents, both run in cycle 2 of the 2026-08-21 night (report dated 2026-08-22). Verifier fetched DeepSeek's own announcement page, The Decoder, officechai, The Next Web and a Hacker News discussion; searched Hugging Face for an official open-weight repo (found none, only unofficial third-party adapters); attempted to live-fetch the independent 'Agents' Last Exam' leaderboard (inconclusive -- JS-rendered, no table data). Falsifier independently re-fetched DeepSeek's primary page and confirmed its exact wording, checked for an old/resurfaced-release angle (none found), re-confirmed no official Hugging Face repo exists under any exact-string search, caught and discarded one WebSearch AI-summary hallucination claiming open-weight release, and assessed source credibility for officechai.com and The Next Web.",
+  "origin_items": [
+    "data/raw/2026-08-21/the-decoder.json (Deepseek releases experimental Flash vision model that rivals Opus 4.8 on agent benchmarks, 2026-08-21T19:08:27+00:00)",
+    "data/raw/2026-08-21/r-localllama.json (DeepSeek-V4-Flash-Vision-Exp thread, 2026-08-21T09:22:09+00:00, Tier-3 discovery only)",
+    "data/raw/2026-08-21/gnews-ai-model-releases.json (DeepSeek Image Input: How to Use the New V4 Flash Vision Model, 2026-08-21T15:30:30+00:00, Tier-3 aggregator lead)"
+  ],
+  "claims": [
+    {
+      "text": "DeepSeek released DeepSeek-V4-Flash-Vision-Exp, an experimental multimodal model, through its API on 21 August 2026, adding image understanding to its existing V4-Flash-0731 text model while matching that model's text performance",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Tier-0 primary source (DeepSeek's own news page, dated 21 August 2026) states this directly: experimental multimodal model, mixed text+image input via base64/URLs/Files API, matches V4-Flash on text capabilities. Both the verifier and falsifier fetched this page directly (not via a secondary summary) and confirmed the wording independently. Corroborated same-day by The Decoder's independent report.",
+      "evidence": [
+        "https://api-docs.deepseek.com/news/news260821",
+        "https://the-decoder.com/deepseek-releases-experimental-flash-vision-model-that-rivals-opus-4-8-on-agent-benchmarks/"
+      ]
+    },
+    {
+      "text": "V4-Flash-Vision-Exp is available only through DeepSeek's API; DeepSeek's own announcement states it is not open-weight, unlike the July V4-Flash-0731 release it is built on",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "DeepSeek's own primary page contains the explicit phrase '(not open-weight)' -- both verifier and falsifier read this directly from the fetched page text, not inferred from absence. Cross-checked: exact-string Hugging Face search for deepseek-ai/DeepSeek-V4-Flash-Vision-Exp returns no official repo; the only vision-related repos found (webbrain-one/DeepSeek-V4-Flash-Vision-NVFP4 and webbrain-one/DeepSeek-V4-Flash-0731-Vision-NVFP4) are unofficial third-party community adapters by an unrelated uploader grafting a different vision encoder onto the already-open V4-Flash-0731 text weights, and are not DeepSeek's release. One WebSearch AI-summary during falsification claimed weights were open-sourced on Hugging Face/ModelScope; this was checked against the primary source's explicit contrary text and discarded as a search-summarizer error, not used.",
+      "evidence": [
+        "https://api-docs.deepseek.com/news/news260821"
+      ]
+    },
+    {
+      "text": "DeepSeek says the model's multimodal agent performance is close to Claude Opus 4.8, based on evaluations run on DeepSeek's own benchmark harness",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "DeepSeek's own page states verbatim that the release 'brings multimodal agent performance close to Opus-4.8' -- both sub-agents confirmed this exact phrasing directly from the primary source. This is DeepSeek's self-reported evaluation on its own harness; no independent lab has reproduced it, so it is labeled vendor-claim, not confirmed. Note the word 'rivals' used in some press headlines (e.g. The Decoder) is that outlet's own editorializing, not DeepSeek's language -- not used as our headline framing for that reason.",
+      "evidence": [
+        "https://api-docs.deepseek.com/news/news260821"
+      ]
+    },
+    {
+      "text": "DeepSeek's own per-benchmark figures, as reported by The Decoder and officechai, show the model leading Opus 4.8 on some tasks (e.g. Agents' Last Exam, 27.3 vs 25.7) and trailing by as much as roughly 12 points on others (e.g. NL2Repo); no independent evaluator's results for the model were found",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "The granular per-benchmark table DeepSeek published lives in an image attached to DeepSeek's own X/Twitter post (fetch blocked by a 402 paywall on x.com), not in the fetchable HTML/text of the api-docs.deepseek.com page, which states the comparison only qualitatively. The specific figures are therefore attributed to the secondary outlets that transcribed them (The Decoder, officechai) rather than claimed as pulled directly from DeepSeek's page text. Two independent outlets converging on the same figures (27.3/25.7 Agents' Last Exam, 35.0/34.0 ZeroBench, a roughly-12-point NL2Repo gap, an overall 3-of-11 win tally against Opus 4.8) is reassuring but does not rule out both relaying a shared transcription of the same source image, so this remains vendor-claim, not confirmed. Attempted live-fetch of the independent 'Agents' Last Exam' leaderboard (agents-last-exam.org) to check the 27.3 figure against an independently-posted entry: inconclusive, page returned only header/nav/footer chrome with no table data (likely JS-rendered) -- not usable as independent confirmation, and not cited as one.",
+      "evidence": [
+        "https://the-decoder.com/deepseek-releases-experimental-flash-vision-model-that-rivals-opus-4-8-on-agent-benchmarks/",
+        "https://officechai.com/ai/deepseek-releases-v4-flash-vision-exp-matches-opus-4-8-on-some-multimodal-benchmarks/"
+      ]
+    },
+    {
+      "text": "The Next Web reported that DeepSeek's comparison benchmarks against Opus 4.8 rather than the newer Opus 5, and that DeepSeek's own before/after table appears to score its prior non-vision model on tests containing images it could not see",
+      "type": "capability",
+      "verdict": "single-source",
+      "reasoning": "Directly fetched and confirmed by the falsifier: byline (Ana Maria Constantin), timestamped 2026-08-21 11:40 UTC, no sponsored/syndication tag, with substantive original methodology analysis (quoted directly: a call to test 'V4-Flash-Vision-Exp against Opus 5 on the same harness', and that the older model 'ignores multimodal elements contained therein' in the comparison table). Only one outlet made this specific critique, hence single-source rather than confirmed or disputed. Sourcing caveat recorded in notes below.",
+      "evidence": [
+        "https://thenextweb.com/news/deepseek-v4-flash-vision-exp-opus-benchmarks"
+      ]
+    }
+  ],
+  "falsifier_notes": "GO overall, no claim reversed. Falsifier independently re-fetched the primary source rather than trusting the verifier's paraphrase, confirmed DeepSeek's exact wording ('close to Opus-4.8', '(not open-weight)'), and caught that the granular benchmark table is not present in the primary page's fetchable text -- it lives in an image on DeepSeek's own X post -- so the specific per-benchmark numbers are attributed to secondary outlets (The Decoder, officechai) rather than the primary URL, and the qualitative 'close to' framing is attributed to the primary URL directly. Checked for an old/resurfaced-release angle: found none, all coverage dated 21 August 2026, only a pre-announcement rumor piece on an already-blocked domain (kucoin.com, not cited). Checked for any denial or dispute of the release itself: none found; the only criticism found is the benchmark-methodology skepticism from The Next Web, captured above. Credibility read: officechai.com is a generalist Indian tech/business outlet reporting outside its usual beat -- workable secondary corroboration, not a strong standalone citation, used only alongside The Decoder. The Next Web's news team and events business were shut down by the Financial Times at the end of September 2025 (independently corroborated by DutchNews.nl, EU-Startups, Sifted and CoolTechZone reporting on the shutdown); this article runs under ownership not identified via search, roughly 11 months later. The article itself carries a named byline, a clean timestamp and substantive original analysis, so it is used for this specific piece, but the outlet's historical FT-era editorial reputation should not be assumed to carry over uncritically. Both officechai.com and thenextweb.com are logged to data/ledger/source_candidates.json this cycle, pending review -- the Next Web entry notes the ownership discontinuity explicitly.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"DeepSeek releases experimental V4-Flash-Vision-Exp multimodal model\" --url \"https://api-docs.deepseek.com/news/news260821\" returned one moderate match only: deepseek-v4-flash-0731-beta (score 0.444, no shared source URL). Read the matched article in full: it covers the text-only, open-weight DeepSeek-V4-Flash-0731 beta released 31 July 2026, with no vision/multimodal capability. V4-Flash-Vision-Exp is a materially distinct variant -- adds a new input modality (image understanding), ships API-only rather than open-weight, and is announced under a separate name/URL/endpoint on a different date. Following the same precedent already set by deepseek-v4-pro-0813-quiet-update (also a moderate, non-strong match against the same 0731 article, also treated as standalone rather than a follow-up), this is published as a standalone article, not an in-place update or follow-up: a reader does not need the July beta's context to understand this separate experimental vision variant, and it is a distinct model artifact, not a continuation of the same event."
+}

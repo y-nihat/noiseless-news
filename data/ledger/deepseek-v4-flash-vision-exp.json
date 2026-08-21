@@ -1,0 +1,23 @@
+{
+  "slug": "deepseek-v4-flash-vision-exp",
+  "title": "DeepSeek releases experimental multimodal model V4-Flash-Vision-Exp as API-only",
+  "status": "published",
+  "first_seen": "2026-08-21",
+  "published_at": "2026-08-21",
+  "date": "2026-08-21",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://api-docs.deepseek.com/news/news260821",
+    "https://the-decoder.com/deepseek-releases-experimental-flash-vision-model-that-rivals-opus-4-8-on-agent-benchmarks/",
+    "https://officechai.com/ai/deepseek-releases-v4-flash-vision-exp-matches-opus-4-8-on-some-multimodal-benchmarks/",
+    "https://thenextweb.com/news/deepseek-v4-flash-vision-exp-opus-benchmarks"
+  ],
+  "follows": null,
+  "watch": [
+    "An independent evaluator (METR, Vals AI, Artificial Analysis, or the Agents' Last Exam leaderboard once its table is fetchable) reproducing or disputing DeepSeek's Opus-4.8 comparison",
+    "Any official open-weight release of V4-Flash-Vision-Exp on Hugging Face under the deepseek-ai org"
+  ],
+  "notes": [
+    "2026-08-21 c2: PUBLISHED (EN + TR). dedup-check returned one moderate match (deepseek-v4-flash-0731-beta, score 0.444, no shared source URL); read that article in full -- it covers the text-only, open-weight 0731 beta with no vision capability, so this is standalone, not a follow-up, consistent with the same precedent already set by deepseek-v4-pro-0813-quiet-update against the same match. Fresh verifier and fresh adversarial falsifier sub-agents run in sequence. Announcement and API-only/not-open-weight facts confirmed directly from DeepSeek's own primary page (both sub-agents fetched it independently). Opus-4.8 comparison published as labeled vendor-claim: DeepSeek's own verbatim language is 'close to Opus-4.8', not 'rivals' (that word is The Decoder's own editorializing, not used in our headline or claims). The granular per-benchmark table lives in an image on DeepSeek's X post, not in the primary page's fetchable text, so those specific figures are attributed to The Decoder/officechai's reporting rather than claimed as pulled directly from DeepSeek. A Next Web methodology critique (outdated Opus-4.8 baseline vs. Opus 5; possible scoring artifact inflating the before/after comparison) published as single-source, attributed. Both officechai.com and thenextweb.com are unregistered; logged to source_candidates.json this cycle. The Next Web's news team/events business was shut down by the Financial Times in September 2025 and this article runs under unidentified later ownership -- used for this specific piece given its named byline and substantive original analysis, but flagged in the source-candidate review rather than assumed credible by the outlet's old reputation. Editor gate run on both EN and TR: headline confined to the two confirmed facts (release, API-only) per Gate 1's rule that headlines can't rest on a vendor-claim; TL;DR standalone; no padding found; TR reads as a natural mirror, not a calque. Full claim-by-claim reasoning in data/verified/deepseek-v4-flash-vision-exp.json."
+  ]
+}
