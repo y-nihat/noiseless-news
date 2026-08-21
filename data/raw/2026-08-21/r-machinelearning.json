@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1807c6d1796b284a",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Rejected at EMNLP with decent scores. What can be done next? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vuatkw/rejected_at_emnlp_with_decent_scores_what_can_be/",
+    "published": "2026-08-21T08:54:41+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So I got rejected at EMNLP with scores:-<br /> Meta: 3 (very positive in the review)<br /> Reviewers: OA(conf)<br /> 3(4)<br /> 3(4)<br /> 2.5(3)<br /> Avg: 2.83(3.67)<br /> Track: multimodality<br /> Rebuttals never got any acknowledgements. Most weaknesses were already discussed in the paper. What are my options now? As it was my first paper (solo as well). </p> <p>- If I want to commit to NACL in December. Do i need ti submit to acl arr again or can i use the same arr review discussion?</p> <p>- even if i go with resubmission at arr. Do the old reviewers likely help? Because as a masters student i cant get stuck in another cycle.</p> <p>- what is the best overall thing to do in my situation? I need a publication so i can apply for internships.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Lumpy-Background5641\"> /u/Lumpy-Background5641 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vuatkw/rejected_at_emnlp_with_decent_scores_what_can_be/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vuatkw/rejected_at_emnlp_with_decent_scores_what_can_be/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T10:32:47.324030+00:00"
+  },
+  {
+    "id": "9844fd7834d60273",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "EMNLP 2026 Findings : worth attending in person?[D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vu8zag/emnlp_2026_findings_worth_attending_in_persond/",
+    "published": "2026-08-21T07:04:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Experienced folks!! Do u think it is worth attending the conference for findings. I do want to. But when I saw that it is not mandatory for findings, I was a bit hesitant. This is my first time having a paper accepted at an AI conference. Just wanna hear opinions/experiences </p> <p>Thanks in advance. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/i_minus\"> /u/i_minus </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vu8zag/emnlp_2026_findings_worth_attending_in_persond/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vu8zag/emnlp_2026_findings_worth_attending_in_persond/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T10:32:47.324030+00:00"
+  },
+  {
+    "id": "aaa49f8581874713",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Notes on Hamiltonian Monte Carlo from a purely probabilistic perspective [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vtvaue/notes_on_hamiltonian_monte_carlo_from_a_purely/",
+    "published": "2026-08-20T20:37:08+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve been studying Hamiltonian Monte Carlo and wrote a set of notes explaining HMC without relying on the usual physics-based motivation.</p> <p>The notes develop HMC from a probabilistic/MCMC perspective, starting from introducing an auxiliary variable, constructing the corresponding Markov chain, and then covering Hamiltonian dynamics, leapfrog integration, reversibility and volume preservation.</p> <p>The goal was to understand <em>why</em> HMC works rather than treating the physics analogy as a prerequisite.</p> <p>I’m sharing them here in case they’re useful to others learning HMC. I’d also appreciate any feedback, particularly if you notice errors or places where the exposition could be improved.</p> <p><a href=\"https://doi.org/10.5281/zenodo.21841087\">https://doi.org/10.5281/zenodo.21841087</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/aybehrouz\"> /u/aybehrouz </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vtvaue/notes_on_hamiltonian_monte_carlo_from_a_purely/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vtvaue/notes_on_hamiltonian_monte_carlo_from_a_purely/\">[comments]</a></span>",
+    "fetched_at": "2026-08-21T10:32:47.324030+00:00"
+  }
+]
