@@ -1259,5 +1259,35 @@
       ],
       "context": "OpenAI's own current ChatGPT documentation/changelog subdomain -- Tier-0 primary per policy SS1 (vendor's own official docs), load-bearing for openai-chatgpt-apple-messages-plugin. Distinct from the registered 'OpenAI News' entry (openai.com/news/rss.xml); help.openai.com (the older Zendesk-hosted help center) returned HTTP 403 on direct fetch this cycle, and OpenAI appears to have moved at least some release-notes/plugin documentation to this domain. Propose Tier 0, type html, alongside the existing OpenAI News entry."
     }
+  ],
+  "candidates_2026-08-21_c3b": [
+    {
+      "domain": "justice.gov",
+      "first_seen": "2026-08-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.justice.gov/usao-ndca/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai",
+        "https://www.justice.gov/opa/pr/former-google-engineer-found-guilty-economic-espionage-and-theft-confidential-ai-technology"
+      ],
+      "context": "US Department of Justice press releases (US Attorney's Office N.D. Cal. and Office of Public Affairs) -- Tier-0 primary government/legal source, load-bearing for linwei-ding-conviction-partially-overturned (original conviction background). Direct WebFetch returned HTTP 403 for both sub-agents this cycle; content used via WebSearch snippet synthesis only. Likely to recur for other AI-litigation stories -- propose Tier 0, type html, registration."
+      },
+    {
+      "domain": "mlex.com",
+      "first_seen": "2026-08-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.mlex.com/mlex/artificial-intelligence/articles/2516137"
+      ],
+      "context": "Already a registered candidate-status Tier 2 source (paywalled legal/regulatory specialist wire) -- noting this occurrence since it was the one source this cycle a sub-agent got a genuine partial direct fetch from (returning Judge Chhabria's ruling language verbatim), for linwei-ding-conviction-partially-overturned. Supports upgrading it out of candidate status when an access strategy is decided."
+    },
+    {
+      "domain": "benzinga.com",
+      "first_seen": "2026-08-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.benzinga.com/news/legal/26/08/61348337/former-google-engineer-ai-trade-secrets-economic-espionage-charges"
+      ],
+      "context": "Unregistered. Used as independent corroboration (alongside Reuters and MLex) for linwei-ding-conviction-partially-overturned -- named coverage of the specific 20 August ruling, not a wire relay. Direct fetch not attempted (used via search synthesis); worth a look for Tier 2 registration if it recurs."
+    }
   ]
 }
