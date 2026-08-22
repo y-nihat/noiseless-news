@@ -1,0 +1,25 @@
+{
+  "slug": "openai-sb-53-reversal",
+  "title": "OpenAI reverses position, urges California to strengthen SB 53",
+  "status": "published",
+  "first_seen": "2026-08-22",
+  "published_at": "2026-08-22",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+    "https://www.engadget.com/2242200/openai-calls-for-california-to-strengthen-ai-safety-laws/",
+    "https://sfstandard.com/2025/09/29/gavin-newsom-california-ai-legislation-law-technology/",
+    "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+  ],
+  "follows": null,
+  "reason": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-22",
+  "watch": [
+    "Whether the California legislature actually amends SB 53 along the lines OpenAI requested",
+    "Any OpenAI clarification of which 'recent incidents' its post referred to"
+  ],
+  "notes": [
+    "2026-08-22 c2: PUBLISHED (EN + TR). dedup-check returned one moderate match (openai-safety-heidecke-departure, score 0.4, no shared URL) -- read, confirmed unrelated (safety-team reorganisation personnel story), standalone entry. Fresh verifier (13 searches/fetches) + fresh adversarial falsifier (14 searches/fetches) run in sequence. Falsifier required one precision fix: OpenAI's LinkedIn post itself cites only unspecified 'recent incidents', not Hugging Face by name -- that linkage is press reporting (TechCrunch), written into the article as such rather than attributed to OpenAI's own words. Falsifier also confirmed Lehane's 2025 opposition letter named SB 53 specifically (not a generic anti-regulation stance) and flagged/avoided a search-synthesis artifact that miscited the opposed bill as 2024's SB 1047 (a distinct, vetoed predecessor). 'Reverse federalism' published as a labeled vendor-claim/attributed rationale, sourced to OpenAI's own Global Affairs Substack coinage, not asserted as fact. Editor gate run on both EN and TR: headline rests only on confirmed claims (the call to strengthen + the reversal), no superlatives; TL;DR stands alone; no padding; TR is a natural semantic mirror, not a calque. open_obligation set: OpenAI's request to the legislature is a live ask with no resolution yet -- revisit whether SB 53 is actually amended. Full claim-by-claim reasoning in data/verified/openai-sb-53-reversal.json."
+  ]
+}
