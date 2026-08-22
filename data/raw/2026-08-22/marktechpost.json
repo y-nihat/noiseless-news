@@ -8,5 +8,15 @@
     "published": "2026-08-22T13:43:13+00:00",
     "summary": "<p>Most teams treat &#8216;which model&#8217; as the important decision. The harness engineering literature keeps pointing somewhere else. In LangChain&#8217;s Terminal-Bench experiment, changing only the harness—same model throughout—moved a coding agent from roughly 30th place into the top 5. That result reframes the question. If the harness decides quality, then how you run the loop becomes [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/22/decoding-ais-open-source-course-maps-three-ways-to-run-an-agent-loop-and-the-provider-economics-behind-each/\">Decoding AI&#8217;s Open-Source Course Maps Three Ways to Run an Agent Loop and the Provider Economics Behind Each</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "3e254753cd8c7f23",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "The Developer’s Guide to NeMo Guardrails for Enterprise AI Safety",
+    "url": "https://www.marktechpost.com/2026/08/22/the-developers-guide-to-nemo-guardrails-for-enterprise-ai-safety/",
+    "published": "2026-08-22T23:49:38+00:00",
+    "summary": "<p>In this tutorial, we explore how to design production-grade safety for LLM-based applications using the NeMo Guardrails framework. We move beyond simple prompt filtering to implement a layered architecture, featuring deterministic PII redaction, retrieval filtering, output masking, and policy-based tool gating. By integrating stateful multi-turn evaluation and detailed activation tracing, we demonstrate how to build an auditable, secure, and cost-effective AI assistant capable of managing sensitive financial interactions while maintaining strict compliance standards</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/22/the-developers-guide-to-nemo-guardrails-for-enterprise-ai-safety/\">The Developer’s Guide to NeMo Guardrails for Enterprise AI Safety</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-22T23:47:53.875920+00:00"
   }
 ]
