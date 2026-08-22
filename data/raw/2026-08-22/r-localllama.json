@@ -208,5 +208,95 @@
     "published": "2026-08-22T15:51:47+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have a gigabyte ds3h v2 b450 motherboard. Currently hosting an RTX 3090<br /> I have a spare 3070 and I wondered, can I run both?</p> <p>Got myself a riser cable and…</p> <p>Top slot card, bottom slot riser = card pushes the riser, doesn’t fit </p> <p>Top slot riser, bottom slot card = card pushes the sata cables doesn’t fit…</p> <p>So I either need another riser and put both gpus out of the case, or an atx motherboard with more space in between the slots or maybe I should look for another solution.</p> <p>I’ve read some of you are using nvme? How does that work?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AlemanCastor\"> /u/AlemanCastor </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvfxzw/multi_gpu_hardware_advice/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvfxzw/multi_gpu_hardware_advice/\">[comments]</a></span>",
     "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "8e6abcd786cecf8e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New 100B Liquid AI model coming soon",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvmxls/new_100b_liquid_ai_model_coming_soon/",
+    "published": "2026-08-22T20:24:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvmxls/new_100b_liquid_ai_model_coming_soon/\"> <img alt=\"New 100B Liquid AI model coming soon\" src=\"https://preview.redd.it/cifbnspmjzkh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=efd72aa7bf1000ccdcbfb40b0616ef7a6057e6b5\" title=\"New 100B Liquid AI model coming soon\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Liquid AI currently possesses among the fastest LLM architectures around, and some of the best SLMs (in terms of utility IMO) around, so I'm very excited to see what a potential 100B LFM (3?) model would look like!</p> <p>Link to the poll: <a href=\"https://x.com/ramin_m_h/status/2091236099612098943?s=20\">https://x.com/ramin_m_h/status/2091236099612098943?s=20</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/KaroYadgar\"> /u/KaroYadgar </a> <br /> <span><a href=\"https://i.redd.it/cifbnspmjzkh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvmxls/new_100b_liquid_ai_model_coming_soon/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "6c12be2e07a8fb16",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I benchmark DFlash 2 (PR build) in llama.cpp on Qwen 3.8 27B against all speculative methods for 3 days. 2.26x on 100 real coding prompts, 4.68x with one n-gram drafter on top. Up to 8x on specific cases.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvncyh/i_benchmark_dflash_2_pr_build_in_llamacpp_on_qwen/",
+    "published": "2026-08-22T20:41:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvncyh/i_benchmark_dflash_2_pr_build_in_llamacpp_on_qwen/\"> <img alt=\"I benchmark DFlash 2 (PR build) in llama.cpp on Qwen 3.8 27B against all speculative methods for 3 days. 2.26x on 100 real coding prompts, 4.68x with one n-gram drafter on top. Up to 8x on specific cases.\" src=\"https://preview.redd.it/ina7l4wsfzkh1.png?width=140&amp;height=75&amp;auto=webp&amp;s=9ad568d63fdd0697ce9229dc5f5db61ed1d5921b\" title=\"I benchmark DFlash 2 (PR build) in llama.cpp on Qwen 3.8 27B against all speculative methods for 3 days. 2.26x on 100 real coding prompts, 4.68x with one n-gram drafter on top. Up to 8x on specific cases.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey guys,</p> <p>Inco AI shipped DFlash 2 a few days ago with a drafter for Qwen 3.8 27B and a llama.cpp PR. I built the PR and ran it against plain decoding, MTP, the n-gram lookup drafters, and my July DFlash 1 numbers on Qwen 3.6 27B for 3 days. One RTX PRO 6000, concurrency 1, about three days of runs.</p> <p>The interesting result isn't the biggest number I measured. It's where n-gram actually helps and where it doesn't.</p> <p><strong>Short version:</strong></p> <ul> <li>DFlash 2 alone: <strong>2.26x on 100 real LiveCodeBench problems</strong> (67.97 → 153.91 tok/s, inter-token latency 14.27 → 6.02 ms), natural stop, nothing forced. That is the headline. Costs +2.7 GB VRAM.</li> <li>DFlash 2 + one n-gram lookup table (<code>ngram-map-k4v</code>): <strong>4.68x on the build phase of an 18-turn coding session</strong> (65.1 → 304.9 tok/s). Adding the second table (<code>ngram-mod</code>) made it slower, 3.77x. In July, with DFlash 1, stacking both was the winner. I did not expect that to flip.</li> <li>The same n-gram flag is +52% on a synthetic benchmark, +1% on LiveCodeBench and -30% on prose. The +52% is the harness degenerating, do not quote it.</li> <li>The recommended <code>--spec-draft-n-max 7</code> is past the peak. 5 gav…",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "fb3bf928aa45ec5c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Single RTX 5090: Qwen3.8-27B NVFP4 at a real 262K context in vLLM — 77 tok/s short-context, 64.7 tok/s at 128K",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvl7pc/single_rtx_5090_qwen3827b_nvfp4_at_a_real_262k/",
+    "published": "2026-08-22T19:16:31+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>This is the Qwen3.8-27B setup I actually use every day on one RTX 5090. </p> <p>I wanted to write it down with enough detail that another 5090 owner can reproduce it instead of guessing which memory knobs I used.</p> <p>The short version: the full 262,144-token window fits together with vision, FP8 KV, prefix caching, tool calling, and a normal KDE desktop. Decode is 77.2 tok/s after a 1K prompt and 64.7 tok/s with 128K already resident. A successful 262,000-token prefill took 166 seconds. This is not a claim that 262K is fast; it is proof that it genuinely fits and completes.</p> <p>Model: <a href=\"https://huggingface.co/joshebbs/qwen3.8-27b-uncensored-nvfp4-modelopt\">joshebbs/qwen3.8-27b-uncensored-nvfp4-modelopt</a>, pinned to revision <code>e5ff4986938dcd0dd05ab4cce89da1b052be6ce3</code>.</p> <p>It is an NVFP4 ModelOpt export of JonathanColetti/Qwen3.8-27B-Uncensored. The checkpoint is 19.18 GiB of safetensors and retains the vision tower and MTP head. The model is a 64-layer hybrid: 48 Gated DeltaNet layers and 16 full-attention layers.</p> <h1>Results</h1> <p>All runs hit the already-warm daily vLLM server through <code>/v1/completions</code>, concurrency 1, random token prompts, <code>--ignore-eos</code>, and temperature 0. PP means accepted input tokens divided by TTFT. TG means <code>1000 / mean_TPOT_ms</code>, so it excludes prefill. The non-prefix runs had zero prefix-cache hits according to the server counters.</p> <table><thead> <tr> <th align=\"left\">Workload</th> <th align=\"left\">Runs</th> <th align=\"left\">PP tok/s</th> <th align=\"left\">TTFT</th> <th align=\"left\">Steady TG tok/s</th> <th align=\"left\">End-to-end output tok/s</th> </tr> </thead><tbody> <tr> <td align=\"left\">8,192 in -&gt; 1 out</td> <td align=\"left\">5</td> <td align=\"left\"><strong>7,005</strong></td> <td align=\"left\">1.169 s mean / 1.167 s median</td> <td align=\"left\">n/a</td> <td align=\"left\">n/a</td> </tr> <tr> <td align=\"left\">32,768 in -&gt; 1 out</t…",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "347e97fdb8012308",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM and I created a llama.cpp fork optimized for AMD GFX906 (Mi50, Mi60, Radeon VII, GCN HIP) - Machine Learning, LLMs, & AI",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvljbz/glm_and_i_created_a_llamacpp_fork_optimized_for/",
+    "published": "2026-08-22T19:29:19+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvljbz/glm_and_i_created_a_llamacpp_fork_optimized_for/\"> <img alt=\"GLM and I created a llama.cpp fork optimized for AMD GFX906 (Mi50, Mi60, Radeon VII, GCN HIP) - Machine Learning, LLMs, &amp; AI\" src=\"https://external-preview.redd.it/uLf2WrdOR9O4FfOlTe_fp-YtzWlHP9fVrCbvP8Lm3fc.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=370417e21e214c456d5b4308455525311dc23a99\" title=\"GLM and I created a llama.cpp fork optimized for AMD GFX906 (Mi50, Mi60, Radeon VII, GCN HIP) - Machine Learning, LLMs, &amp; AI\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I felt the need to share this here. Looking for feedback.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/milpster\"> /u/milpster </a> <br /> <span><a href=\"https://forum.level1techs.com/t/glm-and-i-created-a-llama-cpp-fork-optimized-for-amd-gfx906-mi50-mi60-radeon-vii-gcn-hip/254257\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvljbz/glm_and_i_created_a_llamacpp_fork_optimized_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "faa7fad96053757f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I forked Ninfer 3090 and converted it to run on the CMP170HX - doubled my Qwen3.6-35B from llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvjxg1/i_forked_ninfer_3090_and_converted_it_to_run_on/",
+    "published": "2026-08-22T18:27:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvjxg1/i_forked_ninfer_3090_and_converted_it_to_run_on/\"> <img alt=\"I forked Ninfer 3090 and converted it to run on the CMP170HX - doubled my Qwen3.6-35B from llama.cpp\" src=\"https://preview.redd.it/7s6zdpyfyykh1.png?width=140&amp;height=77&amp;auto=webp&amp;s=c7feb6ff2c85ac295ea267ed83263ddeacc359c1\" title=\"I forked Ninfer 3090 and converted it to run on the CMP170HX - doubled my Qwen3.6-35B from llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Good afternoon, everyone! I wanted to show the work I've been doing around porting Ninfer over to the CMP170HX (<a href=\"https://github.com/Ithrial/ninfer-cmp170hx/tree/main\">Github</a>)</p> <p>So, first, I do want to call out the amazing work that <a href=\"https://github.com/Neroued\">Neroued</a>, <a href=\"https://github.com/sergiuszm\">Sergiuszm</a> and specifically <a href=\"https://github.com/Don-Chad\">Don-Chad</a> have all done, to not take away from vLLM, Llama.cpp and SGLang, but to enable local AI to squeeze every ounce of performance we can out of our hardware at home. Free tokens are free tokens and the work that these folks did 100% enabled this fork.</p> <p>I also want to preface early on in this post that I am not a developer, a coder or anything like that. I am an IT Architect so I do know tech and I have been pretty active in the AI community here for the last year. Hermes, powered by Codex and local Qwen3.8-27B, powered by the 4090-fork of Ninfer, were my developers on this project and I just guided them.</p> <p>I have been playing with the 3090 and 4090 Ninfer the last week or so, testing, validating, configuring to work with Llama-swap, and also worked through an NInfer/llama-swap telemetry compatibility gap so llama-swap could capture NInfer’s timing and throughput metrics. BUT getting 30-50% or more performance bumps consistently, for &quot;free&quot;, inspired me.</p> <p>Being that the RTX 3090/3090Ti and the CMP170HX were…",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "e979618ba0beb21a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Create tts voice from actual animal sound recording",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvnfy4/create_tts_voice_from_actual_animal_sound/",
+    "published": "2026-08-22T20:45:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>In short, I want to create voices for my real chickens that I'm creating generated videos of. Ultimately I would like to create voices to be used in a tts application that are based on their real &quot;voice patterns&quot;, as though the voice was being made with their own vocal chords. I do have recordings of their non-bokbok calls that, while certainly not 10 seconds long, certainly can be looped as needed.</p> <p>What I've found with voice match applications is that they look for actual human voices saying actual human things. That works for the majority of cases, but not for mine.</p> <p>AI queries have been lacking results so I hope that someone out there has something in mind that will work.</p> <p>TIA</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Objective_Safe_5982\"> /u/Objective_Safe_5982 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvnfy4/create_tts_voice_from_actual_animal_sound/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvnfy4/create_tts_voice_from_actual_animal_sound/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "734ea0a1ca83d10c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Watching that wattage, in your terminal.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvkgs6/watching_that_wattage_in_your_terminal/",
+    "published": "2026-08-22T18:47:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvkgs6/watching_that_wattage_in_your_terminal/\"> <img alt=\"Watching that wattage, in your terminal.\" src=\"https://preview.redd.it/lkgluwso1zkh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=659b16679b1d6dd0f02cc6f56ec16dca1c8ea09e\" title=\"Watching that wattage, in your terminal.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Released today: version 1.3 of <a href=\"https://github.com/stolk/energygraph\">energygraph</a></p> <p>Zero build dependencies, lightweight tool for live views of the power-consumption.</p> <p>Version 1.3 adds support for dGPUs from nvidia, intel, amd.</p> <p>Depending on vendor support, you can also get the consumption by your cpu cores, iGPU, platform system, dram.</p> <p>In the screenshot above, the following happened:</p> <ol> <li>idle system with Radeon RX7600 and Intel Arc B580.</li> <li>hammered the CPU.</li> <li>hammered the Radeon.</li> <li>hammered the Arc.</li> <li>hammered all three.</li> </ol> <p>Challenge to this community: post the biggest peak.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mazarax\"> /u/mazarax </a> <br /> <span><a href=\"https://i.redd.it/lkgluwso1zkh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvkgs6/watching_that_wattage_in_your_terminal/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "bff164c15db42650",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Current best model for narrative, chat, prompt creation (so basically everything except agentic coding)? - 5090",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vviy88/current_best_model_for_narrative_chat_prompt/",
+    "published": "2026-08-22T17:49:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Im looking to set up a new local llm (probably on unsloth studio as that seemed to be doing pretty well last time I tested it). This one won't need to do agentic coding or app building or anything (not this time) but instead more 'text' based tasks such as -</p> <ul> <li><p>being given reference images and instructions, in order to then generate prompts for comfyui</p></li> <li><p>being sent long-form writing (paragraphs and chapters) and being able to sense-check and give feedback and rewrites. </p></li> <li><p>conversational help and problem solving (much like what I use chatgpt for atm). </p></li> </ul> <p>I would think qwen 3.8 might be the current best, but theres only a 27b model for it so its not really fast even on my hardware. The qwen3.6 35b would be a lot faster but I dont know how much response-quality im giving up for that. Figured id ask in case, for my purposes, theres actually a much better third option. </p> <p>Ive heard theres one called Ornith1.5 which seems to be a qwen3.6 fine tune, but i havent looked to see what its been tuned towards. If its more coding based then it won't help. </p> <p>Thanks!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/nirurin\"> /u/nirurin </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vviy88/current_best_model_for_narrative_chat_prompt/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vviy88/current_best_model_for_narrative_chat_prompt/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "9c68135eca35a71f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Who is leading the pack for best llm gateway 2k26?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvh7b1/who_is_leading_the_pack_for_best_llm_gateway_2k26/",
+    "published": "2026-08-22T16:41:41+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Looking to upgrade our ai infra for the new year. We need something that handles more than just simple routing, specifically looking for features like prompt caching, granular cost attribution per team, and support for the newer reasoning models. is there a clear winner for enterprise grade gateways this year?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/llogicnotfound\"> /u/llogicnotfound </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvh7b1/who_is_leading_the_pack_for_best_llm_gateway_2k26/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvh7b1/who_is_leading_the_pack_for_best_llm_gateway_2k26/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T22:00:00.668378+00:00"
   }
 ]
