@@ -118,5 +118,95 @@
     "published": "2026-08-22T01:17:29+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I can't seem to find a good answer to this, my Hermes agent has access to Firecrawl and some other web scrapers for content extraction, but anyone know of a way to let a local LLM drive a &quot;real&quot; web browser? My wife asked me to have Hermes go and look at her LinkedIn profile, that's easy with a full web browser (just have her setup auth and then it'll be able to login without a password), but I'm not sure how best to do this to let a local LLM drive a &quot;real&quot; browser instead of something headless that's going to fail all sorts of &quot;anti-AI/scraping&quot; checks. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/OvertaxedOne\"> /u/OvertaxedOne </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuykgj/how_to_give_a_local_llmagent_access_to_a_real_web/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuykgj/how_to_give_a_local_llmagent_access_to_a_real_web/\">[comments]</a></span>",
     "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "de994d19ed959f99",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "This is a great sub, regardless of what complaints people have about it.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vveabg/this_is_a_great_sub_regardless_of_what_complaints/",
+    "published": "2026-08-22T14:44:56+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>This is a genuine community of real generally respectful adult human beings. Despite the enthusiasm all of you have for local AI, you can recognize that there are times when local LLMs are flawed, and even how practical they are to use for the majority of people to use. Go over to <a href=\"/r/linux\">r/linux</a> and you'll see the contrast in maturity and employment.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sudden_Topic5154\"> /u/Sudden_Topic5154 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vveabg/this_is_a_great_sub_regardless_of_what_complaints/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vveabg/this_is_a_great_sub_regardless_of_what_complaints/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "529c5b828ae38fc6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How to remove trendy speech from llms?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvfbde/how_to_remove_trendy_speech_from_llms/",
+    "published": "2026-08-22T15:26:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>For example:</p> <p>Instead of saying: &quot;I created this new ID&quot;<br /> It says: &quot;I minted this new ID&quot;</p> <p>Instead of: &quot;This alternative path is available&quot;<br /> It says: &quot;this escape hatch is available&quot;</p> <p>This speech is so nonsensical and annoying. Just. Speek. Literally ... OR NORMALLY. Where did LLMs learn these speech patterns? I've never seen them so frequently until AFTER the LLM surge.</p> <p>If I just add &quot;Don't use X language, speak normally and more literal&quot; will that fix most of the issues? Anyone else have some good sys prompts / instructions that help with this?</p> <p>Thanks!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CSEliot\"> /u/CSEliot </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvfbde/how_to_remove_trendy_speech_from_llms/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvfbde/how_to_remove_trendy_speech_from_llms/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "0d882b5167403600",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anyone else tried out KV cache blending?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv9oe2/anyone_else_tried_out_kv_cache_blending/",
+    "published": "2026-08-22T11:14:40+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Idea is simple-ish in abstract: instead of running normal prefill over all of a given prompt, split it into parts - generates caches for part A and part B in isolation, concatenate the result, feed it into decode like normal.</p> <p>I honestly thought it'd totally fail. But I've been trying it out on Ling3-tiny for the non KDA layers - and if I give them some overlap between chunks, the model actually maintains full needle-in-haystack retrieval. Can even synthesise across the split parts. Currently running 256k prompts chunked into individual 4k bits and it seems to be unaffected on (simple) retrieval tasks so far.</p> <p>There's probably a trade-off somewhere. But it's boosted my prefill speed by 3x, giving me ~1.3k tps prefill at 256k tokens - which is pretty much the same prefill speed as running Qwen3.8-27b on my 5090. So looks like it might be worth it</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/maddie-lovelace\"> /u/maddie-lovelace </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv9oe2/anyone_else_tried_out_kv_cache_blending/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv9oe2/anyone_else_tried_out_kv_cache_blending/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "bba1981dee80da2a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Your own GGUF",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvf7tk/your_own_gguf/",
+    "published": "2026-08-22T15:22:23+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello, I have a few questions that I can't seem to find a clear answer to.</p> <p>Does it make sense to make your own GGUF?</p> <p>I noticed that when I compile llamacpp (vulkan or rocm), the processing and generation is a bit better, does it work similarly with doing GGUF yourself?</p> <p>If I use Vulkan, is it worth doing GGUF using llama-quantize vulkan version (not rocm version)?</p> <p>To what extent does it make sense to place certain model elements at higher precision (conversation, document analysis)?</p> <p>I use gemma 4 31B the most.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Daniokenon\"> /u/Daniokenon </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvf7tk/your_own_gguf/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvf7tk/your_own_gguf/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "de6e4dfbc2a4f870",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Fixed the MTP head on Ornith1.5 35B A3B. +3% TPS -33% wall clock",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvft7b/fixed_the_mtp_head_on_ornith15_35b_a3b_3_tps_33/",
+    "published": "2026-08-22T15:46:27+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I love the Ornith 35B local models, 1.0 has been running my HAM radio rig for me. I have a hackRF receiver and a 5 watt quansheng portable the both run headless through the PC. I tried out the new Ornith1.5 build and it was faster and more accurate than 1.0. </p> <p>I read the threads that talked about the untrained MTP head so I found a trained version of the MTP head on a quant I couldn't use so I spliced it onto an APEX requant of Ornith1.5 to make a beast that is 2.5X faster than Ornith1.0 and 33% faster than the released version of Ornith1.5. I cant believe how good this model is, and how fast it works at the same tasks. </p> <p>And it doesn't try to lecture me when I ask it to key up the mic on a licensed freq.</p> <p>The crazy thing is tokens/sec only went up by 4. From 60 to 64 t/s avg. But the time to complete the same tasks went down by 1/3, from 21 to 14 seconds average on my radio torture tests. </p> <p><a href=\"https://ollama.com/slickwillies/ornith15-35b-a3b-apex-mtp-fixed\">https://ollama.com/slickwillies/ornith15-35b-a3b-apex-mtp-fixed</a></p> <p>testing methodology and results:<br /> <a href=\"https://github.com/h00nigan/Ornith-testing-results\">https://github.com/h00nigan/Ornith-testing-results</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/frankentriple\"> /u/frankentriple </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvft7b/fixed_the_mtp_head_on_ornith15_35b_a3b_3_tps_33/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvft7b/fixed_the_mtp_head_on_ornith15_35b_a3b_3_tps_33/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "7ecaca31c4f6a11e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "web_search tool in deepseek harness needs api key from deepseek and deepseek charges you as deepseek-v4-flash usage.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vva30g/web_search_tool_in_deepseek_harness_needs_api_key/",
+    "published": "2026-08-22T11:35:34+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I was experimenting with deepseek harness when found that even if you don't use deepseek models, you can configure the web_search tool with their api key and every hit will cost you as if you called deepseek-v4-flash model. It's a bummer. </p> <p>on top of that there is currently no other free web search plugin available</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Motor_Ad16\"> /u/Motor_Ad16 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vva30g/web_search_tool_in_deepseek_harness_needs_api_key/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vva30g/web_search_tool_in_deepseek_harness_needs_api_key/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "85ae833dcd8cc4a2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New/Old benchmark that provides a lot of answers for local LLM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvbabx/newold_benchmark_that_provides_a_lot_of_answers/",
+    "published": "2026-08-22T12:34:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><h1>New/Old benchmark that provides a lot of answers for local LLM.</h1> <p>I present to you a new test that I developed somewhat by accident: <a href=\"https://huggingface.co/cHunter789/Qwen3.8-27B-i1-IQ4_KS_KT-GGUF/tree/main/ctx-cliff\">https://huggingface.co/cHunter789/Qwen3.8-27B-i1-IQ4_KS_KT-GGUF/tree/main/ctx-cliff</a></p> <p>Its original goal was to test whether a model fits into VRAM under a specific <code>llama-server</code> configuration. Theoretically a simple matter, but when you want to squeeze the absolute maximum out of your hardware and configure the server manually, things get quite complicated—especially when using MTP, ngram, dflash, etc.</p> <p>Besides <code>prefill</code> and <code>decode</code> speed, the test also measures <code>wall</code> time (total request handling time). If the model and the <code>llama-server</code> configuration are flawed, this time can drastically increase with a growing context because the model starts re-reading the entire context from the beginning—completely breaking agentic workflows. Additionally, the script detects empty responses and anomalies (&gt;1000 t/s). If such anomalies occur consistently, the quantization is broken.</p> <p>So, by observing the occurrence of anomalies and the <code>wall</code> time, you can determine with a very good approximation whether a given model and <code>llama-server</code> configuration are suitable for actual work.</p> <p>Here is an example output of the script for the reference model <code>cHunter789/Qwen3.8-27B-i1-IQ4_KS_KT-GGUF</code> with the <code>llama-server</code> settings below:</p> <pre><code>llama-server \\ -m &quot;$MODEL_PATH&quot; \\ -a Qwen3.6-27B \\ --ctx-size 110000 \\ --n-gpu-layers 99 \\ --cache-type-k q4_0 \\ --cache-type-v q4_0 \\ --batch-size 512 \\ --ubatch-size 128 \\ --flash-attn on \\ --host 0.0.0.0 \\ --port 8081 \\ --reasoning on \\ --reasoning-format none \\ --reasoning-budget 32000 \\ -t 8 \\ -tb 8 \\ --parallel 1 \\ --metrics \\ --merge…",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "a1f3aeb5761a2eef",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.5 4B IQ2_XS: +16.67% Reasoning Performance From Tensor-Level Allocation",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvc6pw/qwen_35_4b_iq2_xs_1667_reasoning_performance_from/",
+    "published": "2026-08-22T13:15:55+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvc6pw/qwen_35_4b_iq2_xs_1667_reasoning_performance_from/\"> <img alt=\"Qwen 3.5 4B IQ2_XS: +16.67% Reasoning Performance From Tensor-Level Allocation\" src=\"https://preview.redd.it/69geg9n38xkh1.png?width=140&amp;height=101&amp;auto=webp&amp;s=424dc1e96b1ae1414ec18d69478afb84415475e4\" title=\"Qwen 3.5 4B IQ2_XS: +16.67% Reasoning Performance From Tensor-Level Allocation\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I was finally able to replicate tensor level allocation outside the Gemma family.</p> <p><a href=\"https://huggingface.co/ByteOtter/Qwen3.5-4B-CADA-IQ2_XS\">https://huggingface.co/ByteOtter/Qwen3.5-4B-CADA-IQ2_XS</a></p> <p>After the Gemma 4 12b, e4b and gemma 3 4b results, I attempted to expand into qwen and ran into a few walls. After 2 version updates and a slightly different approach, I was able to replicate the effect on Qwen. </p> <p>The result:</p> <p>BF16 reasoning: 78.125</p> <p>Stock IQ2_XS + imatrix: 46.875</p> <p>QLAB allocation + same imatrix: 54.688</p> <p>That's +7.812 percentage points, or a +16.67% relative improvement in reasoning over the stock imatrix quant.</p> <p>Model sizes:</p> <p>Stock: 1,630,594,336 bytes</p> <p>QLAB: 1,637,318,816 bytes</p> <p>Difference: +0.412%</p> <p>Same idea as the previous runs. Build imatrix from category based corpus, measure damage, then redistribute precision at the tensor level while staying inside the same byte budget.</p> <p>This time, the optimal target landed at iq2_xs and the improvement was not isolated to reasoning.</p> <p>This is a category targeted quantization experiment, not a general model improvement. The focus is a successful transfer of the allocation mechanism.</p> <p>I've now observed successful allocation across dense, moe, qat, non qat, gemma and now qwen.</p> <p>There is no post training, lora, pruning or weight updates here. This is solely achieved by changing where precision gets spent inside the quant budg…",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
+  },
+  {
+    "id": "0594119257b56cf4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Multi Gpu Hardware advice",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvfxzw/multi_gpu_hardware_advice/",
+    "published": "2026-08-22T15:51:47+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I have a gigabyte ds3h v2 b450 motherboard. Currently hosting an RTX 3090<br /> I have a spare 3070 and I wondered, can I run both?</p> <p>Got myself a riser cable and…</p> <p>Top slot card, bottom slot riser = card pushes the riser, doesn’t fit </p> <p>Top slot riser, bottom slot card = card pushes the sata cables doesn’t fit…</p> <p>So I either need another riser and put both gpus out of the case, or an atx motherboard with more space in between the slots or maybe I should look for another solution.</p> <p>I’ve read some of you are using nvme? How does that work?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AlemanCastor\"> /u/AlemanCastor </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvfxzw/multi_gpu_hardware_advice/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvfxzw/multi_gpu_hardware_advice/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
   }
 ]

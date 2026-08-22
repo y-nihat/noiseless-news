@@ -38,5 +38,15 @@
     "published": "2026-08-22T07:00:05+00:00",
     "summary": "<p><img alt=\"A hardened AI hardware module in a glass enclosure is tested for security vulnerabilities using electrical and physical probes.\" class=\"attachment-full size-full wp-post-image\" height=\"1047\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/ai-security-evaluation-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        Researchers at the UK AI Security Institute used psychometric methods to show that popular safety benchmarks for language models don't measure one consistent trait. Blanket blocking of requests can artificially inflate a safety score even as the model gets less useful day to day. The study also offers a method for catching models that act more cautious during tests than they do in normal use.</p>\n<p>The article <a href=\"https://the-decoder.com/psychological-methods-reveal-major-weaknesses-in-ai-security-testing/\">Psychological methods reveal major weaknesses in AI security testing</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "dbeb890e0fde1740",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Study explains why AI agents benefit from \"skills\" and when they fail",
+    "url": "https://the-decoder.com/study-explains-why-ai-agents-benefit-from-skills-and-when-they-fail/",
+    "published": "2026-08-22T12:15:10+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/Agent-Skill-Pick.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        A study from researchers at Princeton University and UC San Diego finds that so-called skills make AI agents better mainly through structured workflows, not through added knowledge. But as the skill library grows, agents have a harder and harder time finding the right set of instructions.</p>\n<p>The article <a href=\"https://the-decoder.com/study-explains-why-ai-agents-benefit-from-skills-and-when-they-fail/\">Study explains why AI agents benefit from &quot;skills&quot; and when they fail</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-22T16:28:32.725092+00:00"
   }
 ]
