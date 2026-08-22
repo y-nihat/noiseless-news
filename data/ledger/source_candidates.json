@@ -1318,5 +1318,25 @@
       ],
       "context": "Unregistered supply-chain-security research blog (Socket is a software-supply-chain security vendor). Third outlet corroborating the same Mythos-5 PyPI incident lead. Not independently fetched this cycle -- via search synthesis only."
     }
+  ],
+  "candidates_2026-08-22_c5": [
+    {
+      "domain": "developer.nvidia.com",
+      "first_seen": "2026-08-21",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/"
+      ],
+      "context": "Nvidia's own official technical/developer blog -- distinct subdomain from the already-registered 'NVIDIA AI Blog' (blogs.nvidia.com/blog/category/generative-ai/). Used as the Tier-0 primary source for the AVO/ARC-AGI-3 announcement in nvidia-avo-arc-agi-3, confirmed live by both verifier and falsifier via independent direct fetches. Propose Tier 0, type html, registered alongside the existing NVIDIA AI Blog entry rather than replacing it -- both appear to carry distinct technical-announcement content."
+    },
+    {
+      "domain": "arcprize.org",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://arcprize.org/leaderboard"
+      ],
+      "context": "Independent AI-benchmark organization (ARC Prize Foundation) running the ARC-AGI benchmark family -- same category as the already-registered Vals AI/Artificial Analysis/Epoch AI. Live-fetched directly by the verifier this cycle specifically to check whether Nvidia's self-reported 100% ARC-AGI-3 claim appears on the official leaderboard (it does not) -- the load-bearing evidence for labeling that claim vendor-claim rather than confirmed in nvidia-avo-arc-agi-3. Propose Tier 1 registration; likely to recur for future agent/capability benchmark claims."
+    }
   ]
 }
