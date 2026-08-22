@@ -1,4 +1,60 @@
 {
+  "candidates_2026-08-22_c2": [
+    {
+      "domain": "engadget.com",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.engadget.com/2242200/openai-calls-for-california-to-strengthen-ai-safety-laws/"
+      ],
+      "context": "Used as load-bearing Tier-2 evidence for openai-sb-53-reversal, alongside TechCrunch -- both independently read and quoted OpenAI's LinkedIn post rather than relaying each other, which is what let the verifier treat the claim as more than a single relayed source. Long-running tech outlet, named authors, editorial standards. Propose Tier 2, type rss (www.engadget.com/rss.xml)."
+    },
+    {
+      "domain": "sfstandard.com",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://sfstandard.com/2025/09/29/gavin-newsom-california-ai-legislation-law-technology/"
+      ],
+      "context": "Used as Tier-2 evidence for openai-sb-53-reversal's prior-opposition claim (2025-09-29 SB 53 signing coverage). SF-focused outlet with strong original tech-policy reporting given its backyard beat. Propose Tier 2, type html/rss (no feed URL checked this cycle)."
+    },
+    {
+      "domain": "fortune.com",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://fortune.com/2025/10/10/a-3-person-policy-non-profit-that-worked-on-californias-ai-safety-law-is-publicly-accusing-openai-of-intimidation-tactics/"
+      ],
+      "context": "Used as Tier-2 corroboration in the openai-sb-53-reversal evidence log for OpenAI's 2025 opposition campaign. Established business press, named bylines. Has recurred as evidence across nights (also cited in this entry's own Hugging Face background claim, 2026-07-21 dated piece). Propose Tier 2 registration rather than continuing to log ad hoc."
+    },
+    {
+      "domain": "bloomberg.com",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.bloomberg.com/news/articles/2026-08-20/nvidia-to-pay-ai-startup-poolside-a-6-billion-license-newcomer-says"
+      ],
+      "context": "Recurrence -- see candidates_2026-08-19_c3, which already proposed Tier 2 registration; adding this occurrence as further support. Used this cycle only to help determine that Nvidia-Poolside coverage traces to a single Newcomer newsletter scoop (Bloomberg's own headline reads '...Newcomer Says'), not as confirming evidence for a published claim."
+    },
+    {
+      "domain": "newcomer.co",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.newcomer.co/p/sources-poolside-strikes-6-billion"
+      ],
+      "context": "Origin scoop for the nvidia-poolside-license-deal watching entry (Eric Newcomer/Tom Dotan newsletter, based on a leaked investor letter). Independent tech-business newsletter with a named-author track record of real scoops, but structurally Tier 3 (newsletter) per policy -- correctly never used to confirm the deal, only as the traced origin explaining why downstream coverage is not independent. Logging for registry awareness, not proposing above Tier 3."
+    },
+    {
+      "domain": "theinformation.com",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.theinformation.com/briefings/nvidia-reportedly-pay-6-billion-licensing-hiring-deal-ai-model-startup-poolside"
+      ],
+      "context": "Seen relaying the Newcomer Poolside scoop rather than reporting independently on this occurrence, so not used as confirming evidence -- but The Information is normally strong original reporting (Tier 0/1 candidate) and has likely recurred before. Worth a registration review on its general merits, not on this occurrence."
+    }
+  ],
   "candidates_2026-08-21_c1": [
     {
       "domain": "facebook.com/business/news",
