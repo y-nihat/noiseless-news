@@ -1,0 +1,42 @@
+[
+  {
+    "id": "8e5b164c2707fd8c",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "World models that ignore human beliefs predict the wrong actions, new research shows",
+    "url": "https://the-decoder.com/world-models-that-ignore-human-beliefs-predict-the-wrong-actions-new-research-shows/",
+    "published": "2026-08-22T09:00:20+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1047\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/mental-world-model-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        Current world models like Sora or Genie only simulate physics and ignore what people think, want, or feel. The new \"Mental World Modeling\" framework adds mental variables like beliefs and intentions. Even weaker language models using this approach outperform stronger models without mental modeling. The biggest bottleneck: predicting how physical and mental states change together.</p>\n<p>The article <a href=\"https://the-decoder.com/world-models-that-ignore-human-beliefs-predict-the-wrong-actions-new-research-shows/\">World models that ignore human beliefs predict the wrong actions, new research shows</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "8f55b26e403ea5c6",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "RayNeo's new AI glasses skip the camera, focus on text overlays",
+    "url": "https://the-decoder.com/rayneos-new-ai-glasses-skip-the-camera-focus-on-text-overlays/",
+    "published": "2026-08-22T08:00:14+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/RayNeo-iO-glasses.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        RayNeo is launching a new headset without a camera or speakers.</p>\n<p>The article <a href=\"https://the-decoder.com/rayneos-new-ai-glasses-skip-the-camera-focus-on-text-overlays/\">RayNeo&#039;s new AI glasses skip the camera, focus on text overlays</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "cabfa0df9b7d22d7",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Netflix tests language model as alternative to hand-built recommendation logic",
+    "url": "https://the-decoder.com/netflix-tests-language-model-as-alternative-to-hand-built-recommendation-logic/",
+    "published": "2026-08-22T07:30:16+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/netflix_logo.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Netflix pitted its years-old recommendation engine against an in-house language model called GenRec and says it got better results. Instead of relying on thousands of hand-crafted features, GenRec converts viewing behavior into plain text. Netflix itself calls it \"an early but promising step.\"</p>\n<p>The article <a href=\"https://the-decoder.com/netflix-tests-language-model-as-alternative-to-hand-built-recommendation-logic/\">Netflix tests language model as alternative to hand-built recommendation logic</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "356b0033e22b8a0c",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Psychological methods reveal major weaknesses in AI security testing",
+    "url": "https://the-decoder.com/psychological-methods-reveal-major-weaknesses-in-ai-security-testing/",
+    "published": "2026-08-22T07:00:05+00:00",
+    "summary": "<p><img alt=\"A hardened AI hardware module in a glass enclosure is tested for security vulnerabilities using electrical and physical probes.\" class=\"attachment-full size-full wp-post-image\" height=\"1047\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/ai-security-evaluation-nano-banana-pro.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1920\" /></p>\n<p>        Researchers at the UK AI Security Institute used psychometric methods to show that popular safety benchmarks for language models don't measure one consistent trait. Blanket blocking of requests can artificially inflate a safety score even as the model gets less useful day to day. The study also offers a method for catching models that act more cautious during tests than they do in normal use.</p>\n<p>The article <a href=\"https://the-decoder.com/psychological-methods-reveal-major-weaknesses-in-ai-security-testing/\">Psychological methods reveal major weaknesses in AI security testing</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  }
+]

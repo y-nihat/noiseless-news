@@ -8,5 +8,115 @@
     "published": "2026-08-22T00:02:12+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuwwww/qwen_38_27b_pi_agent_vs_opencode_another_smaple/\"> <img alt=\"Qwen 3.8 27b - PI AGENT vs OPENCODE - another smaple\" src=\"https://preview.redd.it/07qievtugtkh1.png?width=140&amp;height=74&amp;auto=webp&amp;s=27486d061973e38a2dbfd6f01f9068e2dbfbc870\" title=\"Qwen 3.8 27b - PI AGENT vs OPENCODE - another smaple\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>That is the second comparison and the last one.</strong> </p> <p><strong>I will not be spamming again ;)</strong> </p> <p>Continuation from:<br /> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vu0u2v/qwen_38_27b_pi_agent_vs_opencode/\">https://www.reddit.com/r/LocalLLaMA/comments/1vu0u2v/qwen_38_27b_pi_agent_vs_opencode/</a></p> <p>That is one of my many tests I make comparing output quality.</p> <p>What is more interesting using a <strong>PI Agent</strong> results are much better than an <strong>Opencode</strong> using a Qwen 3.8 27b ?!</p> <p>Seems PI Agent is much better in the agent environment somehow... Not counting uses less tokens , do not have a hard limit of 32k output tokens, is faster, do not freezing, compressing context far less than Opencode. For instance if you have context in the Opencode output 32k and all context 100k then the compression is starting at 67k context ... PI is starting at 90k context even if you have set output context 64k or more.</p> <p>My config for RTX 3090</p> <p>llama-server with ini config -&gt; which is exposing API to Opencode and PI agent.</p> <p><code>llama-server.exe --models-preset 1_preset.ini --models-max 1 --direct-io</code></p> <p>config ini</p> <pre><code>[Qwen3.8-27B_dense_c-100k] model = models/Qwen3.8-27B-Q4_K_M.gguf mmproj = models/mmproj-BF16-Qwen3.8-27B-UD-Q4_K_XL.gguf reasoning-format = deepseek flash-attn = on n-gpu-layers = 99 reasoning = on ctx-size = 100000 temperature=1.0 top-p=0.95 top-k=20 min-p=0.0 presence-penalty=0.0 repeat-penalty=1.0 mmproj-offload…",
     "fetched_at": "2026-08-22T00:58:34.518278+00:00"
+  },
+  {
+    "id": "b017af24b3ba6c60",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "This is why I run locally.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv1qfs/this_is_why_i_run_locally/",
+    "published": "2026-08-22T03:52:00+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv1qfs/this_is_why_i_run_locally/\"> <img alt=\"This is why I run locally.\" src=\"https://preview.redd.it/ln2fam8tmukh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=e2f5bdb351dbda9e46337a83d15e5d1f3bad616a\" title=\"This is why I run locally.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>It was only a matter of time...</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Retumbo77\"> /u/Retumbo77 </a> <br /> <span><a href=\"https://i.redd.it/ln2fam8tmukh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv1qfs/this_is_why_i_run_locally/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "fb32a8f9bbf9c0b6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Llama.cpp version 0.2.0 is out!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv4mei/llamacpp_version_020_is_out/",
+    "published": "2026-08-22T06:23:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>You can find the changelog and source code here: <a href=\"https://github.com/ggml-org/llama.cpp/releases/tag/v0.2.0\">https://github.com/ggml-org/llama.cpp/releases/tag/v0.2.0</a></p> <p>Associated pre-build is here: <a href=\"https://github.com/ggml-org/llama.cpp/releases/tag/b10566\">https://github.com/ggml-org/llama.cpp/releases/tag/b10566</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/PhilippeEiffel\"> /u/PhilippeEiffel </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv4mei/llamacpp_version_020_is_out/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv4mei/llamacpp_version_020_is_out/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "e5e7fc22027c2728",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Bro wtf, Qwen Lab cooked with Qwen 3.8 27B, it's so fucking good",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv47sr/bro_wtf_qwen_lab_cooked_with_qwen_38_27b_its_so/",
+    "published": "2026-08-22T06:01:31+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv47sr/bro_wtf_qwen_lab_cooked_with_qwen_38_27b_its_so/\"> <img alt=\"Bro wtf, Qwen Lab cooked with Qwen 3.8 27B, it's so fucking good\" src=\"https://external-preview.redd.it/NWZoYTB6dWw5dmtoMfg7mxusKY4ud1Ng9a2C1AWPBF7plinwlG8lZwz7JfEW.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=da22b511853e54ce750733ed7317b4da4c16a542\" title=\"Bro wtf, Qwen Lab cooked with Qwen 3.8 27B, it's so fucking good\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Context: Earlier, open-source large models like Mimo V2.5 Pro, DeepSeek V4 Pro (first version), and Kimi K2.5 used to struggle with this prompt, and Qwen 3.6 27B couldn't even render the globe properly. But now, Qwen 3.8 27B is so much better than the previous model.</p> <p>I hope qwen publishes some papers that may help other labs to create such good small models.</p> <p>Setup: fp8 + lmstudio + opencode. Idk what settings as my friend helped me to run this prompt on his setup.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/9r4n4y\"> /u/9r4n4y </a> <br /> <span><a href=\"https://v.redd.it/hnmhzvul9vkh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv47sr/bro_wtf_qwen_lab_cooked_with_qwen_38_27b_its_so/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "f96792a6c8dad116",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "16 GB VRAM purgatory discussion thread",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuzz3j/16_gb_vram_purgatory_discussion_thread/",
+    "published": "2026-08-22T02:24:22+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>What models and configs are we using? Please share here</p> <p>On windows, I am using this copium pared down model <a href=\"https://huggingface.co/Bucoid/Qwen3.8-27B-Uncensored-IQ4-XS-MTP-16GB-VRAM-GGUF\">https://huggingface.co/Bucoid/Qwen3.8-27B-Uncensored-IQ4-XS-MTP-16GB-VRAM-GGUF</a> with MTP disabled, q4 k/q4 v mmproj banished to CPU/RAM and a small ub to save whatever context I can (90k-100k) so everything stays in the vram</p> <p>If you are on linux or have an iGPU, you don't have to deal with windows eating 1.5 gb vram and so have more than 14.5 GB of VRAM to use and probably aren't in purgatory.</p> <pre><code>@echo off .\\ikllama\\llama-server.exe ^ -m &quot;D:\\AI models\\qwen3.8\\Qwen3.8-27B-Uncensored-IQ4-XS-MTP-16GB-VRAM-GGUF.gguf&quot; ^ :: gpu offload all layers (99 is more than the max which means it will offload everything) -ngl 99 ^ :: this depends on your cpu -t 8 ^ :: literally can't fit in anything at higher q to save vram --cache-type-k q4_0 ^ --cache-type-v q4_0 ^ :: check your max context size with fit, at around &gt;100k context rot sets in -c 100100 ^ :: this flag should always be on to optimise speed and memory use -fa on ^ :: You need a fixed jinja file to prevent it rambling forever, I believe this deefaults to xhigh --chat-template-file chat-template.jinja ^ --chat-template-kwargs &quot;{\\&quot;preserve_thinking\\&quot;: true, \\&quot;enable_thinking\\&quot;: true}&quot; ^ :: you ain't getting more than this -np 1 ^ :: use the mmproj and banish it to CPU/RAM land to save vram (probably ~800-900 mb vram saving) --mmproj mmproj-F16.gguf ^ --no-mmproj-offload ^ :: we need reasoning --reasoning on ^ :: the image mmproj needs this line --image-min-tokens 1024 ^ --metrics ^ --port 8080 ^ :: reduce vram spikes saving some vram --batch-size 1024 ^ --ubatch-size 256 ^ :: allows more caching in RAM. According to Claude it's mostly for your context slot checkpoints that there is literally no room for --cache-ram 24576 ^ --…",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "45e482a827900045",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Freetokens project is impressive",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv6v00/freetokens_project_is_impressive/",
+    "published": "2026-08-22T08:34:53+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv6v00/freetokens_project_is_impressive/\"> <img alt=\"Freetokens project is impressive\" src=\"https://preview.redd.it/x21sl7oo2wkh1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=5bb54b43b9d780ce70a0f7dd5e4382ec69d42e03\" title=\"Freetokens project is impressive\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>A new project was released yesterday and I have the opportunity to test it today.</p> <p>Papper: <a href=\"https://arxiv.org/abs/2608.16157\">https://arxiv.org/abs/2608.16157</a><br /> Github: <a href=\"https://github.com/FlashML-org/FreeToken\">https://github.com/FlashML-org/FreeToken</a></p> <p>My initial tests with the following setup:<br /> RTX 5080 (16 GB)<br /> DDR6 64GB<br /> AMD Ryzen 9 9950X3D</p> <p>I got 100tok/s on QWEN3.6-35B-A3B NVFP4 (20GB - does not fit in my VRAM).<br /> Have you already tried it?</p> <p>(Example bellow with a 1028 token prompt - ~110 tok/s)</p> <p><a href=\"https://preview.redd.it/x21sl7oo2wkh1.png?width=833&amp;format=png&amp;auto=webp&amp;s=7372da17978de714ac95d464f340bb24017cab80\">https://preview.redd.it/x21sl7oo2wkh1.png?width=833&amp;format=png&amp;auto=webp&amp;s=7372da17978de714ac95d464f340bb24017cab80</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ViRROOO\"> /u/ViRROOO </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv6v00/freetokens_project_is_impressive/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv6v00/freetokens_project_is_impressive/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "502b1e0763129133",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Think you're going to get cheap DDR5 RAM? Think again, even if prices fall, scalper bots now outnumber shoppers 10 to 1 and will keep prices high",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv86lm/think_youre_going_to_get_cheap_ddr5_ram_think/",
+    "published": "2026-08-22T09:52:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv86lm/think_youre_going_to_get_cheap_ddr5_ram_think/\"> <img alt=\"Think you're going to get cheap DDR5 RAM? Think again, even if prices fall, scalper bots now outnumber shoppers 10 to 1 and will keep prices high\" src=\"https://external-preview.redd.it/IYaWgqABiJDxh0mNc8Pd-y_zuWfp0Ad7VABIMNzg7aY.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=3e1d08e6e879de53ba451a6af7e859cc59c2e479\" title=\"Think you're going to get cheap DDR5 RAM? Think again, even if prices fall, scalper bots now outnumber shoppers 10 to 1 and will keep prices high\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DeltaSqueezer\"> /u/DeltaSqueezer </a> <br /> <span><a href=\"https://www.tomshardware.com/pc-components/ddr5/scalper-bots-now-outnumber-human-shoppers-10-to-1-on-one-retailers-ddr5-pages\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv86lm/think_youre_going_to_get_cheap_ddr5_ram_think/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "8e8b8619c4e2097c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Artificial Analysis \"Intelligence\": A meaningless benchmark",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv80xa/artificial_analysis_intelligence_a_meaningless/",
+    "published": "2026-08-22T09:43:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv80xa/artificial_analysis_intelligence_a_meaningless/\"> <img alt=\"Artificial Analysis &quot;Intelligence&quot;: A meaningless benchmark\" src=\"https://preview.redd.it/84zi5nsdawkh1.png?width=140&amp;height=37&amp;auto=webp&amp;s=ee7aa5082f437f7106f56144dbb2af0d30651b25\" title=\"Artificial Analysis &quot;Intelligence&quot;: A meaningless benchmark\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/84zi5nsdawkh1.png?width=2368&amp;format=png&amp;auto=webp&amp;s=1109e69db807b153064b1f5b61d22cf1e9fbca05\">https://preview.redd.it/84zi5nsdawkh1.png?width=2368&amp;format=png&amp;auto=webp&amp;s=1109e69db807b153064b1f5b61d22cf1e9fbca05</a></p> <p>Another user posted the benchmarks for Qwen 3.8 27B today, and while I think Qwen 27B is a really powerful model, I can't help but notice just how meaningless these Artificial Analysis benchmarks are and I question why people still post this garbage and use AA scores as some kind of holy bible for comparing LLMs.</p> <p>According to their &quot;Intelligence Index&quot;, a 27B model now beats DeepSeek v4 Flash and Pro, Kimi 2.7 Code, GPT-5.2, Opus 4.6, and also Sonnet 5. At some point we have to ask: What is this metric even measuring? Because whatever &quot;Intelligence&quot; means to AA and their corporate VC / journalist / normie audience is definitely not the same definition that we should be using here.</p> <p>Qwen 27B is amazing and is clearly in a league of its own in terms of models you can fit on a single GPU, but I can't help but roll my eyes whenever I see posts like this that equate Qwen 27B with &quot;basically running Opus from 3 months ago on your laptop.&quot;</p> <p>I get that it's difficult to summarize a model's capability with a single integer and I know we love our local models, but it's time stop posting AA's clearly dogshit benchmark and acting as if it proves a point.</p> </div><!-- SC_ON --> &#32; submitt…",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "511c0d777c17b286",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AntLing released a dspark draft model for Ling-3.0-flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv71pg/antling_released_a_dspark_draft_model_for/",
+    "published": "2026-08-22T08:46:11+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>No GGUFs yet on Huggingface though. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ihtien\"> /u/Ihtien </a> <br /> <span><a href=\"https://x.com/AntLingAGI/status/2090847436755648939\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vv71pg/antling_released_a_dspark_draft_model_for/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "bb69f61ed78f0ed0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Sharp template to NInfer: -42% output tokens, same speed",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv3b6o/sharp_template_to_ninfer_42_output_tokens_same/",
+    "published": "2026-08-22T05:12:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/peculiar-ragdoll/Qwen-Sharp-Chat-Templates\">Sharp</a> is <a href=\"/u/peculiar-ragdoll\">u/peculiar-ragdoll</a>'s system prompt that makes Qwen answer way more tersely without losing correctness. It's built on top of froggeric's <a href=\"https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates\">fixed chat templates</a> for Qwen; several fixes now in the v22.x templates (error-escalation tiers, false retry-loop kills, multi-system merging, correct tool-arg serialization) originated in <a href=\"/u/Chromix_\">u/Chromix_</a>'s <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1voha70/\">improved Jinja template</a> before being merged upstream.</p> <p><a href=\"https://github.com/Neroued/ninfer\">NInfer</a> is a hyper-tailored inference engine that only runs certain Qwen models on 5090. NInfer doesn't support changing Jinja templates, so I overlaid the behavior in C++ instead in a fork: <a href=\"https://github.com/mr-september/ninfer-sharp\">ninfer-sharp</a></p> <ul> <li><code>--chat-style sharp-v22.1</code> appends Sharp's terseness instruction to the system prompt</li> <li><code>--reasoning-effort</code> with 7 levels, <code>none</code> = thinking off</li> <li>Official model artifact untouched (NInfer verifies templates by hash)</li> <li>Pinned to Sharp v22.1 semantics — the overlay replicates the terse block and effort mapping, not the later v22.2/v22.3 tool-path changes (tool-call format stays NInfer's own)</li> </ul> <p>In my tests, the output remained byte-identical to the actual Sharp Jinja template except the engine's internal thinking markers, which it depends on for parsing. Numbers (5090, Qwen3.8 27B, xhigh (default)):</p> <table><thead> <tr> <th align=\"left\">default</th> <th align=\"left\">sharp</th> </tr> </thead><tbody> <tr> <td align=\"left\">completion tokens</td> <td align=\"left\">baseline</td> </tr> <tr> <td align=\"left\">wall time</td> <td align=\"left\">baseline</td> </tr> <tr> <td align=\"left\">…",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "67aea4d0c51b0026",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Need support for llama.cpp with multi GPU",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv76b7/need_support_for_llamacpp_with_multi_gpu/",
+    "published": "2026-08-22T08:53:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Using llama.cpp I seem to be unable to get my to GPUs working tougether correclty, so I need help somehow.</p> <p>Setup: 96GB RAM, one Blackwell 5000 (48GB) and one 3090 (24GB).</p> <p>I am trying to run the UD-Q3_K_XL quant of Deepseek4 flash which has about 120GB size. Using just the Blackwell I would put most of the experts on the system RAM. I would have thought that putting some experts on the 3090 I would have thought to be faster (or at least not slower) than putting the experts just on the RAM.</p> <p>What I have tried:</p> <ul> <li>for all trails I try run with these common flags: --temp 1.0 --top-p 0.95 --min-p 0 -ngl 99 -ctk bf16 -ctv bf16 --jinja --flash-attn on --no-mmap</li> <li>baseline, using just the Blackwell (-dev CUDA0 --fit on --n-cpu-moe 32): full context and a generation speed of 16t/s</li> <li>that above but swapping &quot;-dev CUDA0&quot; with &quot;--split-mode layer&quot;: fit fails trying to allocate 31gig on the 3090</li> <li>adding -ts 2,1 results in exactly the same as above</li> <li>back to the drawing board, start with minimal setup using just the args from my first bullet point above): fit settles at 4096 context size</li> <li>trying to fix the context by setting -c 1048576 or fitc 1048576: fit now fucks up and just pushes 25 gigs on the blackwell and just 6 gigs on the 3090</li> </ul> <p>Now I moved to manually setting the layers:</p> <ul> <li>agian the baseline with just the balckwell (-dev CUDA0 -ot &quot;(1[2-9]|[2-9][0-9]).ffn_.*_exps.*=CPU&quot;): full context, same 16t/s speed as with moe-cpu</li> <li>just as above but without -dev CUDA0: speed drops to 11t/s</li> <li>manually puting experts on 3090 (-ot &quot;(1[2-7]).ffn_.*_exps.*=CUDA1&quot; -ot &quot;(1[8-9]|[2-9][0-9]).ffn_.*_exps.*=CPU&quot;): speed of 12t/s</li> </ul> <p>What am I doing wrong?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/erazortt\"> /u/erazortt </a> <br /> <span><a href=\"https:/…",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
+  },
+  {
+    "id": "09a32e63ec820c4a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How to give a local LLM/agent access to a \"real\" web browser",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuykgj/how_to_give_a_local_llmagent_access_to_a_real_web/",
+    "published": "2026-08-22T01:17:29+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I can't seem to find a good answer to this, my Hermes agent has access to Firecrawl and some other web scrapers for content extraction, but anyone know of a way to let a local LLM drive a &quot;real&quot; web browser? My wife asked me to have Hermes go and look at her LinkedIn profile, that's easy with a full web browser (just have her setup auth and then it'll be able to login without a password), but I'm not sure how best to do this to let a local LLM drive a &quot;real&quot; browser instead of something headless that's going to fail all sorts of &quot;anti-AI/scraping&quot; checks. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/OvertaxedOne\"> /u/OvertaxedOne </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuykgj/how_to_give_a_local_llmagent_access_to_a_real_web/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuykgj/how_to_give_a_local_llmagent_access_to_a_real_web/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T10:25:56.044779+00:00"
   }
 ]
