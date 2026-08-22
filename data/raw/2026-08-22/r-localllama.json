@@ -298,5 +298,15 @@
     "published": "2026-08-22T16:41:41+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Looking to upgrade our ai infra for the new year. We need something that handles more than just simple routing, specifically looking for features like prompt caching, granular cost attribution per team, and support for the newer reasoning models. is there a clear winner for enterprise grade gateways this year?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/llogicnotfound\"> /u/llogicnotfound </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvh7b1/who_is_leading_the_pack_for_best_llm_gateway_2k26/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvh7b1/who_is_leading_the_pack_for_best_llm_gateway_2k26/\">[comments]</a></span>",
     "fetched_at": "2026-08-22T22:00:00.668378+00:00"
+  },
+  {
+    "id": "5c9cef01ebc3846c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Best tiiiny model for session compression?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvnzwx/best_tiiiny_model_for_session_compression/",
+    "published": "2026-08-22T21:07:35+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Happy with Qwen3.8-27B, but that xhigh thinking mode is chewing through context like nobody's business. I'm hoping I can point Hermes at a <em>tiny</em> model for compression, without sacrificing quality of the output.</p> <p>I'm thinking Qwen3.5-0.8B maybe? Anyone know of it's good at this kind of task?</p> <p>Or.. Are there any models specifically tailored for summary?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BornInAFish\"> /u/BornInAFish </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvnzwx/best_tiiiny_model_for_session_compression/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvnzwx/best_tiiiny_model_for_session_compression/\">[comments]</a></span>",
+    "fetched_at": "2026-08-22T22:37:53.376157+00:00"
   }
 ]
