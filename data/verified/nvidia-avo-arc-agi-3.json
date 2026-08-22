@@ -1,0 +1,70 @@
+{
+  "slug": "nvidia-avo-arc-agi-3",
+  "checked_at": "2026-08-22T00:39:00+00:00",
+  "method": "Fresh verifier + fresh adversarial falsifier, both run in cycle 5 of 2026-08-22. Verifier fetched Nvidia's primary blog and TechCrunch directly, live-fetched ARC Prize's site and leaderboard (found no Nvidia/AVO entry on either), and searched for VentureBeat coverage (found none). Falsifier independently re-fetched the Nvidia blog fresh, searched for disputes/methodology criticism (found none citable), searched for AVO's origin and found it predates this application by about five months (a March 2026 GPU-kernel-optimization preprint), confirmed VISTA as a real prior system, and corrected the draft framing from 'Nvidia unveils AVO' to 'Nvidia applies its existing AVO harness to a new benchmark'. Orchestrator independently fetched the arXiv preprint to confirm the exact ID and content before citing it.",
+  "origin_items": [
+    "data/raw/2026-08-21/techmeme.json#16408ff3871a3131",
+    "data/raw/2026-08-21/gnews-ai-chips-and-compute.json#96998919eb43ee15"
+  ],
+  "claims": [
+    {
+      "text": "Nvidia applied its AVO agent harness, running Claude Opus 5, to the ARC-AGI-3 benchmark, publishing results on 21 August 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed directly against Nvidia's own primary blog post (fetched live by both verifier and falsifier, independently) and independently corroborated by TechCrunch's named-author coverage (Julie Bort, 21 Aug 2026), which quotes Nvidia VP Adel El Hallak. TechCrunch's own reporting confirms the announcement occurred and its substance, though it does not independently re-run the benchmark itself.",
+      "evidence": [
+        "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+        "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/"
+      ]
+    },
+    {
+      "text": "AVO was first developed for autonomous GPU-kernel optimization on Nvidia Blackwell B200 hardware, described in a March 2026 preprint, months before this ARC-AGI-3 application",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Nvidia's own blog post states AVO 'was first demonstrated on difficult software engineering and GPU-kernel optimization tasks'. The falsifier located the underlying work, arXiv 2603.24517 ('AVO: Agentic Variation Operators for Autonomous Evolutionary Search', submitted 25 March 2026), and the orchestrator independently fetched that exact paper and confirmed its title, abstract, and Nvidia-affiliated author list describe AVO applied to GPU attention-kernel optimization on B200 hardware, matching the origin Nvidia's post describes. Labeled preprint -- not peer-reviewed, per policy §1.",
+      "evidence": [
+        "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+        "https://arxiv.org/abs/2603.24517"
+      ]
+    },
+    {
+      "text": "Nvidia reports AVO scored a perfect 100.00 on the RHAE metric across all 25 public ARC-AGI-3 environments (183 of 183 levels)",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "The only source for this figure, in both the verifier's and falsifier's independent fetches, is Nvidia's own blog post -- a self-administered run using Nvidia's own scoring, not an ARC-Prize-administered leaderboard entry. TechCrunch relays the same number without independently reproducing it. Nvidia's own post explicitly scopes the claim to the public set only ('not results on the semi-private or fully private competition sets'), which is included in the article body as the vendor's own hedge. No credible, citable dispute of the number itself was found (only uncited forum commentary, which does not meet the policy bar for a 'disputed' verdict), so this is labeled vendor-claim rather than disputed.",
+      "evidence": [
+        "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/"
+      ]
+    },
+    {
+      "text": "ARC Prize's official ARC-AGI-3 site and leaderboard list no entry for Nvidia or AVO",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Live-fetch rule applied: the verifier fetched https://arcprize.org/arc-agi/3/ and https://arcprize.org/leaderboard directly during this cycle (2026-08-22, verification session ~00:30 UTC) and found no mention of Nvidia or AVO on either page. The leaderboard's tabular data did not fully render on a text fetch (likely client-rendered), so this is reported as an absence in the fetched content rather than a certainty that no entry exists anywhere in the underlying data -- stated in the article with that caveat in mind.",
+      "evidence": [
+        "https://arcprize.org/arc-agi/3/",
+        "https://arcprize.org/leaderboard"
+      ]
+    },
+    {
+      "text": "Nvidia says AVO needed about 12% fewer actions than a prior system, VISTA, to complete the same levels, though it cautions this is not a controlled comparison",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figures (6,624 vs. 7,542 actions) are transcribed directly from Nvidia's blog post, confirmed independently by both verifier and falsifier fetches. VISTA is confirmed as a real, independently-documented prior ARC-AGI-3 system (vista-research.github.io) rather than a fabricated comparison, but its own 7,542-action figure was not independently fetched from VISTA's own materials within budget -- it is Nvidia's characterization. Nvidia's own post is quoted directly on the comparison's limits: the two systems 'differ in agent backend, observation representation, memory, context management, and other implementation details.' Included as a labeled vendor claim with that caveat, not as a controlled result.",
+      "evidence": [
+        "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/"
+      ]
+    },
+    {
+      "text": "Citing a separate ARC Prize evaluation, Nvidia's post puts Claude Opus 5's own unaided score at approximately 30% under high reasoning effort",
+      "type": "capability",
+      "verdict": "single-source",
+      "reasoning": "Nvidia's post attributes this figure to ARC Prize's own separate evaluation, which would ordinarily make it independently-sourced -- but neither sub-agent obtained this specific number via a direct fetch of ARC Prize's own materials (the leaderboard fetch did not render tabular data), only via Nvidia's relay of it. Per the live-fetch rule, a number not confirmed by our own direct fetch is not citable as confirmed, so this is labeled single-source (sourced only via Nvidia's characterization) rather than confirmed, and Nvidia's own hedge is included in the article: 'a different reasoning setting and a substantially different agent system.'",
+      "evidence": [
+        "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Falsifier re-fetched the Nvidia primary source independently (rather than trusting the verifier's paraphrase) and reproduced all quoted figures verbatim -- nothing distorted. Its one substantive catch: the draft implied AVO itself was new, when Nvidia's own post and an independently-located arXiv preprint (2603.24517, confirmed by direct fetch) show AVO is a five-month-old technique originally built for GPU-kernel optimization, now applied to ARC-AGI-3 for the first time -- draft corrected from 'Nvidia unveils AVO' to 'Nvidia applies its AVO harness'. Searched specifically for citable methodology criticism or an ARC Prize response; found none meeting the bar for a 'disputed' verdict (only uncited forum commentary echoing Nvidia's own disclosed public-set-only hedge). Confirmed VentureBeat did not cover this story, correcting the original feed lead's assumption. Verdict: GO, with the corrections above applied before publication.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"Nvidia AVO coding agent scores 100% across all 25 ARC-AGI-3 environments\" --url \"https://blogs.nvidia.com/blog/category/generative-ai/feed/\" run before opening the story: exit 0, zero matches. No prior coverage of Nvidia AVO or this ARC-AGI-3 result on the site. Standalone article, not a follow-up or update."
+}

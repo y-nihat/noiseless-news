@@ -1,0 +1,24 @@
+{
+  "slug": "nvidia-avo-arc-agi-3",
+  "title": "Nvidia brings its AVO agent harness, running Claude Opus 5, to the ARC-AGI-3 benchmark",
+  "status": "published",
+  "first_seen": "2026-08-21",
+  "published_at": "2026-08-22",
+  "date": "2026-08-21",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+    "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
+    "https://arxiv.org/abs/2603.24517",
+    "https://arcprize.org/leaderboard"
+  ],
+  "follows": null,
+  "watch": [
+    "ARC Prize adding an official, foundation-administered entry for Nvidia/AVO to its leaderboard",
+    "An independent evaluator (METR, Vals AI, Artificial Analysis, or a third party) reproducing the 100%/183-level result outside Nvidia's own run",
+    "Any named, citable methodology critique or dispute of the result (only uncited forum commentary found so far)"
+  ],
+  "notes": [
+    "2026-08-22 c5: PUBLISHED (EN + TR). dedup-check before opening: exit 0, zero matches. Fresh verifier then fresh adversarial falsifier sub-agent, run in sequence. Verifier confirmed the announcement (Nvidia primary + independent TechCrunch corroboration) and live-fetched ARC Prize's own site/leaderboard directly, finding no Nvidia/AVO entry -- the load-bearing basis for labeling the 100% figure vendor-claim rather than confirmed. Falsifier independently re-fetched Nvidia's blog fresh (all quoted figures reproduced verbatim, nothing distorted) and caught the one real correction needed: the draft implied AVO itself was new, but Nvidia's own post plus an independently-located and orchestrator-fetch-confirmed arXiv preprint (2603.24517, submitted 25 March 2026) show AVO was first built for GPU-kernel optimization on Blackwell B200 hardware -- this ARC-AGI-3 run is a new application of an existing technique, not a new system. Framing corrected accordingly ('brings its AVO... to' rather than 'unveils'). Falsifier also confirmed VISTA is a real prior system (not fabricated), searched specifically for citable methodology disputes or an ARC Prize response and found none meeting the bar for a 'disputed' verdict, and confirmed VentureBeat did not cover this story (correcting the original feed lead's source list). Headline kept to the confirmed announcement only, per style.md gate 1 -- the 100% figure, the VISTA efficiency comparison, and the ARC-Prize-attributed 30% baseline are all in the body as labeled vendor-claim/single-source, each carrying Nvidia's own hedges verbatim. NVIDIA Developer Blog (developer.nvidia.com) and ARC Prize (arcprize.org) are both unregistered domains that qualify for Tier 0 and Tier 1 respectively -- logged to source_candidates.json this cycle for registration review. Full claim-by-claim reasoning in data/verified/nvidia-avo-arc-agi-3.json."
+  ]
+}
