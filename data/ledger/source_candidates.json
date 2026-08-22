@@ -55,6 +55,26 @@
       "context": "Seen relaying the Newcomer Poolside scoop rather than reporting independently on this occurrence, so not used as confirming evidence -- but The Information is normally strong original reporting (Tier 0/1 candidate) and has likely recurred before. Worth a registration review on its general merits, not on this occurrence."
     }
   ],
+  "candidates_2026-08-22_c3": [
+    {
+      "domain": "slack.com",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://slack.com/blog/news/slack-code-channels-for-agents"
+      ],
+      "context": "Slack's own product blog (distinct from the salesforce.com mirror, which returns HTTP 403 to automated fetches) -- Tier-0 primary, load-bearing for slack-code-launch (the Slack Code / Code Channels announcement, launch-day partner list). Directly fetchable, unlike the salesforce.com URL. Propose Tier 0, type html."
+    },
+    {
+      "domain": "siliconangle.com",
+      "first_seen": "2026-08-22",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://siliconangle.com/2026/08/20/salesforce-introduces-slack-code-to-bring-agentic-team-coding-into-the-open/"
+      ],
+      "context": "Established enterprise-tech trade outlet, named authors, editorial standards; used alongside VentureBeat as independent Tier-2 corroboration for slack-code-launch, and was decisive in resolving an apparent partner-list discrepancy against VentureBeat's account (both correct, reporting live-vs-coming-soon partners differently). Propose Tier 2, type rss/html."
+    }
+  ],
   "candidates_2026-08-21_c1": [
     {
       "domain": "facebook.com/business/news",

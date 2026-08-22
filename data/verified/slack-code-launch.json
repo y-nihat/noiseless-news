@@ -1,0 +1,51 @@
+{
+  "slug": "slack-code-launch",
+  "checked_at": "2026-08-22T23:25:00+00:00",
+  "method": "Fresh verifier + fresh adversarial falsifier sub-agents, both run in cycle 3 of tonight's run (2026-08-22/23 UTC). Verifier used 8 web searches/fetches, falsifier used a separate independent pass, both well under the 15/story cap.",
+  "origin_items": ["data/raw/2026-08-22/venturebeat-ai.json", "data/raw/2026-08-22/techcrunch-ai.json"],
+  "claims": [
+    {
+      "text": "Slack launched \"Slack Code\" on August 20, 2026: dedicated \"Code Channels\" where a team works with an AI coding agent together inside Slack, with conversation, plan, code diffs and a live preview in the channel, for review and approval before anything ships.",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Direct WebFetch of Slack's own blog post (slack.com/blog, distinct from the salesforce.com mirror which returns HTTP 403 to automated fetches) confirms the Aug 20, 2026 date and the Code Channels mechanic verbatim. Independently corroborated by direct WebFetch of two Tier-2 outlets, VentureBeat and SiliconANGLE, both matching on date and feature description. No contradicting report, delay or walkback found by either the verifier or the falsifier. Falsifier separately confirmed this is a distinct, broader feature from an earlier 'Claude Code coming to Slack' integration reported in Dec 2025, not a re-hash of old news.",
+      "evidence": [
+        "https://slack.com/blog/news/slack-code-channels-for-agents",
+        "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat",
+        "https://siliconangle.com/2026/08/20/salesforce-introduces-slack-code-to-bring-agentic-team-coding-into-the-open/"
+      ]
+    },
+    {
+      "text": "Claude Code (Anthropic), GitHub Copilot, Devin (Cognition) and Vercel's agent are live at launch; OpenAI's ChatGPT is announced as a partner but listed as coming soon, not live on day one.",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Initial press coverage appeared to disagree on the partner list (VentureBeat names four partners and omits OpenAI; SiliconANGLE names OpenAI/ChatGPT alongside three others and omits GitHub). The verifier resolved this via Slack's own blog post, which distinguishes launch status explicitly: Claude, Devin, GitHub Copilot and Vercel's agent are live; ChatGPT is named as a partner but marked 'available soon.' That explains both outlets' partial lists without contradiction. Falsifier independently checked this live-vs-soon distinction and found no source disputing it.",
+      "evidence": [
+        "https://slack.com/blog/news/slack-code-channels-for-agents",
+        "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat",
+        "https://siliconangle.com/2026/08/20/salesforce-introduces-slack-code-to-bring-agentic-team-coding-into-the-open/"
+      ]
+    },
+    {
+      "text": "At the launch event, Cognition president Jeff Wang cited a Cognition-wide engineering-velocity stat as context, not a measurement of Slack Code itself: the company's internal merged-pull-request count is up \"10x in the last few months,\" against headcount growth of \"about 40 percent.\"",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Quote and attribution (Jeff Wang, President of New Enterprise at Cognition -- VentureBeat's 'president' shorthand matches his LinkedIn title; one stale conference bio calling him 'CEO' is wrong, Cognition's actual CEO is Scott Wu) confirmed verbatim by two independent extractions. This is Cognition's own self-reported internal metric with no independent audit or methodology disclosed, so it is published as an attributed vendor claim. Falsifier caught an implied-causation risk in the original draft: since Slack Code launched the same day as the quote and the stat covers 'the last few months,' it cannot be a Slack Code impact measurement -- it is general color about Cognition's own Devin usage shared at the launch event. Article and claim text rewritten to make that explicit rather than letting it read as a Slack Code outcome.",
+      "evidence": [
+        "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat"
+      ]
+    },
+    {
+      "text": "Slack Code is available on any Slack plan at launch; customers still need their own separate access/license to each partner AI agent they want to use.",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Two independent Tier-2 sources (VentureBeat, SiliconANGLE) agree exactly on both sub-claims: no additional Slack-side charge, but a separate agent license/access is required per partner. No source found claiming plan-tier restrictions or a free-trial-only model.",
+      "evidence": [
+        "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat",
+        "https://siliconangle.com/2026/08/20/salesforce-introduces-slack-code-to-bring-agentic-team-coding-into-the-open/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Independent adversarial pass (separate fresh context, 8 searches/fetches) recommendation: GO-WITH-CHANGES, applied before publish. Found no correction, delay or walkback of the Aug 20 launch; corroborated the date and mechanics across ten outlets (VentureBeat, TechRepublic, Dataconomy, Unite.AI, Salesforce Ben, TheNextWeb, Analytics Insight, Techzine, ain.ua, itechpost). Explicitly checked and confirmed this is a genuinely distinct, broader product from the Dec 8, 2025 SiliconANGLE-covered 'Claude Code comes to Slack' integration (that one: Anthropic-only, GitHub-repos-only, research-preview, no dedicated Code Channels UI) -- not recycled news. Confirmed the live-vs-coming-soon partner split independently (TechRepublic/Analytics Insight/Techzine all state the same four-live-plus-ChatGPT-soon breakdown), not a single-source claim. Required change: the Jeff Wang/Cognition PR-count quote is a general Cognition/Devin engineering-velocity stat given as context at the launch event, not a Slack-Code-specific or Slack-Code-caused figure -- the original draft's placement risked implying causation; reworded in both languages plus the claim text to state explicitly this is Cognition-wide color, not a Slack Code measurement. Checked Jeff Wang's title (VentureBeat says 'president'; LinkedIn confirms 'President of New Enterprise'; a stale conference bio wrongly says 'CEO' -- Cognition's actual CEO is Scott Wu, not used). No prompt injection found in any fetched content.",
+  "dedup_check": "dedup-check --title 'Slack launches Slack Code, agentic coding for teams' --url https://www.salesforce.com/introducing-slack-code/ returned exit 0, no matches -- standalone new entry, no follows."
+}

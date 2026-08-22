@@ -1,0 +1,23 @@
+{
+  "slug": "slack-code-launch",
+  "title": "Slack launches Slack Code, embedding AI coding agents into team channels",
+  "status": "published",
+  "first_seen": "2026-08-22",
+  "published_at": "2026-08-22",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://slack.com/blog/news/slack-code-channels-for-agents",
+    "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat",
+    "https://siliconangle.com/2026/08/20/salesforce-introduces-slack-code-to-bring-agentic-team-coding-into-the-open/"
+  ],
+  "follows": null,
+  "reason": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-20",
+  "watch": [
+    "Whether OpenAI's ChatGPT integration (announced 'coming soon' at launch) actually ships, and when"
+  ],
+  "notes": [
+    "2026-08-22 c3: PUBLISHED (EN + TR). Candidate carried over from cycle 1's triage slate ('Slack launches Slack Code agentic-coding-in-chat -- Verge/Register/Infoworld/VentureBeat, first seen 2026-08-20'). dedup-check --title 'Slack launches Slack Code, agentic coding for teams' --url https://www.salesforce.com/introducing-slack-code/ returned exit 0, no matches -- standalone. Fresh verifier (8 searches/fetches) + fresh adversarial falsifier (8 searches/fetches), sequential, both well under the 15/story cap. Falsifier returned GO-WITH-CHANGES: caught that the Jeff Wang/Cognition PR-count quote, if left where the initial draft placed it, would misleadingly read as a Slack Code impact metric -- it is a general Cognition-wide Devin-usage stat given as context at the launch event (Slack Code launched the same day, the stat covers 'the last few months', so it cannot measure Slack Code itself). Reworded in both languages plus the claim text to state this explicitly; published as a labeled vendor-claim. Falsifier also independently confirmed this is a genuinely distinct product from an unrelated, narrower Dec 2025 'Claude Code comes to Slack' integration (Anthropic-only, no Code Channels UI) -- not recycled news -- and confirmed the live-vs-coming-soon partner split (Claude Code/GitHub Copilot/Devin/Vercel live; ChatGPT coming soon) across multiple independent outlets, resolving an apparent VentureBeat/SiliconANGLE discrepancy that was really just partial reporting by each. Primary source is Slack's own blog (slack.com), directly fetchable -- the salesforce.com mirror URL used for the dedup-check 403s automated fetches, same pattern as other blocked-fetch primaries in the registry. Two unregistered evidence domains (slack.com, siliconangle.com) logged to source_candidates.json under candidates_2026-08-22_c3. Editor gate run on both EN and TR: headline rests only on the confirmed launch/partner claims, no superlatives; TL;DR stands alone; no padding; TR is a natural semantic mirror, not a calque. open_obligation set: OpenAI's ChatGPT integration is announced but not yet live -- revisit whether it shipped. Full claim-by-claim reasoning in data/verified/slack-code-launch.json."
+  ]
+}
