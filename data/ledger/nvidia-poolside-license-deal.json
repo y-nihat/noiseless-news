@@ -1,0 +1,25 @@
+{
+  "slug": "nvidia-poolside-license-deal",
+  "title": "Reports of an Nvidia-Poolside AI licensing deal",
+  "status": "watching",
+  "first_seen": "2026-08-20",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://www.newcomer.co/p/sources-poolside-strikes-6-billion",
+    "https://www.theinformation.com/briefings/nvidia-reportedly-pay-6-billion-licensing-hiring-deal-ai-model-startup-poolside",
+    "https://www.bloomberg.com/news/articles/2026-08-20/nvidia-to-pay-ai-startup-poolside-a-6-billion-license-newcomer-says"
+  ],
+  "follows": null,
+  "reason": "Failed the publishing gate on the business-claim independence rule (verification.md §2). Origin is a single Newcomer (Eric Newcomer/Tom Dotan) newsletter scoop, 2026-08-20, based on a leaked Poolside letter to investors, describing a ~$6B Nvidia license of Poolside's 'Model Factory' system plus a ~$1B equity investment (~$12-13B valuation) and offers to 109 Poolside staff who worked on its Laguna models, structured as license+hires rather than a formal acquisition. Every other outlet traced (The Information, Bloomberg, PYMNTS, The Decoder, plus a long tail of Tier-3 aggregators) explicitly attributes the figures to Newcomer's report rather than confirming independently -- Bloomberg's own headline reads '...Newcomer Says'. Neither Nvidia nor Poolside has responded to requests for comment (PYMNTS, as of 2026-08-21); no filing, no company statement. Per the site's independence rule this collapses to exactly one source, which is itself Tier 3 under policy §1 (newsletter). Fresh verifier sub-agent (13 searches/fetches) confirmed this cleanly; recommendation was an unambiguous hold, so no falsifier pass or drafting was run this cycle -- not a borderline case needing adversarial testing. dedup-check returned three moderate matches (nvidia-sk-group-500b-ai-partnership, meta-muse-glimmer-launch, nvidia-500b-ai-financing-platform, all score 0.429, no shared URLs) -- read as coincidental title-similarity (large-dollar-figure Nvidia stories), confirmed unrelated subjects, standalone entry.",
+  "watch": [
+    "An on-the-record Nvidia or Poolside statement, blog post, or press release confirming or denying the deal",
+    "A second outlet with its own independent sourcing (not citing Newcomer or the same investor letter)",
+    "An SEC filing or Nvidia investor disclosure referencing the transaction",
+    "Any denial from either company, which would flip this to disputed"
+  ],
+  "public_note": "Reported by one newsletter as a licensing-and-hiring deal; no second independent account and no statement from either company.",
+  "notes": [
+    "2026-08-22 c2: Opened this cycle from the prior cycle's triage slate (flagged 2026-08-22 c1 as 'strong multi-outlet convergence' during triage, not yet verified). Fresh verifier sub-agent found the apparent convergence is aggregator noise over one underlying source; held as watching rather than published. No falsifier pass run given the clear-cut single-source finding."
+  ]
+}
