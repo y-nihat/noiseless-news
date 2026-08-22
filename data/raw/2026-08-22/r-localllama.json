@@ -1,0 +1,12 @@
+[
+  {
+    "id": "74a9c2d94e90a2b0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27b - PI AGENT vs OPENCODE - another smaple",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vuwwww/qwen_38_27b_pi_agent_vs_opencode_another_smaple/",
+    "published": "2026-08-22T00:02:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vuwwww/qwen_38_27b_pi_agent_vs_opencode_another_smaple/\"> <img alt=\"Qwen 3.8 27b - PI AGENT vs OPENCODE - another smaple\" src=\"https://preview.redd.it/07qievtugtkh1.png?width=140&amp;height=74&amp;auto=webp&amp;s=27486d061973e38a2dbfd6f01f9068e2dbfbc870\" title=\"Qwen 3.8 27b - PI AGENT vs OPENCODE - another smaple\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>That is the second comparison and the last one.</strong> </p> <p><strong>I will not be spamming again ;)</strong> </p> <p>Continuation from:<br /> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vu0u2v/qwen_38_27b_pi_agent_vs_opencode/\">https://www.reddit.com/r/LocalLLaMA/comments/1vu0u2v/qwen_38_27b_pi_agent_vs_opencode/</a></p> <p>That is one of my many tests I make comparing output quality.</p> <p>What is more interesting using a <strong>PI Agent</strong> results are much better than an <strong>Opencode</strong> using a Qwen 3.8 27b ?!</p> <p>Seems PI Agent is much better in the agent environment somehow... Not counting uses less tokens , do not have a hard limit of 32k output tokens, is faster, do not freezing, compressing context far less than Opencode. For instance if you have context in the Opencode output 32k and all context 100k then the compression is starting at 67k context ... PI is starting at 90k context even if you have set output context 64k or more.</p> <p>My config for RTX 3090</p> <p>llama-server with ini config -&gt; which is exposing API to Opencode and PI agent.</p> <p><code>llama-server.exe --models-preset 1_preset.ini --models-max 1 --direct-io</code></p> <p>config ini</p> <pre><code>[Qwen3.8-27B_dense_c-100k] model = models/Qwen3.8-27B-Q4_K_M.gguf mmproj = models/mmproj-BF16-Qwen3.8-27B-UD-Q4_K_XL.gguf reasoning-format = deepseek flash-attn = on n-gpu-layers = 99 reasoning = on ctx-size = 100000 temperature=1.0 top-p=0.95 top-k=20 min-p=0.0 presence-penalty=0.0 repeat-penalty=1.0 mmproj-offload…",
+    "fetched_at": "2026-08-22T00:58:34.518278+00:00"
+  }
+]
