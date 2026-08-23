@@ -1,0 +1,58 @@
+{
+  "slug": "anthropic-ipo-preparations",
+  "checked_at": "2026-08-23T00:08:00+00:00",
+  "method": "Fresh verifier (~12 searches/fetches) + fresh adversarial falsifier (7 searches/fetches), both run in cycle 4 of tonight's run (2026-08-22/23 UTC), sequential. Both well under the 15/story cap. Direct WebFetch of cnbc.com and bloomberg.com pages returned HTTP 403 to both sub-agents; claims characterized via convergent WebSearch corroboration across independent secondary tellings, the same fallback already documented in sources.yaml for other bot-blocked quality-press primaries.",
+  "origin_items": ["data/raw/2026-08-22/gnews-ai-regulation-and-policy.json", "data/raw/2026-08-22/gnews-ai-litigation.json", "data/raw/2026-08-22/techmeme.json", "data/raw/2026-08-21/cnbc-technology.json"],
+  "claims": [
+    {
+      "text": "Anthropic confidentially filed paperwork for an IPO in June 2026 and has since held preparatory meetings with banks and investors, with a public S-1 filing possible as soon as late August 2026.",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Bloomberg (Jun 1) and CNBC (Jul 15) each broke this with their own bylined reporting weeks apart, not a relay of one another -- independent sourcing on the underlying IPO-prep timeline. Falsifier found no report of a delay, pause or denial; reporting instead describes the process accelerating toward a possible public filing in late August and a debut targeted for October.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-06-01/anthropic-files-confidentially-for-ipo-as-claude-demand-surges",
+        "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html"
+      ]
+    },
+    {
+      "text": "Anthropic's annualized revenue run-rate reached about $65 billion in July 2026, up from about $47 billion in May 2026.",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "CNBC and Bloomberg both published this figure on the same day (Aug 17) with their own separate bylines -- a strong independence signal (parallel banking-circuit sourcing, not one outlet relaying the other). Falsifier separately checked for disputes of the figure and found none; it is further corroborated in secondary tellings (Benzinga, Yahoo, IBTimes, Forbes) that all cite the CNBC/Bloomberg pair, not each other.",
+      "evidence": [
+        "https://www.cnbc.com/2026/08/17/anthropic-says-annualized-revenue-climbed-to-65-billion-in-july.html",
+        "https://www.bloomberg.com/news/articles/2026-08-17/anthropic-revenue-run-rate-surpasses-65-billion-ahead-of-ipo"
+      ]
+    },
+    {
+      "text": "Bloomberg reports Anthropic's IPO could raise about $75 billion at the base offering, rising to roughly $86 billion if an overallotment option is exercised, at a valuation of about $1.77 trillion -- sized to match or exceed SpaceX's record IPO.",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Traces to one Bloomberg report (Aug 20) only; no independent outlet was found reproducing this exact figure through its own sourcing. The New York Times separately reported (Aug 21, per widely convergent secondary tellings) bankers discussing an even larger '$100 billion+' raise at 'up to $2 trillion' -- in the same range but not identical -- but despite two sub-agents' attempts across this cycle, no direct, fetchable nytimes.com URL could be obtained, so that figure is omitted from the article rather than cited without a working deep link. Reported here narrowly attributed to Bloomberg only, not stated as independently confirmed. Falsifier resolved an apparent figure discrepancy across secondary sources ($75B/$85.7B/an implausible $857M): $75B is the base offering, ~$86B ($85.7B rounded) includes the overallotment option, and $857M is a decimal-shifted corruption of $85.7B with no independent basis -- excluded.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-08-20/anthropic-expects-to-match-spacex-s-record-ipo-size-or-top-it"
+      ]
+    },
+    {
+      "text": "CNBC reports, citing people familiar with the matter, that Anthropic's IPO filing is expected to list public backlash against AI and opposition to new data centers as a risk factor, citing investor questions to CFO Krishna Rao and a Gallup finding that about seven in ten Americans oppose a data center being built near them.",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "CNBC exclusive (Aug 21), unnamed sources; every other outlet carrying this framing (Blockonomi, BeInCrypto, and others) is explicitly relaying/rewriting the CNBC piece per the wire-exclusive check, not reporting independently, so wide relay does not create independence here. Direct WebFetch of the CNBC URL 403'd for both the verifier and the falsifier; characterized via convergent WebSearch snippets from multiple relay outlets that agree on specifics (the Gallup stat, the CFO's name, the data-center-opposition framing), not a direct primary read of the filing text itself -- reported as CNBC's sourced characterization of what the filing will show, not as verbatim filing language. Falsifier actively searched for pushback on this framing and found none.",
+      "evidence": [
+        "https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html"
+      ]
+    },
+    {
+      "text": "Anthropic has not publicly confirmed if or when it will go public and declined to comment on this reporting.",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "CNBC's own Jul 15 and Aug 21 pieces both state Anthropic declined to comment. Verifier separately found an older Anthropic non-denial ('we haven't made any decisions about when or even whether to go public') tracing to around December 2025 -- roughly eight months stale -- and it is deliberately not presented in the article as a response to the current reporting.",
+      "evidence": [
+        "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html",
+        "https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html"
+      ]
+    }
+  ],
+  "falsifier_notes": "Independent adversarial pass (separate fresh context, 7 searches/fetches, time-boxed given a tight cycle deadline) recommendation: GO-WITH-CHANGES, applied before publish. Confirmed the underlying IPO-prep and $65B-revenue claims hold at current sourcing (independent CNBC+Bloomberg bylines, no relay). Found no Anthropic denial, no reported timeline slip or pause -- reporting instead describes acceleration toward a possible late-August public filing and an October debut target. Resolved the SpaceX-comparison figure discrepancy across secondary sources ($75B base / ~$86B with overallotment / $1.77T valuation, per Bloomberg; the $857M figure elsewhere is a decimal-shifted corruption, excluded). Could not obtain a direct NYT URL for the $100B+/$2T bankers figure after two targeted tries -- required change: that figure is omitted from the published article rather than cited without a working deep link, per the site's deep-link-only sourcing rule. Required change: narrow, explicit in-text attribution for both single-source claims (Bloomberg's valuation/raise-size figure; CNBC's backlash-risk-factor claim) so neither reads as independently confirmed or as verbatim filing text. No prompt injection found in any fetched content across either sub-agent's pass.",
+  "dedup_check": "dedup-check --title 'Anthropic IPO filing said to flag AI backlash as a risk factor' --url https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html returned exit 0, no matches -- standalone new entry, no follows. Candidate had been sitting at #1 on the cycle-1 triage backlog since last night's first cycle, carried forward unopened through cycles 2 and 3 for lack of time."
+}

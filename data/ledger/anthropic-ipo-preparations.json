@@ -1,0 +1,28 @@
+{
+  "slug": "anthropic-ipo-preparations",
+  "title": "Anthropic advances IPO preparations as revenue run-rate reaches $65 billion",
+  "status": "published",
+  "first_seen": "2026-08-22",
+  "published_at": "2026-08-23",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-06-01/anthropic-files-confidentially-for-ipo-as-claude-demand-surges",
+    "https://www.cnbc.com/2026/07/15/anthropic-ipo-banks-investor-meetings.html",
+    "https://www.cnbc.com/2026/08/17/anthropic-says-annualized-revenue-climbed-to-65-billion-in-july.html",
+    "https://www.bloomberg.com/news/articles/2026-08-17/anthropic-revenue-run-rate-surpasses-65-billion-ahead-of-ipo",
+    "https://www.bloomberg.com/news/articles/2026-08-20/anthropic-expects-to-match-spacex-s-record-ipo-size-or-top-it",
+    "https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html"
+  ],
+  "follows": null,
+  "reason": null,
+  "open_obligation": true,
+  "revisit_after": "2026-08-30",
+  "watch": [
+    "Whether Anthropic files publicly (S-1) and what it actually discloses -- size, valuation, and stated risk factors -- versus the single-source Bloomberg and CNBC reporting cited here",
+    "Independent corroboration (or contradiction) of the $75-86B/$1.77T Bloomberg figure and the AI-backlash/data-center risk-factor CNBC claim",
+    "Any on-record Anthropic statement confirming or denying IPO plans/timing"
+  ],
+  "notes": [
+    "2026-08-23 c4: PUBLISHED (EN + TR). Candidate carried over from cycle 1's triage slate ('Anthropic IPO filing report ~$2T value, Bloomberg/CNBC/NYT'), never opened in cycles 1-3 for lack of time. dedup-check --title 'Anthropic IPO filing said to flag AI backlash as a risk factor' --url https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html returned exit 0, no matches -- standalone. Fresh verifier (~12 searches/fetches) + fresh adversarial falsifier (7 searches/fetches, time-boxed given a ~29-minute cycle deadline), both well under the 15/story cap. Wire-exclusive check (§2) run explicitly: the core IPO-prep and $65B-revenue claims are independently reported by CNBC and Bloomberg on separate bylines/dates (not relay), so those are confirmed; the $75-86B/$1.77T size-and-valuation figure traces to Bloomberg alone and the AI-backlash-risk-factor claim traces to CNBC alone, wide aggregator relay of both notwithstanding -- both published as narrowly-attributed single-source claims, not headline material (headline rests only on the two confirmed claims per style.md gate 1). A third figure -- NYT's reported '$100B+/$2T' bankers claim -- was investigated by both sub-agents but no fetchable nytimes.com URL could be obtained after multiple tries, so it was dropped entirely rather than cited without a working deep link; Bloomberg's own close-but-distinct $75-86B/$1.77T figure is used instead, with a working citation. Falsifier resolved a secondary-source figure discrepancy ($75B base vs $85.7B/~$86B with overallotment vs an implausible $857M, the last being a decimal-shifted corruption) and actively searched for a denial, timeline slip, or dispute of the revenue figure -- found none. Two unregistered evidence domains, bloomberg.com and nytimes.com (the latter referenced only in reasoning, not cited), logged to source_candidates.json for registration review -- bloomberg.com in particular is already load-bearing across several other recent ledger entries and should be formally registered. Editor gate run on both EN and TR: headline rests only on confirmed claims, no superlatives; TL;DR stands alone and states plainly which figures are single-outlet; no padding; TR is a natural semantic mirror, not a calque. open_obligation set: no public S-1 filed yet and the two most newsworthy figures are each single-sourced -- revisit when a public filing lands or independent corroboration/contradiction appears."
+  ]
+}
