@@ -28,5 +28,165 @@
     "published": "2026-08-23T00:24:26+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I read a lot of posts like &quot;I've given this prompt to my Qwen 3.8 27b and it one-shotted me a 3d game after 24 hours&quot;. I wonder, what's the best harness for tasks like this? It has to have auto compaction and probably a memory system, right? And excellent computer use and self analysis.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/uspdd\"> /u/uspdd </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvsgsp/best_harness_for_long_autonomous_tasks/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvsgsp/best_harness_for_long_autonomous_tasks/\">[comments]</a></span>",
     "fetched_at": "2026-08-23T00:57:53.608643+00:00"
+  },
+  {
+    "id": "6d7077e9843790be",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27B is a game changer.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvyacg/qwen_38_27b_is_a_game_changer/",
+    "published": "2026-08-23T05:19:48+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Our devs got their hands on it a few days ago. One wired it into Codex to compare with GPT Luna, our usual workhorse right now for its cost effectiveness. Another tried it out on one of our OCR pipelines. </p> <p>It's comparable to Luna for coding and ***OCR quality appears to be better than Gemini 3.5 Flash Lite***. That's huge. We pay a ton of money for OCR. </p> <p>This is the first local model that feels like more than a toy. It's truly as capable as the frontier models from a year ago. For the first time ever there's serious discussions about buying our own hardware. With estimates that such an effort would pay for itself in less than 2 months. </p> <p>Hyper scalars are in big trouble this time. Their whole &quot;moat&quot; is buying up all the hardware. And thanks to sanctions on China we're seeing the quality of small local models skyrocket. As someone who's been around a while, this feels like an &quot;IBM moment&quot;. Where the industry assumed that databases would always run on huge mainframes. Only to be wiped out by cheaper local solutions a few years later. </p> <p>I have a feeling this release will trigger another Llama style open source Renaissance. We're already getting better quants. Inference will be further improved. We might even see a comparable MoE with 500+ Tok/sec on consumer hardware soon. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Cold_Specialist_3656\"> /u/Cold_Specialist_3656 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvyacg/qwen_38_27b_is_a_game_changer/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvyacg/qwen_38_27b_is_a_game_changer/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "3f404ef1f6451377",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "“The All Spark” Cluster: Upgrading from 16 - 36 DGX Sparks",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvv7iv/the_all_spark_cluster_upgrading_from_16_36_dgx/",
+    "published": "2026-08-23T02:38:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvv7iv/the_all_spark_cluster_upgrading_from_16_36_dgx/\"> <img alt=\"“The All Spark” Cluster: Upgrading from 16 - 36 DGX Sparks\" src=\"https://preview.redd.it/ifdds8xle1lh1.jpg?width=140&amp;height=105&amp;auto=webp&amp;s=4650f6584b48deae27998e335c0036da90b3ea0e\" title=\"“The All Spark” Cluster: Upgrading from 16 - 36 DGX Sparks\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Earlier this year I posted about building what at the time I believe was the first 16x DGX Spark Cluster.<br /> I’m now adding 20 more Sparks to the cluster in my homelab server rack, giving me 4.6TB of unified memory.</p> <p>• 36x Sparks</p> <p>• 1x 200Gbps FS 24 x 200Gb QSFP56 + 8x 400Gb Switch</p> <p>• 24x QSFP56 DAC cables</p> <p>• 6x 400gb to 2x 200gb breakout cables</p> <p>Over the last 4+ months i’ve been running nearly every notable model that’s landed. The cluster however isn’t just being used to serve single inference points, I’ve split the cluster up to house “inference modules” that get managed into a single persistent agent using a combination of Hermes + a custom memory sidecar system i’ve built. It’s become an agent capability cluster more than just one big inference machine:</p> <p>I’m expanding the cluster to 36 now because I want 16 nodes dedicated to SOTA models such as Kimi K3 while being able to retain enough nodes to perform rerank/embeddings tasks, video generation, Image gen, audio processing etc all simultaneously. </p> <p>Now, you may ask why not just buy 6000 Pros, or B200s or even a B300 and the answer comes down to a few reasons. </p> <p>1) This server rack will also have 2 6000 pro systems (a 4x Max Q low power build + an 8x enterprise server) which replace my H100s and GH200 I had earlier in the year.</p> <p>2) B200/B300 for a homelab create substantial cooling and energy problems than even this currently absurd homelab and a big point of this build is to be completely sovereign with zero dat…",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "a26ce16f3d16af05",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Don't want to be this guy, but I need Qwen 3.8 35B A3B",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw2cop/dont_want_to_be_this_guy_but_i_need_qwen_38_35b/",
+    "published": "2026-08-23T09:13:39+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Qwen 3.8 27B is great, however it takes me ages to do tasks on xhigh. I need Qwen 3.8 35B A3B. It'll be a little dumber but faster. I am also aware of the fact that 27B gets its &quot;intelligence&quot; from the long thinking time. I therefore assume that 35B would also be a long-thinking model, however running Qwen 3.8 27B over night on my M1 Max for just one task is impractical and no fun.</p> <p>I love the progress and the work of alibaba with 27B but... yeah I sadly don't own a faster RTX. What are you guys wishing or hoping for? Where do you see the future going? - Longer thinking times for higher intelligence?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/HistoricalStrength21\"> /u/HistoricalStrength21 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw2cop/dont_want_to_be_this_guy_but_i_need_qwen_38_35b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw2cop/dont_want_to_be_this_guy_but_i_need_qwen_38_35b/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "4fb50ea0a322ed92",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I hosted Kimi K3 (2.8T parameters) using 8 B300s. 92 tok/s, $190 per million tokens",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw1j2p/i_hosted_kimi_k3_28t_parameters_using_8_b300s_92/",
+    "published": "2026-08-23T08:25:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw1j2p/i_hosted_kimi_k3_28t_parameters_using_8_b300s_92/\"> <img alt=\"I hosted Kimi K3 (2.8T parameters) using 8 B300s. 92 tok/s, $190 per million tokens\" src=\"https://preview.redd.it/rxwvasuh43lh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5475c5d2bc7830537aace91e5e0823e719728875\" title=\"I hosted Kimi K3 (2.8T parameters) using 8 B300s. 92 tok/s, $190 per million tokens\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>What I ran:</p> <ul> <li>8x B300 on Modal, $56.79 per hour, vLLM, tensor parallel 8, native MXFP4</li> <li>Cold boot ~27 min (1.56 TB load, JIT, 51 CUDA graph captures)</li> <li>TTFT 0.92 to 1.02 s, decode 92 tok/s steady, 83 tok/s average over 4 prompts</li> <li>$190 per million output tokens. One clean run is about $36 of GPU time. Left warm, it is $1,363 a day.</li> </ul> <p>I also ran Unsloth's Dynamic GGUF. </p> <p>Their 1-bit UD-IQ1_S (594 GB) fits 8x A100-80GB via llama.cpp.</p> <p>$19.99 per hour, 2.8x cheaper. Result: ~9 tok/s, TTFT 7 to 60 s, ~$620 per million tokens, so 3.3x more expensive per token. </p> <p>Quality at 1-bit was fine (correct arithmetic, coherent prose). </p> <p>Full write-up with every flag, the Modal deployment file, and the raw benchmark JSON: <a href=\"https://books.vizuara.ai/book/kimi-k3-hosting\">https://books.vizuara.ai/book/kimi-k3-hosting</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/OtherRaisin3426\"> /u/OtherRaisin3426 </a> <br /> <span><a href=\"https://i.redd.it/rxwvasuh43lh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw1j2p/i_hosted_kimi_k3_28t_parameters_using_8_b300s_92/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "985a8f6f7a9546e6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I fine tuned Gemma 4 12B for a 2.7x improvement on tool calling because I can't fit anything else comfortably into my 16 GBs of Vram",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvtu9z/i_fine_tuned_gemma_4_12b_for_a_27x_improvement_on/",
+    "published": "2026-08-23T01:30:21+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvtu9z/i_fine_tuned_gemma_4_12b_for_a_27x_improvement_on/\"> <img alt=\"I fine tuned Gemma 4 12B for a 2.7x improvement on tool calling because I can't fit anything else comfortably into my 16 GBs of Vram\" src=\"https://external-preview.redd.it/bMPwzS2cEbK713gtSyDNqEg51b9HvwySBTg9oaOYRoE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=e62de774f043644829b93adbe463a12d27783d1e\" title=\"I fine tuned Gemma 4 12B for a 2.7x improvement on tool calling because I can't fit anything else comfortably into my 16 GBs of Vram\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Gemma 12B is obviously a very well trained model, I always thought the fine tuning they did on it wasn't really cut out for agentic coding. From my own experiences it struggles to use the tools it's given from Github Copilot and is also very inept at the cli too.</p> <p>So I thought I'd kill two birds with one stone and fine tune it for tool call use and the command line. Not only did I see an improvement on tool usage I also saw a 15.7% increase in the number of tool calls it tries to emit which is great since it means the model gets to work more instead of getting too lost in it's reasoning.</p> <p>I have fp16 -&gt; Q4_K_M weights uploaded and ready for use with llama.cpp or ollama</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TheOneWhoWil\"> /u/TheOneWhoWil </a> <br /> <span><a href=\"https://huggingface.co/TheOneWhoWill/Coding-Monkey-Gemma-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvtu9z/i_fine_tuned_gemma_4_12b_for_a_27x_improvement_on/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "48359c5c47550b31",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek Harness is Insanely Good",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw10m3/deepseek_harness_is_insanely_good/",
+    "published": "2026-08-23T07:55:30+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I don't know about you guys, but Deep-seek harness is insane. It's not focused on being a coder agent, it's webUI made it very easy to just checkin from time to time, and the best part? Why it's better than Hermes? It wasn't frustrating at all to setup. ZERO. NADA. Progressive setup is such an improved UX. Why? Because I got deepseek to integrate with SimpleX by simply asking it to. BY SIMPLY ASKING IT TO. NO WAITING ON A PR TO MERGE. No one telling me to RTFM, no need to google or search for community plugins.</p> <p>So yeah, I got what I wanted, which is E2EE + TOR messaging with an AI agent, and I got it without writing my own opinionated harness (I procrastinated so hard that dsh did a better job than me). DSH is unopinionated enough that you just mold it into behaving how you want it to behave. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Elibroftw\"> /u/Elibroftw </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw10m3/deepseek_harness_is_insanely_good/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw10m3/deepseek_harness_is_insanely_good/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "2a0dd24fa0d1e791",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Nvidia Poolside deal to compete with Chinese Open Weights",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw0mcd/nvidia_poolside_deal_to_compete_with_chinese_open/",
+    "published": "2026-08-23T07:31:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Nvidia is investing $1 billion in Poolside and paying $6 billion to license its technology and hire most of its engineers.</p> <p>Over 100 Poolside staff will move to Nvidia to work on Nemotron.</p> <p>Good news for us!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mrgreatheart\"> /u/mrgreatheart </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw0mcd/nvidia_poolside_deal_to_compete_with_chinese_open/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw0mcd/nvidia_poolside_deal_to_compete_with_chinese_open/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "41543a5cbd8f0359",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "i finally switched from windows to linux and got a 30-50% boost in speed.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw15bm/i_finally_switched_from_windows_to_linux_and_got/",
+    "published": "2026-08-23T08:02:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>This is amazing. </p> <p>All I did was switch from llamacpp on windows to vllm on linux. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/unraveleverything\"> /u/unraveleverything </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw15bm/i_finally_switched_from_windows_to_linux_and_got/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw15bm/i_finally_switched_from_windows_to_linux_and_got/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "f2f2b6598ef6a478",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "# Qwen3.8-27B — One Week Later: The r/LocalLLaMA + r/LocalLLM Verdict",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvu15m/qwen3827b_one_week_later_the_rlocalllama/",
+    "published": "2026-08-23T01:39:46+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><em>Companion to the <a href=\"https://www.reddit.com/r/hermesagent/comments/1voapha/\">Qwen 3.8 Release Megathread</a>. Compiled from ~2,000 posts scanned across both subs, with deep reads of the 45 highest-signal threads (560 posts and comments), Aug 15–22, 2026, plus independent X benchmarks. Every number is attributed to the poster's stated hardware/runtime/quant. This community contradicts itself on nearly every axis — so this thread keeps the disagreements side-by-side instead of picking a winner for you.</em></p> <hr /> <h2>TL;DR</h2> <ul> <li><strong>The consensus pick</strong>: a 27B dense multimodal model that genuinely moved the bar for local agentic coding. The strongest claim with controlled evidence behind it isn't benchmarks — it's tool-calling reliability.</li> <li><strong>The default ships at xhigh reasoning</strong> and it thinks <em>a lot</em>. Low and medium presets score nearly as well on Artificial Analysis (~43/44 intelligence index, within a few points of the xhigh headline) while cutting thinking tokens ~7–9x (and wall time ~6–7x). Most of you should not be running xhigh.</li> <li><strong>Knowledge recall regressed vs 3.6</strong> — widely reported and best understood as a deliberate agentic-design tradeoff. Trivia nerds: keep Gemma around.</li> <li><strong>Q4_K_M is basically indistinguishable from Q8 on perplexity</strong>, but real-world reports split hard below Q6 for complex reasoning. KV cache quantization is one of the most contested settings in the corpus.</li> <li><strong>The &quot;neck and neck with DeepSeek V4 / GPT-5.6 Luna Max&quot; AA headline is real but heavily caveated</strong> — see the benchmark credibility section before quoting it at your friends.</li> </ul> <hr /> <h2>1. What it's actually good at</h2> <h3>Agentic coding (strongest consensus area)</h3> <ul> <li><strong>&quot;Highest level of agency I've ever seen in a local model&quot;</strong> (<a href=\"https://www.reddit.com/r/LocalLLaM…",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "09f9e750bbec7f66",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B KLDs",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw2ayp/qwen3827b_klds/",
+    "published": "2026-08-23T09:10:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw2ayp/qwen3827b_klds/\"> <img alt=\"Qwen3.8-27B KLDs\" src=\"https://preview.redd.it/vt6838nua3lh1.png?width=140&amp;height=66&amp;auto=webp&amp;s=e9624737dec9ee51b5d98839bed447ca9f80fd38\" title=\"Qwen3.8-27B KLDs\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I have been lurking on reddit for like 6 years, and this is the first time posting, so apologies for the mistakes. I'm not a native English speaker, so sorry for the bad English too. I used LLM to translate / refine my post, including images.</p> <p>This is my attempt to compare the Qwen3.8-27B quants. </p> <p>Qwen is a coding and STEM model so I used codeparrot/github-code-clean, EleutherAI/proof-pile-2, allenai/peS2o, equal parts of each. I used 24 sequences of 8k tokens and 12 sequences of 32k tokens. The code was filtered for minified stuff and permissive licenses.</p> <p>It was measured with 24 sequences of 8,192 tokens and 12 sequences of 32,768 tokens, since it generates many tokens and is aimed for long-horizon tasks.</p> <p>Every format used the same compute path for the evaluation. All models are dequantized to BF16, and run through the same kernel. </p> <p>Also, checkpoint size is kind of a bad x-axis, since some models don't have MTP, which has zero performance impact. Still, all of them needs to be loaded on VRAM, so at least it's something useful, and that's why there are two graphs.</p> <p>Findings:</p> <ol> <li>The gap between 8bit and 4bit is huge.</li> </ol> <p>The best 4 bit score is 0.00835 and the worst 8 bit is 0.00071. I mean everyone knows that but yeah it's still something. vLLM can actually use INT5-7 weights, but I'm sure most people don't even know about that.</p> <ol> <li>The KLD of 4bit quantization varies a lot.</li> </ol> <p>Six checkpoints are at 11.7-11.8 GiB of transformer weights, all group-size 128, quantizing 400-496 modules and they range from 0.01364 to 0.02976. I believe the calibration data and t…",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "d4c748b351e20f81",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Best harness for Qwen 3.8 27b ?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvzzlm/best_harness_for_qwen_38_27b/",
+    "published": "2026-08-23T06:56:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve tried <strong>Open Code</strong> , <strong>Codex</strong> and <strong>Qwen Code</strong> and so far Qwen Code seems to work the best for me , the only complaint I have about it is that the CLI interface is a bit rough / sloppy .</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/HelloWorld-Print\"> /u/HelloWorld-Print </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvzzlm/best_harness_for_qwen_38_27b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvzzlm/best_harness_for_qwen_38_27b/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "0799b1b85da78bda",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Has anyone actually made 64k feel like 300k+ with recursive local agents?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvt3c4/has_anyone_actually_made_64k_feel_like_300k_with/",
+    "published": "2026-08-23T00:54:06+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm running Qwen 3.8 27B locally on a single GPU. I can push the context to 131k, but I'd rather run it faster at 64k if the agent can manage context properly.</p> <p>What I have in mind is pretty simple:</p> <ul> <li>one model stays loaded the whole time</li> <li>main agent gets 64k</li> <li>when something is too big, it spawns a fresh child with only the task and context it needs</li> <li>if that child gets a 100k document, it can split the job again or spawn its own children</li> <li>children run sequentially, not 5 at once</li> <li>only findings/artifacts come back to the parent, not the whole trajectory</li> </ul> <p>So a 300k task might become several 20k to 50k branches while the main agent never goes past 64k.</p> <p>Prime Agent and its RLM setup looks closest to what I'm describing. Hermes delegation also seems relevant. Maybe there are better projects I haven't found.</p> <p>Has anyone here actually run a local model this way for long coding, research, large documents, or general assistant work?</p> <p>I'm mainly curious about three things:</p> <ol> <li>What harness handles this best today without a ton of custom plumbing?</li> <li>Can recursive decomposition be trusted to happen automatically, including a child realizing its own input is too large?</li> <li>In practice, how close can a well-managed 64k agent get to using a native 256k/1M context on tasks that can be broken apart?</li> </ol> <p>I'm less interested in pure RAG. I'm trying to maximize the useful task horizon of one fast local model.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TigerConsistent\"> /u/TigerConsistent </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvt3c4/has_anyone_actually_made_64k_feel_like_300k_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvt3c4/has_anyone_actually_made_64k_feel_like_300k_with/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "803131075a7cdc1e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Unsloth Q1-Q2 Qwen3.8-27B with MTP since the unsloth ones don't ship with for the lowest quants",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw1k63/unsloth_q1q2_qwen3827b_with_mtp_since_the_unsloth/",
+    "published": "2026-08-23T08:27:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://huggingface.co/jojohai/Qwen3.8-27B-MTP-graft\">https://huggingface.co/jojohai/Qwen3.8-27B-MTP-graft</a></p> <p>Tested on Vulkan, the grafting saves RAM compared to using an external file. </p> <p>What I don't guarantee however is the quality of answers. The model is very braindead with the Thinking off. However, when asking questions about culture in Brittany the thinking helps the model recover some intelligence so please enable the thinking</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nyghtbynger\"> /u/Nyghtbynger </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw1k63/unsloth_q1q2_qwen3827b_with_mtp_since_the_unsloth/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw1k63/unsloth_q1q2_qwen3827b_with_mtp_since_the_unsloth/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "c48e4c0554903644",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AMD Users: Have you tried the llamma.cpp AMD-Ecosystem branch? Up to 2x PP Speed",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw16z9/amd_users_have_you_tried_the_llammacpp/",
+    "published": "2026-08-23T08:05:40+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>AMD has it's own llama.cpp branch: <a href=\"https://github.com/AMD-Ecosystem/llama.cpp\">https://github.com/AMD-Ecosystem/llama.cpp</a><br /> And despite the Deprecation warning it's actively maintained (things are later upstreamed to the normal llama.cpp).</p> <p>What i noticed with my Strix Halo:<br /> It has some interesting new patches (if you use ROCm/Hip)<br /> The Prompt Processing speed with dense model is sometimes over 2 times faster ! I get around 550 tokens/s with a 14B dense compared to 230 with the normal llama.cpp. However TG is around 15% slower than with Vulkan.</p> <p>MoE speed is the same.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/PromptInjection_\"> /u/PromptInjection_ </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw16z9/amd_users_have_you_tried_the_llammacpp/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw16z9/amd_users_have_you_tried_the_llammacpp/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "6bf47b413f37fbf3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Best model you can run on a 16gb phone?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw3g70/best_model_you_can_run_on_a_16gb_phone/",
+    "published": "2026-08-23T10:18:02+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Qwen 3.5 9B q6? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ikkiyikki\"> /u/ikkiyikki </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw3g70/best_model_you_can_run_on_a_16gb_phone/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw3g70/best_model_you_can_run_on_a_16gb_phone/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "333e2da43b34e96f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Agent Quest now tells you when Claude Code or Codex needs you visually and with sound",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvzo4v/agent_quest_now_tells_you_when_claude_code_or/",
+    "published": "2026-08-23T06:38:14+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvzo4v/agent_quest_now_tells_you_when_claude_code_or/\"> <img alt=\"Agent Quest now tells you when Claude Code or Codex needs you visually and with sound\" src=\"https://preview.redd.it/p3x2sundl2lh1.gif?width=640&amp;crop=smart&amp;s=5f086c6fc040467f6fc157b429f4df3e59df02b7\" title=\"Agent Quest now tells you when Claude Code or Codex needs you visually and with sound\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>A few weeks ago I shared <strong>Agent Quest</strong>, my open-source experiment that turns Claude Code and Codex sessions into heroes living inside a small 2D world.<br /> The original idea was mainly about making it easier to understand what multiple agents were doing in real time.</p> <p>Since then, I’ve been working on making it actually useful as a monitoring tool.<br /> The biggest change is that Agent Quest can now clearly tell you when an agent needs your attention.</p> <p>You can distinguish when an agent is:<br /> actively working<br /> waiting for your input<br /> finished<br /> stopped because of an error<br /> And you don’t have to keep the dashboard in front of you.</p> <p>Agent Quest can now alert you with <strong>visual notifications and different sounds</strong>, so while you’re doing something else you can immediately understand whether Claude Code or Codex has finished a turn and is waiting for you to continue.<br /> This has become particularly useful for me when I have several sessions running at the same time. Instead of constantly switching between terminals to check their status, I can leave them running and Agent Quest tells me when I actually need to intervene.</p> <p>There are also in-app notifications, status indicators, desktop notifications, notification history and configurable sounds.</p> <p>The project is still completely open source.<br /> GitHub:<br /> <a href=\"https://github.com/FulAppiOS/Agent-Quest\">https://github.com/FulAppiOS/Agent-Quest</a></p>…",
+    "fetched_at": "2026-08-23T10:26:26.974652+00:00"
   }
 ]
