@@ -188,5 +188,115 @@
     "published": "2026-08-23T06:38:14+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vvzo4v/agent_quest_now_tells_you_when_claude_code_or/\"> <img alt=\"Agent Quest now tells you when Claude Code or Codex needs you visually and with sound\" src=\"https://preview.redd.it/p3x2sundl2lh1.gif?width=640&amp;crop=smart&amp;s=5f086c6fc040467f6fc157b429f4df3e59df02b7\" title=\"Agent Quest now tells you when Claude Code or Codex needs you visually and with sound\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>A few weeks ago I shared <strong>Agent Quest</strong>, my open-source experiment that turns Claude Code and Codex sessions into heroes living inside a small 2D world.<br /> The original idea was mainly about making it easier to understand what multiple agents were doing in real time.</p> <p>Since then, I’ve been working on making it actually useful as a monitoring tool.<br /> The biggest change is that Agent Quest can now clearly tell you when an agent needs your attention.</p> <p>You can distinguish when an agent is:<br /> actively working<br /> waiting for your input<br /> finished<br /> stopped because of an error<br /> And you don’t have to keep the dashboard in front of you.</p> <p>Agent Quest can now alert you with <strong>visual notifications and different sounds</strong>, so while you’re doing something else you can immediately understand whether Claude Code or Codex has finished a turn and is waiting for you to continue.<br /> This has become particularly useful for me when I have several sessions running at the same time. Instead of constantly switching between terminals to check their status, I can leave them running and Agent Quest tells me when I actually need to intervene.</p> <p>There are also in-app notifications, status indicators, desktop notifications, notification history and configurable sounds.</p> <p>The project is still completely open source.<br /> GitHub:<br /> <a href=\"https://github.com/FulAppiOS/Agent-Quest\">https://github.com/FulAppiOS/Agent-Quest</a></p>…",
     "fetched_at": "2026-08-23T10:26:26.974652+00:00"
+  },
+  {
+    "id": "82f7f9a8bcf9452f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "1/100 → 44/100: fine-tuning a 450M VLM on 50K browser screenshots",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw9k4k/1100_44100_finetuning_a_450m_vlm_on_50k_browser/",
+    "published": "2026-08-23T15:04:50+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw9k4k/1100_44100_finetuning_a_450m_vlm_on_50k_browser/\"> <img alt=\"1/100 → 44/100: fine-tuning a 450M VLM on 50K browser screenshots\" src=\"https://preview.redd.it/qsbfrbjp35lh1.jpg?width=140&amp;height=93&amp;auto=webp&amp;s=81b5cb646bb34ad925afb01a2de4d5d87c8eed4f\" title=\"1/100 → 44/100: fine-tuning a 450M VLM on 50K browser screenshots\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ButtercupLyn100\"> /u/ButtercupLyn100 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vw9k4k\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw9k4k/1100_44100_finetuning_a_450m_vlm_on_50k_browser/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "f2875672bc50d8c1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27B for actual local programming",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw8vuh/qwen_38_27b_for_actual_local_programming/",
+    "published": "2026-08-23T14:38:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Most YouTube benchmarks only show trivial tasks like generating landing pages or simple Three.js games. Is a local model like Qwen 3.8 27B actually capable of real-world systems programming—such as building GTK4 or Qt 6 applications in Rust or C++ with external libraries? Specifically, if I look up the exact terminology in the online docs and then prompt the AI to inspect the cloned repo, can it implement the feature cleanly?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MongoWithBongoss\"> /u/MongoWithBongoss </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw8vuh/qwen_38_27b_for_actual_local_programming/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw8vuh/qwen_38_27b_for_actual_local_programming/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "4ad953f7fa5dfac3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.5-9B Triple-Loop",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw6nba/qwen359b_tripleloop/",
+    "published": "2026-08-23T13:02:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I was fascinated by Nanbeige's outstanding performance for its size, so I started digging into how much a model can improve its own representation just by looping over itself (for fun). My prototype was a Qwen3-0.6B with a full dual loop in the middle layers, inspired by the Nanbeige 4.2 architecture. Digging further, I found that the Nanbeige team has a paper describing their 4.5 architecture, which uses a triple loop in the middle layers — that made sense to me, so I tried it.</p> <p><a href=\"https://huggingface.co/Lordnyx/qwen3.5-9b-triple-loop-fase1\">Lordnyx/qwen3.5-9b-triple-loop-fase1 · Hugging Face</a></p> <p>The first experiment used full DeltaNet for the middle layers, so the earlier part of the model would set up the context for the loop to process on its own. It turned out that this actually worked better than having multiple separate logic components — but the loop itself wasn't really contributing. Because of DeltaNet's nature and the small hidden size, the model kept forgetting essential details for the task and just hallucinated. I abandoned the DeltaNet idea, and full softmax attention in the loop worked as expected instead.</p> <p>Later, I learned (with help from ChatGPT/Claude/Gemini) that my training setup was actually undermining the loop's contribution, and that I should have used a lower, dedicated learning-rate schedule for it. Once I fixed that, the loop stopped just &quot;refining&quot; answers and started actually participating — becoming essential to them. Even better: on easy-enough questions, the loop could be skipped entirely.</p> <p>Recently I found Modal — $30 of free GPU credit. I used it to train a Qwen3.5-9B with the Nanbeige-4.5-style triple loop. I really wanted to use RL for this, but I can barely get RL to run efficiently even on a 0.6B locally, let alone a 9B — so instead I distilled Qwen3.8-27B's logits into the loop, on a heuristically curated agentic/reasoning dataset.</p> <p>Money ran out…",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "5e5aa15f315325b7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GMKtec is going to launch new hardware with Ryzen AI Max+ PRO 495 at IFA Berlin 2026",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw55zn/gmktec_is_going_to_launch_new_hardware_with_ryzen/",
+    "published": "2026-08-23T11:51:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw55zn/gmktec_is_going_to_launch_new_hardware_with_ryzen/\"> <img alt=\"GMKtec is going to launch new hardware with Ryzen AI Max+ PRO 495 at IFA Berlin 2026\" src=\"https://external-preview.redd.it/ewddJf1ORnqxBpP8HzP1Ef8ert4BxLEqyveHzTWYbwU.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=2c50e21162365c40738971f3e42123b6d919b5b1\" title=\"GMKtec is going to launch new hardware with Ryzen AI Max+ PRO 495 at IFA Berlin 2026\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fairydreaming\"> /u/fairydreaming </a> <br /> <span><a href=\"https://de.gmktec.com/en/blogs/news/gmktec-unveils-next-gen-ai-computing-at-ifa-berlin-2026\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw55zn/gmktec_is_going_to_launch_new_hardware_with_ryzen/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "ec1848c1605cc8c1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B NVFP4 with vision + 451K token KV-cache on one RTX 5090 (power limited to 400W) at 120 tokens/s average",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw5q47/qwen3827b_nvfp4_with_vision_451k_token_kvcache_on/",
+    "published": "2026-08-23T12:19:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello,</p> <p>So I've been trying lots of combinations in that never-ending landscape of options and settings.</p> <p>I wanted a proper quant of 3.8 27B running as fast as possible on my 5090 at 400W, with vision and with as much KV-cache as possible and with concurrency enabled (aiming at 3 parallel sessions).</p> <p><strong>tl;dr</strong>: I'm using this setup and it works very well, very fast and is accurate in coding sessions.</p> <p>---</p> <p>vLLM is the obvious choice, even if not user-friendly at first, once it runs, it runs well.</p> <p>I tried fancy DSpark / DFlash2 but the cost in context size wasn't worth the marginal gains vs MTP=3.</p> <p><strong>Here is a full NVFP4 setup (model and cache):</strong></p> <p>Model: <a href=\"https://huggingface.co/gittensor-model-hub/Qwen3.8-27B-NVFP4-RTX5090\">https://huggingface.co/gittensor-model-hub/Qwen3.8-27B-NVFP4-RTX5090</a></p> <p>Context: 196K per session / 451K global KV-cache (NVFP4)</p> <p>Speed: conservative average at 120 tps.</p> <table><thead> <tr> <th align=\"left\">prompt</th> <th align=\"left\">pp t/s</th> <th align=\"left\">ttfr (ms)</th> <th align=\"left\">tg64 t/s</th> </tr> </thead><tbody> <tr> <td align=\"left\">4K</td> <td align=\"left\">11,388</td> <td align=\"left\">352</td> <td align=\"left\">130</td> </tr> <tr> <td align=\"left\">8K</td> <td align=\"left\">10,475</td> <td align=\"left\">765</td> <td align=\"left\">150</td> </tr> <tr> <td align=\"left\">16K</td> <td align=\"left\">8,750</td> <td align=\"left\">1,830</td> <td align=\"left\">126</td> </tr> <tr> <td align=\"left\">32K</td> <td align=\"left\">6,790</td> <td align=\"left\">4,714</td> <td align=\"left\">131</td> </tr> <tr> <td align=\"left\">64K</td> <td align=\"left\">4,729</td> <td align=\"left\">13,535</td> <td align=\"left\">111</td> </tr> <tr> <td align=\"left\">128K</td> <td align=\"left\">2,932</td> <td align=\"left\">43,661</td> <td align=\"left\">107</td> </tr> <tr> <td align=\"left\">185K</td> <td align=\"left\">2,194</td> <td align=\"left\">84,306</…",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "4f2a6be1b073f3c1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I trained a game music generator",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw6zsq/i_trained_a_game_music_generator/",
+    "published": "2026-08-23T13:18:15+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I trained a instrumental game music generator. The 1.2B DiT was trained on 1 cloud H100 from scratch in 8 days; I used the VAE from Stable Audio 3.</p> <p><a href=\"https://huggingface.co/Localsong/Localsong\">https://huggingface.co/Localsong/Localsong</a></p> <p><a href=\"https://huggingface.co/Localsong/Localsong/tree/main/samples\">https://huggingface.co/Localsong/Localsong/tree/main/samples</a></p> <p><a href=\"https://huggingface.co/Localsong/Localsong/blob/main/samples_new/The%20First%20Climb.mp3\">https://huggingface.co/Localsong/Localsong/blob/main/samples_new/The%20First%20Climb.mp3</a></p> <p>I'm aiming to cover a wider range of instrumental styles than Ace-Step or Minimax M3 or Stable Audio 3. (No lyrics)</p> <p>The repo includes a WebUI and some MP3 samples - clone it and uv run webui.py Let me know what you think.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Amazing-You9339\"> /u/Amazing-You9339 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw6zsq/i_trained_a_game_music_generator/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw6zsq/i_trained_a_game_music_generator/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "5db3c09f0a2690e4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Has anyone tried agent-lightning?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwazhv/has_anyone_tried_agentlightning/",
+    "published": "2026-08-23T16:00:31+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vwazhv/has_anyone_tried_agentlightning/\"> <img alt=\"Has anyone tried agent-lightning?\" src=\"https://external-preview.redd.it/f4HqXQgXVczt66_VblxBKvN99z61l-EZp2jYttyy2Y0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=65e2b53aa7ea8de49545d1a107173c3bf4d84446\" title=\"Has anyone tried agent-lightning?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MrMrsPotts\"> /u/MrMrsPotts </a> <br /> <span><a href=\"https://github.com/microsoft/agent-lightning\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vwazhv/has_anyone_tried_agentlightning/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "9ac5f9866b3ea933",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ling Tiny, King of Speed",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw9lp9/ling_tiny_king_of_speed/",
+    "published": "2026-08-23T15:06:31+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw9lp9/ling_tiny_king_of_speed/\"> <img alt=\"Ling Tiny, King of Speed\" src=\"https://preview.redd.it/b9xtypf245lh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=9f657621916dedf8b73100a1e8118eca35ba5ad7\" title=\"Ling Tiny, King of Speed\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Ling Tiny has now replaced Gemma4-12B in my rig as an auxiliary model doing hindsight operations. This is on a 4060Ti, which is a reasonable GPU available out there, and the speed is phenomenal. </p> <p>Don’t enable MTP, set up the vLLM fork for BailingMoE3. Hope this is useful to<br /> others. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Badger-Purple\"> /u/Badger-Purple </a> <br /> <span><a href=\"https://i.redd.it/b9xtypf245lh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw9lp9/ling_tiny_king_of_speed/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "a947098a8ecf63d4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What is your worst sandboxing fail?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw3rjp/what_is_your_worst_sandboxing_fail/",
+    "published": "2026-08-23T10:36:00+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I am wondering if I am too paranoid about sandboxing the commands that come out of LLMs.</p> <p>It really makes my eyes twitch when I see that some IDEs, even commercial, tend to forget that they have to execute things in sandboxing and have such a brittle security model.</p> <p>But on the other hand, I never had the sandbox catch something bad. Did you guys ever encounter terrible regression? Did you have <code>rm -rf /</code> ? Did you have secrets stolen by LLMs? The worse I had were unsollicited rewrites within the project. Am I making my life unnecessarily hard by sandboxing commands in a docker? </p> <p>At one point I had fun making a local model go crazy with the root access to the machine it was on (with nothing more important than a free Firecrawl key on it) and making it administer it and it never broke anything. It even was overly paranoid about making changes to the root system.</p> <p>So the approximate sandboxing that we have, do you all feel it is adequate or it is a catastrophe in the making?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/keepthepace\"> /u/keepthepace </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw3rjp/what_is_your_worst_sandboxing_fail/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw3rjp/what_is_your_worst_sandboxing_fail/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "50dc5b129a37694c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "DeepSeek V4 Flash on an M2 Ultra: repacked to 141 GiB losslessly, smaller than the Q4 GGUF, at 25.8 t/s (42 t/s peak)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw4qzf/deepseek_v4_flash_on_an_m2_ultra_repacked_to_141/",
+    "published": "2026-08-23T11:28:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>This is one more vibe slopped custom optimization for, in this case, my hardware (m2 ultra 60 cores, 192gb). It is just a fork from llama.cpp with a few changes, it achieves:</p> <p>- DeepSeek V4 Flash, no kv cache quant</p> <p>- 141GiB model, byte-identical lossless, smaller than the public GGUFs (more room for context!)</p> <p>- Faster than even the M3 Ultra (16 t/s vs 25 t/s)</p> <p>- SSD KV cache and dynamic lanes, 1M context total, 8 lanes</p> <p>- PP is a bit low at ~350 t/s at 8k-32k, but SSD cache compensates for it a lot... but we could probably push this number higher, lot of compute being left on the table</p> <p><a href=\"https://github.com/Agusx1211/llama-cpp-ds4f-m2-ultra\">https://github.com/Agusx1211/llama-cpp-ds4f-m2-ultra</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Agusx1211\"> /u/Agusx1211 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw4qzf/deepseek_v4_flash_on_an_m2_ultra_repacked_to_141/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw4qzf/deepseek_v4_flash_on_an_m2_ultra_repacked_to_141/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "eb0e5cff35d362bb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Thinking about replacing my 16GB 5060ti with an RX 7900 XT.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vw79jv/thinking_about_replacing_my_16gb_5060ti_with_an/",
+    "published": "2026-08-23T13:30:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Who else has made the switch from CUDA to RoC/Vulkan, and what did you learn? I've primarily been using oobabooga's TextGen and Open-WebUI with Webui Forge Neo for any for image generation. </p> <p>Edit to add: I appreciate everyone recommending a 2nd 5060ti. I'm looking to switch because my current 5060ti intermittently black screens (needing a reboot) when it's under any heavy load. I've troubleshot the issue for 8 months with no progress. I am going to turn it in for a warranty service, but hopefully you can understand my hesitancy to get another 5060ti right now.</p> <p>I also have the opportunity to switch for &quot;used 2023&quot; prices!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/InfinitelyRepeating\"> /u/InfinitelyRepeating </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw79jv/thinking_about_replacing_my_16gb_5060ti_with_an/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vw79jv/thinking_about_replacing_my_16gb_5060ti_with_an/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
   }
 ]

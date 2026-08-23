@@ -1,0 +1,32 @@
+[
+  {
+    "id": "328a3992caf48f39",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Meet FreeToken: An Edge-Native MoE Serving Engine that Runs 753B GLM-5.2 on a Single Workstation GPU",
+    "url": "https://www.marktechpost.com/2026/08/23/meet-freetoken-an-edge-native-moe-serving-engine-that-runs-753b-glm-5-2-on-a-single-workstation-gpu/",
+    "published": "2026-08-23T10:44:59+00:00",
+    "summary": "<p>FreeToken splits MoE cache misses between PCIe fills and CPU execution using measured bandwidths, unlocking frontier models locally</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/23/meet-freetoken-an-edge-native-moe-serving-engine-that-runs-753b-glm-5-2-on-a-single-workstation-gpu/\">Meet FreeToken: An Edge-Native MoE Serving Engine that Runs 753B GLM-5.2 on a Single Workstation GPU</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "27fc7d0fd14bc28e",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Building an End-to-End Document Intelligence Pipeline with deepDoctection",
+    "url": "https://www.marktechpost.com/2026/08/23/building-an-end-to-end-document-intelligence-pipeline-with-deepdoctection/",
+    "published": "2026-08-23T07:51:22+00:00",
+    "summary": "<p>Build an end-to-end document intelligence pipeline with deepDoctection. This tutorial covers configuring layout analysis, DocTR OCR, and table extraction, while demonstrating how to implement custom services for entity recognition and generate structured JSONL data for your RAG workflows.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/23/building-an-end-to-end-document-intelligence-pipeline-with-deepdoctection/\">Building an End-to-End Document Intelligence Pipeline with deepDoctection</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  },
+  {
+    "id": "9394a000155a4fd0",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Vercel Introduces ‘Is Agentic’, a Free Agent-Readiness Scoring Tool That Audits Public Websites Using Ora’s 100+ Checks",
+    "url": "https://www.marktechpost.com/2026/08/23/vercel-introduces-is-agentic-a-free-agent-readiness-scoring-tool-that-audits-public-websites-using-oras-100-checks/",
+    "published": "2026-08-23T07:37:14+00:00",
+    "summary": "<p>Vercel and Ora launched Is Agentic, a free audit scoring website readiness for AI agents across 118 checks.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/23/vercel-introduces-is-agentic-a-free-agent-readiness-scoring-tool-that-audits-public-websites-using-oras-100-checks/\">Vercel Introduces &#8216;Is Agentic&#8217;, a Free Agent-Readiness Scoring Tool That Audits Public Websites Using Ora&#8217;s 100+ Checks</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-23T16:30:26.318318+00:00"
+  }
+]
