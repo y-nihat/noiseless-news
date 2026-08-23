@@ -1,0 +1,20 @@
+{
+  "slug": "inherent-faraday-research-agent",
+  "title": "Inherent's Faraday research agent and its Anthropic/OpenAI benchmark claim",
+  "status": "candidate",
+  "first_seen": "2026-08-23",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/"
+  ],
+  "follows": null,
+  "reason": "Fully verified this cycle (fresh verifier sub-agent, 8 searches/fetches) but ran out of cycle time before the adversarial falsifier pass, drafting and editor gate could run -- carried forward as a ready candidate, not a gate failure. Findings: Inherent (London, DeepMind-alumni-founded AI lab) raised a $50M seed round in May 2026, confirmed well beyond the 2-independent-source bar (tech.eu, UKTN, Index Ventures' own post, TechCrunch all independently corroborate). The company's claim that its 'Faraday' agent outperforms Claude Opus 4.8 and GPT-5.5 at replicating published research findings is Inherent's own self-designed/self-administered benchmark ('Replica'), sourced only to Inherent's own X post and relayed by TechCrunch -- no independent evaluator (METR or otherwise) found. Must be published, if at all, as an explicit vendor-claim, and per style.md Gate 1 the headline must rest on the confirmed funding/company-founding claims, not the outperformance claim. dedup-check clean (no matches) as of this cycle.",
+  "watch": [
+    "Any independent third-party evaluation (METR or similar) of the Faraday/Replica benchmark",
+    "A second outlet with its own reporting on the Anthropic/OpenAI comparison claim"
+  ],
+  "notes": [
+    "2026-08-23 c2: Verifier sub-agent completed (8 searches/fetches); funding claim confirmed, capability claim confirmed as vendor-claim-only. No falsifier pass run yet -- next cycle should run the falsifier, then draft if it survives, keeping the headline on the confirmed claims per style.md Gate 1."
+  ]
+}

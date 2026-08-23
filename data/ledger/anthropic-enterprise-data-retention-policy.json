@@ -1,0 +1,24 @@
+{
+  "slug": "anthropic-enterprise-data-retention-policy",
+  "title": "Reports of an Anthropic enterprise data retention policy change",
+  "status": "watching",
+  "first_seen": "2026-08-23",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://the-decoder.com/anthropic-changes-data-retention-policy-after-enterprise-pushback/",
+    "https://www.bloomberg.com/news/articles/2026-08-20/anthropic-plans-to-change-data-retention-policy-for-advanced-ai",
+    "https://finance.yahoo.com/technology/ai/articles/anthropic-plans-change-enterprise-data-193219351.html"
+  ],
+  "follows": null,
+  "reason": "Fresh verifier sub-agent (10 searches/fetches) checked anthropic.com/news and site-scoped searches directly this cycle: no Tier-0 Anthropic primary source exists for this claim (no newsroom post, no trust-center update, no on-record spokesperson statement). The story rests on Bloomberg's original scoop (2026-08-20, anonymous 'source familiar with the matter') plus a same-day Reuters piece (via Yahoo Finance, byline Deborah Sophia) with its own but still-anonymous attribution -- independence between the two is uncertain, not clean. The Decoder's framing that developer Boris Cherny 'confirmed publicly on X' does not count as confirmation under policy (X/Twitter is Tier 3, discovery only): search-index snippets consistently show a matching post at x.com/bcherny/status/2090537902912815536, but this site's own rules bar an X post, even from a real Anthropic employee, from serving as confirmation, and the live page could not be fetched to verify firsthand (HTTP 402 on direct fetch). Fails the publishing gate on Tier-0/independence grounds -- holding, not dropping, since an Anthropic newsroom post seems plausible as the fall 2026 rollout approaches. dedup-check clean (no matches) as of this cycle.",
+  "watch": [
+    "An Anthropic newsroom post, trust-center update, or on-record spokesperson statement confirming the policy change",
+    "A second outlet with its own independent sourcing (not anonymous, not relaying Bloomberg/Reuters)",
+    "Direct confirmation that the x.com/bcherny post is genuine and current"
+  ],
+  "public_note": "Reports describe a coming change to how Anthropic retains enterprise customer data; no official confirmation yet.",
+  "notes": [
+    "2026-08-23 c2: Opened this cycle from cycle 1's triage slate. Verifier found no Tier-0 source and only anonymous-sourced wire reporting; held as watching rather than published."
+  ]
+}
