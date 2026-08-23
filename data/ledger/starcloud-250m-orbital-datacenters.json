@@ -1,0 +1,18 @@
+{
+  "slug": "starcloud-250m-orbital-datacenters",
+  "title": "Starcloud raises $250 million to build data centers in orbit",
+  "status": "published",
+  "first_seen": "2026-08-23",
+  "published_at": "2026-08-23",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.businesswire.com/news/home/20260821884035/en/",
+    "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
+  ],
+  "follows": null,
+  "reason": null,
+  "watch": [],
+  "notes": [
+    "2026-08-23 c2: New standalone story. Surfaced via cycle 1's triage on 2026-08-23 (TechCrunch item, published 2026-08-21) but not yet verified then; carried forward and verified in cycle 2. dedup-check: exit 0, three moderate/coincidental matches only (ny-hochul-data-center-moratorium, horizon3-series-e-250m-valuation, zenity-series-c-125m-ai-agent-security), no shared source URLs, none genuinely related. Fresh verifier and independent adversarial falsifier both run this cycle: core funding/valuation/lead-investor/Nvidia-participation facts confirmed via Starcloud's own press release (Business Wire) plus TechCrunch's independent reporting; the specific Nvidia $25M figure and the $170M prior-round figure held at single-source (TechCrunch only) and explicitly attributed rather than stated as flat fact, since SpaceNews/GeekWire coverage of the same figures returned HTTP 403 to direct fetch for both sub-agents. No contradicting report, denial, or valuation dispute found anywhere. Starcloud Newsroom (via Business Wire) used as an unregistered Tier-0 source this cycle -- worth proposing for registration. style-gate: starcloud-250m-orbital-datacenters EN pass / TR pass."
+  ]
+}

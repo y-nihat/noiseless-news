@@ -1,0 +1,79 @@
+{
+  "slug": "starcloud-250m-orbital-datacenters",
+  "checked_at": "2026-08-23T22:55:00+00:00",
+  "method": "Fresh verifier sub-agent and independent adversarial falsifier sub-agent, both run in cycle 2 of the 2026-08-24 night loop (candidate carried forward from cycle 1's triage, which had not yet verified it). Business claim type applied to the funding/valuation/investor facts (>=2 independent Tier<=2 sources standard); announcement claim type applied to the orbital-deployment plan (Tier-0 primary source: Starcloud's own press release).",
+  "origin_items": [
+    "data/raw/2026-08-21/techcrunch-ai.json — 'Starcloud raises $250 million for orbital data centers as launch options dry up', surfaced in cycle 1's triage on 2026-08-23 and carried forward unverified"
+  ],
+  "claims": [
+    {
+      "text": "Starcloud raised $250 million in a new funding round at a $2.3 billion valuation",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed by Starcloud's own press release (Tier-0, distributed via Business Wire) headlined with both figures, independently corroborated by TechCrunch's own reporting (Tim Fernholz) which includes original, non-press-release CEO quotes. Falsifier separately fetched TechCrunch's live article and found the $250M/$2.3B figures stated consistently in the headline and body, despite the article's URL slug reading '200-million' (a stale CMS artifact, not a real number discrepancy) -- checked directly rather than taken on trust. At least 9 outlets found in total (Yahoo Finance, SiliconANGLE, Via Satellite, GeekWire, SpaceNews, Morningstar among them) report the same figures with no dissent.",
+      "evidence": [
+        "https://www.businesswire.com/news/home/20260821884035/en/",
+        "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
+      ]
+    },
+    {
+      "text": "The round was led by Manhattan West",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Named directly in both Starcloud's press release and TechCrunch's reporting (minor name-form variance: 'Manhattan West' vs 'Manhattan West Ventures', same entity).",
+      "evidence": [
+        "https://www.businesswire.com/news/home/20260821884035/en/",
+        "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
+      ]
+    },
+    {
+      "text": "Nvidia joined the round as a new investor",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Starcloud's press release names Nvidia as a new investor (no amount disclosed); TechCrunch independently confirms Nvidia's participation and adds a specific amount. Two independent sources for the fact of participation.",
+      "evidence": [
+        "https://www.businesswire.com/news/home/20260821884035/en/",
+        "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
+      ]
+    },
+    {
+      "text": "TechCrunch reported Nvidia's investment in the round at approximately $25 million",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Only TechCrunch gives a specific dollar figure for Nvidia's stake; the press release doesn't disclose one. SpaceNews and GeekWire also cover Nvidia's participation but both returned HTTP 403 to direct fetch for both the verifier and the falsifier, so their sourcing of the specific figure could not be independently checked -- treated as unconfirmed rather than assumed corroborating. Non-load-bearing detail, explicitly attributed rather than stated as flat fact.",
+      "evidence": [
+        "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
+      ]
+    },
+    {
+      "text": "The round extends a $170 million Series A that Starcloud raised in March 2026",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "TechCrunch states this directly; the falsifier found a secondary, non-media company-database reference consistent with it ('fastest unicorn in YC history') but without a clean citable URL, so this stays single-source and attributed rather than upgraded to confirmed. Non-load-bearing detail.",
+      "evidence": [
+        "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
+      ]
+    },
+    {
+      "text": "Starcloud plans to deploy Nvidia's upcoming Vera Rubin-generation chips in orbital data centers, targeting around 2028",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Starcloud's press release confirms the Vera Rubin Space-1 collaboration; TechCrunch independently confirms the ~2028 target with a direct CEO quote tying the timeline to SpaceX's Falcon 9 program being scheduled to end in 2028.",
+      "evidence": [
+        "https://www.businesswire.com/news/home/20260821884035/en/",
+        "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/"
+      ]
+    },
+    {
+      "text": "Starcloud builds data centers designed to operate in orbit, powered by solar energy",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Company description confirmed directly by Starcloud's own press release.",
+      "evidence": [
+        "https://www.businesswire.com/news/home/20260821884035/en/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Overall verdict: clear to publish. Tried to break every claim: found no contradicting report, denial, or valuation dispute anywhere in coverage (9+ outlets, all consistent). Confirmed Starcloud is the correct company (formerly Lumen Orbit, YC-backed, founded Jan 2024 in Redmond WA) with no name collision against unrelated 'Starcloud'-named entities. Confirmed the story is genuinely fresh (Business Wire and TechCrunch both timestamped 2026-08-21, two days before this check) and not recycled. Re-fetched TechCrunch directly to check the URL-slug '200-million' discrepancy: live headline/body consistently say $250M, a stale slug artifact, not a real conflict. Could not independently corroborate the specific Nvidia $25M figure beyond TechCrunch (SpaceNews/GeekWire both 403-blocked) -- reflected in that claim's single-source verdict rather than silently upgraded. Noted but did not pursue as a claim: real published expert skepticism exists about orbital data centers' cooling/thermodynamics economics (Futurism, IEEE Spectrum-adjacent commentary) -- interesting editorial context but not fetched to a citable URL within budget, so deliberately left out of the article rather than added unsourced.",
+  "dedup_check": "python -m noiseless.run dedup-check --title 'Starcloud raises $250 million for orbital AI data centers' --url (businesswire + techcrunch), run 2026-08-23 cycle 2: exit 0, three moderate/coincidental matches only (ny-hochul-data-center-moratorium — unrelated state regulatory story; horizon3-series-e-250m-valuation — unrelated cybersecurity company that happens to share the '$250 million' figure; zenity-series-c-125m-ai-agent-security — unrelated security startup). No shared source URLs with any match. Standalone new article justified. (A prior dedup-check in cycle 1's triage pass found the same coincidental horizon3 match.)"
+}
