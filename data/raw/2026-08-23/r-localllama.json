@@ -1,0 +1,12 @@
+[
+  {
+    "id": "e8e9416c366269c5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "3 experiments running dsv4-flash-0731 q4+ quants on 128GB RAM + ~60 GB VRAM (with a quite bad pcie infra) with an acceptable tgs and relatively acceptable pp speed",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vvrcx5/3_experiments_running_dsv4flash0731_q4_quants_on/",
+    "published": "2026-08-22T23:34:46+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The post describes some experiments I had while trying to desperately run deepseek-v4-flash-0731 4 bit+ quants on my machine which is supposed to support only q2 quants of the model, a or 2.xx bpw quants at best.</p> <p>Long story short , I wanted to have my tgs in the high twenties and my prompt processing at least in the 300s with 156K context to consider running it locally as my daily driver (hermes, coding and so on)</p> <p>First I describe my machine so you are in the picture - people seem to ignore the importance of putting your exact hw config but a small difference there can give huge performance variation - : intel <strong><em>gen 14 i5</em></strong> with <strong><em>20 usable pcie5 channels</em></strong>, <strong><em>ddr 5 128 GB</em></strong> total = 2 x 48 + 2 x 16 at 4400 , <strong><em>2 RTX3090 + 1 RTX3060</em></strong>, 2 <strong>DRAM-less</strong> <strong><em>SSD</em></strong>'s that can in theory read at 4.5 Gb/s</p> <p>The best I could get with the initial 4bit+ quants with the sidecar models was 7 tgs and around 20 pp, after pinning some layers to GPU's in the most optimal way I could and after implementing a redundant sidecar so cpu can read in parallel from my 2 ssd's at the same time , but it was not really helpful</p> <p>I cloned after that leloch's llama.cpp and I could get in the lower teen's tgs with AtomicChat 3bit quants</p> <p>But I wanted to run the 4 bit quants as they have mostly the original bit-identical experts.<br /> The issue was that they are bigger than my RAM (140+ GB). So , with the way llama.cpp is designed, running them would cause quite some cache misses reading from my not so fast SSD's . and I was back to less than 10 tgs.</p> <p>For me it was a bit &quot;strange&quot; that I have to go fetch from the SSD every token when my RAM + VRAM &gt;&gt; total model weight. So I was telling myself , even if i keep some space for cache and the scratch memory used for temporary ops and such, I shoul…",
+    "fetched_at": "2026-08-23T00:22:54.139657+00:00"
+  }
+]
