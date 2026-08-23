@@ -18,8 +18,9 @@
     "Any on-record statement or denial from Anthropic, Decart, Nvidia, or Sequoia"
   ],
   "open_obligation": true,
-  "revisit_after": "2026-08-23",
+  "revisit_after": "2026-08-26",
   "notes": [
-    "2026-08-16 c2: Published. Surfaced via fresh ingest (gnews-ai-chips-and-compute, calcalistech.com item). Full verifier + falsifier sub-agent pair. Unsigned deal with a pending outcome -- open_obligation set, revisit in about a week or sooner if fresh ingest surfaces a signing/collapse."
+    "2026-08-16 c2: Published. Surfaced via fresh ingest (gnews-ai-chips-and-compute, calcalistech.com item). Full verifier + falsifier sub-agent pair. Unsigned deal with a pending outcome -- open_obligation set, revisit in about a week or sooner if fresh ingest surfaces a signing/collapse.",
+    "2026-08-23 c6: revisit_after was due; rechecked. Fresh ingest (data/raw/2026-08-23/) has no Decart mentions. One WebSearch (no direct fetch -- final-cycle time constraint) surfaced an unconfirmed claim that Decart's founders were in 'final stages of signing' around 2026-08-18 -- not independently verified this cycle, not added to the article. Still no signing, closing, or collapse confirmed by any source. Deal remains unsigned/pending; revisit_after pushed to 2026-08-26 for a full verifier recheck rather than left overdue."
   ]
 }
