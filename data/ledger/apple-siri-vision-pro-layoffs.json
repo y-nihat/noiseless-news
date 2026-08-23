@@ -1,0 +1,25 @@
+{
+  "slug": "apple-siri-vision-pro-layoffs",
+  "title": "Reports of job cuts across Apple's Siri and Vision Pro teams",
+  "status": "watching",
+  "first_seen": "2026-08-21",
+  "published_at": null,
+  "langs": [],
+  "follows": null,
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-08-21/apple-cuts-jobs-in-siri-vision-pro-immersive-video-and-gaming-teams",
+    "https://techcrunch.com/2026/08/21/apple-is-reportedly-cutting-hundreds-of-jobs-from-siri-vision-pro-teams/"
+  ],
+  "public": true,
+  "public_note": "A single Bloomberg report describes job cuts across Apple's Siri and Vision Pro teams; Apple confirmed cuts occurred without disclosing numbers, and no independently-sourced outlet has confirmed the reported figures.",
+  "reason": "Wire-exclusive check (verification.md §2) run explicitly. Bloomberg (Mark Gurman, 2026-08-21, citing unnamed people familiar with the matter) reported Apple cut 200+ jobs across Vision Pro, Siri and related AI/software teams (~100 from Siri, ~100 from Vision Pro gaming/immersive-video), framed as a shift toward AI (new LLM-based Siri) and new hardware (smart glasses) and away from Vision Pro gaming/immersive video. Fresh verifier sub-agent fetched full text of 9to5Mac, TechCrunch and Engadget's coverage directly: all three explicitly attribute the reporting to Bloomberg, none has independent sourcing. The Week's coverage states Apple confirmed cuts occurred but declined to disclose the headcount -- Apple's own quoted language ('a limited number of existing roles', 'evolve our business') is generic and does not itself confirm the 200+/~100/~100 figures or the AI-refocus framing. Direct fetch of the Bloomberg article and of AppleInsider's coverage both returned HTTP 403; Bloomberg's content was characterized via outlets that quote/summarize it. No SEC filing or WARN Act notice found for this round of cuts (only unrelated older/different Apple WARN filings turned up). Per policy, business claims (layoffs) need >=2 independent Tier<=2 sources or a filing/document; only one origin (Bloomberg/Gurman) exists for every load-bearing figure. Not dropped: the claims are specific and falsifiable and Gurman has a strong Apple-scoop track record, so this is a corroboration gap, not a substance problem. dedup-check run against the real primary URL: no matches, exit 0 -- confirmed as a new, standalone candidate, not a duplicate.",
+  "watch": [
+    "A second Tier<=2 outlet publishing its own independently-sourced figures (not attributed to Bloomberg/Gurman)",
+    "Apple disclosing actual headcount on the record (earnings call, filing, or a statement beyond 'a limited number')",
+    "A WARN Act notice or other filing naming this round of cuts with headcount",
+    "Reuters, WSJ, CNBC or The Information running independent confirmation"
+  ],
+  "notes": [
+    "2026-08-23 c5: Opened from cycle 1's carried-forward triage slate. Fresh verifier sub-agent (21 tool calls) found a clean wire-exclusive collapse to Bloomberg alone; recommended HOLD without a falsifier pass (unambiguous single-source finding, same precedent as nvidia-poolside-license-deal and anthropic-meta-compute-deal -- watching entries don't need the full protocol when the verifier's finding is unambiguous). Adjacent-but-distinct lead noted for a later cycle, not folded in here: a separate Bloomberg-sourced report on an Apple AI executive reshuffle (Mike Rockwell taking over Siri from John Giannandrea, reporting to Craig Federighi) -- do not conflate with this layoffs story if it surfaces again."
+  ]
+}

@@ -1434,5 +1434,62 @@
       "sample_urls": [],
       "context": "Referenced only in reasoning, NOT cited as evidence in anthropic-ipo-preparations: NYT reportedly broke a ~$100B+/~$2T Anthropic IPO bankers figure (Aug 21) per wide, consistent secondary attribution, but two independent sub-agents (verifier and falsifier) both failed to obtain a direct, fetchable nytimes.com URL this cycle. Figure was dropped from the article rather than cited without a working deep link. Flagging nytimes.com for registration (Tier 2) and as a source worth a dedicated access-strategy check (paywall/crawl-blocking), since this is at least the second time tonight-adjacent reporting has traced to NYT without a usable URL."
     }
+  ],
+  "candidates_2026-08-23_c5": [
+    {
+      "domain": "musicbusinessworldwide.com",
+      "first_seen": "2026-08-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.musicbusinessworldwide.com/round-hill-sues-suno-and-anthropic-for-up-to-1bn-apiece-it-isnt-looking-to-settle/"
+      ],
+      "context": "Named-byline music-trade press with editorial standards; most detailed and directly-fetched single source for the Round Hill Music v. Suno / Round Hill Music v. Anthropic litigation (verifier for this cycle's not-yet-published candidate). Independent of the Variety/Billboard/Hollywood Reporter ownership group (all three are Penske Media). Propose Tier 2 registration."
+    },
+    {
+      "domain": "digitalmusicnews.com",
+      "first_seen": "2026-08-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.digitalmusicnews.com/2026/08/17/round-hill-suno-lawsuit-anthropic/"
+      ],
+      "context": "Named-byline music-trade press, editorially independent of Penske Media (Variety/Billboard/THR) and of MusicBusinessWorldwide -- a third independent origin for the Round Hill litigation story. Propose Tier 2 registration."
+    },
+    {
+      "domain": "musicweek.com",
+      "first_seen": "2026-08-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.musicweek.com/publishing/read/round-hill-music-sues-suno-and-anthropic-in-the-us/094763"
+      ],
+      "context": "UK music-trade press, named authors. Same Round Hill litigation story. Propose Tier 2 registration."
+    },
+    {
+      "domain": "law360.com",
+      "first_seen": "2026-08-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.law360.com/cases/6a835f83d5bc99d710a601e1?article_sidebar=1"
+      ],
+      "context": "Legal specialty press with a case-tracker page confirming a real, indexed docket exists for the Round Hill v. Suno matter -- used this cycle as independent, non-press-release-derived confirmation that a filing exists (mostly paywalled beyond the case-summary page). Has recurred as an origin across many prior night-run candidates without ever being registered (referenced in ledger notes going back weeks) -- worth the source-review pass finally evaluating it, paywall notwithstanding (same evidence-only-via-snippets treatment already given to MLex/Bloomberg Law).",
+      "verified": false
+    },
+    {
+      "domain": "9to5mac.com",
+      "first_seen": "2026-08-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://9to5mac.com/2026/08/21/apple-lays-off-200-people-across-vision-pro-and-siri-teams/"
+      ],
+      "context": "Apple-focused trade outlet, named byline (Chance Miller). Used this cycle to confirm Bloomberg is the sole origin for the Apple Siri/Vision Pro layoffs figures (explicitly cites 'Information Source: Bloomberg News') -- evidence of non-independence, not itself load-bearing for a confirmed claim, but a reliable attribution check. Not yet published as an article."
+    },
+    {
+      "domain": "theweek.in",
+      "first_seen": "2026-08-23",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.theweek.in/news/biz-tech/2026/08/22/apple-layoffs-iphone-maker-to-cut-200-jobs-half-of-it-from-a-single-product-division.html"
+      ],
+      "context": "Only outlet found this cycle stating plainly that Apple confirmed the Siri/Vision Pro cuts occurred but declined to disclose headcount -- load-bearing for the one 'confirmed' sub-claim in the apple-siri-vision-pro-layoffs watching entry. Not yet published as an article."
+    }
   ]
 }
