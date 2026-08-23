@@ -378,5 +378,15 @@
     "published": "2026-08-23T16:27:52+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey everyone!</p> <p>Last year, Mozilla released Orbit, an AI-powered browser summarizer hosted on a GCP server. After people started digging into the extension, they discovered things like backend endpoints such as store_result. Eventually, Mozilla discontinued the project.</p> <p>For the past month, I’ve been trying to rebuild Orbit from scratch, but with one major difference: Apogee is fully local and privacy-focused. Apogee doesn’t send or store your data. It can directly connect to your local Ollama instance for inference. I’ve also added WebGPU integration for Chrome and Transformers.js for Firefox to provide faster, local responses.</p> <p>It can summarize:</p> <ul> <li>Articles and websites</li> <li>YouTube and Billie videos</li> <li>Wikipedia articles</li> <li>Hacker News and Reddit threads</li> </ul> <p>You can check out the source code here:<br /> <a href=\"https://github.com/darshi1337/apogee\">https://github.com/darshi1337/apogee</a></p> <p>Install Apogee:</p> <p>Chrome: <a href=\"https://chromewebstore.google.com/detail/apogee/pgemlpomhkdcjjjcpnjlebalnfglomog\">https://chromewebstore.google.com/detail/apogee/pgemlpomhkdcjjjcpnjlebalnfglomog</a></p> <p>Firefox: <a href=\"https://addons.mozilla.org/en-US/firefox/addon/apogeeext/\">https://addons.mozilla.org/en-US/firefox/addon/apogeeext/</a></p> <p>Obviously it is far from complete. Would love to hear your feedback and suggestions!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/darshi1337\"> /u/darshi1337 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vwbpmu/mozilla_killed_orbit_i_rebuilt_it_locally/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vwbpmu/mozilla_killed_orbit_i_rebuilt_it_locally/\">[comments]</a></span>",
     "fetched_at": "2026-08-23T22:39:00.318521+00:00"
+  },
+  {
+    "id": "9157a8d4ca90a5d2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Any upcoming models to be excited about?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwkicx/any_upcoming_models_to_be_excited_about/",
+    "published": "2026-08-23T22:07:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'm kind of new to the community and this sub is my only source of information, so I'd thought of asking if there are any upcoming models you guys are looking forward to. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/zippydazoop\"> /u/zippydazoop </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vwkicx/any_upcoming_models_to_be_excited_about/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vwkicx/any_upcoming_models_to_be_excited_about/\">[comments]</a></span>",
+    "fetched_at": "2026-08-23T23:14:00.506139+00:00"
   }
 ]

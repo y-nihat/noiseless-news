@@ -1,0 +1,12 @@
+[
+  {
+    "id": "551169224d91f68a",
+    "source": "VentureBeat AI",
+    "tier": 2,
+    "title": "Enterprise AI agents are only as reliable as the messiest documents behind them",
+    "url": "https://venturebeat.com/orchestration/enterprise-ai-agents-are-only-as-reliable-as-the-messiest-documents-behind-them",
+    "published": "2026-08-23T23:00:00+00:00",
+    "summary": "<p>Enterprise AI has largely been built around context engineering. Teams connect enterprise systems, generate chunks and embeddings, build retrieval pipelines, and assemble the context needed by individual AI applications. While this approach works well for isolated assistants and copilots, it treats enterprise knowledge as application-specific context rather than a shared enterprise asset.</p><p>As organizations deploy more <a href=\"https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone\">AI applications and agents</a>, this model begins to break down. Different teams process the same documents, maintain separate embeddings and indexes, and create inconsistent representations of the same business knowledge. The challenge is no longer simply providing context to AI systems — it is managing enterprise knowledge itself.</p><h2><b>Why building context is not enough for enterprise AI</b></h2><p>The common approach to enterprise AI today is to build context for individual applications. Teams connect enterprise systems, process the required information, generate retrieval representations such as chunks and embeddings, and assemble the context an agent needs at runtime. While this works for a single application, it does not manage enterprise knowledge as a shared enterprise asset.</p><p>As organizations deploy more AI applications, this approach begins to break down for three reasons.</p><p>First, knowledge becomes inconsistent. Enterprise knowledge is distributed across many independent systems with different schemas, business definitions, and update cycles. The same product, customer, or business process may be described differently — or even contradict itself — across documents, Jira tickets, source code, CRM systems, and metadata. Extracting this information into context does not resolve these inconsistencies; it simply transfers them to the AI application, causing different agents to develop different und…",
+    "fetched_at": "2026-08-23T23:14:00.506139+00:00"
+  }
+]
