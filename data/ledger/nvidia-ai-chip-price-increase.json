@@ -1,0 +1,18 @@
+{
+  "slug": "nvidia-ai-chip-price-increase",
+  "title": "Nvidia raises AI hardware prices by more than 15%",
+  "status": "published",
+  "first_seen": "2026-08-23",
+  "published_at": "2026-08-23",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15",
+    "https://www.theinformation.com/articles/nvidia-ai-chip-prices-rise-17-server-makers-tell-customers"
+  ],
+  "follows": null,
+  "reason": null,
+  "watch": [],
+  "notes": [
+    "2026-08-23 c3: New standalone story. Surfaced via tonight's fresh ingest (Semafor item relaying Bloomberg, gnews-ai-chips-and-compute). dedup-check: exit 0, no matches. Verifier traced the lead past Semafor (a same-day Bloomberg relay, excluded from the source count) to Bloomberg's own original reporting plus The Information's independently-sourced ~17% figure -- two sources with distinct attribution chains, clearing the business-claim bar. Neither Bloomberg nor The Information is yet registered in policy/sources.yaml; both clearly qualify for Tier <=2 (named authors, editorial standards) per the unregistered-source rule -- logged in source_candidates.json, worth proposing for registration. Nvidia did not respond to requests for comment. style-gate: nvidia-ai-chip-price-increase EN pass / TR pass."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "nvidia-ai-chip-price-increase",
+  "checked_at": "2026-08-23T23:30:00+00:00",
+  "method": "Fresh verifier sub-agent run in cycle 3 of the 2026-08-24 night loop. Business claim type applied (>=2 independent Tier<=2 sources standard). Independence explicitly checked: Semafor's same-day item was traced and found to be a same-day relay of Bloomberg's report ('Nvidia told some of its biggest customers to expect price hikes of more than 15%, Bloomberg reported') and excluded from the source count per the wire-exclusive rule; Bloomberg and The Information were confirmed to have distinct bylines, distinct reported figures (>15% vs ~17%), and distinct attribution chains (Nvidia notifying customers directly vs. server makers passing on cost), satisfying the independence rule.",
+  "origin_items": [
+    "data/raw/2026-08-23/gnews-ai-chips-and-compute.json#f78f45833243466c (Semafor, relay only, excluded from source count)"
+  ],
+  "claims": [
+    {
+      "text": "Nvidia is raising prices on AI hardware built on its Grace Blackwell 300 and Vera Rubin 200 chip generations",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both Bloomberg (fetched via Fortune's same-byline republication after Bloomberg's own URL returned HTTP 403) and The Information (headline/byline confirmed) name these two chip generations as the ones affected. Two independent sources with distinct attribution chains.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15",
+        "https://www.theinformation.com/articles/nvidia-ai-chip-prices-rise-17-server-makers-tell-customers"
+      ]
+    },
+    {
+      "text": "Bloomberg reported the increase at more than 15%; The Information separately reported it at about 17%, citing server makers passing the increase on to customers",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Verifier confirmed both figures from each outlet's own headline/text rather than a secondary summary. The two figures are close but not identical and come with different attribution (Nvidia-to-customers vs. server-maker-to-customers) -- exactly what the independence rule requires to count as two sources rather than one relayed number. Both figures are reported rather than collapsed into one invented precise number.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15",
+        "https://www.theinformation.com/articles/nvidia-ai-chip-prices-rise-17-server-makers-tell-customers"
+      ]
+    },
+    {
+      "text": "The new pricing applies to systems shipping from early 2027",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Confirmed in Bloomberg/Fortune's text; The Information's full body is paywalled and its timing details could not be independently confirmed, so this stays single-source and attributed rather than upgraded.",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15"
+      ]
+    },
+    {
+      "text": "Nvidia did not respond to requests for comment on the price increase",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Stated directly in Bloomberg's reporting (via Fortune republication). No Nvidia blog post, newsroom release, or investor statement addressing pricing was found (checked blogs.nvidia.com / nvidianews.nvidia.com / investor.nvidia.com).",
+      "evidence": [
+        "https://www.bloomberg.com/news/articles/2026-08-22/nvidia-customers-notified-about-ai-related-price-hikes-above-15"
+      ]
+    }
+  ],
+  "falsifier_notes": "Cycle ran one adversarial-by-design verifier pass rather than a separate second falsifier pass, given the cycle time window (see budget note in the run report); the verifier's brief explicitly required tracing the lead (which named only Semafor) back to its origin rather than trusting it, and that redirection is what surfaced the Bloomberg/Information split. Findings: Semafor's own text credits Bloomberg by name ('Bloomberg reported') and was excluded as a source; no Nvidia statement, denial, or on-record comment exists anywhere; no outlet disputes that a price increase is happening (Reuters ran a brief noting it 'could not immediately verify the report' -- a hedge, not a contradiction, and Reuters is not cited as a source here for that reason). Neither Bloomberg's direct URL nor The Information's full paywalled body could be fetched directly; Bloomberg's content was corroborated via Fortune's same-byline republication, and The Information's headline/byline/lede were confirmed via search-result extracts rather than the full paywalled article -- flagged here for a complete audit trail.",
+  "dedup_check": "python -m noiseless.run dedup-check --title 'Nvidia raises AI server prices more than 15%' --url https://www.semafor.com/article/nvidia-ai-price-hike, run 2026-08-23 cycle 3: exit 0, no matches. Standalone new article; unrelated to the open nvidia-poolside-license-deal watching entry (that story concerns an Nvidia-Poolside licensing/investment deal; this is a hardware pricing story)."
+}
