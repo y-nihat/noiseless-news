@@ -1,0 +1,22 @@
+{
+  "slug": "huggingface-13b-sale-exploration",
+  "title": "Reports that Hugging Face is exploring a sale",
+  "status": "watching",
+  "first_seen": "2026-08-23",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://www.businessinsider.com/hugging-face-could-be-acquired-13-billion-2026-8"
+  ],
+  "follows": null,
+  "reason": "Fresh verifier sub-agent (19 searches/fetches) this cycle. Business Insider (Katie Roof, 2026-08-23) reports unnamed 'sources' say Hugging Face is exploring a sale that could value it at $13B+ (up from $4.5B in 2023) and has engaged a bank to gauge bidder interest -- direct fetch of the BI article itself was blocked, so the claims are reconstructed from search summaries and secondary aggregators. Every trace of this story leads back to Business Insider alone: MarketScreener and Digg both explicitly attribute to BI rather than reporting independently (Digg confirmed to be 'aggregating and repackaging the initial Business Insider scoop'); dedicated searches against Bloomberg, Reuters, The Information, Axios, TechCrunch and Wired found no separate original reporting. A search-summarizer artifact claiming 'Hugging Face did not immediately respond to a Reuters request for comment' could not be traced to any real Reuters URL and must not be treated as evidence of independent Reuters coverage. Hugging Face's own blog (registered Tier-0 source) was checked directly: no business/funding/acquisition post, no denial, no confirmation. Fails the business-claim bar (>=2 independent Tier<=2 sources) and the wire-exclusive check -- single-sourced to one outlet's anonymous-sourced scoop. The $4.5B-in-2023 baseline valuation checks out against TechCrunch/Axios reporting from that round, so the trajectory is plausible, but plausibility isn't confirmation. Holding, not dropping: a second outlet or a Hugging Face statement could arrive quickly given how large this story would be.",
+  "watch": [
+    "A second, independently-sourced report (not attributing to Business Insider) from Bloomberg, Reuters, The Information, Axios or similar",
+    "Any Hugging Face statement, denial or confirmation (blog, press channel, spokesperson, or CEO Clem Delangue on the record)",
+    "Any named bidder or bank surfacing in further reporting"
+  ],
+  "public_note": "Reports describe Hugging Face exploring a possible sale; no independent confirmation yet.",
+  "notes": [
+    "2026-08-23 c3: Opened this cycle from tonight's fresh ingest (Techmeme, linking Business Insider). Verifier found only the single Business Insider scoop with no independent corroboration; held as watching."
+  ]
+}

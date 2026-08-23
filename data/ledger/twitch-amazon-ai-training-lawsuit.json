@@ -1,0 +1,22 @@
+{
+  "slug": "twitch-amazon-ai-training-lawsuit",
+  "title": "A streamer's lawsuit over Twitch and Amazon's use of stream content for AI training",
+  "status": "candidate",
+  "first_seen": "2026-08-23",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://www.courthousenews.com/online-streamers-sue-twitch-amazon-over-generative-ai-training/",
+    "https://ppc.land/twitch-and-amazon-sued-over-2-years-of-undisclosed-ai-training/",
+    "https://www.engadget.com/2242283/twitch-amazon-hit-with-lawsuit-for-training-ai-with-streamers-content/"
+  ],
+  "follows": null,
+  "reason": "Fully verified this cycle (fresh verifier sub-agent, 12 searches/fetches) but ran out of cycle time before drafting and the editor gate -- carried forward as a ready candidate, not a gate failure. A real class-action complaint was located and corroborated: case 3:26-cv-08721, N.D. Cal., filed 2026-08-20, plaintiff Warren Pandiscia (a Connecticut-based Twitch streamer, ~900 followers) vs. Twitch Interactive, Inc. and Amazon.com, Inc. Primary document hosted by Courthouse News (direct fetch 403'd, but corroborated via Courthouse News's own article plus PPC Land, which states it cites the complaint directly and names plaintiff's counsel). Further corroborated by named-byline reports (Engadget, Insider Gaming). The 'Startup Fortune'/'Yahoo Tech' items that surfaced this in tonight's ingest are downstream aggregator rewrites, days behind the original filing coverage. Allegations (all must stay attributed to 'the complaint'/'Pandiscia alleges', never stated as fact): Twitch/Amazon scraped and used streamers' videos, clips and chat logs to train Amazon's generative AI models since at least 2024 without consent; this came to light only when Twitch disclosed a default-enabled opt-out toggle on 2026-08-12; four causes of action (breach of implied contract, unjust enrichment pled in the alternative, breach of express contract, California UCL/Bus. & Prof. Code section 17200); relief sought includes class certification, injunctive relief and damages. No Amazon/Twitch response to the suit itself found (a Twitch CPO quote about the opt-out design predates and is unrelated to the suit -- must not be framed as a response to it). Per policy section 10 (naming private individuals): Pandiscia is a private individual, named in accountable sources (the filing itself, named-byline reports) so the sourcing bar is met, but the draft should lean on 'the lead plaintiff, a Connecticut-based Twitch streamer' rather than centering his personal identity/backstory. This is litigation with no ruling yet -- when drafted, the ledger entry must carry open_obligation: true and a revisit_after date, per the standing obligation-to-follow-up rule. dedup-check clean (no matches) as of this cycle.",
+  "watch": [
+    "Any Amazon or Twitch response/motion filed in case 3:26-cv-08721",
+    "Class certification ruling or any settlement"
+  ],
+  "notes": [
+    "2026-08-23 c3: Verifier sub-agent completed (12 searches/fetches); primary filing located and independently corroborated across Courthouse News, PPC Land, Engadget and Insider Gaming. Ran out of cycle time before drafting/gate -- verification is complete, so cycle 4 (or later) can draft directly. Remember open_obligation: true + revisit_after when this is published, since it is a filed case with no ruling."
+  ]
+}
