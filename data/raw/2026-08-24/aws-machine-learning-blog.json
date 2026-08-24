@@ -28,5 +28,25 @@
     "published": "2026-08-24T15:53:03+00:00",
     "summary": "Metadata harmonization (standardizing labels, identifiers, and formats so datasets can work together) is still largely manual. This post shows how AI-powered metadata correction works in practice, covering two approaches, human-in-the-loop validation and autonomous agent-driven workflows, plus governance considerations for production deployment.",
     "fetched_at": "2026-08-24T16:41:36.050233+00:00"
+  },
+  {
+    "id": "ba0ceedfb0251d32",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Introducing new Ray capabilities on SageMaker HyperPod",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-new-ray-capabilities-on-sagemaker-hyperpod/",
+    "published": "2026-08-24T19:32:14+00:00",
+    "summary": "Amazon SageMaker HyperPod now offers managed Ray support on Amazon EKS. Create and monitor Ray clusters, connect JupyterLab and Code Editor notebooks to live clusters, get out-of-the-box observability, and run resilient distributed training and accelerated inference from SageMaker Studio, all with open-source KubeRay and standard Ray APIs.",
+    "fetched_at": "2026-08-24T22:00:12.517789+00:00"
+  },
+  {
+    "id": "6ff2b0e21587fa8f",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Democratizing institutional knowledge: Building an AI-powered knowledge management system with AWS",
+    "url": "https://aws.amazon.com/blogs/machine-learning/democratizing-institutional-knowledge-building-an-ai-powered-knowledge-management-system-with-aws/",
+    "published": "2026-08-24T18:59:15+00:00",
+    "summary": "Learn how to build a customizable, smart-caching knowledge management system on AWS that captures and delivers institutional (tribal) knowledge through a voice-first AI avatar. The accelerator uses Amazon Bedrock Knowledge Bases for retrieval-augmented generation and deploys in hours with AWS CloudFormation.",
+    "fetched_at": "2026-08-24T22:00:12.517789+00:00"
   }
 ]
