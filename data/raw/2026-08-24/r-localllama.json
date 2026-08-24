@@ -1,0 +1,12 @@
+[
+  {
+    "id": "a04e2c111b6a1c06",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Benchmark results: what is the best and fastest engine to run Qwen3.8-27B on macOS",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vwbyzr/benchmark_results_what_is_the_best_and_fastest/",
+    "published": "2026-08-23T16:37:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><blockquote> <p>WARNING: I think I made a mistake with <strong>omlx,</strong> and its results below seem to be without any kind of acceleration. I am rerunning them with <strong>Lightning MTP</strong> and <strong>ANE support for prefill.</strong> Will update the post once done.</p> </blockquote> <p>The new Qwen 3.8 27B is fantastic for local agentic use. The problem is, what makes it so good, being a dense model, also makes it slow. Many engines and versions of the model claim various speed increase. How true are those claim? And does a proven huge boost claim on a short synthetic test actually holds on real agentic work?</p> <p>I spent five days and over 100 GPU hours running rigorous repeatable agentic coding tests, collecting and comparing the data. 200 GB of models downloaded. Ended up with 20 Bubble Bobble clones on my disk, including the ones from failed tests. None of them good, but that wasn't the point.</p> <h1>My recommendation: MTPLX or llama.cpp+MTP</h1> <p>I ran the tests on 8-bit quants (GGUF or MLX), unquantised KV cache. 100k max response size, full 262k context, official Qwen coding sampler, official Qwen Jinja chat template.</p> <ol> <li>I first tested each engine with a short synthetic benchmark, to verify the installation, usage, results collection, and to verify the speed claims</li> <li>Then came the real test, with an agentic coding benchmark consisting of 4 phases/prompts; each engine was tested twice, at medium and xhigh reasoning effort:</li> <li>2.1. capturing requirements and writing the specification plan</li> <li>2.2. writing the implementation plan</li> <li>2.3. implementing the core functionality</li> <li>2.4. finishing the implementation with advanced functionality</li> <li>Last test, for prefill speed, was with a cold 128k token prompt test, with reasoning turned off and deterministic sample, repeated twice</li> </ol> <p>Test hardware: Apple Mac Studio, M2 Max, 96 GB unified memory.</p> <table><thead>…",
+    "fetched_at": "2026-08-24T00:59:00.787494+00:00"
+  }
+]
