@@ -1,0 +1,51 @@
+{
+  "slug": "nvidia-groq-3-lpx-full-production",
+  "checked_at": "2026-08-24T22:54:00+00:00",
+  "method": "Fresh verifier sub-agent + fresh adversarial falsifier sub-agent, both dispatched in cycle 2 of the 2026-08-24/25 night loop. Verifier located Nvidia's own newsroom release and CNBC's same-day on-record quotes, plus the December 2025 CNBC report on the original Nvidia-Groq deal. Falsifier direct-fetched the Nvidia release (confirmed it names Nebius and quotes Nebius's own CTO) and The Register's same-day independent-scrutiny piece, and separately surfaced Nvidia's December 2025 on-record denial that the Groq deal was a full acquisition (TrendForce), which the drafting step used to correct the background framing.",
+  "origin_items": [
+    "https://www.cnbc.com/2026/08/24/nvidia-says-groq-racks-will-be-online-this-year-after-20-billion-deal.html"
+  ],
+  "claims": [
+    {
+      "text": "Nvidia's Groq 3 LPX inference rack has entered full production, with Nebius as its first cloud launch partner.",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Nvidia's own newsroom release (Tier 0) states full production verbatim and names Nebius as launch partner; the release itself quotes Nebius's own CTO directly, so this is not one-sided vendor messaging -- Nebius cooperated in the announcement. CNBC's same-day, on-record coverage independently corroborates.",
+      "evidence": [
+        "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai",
+        "https://www.cnbc.com/2026/08/24/nvidia-says-groq-racks-will-be-online-this-year-after-20-billion-deal.html"
+      ]
+    },
+    {
+      "text": "Nvidia says broader deployment of Groq 3 LPX racks, including through Nebius, will begin before the end of 2026.",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "This specific timeline (\"online this year\") traces to an on-record quote from Nvidia senior director Dion Harris to CNBC. Nvidia's own release is more conservative -- it says Nebius \"plans to\" bring the rack onto its Token Factory platform without committing to a firm date. Confirmed as a statement Nvidia made (one on-record Tier-2 quote suffices for an announcement/statement claim); the article attributes the 'this year' timeline to Nvidia's statement rather than presenting it as a locked commitment.",
+      "evidence": [
+        "https://www.cnbc.com/2026/08/24/nvidia-says-groq-racks-will-be-online-this-year-after-20-billion-deal.html"
+      ]
+    },
+    {
+      "text": "Nvidia's relationship with Groq stems from a deal reported in December 2025 at roughly $20 billion; Nvidia said at the time it was licensing Groq's inference IP and hiring key Groq staff -- including founder Jonathan Ross and president Sunny Madra -- rather than acquiring Groq as a company, and Groq has continued to operate independently.",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Two independent Tier-2 sources: CNBC's Dec 24, 2025 report broke the ~$20B figure and initially framed it as an acquisition; TrendForce's Dec 29, 2025 report carries Nvidia CEO Jensen Huang's on-record correction ('we are not acquiring Groq as a company... licensing Groq's IP' and hiring staff). The falsifier pass caught that the original verifier draft would have flatly called this an 'acquisition,' which Nvidia itself disputed -- corrected before publication. Included as dated background, not presented as new news.",
+      "evidence": [
+        "https://www.cnbc.com/2025/12/24/nvidia-buying-ai-chip-startup-groq-for-about-20-billion-biggest-deal.html",
+        "https://www.trendforce.com/news/2025/12/29/news-nvidia-reportedly-denies-usd-20b-groq-acquisition-rumors"
+      ]
+    },
+    {
+      "text": "Nvidia says the Groq 3 LPX rack delivers about 3,400 output tokens per second at 100K context on Gemma 4 31B, roughly four times faster than the nearest alternative, per an Artificial Analysis benchmark Nvidia cited in its announcement.",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Figure is sourced to a benchmark Nvidia itself cites, not independently reproduced by press. The Register's same-day piece scrutinizes but does not dispute the number; it notes the test used a comparatively small, dense model (arguably a best case) and that Nvidia needs 64+ chips to match throughput a rival (Cerebras) hits with 1-2 chips on other workloads, with larger-model performance untested. Labeled vendor-claim per policy; Register's caveats included in the body for balance.",
+      "evidence": [
+        "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai",
+        "https://www.theregister.com/systems/2026/08/24/what-nvidias-first-groq-3-lpu-benchmarks-do-and-dont-tell-us-about-its-20b-gamble/5291880"
+      ]
+    }
+  ],
+  "falsifier_notes": "Falsifier direct-fetched the Nvidia release and confirmed 'full production' and the Nebius quote are verbatim, not paraphrase -- claim 1 survives. It flagged that 'online this year' traces only to a CNBC-relayed Nvidia spokesperson quote, not a Nebius-committed date in Nvidia's own release -- claim 2 worded to attribute this clearly to Nvidia's statement. It found Nvidia's Dec 2025 on-record denial that the Groq deal was a full 'acquisition' (non-exclusive IP license + key-staff hire; Groq stayed independent and later raised its own ~$650M round in May 2026) -- background claim reworded from the verifier's original 'acquisition' framing to reflect this. Benchmark claim (3,400 tok/s, 4x) survived: The Register contextualizes but does not contradict it. No denial or contradiction found on the production/timeline claim itself. Final falsifier verdict: clear to publish with the edits described above, which were applied.",
+  "dedup_check": "dedup-check run twice this cycle on this story (cycle 1's triage title and cycle 2's refined title + primary URL): both clean, no matches. Not a duplicate of any existing article or ledger entry."
+}

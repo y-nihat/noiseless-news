@@ -1,0 +1,23 @@
+{
+  "slug": "nvidia-groq-3-lpx-full-production",
+  "title": "Nvidia's Groq 3 LPX inference rack enters full production, Nebius named first launch partner",
+  "status": "published",
+  "first_seen": "2026-08-24",
+  "published_at": "2026-08-24",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai",
+    "https://www.cnbc.com/2026/08/24/nvidia-says-groq-racks-will-be-online-this-year-after-20-billion-deal.html",
+    "https://www.theregister.com/systems/2026/08/24/what-nvidias-first-groq-3-lpu-benchmarks-do-and-dont-tell-us-about-its-20b-gamble/5291880",
+    "https://www.cnbc.com/2025/12/24/nvidia-buying-ai-chip-startup-groq-for-about-20-billion-biggest-deal.html",
+    "https://www.trendforce.com/news/2025/12/29/news-nvidia-reportedly-denies-usd-20b-groq-acquisition-rumors"
+  ],
+  "follows": null,
+  "reason": null,
+  "watch": [],
+  "open_obligation": true,
+  "revisit_after": "2026-12-15",
+  "notes": [
+    "2026-08-24 c2: triaged in cycle 1 from CNBC coverage, verified and adversarially falsified in cycle 2. Falsifier corrected the verifier's initial 'acquisition' framing of the Dec 2025 Groq deal to reflect Nvidia's own on-record denial (non-exclusive IP license + key-staff hire, not a company acquisition). open_obligation set because Nvidia's own release does not commit to a firm date for broader deployment beyond 'this year' -- revisit near end of 2026 to check whether the wider Nebius rollout actually happened as stated."
+  ]
+}
