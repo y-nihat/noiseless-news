@@ -398,5 +398,35 @@
     "published": "2026-08-24T19:15:40+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>With vision enabled I am able to run at 150k context on a single RTX 3090 and the results are just amazing. I was even able to write a gmail plugin for DeepSeek harness with locally hosted Qwen 3.8 27b. Funny enough, when I had it write a search engine plugin it broke the dsh and I cannot even launch DeepSeek harness anymore lol. </p> <p>Kudos and shot out to the guy who wrote <a href=\"https://github.com/syv-ai/qwen38-27b-rtx3090\">https://github.com/syv-ai/qwen38-27b-rtx3090</a></p> <pre><code>26 turns · 489 steps| LLM 161m44s · Tool call 10m47s| TTFT avg 5.9s · 86 tok/s| Cache hit 0%| Input 35.7M tok · Output 586K tok </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/politefella0\"> /u/politefella0 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxch7l/qwen3827brtx3090/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxch7l/qwen3827brtx3090/\">[comments]</a></span>",
     "fetched_at": "2026-08-24T22:38:42.426931+00:00"
+  },
+  {
+    "id": "c1aff89fbffe2de0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[2608.16157] FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxjcsw/260816157_freetoken_efficient_edgenative_moe/",
+    "published": "2026-08-24T23:38:16+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxjcsw/260816157_freetoken_efficient_edgenative_moe/\"> <img alt=\"[2608.16157] FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution\" src=\"https://external-preview.redd.it/q3evP6JeDpAC2MdSQHWYxnCYTqbJkElIQsLFqVSdkss.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=de730fbf7ecace6df0036b21470c16a2d4feacfb\" title=\"[2608.16157] FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Source of Claims: <a href=\"https://x.com/Andy_ShuoYang/status/2090856976880472439\">https://x.com/Andy_ShuoYang/status/2090856976880472439</a></p> <blockquote> <p>Your gaming PC can now serve frontier models at interactive speed using official checkpoints without extreme quantization!</p> <p>Qwen3.6 35B → 8GB RTX 4060 laptop @ 39 tok/s</p> <p>DeepSeek-V4-Flash 284B → RTX 5090 desktop @ 22-25 tok/s</p> <p>GLM-5.2 753B → RTX PRO 6000 workstation @ 15 tok/s</p> <p>Run your claude code or codex now with frontier model for $0</p> <p>FreeToken is fast. Comparing to Ollama, we have 3–4× faster decode, and 6–30× faster prefill</p> <p>How? We introduce bandwidth-adaptive CPU–GPU execution + semantic-aware caching across agent turns.</p> </blockquote> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SteppenAxolotl\"> /u/SteppenAxolotl </a> <br /> <span><a href=\"https://arxiv.org/abs/2608.16157\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxjcsw/260816157_freetoken_efficient_edgenative_moe/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-24T23:48:43.009475+00:00"
+  },
+  {
+    "id": "399f6e00b437b1be",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Harness for non-coding tasks",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxhdjc/harness_for_noncoding_tasks/",
+    "published": "2026-08-24T22:17:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>What's the best harness for agentic workflows that's not coding related at all?</p> <p>My work involves digesting a set of documents, analyze/evaluate them, and produce certain set of work product documents, mostly for due diligence purposes. Right now Im working with Qwen3.8 27B on LM Studio backend and Open Webui frontend with Open Terminal.</p> <p>I'd love to be able to point the model to a folder and say &quot;go do your thing&quot; and have it do all the steps.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/cuoreesitante\"> /u/cuoreesitante </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxhdjc/harness_for_noncoding_tasks/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxhdjc/harness_for_noncoding_tasks/\">[comments]</a></span>",
+    "fetched_at": "2026-08-24T23:48:43.009475+00:00"
+  },
+  {
+    "id": "98a632a464ca6083",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I just tried DeepSeek Harness and it escaped from its workspace folder",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxi7gp/i_just_tried_deepseek_harness_and_it_escaped_from/",
+    "published": "2026-08-24T22:50:49+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>It worked pretty well, digging through and analyzing some local files. Claude code regularly stops at some point and fails to continue while DSH worked for 2 h, recognized that it could benefit from reading more context and ... bummer:</p> <p>It left the project folder (although DSH was set up correctly) and started to walk through my other files which I did never allow!</p> <p>I know, it is only a preview. But be warned. Do not expect it to follow simple rules.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Far_Note6719\"> /u/Far_Note6719 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxi7gp/i_just_tried_deepseek_harness_and_it_escaped_from/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxi7gp/i_just_tried_deepseek_harness_and_it_escaped_from/\">[comments]</a></span>",
+    "fetched_at": "2026-08-24T23:48:43.009475+00:00"
   }
 ]
