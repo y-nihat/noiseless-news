@@ -1,0 +1,49 @@
+{
+  "slug": "inherent-faraday-research-agent",
+  "checked_at": "2026-08-23T23:59:00+00:00",
+  "method": "Fresh verifier sub-agent (8 searches/fetches, cycle 2 of 2026-08-23) then fresh adversarial falsifier sub-agent (20 searches/fetches, cycle 3 of 2026-08-23), both complete. Cycle 4 (2026-08-23/24) re-checked tonight's fresh ingest (no new Inherent/Faraday items found), ran two additional targeted checks to obtain real deep links for the funding claim (a search) and to directly re-confirm the inherentlabs.ai primary page's content and date via live fetch, then drafted and editor-gated the article from the combined findings. Capability claim type per policy/verification.md §3: Inherent's own self-administered benchmark cannot be published as confirmed outperformance, only as an explicitly labeled vendor-claim.",
+  "origin_items": [
+    "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/ (surfaced cycle 2 of 2026-08-23)"
+  ],
+  "claims": [
+    {
+      "text": "Inherent, a London-based AI lab founded by DeepMind alumni, raised a $50 million seed round co-led by Index Ventures and Radical Ventures, which closed in May 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed independently by TechCrunch (cycle 2 verifier) and Index Ventures' own investor post (cycle 4 live search), consistent on the amount, co-leads and founding-team background; cycle 3's falsifier separately found 9+ outlets total covering the round (tech.eu, UKTN and others) with matching figures. Clears the >=2-independent-Tier<=2-sources business-claim bar well beyond the minimum.",
+      "evidence": [
+        "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+        "https://www.indexventures.com/perspectives/inherent-designing-for-discovery/"
+      ]
+    },
+    {
+      "text": "Inherent released an AI research agent called Faraday, built around a 27-billion-parameter model, on 14 August 2026, alongside a paper describing the Replica benchmark",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Directly fetched inherentlabs.ai/research/training-to-replicate live in cycle 4: page confirms the 14 August 2026 publish date, the 27B-parameter agent, and the Replica benchmark description. Tier-0 primary source, sufficient alone for an announcement claim per policy.",
+      "evidence": [
+        "https://inherentlabs.ai/research/training-to-replicate"
+      ]
+    },
+    {
+      "text": "Faraday directs the work of a separate, much larger model as a subordinate tool within its own pipeline, rather than operating as a standalone small model beating larger rivals unassisted",
+      "type": "capability",
+      "verdict": "confirmed",
+      "reasoning": "Inherent's own page states Faraday 'directs the work of a model several orders of magnitude larger'; cycle 3's falsifier separately identified the subordinate tool as OpenAI's GPT-5.5 Codex, called specifically to scope the story against an overstated 'tiny model beats giants unassisted' framing.",
+      "evidence": [
+        "https://inherentlabs.ai/research/training-to-replicate"
+      ]
+    },
+    {
+      "text": "Inherent says Faraday outperformed Claude Opus 4.8 and GPT-5.5 on the Replica benchmark (310 tasks drawn from 100 papers, replicating a published research figure under a time/compute budget); no independent third-party evaluation of this comparison has been published",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "The benchmark, task set, judge (Inherent's own LLM judge plus an in-house human study) and comparison are entirely self-designed and self-administered -- confirmed via direct fetch of inherentlabs.ai. Cycle 3's falsifier specifically searched for independent evaluation (METR, Vals AI, Artificial Analysis, academic replication) and found none. Per policy/verification.md §3, a capability claim without independent reproduction publishes only as a labeled vendor-claim, never as confirmed fact, and never in the headline.",
+      "evidence": [
+        "https://inherentlabs.ai/research/training-to-replicate"
+      ]
+    }
+  ],
+  "falsifier_notes": "Cycle 3's adversarial pass (20 searches/fetches) found no contradiction, denial or debunking of any claim; strengthened the funding claim to 9+ independent outlets; located the inherentlabs.ai Tier-0 primary (stronger than the X-post-only sourcing the cycle-2 verifier initially had) for the launch claim; re-confirmed the outperformance claim is unconfirmable independently despite a specific search for third-party evaluators. Cycle 4 did not re-run a full falsification pass, only re-checked for new developments (none found) and re-verified two source URLs live before drafting.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check run in cycle 2 of 2026-08-23 before opening: no matches against the archive. Not re-run in cycle 4 since drafting the same already-opened candidate."
+}

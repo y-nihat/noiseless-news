@@ -1,10 +1,12 @@
 {
   "slug": "twitch-amazon-ai-training-lawsuit",
   "title": "A streamer's lawsuit over Twitch and Amazon's use of stream content for AI training",
-  "status": "candidate",
+  "status": "published",
   "first_seen": "2026-08-23",
-  "published_at": null,
-  "langs": [],
+  "published_at": "2026-08-23",
+  "langs": ["en", "tr"],
+  "open_obligation": true,
+  "revisit_after": "2026-09-20",
   "source_urls": [
     "https://www.courthousenews.com/online-streamers-sue-twitch-amazon-over-generative-ai-training/",
     "https://ppc.land/twitch-and-amazon-sued-over-2-years-of-undisclosed-ai-training/",
@@ -17,6 +19,7 @@
     "Class certification ruling or any settlement"
   ],
   "notes": [
-    "2026-08-23 c3: Verifier sub-agent completed (12 searches/fetches); primary filing located and independently corroborated across Courthouse News, PPC Land, Engadget and Insider Gaming. Ran out of cycle time before drafting/gate -- verification is complete, so cycle 4 (or later) can draft directly. Remember open_obligation: true + revisit_after when this is published, since it is a filed case with no ruling."
+    "2026-08-23 c3: Verifier sub-agent completed (12 searches/fetches); primary filing located and independently corroborated across Courthouse News, PPC Land, Engadget and Insider Gaming. Ran out of cycle time before drafting/gate -- verification is complete, so cycle 4 (or later) can draft directly. Remember open_obligation: true + revisit_after when this is published, since it is a filed case with no ruling.",
+    "2026-08-23 c4: Re-checked tonight's fresh ingest before drafting -- only the same Startup Fortune/Yahoo Tech aggregator rewrites already characterized in c3, no new filings or statements. Drafted EN+TR directly from c3's completed verification, passed the editor gate, published. open_obligation: true, revisit_after 2026-09-20."
   ]
 }

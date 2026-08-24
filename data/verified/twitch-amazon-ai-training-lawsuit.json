@@ -1,0 +1,65 @@
+{
+  "slug": "twitch-amazon-ai-training-lawsuit",
+  "checked_at": "2026-08-23T23:40:00+00:00",
+  "method": "Fresh verifier sub-agent (12 searches/fetches) completed in cycle 3 of 2026-08-23; article drafted and put through the editor gate in cycle 4 of 2026-08-23/24 directly from that verification, per policy (a completed verification is not redone absent new developments). Cycle 4 re-checked tonight's fresh ingest before drafting: only the same downstream aggregator rewrites already characterized in cycle 3 (Startup Fortune, Yahoo Tech) appeared, no new filings or statements. Legal/litigation claim type per policy/verification.md §3 -- every allegation attributed to the complaint or to Pandiscia, never stated as adjudicated fact. Private-individual naming (§10) checked: plaintiff is named in accountable Tier≤2 sources (the filing itself, named-byline reports), the name is load-bearing for identifying the specific case, and the article states the case is at the filing stage with no ruling -- all three conditions met.",
+  "origin_items": [
+    "data/raw/2026-08-23/gnews-ai-litigation.json (Startup Fortune, Yahoo Tech aggregator rewrites, both days behind the original filing coverage and traced past as evidence candidates, not cited)"
+  ],
+  "claims": [
+    {
+      "text": "Twitch streamer Warren Pandiscia filed a class-action lawsuit against Twitch Interactive, Inc. and Amazon.com, Inc. in the U.S. District Court for the Northern District of California on 20 August 2026 (case 3:26-cv-08721)",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Courthouse News (which the complaint is hosted by) and PPC Land, which states it cites the complaint text directly and names plaintiff's counsel, both give matching case number, court, filing date and parties. Engadget independently corroborates with a named byline. Direct fetch of the Courthouse News article returned HTTP 403; the finding rests on the article's own indexed text plus the two corroborating outlets, not a full docket fetch.",
+      "evidence": [
+        "https://www.courthousenews.com/online-streamers-sue-twitch-amazon-over-generative-ai-training/",
+        "https://ppc.land/twitch-and-amazon-sued-over-2-years-of-undisclosed-ai-training/",
+        "https://www.engadget.com/2242283/twitch-amazon-hit-with-lawsuit-for-training-ai-with-streamers-content/"
+      ]
+    },
+    {
+      "text": "The complaint alleges Twitch and Amazon used streamers' videos, clips and chat logs to train Amazon's generative AI models since at least 2024, without streamers' consent",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "All three outlets independently describe the same core allegation with matching scope (video, clips, chat logs; since at least 2024). Framed throughout as an allegation of the complaint, not as an established fact -- no court has tested it.",
+      "evidence": [
+        "https://www.courthousenews.com/online-streamers-sue-twitch-amazon-over-generative-ai-training/",
+        "https://ppc.land/twitch-and-amazon-sued-over-2-years-of-undisclosed-ai-training/",
+        "https://www.engadget.com/2242283/twitch-amazon-hit-with-lawsuit-for-training-ai-with-streamers-content/"
+      ]
+    },
+    {
+      "text": "The complaint says the practice came to light when Twitch disclosed a default-enabled opt-out toggle for AI training on 12 August 2026",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "PPC Land and Engadget both date and describe the opt-out toggle disclosure consistently as the trigger cited in the complaint. A Twitch CPO quote discussing the toggle's design predates and is unrelated to the suit itself -- verifier excluded it from being framed as any kind of company response to the lawsuit.",
+      "evidence": [
+        "https://ppc.land/twitch-and-amazon-sued-over-2-years-of-undisclosed-ai-training/",
+        "https://www.engadget.com/2242283/twitch-amazon-hit-with-lawsuit-for-training-ai-with-streamers-content/"
+      ]
+    },
+    {
+      "text": "The complaint asserts four causes of action -- breach of implied contract, unjust enrichment pled in the alternative, breach of express contract, and violation of California's Unfair Competition Law (Bus. & Prof. Code § 17200) -- and seeks class certification, injunctive relief and damages",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "PPC Land's direct citation of the complaint text lists all four causes of action and the requested relief; Courthouse News corroborates the class-action framing and relief sought.",
+      "evidence": [
+        "https://www.courthousenews.com/online-streamers-sue-twitch-amazon-over-generative-ai-training/",
+        "https://ppc.land/twitch-and-amazon-sued-over-2-years-of-undisclosed-ai-training/"
+      ]
+    },
+    {
+      "text": "Neither Twitch nor Amazon has responded to the lawsuit, and no court has ruled on the allegations",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "No statement, motion or docket entry beyond the filing itself was found across all three outlets or in the verifier's own targeted searches for an Amazon/Twitch response to this specific suit.",
+      "evidence": [
+        "https://www.courthousenews.com/online-streamers-sue-twitch-amazon-over-generative-ai-training/",
+        "https://ppc.land/twitch-and-amazon-sued-over-2-years-of-undisclosed-ai-training/",
+        "https://www.engadget.com/2242283/twitch-amazon-hit-with-lawsuit-for-training-ai-with-streamers-content/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Not run as a separate pass this cycle -- cycle 3's verifier already searched adversarially for an Amazon/Twitch response and for any pre-existing coverage that would date this earlier (none found); cycle 4 independently re-checked tonight's fresh ingest for new developments before drafting and found only same-story aggregator rewrites already accounted for, and re-confirmed the CPO opt-out quote predates and does not respond to the suit.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check run in cycle 3 of 2026-08-23 before opening: no matches against the archive. Not re-run in cycle 4 since drafting the same already-opened candidate, not a new story."
+}
