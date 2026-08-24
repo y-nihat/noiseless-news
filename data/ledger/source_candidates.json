@@ -1511,5 +1511,16 @@
       ],
       "context": "Recurrence -- see candidates_2026-08-22_c2 (previously seen only relaying another outlet's scoop). This cycle it supplied its own independently-sourced figure (~17%, attributed to server makers rather than Nvidia directly) and was load-bearing Tier-2 evidence in the published nvidia-ai-chip-price-increase article. Paywalled beyond headline/byline/lede. Second occurrence, now with a genuine original-reporting example -- proposing Tier 1/2 registration."
     }
+  ],
+  "candidates_2026-08-24_c2": [
+    {
+      "domain": "trendforce.com",
+      "first_seen": "2026-08-24",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.trendforce.com/news/2025/12/29/news-nvidia-reportedly-denies-usd-20b-groq-acquisition-rumors"
+      ],
+      "context": "Used as Tier-2 evidence in nvidia-groq-3-lpx-full-production for Nvidia CEO Jensen Huang on-record quote denying the Dec 2025 Groq deal was a full acquisition (licensing + hires instead) -- the falsifier pass caught the verifier draft would otherwise have overstated it as an acquisition. Taiwan-based semiconductor/tech industry research and news outlet, named reporting, editorial standards, frequently cited across the industry for chip-supply-chain news. Propose Tier 2, type html (no feed URL checked this cycle)."
+    }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "slug": "anthropic-claude-tag-context-update",
+  "title": "Anthropic's Claude Tag full-context update (VentureBeat, Aug 24)",
+  "status": "dropped",
+  "first_seen": "2026-08-24",
+  "source_urls": [
+    "https://venturebeat.com/orchestration/anthropics-new-claude-tag-update-lets-its-slack-agent-read-the-full-conversation-and-jump-in-unprompted",
+    "https://claude.com/blog/claude-tag-now-reads-even-more-of-the-room"
+  ],
+  "follows": null,
+  "reason": "Verified by a fresh sub-agent in cycle 2 (2026-08-24): the underlying Anthropic change is dated 2026-08-13, eleven days before VentureBeat's 2026-08-24 piece; the base Claude Tag product launched 2026-06-23, replacing the older 'Claude in Slack' app. Fails the ~72h genuinely-new-item bar -- VentureBeat's article is delayed interview-driven coverage (on-record quotes from Scott White, Anthropic's head of product for enterprise) of an already-announced update, not first report of a new event. The claims themselves were otherwise well-sourced (Tier-0 Anthropic blog post at claude.com/blog/claude-tag-now-reads-even-more-of-the-room, plus independent on-record VentureBeat quotes): 'roughly 30% better' at deciding when to jump into a conversation is Anthropic's own figure with no published methodology (vendor-claim, not confirmed); expanded context does not currently count against usage/spend limits but Anthropic declined to commit to that staying permanent.",
+  "watch": [
+    "Independent (non-Anthropic, non-VentureBeat) outlet coverage of this specific update",
+    "A follow-up Anthropic post changing the usage-limit policy for the expanded context"
+  ],
+  "notes": [
+    "2026-08-24 c2: triaged as a candidate in cycle 1 (VentureBeat, Aug 24), dispatched to a fresh verifier sub-agent in cycle 2. Verifier traced the actual change to an Anthropic blog post dated 2026-08-13 and the base product launch to 2026-06-23 -- stale, dropped rather than published."
+  ]
+}
