@@ -1,0 +1,59 @@
+{
+  "slug": "stanford-ai-entry-level-jobs-gap",
+  "checked_at": "2026-08-24T23:33:00+00:00",
+  "method": "Fresh verifier sub-agent + fresh adversarial falsifier sub-agent, both dispatched in cycle 3 of the 2026-08-24/25 night loop. Verifier went directly to Stanford Digital Economy Lab's primary pages (Ars Technica, the discovery-lead outlet, was unreachable via WebFetch or archive.org across two independent agents and five combined attempts, so its framing is not relied on). Falsifier independently re-fetched the same Stanford pages and confirmed the key figures verbatim, then actively searched for rebuttals and found a genuine, independent counter-finding (NY Fed on remote work) that the draft below incorporates.",
+  "origin_items": [
+    "data/raw/2026-08-24/ars-technica-ai.json#entry-level-jobs-stanford-study"
+  ],
+  "claims": [
+    {
+      "text": "Young workers (ages 22-25) in the most AI-exposed occupations show an employment gap of about 19% versus similarly aged peers in less AI-exposed occupations, as of Stanford's August 12, 2026 data update -- up from about 13% when the study first published in August 2025.",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim on Stanford Digital Economy Lab's own Aug 12, 2026 page: 'Employment among workers ages 22-25 in highly AI-exposed occupations now stands about 19% below where it would be if it had kept pace with employment among similarly aged workers in less-exposed occupations.' The falsifier independently re-fetched and confirmed this verbatim, and separately confirmed via Aug 2025 press coverage (Forbes, Bloomberg, Axios, SF Chronicle) that the original figure was ~13%. Falsifier notes the number has moved with each revision (13% original, ~16% in Stanford's own controlled/robustness spec, 19% current uncontrolled topline) -- worded in the article as the current topline from the latest revision, not a fixed constant.",
+      "evidence": [
+        "https://digitaleconomy.stanford.edu/news/canariesaug26/"
+      ]
+    },
+    {
+      "text": "Experienced workers in the same AI-exposed occupations show no comparable employment gap, and the decline traces mainly to reduced hiring of young workers rather than increased departures of those already employed.",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim on the same Stanford page: 'Experienced workers show no comparable gap' and 'The adjustment appears to operate primarily through reduced hiring of young workers rather than increased separations.' Confirmed independently by both the verifier and falsifier on direct fetch.",
+      "evidence": [
+        "https://digitaleconomy.stanford.edu/news/canariesaug26/"
+      ]
+    },
+    {
+      "text": "The study's authors say they find no evidence of widespread, economy-wide job displacement from AI, and describe their findings as early, descriptive indicators rather than causal estimates.",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Verbatim: 'We do not see widespread, economy-wide job displacement associated with AI' and 'We interpret these facts as early, descriptive indicators -- canaries in the coal mine -- rather than causal estimates.' Falsifier confirmed both quotes appear prominently, not buried, on both the news page and the publication landing page.",
+      "evidence": [
+        "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+        "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+      ]
+    },
+    {
+      "text": "The study is a working paper, not yet peer-reviewed, authored by Stanford economists Erik Brynjolfsson, Bharat Chandar and Ruyu Chen, based on ADP payroll administrative data, and defines the affected group by age (22-25) within an occupation, not by job title or seniority.",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Stanford's own publication page labels it 'Working Paper' verbatim and names the authors. Verifier and falsifier both confirmed the ADP payroll data basis and the age-cohort (not job-title) definition directly from Stanford's pages; Fortune's June 27, 2026 piece independently corroborates the ADP/methodology detail with added specifics (co-researcher Nela Richardson, ~4.6M workers, 730+ occupations) from a source outside Stanford.",
+      "evidence": [
+        "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+        "https://fortune.com/2026/06/27/what-is-ai-impact-entry-level-jobs-stanford-adp-canaries-brynjolfsson-richardson/"
+      ]
+    },
+    {
+      "text": "Separate research from the Federal Reserve Bank of New York found that remote-work trends, not AI, account for the larger share of the broader rise in unemployment among recent college graduates -- a live, unresolved dispute among economists over how much of the pattern AI explains.",
+      "type": "research",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier located and confirmed the NY Fed / Liberty Street Economics research (reported by Fortune and PYMNTS) finding remote work is the larger driver, and NPR's Aug 18, 2026 piece framing this as an active, unresolved dispute among economists, quoting Brynjolfsson himself hedging ('AI is not the whole story, but it's part of the story'). Included to keep the article's causal framing honest and matched to the study's own 'descriptive not causal' language, per verification.md's claim-type discipline for research findings.",
+      "evidence": [
+        "https://www.npr.org/2026/08/18/nx-s1-5910677/recent-college-graduates-employment-job-artificial-intelligence"
+      ]
+    }
+  ],
+  "falsifier_notes": "Falsifier re-fetched Stanford's Aug 12, 2026 page and publication landing page directly and confirmed all four core claims verbatim -- unusually clean survival for a working paper picked up by tech press. It could not retrieve Ars Technica's article by any method (direct fetch, Wayback Machine, and two targeted searches all failed/returned nothing), so the article does not rely on or characterize Ars Technica's specific framing; Stanford is cited as the primary source with Fortune and NPR as independently-fetched secondary corroboration instead. It flagged that the 19% figure is the current topline from the latest revision, not a stable constant (controlled specifications in Stanford's own follow-up work show ~16%) -- worded accordingly. It found no walk-back, correction, or retraction of the finding. It confirmed the age-based (not seniority-based) definition of 'young workers' is real and material, and recommended the NY Fed counter-finding be included so the piece doesn't read more causally confident than the study itself claims to be -- both applied in the article below. It searched specifically for a Daron Acemoglu quote addressing this study and found only his general, unrelated skepticism about AI productivity claims; that was NOT attributed to him in the article for this story.",
+  "dedup_check": "dedup-check run this cycle on title 'AI is hitting entry-level jobs hardest, Stanford study finds' + Ars Technica URL: clean, no matches against the archive. A local grep of data/ledger/*.json and content/articles/ for stanford/canaries/entry-level/brynjolfsson also found no prior entry. New standalone story."
+}

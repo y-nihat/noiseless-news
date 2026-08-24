@@ -1,0 +1,23 @@
+{
+  "slug": "stanford-ai-entry-level-jobs-gap",
+  "title": "Stanford data show a widening employment gap for young workers in AI-exposed occupations",
+  "status": "published",
+  "first_seen": "2026-08-24",
+  "published_at": "2026-08-24",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+    "https://fortune.com/2026/06/27/what-is-ai-impact-entry-level-jobs-stanford-adp-canaries-brynjolfsson-richardson/",
+    "https://www.npr.org/2026/08/18/nx-s1-5910677/recent-college-graduates-employment-job-artificial-intelligence"
+  ],
+  "follows": null,
+  "reason": null,
+  "watch": [
+    "Further revisions to Stanford's Canaries Dashboard/working paper (the topline gap figure has moved with each update: ~13% Aug 2025, ~16% in a controlled spec, 19% current)",
+    "Any peer-reviewed publication of the paper",
+    "Further independent research on AI vs. remote-work vs. interest-rate explanations for the youth employment gap"
+  ],
+  "notes": [
+    "2026-08-24 c3: Triaged from Ars Technica (2026-08-24) during today's fresh-ingest triage. Ars Technica's own article could not be fetched by either the verifier or the falsifier sub-agent (direct fetch and Wayback Machine both failed, 5 combined attempts) so it is not cited as a source or relied on for framing -- the article instead cites Stanford's primary page directly plus Fortune and NPR as independently-fetched secondary corroboration. Fresh verifier + fresh adversarial falsifier both ran; falsifier re-fetched Stanford's pages directly and confirmed all core figures verbatim, and added the NY Fed remote-work counter-finding to keep the causal framing honest. dedup-check clean; no prior ledger/article entry existed for this study."
+  ]
+}
