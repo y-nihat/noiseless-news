@@ -17,6 +17,7 @@
   ],
   "public_note": "Reports describe Hugging Face exploring a possible sale; no independent confirmation yet.",
   "notes": [
-    "2026-08-23 c3: Opened this cycle from tonight's fresh ingest (Techmeme, linking Business Insider). Verifier found only the single Business Insider scoop with no independent corroboration; held as watching."
+    "2026-08-23 c3: Opened this cycle from tonight's fresh ingest (Techmeme, linking Business Insider). Verifier found only the single Business Insider scoop with no independent corroboration; held as watching.",
+    "2026-08-24 c6: 01:04Z ingest carries two more pickups (Bloomberg.com, Chosun Ilbo) but Bloomberg's own headline reads 'AI Platform Hugging Face Exploring Sale, Business Insider Says' -- Bloomberg is explicitly attributing to BI in its own title, not reporting independently, consistent with c3's finding that every trace leads back to the single BI scoop. Cycle 6 has a ~13-minute window (deadline 01:18Z) and did not spend fresh search budget chasing this further; still fails the wire-exclusive/independence bar on the evidence in hand. Left watching."
   ]
 }
