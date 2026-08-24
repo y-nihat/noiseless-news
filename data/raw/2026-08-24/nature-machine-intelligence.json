@@ -1,0 +1,22 @@
+[
+  {
+    "id": "5863af50d840a086",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Multi-resolution enhancement for full-spectrum neural representations",
+    "url": "https://www.nature.com/articles/s42256-026-01287-9",
+    "published": "2026-08-24T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 24 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01287-9\">doi:10.1038/s42256-026-01287-9</a></p>Ni et al. present WIEN-INR, an implicit neural representation for scientific data compression. It operates in the multiscale wavelet domain to improve compression as well as preserve fine details and signal fidelity.",
+    "fetched_at": "2026-08-24T10:39:04.496249+00:00"
+  },
+  {
+    "id": "fa0c82d75ee267c8",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "A roadmap for end-to-end task-agnostic exoskeleton control",
+    "url": "https://www.nature.com/articles/s42256-026-01297-7",
+    "published": "2026-08-24T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 24 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01297-7\">doi:10.1038/s42256-026-01297-7</a></p>Shepherd et al. propose end-to-end AI control of lower-limb exoskeletons based on real-time estimates of physiological signals.",
+    "fetched_at": "2026-08-24T10:39:04.496249+00:00"
+  }
+]
