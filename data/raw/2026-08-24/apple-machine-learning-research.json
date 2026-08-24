@@ -1,0 +1,12 @@
+[
+  {
+    "id": "a0199333d441dca9",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "Beyond Visual CoT: Internalized Visual Thinking for Proactive Video Reasoning",
+    "url": "https://machinelearning.apple.com/research/internalized-visual-thinking",
+    "published": "2026-08-24T00:00:00+00:00",
+    "summary": "Multimodal large language models increasingly use visual chain-of-thought (Visual CoT) to reason about spatial, temporal, and embodied environments. By generating intermediate reasoning images, Visual CoT provides an intuitive mechanism for visual foresight but introduces substantial inference overhead, which is particularly problematic for proactive video reasoning. We ask whether models can learn to think visually during training while reasoning directly at inference. We introduce Internalized Visual Thinking (IVT), a post-training framework that jointly optimizes textual prediction and…",
+    "fetched_at": "2026-08-24T16:41:36.050233+00:00"
+  }
+]

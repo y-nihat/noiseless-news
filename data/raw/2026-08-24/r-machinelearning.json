@@ -18,5 +18,25 @@
     "published": "2026-08-24T05:39:57+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>Does anyone know how the BMVC to IJCV special issue recommendation works?</p> <p>Is it mainly based on the review scores, or is it a separate decision by the ACs/program chairs (e.g. based on oral/highlight selection, reviewer comments, etc.)?</p> <p>Also, is there any way to know at this point whether a paper has been recommended for the IJCV track, or do authors only find out later through a separate email?</p> <p>Would be great to hear from anyone who has gone through this in previous years!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Secondhanded_PhD\"> /u/Secondhanded_PhD </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vwtzix/bmvc_2026_ijcv_recommendation_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vwtzix/bmvc_2026_ijcv_recommendation_d/\">[comments]</a></span>",
     "fetched_at": "2026-08-24T10:39:04.496249+00:00"
+  },
+  {
+    "id": "f1072ba9e03c1178",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Delay-corrected Bellman operator + causal attribution for constrained RL contraction proof under unknown stochastic delay [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vx11hz/delaycorrected_bellman_operator_causal/",
+    "published": "2026-08-24T12:11:34+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Standard constrained RL assumes consequences are immediate and attributable to the current action. This breaks down whenever violations are delayed and stochastic, which is most real-world settings you end up penalizing whatever action happened to precede the observed violation, not the action that caused it.</p> <p>Working on CCPL (Causal Consequence-Penalized Learning) to address this:</p> <p>- A delay-corrected Bellman operator using an adaptive effective discount learned from the consequence-delay distribution. Contraction proof holds under unknown stochastic delay.</p> <p>- An Interventional Consequence Net (ICN), pretrained on structural-causal-model labels, estimating marginal causal contribution per action for attribution rather than penalizing based on temporal proximity.</p> <p><strong>Limitations, to be upfront about them:</strong><br /> - The ICN currently requires access to the environment's structural causal model to generate pretraining labels it's not learned end-to-end from observational or interventional data alone. That's a real constraint on applicability outside benchmark settings where the SCM is known or can be reasonably specified.</p> <p>Open to contributions and collaborators, especially if you work in constrained/safe RL or causal inference feel free to open an issue or reach out directly.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/No_Cauliflower7923\"> /u/No_Cauliflower7923 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vx11hz/delaycorrected_bellman_operator_causal/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vx11hz/delaycorrected_bellman_operator_causal/\">[comments]</a></span>",
+    "fetched_at": "2026-08-24T16:41:36.050233+00:00"
+  },
+  {
+    "id": "d28d68e08b318c09",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Does registering an abstract, not the full submission yet, count as a double submission? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vx3why/does_registering_an_abstract_not_the_full/",
+    "published": "2026-08-24T14:09:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello, </p> <p>As the title says</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/obliviousphoenix2003\"> /u/obliviousphoenix2003 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vx3why/does_registering_an_abstract_not_the_full/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vx3why/does_registering_an_abstract_not_the_full/\">[comments]</a></span>",
+    "fetched_at": "2026-08-24T16:41:36.050233+00:00"
   }
 ]
