@@ -1,0 +1,12 @@
+[
+  {
+    "id": "c88f316e61d33f06",
+    "source": "VentureBeat AI",
+    "tier": 2,
+    "title": "Perplexity partners with Nvidia to launch Portable Computer, a fully local AI agent with zero token costs",
+    "url": "https://venturebeat.com/infrastructure/perplexity-partners-with-nvidia-to-launch-portable-computer-a-fully-local-ai-agent-with-zero-token-costs",
+    "published": "2026-08-25T13:00:00+00:00",
+    "summary": "<p><a href=\"https://www.perplexity.ai/\">Perplexity</a> is launching <a href=\"https://www.perplexity.ai/hub/products/portable-computer\">Portable Computer</a> today, a version of its agentic <a href=\"https://venturebeat.com/technology/perplexity-takes-its-computer-ai-agent-into-the-enterprise-taking-aim-at\">&quot;Computer&quot; platform</a> that runs entirely on hardware users already own — starting with Nvidia&#x27;s <a href=\"https://venturebeat.com/infrastructure/nvidias-dgx-station-is-a-desktop-supercomputer-that-runs-trillion-parameter\">DGX Spark</a> desktop supercomputer and Linux machines equipped with Nvidia <a href=\"https://www.nvidia.com/en-us/geforce/rtx/\">RTX GPUs</a>.</p><p>The launch, developed in close partnership with Nvidia, is one of the most aggressive attempts yet to move serious AI agent workloads off the cloud and onto local devices. The model, the user&#x27;s files, and the work itself can all stay on the machine. Work completed locally consumes no billing credits, and the company says every task starts on the device by default — with the system asking permission before sending any individual step to a more powerful frontier model in the cloud.</p><p>&quot;We&#x27;ve basically brought the exact same UI to a fully local app,&quot; said Nate, Perplexity&#x27;s vice president of engineering for infrastructure and enterprise, during a press briefing Monday. &quot;This incorporates the entirety of the agent harness and inference and everything needed to do work locally.&quot;</p><p>For Nvidia, which has spent the past two years selling the world on trillion-dollar AI data centers, the announcement signals something subtler but strategically important: the chipmaker believes local AI has crossed a threshold from hobbyist curiosity to practical tool — and it wants to sell the hardware that runs it.</p><p>&quot;Local AI reached an inflection point,&quot; said Nader, Nvidia&#x27;s director of developer technology, who focuses on developer tooling and open…",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  }
+]

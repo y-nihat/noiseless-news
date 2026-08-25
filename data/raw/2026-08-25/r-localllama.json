@@ -68,5 +68,145 @@
     "published": "2026-08-25T03:28:19+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve been experimenting with a custom inference/runtime research project called CRANE V2, mostly because I wanted to answer a stupid question:</p> <p>How far can you push absurdly large MoE models on an ordinary consumer Windows machine before physics actually wins?</p> <p>Hardware is nothing exotic:</p> <p>Ryzen 7 7800X3D</p> <p>RTX 4070 Ti 12GB</p> <p>32GB DDR5</p> <p>Lexar NQ700 2TB NVMe + Samsung 970 EVO Plus 1TB NVMe</p> <p>Windows 11</p> <p>I tested three major targets so far: Kimi K3 (2.779T parameters / 711GB checkpoint), DeepSeek V4 Flash Q4 + Q3, and Qwen3.5-122B-A10B Q4. The paper is a 26-page evidence-locked writeup with the successful runs, failed branches, quality gates, hardware measurements, cache experiments, runtime changes, and claim boundaries. </p> <p>Important disclaimer before the funny numbers: the highest throughput results are NOT equivalent to running the original models at full capability. CRANE deliberately separates speed-wall experiments from quality-preserving experiments. Some of the fastest profiles change expert routing, precision, or shared-expert behavior and produce complete garbage. I’m specifically not claiming “2.8T Kimi runs normally at 9 tok/s” or “122B Qwen runs normally at 57 tok/s.” The paper keeps those numbers in separate ledgers for exactly that reason. </p> <p>The headline results so far:</p> <p>Kimi K3: canonical first-token control was 0.014459 tok/s. An intentionally altered speed-wall profile eventually reached 9.314978 tok/s over 64 tokens, but useful language was destroyed and quality restoration failed even the intentionally trivial “Paris” gate. </p> <p>DeepSeek V4 Flash Q4: altered static routing eventually reached 42.26 tok/s over 128 tokens, again with unusable language. </p> <p>DeepSeek V4 Flash Q3: this became much more interesting. Using the original source tensors for every selected expert, zero fallbacks, dynamic top-two routing, the same selected-route quality bounda…",
     "fetched_at": "2026-08-25T10:35:29.402066+00:00"
+  },
+  {
+    "id": "452016d40b0a32fb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Apple introduces new Mac Studio with M5 Max and M5 Ultra - up to 512GB of unified memory",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxzg6v/apple_introduces_new_mac_studio_with_m5_max_and/",
+    "published": "2026-08-25T13:11:09+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzg6v/apple_introduces_new_mac_studio_with_m5_max_and/\"> <img alt=\"Apple introduces new Mac Studio with M5 Max and M5 Ultra - up to 512GB of unified memory\" src=\"https://external-preview.redd.it/qqol8OBiT9JSUCIZmfpi4S-KFFzSVIhU-j6PvKKXZdA.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=a1faff0777f1c3f4bc93a4e47ca50b0646fb4c49\" title=\"Apple introduces new Mac Studio with M5 Max and M5 Ultra - up to 512GB of unified memory\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/themixtergames\"> /u/themixtergames </a> <br /> <span><a href=\"https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzg6v/apple_introduces_new_mac_studio_with_m5_max_and/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "8ca73d5e2065a996",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Flash-Next tomorrow",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxwtyd/qwen38flashnext_tomorrow/",
+    "published": "2026-08-25T11:13:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxwtyd/qwen38flashnext_tomorrow/\"> <img alt=\"Qwen3.8-Flash-Next tomorrow\" src=\"https://external-preview.redd.it/Z4u4braWhbHDqxXT7p8EHRqWEEzexwWUfFcB_ovsKUw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2e3bd38b98595ec348939156305056e48df16996\" title=\"Qwen3.8-Flash-Next tomorrow\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/rerri\"> /u/rerri </a> <br /> <span><a href=\"https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxwtyd/qwen38flashnext_tomorrow/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "5f1a07195f8e4e01",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 Flash Next day 0 support from unsloth",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxybmy/qwen_38_flash_next_day_0_support_from_unsloth/",
+    "published": "2026-08-25T12:23:11+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxybmy/qwen_38_flash_next_day_0_support_from_unsloth/\"> <img alt=\"Qwen 3.8 Flash Next day 0 support from unsloth\" src=\"https://preview.redd.it/112vz4wqkilh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=23c6fed299c3ad8225b9a9e8dafc0715c0144a38\" title=\"Qwen 3.8 Flash Next day 0 support from unsloth\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Prepare your disk space guys </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://i.redd.it/112vz4wqkilh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxybmy/qwen_38_flash_next_day_0_support_from_unsloth/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "b600e6ce0eafbb24",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Apple releases M5 ultra at 1.2TB/s bandwith",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxzgyt/apple_releases_m5_ultra_at_12tbs_bandwith/",
+    "published": "2026-08-25T13:12:03+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzgyt/apple_releases_m5_ultra_at_12tbs_bandwith/\"> <img alt=\"Apple releases M5 ultra at 1.2TB/s bandwith\" src=\"https://external-preview.redd.it/Zh8xZ4KVN5gsODWYL4m_ukemr2jZ0FtawmjhewaSQfc.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=737060512e80af824de2216acf80715657c96cc6\" title=\"Apple releases M5 ultra at 1.2TB/s bandwith\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>lpddr5x probably, the m7 ultra if is using ddr6 should be at 1.8 Tb/s</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Last-Owl-8342\"> /u/Last-Owl-8342 </a> <br /> <span><a href=\"https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzgyt/apple_releases_m5_ultra_at_12tbs_bandwith/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "3d3094830bd41c09",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8 flash next",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxwu4g/qwen38_flash_next/",
+    "published": "2026-08-25T11:13:41+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxwu4g/qwen38_flash_next/\"> <img alt=\"Qwen3.8 flash next\" src=\"https://external-preview.redd.it/Z4u4braWhbHDqxXT7p8EHRqWEEzexwWUfFcB_ovsKUw.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2e3bd38b98595ec348939156305056e48df16996\" title=\"Qwen3.8 flash next\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RuthlessCriticismAll\"> /u/RuthlessCriticismAll </a> <br /> <span><a href=\"https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxwu4g/qwen38_flash_next/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "81996d00b8bc8370",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "ibm-granite/granite-4.2-30b · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy2jz7/ibmgranitegranite4230b_hugging_face/",
+    "published": "2026-08-25T15:10:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy2jz7/ibmgranitegranite4230b_hugging_face/\"> <img alt=\"ibm-granite/granite-4.2-30b · Hugging Face\" src=\"https://external-preview.redd.it/OjOYk4D8dWePNsnp9vJBbh35C1Qf200U_jVbx5fLqKE.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=479a36796121824a3366293dd2b20d462ef0bbbd\" title=\"ibm-granite/granite-4.2-30b · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>Granite-4.2-30B</strong> is the flagship reasoning model in the Granite 4.2 family. It delivers the strongest performance across reasoning-intensive tasks by leveraging built-in <code>&lt;think&gt;...&lt;/think&gt;</code> chain-of-thought. It supports flexible thinking modes — full thinking (default), non-thinking, and low-effort — allowing users to balance depth vs. latency on a per-query basis.</p> <p>Key capabilities:</p> <ul> <li><strong>Built-in Reasoning:</strong> Native chain-of-thought that significantly improves performance on math, coding, and complex multi-step problems.</li> <li><strong>Flexible Thinking Modes:</strong> Seamlessly switch between full thinking, non-thinking, and low-effort modes within a single model.</li> <li><strong>Reasoning-Augmented Tool Calling:</strong> The model reasons about which tools to invoke and why, producing more accurate function calls.</li> <li><strong>512K Context Window:</strong> Supports long documents, multi-turn conversations, and complex agentic workflows.</li> <li><strong>Apache 2.0 Licensed:</strong> Fully open for commercial and research use.</li> </ul> <h1>Model Design</h1> <p>Granite-4.2-30B is built on a decoder-only dense transformer architecture with the following core components:</p> <ul> <li><strong>Attention:</strong> Grouped Query Attention (GQA) with 32 attention heads and 8 KV heads</li> <li><strong>Position Embedding:</strong> Rotary Position Embedding (RoPE) with θ = 10,000,000</li> <li><strong>Feed-Forward:</strong> MLP with SwiGLU activation (hidden…",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "b8cd3ab1f271789b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "me to the model I spent all weekend fine-tuning",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy0knv/me_to_the_model_i_spent_all_weekend_finetuning/",
+    "published": "2026-08-25T13:55:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy0knv/me_to_the_model_i_spent_all_weekend_finetuning/\"> <img alt=\"me to the model I spent all weekend fine-tuning\" src=\"https://preview.redd.it/6frr35m71jlh1.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=accdd1e3e1cb100fc87419043ccf7ef4dca95e7f\" title=\"me to the model I spent all weekend fine-tuning\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I just can't resist</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/close_Meal6005\"> /u/close_Meal6005 </a> <br /> <span><a href=\"https://i.redd.it/6frr35m71jlh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy0knv/me_to_the_model_i_spent_all_weekend_finetuning/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "e585702871e8736f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Intel Arc Pro B60 Dual 48G spotted",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy1g90/intel_arc_pro_b60_dual_48g_spotted/",
+    "published": "2026-08-25T14:29:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy1g90/intel_arc_pro_b60_dual_48g_spotted/\"> <img alt=\"Intel Arc Pro B60 Dual 48G spotted\" src=\"https://preview.redd.it/hadro9zb5jlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3663f1987d9b8c0f0d83042684ca9625c56219a2\" title=\"Intel Arc Pro B60 Dual 48G spotted\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I spotted the Dual B60 48GB listed on Digitec/Galaxus. Initially it was said these wouldn't go into standard retail channels.</p> <p>At CHF 2500 (post tax, USD ~3000) not particularly competitive but worth keeping an eye on. For it to be interesting it shouldn't be more than like 2.5x a single B60.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/reto-wyss\"> /u/reto-wyss </a> <br /> <span><a href=\"https://i.redd.it/hadro9zb5jlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy1g90/intel_arc_pro_b60_dual_48g_spotted/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "9db71f580e55177f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "New: Llama.cpp adaptive speculation for faster inference",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxxa9x/new_llamacpp_adaptive_speculation_for_faster/",
+    "published": "2026-08-25T11:35:40+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>We have been working on some performance optimisations for Qwen3.8 and other models. </p> <p>The main new feature that we introduced is adaptive speculation for Llama.cpp</p> <p>What is it?<br /> MTP and DFlash work well to speed up inference work, especially for dense models. However, different content types need different settings. Llama.cpp only supports a single value.<br /> This fork introduces adaptive speculation. You set the minimum and maximum and the engine will adjust the number of tokens that are suggested automatically. This leads to improvements in token generation by up to 50% over mainline, especially in Qwen3.8. On a Strix Halo this improved generation from <strong>44t/s to 65t/s for structured content</strong>.</p> <p>Github: <a href=\"https://github.com/LaurentZuijdwijk/llama.cpp\">https://github.com/LaurentZuijdwijk/llama.cpp</a></p> <p>Release: <a href=\"https://github.com/LaurentZuijdwijk/llama.cpp/releases\">https://github.com/LaurentZuijdwijk/llama.cpp/releases</a></p> <p><a href=\"https://www.reddit.com/submit/?source_id=t3_1vxx51g&amp;composer_entry=crosspost_prompt\"></a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dutchnamn\"> /u/Dutchnamn </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxxa9x/new_llamacpp_adaptive_speculation_for_faster/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxxa9x/new_llamacpp_adaptive_speculation_for_faster/\">[comments]</a></span>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "c4d634379eb7d135",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxyiko/quantizationaware_healing_a_compressed_4bit_model/",
+    "published": "2026-08-25T12:31:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxyiko/quantizationaware_healing_a_compressed_4bit_model/\"> <img alt=\"Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original\" src=\"https://external-preview.redd.it/EFr8lwz2_BY53pFnhy5K2olmCDPSR_N0XsCHGGYQsfo.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3a0d15a0db9c3e073a6e8f26130264d8c21dc28f\" title=\"Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Decent-Hat-5807\"> /u/Decent-Hat-5807 </a> <br /> <span><a href=\"https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxyiko/quantizationaware_healing_a_compressed_4bit_model/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "3292f02fbc111896",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy09xv/apple_unveils_a_more_powerful_mac_mini_featuring/",
+    "published": "2026-08-25T13:44:25+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy09xv/apple_unveils_a_more_powerful_mac_mini_featuring/\"> <img alt=\"Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro\" src=\"https://external-preview.redd.it/b0bCjSYJ8By-cGAZZ5EaICXlbIDiBhLxFY4VmK8zFXU.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=aab195156bc9dba4799308adfdbd913bd07cd9c2\" title=\"Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><em>&quot;A 12-core GPU, also with two more cores than before, now includes Neural Accelerators in each core for the first time on Mac mini, resulting in up to 4x faster AI performance and 2x faster graphics than Mac mini with M4. In addition, the all-new Dual 16-core Neural Engine delivers up to 2x faster performance than the previous generation, and combined with the advanced GPU, Mac mini is a powerhouse for all things AI. And with 16GB of standard unified memory configurable up to 32GB, as well as higher memory bandwidth up to 170GB/s, multitasking is faster than ever.&quot;</em></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sachasayan\"> /u/sachasayan </a> <br /> <span><a href=\"https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy09xv/apple_unveils_a_more_powerful_mac_mini_featuring/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "584e792f3fd7ec64",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Mac Studio M5 Max Cost Analysis",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy3lsp/mac_studio_m5_max_cost_analysis/",
+    "published": "2026-08-25T15:49:20+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>At $10k, you could get</p> <p>- 6.2B tokens with Qwen 3.8 Max (Qwen Pro plan)</p> <p>- 5.7B tokens with DeepSeek V4 Pro OpenRouter</p> <p>- 100B tokens with DeepSeek V4 Flash OpenRouter</p> <p>As a firm believer of local inference, unless you need it for data sovereignty, it's much more cost effect to wait for smaller models to keep getting better. In the meantime, find a reasonably priced 24GB - 32GB card for Qwen 3.8 27B, and offload hard tasks to OpenRouter.</p> <p>Qwhen 3.8 35B A3B?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AndreVallestero\"> /u/AndreVallestero </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy3lsp/mac_studio_m5_max_cost_analysis/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy3lsp/mac_studio_m5_max_cost_analysis/\">[comments]</a></span>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "ffc85786561c77a2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "12 abliterated Gemma 4 12B variants, one base, 165 GPU hours - Abliterlitics",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy1q1l/12_abliterated_gemma_4_12b_variants_one_base_165/",
+    "published": "2026-08-25T14:39:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I ran 11 uncensored variants of Gemma 4 12B that I grabbed from huggingface, sorting by downloads. 10 full abliterations plus 2 LoRA adapters which were requested to be added in the comparison, against the official base.</p> <p>165 GPU hours over three and a half weeks on a single 5090. Weight forensics, KL divergence, 13 benchmark tasks, and HarmBench with 400 behaviours. Every response reviewed by an LLM judge reading the full reasoning trace, 6,000 judge verdicts on 6,800 responses total.</p> <p>Full report is at <a href=\"https://abliterlitics.dev/models/gemma4-12b/\">Abliterlitics Gemma4-12b</a> and also the same report is on <a href=\"https://huggingface.co/DreamFast/Gemma4-12b-it-abliterlitics\">HuggingFace DreamFast/Gemma4-12b-it-abliterlitics</a>.</p> <p>We have a new feature where you can browse the HarmBench responses and reasoning for each model at <a href=\"https://abliterlitics.dev/harmbench/gemma4-12b/\">Abliterlitics Harmbench Gemma4-12b</a>.</p> <p><strong>The rankings</strong></p> <p>Judge ASR, best to worst, with the one-line story:</p> <ul> <li><a href=\"https://huggingface.co/huihui-ai/Huihui-gemma-4-12B-it-abliterated\">huihui</a> 89.8%, most jailbroken, most surgical. The trade: TQA -14.3pp, GPQA -8.1pp and 24% of GSM8K attempts loop out. Max unlock if you accept the cost</li> <li><a href=\"https://huggingface.co/TrevorJS/gemma-4-12B-it-uncensored\">trevorjs</a> 85.8%, best trade overall, near-base everything</li> <li><a href=\"https://huggingface.co/coder3101/gemma-4-12B-it-heretic\">coder3101</a> 81.0%, best GSM8K in the whole comparison, above base</li> <li><a href=\"https://huggingface.co/Ilya626/gemma-4-12B-it-SDFT-Heretic-LoRA\">sdft LoRAs</a> 79.5%, level with the top-4 abliterations, capability fully preserved. The SDFT author shares some insight into how he makes his LoRAs in the report.</li> <li><a href=\"https://huggingface.co/jwest33/gemma-4-12B-it-null-space-abliterated\">jwest33</a> 78.0%, new null-space tool, k…",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "177fb8179c1558d3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 4 architecture: What do we know?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vxzjps/qwen_4_architecture_what_do_we_know/",
+    "published": "2026-08-25T13:15:12+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>My best bet is the embedding-offloaded linear where the 51b n-grams track semantics and context, like 3.8 with its loss of real world knowledge bolted back on.</p> <p>Otherwise? Sparse full-attention with dense routing? 6b active route to 'heavy' layers when the n-gram gets stuck.</p> <p>Scenario 3: multi-head latent attention (mla) hybrid (reverse engineering Deepseek) compressing KV on the fly with the embeddings 'decompressing' on demand</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/challis88ocarina\"> /u/challis88ocarina </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzjps/qwen_4_architecture_what_do_we_know/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzjps/qwen_4_architecture_what_do_we_know/\">[comments]</a></span>",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
   }
 ]

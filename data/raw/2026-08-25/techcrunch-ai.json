@@ -8,5 +8,45 @@
     "published": "2026-08-25T00:23:12+00:00",
     "summary": "The AI hedge fund went from \"the talk of Wall Street\" to \"subject of federal subpoenas\" faster than you can say \"diversify your portfolio.\"",
     "fetched_at": "2026-08-25T00:23:42.806861+00:00"
+  },
+  {
+    "id": "f0fe60763ef5b1c6",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Gamma acquires Accel-backed design startup Lica",
+    "url": "https://techcrunch.com/2026/08/25/gamma-acquires-accel-backed-design-startup-lica/",
+    "published": "2026-08-25T15:00:00+00:00",
+    "summary": "Lica co-founders are going to work on Gamma's new research team.",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "bfd1495c76918d53",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
+    "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+    "published": "2026-08-25T14:22:04+00:00",
+    "summary": "Tested on SemiAnalysis’ InferenceX benchmark, Jalapeño registered both more tokens per user and more throughput per kilowatt than the currently available state-of-the art.",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "79f6641c4618a997",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "Accel-backed Keenable is indexing the web for AI agents",
+    "url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/",
+    "published": "2026-08-25T13:00:00+00:00",
+    "summary": "Now exiting stealth mode with a $26 million seed round, Keenable has been building a vast web search index for AI agents.",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "ee865b3ef8334b72",
+    "source": "TechCrunch AI",
+    "tier": 2,
+    "title": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
+    "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/",
+    "published": "2026-08-25T12:00:00+00:00",
+    "summary": "TechCrunch talks agents, UX, and reporting to Greg Brockman with OpenAI's head of product.",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
   }
 ]

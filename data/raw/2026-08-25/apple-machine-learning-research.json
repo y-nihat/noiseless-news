@@ -1,0 +1,12 @@
+[
+  {
+    "id": "5ede708d3a23a257",
+    "source": "Apple Machine Learning Research",
+    "tier": 0,
+    "title": "STARFlow2: Bridging Language Models and Normalizing Flows for Unified Multimodal Generation",
+    "url": "https://machinelearning.apple.com/research/starflow2-multimodal-generation",
+    "published": "2026-08-25T00:00:00+00:00",
+    "summary": "Unified multimodal models that understand, reason over, and generate interleaved text–image sequences remain structurally fragmented: existing approaches either sacrifice visual fidelity through discrete tokenization, impose structural asymmetry by combining causal text generation with iterative diffusion-based denoising, or degrade pretrained understanding when adapting vision-language models for generation. We observe that autoregressive normalizing flows are autoregressive Transformers—sharing the same causal mask, KV-cache mechanism, and left-to-right structure as LLMs—making them the most…",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  }
+]

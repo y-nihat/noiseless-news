@@ -8,5 +8,35 @@
     "published": "2026-08-25T00:00:00+00:00",
     "summary": "",
     "fetched_at": "2026-08-25T10:35:29.402066+00:00"
+  },
+  {
+    "id": "d21068479952e403",
+    "source": "Hugging Face Blog",
+    "tier": 0,
+    "title": "Granite 4.2 LLMs: How They're Built",
+    "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+    "published": "2026-08-25T15:14:14+00:00",
+    "summary": "",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "f1c76f23a788b688",
+    "source": "Hugging Face Blog",
+    "tier": 0,
+    "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+    "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+    "published": "2026-08-25T11:39:24+00:00",
+    "summary": "",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "966123ef613d7e9a",
+    "source": "Hugging Face Blog",
+    "tier": 0,
+    "title": "How Hugging Face Inference Endpoints, Jobs, and Buckets Power Search on Papers with Code",
+    "url": "https://huggingface.co/blog/pwc-search",
+    "published": "2026-08-21T00:00:00+00:00",
+    "summary": "",
+    "fetched_at": "2026-08-25T16:41:11.572973+00:00"
   }
 ]
