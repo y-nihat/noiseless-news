@@ -1,4 +1,33 @@
 {
+  "candidates_2026-08-25_c2": [
+    {
+      "domain": "investors.broadcom.com",
+      "first_seen": "2026-08-25",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor"
+      ],
+      "context": "Broadcom's own investor-relations press-release channel -- used as a second, independent Tier-0-equivalent primary source (alongside OpenAI's own blog) for openai-jalapeno-chip-benchmarks, confirming the joint chip announcement from the other company's side. A public company's regulated disclosure channel; likely to recur for any story involving a Broadcom partnership or product. Propose Tier 0, type html."
+    },
+    {
+      "domain": "newsletter.semianalysis.com",
+      "first_seen": "2026-08-25",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+      ],
+      "context": "Independent semiconductor/AI-hardware analysis newsletter (distinct from a company blog or general tech press) -- load-bearing for openai-jalapeno-chip-benchmarks: the piece states directly it observed OpenAI's benchmark runs in person but did not independently execute the full suite, which was decisive in keeping the capability claim labeled vendor-claim rather than confirmed. Named analysts, technical rigor, no vendor affiliation. Propose Tier 1/2 for hardware/chip capability stories specifically -- note its access was still vendor-arranged, not blind independent testing, so future citations should keep checking which parts of any given piece are witnessed-vendor-numbers versus SemiAnalysis's own measurements."
+    },
+    {
+      "domain": "tomshardware.com",
+      "first_seen": "2026-07-11",
+      "occurrences": 2,
+      "sample_urls": [
+        "https://www.tomshardware.com/tech-industry/semiconductors/openai-says-its-jalapeno-chip-beats-nvidias-gb300-in-first-published-benchmarks"
+      ],
+      "context": "Second occurrence (see the original 2026-07-11 entry below, already proposing Tier 2). Used this cycle for openai-jalapeno-chip-benchmarks specifically because it was the clearest independent (non-OpenAI, non-SemiAnalysis) source stating Jalapeño was NOT tested against Nvidia's Rubin chips -- useful for correcting a press overstatement (The Decoder's headline) that our falsifier caught before publication."
+    }
+  ],
   "candidates_2026-08-25_c4": [
     {
       "domain": "thomsonreuters.com",
