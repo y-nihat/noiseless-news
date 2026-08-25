@@ -1,4 +1,33 @@
 {
+  "candidates_2026-08-25_c4": [
+    {
+      "domain": "thomsonreuters.com",
+      "first_seen": "2026-08-24",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.thomsonreuters.com/en-us/posts/innovation/thomson-reuters-built-its-own-ai-model-that-now-ranks-among-the-worlds-best/"
+      ],
+      "context": "Used as a Tier-0-equivalent primary source in thomson-reuters-ai-model-launch -- Thomson Reuters' own innovation/newsroom blog announcing its in-house AI model. Not a recurring AI-news beat we'd scan (Thomson Reuters is a customer/vendor in the legal-AI space, not an AI lab), so registering it as a scanned feed is likely unwarranted; flagged here mainly so the domain is on record as a checked, citable primary if it recurs."
+    },
+    {
+      "domain": "lawnext.com",
+      "first_seen": "2026-08-24",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.lawnext.com/2026/08/thomson-reuters-says-its-homegrown-ai-model-now-rivals-the-frontier-labs-i-take-a-closer-look-at-the-benchmarks.html"
+      ],
+      "context": "Bob Ambrogi's legal-technology outlet (LawSites) -- used as load-bearing Tier-2 evidence in thomson-reuters-ai-model-launch for the independent methodological critique of Thomson Reuters' self-reported benchmark claims (test-time-scaling asymmetry, GPT-5.5 tested non-reasoning). Named, credentialed author (Fastcase 50), editorial standards, long-running legal-tech beat. Propose Tier 2, type rss if a feed exists (not checked this cycle)."
+    },
+    {
+      "domain": "prnewswire.com",
+      "first_seen": "2026-08-24",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.prnewswire.com/news-releases/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model-302857499.html"
+      ],
+      "context": "Used as a Tier-0-equivalent primary source in thomson-reuters-ai-model-launch -- verbatim company press release (\"SOURCE Thomson Reuters\"), not third-party reporting. Wire-distribution service used by many companies for primary announcements; likely worth registering generically rather than per-company, since it will recur any time a company we cover uses it to publish an official statement."
+    }
+  ],
   "candidates_2026-08-22_c2": [
     {
       "domain": "engadget.com",
