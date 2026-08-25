@@ -1,0 +1,68 @@
+{
+  "slug": "openai-jalapeno-chip-benchmarks",
+  "checked_at": "2026-08-25T22:55:00+00:00",
+  "method": "Fresh verifier + fresh adversarial falsifier, both run independently (parallel waves) in cycle 2 of the 2026-08-26 night run, per policy/verification.md §5. The verifier decomposed and sourced each claim (WebFetch to openai.com and theverge.com returned HTTP 403 for it, so it triangulated those via search snippets); the falsifier independently re-searched to try to break the timeline and the Blackwell-vs-Rubin framing. The primary cycle agent additionally cross-checked the OpenAI announcement URLs directly against this project's own Tier-0 RSS ingest (data/raw/2026-08-25/openai-news.json and data/raw/2026-07-08/openai-news.json, both already fetched at ingest time with recorded timestamps) and independently re-confirmed the Broadcom investor-relations release and the Rubin-not-tested detail via its own WebSearch/WebFetch (openai.com WebFetch also returned 403 for the primary agent, consistent with the sub-agents).",
+  "origin_items": [
+    "data/raw/2026-08-25/openai-news.json#b9406ae170bd9133 (OpenAI's own Aug 25 benchmark post, ingested)",
+    "data/raw/2026-07-08/openai-news.json (OpenAI's own June 24 unveiling post, ingested)",
+    "data/raw/2026-08-25/techmeme.json#228ea30b548521a6",
+    "data/raw/2026-08-25/techmeme.json#c7f4cb0421c7b47b",
+    "data/raw/2026-08-25/techcrunch-ai.json#bfd1495c76918d53",
+    "dedup-check before opening: zero matches -- standalone (run 2026-08-25T22:45:39Z)"
+  ],
+  "claims": [
+    {
+      "text": "OpenAI and Broadcom jointly built Jalapeño, a custom chip for AI inference, which the companies unveiled on 24 June 2026",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed via two independent Tier-0 primary parties: OpenAI's own June 24 post (own RSS feed, ingested) and Broadcom's own investor-relations release (a public company's own regulated disclosure channel, independently WebSearch/WebFetch-confirmed by the primary agent this cycle). Two distinct companies making the same primary statement satisfies independence beyond a single-source announcement.",
+      "evidence": [
+        "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+        "https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor"
+      ]
+    },
+    {
+      "text": "Jalapeño is designed only for AI inference and cannot be used to train AI models",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Broadcom's own release calls it an 'LLM-Optimized Intelligence Processor'; Tom's Hardware's independent Tier-2 report states explicitly it cannot train models. No contradicting source found by either the verifier or the falsifier.",
+      "evidence": [
+        "https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor",
+        "https://www.tomshardware.com/tech-industry/semiconductors/openai-says-its-jalapeno-chip-beats-nvidias-gb300-in-first-published-benchmarks"
+      ]
+    },
+    {
+      "text": "OpenAI and Broadcom say Jalapeño went from design start to manufacturing tape-out in about nine months",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "OpenAI/Broadcom's own June 24 materials state 'co-developed from design to tape-out in nine months.' The verifier separately surfaced a '~16 months' figure from SemiAnalysis/The Decoder; the falsifier resolved this is NOT a contradiction but a different, longer measurement window (from initial team hiring in mid-2024, rather than from formal design start) -- since it is a secondary, easily-confused figure, and the company's own primary-sourced 'nine months, design to tape-out' figure is clean and independently repeated by multiple press outlets (Tom's Hardware, Futurum Group) without contradiction, only the primary nine-month figure was used in the published article to avoid presenting readers with two unreconciled numbers.",
+      "evidence": [
+        "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+        "https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor"
+      ]
+    },
+    {
+      "text": "On 25 August 2026, OpenAI published its first Jalapeño benchmark results, saying the chip delivers 1.5-1.9x more throughput per watt and 1.7-3.6x lower latency than Nvidia's current Blackwell-generation chips (GB200/GB300), across the GPT-OSS 120B, DeepSeek R1 670B and Kimi K2.5 1T models",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "These are OpenAI's own disclosed figures (its own Aug 25 post, ingested via this project's own Tier-0 RSS feed). SemiAnalysis's newsletter states verbatim 'all numbers are provided to us by OpenAI. We verified the InferenceX runs in person in the lab, but we did not run the full suite of InferenceX benchmarks' -- witnessed disclosure, not independent reproduction, so verdict stays vendor-claim per policy/verification.md §3. TechCrunch and Tom's Hardware corroborate the same figures but both ultimately trace to the same OpenAI/SemiAnalysis disclosure chain, not separate testing -- not counted as adding independence for this specific numeric claim. Both the verifier and falsifier independently reached this same read. No Nvidia rebuttal found by either agent.",
+      "evidence": [
+        "https://openai.com/index/jalapeno-first-results",
+        "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+        "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/"
+      ]
+    },
+    {
+      "text": "Jalapeño's disclosed benchmarks do not include a comparison against Nvidia's next-generation Rubin chips, which were not available for testing",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "The falsifier's targeted check resolved this: OpenAI's disclosed benchmarks compare only against Blackwell-family (GB200/GB300); Tom's Hardware states explicitly 'Jalapeño wasn't tested against Vera Rubin... slated to power the first gigawatt of Nvidia systems OpenAI agreed to deploy in the second half of 2026.' SemiAnalysis separately ran its own non-live, methodologically-mismatched comparison against Rubin's previously-published (non-live) figures and found rough cost/performance parity -- a tie, not a win, and not the same thing as OpenAI's own disclosed benchmark. Added as a corrective claim specifically because The Decoder's headline ('reportedly beats Nvidia's Blackwell and Rubin') overstates this and was NOT used as a source for that reason -- our headline and claims deliberately avoid any Rubin-beats framing.",
+      "evidence": [
+        "https://www.tomshardware.com/tech-industry/semiconductors/openai-says-its-jalapeno-chip-beats-nvidias-gb300-in-first-published-benchmarks",
+        "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia"
+      ]
+    }
+  ],
+  "falsifier_notes": "Verdict: PUBLISH WITH CAVEATS, both applied before publication. (1) Timeline: resolved the 9-months-vs-16-months discrepancy as two different measurement windows (design-start vs initial-hiring); article uses only the cleaner, primary-sourced nine-month figure. (2) Rubin: 'beats Rubin' is not defensible -- OpenAI's actual disclosed benchmarks are Blackwell-only (GB200/GB300); a separate non-live SemiAnalysis comparison against Rubin's previously-published figures found rough parity, not a win. The Decoder's headline overstating this was identified and not used as a source. Falsifier also confirmed the June 24 unveiling and Aug 25 benchmark release are genuinely two distinct events (not a rehash), found no walkback/correction of the core figures by OpenAI or Broadcom, and found no Nvidia rebuttal despite a targeted search. No prompt-injection or fabricated content encountered by either sub-agent.",
+  "dedup_check": "python -m noiseless.run dedup-check --title \"OpenAI's Jalapeño chip beats Nvidia in inference benchmarks\" --url \"https://www.theverge.com/ai-artificial-intelligence/984290/openai-jalapeno-ai-chip-benchmarks\" returned zero matches (run 2026-08-25T22:45:39Z) -- standalone, no prior ledger entry or article for this chip or story."
+}

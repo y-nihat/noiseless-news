@@ -1,0 +1,28 @@
+{
+  "slug": "openai-jalapeno-chip-benchmarks",
+  "title": "OpenAI publishes first benchmark results for its Broadcom-built Jalapeño chip",
+  "status": "published",
+  "first_seen": "2026-08-25",
+  "published_at": "2026-08-25",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://openai.com/index/jalapeno-first-results",
+    "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+    "https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor",
+    "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+    "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+    "https://www.tomshardware.com/tech-industry/semiconductors/openai-says-its-jalapeno-chip-beats-nvidias-gb300-in-first-published-benchmarks"
+  ],
+  "follows": null,
+  "reason": "Published. Surfaced via this cycle's triage of fresh ingest (Techmeme, TechCrunch, The Decoder, The Verge all covering OpenAI's 25 Aug benchmark disclosure the same day). dedup-check before opening returned zero matches -- standalone, no prior coverage of Jalapeño existed in the archive despite the chip having first been unveiled 24 June 2026. Full multi-agent protocol run: fresh verifier then fresh adversarial falsifier, both independent (parallel-staged, per policy/verification.md §5). Announcement claims (chip exists, built with Broadcom, inference-only, ~9-month design-to-tape-out) confirmed via two independent Tier-0 primaries (OpenAI's own posts, cross-checked directly against this project's own RSS ingest, and Broadcom's own investor-relations release). The headline benchmark numbers (1.5-1.9x perf/watt, 1.7-3.6x lower latency vs Nvidia Blackwell/GB200/GB300) are OpenAI's own figures -- published as vendor-claim, not confirmed, since SemiAnalysis (which observed the runs) explicitly says it did not independently execute the full benchmark suite. Falsifier caught and corrected a real press overstatement: The Decoder's headline claims Jalapeño 'beats Nvidia's Blackwell and Rubin,' but OpenAI's disclosed benchmarks are Blackwell-only -- Rubin was not available for testing. Deliberately did not cite The Decoder as a source for that reason, and added an explicit confirmed claim stating Rubin was not tested, to inoculate against that misconception. Editor gate (policy/style.md) run on both EN and TR; headline rests only on the confirmed announcement/publication fact, not on the vendor's comparative numbers.",
+  "watch": [
+    "Any independent benchmark of Jalapeño from a third-party evaluator (METR, Vals AI, Artificial Analysis) not fed or supervised by OpenAI",
+    "Any Nvidia response or rebuttal to the benchmark comparison (none found as of publication)",
+    "A future OpenAI/SemiAnalysis-style disclosure that actually tests Jalapeño against Nvidia's Rubin chips once Rubin ships"
+  ],
+  "open_obligation": true,
+  "revisit_after": "2026-10-15",
+  "notes": [
+    "2026-08-25 c2: Published this cycle. Verifier (13 tool uses) and falsifier (8 tool uses) run independently; falsifier's PUBLISH WITH CAVEATS verdict required two fixes before drafting: (1) use only the primary-sourced 'nine months, design-to-tape-out' timeline figure rather than presenting an unreconciled second '16 months from hiring' figure, (2) drop any Blackwell-and-Rubin framing and add an explicit confirmed claim that Rubin was not tested. Both applied. Primary cycle agent independently re-confirmed the Broadcom investor-relations URL and the OpenAI post URLs via its own WebSearch/WebFetch and via this project's own already-ingested OpenAI News RSS data (data/raw/2026-08-25/openai-news.json, data/raw/2026-07-08/openai-news.json) rather than relying solely on the sub-agents' unfetchable (403) citations."
+  ]
+}
