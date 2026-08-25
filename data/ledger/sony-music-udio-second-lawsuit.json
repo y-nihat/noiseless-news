@@ -14,7 +14,7 @@
     ],
     "follows": null,
     "open_obligation": true,
-    "revisit_after": "2026-08-25",
+    "revisit_after": "2026-09-25",
     "watch": [
         "Any Udio response, motion to dismiss, or answer to the new complaint",
         "Docket/case-number surfacing on a court tracker (CourtListener, UniCourt)",
@@ -22,6 +22,7 @@
         "Any ruling narrowing or dismissing the claims"
     ],
     "notes": [
-        "2026-07-26 cycle 4: New standalone story, surfaced via fresh gnews-ai-litigation ingest (AOL wire), dedup-check clean against the full archive. Legal/litigation claim type -- single-session verification (direct fetch of Music Business Worldwide + Engadget, cross-check via a third outlet, adversarial search for Udio's response) given the ~29-minute cycle window; same process deviation used elsewhere tonight, not a lowered evidence bar. Caught one source (Variety mirror) giving an internally inconsistent filing date and excluded it rather than using it. Every allegation attributed to Sony's complaint, no ruling implied. open_obligation set: case just filed, no ruling yet."
+        "2026-07-26 cycle 4: New standalone story, surfaced via fresh gnews-ai-litigation ingest (AOL wire), dedup-check clean against the full archive. Legal/litigation claim type -- single-session verification (direct fetch of Music Business Worldwide + Engadget, cross-check via a third outlet, adversarial search for Udio's response) given the ~29-minute cycle window; same process deviation used elsewhere tonight, not a lowered evidence bar. Caught one source (Variety mirror) giving an internally inconsistent filing date and excluded it rather than using it. Every allegation attributed to Sony's complaint, no ruling implied. open_obligation set: case just filed, no ruling yet.",
+        "2026-08-25 c5: Revisit due date reached; checked via web search. No Udio response, ruling, or settlement found -- case remains in early stages, no docket movement located. Sony remains the only major label without a Udio settlement (Universal Oct 2025, Warner Nov 2025 already settled). Nothing new to report; open_obligation stays true, revisit_after pushed to 2026-09-25."
     ]
 }

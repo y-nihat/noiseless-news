@@ -1,0 +1,32 @@
+{
+    "slug": "taiwan-nvidia-supermicro-smuggling-indictment",
+    "title": "Taiwan indicts Nvidia manager and eight others over alleged AI server smuggling to China",
+    "status": "published",
+    "first_seen": "2026-08-24",
+    "published_at": "2026-08-25",
+    "date": "2026-08-24",
+    "langs": ["en", "tr"],
+    "source_urls": [
+        "https://focustaiwan.tw/society/202608240023",
+        "https://www.pbs.org/newshour/world/taiwan-charges-9-over-illegal-ai-server-exports-to-china-including-nvidia-and-super-micro-staffers",
+        "https://www.taiwanplus.com/news/taiwan-news/business/260824015/nvidia-manager-among-nine-indicted-over-china-chip-sales",
+        "https://www.bloomberg.com/news/articles/2026-08-24/taiwan-indicts-nvidia-manager-following-chip-smuggling-probe",
+        "https://www.taipeitimes.com/News/taiwan/archives/2026/08/24/2003863053",
+        "https://www.notebookcheck.net/Nvidia-senior-manager-caught-up-in-alleged-AI-chip-smuggling-to-China-seek-5-years.1377269.0.html",
+        "https://www.taipeitimes.com/News/biz/archives/2026/05/25/2003857895",
+        "https://www.forbes.com/sites/siladityaray/2026/07/28/taiwan-prosecutors-reportedly-detain-nvidia-staffer-in-china-ai-chip-smuggling-probe/"
+    ],
+    "follows": null,
+    "open_obligation": true,
+    "revisit_after": "2027-02-25",
+    "watch": [
+        "Trial start date or any bail/detention status change for the defendants",
+        "Whether the at-large ninth suspect is apprehended or indicted",
+        "Any ruling, plea, or settlement in the case",
+        "Any developments in the separate, unrelated US SDNY case that might cause conflation and require a clarifying note"
+    ],
+    "notes": [
+        "2026-08-24 c4: Lead surfaced via Ars Technica (unfetchable directly); fresh verifier sub-agent reconstructed via reader proxy and triangulated against Focus Taiwan, CNA, Taipei Times, TaiwanPlus, Forbes, Notebookcheck-citing-Bloomberg. dedup-check exit 0, zero matches. Verifier recommended not naming any defendant (policy 10 test fails on load-bearingness), flagged an unresolved 5-vs-6-year sentencing discrepancy, a possible-hallucination name to verify, and the need to disambiguate from an unrelated US SDNY case sharing a defendant surname. Handed off in-progress via the run report rather than rushed to a same-cycle falsifier+draft under deadline pressure -- no ledger entry written at that point per this run's convention of not persisting candidate/verifying states.",
+        "2026-08-25 c5: PUBLISHED (EN + TR). Fresh adversarial falsifier sub-agent independently re-fetched Focus Taiwan, PBS/AP, TaiwanPlus, Bloomberg, both Taipei Times pieces, Notebookcheck and Forbes directly (Ars Technica remained unfetchable). Resolved the sentencing discrepancy (two different charges, not competing figures for one charge -- see evidence log), confirmed the Jensen Huang quote is genuine and independently corroborated (rescoped to May 2026), confirmed 'Lauren Barden-Hair' is a real person but dropped her as off-topic (her reporting concerns the separate US case), and extended the no-naming call to all nine defendants rather than just the Nvidia manager, since even a bare shared surname with the unrelated US case's defendant would increase confusion. NT$39m/$21m total-proceeds figures verdicted single-source (Focus Taiwan only, no second outlet). open_obligation set: case at indictment stage, no trial date yet; revisit_after set to 2027-02-25 per falsifier's estimate for multi-defendant cross-border Taiwanese financial/export cases. Editor gate run on both EN and TR: headline states only the confirmed indictment fact with no naming; TL;DR stands alone; no padding found; TR reads as a natural mirror. Five previously-unlogged source domains proposed for Tier 2 registration in source_candidates.json this cycle: focustaiwan.tw, pbs.org, taiwanplus.com, taipeitimes.com, notebookcheck.net. Full claim-by-claim reasoning in data/verified/taiwan-nvidia-supermicro-smuggling-indictment.json."
+    ]
+}

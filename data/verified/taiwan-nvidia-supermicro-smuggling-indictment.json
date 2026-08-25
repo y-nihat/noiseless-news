@@ -1,0 +1,84 @@
+{
+  "slug": "taiwan-nvidia-supermicro-smuggling-indictment",
+  "checked_at": "2026-08-25T00:44:50+00:00",
+  "method": "Fresh verifier sub-agent (cycle 4 of 2026-08-24, handed off in-progress via the run report) plus fresh adversarial falsifier sub-agent (cycle 5 of 2026-08-25). The verifier reconstructed Ars Technica's unfetchable original via a reader proxy and triangulated against Focus Taiwan, CNA, Taipei Times, TaiwanPlus, Forbes and Notebookcheck. The falsifier independently re-fetched primary Taiwan/international reporting directly (not trusting the verifier's summary), resolved the sentencing-figure and naming questions the verifier flagged, and confirmed the Jensen Huang quote and the case's distinctness from an unrelated US indictment.",
+  "origin_items": [
+    "Ars Technica, 2026-08-24 (discovery lead, unfetchable directly by either sub-agent)",
+    "https://focustaiwan.tw/society/202608240023",
+    "https://www.pbs.org/newshour/world/taiwan-charges-9-over-illegal-ai-server-exports-to-china-including-nvidia-and-super-micro-staffers"
+  ],
+  "claims": [
+    {
+      "text": "Taiwan's Keelung District Prosecutors' Office indicted eight people -- including a manager at Nvidia's Taiwan office prosecutors describe as the scheme's alleged central figure -- over a plan to illegally export AI servers to China; a ninth suspect, the head of a separate firm allegedly involved, remains at large and has not been indicted",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier directly fetched Focus Taiwan (byline Wang Chao-yu/Wu Kuan-hsien), PBS/AP and TaiwanPlus, all dated 2026-08-24 and independently reported (Focus Taiwan/CNA, AP, and Taiwan's public broadcaster are three separate newsrooms, each one hop from the prosecutors' own statement). Focus Taiwan is the most precise on the eight-indicted/one-at-large breakdown; AP and TaiwanPlus round to 'nine charged' but do not contradict it.",
+      "evidence": [
+        "https://focustaiwan.tw/society/202608240023",
+        "https://www.pbs.org/newshour/world/taiwan-charges-9-over-illegal-ai-server-exports-to-china-including-nvidia-and-super-micro-staffers",
+        "https://www.taiwanplus.com/news/taiwan-news/business/260824015/nvidia-manager-among-nine-indicted-over-china-chip-sales"
+      ]
+    },
+    {
+      "text": "Prosecutors allege 74 Nvidia B300 (Blackwell-family) AI servers were illegally exported to China -- 50 routed through Indonesia, 16 sent directly, and 8 via Japan then Hong Kong -- while a further 56 servers were seized before leaving Taiwan",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "AP/PBS gives a routing breakdown that arithmetically reconciles (50+16+8=74) and is corroborated on the 74/56 topline by Focus Taiwan and Bloomberg. Focus Taiwan's own piece separately describes a harder-to-reconcile transaction-level breakdown (130/64/64 across three orders); rather than reproduce numbers the falsifier could not cleanly reconcile, the article uses AP's figures, which check out.",
+      "evidence": [
+        "https://www.pbs.org/newshour/world/taiwan-charges-9-over-illegal-ai-server-exports-to-china-including-nvidia-and-super-micro-staffers",
+        "https://focustaiwan.tw/society/202608240023"
+      ]
+    },
+    {
+      "text": "Prosecutors are seeking a maximum five-year prison sentence for the Nvidia manager and three other defendants on export-control and document-forgery charges",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "AP/PBS states this directly ('maximum five-year sentences pursued for four of the nine defendants, including [the Nvidia manager]'); Bloomberg and Notebookcheck (citing Bloomberg) independently corroborate the five-year figure and the four-defendant scope. This resolves what the cycle-4 verifier had flagged as a 5-vs-6-year discrepancy: six years is a different figure attached to a different, separate charge (see next claim), not a competing number for the same charge.",
+      "evidence": [
+        "https://www.pbs.org/newshour/world/taiwan-charges-9-over-illegal-ai-server-exports-to-china-including-nvidia-and-super-micro-staffers",
+        "https://www.bloomberg.com/news/articles/2026-08-24/taiwan-indicts-nvidia-manager-following-chip-smuggling-probe",
+        "https://www.notebookcheck.net/Nvidia-senior-manager-caught-up-in-alleged-AI-chip-smuggling-to-China-seek-5-years.1377269.0.html"
+      ]
+    },
+    {
+      "text": "Some defendants additionally face a separate, more serious breach-of-trust charge tied to roughly NT$39 million (about $1.2-1.3 million) in company assets they allegedly diverted; prosecutors put the scheme's total illicit proceeds at more than $21 million",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Only Focus Taiwan carries these specific figures among everything the falsifier fetched or searched; no second independent outlet corroborates the exact NT$39 million or $21 million-plus totals, so under the independence rule (verification.md 2) this is labeled single-source rather than confirmed, despite Focus Taiwan being a credible, named-byline outlet reporting directly on the indictment.",
+      "evidence": [
+        "https://focustaiwan.tw/society/202608240023"
+      ]
+    },
+    {
+      "text": "Neither Nvidia nor Supermicro has been accused of wrongdoing as a company; prosecutors reportedly described both companies' internal export-control procedures as rigorous, and each company said it is cooperating with authorities or improving its compliance process",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "AP/PBS directly quotes both prosecutors' characterization and each company's on-record statement (Nvidia: will work with Taiwan authorities to resolve the allegations; Supermicro: will enhance its export-compliance program); Taipei Times' Reuters wire copy corroborates the no-corporate-wrongdoing framing.",
+      "evidence": [
+        "https://www.pbs.org/newshour/world/taiwan-charges-9-over-illegal-ai-server-exports-to-china-including-nvidia-and-super-micro-staffers",
+        "https://www.taipeitimes.com/News/taiwan/archives/2026/08/24/2003863053"
+      ]
+    },
+    {
+      "text": "The Nvidia manager at the center of the case was reportedly first detained by Taiwanese authorities in late July 2026, before this week's indictment, and in May 2026 -- after Taiwan's earlier detention of Supermicro employees in an earlier phase of the same investigation -- Nvidia chief executive Jensen Huang said he hoped those involved would 'enhance and improve their regulation compliance'",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Forbes (Siladitya Ray, Forbes staff, direct fetch) reports the July 2026 detention. The falsifier directly fetched Taipei Times' business-section piece (sourced to Bloomberg, dated 2026-05-25) and found the Huang quote verbatim; independently corroborated in the falsifier's cross-search by Tom's Hardware, TheStreet and Yahoo Finance/Betanews. This overturns the cycle-4 verifier's original single-source flag on the quote -- it is well corroborated, but must be scoped to May 2026 and the investigation's earlier phase, not read as commentary on the August indictment itself.",
+      "evidence": [
+        "https://www.forbes.com/sites/siladityaray/2026/07/28/taiwan-prosecutors-reportedly-detain-nvidia-staffer-in-china-ai-chip-smuggling-probe/",
+        "https://www.taipeitimes.com/News/biz/archives/2026/05/25/2003857895"
+      ]
+    },
+    {
+      "text": "This Taiwan case is unrelated to a separate criminal case filed in the United States in March 2026 against different individuals connected to Supermicro's Taiwan office, over a much larger alleged export scheme; the two cases share no defendants",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Falsifier confirmed via Forbes plus cross-referenced search results (NBC/CNBC/CNN coverage of the March 2026 SDNY case) that the two cases differ in jurisdiction (Taiwan vs. US), filing date (August vs. March 2026), and scale (about $21m vs. about $2.5bn) and name no overlapping defendants. Neither case's individuals are named in this article, sidestepping any surname-based confusion between the two entirely rather than naming-and-distinguishing.",
+      "evidence": [
+        "https://www.forbes.com/sites/siladityaray/2026/07/28/taiwan-prosecutors-reportedly-detain-nvidia-staffer-in-china-ai-chip-smuggling-probe/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Independently re-fetched Focus Taiwan, PBS/AP, TaiwanPlus, both Taipei Times pieces, Notebookcheck and Forbes directly rather than trusting the cycle-4 verifier's reader-proxy reconstruction of Ars Technica (which remained unfetchable by every method tried across both cycles). Re-ran the policy 10 naming test independently and reached a stricter conclusion than the verifier: extended the no-naming call to all nine defendants (not just the Nvidia manager), since even a bare surname ('Chang') is shared with an unrelated defendant in the separate US case and using it would increase confusion rather than add identifying value -- no source gives more than a bare surname for any defendant, so the accountable-source prong of the test is at best partial regardless of which defendant is involved. Resolved the apparent 5-vs-6-year sentencing conflict: the two figures attach to two different charges (export/forgery vs. aggravated breach-of-trust), not competing numbers for the same fact -- confirmed by Focus Taiwan being the only outlet carrying the breach-of-trust figures at all, which is also why that claim is verdicted single-source rather than confirmed. Verified 'Lauren Barden-Hair' is a real person (Berkeley political-science PhD candidate, confirmed via six independent sources) but her Hill op-ed concerns the separate US case, not this one -- dropped from this article as off-topic rather than as a fabrication. Confirmed the Jensen Huang quote is genuine and well-corroborated (direct fetch plus three independent cross-searches) but rescoped it to May 2026 rather than letting it read as reaction to the August indictment. Excluded two tangents with no connection found in any fetch or search: the Remote Access Security Act policy debate, and Nvidia's 15 percent AI-server price rise (already covered by the separate, already-published nvidia-ai-chip-price-increase).",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China\" --url (Ars Technica, 2026-08-24) run in cycle 4: exit 0, zero matches against the full archive. Not re-run in cycle 5 since no new working title/URL was substituted. Standalone story; distinct from the separate, already-published nvidia-ai-chip-price-increase (unrelated Nvidia pricing story) and from the unrelated US SDNY Supermicro case (never covered on this site)."
+}
