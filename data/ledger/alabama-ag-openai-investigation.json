@@ -1,0 +1,23 @@
+{
+  "slug": "alabama-ag-openai-investigation",
+  "title": "Alabama attorney general subpoenas OpenAI over Hugging Face breach",
+  "status": "published",
+  "first_seen": "2026-08-25",
+  "published_at": "2026-08-25",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.alabamaag.gov/attorney-general-marshall-launches-investigation-into-openai-and-sam-altman-for-massive-artificial-intelligence-data-breach/",
+    "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/"
+  ],
+  "follows": "huggingface-ai-agent-security-breach",
+  "open_obligation": true,
+  "revisit_after": "2026-09-24",
+  "watch": [
+    "The outcome of Alabama's investigation (findings, settlement, or closure without action)",
+    "Whether any of the other 14 coalition states (Florida, Missouri, Pennsylvania, Texas and others) issue their own subpoenas",
+    "OpenAI's promised review findings once shared with authorities"
+  ],
+  "notes": [
+    "2026-08-25 c3: published as a follow-up to huggingface-ai-agent-security-breach per verification.md Sec.8 -- a NEW event (state legal investigation and subpoena, dated 24 Aug 2026) in the same saga, not new detail about the original breach and distinct from the earlier open-secure-ai-alliance-formation follow-up (industry response) which also follows the same predecessor. dedup-check returned moderate matches (0.5) to both; read both before deciding. Fresh verifier + fresh adversarial falsifier both run this cycle, independently; no disagreement, no claim downgraded. Primary source is the Alabama AG's own press release (Tier 0). open_obligation set: investigation outcome and whether other coalition states follow with subpoenas of their own are both unresolved."
+  ]
+}
