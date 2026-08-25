@@ -1,0 +1,51 @@
+{
+  "slug": "thomson-reuters-ai-model-launch",
+  "checked_at": "2026-08-25T00:06:00+00:00",
+  "method": "Fresh verifier sub-agent + fresh adversarial falsifier sub-agent, both dispatched in cycle 4 of the 2026-08-24/25 night loop. Verifier fetched The Decoder's lead, traced it to Thomson Reuters' own PR Newswire release and blog post, and checked 8 outlets for independence. Falsifier independently re-fetched both primary sources directly, searched for contradictions, and corrected the verifier's framing on one point (the Qwen/Snowdon/Imperial College lineage detail is not in Thomson Reuters' own materials, only in secondary reporting).",
+  "origin_items": [
+    "data/raw/2026-08-24/the-decoder.json#thomson-reuters-bets-40m-on-owning-its-ai-instead-of-renting-from-openai-or-anthropic"
+  ],
+  "claims": [
+    {
+      "text": "Thomson Reuters has built and launched its own proprietary AI model, called Thomson, rather than relying solely on models rented from outside AI labs for at least this part of its product line; it is first deployed in Tabular Analysis within Thomson Reuters' CoCounsel Legal, with a smaller open-weight version released on Hugging Face for academic and non-commercial use.",
+      "type": "announcement",
+      "verdict": "confirmed",
+      "reasoning": "Confirmed on two independently-fetched primary sources: Thomson Reuters' own PR Newswire release (Toronto, Aug 24 2026 dateline, 'SOURCE Thomson Reuters') and Thomson Reuters' own blog post, both fetched directly by the falsifier. Both name the CoCounsel Legal / Tabular Analysis deployment; the PR Newswire release additionally confirms the Hugging Face open-weight release for academic/non-commercial use. No contradiction found anywhere.",
+      "evidence": [
+        "https://www.prnewswire.com/news-releases/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model-302857499.html",
+        "https://www.thomsonreuters.com/en-us/posts/innovation/thomson-reuters-built-its-own-ai-model-that-now-ranks-among-the-worlds-best/"
+      ]
+    },
+    {
+      "text": "Thomson Reuters says the model descends from an intermediate, safety-retrained checkpoint it calls \"Snowdon,\" built on Alibaba's open-weight Qwen3.5-397B, with Imperial College conducting the safety and ethics retraining.",
+      "type": "announcement",
+      "verdict": "single-source",
+      "reasoning": "Neither Thomson Reuters primary source (PR Newswire or blog post) names Qwen, Snowdon, or Imperial College -- both say only 'a strong open-source foundation.' This specific lineage detail traces to a single Tier-2 secondary source (The Decoder, the original discovery lead) reporting on background briefing material; the verifier separately found the same detail relayed by other outlets, but all trace to the same briefing, not to Thomson Reuters' own published materials or a second independent confirmation. Falsifier explicitly recommended treating this as single-source-equivalent rather than folding it into the confirmed announcement claim.",
+      "evidence": [
+        "https://the-decoder.com/thomson-reuters-bets-40m-on-owning-its-ai-instead-of-renting-from-openai-or-anthropic/"
+      ]
+    },
+    {
+      "text": "Thomson Reuters says building Thomson cost about $40 million over more than two years, including roughly $450,000 for the final training run.",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Verifier checked 8 outlets (StockTitan, Investing.com, The News International, Non-Billable, LawSites, The Logic, MLQ News, SiliconANGLE) covering this figure; every one traces back to Thomson Reuters' own PR Newswire release / briefing -- a wire-exclusive-equivalent situation under verification.md §2. No filing, analyst estimate, or independently-sourced figure was found anywhere. Falsifier's independent search found no additional corroboration and confirmed the figure appears nowhere except Thomson Reuters' own release.",
+      "evidence": [
+        "https://www.prnewswire.com/news-releases/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model-302857499.html"
+      ]
+    },
+    {
+      "text": "Thomson Reuters says Thomson performs on par with or ahead of frontier models, including Claude Opus 4.8, GPT-5.5, Claude Sonnet 5 and Gemini 3.1 Pro, on legal and general benchmarks.",
+      "type": "capability",
+      "verdict": "vendor-claim",
+      "reasoning": "Self-reported by Thomson Reuters in both primary sources. Independently scrutinized by legal-technology journalist Bob Ambrogi at LawSites, who found methodological asymmetries (test-time scaling applied to Thomson but not clearly to rivals; GPT-5.5 tested in non-reasoning mode) and concluded the self-reported picture is 'more mixed than the headline suggests.' Falsifier's independent pass found this caution understated if anything -- it located further outlet coverage of Thomson Reuters' own released numbers showing Thomson trailing Gemini 3.1 Pro and GPT-5.5 on Stanford LegalBench and ranking last on a reported coding composite, directly at odds with the blog's 'ahead of GPT-5.5' framing -- but since the falsifier could not supply a specific citable URL for that breakdown within this cycle's time budget, only the LawSites-sourced caveat (which is fully verified and URL-backed) is used in the article body; the vendor-claim verdict stands either way.",
+      "evidence": [
+        "https://www.prnewswire.com/news-releases/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model-302857499.html",
+        "https://www.thomsonreuters.com/en-us/posts/innovation/thomson-reuters-built-its-own-ai-model-that-now-ranks-among-the-worlds-best/",
+        "https://www.lawnext.com/2026/08/thomson-reuters-says-its-homegrown-ai-model-now-rivals-the-frontier-labs-i-take-a-closer-look-at-the-benchmarks.html"
+      ]
+    }
+  ],
+  "falsifier_notes": "Falsifier independently re-fetched both Thomson Reuters primary sources directly rather than trusting the verifier's summary. PR Newswire release: PASS, verbatim confirms $40M figure, CoCounsel Legal/Tabular Analysis deployment, Hugging Face release; does not name Qwen/Snowdon/Imperial College. Thomson Reuters blog post: partial pass, confirms deployment and the exact benchmark sentence; also does not name Qwen/Snowdon/Imperial College -- only 'a strong open-source foundation.' One fetch-tool artifact (a stray 'Jul 31, 2026' date extracted from the blog page) was judged not to indicate stale news, since the PR Newswire twin release and every syndicated outlet independently date this Aug 24, 2026. No contradiction of the core announcement found anywhere. Searched specifically for independent corroboration of the $40M figure and found none. Confirmed the naming-people question does not apply (Hasker/Hron are corporate executives speaking officially about their own company's product -- verification.md §10's explicit standard case for permitted naming, not the private-individual exception). No prompt-injection attempts encountered in any fetched content.",
+  "dedup_check": "dedup-check run this cycle on title 'Thomson Reuters bets $40M on owning its AI instead of renting from OpenAI and Anthropic' + The Decoder URL: clean, no matches against the archive. Both verifier and falsifier separately searched the local archive (data/ledger/, content/articles/) for Thomson Reuters, Harvey, CoCounsel, Westlaw and Qwen and found no prior entry; the one surface-level '$40M' collision in the archive (anthropic-public-first-action-40m.json) is an unrelated Anthropic PAC-donation story. New standalone story. Headline reframed away from the original $40M-led framing per the verification findings -- the headline and TL;DR now lead with the confirmed launch/deployment claim, with the cost and benchmark figures presented as the company's own, labeled single-source/vendor-claim in the body, following the same-outcome precedent set by harvey-tenet-launch (2026-08-18)."
+}
