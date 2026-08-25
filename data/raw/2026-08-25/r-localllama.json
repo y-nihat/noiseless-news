@@ -208,5 +208,85 @@
     "published": "2026-08-25T13:15:12+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>My best bet is the embedding-offloaded linear where the 51b n-grams track semantics and context, like 3.8 with its loss of real world knowledge bolted back on.</p> <p>Otherwise? Sparse full-attention with dense routing? 6b active route to 'heavy' layers when the n-gram gets stuck.</p> <p>Scenario 3: multi-head latent attention (mla) hybrid (reverse engineering Deepseek) compressing KV on the fly with the embeddings 'decompressing' on demand</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/challis88ocarina\"> /u/challis88ocarina </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzjps/qwen_4_architecture_what_do_we_know/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vxzjps/qwen_4_architecture_what_do_we_know/\">[comments]</a></span>",
     "fetched_at": "2026-08-25T16:41:11.572973+00:00"
+  },
+  {
+    "id": "e2866369c27a8531",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Flash-Next. This architecture could be surprisingly local-friendly once the weights drop. 👀",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy6smx/qwen38flashnext_this_architecture_could_be/",
+    "published": "2026-08-25T17:42:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy6smx/qwen38flashnext_this_architecture_could_be/\"> <img alt=\"Qwen3.8-Flash-Next. This architecture could be surprisingly local-friendly once the weights drop. 👀\" src=\"https://preview.redd.it/jzppm3ur5klh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=f8c055b1f9e3d080437afa7b07961a4d37bdf691\" title=\"Qwen3.8-Flash-Next. This architecture could be surprisingly local-friendly once the weights drop. 👀\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Qwen3.8-Flash-Next (~125B-A6B + 51B n-gram) memory estimate:</p> <p>Ideal 4-bit quant ≈ 82 GB<br /> (58 GB main weights + 24 GB n-gram tables)<br /> Real-world quants likely land in the 80–90 GB range.</p> <p>The big n-gram table is sparsely accessed → excellent candidate for system RAM offload.</p> <p>This architecture could be surprisingly local-friendly once the weights drop. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmv143\"> /u/pmv143 </a> <br /> <span><a href=\"https://i.redd.it/jzppm3ur5klh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy6smx/qwen38flashnext_this_architecture_could_be/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
+  },
+  {
+    "id": "806ec1f1f3f48347",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "It's here!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vycbqw/its_here/",
+    "published": "2026-08-25T20:57:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>mrburns_excellent.gif</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/funding__secured\"> /u/funding__secured </a> <br /> <span><a href=\"https://i.redd.it/pwmq9xsb4llh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vycbqw/its_here/\">[comments]</a></span>",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
+  },
+  {
+    "id": "0b0031fd489501a8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Granite Speech 5.0 Turbo CTC: Extremely Fast and Accurate Transcription",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vya9ok/granite_speech_50_turbo_ctc_extremely_fast_and/",
+    "published": "2026-08-25T19:44:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vya9ok/granite_speech_50_turbo_ctc_extremely_fast_and/\"> <img alt=\"Granite Speech 5.0 Turbo CTC: Extremely Fast and Accurate Transcription\" src=\"https://external-preview.redd.it/dhHjsSldx3uYLBEbsdm5lIh0kVjw0vu6Q722NqveA5E.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=ea02d308daab8b5b571e521fdb0fe70397b99526\" title=\"Granite Speech 5.0 Turbo CTC: Extremely Fast and Accurate Transcription\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/coder543\"> /u/coder543 </a> <br /> <span><a href=\"https://huggingface.co/blog/ibm-granite/granite-speech-5-0-470m-turboctc\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vya9ok/granite_speech_50_turbo_ctc_extremely_fast_and/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
+  },
+  {
+    "id": "15d73b667b997288",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "35B-A3B tool calling benchmark: Original Qwen vs. KAT Coder, Ornith and Tiel-Coder",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyaxip/35ba3b_tool_calling_benchmark_original_qwen_vs/",
+    "published": "2026-08-25T20:07:51+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyaxip/35ba3b_tool_calling_benchmark_original_qwen_vs/\"> <img alt=\"35B-A3B tool calling benchmark: Original Qwen vs. KAT Coder, Ornith and Tiel-Coder\" src=\"https://preview.redd.it/99b3s3awuklh1.png?width=140&amp;height=83&amp;auto=webp&amp;s=a8dc13cd194339198b5a29f11234a5253f23b5a8\" title=\"35B-A3B tool calling benchmark: Original Qwen vs. KAT Coder, Ornith and Tiel-Coder\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>With hopes of a Qwen3.8-35B-A3B release now mostly dashed, many people including myself are looking at fine-tunes and other variants of Qwen3.6-35B-A3B to run on VRAM-limited hardware. I decided to try to benchmark some of the top contenders: KAT-Coder, Ornith 1.5 and the very recent Tiel-Coder. I used the <a href=\"https://github.com/SeraphimSerapis/tool-eval-bench\">tool-eval-bench</a> utility by SeraphimSerapis as the benchmark suite. It measures how well the different models handle tool calls, including some very hard scenarios.</p> <p><strong>TL;DR</strong>: Ornith 1.5 and Tiel-Coder (which is based on Ornith) were the tied winners in this benchmark. They scored well above Qwen3.6-27B and got pretty close to 3.8-27B. KAT Coder was also slightly better than the original 35B-A3B. Ornith-1.5-Heretic was a disappointment.</p> <p>Some time ago I posted a similar <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1u0isbo/qwen3635ba3b_tool_calling_benchmark_byteshape_vs/\">tool evaluation benchmark of different Qwen3.6-35B-A3B quants</a>. In hindsight, that didn't work so well, mainly because I was looking at too many variables (GGUF quant, KV quant, context depth/pressure) and the benchmark itself was quite noisy so it was hard to get clear results. I hope I did better this time!</p> <h1>Materials</h1> <p>I had access to a cluster of 32GB V100s. For this comparison, I selected 2-3 different quants per model, if possible from different providers. For comparison, I also included…",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
+  },
+  {
+    "id": "3f45ed9451b5a39d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How to run LLMs as regular guy with low resources?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyajjd/how_to_run_llms_as_regular_guy_with_low_resources/",
+    "published": "2026-08-25T19:54:13+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello everyone. I hope is all well with you all. I been around this sub for a few months and been quietly reading and I have seen how many of you are spending $10k on the Mac M5 and I am assuming you are using it for work or just for fun but have the resources to spend like that. I am a regular guy with a 9-5 job and I would like to experiment with local LLMs but I dont have much disposable income to spend big amounts on GPUs or Macs. I currently have an I7 - 8700 and Nvidia 2060 6Gb VRAM - 32GB RAM</p> <p>Now my question is, does anybody have an idea on what models or hacky stuff I can do to try the latest AI models on my hardware?</p> <p>I have checked hugging face but I see so many models with the same name but letter and numbers at the end. I understand some of them mean Quantization which is dumber a model but I also found out tiny models like Linq which can be run even on the CPU. So I would like to connect with someone with more experienced to have fun with AI.</p> <p>Thank you everyone .</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pet3121\"> /u/pet3121 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyajjd/how_to_run_llms_as_regular_guy_with_low_resources/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyajjd/how_to_run_llms_as_regular_guy_with_low_resources/\">[comments]</a></span>",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
+  },
+  {
+    "id": "bdcc8f41fd8dcb08",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "CNBC Television: Nvidia partner with Perplexity AI to run locally in DGX Spark.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy6mjb/cnbc_television_nvidia_partner_with_perplexity_ai/",
+    "published": "2026-08-25T17:36:50+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy6mjb/cnbc_television_nvidia_partner_with_perplexity_ai/\"> <img alt=\"CNBC Television: Nvidia partner with Perplexity AI to run locally in DGX Spark.\" src=\"https://external-preview.redd.it/yzdQrGk5wfwXZZCLBM3hzepWGlzpAqjJDDAilMDpI_Q.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=b9ade94c75cf9ef2e9391abaf8f79df14c44de98\" title=\"CNBC Television: Nvidia partner with Perplexity AI to run locally in DGX Spark.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dd32x\"> /u/dd32x </a> <br /> <span><a href=\"https://youtu.be/HqqalSHRWt8\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy6mjb/cnbc_television_nvidia_partner_with_perplexity_ai/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
+  },
+  {
+    "id": "53d82e70c3784492",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "About the Huggingface sale..",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy71my/about_the_huggingface_sale/",
+    "published": "2026-08-25T17:51:51+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>.. didn't llama.cpp aka ggml get acquired by Huggingface not too long ago? How would this sale affect llama.cpp and ggml? What are possible risks, and did ggerganov share his opinions or potential next steps on the matter? I'm genuinely worried that this might turn out bad for the ecosystem altogether. Would llama.cpp's license protect it from hostile acquisitions altogether? I'd love to constructively discuss this with the community. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/QuackerEnte\"> /u/QuackerEnte </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy71my/about_the_huggingface_sale/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy71my/about_the_huggingface_sale/\">[comments]</a></span>",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
+  },
+  {
+    "id": "523c4dff458fbebd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "You think they could have tweaked the typeface a bit?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vy7i5b/you_think_they_could_have_tweaked_the_typeface_a/",
+    "published": "2026-08-25T18:07:32+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy7i5b/you_think_they_could_have_tweaked_the_typeface_a/\"> <img alt=\"You think they could have tweaked the typeface a bit?\" src=\"https://preview.redd.it/bq8bfaj6aklh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=1dca43babb2afa7d38610a4267d8756134a91070\" title=\"You think they could have tweaked the typeface a bit?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/indicava\"> /u/indicava </a> <br /> <span><a href=\"https://i.redd.it/bq8bfaj6aklh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vy7i5b/you_think_they_could_have_tweaked_the_typeface_a/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-25T22:00:01.197585+00:00"
   }
 ]
