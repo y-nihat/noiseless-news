@@ -1,0 +1,73 @@
+{
+  "slug": "wikihow-openai-copyright-lawsuit",
+  "checked_at": "2026-08-26T00:10:00+00:00",
+  "method": "Fresh verifier and fresh adversarial falsifier sub-agents, run independently and in parallel in cycle 4 of the 2026-08-26 night run; neither drafted the story. Both then cross-checked against the raw ingest lead and each other's convergent findings before this log was written.",
+  "origin_items": [
+    "data/raw/2026-08-25/gnews-ai-litigation.json (MediaNama item, 'WikiHow sues OpenAI over AI training on copyrighted articles')",
+    "data/raw/2026-08-25/gnews-ai-litigation.json (IPWatchdog.com item, 'WikiHow Files Lawsuit Against OpenAI Over ChatGPT's Use of Its How-To Library')"
+  ],
+  "claims": [
+    {
+      "text": "wikiHow, Inc. filed a copyright and DMCA lawsuit against OpenAI, Inc. and eight affiliated entities in the U.S. District Court for the Southern District of New York on 21 August 2026 (case no. 1:2026cv07171)",
+      "type": "business",
+      "verdict": "confirmed",
+      "reasoning": "Both sub-agents independently found the same docket number, court, filing date and party via separate paths: the verifier cross-referenced a Justia docket listing against outlet summaries; the falsifier located the case via Justia/CourtListener directly. Reuters' own named-byline reporter (Blake Brittain, a recognized specialist on AI-copyright litigation who has covered the NYT, Britannica and Merriam-Webster suits against OpenAI) is the origin report, corroborated independently by IPWatchdog's own detailed writeup (byline Rose Esfandiari) and by MediaNama's own coverage -- both outlets' articles were independently located and read (not just relayed via search snippet), each with matching but non-identical framing consistent with separate drafting from the complaint rather than pure copy-through. The exact number and names of the eight affiliated defendant entities were not independently confirmed (unconfirmed whether Microsoft is among them) -- article does not name them individually.",
+      "evidence": [
+        "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44L0WE:0-wikihow-sues-openai-for-copyright-infringement-over-ai-training/",
+        "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/",
+        "https://www.medianama.com/2026/08/223-wikihow-openai-unsanctioned-ai-training/"
+      ]
+    },
+    {
+      "text": "The complaint alleges OpenAI trained ChatGPT on wikiHow's articles obtained through crawling and scraping, and that OpenAI's systems separately retrieve and reproduce wikiHow content via retrieval-augmented generation at runtime",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "This is wikiHow's own pleaded allegation, reported consistently by all three cited outlets as content of the complaint, not independently verified as true by any outlet or by either sub-agent. Tagged single-source (the complaint itself is the one account) and attributed to wikiHow throughout the article body per verification.md's legal-claim standard -- never stated as established fact.",
+      "evidence": [
+        "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44L0WE:0-wikihow-sues-openai-for-copyright-infringement-over-ai-training/",
+        "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/"
+      ]
+    },
+    {
+      "text": "The complaint alleges OpenAI stripped copyright management information -- bylines, titles, dates and terms-of-use notices -- from copied wikiHow articles, in violation of the DMCA",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Pleaded DMCA §1202(b)(1) claim from the complaint, reported by IPWatchdog and Reuters. Single account (the complaint); attributed to wikiHow, not stated as fact.",
+      "evidence": [
+        "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44L0WE:0-wikihow-sues-openai-for-copyright-infringement-over-ai-training/",
+        "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/"
+      ]
+    },
+    {
+      "text": "According to the complaint, wikiHow's site received more than 185,000 visits from OpenAI's published IP ranges between March and May 2025, and OpenAI's crawlers reached the site 148,529 times between May and July 2026; the suit covers 1,211 registered copyrights spanning 11,211 articles",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Specific figures traced by both sub-agents to the complaint itself -- recur identically (148,529; 1,211; 11,211) across every outlet's summary, consistent with all being pulled from the same filed document rather than independently measured. No independent measurement of these figures exists. Single-source (the complaint); presented as wikiHow's stated figures, not independently confirmed traffic/scope data.",
+      "evidence": [
+        "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44L0WE:0-wikihow-sues-openai-for-copyright-infringement-over-ai-training/",
+        "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/"
+      ]
+    },
+    {
+      "text": "wikiHow says it approached OpenAI about a license in spring 2024 and that OpenAI never seriously pursued one",
+      "type": "business",
+      "verdict": "single-source",
+      "reasoning": "Narrative allegation from the complaint (contrasted there with OpenAI's News Corp licensing deal); reported by IPWatchdog and Reuters. Single account, attributed to wikiHow.",
+      "evidence": [
+        "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44L0WE:0-wikihow-sues-openai-for-copyright-infringement-over-ai-training/",
+        "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/"
+      ]
+    },
+    {
+      "text": "OpenAI had made no public statement or comment on the lawsuit as of publication",
+      "type": "statement",
+      "verdict": "confirmed",
+      "reasoning": "Both sub-agents searched independently for any OpenAI spokesperson statement, denial, or openai.com post referencing this suit and found none; IPWatchdog's own piece states no OpenAI response is documented. Consistent with a filing only ~5 days old at publication.",
+      "evidence": [
+        "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/"
+      ]
+    }
+  ],
+  "falsifier_notes": "Adversarial falsifier independently re-derived the docket (Justia/CourtListener: wikiHow, Inc. v. OpenAI, Inc. et al., No. 1:2026cv07171, S.D.N.Y., filed 21 Aug 2026) without relying on the verifier's path, and separately confirmed the 11,211-article/1,211-copyright figure, the defendant count (OpenAI + eight affiliated entities), and the absence of any OpenAI response. Actively searched for reasons to doubt the story -- an old case resurfacing, an exaggerated article count, a conflated defendant, a wire-only artifact with no real underlying filing, a dismissal or retraction -- and found none. The one substantive finding was that two of the four originally-surfaced leads, ababnews.com and Digital Music News, could not be located by either sub-agent despite repeated, varied search attempts (site-restricted queries, exact-headline search); both were dropped from the published source list and are not cited as evidence anywhere in this log or the article. No embedded prompt-injection content found in any fetched page; boilerplate WebSearch tool reminders were correctly identified as tool scaffolding, not page content.",
+  "dedup_check": "PYTHONPATH=pipeline python -m noiseless.run dedup-check --title \"wikiHow sues OpenAI over ChatGPT training on copyrighted how-to guides\" --url \"https://ipwatchdog.com/...\" returned one moderate match (score 0.375) against delhi-hc-ani-openai-copyright-ruling. Read that entry: different jurisdiction (India vs. US), different plaintiff (ANI Media vs. wikiHow), different court, different procedural posture (an interim ruling on an existing suit vs. a brand-new filing) -- confirmed unrelated despite the surface similarity of 'OpenAI copyright case'. Published standalone, no follows link."
+}

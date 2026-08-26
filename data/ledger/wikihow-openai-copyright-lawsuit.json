@@ -1,0 +1,25 @@
+{
+  "slug": "wikihow-openai-copyright-lawsuit",
+  "title": "wikiHow sues OpenAI over ChatGPT's use of its how-to articles",
+  "status": "published",
+  "first_seen": "2026-08-26",
+  "published_at": "2026-08-26",
+  "langs": ["en", "tr"],
+  "source_urls": [
+    "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44L0WE:0-wikihow-sues-openai-for-copyright-infringement-over-ai-training/",
+    "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/",
+    "https://www.medianama.com/2026/08/223-wikihow-openai-unsanctioned-ai-training/"
+  ],
+  "follows": null,
+  "open_obligation": true,
+  "revisit_after": "2026-09-26",
+  "reason": "Published: wikiHow, Inc. filed a copyright/DMCA lawsuit against OpenAI, Inc. and eight affiliated entities in the U.S. District Court for the Southern District of New York on 21 August 2026 (case no. 1:2026cv07171). Fresh verifier and fresh adversarial falsifier run independently and in parallel; both converged on the same docket, filing date, and complaint figures with no disagreement. The filing itself is confirmed via named-byline Reuters reporting (Blake Brittain) plus independently-read writeups from IPWatchdog and MediaNama and a Justia/CourtListener docket record. The substantive infringement allegations (training-data scraping, runtime RAG reproduction, CMI stripping, visit/crawl figures, licensing-approach narrative) are wikiHow's own pleaded claims from the complaint -- tagged single-source and attributed throughout, per verification.md's legal-claim standard, never stated as fact. Two of the four originally-surfaced leads (ababnews.com, Digital Music News) could not be located by either sub-agent despite repeated search attempts and were dropped from sourcing entirely -- not cited anywhere. No OpenAI comment found as of publication. dedup-check returned one moderate match against delhi-hc-ani-openai-copyright-ruling; read and confirmed unrelated (different jurisdiction, plaintiff, court and procedural stage) -- published standalone.",
+  "watch": [
+    "Any OpenAI response, answer, or motion to dismiss",
+    "Whether other publishers cite or join this suit",
+    "Any ruling on the merits, or a settlement"
+  ],
+  "notes": [
+    "2026-08-26 c4: Published. Surfaced via this cycle's fresh gnews-ai-litigation ingest (MediaNama and IPWatchdog items). Verifier and falsifier sub-agents run in parallel, both fresh and independent; converged on the same docket number, filing date, and complaint figures. dedup-check: one moderate match (delhi-hc-ani-openai-copyright-ruling), confirmed unrelated -- different case, different country, different stage."
+  ]
+}
