@@ -1,0 +1,12 @@
+[
+  {
+    "id": "c075cd6b7534fee8",
+    "source": "IEEE Spectrum AI",
+    "tier": 2,
+    "title": "New Platform Peers Inside AI’s Black Box",
+    "url": "https://spectrum.ieee.org/silico-ai-interpretability",
+    "published": "2026-08-26T12:00:01+00:00",
+    "summary": "<img src=\"https://spectrum.ieee.org/media-library/goodfire-ai-s-silico-uses-agents-equipped-with-interpretability-tools-to-examine-the-reasoning-behind-an-ai-model.jpg?id=67668252&amp;width=1245&amp;height=700&amp;coordinates=0%2C62%2C0%2C63\" /><br /><br /><p><span>Prompt Claude, ChatGPT, Gemini, or any other popular <a href=\"https://spectrum.ieee.org/what-is-deep-learning\" target=\"_blank\">large language model</a> (LLM) with a question like “What is the best film ever made?” and the response will vary, and you (and most worryingly, the people who built the LLM) have little idea exactly how it came up with that specific answer.</span></p><p>This mysterious behavior can be useful in some situations. But—as a recent <a href=\"https://huggingface.co/blog/security-incident-july-2026\" target=\"_blank\">incident</a> where <a href=\"https://spectrum.ieee.org/tag/openai\" target=\"_self\">OpenAI</a> could not explain why its advanced pre-release model hacked AI company Hugging Face highlighted—it can have negative and alarming consequences too. And when frontier AI models are writing code, generating results humans could not achieve alone, and performing other important tasks across society, the need to interpret AI ‘thinking’ and outputs has never been greater.</p><p><a href=\"https://www.goodfire.com/\">Goodfire</a>, an AI lab focused solely on this very problem, recently made its cutting-edge Silico platform, filled with tools to interpret the behavior of AI, generally available to the public. As part of this, the company recently announced a <a href=\"https://www.goodfire.com/grants\" rel=\"noopener noreferrer\" target=\"_blank\">new grant program</a> offering $1 million in free Silico usage for academic and nonprofit interpretability researchers. These efforts aim to democratize AI interpretability, placing techniques previously available to a clutch of elite labs into the hands of ambitious research teams and startups that want to build and understand their own models or adapt open-s…",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  }
+]

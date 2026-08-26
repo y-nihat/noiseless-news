@@ -1,0 +1,52 @@
+[
+  {
+    "id": "713c17492903870f",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Natera’s intelligent appointment scheduling with Amazon Bedrock AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/nateras-intelligent-appointment-scheduling-with-amazon-bedrock-agentcore/",
+    "published": "2026-08-26T16:36:35+00:00",
+    "summary": "Learn how Natera built an automated voice agent on Amazon Bedrock AgentCore that lets patients book mobile phlebotomy appointments through natural conversation. The post covers the dual-WebSocket bridge, event-driven latency masking, and progressive-trust authentication behind 100% tool-calling accuracy and sub-7-second latency.",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "fa7e4d8446ca6d13",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Bring your own model with Amazon SageMaker AI: Script mode in SDK v3",
+    "url": "https://aws.amazon.com/blogs/machine-learning/bring-your-own-model-with-amazon-sagemaker-ai-script-mode-in-sdk-v3/",
+    "published": "2026-08-26T16:31:32+00:00",
+    "summary": "The SageMaker Python SDK v3 redesigns script mode with unified ModelTrainer and ModelBuilder classes. This post walks through two end-to-end examples, a scikit-learn Random Forest and a multi-GPU Stable Diffusion 3.5 LoRA fine-tune, showing how SourceCode syncs your local code into any container at runtime so you can iterate without rebuilding Docker images.",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "bf60ba9cac428e3c",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Preparing data for supervised fine-tuning Part 2: Advanced data strategies",
+    "url": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-2-advanced-data-strategies/",
+    "published": "2026-08-26T16:24:05+00:00",
+    "summary": "The advanced side of supervised fine-tuning data prep. This second post in a two-part series covers evaluating data readiness with learning curves, selecting high-value data subsets, augmenting data with synthetic and distilled examples, and mixing data sources to prevent catastrophic forgetting.",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "558e1b2c3f716e6e",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Preparing data for supervised fine-tuning Part 1: Formatting and quality",
+    "url": "https://aws.amazon.com/blogs/machine-learning/preparing-data-for-supervised-fine-tuning-part-1-formatting-and-quality/",
+    "published": "2026-08-26T16:24:02+00:00",
+    "summary": "Data preparation determines the ceiling of any supervised fine-tuning project. This first post in a two-part series covers the foundations of SFT data prep: quality checks, conversational (JSONL) formatting, reasoning and tool-calling schemas, and a representative train/evaluation split.",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "bdba8e2906c883ba",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Connect Amazon Bedrock AgentCore to cross-account knowledge bases",
+    "url": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
+    "published": "2026-08-26T15:48:10+00:00",
+    "summary": "Learn how Amazon Bedrock AgentCore agents in one account can generate answers from an Amazon Bedrock knowledge base backed by Amazon Redshift Serverless in another account, without copying source data. This post covers the architecture, security boundary, and two orchestration models: a code-based Strands agent and a declarative AgentCore harness.",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  }
+]

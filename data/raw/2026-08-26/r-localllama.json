@@ -98,5 +98,105 @@
     "published": "2026-08-26T08:18:32+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyqy4e/opencode_with_qwen3827b_for_small_games_or/\"> <img alt=\"OpenCode with Qwen3.8-27B for Small Games or Browsing the Web With 16GB VRAM\" src=\"https://preview.redd.it/n3yiig4hholh1.gif?width=640&amp;crop=smart&amp;s=7fdd12a38e59c2bd94b8d0de4988db816626ef61\" title=\"OpenCode with Qwen3.8-27B for Small Games or Browsing the Web With 16GB VRAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In the past, I have use llama.cpp, but I read that the exl3 quantization format should give <a href=\"https://huggingface.co/turboderp/Qwen3.8-27B-exl3\">better precision</a>, so I have tried exllamav3/tabbyAPI.</p> <p>It was able to write the shown simple HTML game without interaction after asking some questions.</p> <p>The following was tested on a laptop with a NVIDIA RTX A5000 laptop (16 GB) GPU.</p> <p>With the 3 bpw model and 6 bit/5 bit KV cache, the maximum context length is around 110k tokens with MTP. This gives around 55 tokens/s decode speed for code and around 10 tokens/s for content where MTP doesn't help (e.g. complicated calculations). Without MTP, one could try the 3.5 or 4 bpw model or a longer context length.</p> <h2>Install tabbyAPI/exllamav3</h2> <ol> <li> Install the latest Nvidia drivers</li> <li> Install Git (e.g. <code>sudo apt install git</code> or on Windows with <code>winget install -e --id Git.Git</code>)</li> <li> Install the uv Python package manager: <a href=\"https://docs.astral.sh/uv/getting-started/installation/\">https://docs.astral.sh/uv/getting-started/installation/</a> (e.g. <code>curl -LsSf https://astral.sh/uv/install.sh | sh</code> or <code>winget install --id=astral-sh.uv -e</code>)</li> <li> Make somewhere a folder and install tabbyAPI: <code>bash git clone https://github.com/theroyallab/tabbyAPI cd tabbyAPI uv venv --python 3.13 .venv uv pip install -e &quot;.[cu13]&quot; </code></li> <li> Test if CUDA works (on Linux, use .venv/bin/python) <code>bash .venv/Scripts…",
     "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "f1a6b102b96470a3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[Megathread] GLM-5.3-Flash - former ox-alpha",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyzzxu/megathread_glm53flash_former_oxalpha/",
+    "published": "2026-08-26T15:17:48+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyzzxu/megathread_glm53flash_former_oxalpha/\"> <img alt=\"[Megathread] GLM-5.3-Flash - former ox-alpha\" src=\"https://preview.redd.it/3fgzkyfokqlh1.jpg?width=140&amp;height=74&amp;auto=webp&amp;s=9c11f7a69052acd051eb4a0824fa27bb14b86453\" title=\"[Megathread] GLM-5.3-Flash - former ox-alpha\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Megathread for discussing the release of GLM-5.3-Flash.</p> <ul> <li>Quants</li> <li>Fine-Tunes &amp; Abliterations</li> <li>Chat Templates</li> <li>Inference Server Support &amp; Configuration</li> <li>Experiences, Benchmarks &amp; Model Comparisons</li> </ul> <p>We'll try to clean up future duplicates around the release and point them here.</p> <h1>Highlights</h1> <p>GLM-5.3-Flash is the first natively multimodal model in the GLM-5 series, and the first open-weight release of the <code>glm5_next</code> architecture. Z.ai's pitch: outperforms GLM-5.2 at one-tenth the price while approaching Claude Opus 4.8 on coding and agentic benchmarks. It introduces:</p> <ul> <li><strong>Hybrid Sparse + Linear Attention:</strong> 45 layers laid out as repeating blocks of 3x KDA linear attention followed by 1x DeepSeek-style sparse attention (34 linear / 11 sparse layers). The sparse layers use a lightning indexer (32 heads, dim 128) with a top-k budget of 2048 tokens, sharply reducing long-context serving cost.</li> <li><strong>Manifold-Constrained Hyper-Connections (mHC):</strong> widened residual streams with manifold-constrained mixing between layers, adopted to further improve scaling efficiency.</li> <li><strong>Natively Multimodal:</strong> a 24-layer ViT (448px, patch 14, 2x2 spatial merge) with temporal patching, so image <em>and</em> video tokens are in the vocabulary. Trained on a 30T-token multimodal corpus.</li> <li><strong>MTP head shipped in the weights:</strong> 1 next-N prediction layer; the official vLLM recipe uses it with 5 speculative tokens.</li> <li><…",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "5a9a51c400cf6648",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM-5.3-Flash: Frontier Intelligence, Flash Cost",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyy3k6/glm53flash_frontier_intelligence_flash_cost/",
+    "published": "2026-08-26T14:06:30+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BriguePalhaco\"> /u/BriguePalhaco </a> <br /> <span><a href=\"https://z.ai/blog/glm-5.3-flash\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyy3k6/glm53flash_frontier_intelligence_flash_cost/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "0bba52851bcd78cd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "zai-org/GLM-5.3-Flash · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyyesk/zaiorgglm53flash_hugging_face/",
+    "published": "2026-08-26T14:18:30+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyyesk/zaiorgglm53flash_hugging_face/\"> <img alt=\"zai-org/GLM-5.3-Flash · Hugging Face\" src=\"https://external-preview.redd.it/FCXAHzhcfoz8J24xQllLJW8nDVQ5VF5SSTHCID0ceK0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a9f5b31efd1beeeff5b9e8a08d4e3814d0da1b68\" title=\"zai-org/GLM-5.3-Flash · Hugging Face\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/coder543\"> /u/coder543 </a> <br /> <span><a href=\"https://huggingface.co/zai-org/GLM-5.3-Flash\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyyesk/zaiorgglm53flash_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "e8464a6a3f91a363",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Whoever the fuck predicted we would have gpt 5.5 performance in coding on consumer hardware a couple months ago now, i applaud you",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz1dkz/whoever_the_fuck_predicted_we_would_have_gpt_55/",
+    "published": "2026-08-26T16:07:15+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Like wtaf? Qwen 3.8 27b is crazy. Can't wait for kimi k3 performance</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/GrokiniGPT\"> /u/GrokiniGPT </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz1dkz/whoever_the_fuck_predicted_we_would_have_gpt_55/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz1dkz/whoever_the_fuck_predicted_we_would_have_gpt_55/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "f71d82c1640d7f7e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A minecraft clone I fully vibecoded with Qwen3.8-27b Q4",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyw7e7/a_minecraft_clone_i_fully_vibecoded_with/",
+    "published": "2026-08-26T12:50:47+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyw7e7/a_minecraft_clone_i_fully_vibecoded_with/\"> <img alt=\"A minecraft clone I fully vibecoded with Qwen3.8-27b Q4\" src=\"https://external-preview.redd.it/ZDhqNDliMWl1cGxoMeUWUc_99PXXfqs02AJ0E-8Z-Z7b5E9nmBbADaVr4LsC.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=24a7558838fd1fb0c281a266ccfe92a581ebb7fd\" title=\"A minecraft clone I fully vibecoded with Qwen3.8-27b Q4\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I wanted to see just how capable Qwen3.8-27b is locally. I have a RTX 4090 and 96GB of RAM but the Q4 comfortably fits in the GPU with plenty of context, the few times I needed more than 130k context I just loaded it spilled into RAM and it's capable of not degrading even at larger context.</p> <p>I'm super impressed with this model. The model did everything on it's own - the coding, audio, textures, 3D models. I always just gave it the same basic prompt with some info and the task I wanted it to do. Total generation time across all prompts was maybe 3 hours and if I calculate the cost in electricity, it comes out to less than $1. Not bad.</p> <p>To think that 2 years back you couldn't make this with frontier paid models and now you can do it locally on your PC is crazy.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/liright\"> /u/liright </a> <br /> <span><a href=\"https://v.redd.it/mdcuw01iuplh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyw7e7/a_minecraft_clone_i_fully_vibecoded_with/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "cb1445e067e60e69",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Forget the Pelican, it's Weevil-Time! / Benchmaxxing-Proof SVG and Vision Benchmark",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyw1wo/forget_the_pelican_its_weeviltime/",
+    "published": "2026-08-26T12:44:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyw1wo/forget_the_pelican_its_weeviltime/\"> <img alt=\"Forget the Pelican, it's Weevil-Time! / Benchmaxxing-Proof SVG and Vision Benchmark\" src=\"https://preview.redd.it/y1sfpz9ssplh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=cba5020cd2251adb5cb678b8a3dc455df7e2a1c8\" title=\"Forget the Pelican, it's Weevil-Time! / Benchmaxxing-Proof SVG and Vision Benchmark\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><sup>The Artist: Qwen3.8-27B-UD-Q3\\</sup>K_XL, q8_0 caches, xhigh, temp 1.0, image-min-tokens 1024, froggeric template)</p> <p>I was screwing around with different Qwen3.8-27B quants and thought of this very simplistic but seemingly bechmaxxing resistant combined SVG and vision test.</p> <p>Just let the model recreate any given image as SVG with this prompt: <code>Recreate as SVG</code>.</p> <p>Pelicans can be easily benchmaxxed, recreating random photos seems a lot harder to train for.</p> <p>I tried a shitload of more complex prompts but the above one does the job best in my opinion. I furthermore tried different <code>--image-min-tokens</code> from 512 to 4096, different reasoning levels from no reasoning to xhigh, different temperatures and different kv-caches.</p> <p>Preliminary results are, that <code>--image-min-tokens 1024</code> and <code>--reasoning-effort xhigh</code> with <code>--temperature 1.0</code> and <code>--cache-type-k bf16</code> and <code>--cache-type-v bf16</code> give the best results. Non-reasoning results are, at least with the quants (Q3 and Q4) I can run, more than creepy...</p> <p>I also have the suspicion, that the chat template influences the output quality – please check if you are bored.</p> <p>Interestingly kv-caches at q8_0 gave &quot;good&quot; results as well but q4_0 completely destroyed the output quality (insect legs everywhere... oh the horrors I have seen), which was a great, visually impressive reminder, to never ever use q4_0 caches!</p> <p>W…",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "34c3805523599caa",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "HF exploring sale - impact on open models?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyz13i/hf_exploring_sale_impact_on_open_models/",
+    "published": "2026-08-26T14:42:01+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyz13i/hf_exploring_sale_impact_on_open_models/\"> <img alt=\"HF exploring sale - impact on open models?\" src=\"https://preview.redd.it/ob9rb8bfeqlh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=74d1a84d3fbd099384c655a2ec27c603305d3374\" title=\"HF exploring sale - impact on open models?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hugging Face is exploring sale of the business valued at around $13 billion dollars. </p> <p>Actually I don't think we have any other repo source. Which has the mix of model weights, datasets and Spaces. </p> <p>Kaggle is there and other academic repos. But as far as reach, ease of use. HF tops. Do you see a change in their policies once third parties invest, with a larger focus on profitability and increasing revenues. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/shoeshineboy_99\"> /u/shoeshineboy_99 </a> <br /> <span><a href=\"https://i.redd.it/ob9rb8bfeqlh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyz13i/hf_exploring_sale_impact_on_open_models/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "001c6160a291371b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Gemma4 31B vs Qwen3.8 27B - why the huge difference in benchmarks?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyzopv/gemma4_31b_vs_qwen38_27b_why_the_huge_difference/",
+    "published": "2026-08-26T15:06:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi all, I'm looking for the best model for a hobby project and trying to make sense of the various data I came across. I know benchmarks do not often translate to the real world, especially to <em>your particular</em> use case (whatever it may be). But this is truly baffling:</p> <p>AA says Qwen 3.8 27B is better by miles: <a href=\"https://artificialanalysis.ai/models/comparisons/qwen3-8-27b-vs-gemma-4-31b?intelligence-comparison=intelligence-vs-end-to-end-response-time\">https://artificialanalysis.ai/models/comparisons/qwen3-8-27b-vs-gemma-4-31b?intelligence-comparison=intelligence-vs-end-to-end-response-time</a></p> <p>While Arena says Gemma 4 31B is almost 20 places ahead and completely trounces Qwen in many categories: <a href=\"https://arena.ai/leaderboard/text/overall\">https://arena.ai/leaderboard/text/overall</a></p> <p>The sentiment in this sub definitely seems in favour of Qwen, although not necessarily <em>against</em> Gemma which I think is still considered a good model. I recall poeple saying Qwen tends to be more tenacious and better at reasoning although at the cost of overthinking simple things.</p> <p>What is your explanation or experience with these models?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/uncle_leon\"> /u/uncle_leon </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyzopv/gemma4_31b_vs_qwen38_27b_why_the_huge_difference/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyzopv/gemma4_31b_vs_qwen38_27b_why_the_huge_difference/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "7df8a28e2a2fbfb5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Ran our Apache 2.0 Gepard TTS through Coval's public benchmark. 68.7 ms to first audio on one RTX 4090.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz1yc6/ran_our_apache_20_gepard_tts_through_covals/",
+    "published": "2026-08-26T16:27:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz1yc6/ran_our_apache_20_gepard_tts_through_covals/\"> <img alt=\"Ran our Apache 2.0 Gepard TTS through Coval's public benchmark. 68.7 ms to first audio on one RTX 4090.\" src=\"https://external-preview.redd.it/FaQw8rnCYPYrggAIOJdbdM-KWHBGKgeBbYIhXP2EBJA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a4afc79b615bc6b4310e8a018c2624e9de3dc46e\" title=\"Ran our Apache 2.0 Gepard TTS through Coval's public benchmark. 68.7 ms to first audio on one RTX 4090.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Coval has a public TTS leaderboard with 25 APIs on it. The harness is open source, so we just ran it against our API at <a href=\"https://www.nineninesix.ai\">https://www.nineninesix.ai</a> and what came out.</p> <p>Gepard 1.0:<br /> 68.7 ms to first audio (p50)<br /> 85.8 ms at p90, worst sample was 104.8 ms<br /> 20.5 ms of silence before it starts talking<br /> 5.23% WER</p> <p>TTFA is lower than every number published on their board.</p> <p>We ran it ourselves from California, against our own endpoint, and the round trip is normalised out. Coval's own rows are not normalised, so they carry whatever network path their runner had. We would rather Coval ran it themselves.</p> <p>Two things:</p> <p>- this comes off a single RTX 4090 on Runpod, not a rack.</p> <p>- our model is Apache 2.0, so you can go do the same thing. Out of the 25 APIs on that board, 24 are closed.</p> <p>If you want to check it out - clone <a href=\"https://github.com/nineninesix-ai/benchmarks\">https://github.com/nineninesix-ai/benchmarks</a>. (You can bench against your own model using vllm)</p> <p>Charts, full method and the rest of the caveats: <a href=\"https://www.nineninesix.ai/blog/gepard-coval-tts-leaderboard\">https://www.nineninesix.ai/blog/gepard-coval-tts-leaderboard</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ylankgz\"> /u/ylankgz </a> <br /> <span><a href=\"https://www.ninen…",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
+  },
+  {
+    "id": "20e56cb2fada3de2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How I see the future for local AI",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vywpc0/how_i_see_the_future_for_local_ai/",
+    "published": "2026-08-26T13:11:19+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I think that mall models between 10B and 40B are the real gamechanger. These models will be the ones that will make the AI buble pop and big companies like Anthropic and OpenAi go to hell. We are currently seeing models that are generic and not specialized. But, what will happen if we get small specialized models? Can you imagine a Qwen 4.0 27B law? or Qwen 4.0 27B finance and accounting? Or a 40B MoE that manages administrative paperwork... It would be brutal. </p> <p>That will be the end for these big companies, small specialized intelligence that works in a laptop and you can load and unload at your convenience.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nicios\"> /u/Nicios </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vywpc0/how_i_see_the_future_for_local_ai/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vywpc0/how_i_see_the_future_for_local_ai/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T16:50:18.237967+00:00"
   }
 ]
