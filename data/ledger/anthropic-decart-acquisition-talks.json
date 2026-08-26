@@ -18,9 +18,10 @@
     "Any on-record statement or denial from Anthropic, Decart, Nvidia, or Sequoia"
   ],
   "open_obligation": true,
-  "revisit_after": "2026-08-26",
+  "revisit_after": "2026-09-09",
   "notes": [
     "2026-08-16 c2: Published. Surfaced via fresh ingest (gnews-ai-chips-and-compute, calcalistech.com item). Full verifier + falsifier sub-agent pair. Unsigned deal with a pending outcome -- open_obligation set, revisit in about a week or sooner if fresh ingest surfaces a signing/collapse.",
-    "2026-08-23 c6: revisit_after was due; rechecked. Fresh ingest (data/raw/2026-08-23/) has no Decart mentions. One WebSearch (no direct fetch -- final-cycle time constraint) surfaced an unconfirmed claim that Decart's founders were in 'final stages of signing' around 2026-08-18 -- not independently verified this cycle, not added to the article. Still no signing, closing, or collapse confirmed by any source. Deal remains unsigned/pending; revisit_after pushed to 2026-08-26 for a full verifier recheck rather than left overdue."
+    "2026-08-23 c6: revisit_after was due; rechecked. Fresh ingest (data/raw/2026-08-23/) has no Decart mentions. One WebSearch (no direct fetch -- final-cycle time constraint) surfaced an unconfirmed claim that Decart's founders were in 'final stages of signing' around 2026-08-18 -- not independently verified this cycle, not added to the article. Still no signing, closing, or collapse confirmed by any source. Deal remains unsigned/pending; revisit_after pushed to 2026-08-26 for a full verifier recheck rather than left overdue.",
+    "2026-08-26 c6: Obligation recheck (3 WebSearch queries, no direct fetches). No signing, closing, or collapse confirmed by any outlet. Coverage remains consistent with prior notes: deal described as advanced-stage/unsigned, with one Calcalist/Ctech item reporting Anthropic and Decart exchanging draft acquisition agreements at ~$7B and a possible signing 'next month' ahead of Anthropic's expected September IPO -- not independently corroborated elsewhere, not added to the article. Still pending; revisit_after moved to 2026-09-09 given signals the deal may resolve around Anthropic's IPO timeline."
   ]
 }
