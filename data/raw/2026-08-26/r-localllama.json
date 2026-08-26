@@ -1,0 +1,12 @@
+[
+  {
+    "id": "005121e68f036aa7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B IQ3_XXS wrote a correct multilayer TMM on a 16 GB Quadro — after 100 minutes, 3 compactions, and 108k output tokens",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyhcz3/qwen3827b_iq3_xxs_wrote_a_correct_multilayer_tmm/",
+    "published": "2026-08-26T00:19:09+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyhcz3/qwen3827b_iq3_xxs_wrote_a_correct_multilayer_tmm/\"> <img alt=\"Qwen3.8-27B IQ3_XXS wrote a correct multilayer TMM on a 16 GB Quadro — after 100 minutes, 3 compactions, and 108k output tokens\" src=\"https://preview.redd.it/i8rjx0ar5mlh1.png?width=140&amp;height=93&amp;auto=webp&amp;s=d6dce0ce953b44b5132d5f0ad7ece35973d3c203\" title=\"Qwen3.8-27B IQ3_XXS wrote a correct multilayer TMM on a 16 GB Quadro — after 100 minutes, 3 compactions, and 108k output tokens\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/i8rjx0ar5mlh1.png?width=2160&amp;format=png&amp;auto=webp&amp;s=c2588bc7b2519ea71b176ca73faf566dfc585496\">https://preview.redd.it/i8rjx0ar5mlh1.png?width=2160&amp;format=png&amp;auto=webp&amp;s=c2588bc7b2519ea71b176ca73faf566dfc585496</a></p> <p>I wanted to see whether a heavily quantized 27B model running entirely on an older 16 GB workstation GPU could do more than the usual coding demos. FFT felt too easy, so I asked it to implement the coherent optical transfer-matrix method (TMM) for absorbing multilayer films from scratch.</p> <p>TL;DR: the implementation was correct long before the model believed it. It then spent most of the remaining hour debugging its own broken validators.</p> <h1>Hardware</h1> <ul> <li>NVIDIA Quadro RTX 5000, 16 GB, Turing / SM 7.5</li> <li>Intel Xeon Silver 4116, 12 cores / 24 threads</li> <li>256 GB system RAM</li> <li>Ubuntu 24.04.4 LTS</li> <li>NVIDIA driver 580.173.02</li> </ul> <h1>Model and serving stack</h1> <ul> <li>Target: <a href=\"https://huggingface.co/unsloth/Qwen3.8-27B-GGUF\"><code>unsloth/Qwen3.8-27B-GGUF</code></a></li> <li>Quant: Unsloth Dynamic V3 <code>Qwen3.8-27B-UD-IQ3_XXS.gguf</code> (10.93 GB on disk)</li> <li>Speculative draft: <a href=\"https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF\"><code>incoai/Qwen3.8-27B-DFlash2-GGUF</code></a>, <code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> (1.14 GB)</li> <l…",
+    "fetched_at": "2026-08-26T00:58:54.479331+00:00"
+  }
+]
