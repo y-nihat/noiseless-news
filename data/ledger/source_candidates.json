@@ -1628,5 +1628,25 @@
       ],
       "context": "Tech-hardware press citing Bloomberg. Corroborating source (independently confirmed the 5-year/four-defendant sentencing figure) in taiwan-nvidia-supermicro-smuggling-indictment. Propose Tier 2."
     }
+  ],
+  "candidates_2026-08-26_c4": [
+    {
+      "domain": "ipwatchdog.com",
+      "first_seen": "2026-08-26",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://ipwatchdog.com/2026/08/25/wikihow-files-lawsuit-against-openai-over-chatgpts-use-of-its-how-to-library/"
+      ],
+      "context": "Longstanding IP-law trade publication with named bylines; primary numbered source for wikihow-openai-copyright-lawsuit -- its own detailed writeup quoted specifics (figures, allegations) directly from the complaint, not a rewrite of another outlet. Likely to recur for AI-copyright litigation stories. Propose Tier 2."
+    },
+    {
+      "domain": "medianama.com",
+      "first_seen": "2026-08-26",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.medianama.com/2026/08/223-wikihow-openai-unsanctioned-ai-training/"
+      ],
+      "context": "Indian tech-policy/law outlet with named coverage, independently confirmed to exist and read directly (not just a search snippet) -- used as a corroborating source for wikihow-openai-copyright-lawsuit. Propose Tier 2."
+    }
   ]
 }
