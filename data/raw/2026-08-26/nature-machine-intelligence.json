@@ -1,0 +1,32 @@
+[
+  {
+    "id": "b9442510c32caeb1",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "The epistemic debt of generative AI",
+    "url": "https://www.nature.com/articles/s42256-026-01294-w",
+    "published": "2026-08-26T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 26 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01294-w\">doi:10.1038/s42256-026-01294-w</a></p>When authors use generative AI in cognitive tasks, without spending time and effort to understand the output, a gap opens between what they present and what they can defend. This gap widens as further work is built on top, resulting in epistemic debt.",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "8484d05f80c10ad6",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Life-inspired interoceptive artificial intelligence for autonomous and adaptive agents",
+    "url": "https://www.nature.com/articles/s42256-026-01296-8",
+    "published": "2026-08-26T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 26 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01296-8\">doi:10.1038/s42256-026-01296-8</a></p>Lee, Oh et al. propose interoception as a biologically inspired framework for building more autonomous and adaptive AI agents, learning from living organisms to build autonomous and adaptive intelligence.",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "dc1113f2408220c4",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "A knowledge-driven framework for predicting single-cell responses for unprofiled drugs",
+    "url": "https://www.nature.com/articles/s42256-026-01286-w",
+    "published": "2026-08-26T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 26 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01286-w\">doi:10.1038/s42256-026-01286-w</a></p>Feng et al. introduce MAP, an artificial intelligence framework that integrates biological mechanism knowledge to predict how cells respond to chemical perturbation, improving generalization to untested drugs and prioritizing cancer drug candidates in virtual screening.",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "b6a43faa8994345e",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "When an AI agent goes off the rails, file a bug to fix the documentation – then test the fix",
+    "url": "https://www.infoworld.com/article/4211198/when-an-ai-agent-goes-off-the-rails-file-a-bug-to-fix-the-documentation-then-test-the-fix.html",
+    "published": "2026-08-26T09:00:00+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">Here is a mundane question that came up in an agentic coding session: How do I convert a select widget to a radio group? I was working on <a href=\"https://url.usb.m.mimecastprotect.com/s/dfaeCrgGYGToE07VT7f6Zh4J9QI?domain=github.com\">Bram</a>, a desktop app that harnesses coding agents to a GitHub-backed workflow. Bram’s UI is made with <a href=\"https://url.usb.m.mimecastprotect.com/s/DOhdCvmMjMuKxjqNcXhlxhQHqYX?domain=github.com\">XMLUI</a>, a framework that wraps a simple declarative syntax around React and CSS. Agents using the XMLUI Model Context Protocol (MCP) server are instructed to prefer <a href=\"https://url.usb.m.mimecastprotect.com/s/peyKCwnNkNs9Kzk8h9iG6hJ1lWq?domain=xmlui.org\">How To</a> examples that provide verified working patterns. In this case Claude didn’t find one, fell back to the documentation for the <a href=\"https://url.usb.m.mimecastprotect.com/s/MIGfCxo0l0Uwk4DMcwsEGhyICST?domain=xmlui.org\">RadioGroup</a> component, and after a bit of fumbling figured it out. All good, right?</p>\n\n\n\n<p class=\"wp-block-paragraph\">Nope. Claude should have found a How To and solved the problem immediately. The absence of that document was a bug, and <a href=\"https://url.usb.m.mimecastprotect.com/s/87ExCyp4m4hkZzKXFNtm2hxqy-Z?domain=xmlui.org\">this new How To document</a> is the fix. This particular bug didn’t bite too hard, but the How To catalog is full of complex and hard-won patterns that agents can struggle to rediscover. To ensure that XMLUI is reliably learnable by agents, we continually expand that catalog.</p>\n\n\n\n<h2 class=\"wp-block-heading\" id=\"how-documentation-becomes-testable\">How documentation becomes testable</h2>\n\n\n\n<p class=\"wp-b…",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  }
+]

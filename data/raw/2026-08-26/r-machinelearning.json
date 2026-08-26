@@ -1,0 +1,22 @@
+[
+  {
+    "id": "62780b89ac806c58",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Catching bugs in scikit-learn [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vym6cn/catching_bugs_in_scikitlearn_d/",
+    "published": "2026-08-26T03:57:42+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>sklearn 1.9 fixed a bug in how BayesianRidge computes its uncertainty. We traced <code>predict</code> on 1.8 and 1.9 and compared the two formulas it actually computes, see if you can spot what changed before the notebook tells you.</p> <p><a href=\"https://github.com/aadya940/scikit-verify/blob/master/examples/sklearn_bug_hunting.ipynb\">https://github.com/aadya940/scikit-verify/blob/master/examples/sklearn_bug_hunting.ipynb</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Lost-Dragonfruit-663\"> /u/Lost-Dragonfruit-663 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vym6cn/catching_bugs_in_scikitlearn_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vym6cn/catching_bugs_in_scikitlearn_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "74a5d887b4b44e75",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Millwright — experimenting with an end-to-end machine learning framework in Rust [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vyq7m9/millwright_experimenting_with_an_endtoend_machine/",
+    "published": "2026-08-26T07:34:45+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've been working on an open-source project called <strong>Millwright</strong>, an attempt to explore what an end-to-end machine learning workflow could look like in Rust.</p> <p><a href=\"https://millwright-rs.dev/\">https://millwright-rs.dev/</a></p> <p>This started while I was learning and building ML tooling in Rust.</p> <p>I kept finding capable individual libraries, but also gaps between them. Training a model was rarely the problem. Building the workflow around it — preprocessing, model selection, evaluation, explainability, deployment and monitoring — often meant integrating several unrelated crates and data representations.</p> <p>I initially started implementing some of those missing pieces as smaller independent crates.</p> <p>Eventually I realized I was more interested in the integration problem itself.</p> <p>That became Millwright.</p> <p>The current idea is to cover the classical ML lifecycle:</p> <p><strong>ingest → explore → preprocess → select → fit → assess → explain → export → serve → monitor</strong></p> <p>without trying to reimplement every ML algorithm.</p> <p>Instead, Millwright provides a common abstraction layer over existing Rust libraries and uses adapters for different ML backends.</p> <p>One architectural decision I'm experimenting with is having the framework own a small 2D data boundary (<code>Frame</code>) rather than exposing a particular backend's ndarray/dataframe representation throughout the API.</p> <p>That allows models and components backed by different libraries to participate in the same pipeline, at the cost of conversions at backend boundaries.</p> <p>The project currently includes work around:</p> <ul> <li>preprocessing and composable pipelines</li> <li>cross-validation and hyperparameter optimization</li> <li>multiple ML backends</li> <li>ensembles</li> <li>regression diagnostics</li> <li>SHAP-based explainability</li> <li>ONNX export</li> <li>model serving and registry</li> <li>drift mo…",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  }
+]

@@ -8,5 +8,95 @@
     "published": "2026-08-26T00:19:09+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyhcz3/qwen3827b_iq3_xxs_wrote_a_correct_multilayer_tmm/\"> <img alt=\"Qwen3.8-27B IQ3_XXS wrote a correct multilayer TMM on a 16 GB Quadro — after 100 minutes, 3 compactions, and 108k output tokens\" src=\"https://preview.redd.it/i8rjx0ar5mlh1.png?width=140&amp;height=93&amp;auto=webp&amp;s=d6dce0ce953b44b5132d5f0ad7ece35973d3c203\" title=\"Qwen3.8-27B IQ3_XXS wrote a correct multilayer TMM on a 16 GB Quadro — after 100 minutes, 3 compactions, and 108k output tokens\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/i8rjx0ar5mlh1.png?width=2160&amp;format=png&amp;auto=webp&amp;s=c2588bc7b2519ea71b176ca73faf566dfc585496\">https://preview.redd.it/i8rjx0ar5mlh1.png?width=2160&amp;format=png&amp;auto=webp&amp;s=c2588bc7b2519ea71b176ca73faf566dfc585496</a></p> <p>I wanted to see whether a heavily quantized 27B model running entirely on an older 16 GB workstation GPU could do more than the usual coding demos. FFT felt too easy, so I asked it to implement the coherent optical transfer-matrix method (TMM) for absorbing multilayer films from scratch.</p> <p>TL;DR: the implementation was correct long before the model believed it. It then spent most of the remaining hour debugging its own broken validators.</p> <h1>Hardware</h1> <ul> <li>NVIDIA Quadro RTX 5000, 16 GB, Turing / SM 7.5</li> <li>Intel Xeon Silver 4116, 12 cores / 24 threads</li> <li>256 GB system RAM</li> <li>Ubuntu 24.04.4 LTS</li> <li>NVIDIA driver 580.173.02</li> </ul> <h1>Model and serving stack</h1> <ul> <li>Target: <a href=\"https://huggingface.co/unsloth/Qwen3.8-27B-GGUF\"><code>unsloth/Qwen3.8-27B-GGUF</code></a></li> <li>Quant: Unsloth Dynamic V3 <code>Qwen3.8-27B-UD-IQ3_XXS.gguf</code> (10.93 GB on disk)</li> <li>Speculative draft: <a href=\"https://huggingface.co/incoai/Qwen3.8-27B-DFlash2-GGUF\"><code>incoai/Qwen3.8-27B-DFlash2-GGUF</code></a>, <code>Qwen3.8-27B-DFlash2-Q4_K_M.gguf</code> (1.14 GB)</li> <l…",
     "fetched_at": "2026-08-26T00:58:54.479331+00:00"
+  },
+  {
+    "id": "672ca41b068f5529",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[Megathread] Qwen3.8-Flash-Next - Release Day",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyq2v4/megathread_qwen38flashnext_release_day/",
+    "published": "2026-08-26T07:26:50+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Megathread for discussing the (impending) release of Qwen 3.8 Flash Next.</p> <ul> <li>Quants</li> <li>Fine-Tunes &amp; Abliterations</li> <li>Chat Templates</li> <li>Inference Server Support &amp; Configuration</li> <li>Experiences, Benchmarks &amp; Model Comparisons</li> </ul> <p>We'll try to clean up future duplicates around the release and point them here.</p> <p><strong>Estimated Release Time: 2026-08-26 15:00 (UTC)</strong></p> <p>Official:</p> <ul> <li><a href=\"https://huggingface.co/Qwen/Qwen3.8-Flash-Next\">https://huggingface.co/Qwen/Qwen3.8-Flash-Next</a></li> <li><a href=\"https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next\">https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next</a></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/sammcj\"> /u/sammcj </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyq2v4/megathread_qwen38flashnext_release_day/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyq2v4/megathread_qwen38flashnext_release_day/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "5b8cb0769953d66e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "First serious confirmation. Ox Alpha is GLM-5.3-Flash",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyp1l9/first_serious_confirmation_ox_alpha_is_glm53flash/",
+    "published": "2026-08-26T06:28:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><a href=\"https://x.com/romanchernin/status/2092488160680751437?s=20\">https://x.com/romanchernin/status/2092488160680751437?s=20</a></p> <p>- Multimodal (Vision)</p> <p>- 1M Tokens Context Window</p> <p>- DeepSWE ~63%</p> <p>Edit: He deleted it, screenshot in comments</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MrWidmoreHK\"> /u/MrWidmoreHK </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyp1l9/first_serious_confirmation_ox_alpha_is_glm53flash/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyp1l9/first_serious_confirmation_ox_alpha_is_glm53flash/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "b15f4c6217b90dbc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Thomson Reuters releases Thomson-1.0-Small. A law and tax focused model",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyl6yj/thomson_reuters_releases_thomson10small_a_law_and/",
+    "published": "2026-08-26T03:10:55+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyl6yj/thomson_reuters_releases_thomson10small_a_law_and/\"> <img alt=\"Thomson Reuters releases Thomson-1.0-Small. A law and tax focused model\" src=\"https://preview.redd.it/wn0ojzotymlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b63d882dc23ceef2bce07c4270540289b49bd7b1\" title=\"Thomson Reuters releases Thomson-1.0-Small. A law and tax focused model\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RedditUsr2\"> /u/RedditUsr2 </a> <br /> <span><a href=\"https://i.redd.it/wn0ojzotymlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyl6yj/thomson_reuters_releases_thomson10small_a_law_and/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "4bb2ac6befb75ad2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "A 27b model beating latest frontier models was not on my 2026 bingo card",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyre6y/a_27b_model_beating_latest_frontier_models_was/",
+    "published": "2026-08-26T08:45:32+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyre6y/a_27b_model_beating_latest_frontier_models_was/\"> <img alt=\"A 27b model beating latest frontier models was not on my 2026 bingo card\" src=\"https://preview.redd.it/kbsqh6f7molh1.png?width=140&amp;height=38&amp;auto=webp&amp;s=91e53808cde22d3a4b343dfd222d26c93ae96442\" title=\"A 27b model beating latest frontier models was not on my 2026 bingo card\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/kbsqh6f7molh1.png?width=730&amp;format=png&amp;auto=webp&amp;s=068dbea9a50be634a369d54d8b27b781d020fab3\">https://preview.redd.it/kbsqh6f7molh1.png?width=730&amp;format=png&amp;auto=webp&amp;s=068dbea9a50be634a369d54d8b27b781d020fab3</a></p> <p>My experience with Qwen 3.8 for agentic tasks has been phenomenal but I personally feel that 3.7 flash is more reliable for overall tasks. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Gohab2001\"> /u/Gohab2001 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyre6y/a_27b_model_beating_latest_frontier_models_was/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyre6y/a_27b_model_beating_latest_frontier_models_was/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "ba28b029a39e2c0a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Fully quantized NVFP4 Qwen3.8-27B with QUASAR QAD",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyie86/fully_quantized_nvfp4_qwen3827b_with_quasar_qad/",
+    "published": "2026-08-26T01:04:56+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyie86/fully_quantized_nvfp4_qwen3827b_with_quasar_qad/\"> <img alt=\"Fully quantized NVFP4 Qwen3.8-27B with QUASAR QAD\" src=\"https://external-preview.redd.it/Vfy7cPAnELDYpF0TAOFYURin2c3hGZ1OD_WJq1r-ZRk.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=aff983abdc908a653b99bbea84db65a4c5fda6c7\" title=\"Fully quantized NVFP4 Qwen3.8-27B with QUASAR QAD\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>We're releasing a fully quantized NVFP4 version of Qwen3.8-27B. The checkpoint was trained using quantization-aware distillation (QAD) with QUASAR, our new QAT algorithm. We used the original BF16 model as the teacher and distilled the quantized model for 2,446 steps.</p> <p>The checkpoint supports vLLM on NVIDIA Blackwell GPUs:</p> <pre><code>vllm serve QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4 \\ --max-model-len 262144 \\ --gpu-memory-utilization 0.85 </code></pre> <p>This model uses an aggressive quantization configuration: every linear layer across all transformer blocks is quantized to NVFP4 (W4A4).</p> <p>Attention and GDN layers are typically kept at higher precision, such as FP8 or BF16, because quantizing them can cause a significant loss in model quality. With QUASAR, however, the fully quantized checkpoint retains near-BF16 performance. Evaluation results and comparison against other NVFP4 checkpoints:</p> <table><thead> <tr> <th align=\"left\">Model</th> <th align=\"left\">Size</th> <th align=\"left\">GPQA-Diamond (2 runs, n=396)</th> <th align=\"left\">AIME26 (3 repeats, n=90)</th> </tr> </thead><tbody> <tr> <td align=\"left\"><code>Qwen/Qwen3.8-27B</code> (original BF16)</td> <td align=\"left\">55.6 GB</td> <td align=\"left\"><strong>0.9141</strong></td> <td align=\"left\"><strong>1.0000</strong></td> </tr> <tr> <td align=\"left\"><code>QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4</code></td> <td align=\"left\"><strong>19.7 GB</strong></td> <td align=\"left\">0.9091</td> <td align=\"left\"><strong>1.0000</strong></td> </tr> <tr…",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "bc8c2c6382c210ea",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Underrated Muse Glimmer",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyn07o/underrated_muse_glimmer/",
+    "published": "2026-08-26T04:38:32+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyn07o/underrated_muse_glimmer/\"> <img alt=\"Underrated Muse Glimmer\" src=\"https://preview.redd.it/u8kndv8renlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5221fa649c102b42ddca032310462443e319cff2\" title=\"Underrated Muse Glimmer\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Benchmarked qwen3.8 xhigh, medium and muse glimmer.</p> <p>Xhigh effort mode with qwen3.8 took almost 30hrs. (And still failed on 16 cases because of the 32K output token limit)</p> <p>Medium effort mode and muse glimmer were 3-4 hours each.</p> <p>But I'm actually surprised by the muse glimmer results, they came better than the qwen.</p> <p>These benchmarks are on implicit knowledge of the model, which is a bit unfair to smaller models, but throw in a RAG and I'm sure they get on par with frontier models.</p> <p>I have taken the result of claude models directly from embedeval repo by ecro.</p> <p>I'm not pushing qwen down here, I like how qwen thinks and gives better results. I know with more context and RAG qwen will do better. </p> <p>I'm just appreciating muse here, cause i feel it is underrated. The advantage is efficient kv cache due to sliding window, which can give you more context window.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Ok-Inevitable8391\"> /u/Ok-Inevitable8391 </a> <br /> <span><a href=\"https://i.redd.it/u8kndv8renlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyn07o/underrated_muse_glimmer/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "e56b1111c7114bcf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Confirmed: Z.AI Made Ox Alpha Stealth Model That Rivals DeepSeek",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyt8qg/confirmed_zai_made_ox_alpha_stealth_model_that/",
+    "published": "2026-08-26T10:28:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyt8qg/confirmed_zai_made_ox_alpha_stealth_model_that/\"> <img alt=\"Confirmed: Z.AI Made Ox Alpha Stealth Model That Rivals DeepSeek\" src=\"https://external-preview.redd.it/Fb05ebYcP20z1eUT3RWVtgA-8sjdDWw6-MsG5QEhFaY.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=905bb22036b0e04adcd08195dfb26e4eb08ae6e6\" title=\"Confirmed: Z.AI Made Ox Alpha Stealth Model That Rivals DeepSeek\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>The company on Wednesday confirmed speculation that the Ox Alpha model is a new iteration of its GLM series and said it will release the weights for it tonight, in response to queries by Bloomberg News.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MrWidmoreHK\"> /u/MrWidmoreHK </a> <br /> <span><a href=\"https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyt8qg/confirmed_zai_made_ox_alpha_stealth_model_that/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "9fffcb25e5f8da03",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Open Source Kernel in Qwen3.6-35B-A3B for AMD MI350X: 78,498 output tok/s on 8 GPUs",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vymha8/open_source_kernel_in_qwen3635ba3b_for_amd_mi350x/",
+    "published": "2026-08-26T04:12:07+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>So here's the thing, almost everyone use NVIDIA to run their LLMs, we also do the same, a lot of people we've met use like RTX PRO 6000 or even H100, B300</p> <p>It seems like everyone eyes is looking at NVIDIA. However we do the math that the raw power alone on AMD GPU MI350X is higher than NVIDIA B200. So what give?</p> <p>Apparently its the software, ROCM is not as mature as CUDA, their software stack is still lacking behind as well.</p> <p>However, few weeks ago we've got a handful of MI350X to experiment and develop, and what we did is optimizing AMD tech stack until kernel level for Qwen 3.6 35B A3B and the results we got is much comparable to NVIDIA counterpart</p> <p>Based on our benchmark, we got:</p> <p>1x MI350X: 11,161 output tok/s </p> <p>8x MI350X: 81,331 output tok/s peak with 78,498.66 output tok/s mean</p> <p>This is 2.16x vLLM throughput on the 8-GPU benchmark</p> <p>We've decided to open source our kernel and stuff at our github</p> <p><a href=\"https://github.com/NetraRuntime/netra-kernel\">https://github.com/NetraRuntime/netra-kernel</a></p> <p>And also write the blog behind the things we do</p> <p><a href=\"https://netraruntime.com/blog/qwen36-amd-mi350x-sglang-vllm-benchmark\">https://netraruntime.com/blog/qwen36-amd-mi350x-sglang-vllm-benchmark</a></p> <p>However, we're not done yet.</p> <p>One thing we learned: once the kernels got fast enough, the bottlenecks moved into scheduling, graph coverage, recurrent state, routing, and even HTTP serialization.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SmilingGen\"> /u/SmilingGen </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vymha8/open_source_kernel_in_qwen3635ba3b_for_amd_mi350x/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vymha8/open_source_kernel_in_qwen3635ba3b_for_amd_mi350x/\">[comments]</a></span>",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
+  },
+  {
+    "id": "9109919fbbf3e3d5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "OpenCode with Qwen3.8-27B for Small Games or Browsing the Web With 16GB VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vyqy4e/opencode_with_qwen3827b_for_small_games_or/",
+    "published": "2026-08-26T08:18:32+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vyqy4e/opencode_with_qwen3827b_for_small_games_or/\"> <img alt=\"OpenCode with Qwen3.8-27B for Small Games or Browsing the Web With 16GB VRAM\" src=\"https://preview.redd.it/n3yiig4hholh1.gif?width=640&amp;crop=smart&amp;s=7fdd12a38e59c2bd94b8d0de4988db816626ef61\" title=\"OpenCode with Qwen3.8-27B for Small Games or Browsing the Web With 16GB VRAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In the past, I have use llama.cpp, but I read that the exl3 quantization format should give <a href=\"https://huggingface.co/turboderp/Qwen3.8-27B-exl3\">better precision</a>, so I have tried exllamav3/tabbyAPI.</p> <p>It was able to write the shown simple HTML game without interaction after asking some questions.</p> <p>The following was tested on a laptop with a NVIDIA RTX A5000 laptop (16 GB) GPU.</p> <p>With the 3 bpw model and 6 bit/5 bit KV cache, the maximum context length is around 110k tokens with MTP. This gives around 55 tokens/s decode speed for code and around 10 tokens/s for content where MTP doesn't help (e.g. complicated calculations). Without MTP, one could try the 3.5 or 4 bpw model or a longer context length.</p> <h2>Install tabbyAPI/exllamav3</h2> <ol> <li> Install the latest Nvidia drivers</li> <li> Install Git (e.g. <code>sudo apt install git</code> or on Windows with <code>winget install -e --id Git.Git</code>)</li> <li> Install the uv Python package manager: <a href=\"https://docs.astral.sh/uv/getting-started/installation/\">https://docs.astral.sh/uv/getting-started/installation/</a> (e.g. <code>curl -LsSf https://astral.sh/uv/install.sh | sh</code> or <code>winget install --id=astral-sh.uv -e</code>)</li> <li> Make somewhere a folder and install tabbyAPI: <code>bash git clone https://github.com/theroyallab/tabbyAPI cd tabbyAPI uv venv --python 3.13 .venv uv pip install -e &quot;.[cu13]&quot; </code></li> <li> Test if CUDA works (on Linux, use .venv/bin/python) <code>bash .venv/Scripts…",
+    "fetched_at": "2026-08-26T10:37:35.436030+00:00"
   }
 ]
