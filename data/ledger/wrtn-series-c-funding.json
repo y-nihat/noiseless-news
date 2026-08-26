@@ -1,0 +1,23 @@
+{
+  "slug": "wrtn-series-c-funding",
+  "title": "Reports of a Wrtn Technologies Series C funding round",
+  "status": "watching",
+  "first_seen": "2026-08-26",
+  "published_at": null,
+  "langs": [],
+  "source_urls": [
+    "https://www.reuters.com/world/asia-pacific/south-koreas-wrtn-raises-series-c-funding-over-722-mln-valuation-2026-08-25/"
+  ],
+  "follows": null,
+  "reason": "Fresh verifier and fresh adversarial falsifier run in parallel this cycle (10-11 tool calls each). Both independently found the wire-exclusive check fails for the headline figures: only Reuters (Joyce Lee, byline confirmed via a verbatim wire syndication at 933thedrive.com, direct Reuters fetch itself blocked) reports the ~$72.2M/100bn-won raise, the >$722M/1-trillion-won valuation, and the ~$166M/230bn-won cumulative total -- no independent Tier<=2 outlet carries those specific numbers. The verifier found one independent, pre-dating partial corroboration: The Bell (thebell.co.kr), a Korean corporate-finance outlet, reported 2026-07-08 (seven weeks before Reuters) that Eugene Asset Management was pursuing a 40bn-won RCPS stake in this Series C, and independently confirmed Goodwater Capital as Series B lead -- real but short of the >=2-independent-source bar for the business claim as a whole (verification.md SS2-3). The falsifier surfaced a further, unresolved problem: a 2025-08-01 ZDNet Korea piece (found only via search summary, not directly fetched -- zdnet.co.kr/view/?no=20250801183454) describes an August 2025 'Series C bridge' of 170bn won that already took Wrtn's cumulative funding to 331bn won and past a 1-trillion-won/unicorn valuation -- higher than Reuters' new 'total funding to date ~230bn won' figure a full year later, which is not arithmetically possible in normal fundraising unless the 2025 figures, the 2026 figures, or the round-labeling (is this the same bridge being re-reported, a separate tranche, or a genuinely new round) is wrong. Neither agent could resolve this within budget; both recommended holding rather than publishing. Treated as a disagreement/unresolved-evidence case under verification.md SS5, not a pass with caveats.",
+  "watch": [
+    "A second, genuinely independent outlet (not a Reuters wire syndication) confirming the exact raise amount, valuation, and cumulative-funding total",
+    "A direct read of the 2025-08-01 ZDNet Korea piece (zdnet.co.kr/view/?no=20250801183454) to confirm or refute the 331bn-won cumulative-funding/unicorn-valuation figures reported a year earlier",
+    "Wrtn's own official announcement (press release, newsroom, or executive statement) giving its own total-funding figure",
+    "Resolution of the apparent conflict between the new ~230bn-won cumulative total and the ~331bn-won figure reported for August 2025"
+  ],
+  "public_note": "Reports describe a new Wrtn Technologies funding round; the reported figures could not yet be independently confirmed.",
+  "notes": [
+    "2026-08-26 c5: Opened this cycle from tonight's fresh ingest (Techmeme -> Reuters). Dedup-check clean (exit 0, zero matches) before opening. Fresh verifier and fresh adversarial falsifier run independently and in parallel, neither drafted the story. Both fail the wire-exclusive/independence check on the headline figures; falsifier additionally flags an unresolved year-over-year cumulative-funding inconsistency (see reason). Korean business press typically picks up funding stories within 24-48h and the conflict looks resolvable with a direct source read, so held as watching rather than dropped."
+  ]
+}

@@ -1648,5 +1648,16 @@
       ],
       "context": "Indian tech-policy/law outlet with named coverage, independently confirmed to exist and read directly (not just a search snippet) -- used as a corroborating source for wikihow-openai-copyright-lawsuit. Propose Tier 2."
     }
+  ],
+  "candidates_2026-08-26_c5": [
+    {
+      "domain": "thebell.co.kr",
+      "first_seen": "2026-08-26",
+      "occurrences": 1,
+      "sample_urls": [
+        "https://www.thebell.co.kr/front/newsview.asp?key=202607080019283600109251"
+      ],
+      "context": "Korean corporate-finance/venture trade press (subscription outlet), named coverage, directly fetched and read. Only genuinely independent (pre-dating, non-Reuters-derived) corroboration found for the wrtn-series-c-funding candidate -- confirmed investor Eugene Asset Management's pursuit of a stake and Goodwater Capital's Series B lead role, seven weeks before Reuters' report. Likely to recur for Korean AI-startup funding stories. Propose Tier 2."
+    }
   ]
 }
