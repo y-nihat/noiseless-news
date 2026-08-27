@@ -249,3 +249,46 @@ def policy_exempt_pair(
     if _names_slug(dedup_note(repo_root, second.slug), first.slug):
         return f"recorded standalone in data/verified/{second.slug}.json"
     return ""
+
+
+def unlinked_duplicates(repo_root: Path | str, slugs) -> list[dict]:
+    """Strong matches among published stories that §8 has not accounted for.
+
+    The same question `test_dedup_repo_data.py` asks of the whole archive,
+    asked of a few slugs — so the hook can refuse exactly what CI would later
+    fail on, rather than a near-miss of it.
+
+    This exists because the gate that runs BEFORE a story is written and the
+    invariant that runs after it is committed were scoring different things.
+    On 2026-08-20 `dedup-check` was run, honestly, against a working title and
+    a bare origin URL that `identity_urls` discards; the finished article then
+    acquired a citation of the matched story's primary document, and CI went
+    red for eight days on a decision the agent had already justified in
+    writing. Re-asking with the finished article's real title and real sources
+    is what makes that justification land against the right evidence.
+    """
+    repo_root = Path(repo_root)
+    index = load_index(repo_root)
+    published = [e for e in index if e.state == "published"]
+    by_slug = {e.slug: e for e in published}
+    offenders = []
+    for slug in sorted(slugs):
+        entry = by_slug.get(slug)
+        if entry is None:
+            continue  # not a published article: nothing for this check to say
+        others = [e for e in published if e.slug != slug]
+        for match in check(entry.title, sorted(entry.urls), others):
+            if match["strength"] != "strong":
+                continue
+            other = by_slug[match["slug"]]
+            if policy_exempt_pair(repo_root, entry, other):
+                continue
+            offenders.append(
+                {
+                    "slug": slug,
+                    "matches": other.slug,
+                    "score": match["score"],
+                    "shared_url_count": match["shared_url_count"],
+                }
+            )
+    return offenders

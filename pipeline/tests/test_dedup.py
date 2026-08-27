@@ -18,6 +18,7 @@ from noiseless.dedup import (
     policy_exempt_pair,
     similarity,
     tokens,
+    unlinked_duplicates,
 )
 
 ARTICLE = """---
@@ -301,3 +302,72 @@ def test_an_unreadable_evidence_log_excuses_nothing(tmp_path):
     first = IndexEntry("a", "A", "2026-07-01", "published")
     second = IndexEntry("b", "B", "2026-07-02", "published")
     assert policy_exempt_pair(repo, first, second) == ""
+
+# A second article whose title agrees with gpt-5-6-launch and which cites one of
+# its sources — the exact shape of the pair that reddened CI for eight days.
+TWIN = """---
+title: OpenAI releases GPT-5.6 model family to enterprise
+date: 2026-07-19
+slug: gpt-5-6-twin
+lang: en
+tldr: A second story on the same launch.
+sources:
+  - name: OpenAI News
+    url: https://openai.com/index/gpt-5-6
+---
+
+Body.
+"""
+
+
+def with_twin(tmp_path):
+    repo = make_repo(tmp_path)
+    (repo / "content/articles/en/2026/07/gpt-5-6-twin.md").write_text(TWIN, encoding="utf-8")
+    return repo
+
+
+def test_an_unlinked_duplicate_is_reported(tmp_path):
+    repo = with_twin(tmp_path)
+    offenders = unlinked_duplicates(repo, ["gpt-5-6-twin"])
+    assert [o["matches"] for o in offenders] == ["gpt-5-6-launch"]
+    assert offenders[0]["score"] == 1.0
+
+
+def test_a_recorded_decision_clears_it(tmp_path):
+    """The same record the archive test reads, asked before the commit lands."""
+    repo = with_twin(tmp_path)
+    write_verified(repo, "gpt-5-6-twin", "coincidental against gpt-5-6-launch")
+    assert unlinked_duplicates(repo, ["gpt-5-6-twin"]) == []
+
+
+def test_a_follow_up_clears_it(tmp_path):
+    repo = with_twin(tmp_path)
+    path = repo / "content/articles/en/2026/07/gpt-5-6-twin.md"
+    path.write_text(
+        TWIN.replace("lang: en", "lang: en\nfollows: gpt-5-6-launch"), encoding="utf-8"
+    )
+    assert unlinked_duplicates(repo, ["gpt-5-6-twin"]) == []
+
+
+def test_a_story_never_matches_itself(tmp_path):
+    """`load_index` reads the working tree, so the staged article is in it."""
+    assert unlinked_duplicates(make_repo(tmp_path), ["gpt-5-6-launch"]) == []
+
+
+def test_a_moderate_match_is_not_refused(tmp_path):
+    """Only what the archive test would reject may refuse a commit."""
+    repo = make_repo(tmp_path)
+    (repo / "content/articles/en/2026/07/mild.md").write_text(
+        TWIN.replace("slug: gpt-5-6-twin", "slug: mild")
+            .replace("title: OpenAI releases GPT-5.6 model family to enterprise",
+                     "title: OpenAI hires a chief revenue officer")
+            .replace("url: https://openai.com/index/gpt-5-6",
+                     "url: https://openai.com/index/hiring"),
+        encoding="utf-8",
+    )
+    assert unlinked_duplicates(repo, ["mild"]) == []
+
+
+def test_a_slug_that_is_not_a_published_article_says_nothing(tmp_path):
+    """Ledger-only and report-only commits pass untouched."""
+    assert unlinked_duplicates(make_repo(tmp_path), ["meta-chip", "nonexistent"]) == []

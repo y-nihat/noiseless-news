@@ -16,7 +16,10 @@ at the story cap.
 
 from __future__ import annotations
 
+import json
+import os
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -179,25 +182,27 @@ class TestTheStagedCheck:
         assert "bilingual-parity" in [f.check for f in check_staged(repo)]
 
 
+def commit_with_hook(repo, msg):
+    """A real `git commit` with the real hook wired in, as the agent runs it."""
+    # The hook calls plain `python`; put the interpreter running this suite
+    # first on PATH so CI's tool-cache python (with the pipeline's deps) is
+    # what the hook finds, as it is on the runner where PATH already has it.
+    env = {
+        "PATH": f"{Path(sys.executable).parent}:{os.environ.get('PATH', '/usr/bin:/bin')}",
+        "HOME": str(repo),
+        "PYTHONPATH": str(REPO_ROOT / "pipeline"),
+        "GIT_CONFIG_COUNT": "1",
+        "GIT_CONFIG_KEY_0": "core.hooksPath",
+        "GIT_CONFIG_VALUE_0": str(REPO_ROOT / ".github" / "hooks"),
+    }
+    return _git("commit", "-q", "-m", msg, cwd=repo, env=env, check=False)
+
+
 class TestTheHook:
     """The real hook script, invoked by a real `git commit`."""
 
     def _commit_with_hook(self, repo, msg):
-        import os
-        import sys
-
-        # The hook calls plain `python`; put the interpreter running this suite
-        # first on PATH so CI's tool-cache python (with the pipeline's deps) is
-        # what the hook finds, as it is on the runner where PATH already has it.
-        env = {
-            "PATH": f"{Path(sys.executable).parent}:{os.environ.get('PATH', '/usr/bin:/bin')}",
-            "HOME": str(repo),
-            "PYTHONPATH": str(REPO_ROOT / "pipeline"),
-            "GIT_CONFIG_COUNT": "1",
-            "GIT_CONFIG_KEY_0": "core.hooksPath",
-            "GIT_CONFIG_VALUE_0": str(REPO_ROOT / ".github" / "hooks"),
-        }
-        return _git("commit", "-q", "-m", msg, cwd=repo, env=env, check=False)
+        return commit_with_hook(repo, msg)
 
     def test_it_is_executable(self):
         assert HOOK.exists()
@@ -224,6 +229,65 @@ class TestTheHook:
         _git("add", "-A", cwd=repo)
         result = _git("commit", "-q", "-m", "sweep", cwd=repo, check=False)
         assert result.returncode == 0
+
+
+class TestTheHookReAsksTheDuplicateGate:
+    """§0a's gate necessarily runs before the story exists.
+
+    It scores a working title against a primary URL. By the time the article is
+    staged both have moved: on 2026-08-20 a citation of the matched story's own
+    primary document was added during drafting — correctly, as the Tier-0 source
+    behind a comparative claim — and turned a justified standalone into a pair
+    the archive test rejects. CI stayed red for eight days over a decision that
+    had already been made correctly and written down against different evidence.
+
+    Asked again here, with the finished article's real title and real sources,
+    the same decision can be recorded against what it will be judged on. Only
+    the outcome the archive test would also reject refuses the commit.
+    """
+
+    TWIN = ARTICLE.replace("title: Story {slug}", "title: Story seed-story indeed")
+
+    def _stage_twin(self, repo, *, follows=""):
+        for lang in ("en", "tr"):
+            body = self.TWIN.format(slug="twin-story", lang=lang)
+            if follows:
+                body = body.replace("lang: ", f"follows: {follows}\nlang: ", 1)
+            (repo / "content" / "articles" / lang / "2026" / "08" / "twin-story.md")\
+                .write_text(body, encoding="utf-8")
+        write_twins(repo, "twin-story")
+        _git("add", "-A", cwd=repo)
+
+    def test_an_unlinked_duplicate_is_refused_with_the_three_outcomes(self, repo):
+        self._stage_twin(repo)
+        result = commit_with_hook(repo, "publish twin-story")
+        assert result.returncode != 0, "the commit went through"
+        combined = result.stdout + result.stderr
+        assert "strongly matches seed-story" in combined, combined
+        assert "same saga" in combined and "coincidental" in combined
+        assert _git("log", "--oneline", cwd=repo).stdout.count("\n") == 1
+
+    def test_a_recorded_decision_lets_it_through(self, repo):
+        self._stage_twin(repo)
+        log = repo / "data" / "verified" / "twin-story.json"
+        data = json.loads(log.read_text(encoding="utf-8"))
+        data["dedup_check"] = "strong match against seed-story; coincidental, different event"
+        log.write_text(json.dumps(data), encoding="utf-8")
+        _git("add", "-A", cwd=repo)
+        result = commit_with_hook(repo, "publish twin-story")
+        assert result.returncode == 0, result.stdout + result.stderr
+
+    def test_a_follow_up_is_never_refused_for_sharing_its_saga(self, repo):
+        """§8(b) members share sources by design."""
+        self._stage_twin(repo, follows="seed-story")
+        result = commit_with_hook(repo, "publish twin-story")
+        assert result.returncode == 0, result.stdout + result.stderr
+
+    def test_a_clean_unrelated_story_is_untouched(self, repo):
+        write_story(repo, "new-one")
+        _git("add", "-A", cwd=repo)
+        result = commit_with_hook(repo, "publish new-one")
+        assert result.returncode == 0, result.stdout + result.stderr
 
 
 class TestTheSupervisorClosesTheLoop:

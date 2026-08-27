@@ -23,12 +23,20 @@ in its frontmatter, ledger entry, and the story index.
   `python -m noiseless.run dedup-check --title "<working title>" --url "<primary url>"`
   It checks title similarity and shared source URLs against every article and
   ledger entry ever created.
-- Exit 2 (**strong match**): do NOT create a new article. Either apply a §8
-  update to the matched slug (only if genuinely new information exists) or skip.
+- Exit 2 (**strong match**): do NOT open an unlinked new story. Go to §8 and
+  pick one of its three outcomes — in-place update, follow-up with `follows:`,
+  or, where the match really is coincidental, a standalone whose reasoning is
+  written down. A strong match raises the bar for the third; it does not remove
+  it. (This bullet used to read "do NOT create a new article … or skip", an
+  incomplete summary of §8 that contradicted the table two sections below and
+  left the constitution and the cycle prompt disagreeing about the same gate.)
 - **Moderate matches**: read the matched article before deciding new vs update;
   justify the decision in the run report.
 - The dedup-check result (matches found, decision taken) is recorded in the
-  story's evidence log.
+  story's evidence log, in a `dedup_check` field that NAMES the matched slug.
+  That record is not paperwork: it is what the archive test reads to tell a
+  justified standalone from an unlinked duplicate, and a decision that does not
+  name the story it was made against cannot excuse anything.
 
 ## 1. Source tiers
 
@@ -125,7 +133,7 @@ one of three outcomes — never an unlinked duplicate:
 |---|---|
 | Same event, new details (extra confirmation, minor development) | **In-place update**: edit the existing article, add a dated `updated:` changelog entry |
 | A NEW event in the same saga (ruling in a covered lawsuit, launch of a previewed product, follow-through or reversal of a covered announcement) | **Follow-up article**: new slug, frontmatter `follows: <original-slug>` — the site renders the whole thread ("story so far") on every member article |
-| Unrelated despite surface similarity | New standalone article; note the dedup decision in the report |
+| Unrelated despite surface similarity | New standalone article; record the dedup decision in the evidence log's `dedup_check`, naming the matched slug, and in the report |
 
 - The follow-up test: could a reader who missed the original still need that
   context? If yes, it's a follow-up (`follows`), not an in-place update.

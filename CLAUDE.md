@@ -34,7 +34,12 @@ filters clickbait, writes its own headlines/articles, lists sources under every 
   and re-checks `watching` ledger stories first. Cycle prompt: `.github/cycle-prompt.md`.
 - Budget caps: 4 stories/cycle, 12 stories/night, 15 searches/story, 120 turns/cycle.
   Any usage-limit error ends the whole night (check_result.py exit 3); one crashed
-  cycle skips to the next. The night fails (red job + issue) only if zero cycles succeed.
+  cycle skips to the next. The night fails (red job + issue) on any of six terminal
+  conditions in `night_loop.sh` — the path allowlist tripped, origin polluted, a push
+  that never landed, the content gate still blocked at dawn, no runway on a scheduled
+  run, or zero successful cycles. "Only if zero cycles succeed" was the summary here
+  until 2026-08-28, and it is why Nightly scan #48 looked inexplicable: all six of its
+  cycles succeeded and the night still went red, on the fourth condition.
 - Daytime ingest crons (13:00/19:00 Istanbul, `.github/workflows/ingest.yml`) are
   deterministic feed capture only — no LLM, no credits.
 

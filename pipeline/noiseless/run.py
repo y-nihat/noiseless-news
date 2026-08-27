@@ -126,6 +126,11 @@ def main(argv: list[str] | None = None) -> int:
         "--url", action="append", default=[], help="candidate source URL(s); repeatable"
     )
 
+    subparsers.add_parser(
+        "dedup-staged",
+        help="re-ask the duplicate gate about the staged articles (exit 1 to refuse)",
+    )
+
     args = parser.parse_args(argv)
 
     # Only the commands that read the registry load it. validate-content and
@@ -206,6 +211,34 @@ def main(argv: list[str] | None = None) -> int:
             max_held=args.max_held, github=args.github, json_path=args.json,
             brief=args.brief, staged=args.staged,
         )
+
+    if args.command == "dedup-staged":
+        # Imported here for the same reason validate-content is: this runs as a
+        # pre-commit hook and must not pay for, or fail on, the feed stack.
+        from noiseless.dedup import unlinked_duplicates
+        from noiseless.validate_content import _staged_slugs
+
+        slugs, _paths = _staged_slugs(Path("."))
+        offenders = unlinked_duplicates(Path("."), slugs)
+        if not offenders:
+            return 0
+        for bad in offenders:
+            print(
+                f"commit refused: {bad['slug']} strongly matches {bad['matches']} "
+                f"(score {bad['score']}, {bad['shared_url_count']} shared source URL(s)) "
+                "and nothing links or excuses them."
+            )
+        print(
+            "\npolicy/verification.md §8 gives three outcomes — pick one and stage it:\n"
+            "  same event   -> fold this into the matched article instead\n"
+            "  same saga    -> `follows: <slug>` in the article frontmatter AND the "
+            "ledger entry\n"
+            "  coincidental -> say why in data/verified/<this-slug>.json's `dedup_check` "
+            "field,\n"
+            "                  naming the matched slug. That record is what the archive "
+            "test reads."
+        )
+        return 1
 
     if args.command == "dedup-check":
         import json as _json

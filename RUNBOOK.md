@@ -127,6 +127,39 @@ is the check that would have stopped the 2026-08-18 commits before they landed.
 It is scoped to the agent's process; your commits and the supervisor's are not
 subject to it.
 
+## The test suite is red
+
+**What it blocks: nothing.** `deploy.yml` does not gate on the `Tests`
+workflow and runs its own `validate-content --strict --max-held 3`, so the
+site keeps publishing. That is deliberate — a flaky unit test has no business
+freezing the public site — and it is also why a red suite can sit unnoticed.
+It sat red on main for 23 consecutive runs across 8 days from 2026-08-20.
+
+Where to see it: the "Test suite red on main" issue (assigned to you, one
+durable thread), the `Tests` run itself, and the "Unit suite" section of the
+night's repair brief.
+
+```sh
+docker compose run --rm pipeline pytest -q            # reproduce
+gh run list --workflow=tests.yml --branch main --limit 10
+```
+
+How it clears, by what failed:
+
+- **An archive test** (`test_dedup_repo_data.py`, `test_evidence_surface.py`,
+  `test_validate_content.py::TestRealArchive`) is about `content/` and
+  `data/` — the agent's own paths. It reaches the next night's cycle 1 in the
+  repair brief and is repaired there, like a held story. Fix the archive, not
+  the test.
+- **A pipeline test** is yours. The agent may not touch `pipeline/`, so
+  nothing will clear it on its own and every night will re-file the same
+  comment on the same thread until you do.
+
+A suite still red after one night is a human's job either way. If the test is
+the thing that is wrong — as on 2026-08-20, where the invariant asserted
+something stricter than `policy/verification.md` §8 allows — fix the test, and
+say in the commit which rule it was mechanising.
+
 ## Roll back a bad deploy
 
 ```sh

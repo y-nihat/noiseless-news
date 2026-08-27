@@ -23,8 +23,21 @@ fi
 # committing repo's cwd (the tests commit in a scratch repo); an explicit
 # PYTHONPATH set by the caller wins.
 HOOK_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-PYTHONPATH="${PYTHONPATH:-$HOOK_ROOT/pipeline}" python -m noiseless.run validate-content --staged
+export PYTHONPATH="${PYTHONPATH:-$HOOK_ROOT/pipeline}"
+python -m noiseless.run validate-content --staged
 rc=$?
+# Re-ask the duplicate gate with the FINISHED article's real title and real
+# sources. §0a's gate necessarily runs before the story exists, against a
+# working title and a primary URL; by the time the article is staged both have
+# moved, and on 2026-08-20 a citation added during drafting turned a justified
+# standalone into a pair the archive test rejects — red on main for eight days
+# over a decision that had already been made correctly and written down. Asked
+# here, the same decision can be recorded against the evidence it will be
+# judged on. Only the outcome CI would also reject refuses the commit.
+if [ "$rc" -eq 0 ]; then
+  python -m noiseless.run dedup-staged
+  rc=$?
+fi
 if [ "$rc" -ne 0 ] && [ -n "${NIGHT_STATE_DIR:-}" ]; then
   echo "pre-commit REFUSED" >> "$NIGHT_STATE_DIR/hooks.log" 2>/dev/null || true
 fi
