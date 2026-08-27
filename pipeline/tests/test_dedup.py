@@ -9,7 +9,16 @@ while two watching stories were invisible to the live duplicate gate.
 
 import json
 
-from noiseless.dedup import check, identity_urls, load_index, similarity, tokens
+from noiseless.dedup import (
+    IndexEntry,
+    check,
+    dedup_note,
+    identity_urls,
+    load_index,
+    policy_exempt_pair,
+    similarity,
+    tokens,
+)
 
 ARTICLE = """---
 title: OpenAI releases GPT-5.6 model family
@@ -165,3 +174,130 @@ def test_watching_ledger_entry_matches(tmp_path):
 def test_token_similarity_basics():
     assert similarity(tokens("OpenAI releases GPT-5.6"), tokens("the of and")) == 0.0
     assert similarity(set(), set()) == 0.0
+
+
+# --- §8: the outcomes that leave two published stories matching on purpose ---
+#
+# A strong match is not by itself a defect. §8 gives it three outcomes and two
+# of them are supposed to produce exactly the state the archive invariant used
+# to fail on. These fix the shape of the exemption, so widening it later takes a
+# deliberate edit rather than an accident.
+
+FOLLOW_UP = """---
+title: OpenAI ships GPT-5.6 to the enterprise tier
+date: 2026-07-20
+slug: gpt-5-6-enterprise
+lang: en
+follows: gpt-5-6-launch
+tldr: The enterprise rollout of the GPT-5.6 family.
+sources:
+  - name: OpenAI News
+    url: https://openai.com/index/gpt-5-6-enterprise
+---
+
+Body.
+"""
+
+
+def write_verified(repo, slug, note):
+    verified = repo / "data/verified"
+    verified.mkdir(parents=True, exist_ok=True)
+    (verified / f"{slug}.json").write_text(
+        json.dumps({"slug": slug, "dedup_check": note}), encoding="utf-8"
+    )
+
+
+def test_follows_is_indexed_from_the_article(tmp_path):
+    repo = make_repo(tmp_path)
+    (repo / "content/articles/en/2026/07/gpt-5-6-enterprise.md").write_text(
+        FOLLOW_UP, encoding="utf-8"
+    )
+    by_slug = {e.slug: e for e in load_index(repo)}
+    assert by_slug["gpt-5-6-enterprise"].follows == "gpt-5-6-launch"
+    assert by_slug["gpt-5-6-launch"].follows == ""
+
+
+def test_follows_is_indexed_from_the_ledger(tmp_path):
+    """§8 requires the ledger entry to mirror the field; a `null` is not a link."""
+    repo = make_repo(
+        tmp_path,
+        {"slug": "meta-chip-2", "status": "watching", "first_seen": "2026-07-10",
+         "follows": "meta-chip"},
+        {"slug": "meta-chip", "status": "watching", "first_seen": "2026-07-09",
+         "follows": None},
+    )
+    by_slug = {e.slug: e for e in load_index(repo)}
+    assert by_slug["meta-chip-2"].follows == "meta-chip"
+    assert by_slug["meta-chip"].follows == ""
+
+
+def test_a_saga_link_excuses_the_pair_in_either_direction(tmp_path):
+    repo = make_repo(tmp_path)
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published", follows="a")
+    assert policy_exempt_pair(repo, first, second) == "follows"
+    assert policy_exempt_pair(repo, second, first) == "follows"
+
+
+def test_a_recorded_standalone_excuses_the_pair(tmp_path):
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", "strong match against a -- different event, coincidental")
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert "data/verified/b.json" in policy_exempt_pair(repo, first, second)
+
+
+def test_a_note_about_a_different_match_excuses_nothing(tmp_path):
+    """The precision that keeps the exemption from being a blanket amnesty.
+
+    A story may legitimately carry a dedup_check about some other candidate it
+    was compared against. That note says nothing about *this* pair, so it must
+    not excuse it.
+    """
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", "strong match against some-other-story -- coincidental")
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(repo, first, second) == ""
+
+
+def test_a_neighbouring_slug_does_not_excuse_the_pair(tmp_path):
+    """Substring matching would let the wrong decision excuse this pair.
+
+    `gpt-5-6-launch` is a substring of `gpt-5-6-launch-delay`; a short slug is
+    also a substring of ordinary prose. Both were true of the first cut of this
+    exemption, and both are how an unlinked duplicate would slip through it.
+    """
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", "coincidental match against gpt-5-6-launch-delay")
+    launch = IndexEntry("gpt-5-6-launch", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(repo, launch, second) == ""
+
+    write_verified(repo, "b", "no dedup match was found against anything")
+    short = IndexEntry("a", "A", "2026-07-01", "published")
+    assert policy_exempt_pair(repo, short, second) == ""
+
+    write_verified(repo, "b", "coincidental match against gpt-5-6-launch, five weeks apart")
+    assert "data/verified/b.json" in policy_exempt_pair(repo, launch, second)
+
+
+def test_an_unrecorded_standalone_is_not_excused(tmp_path):
+    """No evidence log at all is the unlinked duplicate the gate exists to catch."""
+    repo = make_repo(tmp_path)
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(repo, first, second) == ""
+
+
+def test_an_unreadable_evidence_log_excuses_nothing(tmp_path):
+    """Fail closed: a log we cannot parse is not a justification we can trust."""
+    repo = make_repo(tmp_path)
+    verified = repo / "data/verified"
+    verified.mkdir(parents=True, exist_ok=True)
+    (verified / "b.json").write_text("{not json", encoding="utf-8")
+    assert dedup_note(repo, "b") == ""
+    assert dedup_note(repo, "never-written") == ""
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(repo, first, second) == ""

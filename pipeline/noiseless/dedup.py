@@ -73,6 +73,10 @@ class IndexEntry:
     date: str
     state: str
     urls: set[str] = field(default_factory=set)
+    # §8's saga link. Two members of one thread are *meant* to look alike, so
+    # anything reasoning about "these two stories match" has to be able to see
+    # the relationship the policy already blessed.
+    follows: str = ""
 
 
 def tokens(text: str) -> set[str]:
@@ -114,6 +118,7 @@ def load_index(repo_root: Path | str) -> list[IndexEntry]:
             date=str(meta.get("date", "")),
             state="published",
             urls=urls,
+            follows=str(meta.get("follows") or ""),
         )
 
     ledger_dir = repo_root / "data" / "ledger"
@@ -145,6 +150,7 @@ def load_index(repo_root: Path | str) -> list[IndexEntry]:
                 date=_first_present(data, LEDGER_DATE_KEYS),
                 state=str(data.get("state", data.get("status", "unknown"))),
                 urls=urls,
+                follows=str(data.get("follows") or ""),
             )
 
     return list(entries.values())
@@ -189,3 +195,57 @@ def check(
             )
     matches.sort(key=lambda m: m["score"], reverse=True)
     return matches
+
+
+def dedup_note(repo_root: Path | str, slug: str) -> str:
+    """The dedup decision recorded in a story's evidence log, or "".
+
+    §0a ends with "the dedup-check result (matches found, decision taken) is
+    recorded in the story's evidence log". This reads that record back.
+    """
+    path = Path(repo_root) / "data" / "verified" / f"{slug}.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+        return ""
+    if not isinstance(data, dict):
+        return ""
+    note = data.get("dedup_check")
+    return note if isinstance(note, str) else ""
+
+
+def _names_slug(note: str, slug: str) -> bool:
+    """Does this note refer to `slug` itself, and not merely contain its letters?
+
+    Slug characters are [a-z0-9-], so a slug flanked by another one is a
+    different slug: a note about `gpt-5-6-launch-delay` must not excuse a match
+    against `gpt-5-6-launch`. Plain substring matching also lets a short slug
+    hide inside an ordinary word.
+    """
+    return re.search(rf"(?<![a-z0-9-]){re.escape(slug)}(?![a-z0-9-])", note) is not None
+
+
+def policy_exempt_pair(
+    repo_root: Path | str, first: IndexEntry, second: IndexEntry
+) -> str:
+    """Why §8 permits these two published stories to match strongly, or "".
+
+    A strong match is not by itself a defect. §8 gives three outcomes and two of
+    them leave two published stories matching on purpose:
+
+      * a follow-up article, which shares the saga and usually the sources; and
+      * "unrelated despite surface similarity" — a standalone, whose only
+        requirement is that the dedup decision is written down.
+
+    The note has to NAME the other slug. That is what keeps this from being a
+    blanket amnesty: a story carrying a dedup_check about some *different* match
+    does not get to excuse this one, and a standalone published with no recorded
+    reasoning at all still fails loudly.
+    """
+    if first.follows == second.slug or second.follows == first.slug:
+        return "follows"
+    if _names_slug(dedup_note(repo_root, first.slug), second.slug):
+        return f"recorded standalone in data/verified/{first.slug}.json"
+    if _names_slug(dedup_note(repo_root, second.slug), first.slug):
+        return f"recorded standalone in data/verified/{second.slug}.json"
+    return ""
