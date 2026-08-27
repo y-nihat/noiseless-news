@@ -8,5 +8,105 @@
     "published": "2026-08-26T17:30:29+00:00",
     "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/openai_logo_vis-1.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        OpenAI's leadership believes AGI is within reach, according to a TIME report. The company's upcoming model Astra already works as an automated research intern, according to chief scientist Jakub Pachocki. Altman expects it to be \"the first model where the model actually invents new things in a way that matters.\"</p>\n<p>The article <a href=\"https://the-decoder.com/sam-altman-says-openai-will-have-agi-by-the-end-of-2026-if-you-accept-his-definition/\">Sam Altman says OpenAI will have AGI by the end of 2026 if you accept his definition</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
     "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "6e4e25ed3da4a5d1",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "AI shopping agents aren't ready to buy on your behalf, study finds",
+    "url": "https://the-decoder.com/ai-shopping-agents-arent-ready-to-buy-on-your-behalf-study-finds/",
+    "published": "2026-08-27T18:24:20+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"608\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/ai_agent_commerce_watch.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1088\" /></p>\n<p>        Letting an AI do your shopping might not get you the best deal. Researchers at the Wharton School show how erratic AI shopping agents really are: a single external source like Wirecutter shifted product picks by up to 99 percentage points, and even changing the order of identical information altered the outcome.</p>\n<p>The article <a href=\"https://the-decoder.com/ai-shopping-agents-arent-ready-to-buy-on-your-behalf-study-finds/\">AI shopping agents aren&#039;t ready to buy on your behalf, study finds</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "47cca7a080bcb361",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI rallies 100+ companies to sign open letter warning AI-powered cyberattacks on critical infrastructure are imminent",
+    "url": "https://the-decoder.com/openai-rallies-100-companies-to-sign-open-letter-warning-ai-powered-cyberattacks-on-critical-infrastructure-are-imminent/",
+    "published": "2026-08-27T18:15:46+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/generated-image-1-14.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        OpenAI, together with more than 100 companies including Microsoft, Google, Anthropic, Deutsche Telekom, and SAP, has published an open letter on AI-powered cyber defense. The coalition warns of increasingly sophisticated AI attacks on critical infrastructure such as hospitals and water treatment plants and calls for swift action while defenders still have the upper hand.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-rallies-100-companies-to-sign-open-letter-warning-ai-powered-cyberattacks-on-critical-infrastructure-are-imminent/\">OpenAI rallies 100+ companies to sign open letter warning AI-powered cyberattacks on critical infrastructure are imminent</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "0d0b62b035f1a4bf",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Google's Gemini Omni 1.1 Flash makes AI video generation cheaper and more flexible",
+    "url": "https://the-decoder.com/googles-gemini-omni-1-1-flash-makes-ai-video-generation-cheaper-and-more-flexible/",
+    "published": "2026-08-27T17:01:28+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/04/google_gemini_optical_trick.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Google's Gemini Omni 1.1 Flash video model now analyzes up to ten seconds of existing footage instead of just the last second for more consistent scene extensions. Scenes can be extended in 10-second increments up to 40 seconds. A new 360p draft mode runs up to 60 percent faster at a third of the cost.</p>\n<p>The article <a href=\"https://the-decoder.com/googles-gemini-omni-1-1-flash-makes-ai-video-generation-cheaper-and-more-flexible/\">Google&#039;s Gemini Omni 1.1 Flash makes AI video generation cheaper and more flexible</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "7e749c2035c16214",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI’s rogue AI collective was smart enough to break out of sandboxes but dumb enough to fight a ghost",
+    "url": "https://the-decoder.com/openais-rogue-ai-collective-was-smart-enough-to-break-out-of-sandboxes-but-dumb-enough-to-fight-a-ghost/",
+    "published": "2026-08-27T16:19:46+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/OpenAI-HuggingFace-Incident-DQ.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Around 1,200 isolated OpenAI agents organized themselves into a collective through an internal package registry during a safety test, broke into Hugging Face systems, and eventually attacked OpenAI's own infrastructure. Their multi-day deception effort targeted an automated evaluator that never existed. OpenAI calls the incident a \"warning shot,\" and the investigation had to be carried out largely by one of the involved models itself because no alternative was available.</p>\n<p>The article <a href=\"https://the-decoder.com/openais-rogue-ai-collective-was-smart-enough-to-break-out-of-sandboxes-but-dumb-enough-to-fight-a-ghost/\">OpenAI’s rogue AI collective was smart enough to break out of sandboxes but dumb enough to fight a ghost</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "b6de1b516fd796aa",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "OpenAI researcher warns ultrafast AI could leave security teams in the dust",
+    "url": "https://the-decoder.com/openai-researcher-warns-ultrafast-ai-could-leave-security-teams-in-the-dust/",
+    "published": "2026-08-27T15:04:20+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1429\" src=\"https://the-decoder.com/wp-content/uploads/2026/08/kraken_fast_openai_cybersecurity-scaled.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2560\" /></p>\n<p>        An OpenAI researcher warns that state-of-the-art AI models running 50 times faster could infiltrate systems before human teams can react. Simple monitoring won't cut it anymore, he says. What's needed are autonomous shutdown systems. The warning comes as OpenAI unveils a new AI chip that significantly outperforms current hardware in inference speed.</p>\n<p>The article <a href=\"https://the-decoder.com/openai-researcher-warns-ultrafast-ai-could-leave-security-teams-in-the-dust/\">OpenAI researcher warns ultrafast AI could leave security teams in the dust</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "3bb1627b9437e6f0",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Anthropic locks in 45-billion-dollar compute deal with Nscale ahead of IPO",
+    "url": "https://the-decoder.com/anthropic-locks-in-45-billion-dollar-compute-deal-with-nscale-ahead-of-ipo/",
+    "published": "2026-08-27T10:49:35+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"998\" src=\"https://the-decoder.com/wp-content/uploads/2025/10/claude_anthropic_tpu_google.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1749\" /></p>\n<p>        Anthropic has struck a deal worth around 45 billion dollars with British cloud startup Nscale, Bloomberg reports.</p>\n<p>The article <a href=\"https://the-decoder.com/anthropic-locks-in-45-billion-dollar-compute-deal-with-nscale-ahead-of-ipo/\">Anthropic locks in 45-billion-dollar compute deal with Nscale ahead of IPO</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "cc644640e575a3e7",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Google's Gemini 3.5 Transcribe turns speech to text in 85 languages while auto-correcting your verbal stumbles",
+    "url": "https://the-decoder.com/googles-gemini-3-5-transcribe-turns-speech-to-text-in-85-languages-while-auto-correcting-your-verbal-stumbles/",
+    "published": "2026-08-27T10:40:08+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/google_gemini-1.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Google's new Gemini 3.5 Transcribe recognizes over 85 languages, strips filler words, and corrects slips of the tongue in real time. It hits a 4.0 percent word error rate in streaming mode, with 70 percent lower latency than its predecessor, Chirp 3. Through function calling, the model can hand off tasks to other Gemini models.</p>\n<p>The article <a href=\"https://the-decoder.com/googles-gemini-3-5-transcribe-turns-speech-to-text-in-85-languages-while-auto-correcting-your-verbal-stumbles/\">Google&#039;s Gemini 3.5 Transcribe turns speech to text in 85 languages while auto-correcting your verbal stumbles</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "83ca17f27030b1b7",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "GLM-5.3-Flash matches top models at a fraction of the cost, and runs without Nvidia",
+    "url": "https://the-decoder.com/the-chinese-ai-model-glm-5-3-flash-runs-without-nvidia-and-costs-a-fraction-of-what-the-competition-does/",
+    "published": "2026-08-27T10:24:49+00:00",
+    "summary": "<p><img alt=\"Grid of black squares with white Z logo against a blue color gradient, brand pattern by Zhipu AI.\" class=\"attachment-full size-full wp-post-image\" height=\"768\" src=\"https://the-decoder.com/wp-content/uploads/2026/04/zhipu-ai-logo-wall.jpg\" style=\"height: auto; margin-bottom: 10px;\" width=\"1376\" /></p>\n<p>        Z.ai releases GLM-5.3-Flash, an open-source model with 320 billion parameters that lands just three points behind the larger GLM-5.3 on Artificial Analysis's Intelligence Index, at a seventh of the cost. What's notable is that all of the inference traffic ran on Chinese AI chips instead of Nvidia hardware.</p>\n<p>The article <a href=\"https://the-decoder.com/the-chinese-ai-model-glm-5-3-flash-runs-without-nvidia-and-costs-a-fraction-of-what-the-competition-does/\">GLM-5.3-Flash matches top models at a fraction of the cost, and runs without Nvidia</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "50cbdcaef9e48a25",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Claude Cowork now runs its own browser inside the desktop app",
+    "url": "https://the-decoder.com/claude-cowork-now-runs-its-own-browser-inside-the-desktop-app/",
+    "published": "2026-08-27T09:54:46+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"994\" src=\"https://the-decoder.com/wp-content/uploads/2025/10/anthropic_search.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"1746\" /></p>\n<p>        Anthropic is building its own browser into Claude Cowork, running inside the desktop app.</p>\n<p>The article <a href=\"https://the-decoder.com/claude-cowork-now-runs-its-own-browser-inside-the-desktop-app/\">Claude Cowork now runs its own browser inside the desktop app</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "619c1684ab8d35ba",
+    "source": "The Decoder",
+    "tier": 2,
+    "title": "Nvidia snaps up Hugging Face for $12.9 billion as closed AI labs pull away",
+    "url": "https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away/",
+    "published": "2026-08-27T07:14:38+00:00",
+    "summary": "<p><img alt=\"\" class=\"attachment-full size-full wp-post-image\" height=\"1152\" src=\"https://the-decoder.com/wp-content/uploads/2026/07/hugging_face_security.png\" style=\"height: auto; margin-bottom: 10px;\" width=\"2048\" /></p>\n<p>        Nvidia is buying open-source AI platform Hugging Face for $12.9 billion, about 80 times its $150 million annual revenue. The deal fits Nvidia's push to invest billions in open AI models while closed providers like OpenAI and Anthropic move away from Nvidia hardware.</p>\n<p>The article <a href=\"https://the-decoder.com/nvidia-snaps-up-hugging-face-for-12-9-billion-as-closed-ai-labs-pull-away/\">Nvidia snaps up Hugging Face for $12.9 billion as closed AI labs pull away</a> appeared first on <a href=\"https://the-decoder.com\">The Decoder</a>.</p>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
   }
 ]

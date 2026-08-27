@@ -138,5 +138,245 @@
     "published": "2026-08-26T20:22:01+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'd be curious to try it locally since I use 0731 daily but still no news on the weights</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LegacyRemaster\"> /u/LegacyRemaster </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz8mih/any_news_about_deepseek_v4_flash_vision_weights/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz8mih/any_news_about_deepseek_v4_flash_vision_weights/\">[comments]</a></span>",
     "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "9b58aee83795b053",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "We’re the Team Behind Apodex 1.1 — Ask Us Anything!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzxdui/were_the_team_behind_apodex_11_ask_us_anything/",
+    "published": "2026-08-27T15:35:58+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzxdui/were_the_team_behind_apodex_11_ask_us_anything/\"> <img alt=\"We’re the Team Behind Apodex 1.1 — Ask Us Anything!\" src=\"https://preview.redd.it/lgbbffnusxlh1.png?width=140&amp;height=140&amp;auto=webp&amp;s=84b2149e6261401addad50c6063bd8d913702066\" title=\"We’re the Team Behind Apodex 1.1 — Ask Us Anything!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hi <a href=\"https://www.reddit.com/r/LocalLLaMA/\">r/LocalLLaMA</a> !</p> <p>We’re <strong>Apodex</strong>, the team behind <strong>Apodex 1.1</strong>, our new model family built to scale agentic intelligence for complex work. We’re excited to be here and answer your questions directly.</p> <p>Apodex 1.1 is designed around sustained, verifiable progress toward real-world objectives—from reasoning and search to working with files, executing code, recovering from failures, and coordinating multiple agents.</p> <p><strong>Open models</strong></p> <p><strong>Apodex 1.1</strong></p> <ul> <li><a href=\"https://huggingface.co/apodex/Apodex-1.1-mini\">Apodex-1.1-mini</a></li> <li><a href=\"https://huggingface.co/apodex/Apodex-1.1-mini-NVFP4\">Apodex-1.1-mini-NVFP4</a></li> <li><a href=\"https://huggingface.co/apodex/Apodex-1.1-mini-GPTQ-Int4\">Apodex-1.1-mini-GPTQ-Int4</a></li> <li><a href=\"https://huggingface.co/apodex/Apodex-1.1-mini-FP8\">Apodex-1.1-mini-FP8</a></li> </ul> <p><strong>Apodex 1.0</strong></p> <ul> <li><a href=\"https://huggingface.co/apodex/Apodex-1.0-mini\">Apodex-1.0-mini</a></li> <li><a href=\"https://huggingface.co/apodex/Apodex-1.0-4B-SFT\">Apodex-1.0-4B-SFT</a></li> <li><a href=\"https://huggingface.co/apodex/Apodex-1.0-2B-SFT\">Apodex-1.0-2B-SFT</a></li> <li><a href=\"https://huggingface.co/apodex/Apodex-1.0-0.8B-SFT\">Apodex-1.0-0.8B-SFT</a></li> </ul> <p>Alongside Apodex 1.1, we released our open-source agent harness and two papers:</p> <ul> <li><a href=\"https://github.com/ApodexAI/FrontierAgent\">FrontierAgent on GitHub</a></li> <li…",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "6b78dc8f9078cc9d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "No, Engrams won't let you run 1T models locally. It does something even better.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0198r/no_engrams_wont_let_you_run_1t_models_locally_it/",
+    "published": "2026-08-27T17:56:34+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Ever since Qwen 3.8 Flash Next dropped, there's a misconception going around that N-gram tables will let people run 1T+ parameter models on a single server with 980B parameters offloaded to SSD. I'm here to disappoint you: it won't. But what it will actually do for local models is even better.</p> <p>At its core, Engram is just an embedding table with a longer key. Instead of indexing a static vector by a single token ID, you index it by the last 2-3 tokens, an N-gram. &quot;New York&quot; gets its own memorized vector, &quot;the United&quot; gets its own, and so on. Hash the N-gram, fetch the vector, feed it into the network. O(1), constant time, no FLOPs.</p> <p>Why bother? Because a surprising amount of what a transformer does in its early layers is reconstructing static crap from scratch: how entity names are spelled, formulaic phrases, common collocations: &quot;New&quot; + &quot;York&quot; = Wall Street, delis, rats, subways.</p> <p>But every time the model needs to recall a multi-token entity, it burns several layers of attention and FFNs re-assembling something that is, frankly, a database lookup. Engram moves that job to an actual database lookup so the neural layers can spend their depth on actual reasoning. So instead of spending a bunch of layers &quot;rederiving&quot; the meaning of multi-token phrases like &quot;New&quot;, &quot;York&quot;, Engrams enable that lookup to be performed instantly.</p> <p>This is why Qwen 3.8 Next can carry 51B parameters of N-gram embeddings while only activating around 6B per token: the table is cheap to query, so you can make it enormous and have it live in RAM or SSD.</p> <p>Now the part nobody understands: <strong>the lookup is &quot;dumb&quot;.</strong></p> <p>The key is just the last 2-3 tokens. Your 200k tokens of context have zero influence on what gets retrieved. The wider context can accept or reject whatever vector the N-gram fetched, but it can't change what was fetched. Engram…",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "86d497296b76970a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "With HuggingFace, Nvidia is also acquiring llama.cpp and the team behind it",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w01y1f/with_huggingface_nvidia_is_also_acquiring/",
+    "published": "2026-08-27T18:20:54+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>With this move Nvidia is not only acquiring the HuggingFace platform, but they might also effectively acquire the copyright to the `llama.cpp` project, together with the entire team behind it.</p> <p>In February 2026 the llama.cpp team was employed by HF in order to continue working on llama.cpp and the ggml library.</p> <p>This includes:</p> <p>- Georgi Gerganov</p> <p>- Xuan-Son Nguyen</p> <p>- Aleksander Grygier</p> <p>- Victor Mustar</p> <p>- Lysandre </p> <p>- Julien Chaumond </p> <p>Now with the acquisition, llama.cpp's future looks a lot less certain given Nvidia's poor track record with open-source.</p> <p>This is still rather speculative at this stage, but it's definitely possible for the llama.cpp project to change in the future: either by switching to a different license, or by having staff redirected to other projects within the larger company.</p> <p>Even when a project is open-source the copyright owner has complete control over it, and they can change licensing as they wish.</p> <p>This has happened before with projects like Redis, Minio, and others.</p> <p>Source: </p> <p><a href=\"https://huggingface.co/blog/ggml-joins-hf\">https://huggingface.co/blog/ggml-joins-hf</a> </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/vexatious-big\"> /u/vexatious-big </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w01y1f/with_huggingface_nvidia_is_also_acquiring/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w01y1f/with_huggingface_nvidia_is_also_acquiring/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "d03606e4d7ac242c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "NVIDIA buying HF isn't a good thing for open source",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzmqrk/nvidia_buying_hf_isnt_a_good_thing_for_open_source/",
+    "published": "2026-08-27T07:07:00+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzmqrk/nvidia_buying_hf_isnt_a_good_thing_for_open_source/\"> <img alt=\"NVIDIA buying HF isn't a good thing for open source\" src=\"https://preview.redd.it/efwj1ve3avlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c3380df3138be105e6091b69eb5f428e2f005071\" title=\"NVIDIA buying HF isn't a good thing for open source\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/johnnyApplePRNG\"> /u/johnnyApplePRNG </a> <br /> <span><a href=\"https://i.redd.it/efwj1ve3avlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzmqrk/nvidia_buying_hf_isnt_a_good_thing_for_open_source/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "91989ebab8a8027d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "and then they came for the used server RAM.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzvsx0/and_then_they_came_for_the_used_server_ram/",
+    "published": "2026-08-27T14:38:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzvsx0/and_then_they_came_for_the_used_server_ram/\"> <img alt=\"and then they came for the used server RAM.\" src=\"https://preview.redd.it/6q8j8pn0ixlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=33f1dc461c985849c9cccc8bfb52e85611dad130\" title=\"and then they came for the used server RAM.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I don't know why but when watching a video about FreeToken this morning this just came to mind lol. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/MammothUnique4147\"> /u/MammothUnique4147 </a> <br /> <span><a href=\"https://i.redd.it/6q8j8pn0ixlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzvsx0/and_then_they_came_for_the_used_server_ram/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "5fcf2403369699db",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "friendly reminder you can legally torrent ai models.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vztoyi/friendly_reminder_you_can_legally_torrent_ai/",
+    "published": "2026-08-27T13:15:57+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Repost because reddit keeps thinking this is piracy or illegal. It is neither. </p> <p>A lot of people are skeptical Nvidia will keep huggingface intact now that they will buy huggingface. There's a lot of doom and gloom about not having any alternatives, removing nsfw models, saying there's no decentralized alternative or just not trusting what Nvidia might do with huggingface.</p> <p>A lot of us probably tune out torrenting or other P2P networks because they have a bad reputation for piracy and related ISP threats. But, models on huggingface are technically not piracy, so you can download and host people's downloads just fine via torrents or any P2P networks. That is the decentralized alternative we have now. use qBitTorrent or whatever torrenting software you want. I don't know about any trackers besides huggingbay and llama garden, modelregistry io and ckpt cc</p> <p>and if you really need a centralized alternative because your network blocks P2P including torrents or you have limited upload bandwidth, can't get more and can't pay for a seed box, use modelscope, kaggle or civitai</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Pancho507\"> /u/Pancho507 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vztoyi/friendly_reminder_you_can_legally_torrent_ai/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vztoyi/friendly_reminder_you_can_legally_torrent_ai/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "1a0e1af956d98af1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Flash-Next better then DeepSeek V4 Pro",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzowwo/qwen38flashnext_better_then_deepseek_v4_pro/",
+    "published": "2026-08-27T09:17:06+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzowwo/qwen38flashnext_better_then_deepseek_v4_pro/\"> <img alt=\"Qwen3.8-Flash-Next better then DeepSeek V4 Pro\" src=\"https://preview.redd.it/6jri8d99xvlh1.png?width=140&amp;height=58&amp;auto=webp&amp;s=efcdf8b08b926f84cc8c3349665dd293d63a4f4f\" title=\"Qwen3.8-Flash-Next better then DeepSeek V4 Pro\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Normal-Phone7762\"> /u/Normal-Phone7762 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vzowwo\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzowwo/qwen38flashnext_better_then_deepseek_v4_pro/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "b8ead0a28e8ade02",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "llama.cpp support for Qwen3.8-Flash-Next has been merged",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w03zdo/llamacpp_support_for_qwen38flashnext_has_been/",
+    "published": "2026-08-27T19:34:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w03zdo/llamacpp_support_for_qwen38flashnext_has_been/\"> <img alt=\"llama.cpp support for Qwen3.8-Flash-Next has been merged\" src=\"https://external-preview.redd.it/clU47CA21MjdRoxLjBAdDgI-CEmGPJu2GvpJx2M9fcs.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=55c256861032e8d051b05d4338ae3f4074694006\" title=\"llama.cpp support for Qwen3.8-Flash-Next has been merged\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>finally I can download the GGUF</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/27742\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w03zdo/llamacpp_support_for_qwen38flashnext_has_been/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "54cf308e8ee8e9cb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Request: unsloth Please re-quantize Qwen3.6 35 A3B and 27B using UD 3.0",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzwj73/request_unsloth_please_requantize_qwen36_35_a3b/",
+    "published": "2026-08-27T15:04:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>UD 3.0 seems to be a massive improvement over UD 2.0 Some of us still want to run the older Qwen models but would benefit from UD 3.0</p> <p>UD 2.0 vs 3.0 is like the difference between a full quant. So Q3 UD 3.0 is similar to Q4 UD 2.0.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fancy-Snow7\"> /u/Fancy-Snow7 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzwj73/request_unsloth_please_requantize_qwen36_35_a3b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzwj73/request_unsloth_please_requantize_qwen36_35_a3b/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "8befc3463615da11",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Moderation !== Censorship",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzqkm1/moderation_censorship/",
+    "published": "2026-08-27T10:51:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzqkm1/moderation_censorship/\"> <img alt=\"Moderation !== Censorship\" src=\"https://preview.redd.it/8v204bc3ewlh1.png?width=140&amp;height=59&amp;auto=webp&amp;s=d07c5f5ce8f00c7a47844eed1bbf73fa6b55e3a1\" title=\"Moderation !== Censorship\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>All this mega threads and censoring posts killing LocalLLaMA vibe.<br /> And yeah, I liked more when we had 20+ posts about new model.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/inkberk\"> /u/inkberk </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vzqkm1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzqkm1/moderation_censorship/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "fbaadc34d55fe7b5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Nvidia has been in talks to acquire Hugging Face for more than $13 billion - Business Insider",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzfwnd/nvidia_has_been_in_talks_to_acquire_hugging_face/",
+    "published": "2026-08-27T01:19:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzfwnd/nvidia_has_been_in_talks_to_acquire_hugging_face/\"> <img alt=\"Nvidia has been in talks to acquire Hugging Face for more than $13 billion - Business Insider\" src=\"https://preview.redd.it/hovd1e6xjtlh1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=8d5f225fa921d74bf9dca90f5c475098b51e773c\" title=\"Nvidia has been in talks to acquire Hugging Face for more than $13 billion - Business Insider\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8\">https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8</a></p> <p>Edit: The Information is reporting that the deal is done: Nvidia Agrees to Buy Open Source Model Repository Hugging Face For $12.9 Billion (paywall): <a href=\"https://www.theinformation.com/articles/nvidia-agrees-buy-open-source-model-repository-hugging-face-12-9-billion\">https://www.theinformation.com/articles/nvidia-agrees-buy-open-source-model-repository-hugging-face-12-9-billion</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Nunki08\"> /u/Nunki08 </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1vzfwnd\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzfwnd/nvidia_has_been_in_talks_to_acquire_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "a8e7beef171d4976",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "NVIDIA Next Gen Vera Rubin GPUs scheduled for mid-2027",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzzkd6/nvidia_next_gen_vera_rubin_gpus_scheduled_for/",
+    "published": "2026-08-27T16:56:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzzkd6/nvidia_next_gen_vera_rubin_gpus_scheduled_for/\"> <img alt=\"NVIDIA Next Gen Vera Rubin GPUs scheduled for mid-2027\" src=\"https://external-preview.redd.it/VPvt6ieDt2YR2M__fG1jPcYYRM1Jhr74jxdjFwL9BjA.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=964d8b1c20cfe0b16dc7163fd3930e351413ac12\" title=\"NVIDIA Next Gen Vera Rubin GPUs scheduled for mid-2027\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Here’s hoping RTX 6090 also comes at MSRP of $6969 lol. With how expensive RTX 5090s and 6000 Pros have gotten it doesn’t sound too far fetched.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Leafytreedev\"> /u/Leafytreedev </a> <br /> <span><a href=\"https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-expects-to-sell-usd20-billion-worth-of-vera-rubin-hardware-this-quarter-would-account-for-20-percent-of-data-center-revenue-its-fastest-ramp-in-company-history\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzzkd6/nvidia_next_gen_vera_rubin_gpus_scheduled_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "b351cafea04ced6f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Flash-Next: Time to Update Those Benchmarks",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzspz6/qwen38flashnext_time_to_update_those_benchmarks/",
+    "published": "2026-08-27T12:34:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzspz6/qwen38flashnext_time_to_update_those_benchmarks/\"> <img alt=\"Qwen3.8-Flash-Next: Time to Update Those Benchmarks\" src=\"https://preview.redd.it/6sdkwxr3swlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6ba9379bd33c02b3bd942e910c638739281abcd6\" title=\"Qwen3.8-Flash-Next: Time to Update Those Benchmarks\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><h1>specs</h1> <p>hardware: M4 Max 128GB Studio<br /> inference engine: oMLX &amp; lllama.cpp</p> <h1>insights</h1> <p>it still very early, so had to disable oMLX K/V caching, <code>qwen4_exp</code> architectureis not yet supported<br /> + the obvious n-grams with which the whole 4 bit quant takes ~100G, so pretty tight</p> <p>nevertheless, this is the first model for the year that was able to break through 94% on my <a href=\"https://github.com/tolitius/cupel\">cupel</a> benchmark</p> <p>one interesting bit is Qwen 3.8 27B is obviously great, but it did not do that well, since I have coding, general knowledge and science. it did outperform most in coding, but its general knowledge lost to Gemma 31B as well as to Qwen 3.6</p> <h1>omlx</h1> <p>this is the quant I tried with oMLX, which performed better than other 4 bit quants due to the mixed quantization:</p> <p><a href=\"https://huggingface.co/pipenetwork/Qwen3.8-Flash-Next-MLX-mixed-4_8bit\">pipenetwork/Qwen3.8-Flash-Next-MLX-mixed-4_8bit</a></p> <table><thead> <tr> <th align=\"left\">buld</th> <th align=\"left\">perplexity</th> </tr> </thead><tbody> <tr> <td align=\"left\">bfloat16</td> <td align=\"left\">4.4708</td> </tr> <tr> <td align=\"left\">mixed-4_8bit</td> <td align=\"left\">4.5286</td> </tr> </tbody></table> <h1>llama.cpp</h1> <p>this is a very good quant from Unsloth, it is not as strong as &quot;MLX-mixed-4_8bit&quot;, but I could not fit a larger one from unsloth to be able to bench. You can see it on position #6 in the above leaderboard</p> <p><a href=\"https://huggingface.co/unsloth/Qwen3…",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "383b6a98378a5431",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM-5.3 Flash Unsloth GGUF now available",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzwa5n/glm53_flash_unsloth_gguf_now_available/",
+    "published": "2026-08-27T14:55:58+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzwa5n/glm53_flash_unsloth_gguf_now_available/\"> <img alt=\"GLM-5.3 Flash Unsloth GGUF now available\" src=\"https://external-preview.redd.it/h38PT12ZqgEVSRV1tnt5Hq1O4Dep5ajimqYYP2qzDC0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=d0c1ae24b33d9d7d2610c9a5e42c9924f71dd08a\" title=\"GLM-5.3 Flash Unsloth GGUF now available\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ElementNumber6\"> /u/ElementNumber6 </a> <br /> <span><a href=\"https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzwa5n/glm53_flash_unsloth_gguf_now_available/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "790c50bfe494f9ae",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Support for DFlash2 in llama.cpp has been merged! - spec : add DFlash2 support (local convolution + candidate selector) by SubSir · Pull Request #27342 · ggml-org/llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w00ngm/support_for_dflash2_in_llamacpp_has_been_merged/",
+    "published": "2026-08-27T17:35:16+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w00ngm/support_for_dflash2_in_llamacpp_has_been_merged/\"> <img alt=\"Support for DFlash2 in llama.cpp has been merged! - spec : add DFlash2 support (local convolution + candidate selector) by SubSir · Pull Request #27342 · ggml-org/llama.cpp\" src=\"https://external-preview.redd.it/3SRWImLCwjAdZidwJmIc3FjYtYWYzkhC4OMgJmFjWF0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=2f5530e61ee0c0be3137f6e70cb9a56405e70e46\" title=\"Support for DFlash2 in llama.cpp has been merged! - spec : add DFlash2 support (local convolution + candidate selector) by SubSir · Pull Request #27342 · ggml-org/llama.cpp\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/DjCanalex\"> /u/DjCanalex </a> <br /> <span><a href=\"https://github.com/ggml-org/llama.cpp/pull/27342\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w00ngm/support_for_dflash2_in_llamacpp_has_been_merged/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "851327799dd74474",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I used local Qwen 27b to build a harness and replace OpenCode",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzxv7u/i_used_local_qwen_27b_to_build_a_harness_and/",
+    "published": "2026-08-27T15:53:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzxv7u/i_used_local_qwen_27b_to_build_a_harness_and/\"> <img alt=\"I used local Qwen 27b to build a harness and replace OpenCode\" src=\"https://external-preview.redd.it/dGsxZ2xtc3V2eGxoMZnTIL7xcMKxf_lLwnwZU-qqdRhff-sUnJMElt9gi3US.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=70c5b9f2224e3bdbfd7c86e891abe6d0c7172bbf\" title=\"I used local Qwen 27b to build a harness and replace OpenCode\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Sharing my harness for running local LLMs that I built using Qwen 3.x 27B (&gt; 90% locally built) under my supervision - not vibe-coded.</p> <p>Its free, no telemetry, and open-source (AGPL). Works on Windows, Linux (sorry, no Mac yet). </p> <p>I use it for my own coding + mixed workflows.</p> <h1>How its different from others</h1> <ul> <li><strong>Just-in-Time code review before tool calls</strong> using guardrails make it easy to review code before edit is approved.</li> <li><strong>Agents and user can both chat in sub-agent threads</strong>, making it a three-way chat. Also any chat conversation can be made into a sub-agent conversation for another main chat - nested conversations.</li> <li><strong>You can annotate with voice dictation</strong>. Speaking is always faster than typing, hence more productive.</li> <li><strong>You can compile llama.cpp from any git-hub branch</strong> - and use a recipe script to do so, making it a nice little automation with a customizable UI.</li> </ul> <h1>Overall features</h1> <ul> <li><strong>Server Manager</strong>. Can run LLMs here and use with Open-Code/Claude Code etc.</li> <li><strong>Built-in MCP Tools</strong> - Filesystem, web fetch, code graph, To-Dos, and more. Extensible by external MCPs.</li> <li><strong>Use Sub-agents</strong> to split &amp; offload your tasks, use other conversations as source of information.</li> <li><strong>Review all AI messages</strong> using a second adversarial AI, and avoid potential pit…",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "cd1c9488e51335bc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Horus Cyber Nano 1.0",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w02n18/horus_cyber_nano_10/",
+    "published": "2026-08-27T18:45:33+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w02n18/horus_cyber_nano_10/\"> <img alt=\"Horus Cyber Nano 1.0\" src=\"https://preview.redd.it/6xwo3xpdqylh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=298c23e58f5eb2bd17e07717f5306ab5bcdefd80\" title=\"Horus Cyber Nano 1.0\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Official Announcement: A First Look at Horus Cyber Nano 1.0 </p> <p>We are officially unveiling the first look at Horus Cyber Nano 1.0. </p> <p>This announcement presents the benchmark results of Horus Cyber Nano 1.0, demonstrating the model’s performance and capabilities across a range of evaluations. </p> <p>We are also confirming the official release date for the model weights, making Horus Cyber Nano 1.0 available to the broader AI community. </p> <p>Alongside the benchmark results and release details, we will reveal the model’s architecture and provide a comprehensive overview of its technical specifications, design, and core capabilities. </p> <p>Horus Cyber Nano 1.0 represents the next step in the Horus model family, combining efficiency, performance, and advanced capabilities within a compact model. </p> <p>Full benchmark results, architecture details, technical specifications, and the confirmed model weights release date will be announced. </p> <p>Announcement: <a href=\"https://tokenai.llc/news/announcements/horus-cyber-nano-first-look\">https://tokenai.llc/news/announcements/horus-cyber-nano-first-look</a> </p> <p>Explore model: <a href=\"https://tokenai.llc/models/horus-cyber-nano1.0\">https://tokenai.llc/models/horus-cyber-nano1.0</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/assemsabryy\"> /u/assemsabryy </a> <br /> <span><a href=\"https://i.redd.it/6xwo3xpdqylh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w02n18/horus_cyber_nano_10/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "f67796e963946f1d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM-5.3 weights will be released tomorrow",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzjlxd/glm53_weights_will_be_released_tomorrow/",
+    "published": "2026-08-27T04:12:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzjlxd/glm53_weights_will_be_released_tomorrow/\"> <img alt=\"GLM-5.3 weights will be released tomorrow\" src=\"https://external-preview.redd.it/oa4M84gbITQsc8eF6J23xHXIO00-EBzIjEbR3hIfJ0M.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=79c44ec0b7f23beffd7bd6e074e1376ed2ecde5b\" title=\"GLM-5.3 weights will be released tomorrow\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>The promise has been fulfilled.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/serige\"> /u/serige </a> <br /> <span><a href=\"https://huggingface.co/zai-org/GLM-5.3\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzjlxd/glm53_weights_will_be_released_tomorrow/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "d901482e902ae39a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[audio.cpp] Release 0.7: 62 audio model families (85+ variants), Arena UI for model comparison, MiniMax Music 3, FireRed TTS3/Audio, ControlFoley, Personaplex, and more",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w013g8/audiocpp_release_07_62_audio_model_families_85/",
+    "published": "2026-08-27T17:50:56+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w013g8/audiocpp_release_07_62_audio_model_families_85/\"> <img alt=\"[audio.cpp] Release 0.7: 62 audio model families (85+ variants), Arena UI for model comparison, MiniMax Music 3, FireRed TTS3/Audio, ControlFoley, Personaplex, and more\" src=\"https://external-preview.redd.it/dTJ6Mno2dnRleWxoMaP6A0Gxjg6XiHV3gJRNePSRzcc3Lmyks2_wvGfKXoWy.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=930e271f44d599b47c1e377740ebacc1df5d913e\" title=\"[audio.cpp] Release 0.7: 62 audio model families (85+ variants), Arena UI for model comparison, MiniMax Music 3, FireRed TTS3/Audio, ControlFoley, Personaplex, and more\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>audio.cpp 0.7 is out :)</p> <p>This release adds a lot of new audio models and a new way to compare them locally.</p> <p>Audio.cpp is now at <strong>62</strong> model families and <strong>85+</strong> model variants. And it keeps growing!</p> <p>The biggest user-facing change is the new <strong>Arena UI</strong>. Instead of testing one model at a time, you can now give one shared input and queue multiple local models or GGUF variants, then compare the generated outputs side by side. This is useful for picking between models without writing a pile of scripts.</p> <p><strong>Disclaimer: the RTF numbers are from cold one-shot requests using the current audio.cpp implementations (+server overhead), so don’t use them as a model leaderboard. If one model is slower, it might just mean my implementation still needs optimization. The goal is to help you try a bunch of models locally, compare the outputs, and pick the one you like best.</strong></p> <p>Expanded In 0.7</p> <ul> <li>TTS / Voice: FireRedTTS3, MagpieTTS, PersonaPlex, F5-TTS / Habibi, MOSS VoiceGenerator, DotTTS Edit</li> <li>ASR / Speech Understanding: FireRedAudio, IBM Granite Speech 5.0 TurboCTC, MMS Forced Aligner</li> <li>Voice Conversion: MeanVC2</li> <li>Music / Audio Generation: MiniMax Music…",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "68f29397dd22f131",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Over 200k context on 16GB VRAM with Qwen 3.8 27B UD-IQ3_XXS",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w04a5j/over_200k_context_on_16gb_vram_with_qwen_38_27b/",
+    "published": "2026-08-27T19:45:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w04a5j/over_200k_context_on_16gb_vram_with_qwen_38_27b/\"> <img alt=\"Over 200k context on 16GB VRAM with Qwen 3.8 27B UD-IQ3_XXS\" src=\"https://preview.redd.it/wz6cugje1zlh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=da8d4d8a4293c13e9e170c7b896a56535a2295c7\" title=\"Over 200k context on 16GB VRAM with Qwen 3.8 27B UD-IQ3_XXS\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I was using UD-Q3_K_XL until now with more than 140000 context. Quality wise it's very good, very few erroneous tool calls. Then I saw many others here reporting good results with IQ3_XXS, so I gave it a try.</p> <p>The downside is prompt processing speed went down from 700-800 tk/s to 400 tk/s. Quality difference is yet to be tested.</p> <p>KV cache were both quantized to q5_1</p> <p>(llama.CPP compiled with DGGML_CUDA_FA_ALL_QUANTS=ON)</p> <p>Served without MTP and mmproj.</p> <p>My setup is a measly laptop with TB4 and Aorus 5060ti AI Box eGPU.</p> <p>Windows 11, cuz Nvidia.</p> <p>Apologies for any mistake in the post. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/abskvrm\"> /u/abskvrm </a> <br /> <span><a href=\"https://i.redd.it/wz6cugje1zlh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w04a5j/over_200k_context_on_16gb_vram_with_qwen_38_27b/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "1119c5931cd278fa",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "What are the minimum specs required to run Qwen3.8-Flash-Next?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzpt61/what_are_the_minimum_specs_required_to_run/",
+    "published": "2026-08-27T10:09:09+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>How much system RAM? How much VRAM? How much SSD space?</p> <p>Ideally list for q3/4 but q2 might also work since I have seen 3.8 27B perform well even on q2.</p> <p>Currently I have 5070 Ti with 16GB VRAM and 48GB system RAM. I can upgrade system RAM to 96GB is that will allow it to run.</p> <p>What sort of tg/pp can I expect?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Fancy-Snow7\"> /u/Fancy-Snow7 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzpt61/what_are_the_minimum_specs_required_to_run/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzpt61/what_are_the_minimum_specs_required_to_run/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "01d92e8e24cdf8fd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Microduck by Pollen Robotics & Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzw8td/microduck_by_pollen_robotics_hugging_face/",
+    "published": "2026-08-27T14:54:42+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzw8td/microduck_by_pollen_robotics_hugging_face/\"> <img alt=\"Microduck by Pollen Robotics &amp; Hugging Face\" src=\"https://external-preview.redd.it/ZzF3ZXl4cXdreGxoMa2K_eGPTvwbGCSKfxfi5dLA-S8USsLxjQBfwW8nMHBS.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=ceb088f4726dc038912ea438f7f7a27f243a5def\" title=\"Microduck by Pollen Robotics &amp; Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Pollen Robotics and Hugging Face are releasing an open-source bipedal robot that comes with reinforcement learning software. It looks like it has a speaker, camera + LiDAR, NFC, Wifi, Bluetooth, etc. And roller-skates, because that's just the cutest thing ever.</p> <p>They announced it here: <a href=\"https://pollen-robotics.com/microduck/\">https://pollen-robotics.com/microduck/</a></p> <p>Honestly, this thing is so adorable, I love how it waddles.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/-Cubie-\"> /u/-Cubie- </a> <br /> <span><a href=\"https://v.redd.it/pojprjqwkxlh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzw8td/microduck_by_pollen_robotics_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "c45437157a2075b3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Bill Gates is looking to meet with Chinese President Xi Jinping later this year, eager to propose global efforts to mitigate the growing risks posed by artificial intelligence. He believes China might agree to restricting potentially dangerous AI model releases if US took initiative on that first",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w03gp8/bill_gates_is_looking_to_meet_with_chinese/",
+    "published": "2026-08-27T19:15:28+00:00",
+    "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/f0urxio\"> /u/f0urxio </a> <br /> <span><a href=\"https://x.com/ReutersBiz/status/2092518660153696750\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w03gp8/bill_gates_is_looking_to_meet_with_chinese/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "8953a0078614db04",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "N-gram vs Experts explained",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzgtqf/ngram_vs_experts_explained/",
+    "published": "2026-08-27T02:00:40+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Since Qwen's dropped the Qwen4Exp architecture bomb that focus on offloading parameters to n-gram instead of pure mixture of experts, I dug into this and learned quite a lot. Here's the summary. Expect mistakes from human's writing lol.</p> <p>TLDR: MoEs do reasoning, N-grams do recalling. At the current tech frontier, N-gram can offload upto ~25% weight before losing advantage and we get most benefit from using SSD to store those instead of RAM. So 176B models became 125 (RAM) +51B (SSD) instead.</p> <p>Long version's below.</p> <p>Experts (moe) are arithmetic work. A router inspects model's hidden state, chooses a few feed-forward blocks, and those blocks multiply. The choice arrives late, after the layer has already begun, and the payload is large so sending experts to a disk is usually slow. The machine discovers what it needs too late and then hauls gigabytes across a slow bus only to compute them at once. </p> <p>An n-gram table is memory of another kind. It stores vectors for short local phrases, addressed by a hash of the last few tokens. Those addresses exist as soon as the tokens exist. The network does not multiply the whole table. It gathers a handful of rows, often only a few kB, and folds them into the stream. Qwen 3.8 Flash Next (Qwen4Exp) keeps about 125B parameters in the moe network, another 51B in n-gram table, and activates only about ~6B for each token. The extra 51B are capacity, not extra arithmetic work. So it runs fast like a 125B-A6B model with a caveat but taking advantage of the 176B trained parameters.</p> <p>Experts do reasoning work, n-gram do recalling work. But you cannot be lazy and only recalling without reasoning to get the job done. Or the quality will drop, reasoning llm became memory fetching machine instead. There is a limit to how far you can offload experts into the table. Under a fixed budget, giving the table roughly 20-25% of the total parameters tends to help. Early layers stop wasting d…",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
   }
 ]

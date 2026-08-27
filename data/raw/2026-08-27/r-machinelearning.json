@@ -18,5 +18,25 @@
     "published": "2026-08-26T21:10:25+00:00",
     "summary": "<!-- SC_OFF --><div class=\"md\"><p>I created a simple text to image benchmark.</p> <p>I curated <strong>192 prompts that are difficult for T2I models</strong> in various ways: text rendering, spatial reasoning, human realism, negations, etc...</p> <p>I then asked a VLM to judge every output against a pre-specified binary question with the ground truth baked in.</p> <p>I'm publishing all the results including the images. (Most public T2I leaderboards don't publish the actual images and that's a shame IMO)</p> <p><strong>There is currently 52 model tested! more than 9k images have been generated and analysed!</strong></p> <p>Full methodology: <a href=\"https://imagebench.ai/methodology-v1\">https://imagebench.ai/methodology-v1</a></p> <p>Hugging face dataset: <a href=\"https://huggingface.co/datasets/dh7/imagebench\">https://huggingface.co/datasets/dh7/imagebench</a> (it contains the prompts to reproduce the results AND the results)</p> <p>Github: <a href=\"https://github.com/dh7/image-bench-ai\">https://github.com/dh7/image-bench-ai</a></p> <p>Gallery to inspect the results: <a href=\"https://imagebench.ai/gallery\">https://imagebench.ai/gallery</a></p> <p>Leaderboard: <a href=\"https://imagebench.ai/imagebench-v1\">https://imagebench.ai/imagebench-v1</a></p> <p><strong>Limitations: it's text to image only, and VLM are not perfect as a judge.</strong> </p> <p>Let me know what could be useful from there!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dh7net\"> /u/dh7net </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vz9x9c/a_dataset_with_52_text_to_image_model_evaluation_p/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vz9x9c/a_dataset_with_52_text_to_image_model_evaluation_p/\">[comments]</a></span>",
     "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "c552f266fa00acd4",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "NeurIPS 2026 Acceptance Calculator [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vzzw38/neurips_2026_acceptance_calculator_p/",
+    "published": "2026-08-27T17:07:59+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I put together a small model to estimate NeurIPS acceptance based on scores and an assumed acceptance rate. Try it out here: <a href=\"https://levilingsch.github.io/neurips-acceptance-estimator/\">https://levilingsch.github.io/neurips-acceptance-estimator/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/levydawg\"> /u/levydawg </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vzzw38/neurips_2026_acceptance_calculator_p/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vzzw38/neurips_2026_acceptance_calculator_p/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
+  },
+  {
+    "id": "6a2f01420b7e4026",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "ECCV 2026- MALMO LUND TRAVEL PASS NOT AVAILABLE? [N]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1vzu8uy/eccv_2026_malmo_lund_travel_pass_not_available_n/",
+    "published": "2026-08-27T13:38:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey guys, sorry if this is not the appropriate forum for this question. </p> <p>Is anyone going To ECCV and staying in Lund? Apparently a few days back i saw discounted travel pass available for both Malmo and Lund zone but now today I was going to buy it and the registration site says only Malmo pass. Did ECCV remove them? Because deadline to buy them is 28th august. I dont know why they removed it but the organisation this year feels like a mess. </p> <p>Can anyone access it on their registration site if Malmo Lund passes are available?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Marion-De\"> /u/Marion-De </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vzu8uy/eccv_2026_malmo_lund_travel_pass_not_available_n/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1vzu8uy/eccv_2026_malmo_lund_travel_pass_not_available_n/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T20:11:57.228145+00:00"
   }
 ]
