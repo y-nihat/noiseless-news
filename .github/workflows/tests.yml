@@ -1,8 +1,17 @@
 name: Tests
 
-# The pipeline's only automated safety net. Runs on every push and pull request
-# so a broken build or a regressed duplicate gate is caught before it reaches
-# main — and therefore before the deploy workflow ships it to the live site.
+# The pipeline's only automated safety net. Runs on every pull request, and on
+# main by explicit dispatch from the night loop and the daytime ingest cron
+# (`gh workflow run "Tests"`), so a broken build or a regressed duplicate gate
+# is caught before the deploy workflow ships it to the live site.
+#
+# `on: push` is kept for a human's own pushes and is NOT what covers the
+# agent's commits: a push authenticated with the run's own GITHUB_TOKEN raises
+# no workflow event, by design at GitHub's end, so 190 bot commits between
+# 2026-08-19 and 2026-08-27 produced zero push-triggered runs. The dispatches
+# are the coverage. Do not "fix" that by giving the bots a PAT — deploy.yml is
+# also `on: push` inside `concurrency: group: pages`, and a per-commit event
+# there reintroduces the concurrent-deployment failure PR #24 fixed.
 #
 # This deliberately includes the nightly agent's own commits. It used to skip
 # data/ and content/ to save CI minutes, which meant the repo-data tests — the
@@ -15,6 +24,13 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+
+# `issues: write` is what makes the failure handler below able to file
+# anything: the repository default is read-only, under which `gh issue create`
+# 403s and flag_issue.sh exits having reported nothing.
+permissions:
+  contents: read
+  issues: write
 
 concurrency:
   group: tests-${{ github.ref }}
@@ -46,16 +62,61 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-      - run: pip install -r pipeline/requirements.txt
+      - id: deps
+        run: pip install -r pipeline/requirements.txt
       - name: Unit tests
-        run: pytest -q
+        run: pytest -q 2>&1 | tee /tmp/pytest.txt; exit "${PIPESTATUS[0]}"
+
+      # A failing suite used to skip the three checks below, so the run reported
+      # one defect and hid whatever else was true. They are independent of
+      # pytest and of each other; the only thing they need is the dependencies,
+      # hence the gate on `steps.deps` rather than `always()`. `!cancelled()`
+      # and not `always()` because `cancel-in-progress: true` above makes
+      # supersession routine, and a superseded run has nothing to report.
       - name: Source registry parses
+        if: ${{ !cancelled() && steps.deps.outcome == 'success' }}
         run: PYTHONPATH=pipeline python -m noiseless.run validate-sources
       # Same predicate and ceiling as deploy.yml: green with warning annotations
       # while up to three stories are held from the site, red only when the
       # archive is undeployable. Red on main means a human must act today; a
       # held story is repaired by the next night's cycle 1.
       - name: Published content holds its invariants
+        if: ${{ !cancelled() && steps.deps.outcome == 'success' }}
         run: PYTHONPATH=pipeline python -m noiseless.run validate-content --strict --max-held 3 --github
       - name: Site builds from the real archive
+        if: ${{ !cancelled() && steps.deps.outcome == 'success' }}
         run: PYTHONPATH=pipeline python -m noiseless.run publish --out /tmp/site-check
+
+      # Until now this workflow was the only one of the five that said nothing
+      # when it failed. It went red on main on 2026-08-20 and stayed red for
+      # 23 consecutive runs over 8 days with nobody told: every run is
+      # dispatched by github-actions[bot], and GitHub's Actions-failure
+      # notifications are actor-scoped, so a bot-dispatched failure e-mails
+      # nobody however the repository is watched. The durable thread is the
+      # only channel that can reach a human here.
+      - name: Say so if the suite failed
+        if: ${{ failure() && github.ref == 'refs/heads/main' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "### $(date -u +%FT%H:%MZ) — the test suite is red on main"
+            echo
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo "Commit: ${{ github.sha }}"
+            echo
+            echo 'What this blocks: nothing. `deploy.yml` does not gate on this'
+            echo 'workflow and runs its own `validate-content --strict --max-held 3`,'
+            echo 'so the site keeps publishing. That is deliberate — and it is also'
+            echo 'why a red suite here can sit unnoticed. It needs a human.'
+            echo
+            echo 'Failures:'
+            echo '```'
+            grep -E '^(FAILED|ERROR) ' /tmp/pytest.txt 2>/dev/null | head -n 20 \
+              || echo "(pytest wrote nothing; a step other than the suite failed)"
+            echo '```'
+          } > /tmp/suite.md
+          bash .github/scripts/flag_issue.sh \
+            "Test suite red on main" \
+            "Test suite red on main $(date -u +%F)" \
+            /tmp/suite.md

@@ -260,3 +260,92 @@ class TestTheSourceStatusCommandIsWiredUp:
         code = run_main(["source-status", "--data-dir", str(tmp_path / "absent")])
         assert code == 0
         assert "no ingest runs recorded" in capsys.readouterr().out
+
+
+class TestEveryWorkflowSaysSomethingWhenItFails:
+    """A red run that notifies nobody is the same as no check at all.
+
+    `Tests` was the only one of the five with no failure handler. It went red on
+    main on 2026-08-20 and stayed red for 23 consecutive runs over 8 days,
+    because every run of it is dispatched by github-actions[bot] and GitHub's
+    Actions-failure notifications are actor-scoped: a bot-dispatched failure
+    reaches no human however the repository is watched.
+    """
+
+    def _handlers(self, name: str) -> list[dict]:
+        return [
+            s
+            for job in workflow(name)["jobs"].values()
+            for s in job["steps"]
+            if "failure()" in str(s.get("if", ""))
+        ]
+
+    @pytest.mark.parametrize(
+        "name", ["tests.yml", "deploy.yml", "nightly.yml", "source-health.yml", "ingest.yml"]
+    )
+    def test_it_has_a_failure_handler(self, name):
+        assert self._handlers(name), f"{name} goes red without telling anyone"
+
+    @pytest.mark.parametrize(
+        "name", ["tests.yml", "deploy.yml", "nightly.yml", "source-health.yml", "ingest.yml"]
+    )
+    def test_a_workflow_that_files_an_issue_may_write_issues(self, name):
+        """The permission the handler needs, asserted where it is granted.
+
+        The repository default is read-only. Without `issues: write` the whole
+        handler still runs, `gh issue create` 403s, and flag_issue.sh takes its
+        "could not file anything" path — a silent alarm that looks configured.
+        """
+        source = (WORKFLOW_DIR / name).read_text("utf-8")
+        if "flag_issue.sh" not in source:
+            pytest.skip(f"{name} does not file issues")
+        granted = workflow(name).get("permissions") or {}
+        assert granted.get("issues") == "write", (
+            f"{name} calls flag_issue.sh but does not grant issues: write"
+        )
+
+
+class TestAFailingSuiteStillReportsTheRest:
+    """One defect used to hide every other thing that was true.
+
+    All 23 red runs skipped "Source registry parses", "Published content holds
+    its invariants" and "Site builds from the real archive" — the steps that are
+    a pull request's only content and build coverage, since deploy.yml does not
+    run there.
+    """
+
+    LATER = [
+        "Source registry parses",
+        "Published content holds its invariants",
+        "Site builds from the real archive",
+    ]
+
+    @pytest.mark.parametrize("step_name", LATER)
+    def test_it_runs_even_when_the_suite_failed(self, step_name):
+        condition = str(step("tests.yml", "pytest", step_name).get("if", ""))
+        assert "cancelled()" in condition, (
+            f"{step_name!r} is skipped by a failing suite; it does not depend on one"
+        )
+
+    @pytest.mark.parametrize("step_name", LATER)
+    def test_it_does_not_run_without_its_dependencies(self, step_name):
+        """`always()` would fire these three after a failed pip install too,
+        producing three guaranteed import errors on top of the real one."""
+        condition = str(step("tests.yml", "pytest", step_name).get("if", ""))
+        assert "steps.deps" in condition, (
+            f"{step_name!r} runs regardless of whether the install succeeded"
+        )
+
+    def test_the_step_it_depends_on_is_the_one_that_installs(self):
+        steps = workflow("tests.yml")["jobs"]["pytest"]["steps"]
+        deps = next((s for s in steps if s.get("id") == "deps"), None)
+        assert deps is not None, "no step is id'd deps; the conditions above name nothing"
+        assert "pip install" in deps["run"]
+
+    def test_the_suite_keeps_its_own_output_for_the_handler(self):
+        """The issue body quotes the FAILED lines, so they have to survive the
+        step. `tee` in a pipeline also hides pytest's exit code without an
+        explicit PIPESTATUS."""
+        run = step("tests.yml", "pytest", "Unit tests")["run"]
+        assert "tee" in run and "/tmp/pytest.txt" in run
+        assert "PIPESTATUS" in run, "a piped pytest reports tee's exit code, not its own"
