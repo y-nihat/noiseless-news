@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1eb315a8576dfcbd",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AMA Announcement: Apodex (Thursday, 8AM-11AM PST)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzdfw9/ama_announcement_apodex_thursday_8am11am_pst/",
+    "published": "2026-08-26T23:31:35+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzdfw9/ama_announcement_apodex_thursday_8am11am_pst/\"> <img alt=\"AMA Announcement: Apodex (Thursday, 8AM-11AM PST)\" src=\"https://preview.redd.it/25k4hs1t0tlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=750f540330ad24cde9b4d75a6a0970725529a604\" title=\"AMA Announcement: Apodex (Thursday, 8AM-11AM PST)\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/XMasterrrr\"> /u/XMasterrrr </a> <br /> <span><a href=\"https://i.redd.it/25k4hs1t0tlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzdfw9/ama_announcement_apodex_thursday_8am11am_pst/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "3a2ea302945dd682",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Can we reconsider the megathreads?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz40zv/can_we_reconsider_the_megathreads/",
+    "published": "2026-08-26T17:40:57+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>In the past during model releases there used to be tons of interesting discussions happening on this subreddit. However, the new rules of forcing everything into a single megathread almost completely killed off the discussions as far as I can tell. I get that some people didn't like seeing 10 posts with just the HF link but imo the change wasn't worth it.</p> <p>Megathreads are bad for several reasons. Firstly, they make any topic be buried under all the comments with very few ways to find a specific discussion again in case you want to come back to it later. Secondly, comments are just not well suited for posting charts, tables and longer texts that are useful when discussing benchmarks or experiences with the new models. And lastly, megathreads themselves aren't that visible in the first place, I think most people dont even notice them most of the time (though admittedly this is a reddit problem not specific to this subreddit).</p> <p>Just look at the two megathreads up right now, there is barely any activity going on in them and only a fraction of the comments in there have actual back and forth discussions happening.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TKristof\"> /u/TKristof </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz40zv/can_we_reconsider_the_megathreads/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz40zv/can_we_reconsider_the_megathreads/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "d32ec67f50eeefbc",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Are models with N-Gram tables going to completely change the AI race?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz3cvg/are_models_with_ngram_tables_going_to_completely/",
+    "published": "2026-08-26T17:17:04+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The news about Qwen 3.8 Flash Next is the first I'm reading about n-gram tables. I may be completely misunderstanding how they work but it seems they could open the door for 1T+ parameter models to be run on a single server with modest GPUs and a ton of system RAM rather than needing a rack of GPU servers connected with something like NVlink.</p> <p>Could we be looking at shrinking the capability gap between self hosted and flagship models faster than we thought, or am I way off base?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AcreMakeover\"> /u/AcreMakeover </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz3cvg/are_models_with_ngram_tables_going_to_completely/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz3cvg/are_models_with_ngram_tables_going_to_completely/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "70bc180db9eaf523",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz3ieu/benchmarking_qwen38_27b_quantizations_4bit_holds/",
+    "published": "2026-08-26T17:22:37+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz3ieu/benchmarking_qwen38_27b_quantizations_4bit_holds/\"> <img alt=\"Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses\" src=\"https://external-preview.redd.it/J_5dC-3JfbuCKxiX2Ru0NOvx_IFyXwxHK40Eymt8bAU.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=3efede6d3520d61f989df0154604d24c52880c27\" title=\"Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I measured various Qwen3.8 27B quantizations by Unsloth on popular benchmarks: FPQA Diamond, IFBench, and Terminal-Bench-2.1. </p> <p>Q4_K_M is all you need.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmigdal\"> /u/pmigdal </a> <br /> <span><a href=\"https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz3ieu/benchmarking_qwen38_27b_quantizations_4bit_holds/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "09389111a78155e3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Lemonade end-of-summer project update, now serving 15 engines!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz7095/lemonade_endofsummer_project_update_now_serving/",
+    "published": "2026-08-26T19:25:21+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz7095/lemonade_endofsummer_project_update_now_serving/\"> <img alt=\"Lemonade end-of-summer project update, now serving 15 engines!\" src=\"https://preview.redd.it/6kor7crcprlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f1c0d1f3d763ee3efc76ec6d8876c8302beaf324\" title=\"Lemonade end-of-summer project update, now serving 15 engines!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hi everyone, it's been a while since I posted so here's an update on what the Lemonade community has been up to this summer. Our overall mission is to enable local AI builders with everything they need to make great apps and agents, while keeping the stack turnkey, portable, and modular.</p> <p>What you get is a single install on any OS that runs as a service and manages a wide array of models and engines behind a single base URL, and ties them all together with an advanced router. The same capabilities are available in an embedded SDK that can be bundled into apps. </p> <p>Here are some highlights from this summer:</p> <ol> <li><strong>Cross-platform support</strong> has come a long way this summer, with CUDA, ARM64, Metal, and Vulkan backends for all core engines.</li> <li>Lots of <strong>experimental engines</strong> added to enable new modalities (music, 3D assets, etc.) and new optimizations (DwarfStar4, TheNoise).</li> <li>The router now supports <strong>semantic and policy routing</strong>, allowing automatic on-the-fly LLM selection based on the prompt.</li> </ol> <p>In terms of roadmap, we are hard at work on a complete replacement for the GUI (entering beta testing soon), as well as benchmarking tools and a plugin interface to help us all make sense of the rapid pace of new engine and backend releases we're seeing.</p> <p>Lemonade is a community-driven project and anyone can help define the roadmap and feature set. Most of the work here is not mine, huge shoutout to <a href=\"/u/mikkoph\">u/mikkoph</a> <a…",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "8b9b6db0b19091b3",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "MIND BLOWING - QWEN3.8-FLASH-NEXT - RTX 3090 + 128 DDR5 +/-20 tok/s",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vzf7q4/mind_blowing_qwen38flashnext_rtx_3090_128_ddr5_20/",
+    "published": "2026-08-27T00:48:19+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzf7q4/mind_blowing_qwen38flashnext_rtx_3090_128_ddr5_20/\"> <img alt=\"MIND BLOWING - QWEN3.8-FLASH-NEXT - RTX 3090 + 128 DDR5 +/-20 tok/s\" src=\"https://external-preview.redd.it/N3h6NmttbWtldGxoMSFvNVk_-gMA94g-bxjp3ZY2Xpgc8dtcJJtCaxX7GbaI.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=4fc0a3aca436833b0c90bd345f89ca331914f421\" title=\"MIND BLOWING - QWEN3.8-FLASH-NEXT - RTX 3090 + 128 DDR5 +/-20 tok/s\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Qwen 3.8 Flash Next vient de compiler cette démo, et je dois dire que c'est vraiment impressionnant.</p> <p>Pour un modèle local, la combinaison de capacités de codage, de raisonnement et de vitesse d'exécution est assez incroyable. La scène LLM locale ne cesse de progresser.</p> <p>Bravo à l'équipe Unsloth et Qwen ! 🔥</p> <p>Quelques détails techniques pour ceux qui souhaitent reproduire le test :</p> <p><strong>Modèle</strong></p> <ul> <li>Qwen3.8-Flash-Next</li> <li>Unsloth GGUF</li> <li>Quant : <strong>UD-Q4_K_XL</strong></li> <li>Backend : <strong>llama.cpp</strong></li> <li>Contexte : <strong>131 072 jetons</strong></li> <li>Cache KV : <strong>FP16</strong></li> <li>Couches GPU : <strong>49</strong></li> <li>Mode de fractionnement : <strong>couche</strong></li> <li>Lot : <strong>2048</strong></li> <li>UBatch : <strong>1024</strong></li> <li>Raisonnement : <strong>Activé / Faible</strong></li> <li>MoE CPU : <strong>41</strong></li> <li>Périphérique GPU : <strong>CUDA0</strong></li> <li>mmap activé</li> <li>KV unifié désactivé</li> </ul> <p><strong>Hardware</strong> </p> <ul> <li>RTX 3090</li> <li>Ryzen 9900x</li> <li>DDR5 128gb o/c at 5600mhz</li> </ul> <p><strong>Compilation de llama.cpp</strong></p> <p>J'ai compilé J'ai directement intégré llama.cpp à partir de la <strong>PR #27742 de Daniel Hanchen / Unsloth :</strong> <code>model: add Qwen3.8-Flash-Next (qwen4exp)</code>, au lieu d'utiliser une version de production standard.</p> <p>Voici…",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "7b27b952aced2d3a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Self-hosting LLMs on budget hardware: general principles, hardware, benchmarks and frontends",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz41ef/selfhosting_llms_on_budget_hardware_general/",
+    "published": "2026-08-26T17:41:21+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello,</p> <p>I've been self-hosting LLMs on various budget hardware for a while (6x RTX 3060 12 GB, Intel Arc Pro B60 24 GB, RX 9070 XT, etc). Over the last few months, I wrote about it in 4 articles:</p> <ol> <li><a href=\"https://jerome.flesch.info/blog/posts/20260515-selfhosting-llm/\">General principles</a></li> <li><a href=\"https://jerome.flesch.info/blog/posts/20260702-selfhosting-llm-hardware-and-inference-optimization/\">Hardware and inference optimization</a></li> <li><a href=\"https://jerome.flesch.info/blog/posts/20260803-selfhosting-llm-offloading-moe-and-benchmarks/\">CPU+RAM offloading, MoE, inference speed, prefill speed and benchmarks</a></li> <li><a href=\"https://jerome.flesch.info/blog/posts/20260817-selfhosting-llm-frontends/\">Frontends and example of complete configuration</a></li> </ol> <p>I hope it may be useful to some people :-)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jflesch\"> /u/jflesch </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz41ef/selfhosting_llms_on_budget_hardware_general/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz41ef/selfhosting_llms_on_budget_hardware_general/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "e3ae83e70cc206f5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8 27B C8 at 972 TG / 5,680 PP on 4x MI100 rig ($6.5k) using my new INT8 vLLM fork",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz9hqa/qwen38_27b_c8_at_972_tg_5680_pp_on_4x_mi100_rig/",
+    "published": "2026-08-26T20:54:18+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Yet another vLLM fork thread here, but this time its for older INT8-centric hardware. <strong>This is a complete INT8 serving stack for Qwen3.8 27B based on vLLM, AITER, and a 27B GPTQ INT8 quant w/ DFlash2</strong>. Its not just another vibed autoresearch loop. No, vLLM ships with very little int8 support, and this stack adds INT8 into every crevice of Qwen3.8 including in dependent libraries and new fused kernels. So no longer are your old INT8-centric cards relegated to second rate algos and suboptimal dtypes. My system runs at 15 tok/s TG on stock vLLM and is now running at 972 tok/s TG on this branch.</p> <p><strong>This stack adds thorough and complete tensor parallel INT8 support across the entire Qwen3 vLLM arch stack</strong>, plus significant and thorough tuning for a 4x MI100 system. My system is benchmarking 972 TG / 5,680 PP on this model at near-reference quality.</p> <p>Itemized work includes:</p> <ul> <li>Complete W8A8 INT8 GEMM library tuned for MI100 and usage everywhere</li> <li>INT8 DFlash2 (INT8 MTP also, but MTP is slower for most usecases -- note that the quant I provide has an MTP sidecar included so you can choose either MTP or DFlash2 for your usecase)</li> <li>INT8 KV cache</li> <li>INT8 AITER Unified Attention (and fallback Triton impl) -- faster than Flash Attention</li> <li>INT8 GDN attention</li> <li>INT8 custom allreduce / allgather optimized for XGMI interlinks</li> <li>INT8 Embedding</li> <li>Many new fused INT8 kernels</li> <li>More INT8s than you can count</li> </ul> <p><strong>The stack's performance has been vetted for near-reference quality/accuracy by measuring accuracy not just for every token, but for every GEMM, every attention block, every KV lookup, and every layer.</strong> I've left all of the diagnostic scripts for this accuracy vetting process in the vLLM branch so you can verify it yourself. This fork has an extreme level of testing that isn't present even in stock vLLM.</p> <p><stro…",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "67a7ea330f6614e0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 27b ud IQ3XXS potential- 3D Zen Room demo - pi harness - build deploy and share link on discord",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz9say/qwen_27b_ud_iq3xxs_potential_3d_zen_room_demo_pi/",
+    "published": "2026-08-26T21:05:10+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz9say/qwen_27b_ud_iq3xxs_potential_3d_zen_room_demo_pi/\"> <img alt=\"Qwen 27b ud IQ3XXS potential- 3D Zen Room demo - pi harness - build deploy and share link on discord\" src=\"https://external-preview.redd.it/bXpmYmRwY3Jhc2xoMU4_-B_F8XBAnYRNoYS7zXoNGTJ6DwJY1ZwrICz0L0J9.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=7ad07f9681383951e3cf0b1636ececcbe8175456\" title=\"Qwen 27b ud IQ3XXS potential- 3D Zen Room demo - pi harness - build deploy and share link on discord\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/dreamai87\"> /u/dreamai87 </a> <br /> <span><a href=\"https://v.redd.it/umksh6iraslh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz9say/qwen_27b_ud_iq3xxs_potential_3d_zen_room_demo_pi/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "40d6a0714bb97c4f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Compared Qwen 3.8 27B community quants on RTX 6000 vs Claude Opus 4.6",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz779w/compared_qwen_38_27b_community_quants_on_rtx_6000/",
+    "published": "2026-08-26T19:32:06+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz779w/compared_qwen_38_27b_community_quants_on_rtx_6000/\"> <img alt=\"Compared Qwen 3.8 27B community quants on RTX 6000 vs Claude Opus 4.6\" src=\"https://external-preview.redd.it/cm9neG1sZHR0cmxoMXJ836nj0dC0r4vXrypHTkGdycgPMF5CCI11r02zBljg.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b4dc3c72cdfbec4e06a97966ecae4c2f42e65079\" title=\"Compared Qwen 3.8 27B community quants on RTX 6000 vs Claude Opus 4.6\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>*part 2 of an earlier post: <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vwh3u7/we_quantized_qwen_38_27b_and_compared_the_quants/s\">previous quant comparison with voxel island creation</a></p> <p>this time I rented three rtx pro 6000 96gb, on each one I launched a qwen 3.8 27b quant and gave them 4 identical prompts:</p> <ul> <li>classical pool game</li> <li>air hockey 1v1 battle</li> <li>foosball official match demonstration</li> <li>bowling scoring simulation</li> </ul> <p>my setup: each model was asked to write a single html with a self-playing 3d game, no system prompt, reasoning set to xhigh, all quants with a dflash2 drafter and I chose the best attempt from each</p> <h1>results</h1> <table><thead> <tr> <th align=\"left\">quant</th> <th align=\"left\">size</th> <th align=\"left\">total tokens</th> <th align=\"left\">avg. t/s</th> </tr> </thead><tbody> <tr> <td align=\"left\">atomic ad-q6_k</td> <td align=\"left\">23.29 gib</td> <td align=\"left\">393,089</td> <td align=\"left\">114.17</td> </tr> <tr> <td align=\"left\">unsloth ud-q6_k_l</td> <td align=\"left\">22.53 gib</td> <td align=\"left\">363,083</td> <td align=\"left\">70.33</td> </tr> <tr> <td align=\"left\">bartowski q6_k</td> <td align=\"left\">21.85 gib</td> <td align=\"left\">325,700</td> <td align=\"left\">79.71</td> </tr> <tr> <td align=\"left\">claude opus 4.6, subscription</td> <td align=\"left\">—</td> <td align=\"left\">200,565</td> <td align=\"left\">72.47</td> </tr> </tbody></table> <p>btw I put al…",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "632bd00bf3bae210",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "little tool for offline wikipedia RAG",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz3a1a/little_tool_for_offline_wikipedia_rag/",
+    "published": "2026-08-26T17:14:24+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz3a1a/little_tool_for_offline_wikipedia_rag/\"> <img alt=\"little tool for offline wikipedia RAG\" src=\"https://preview.redd.it/q4oc9mzx4rlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b3c62b035fbe16243d8490467855257fde0033bc\" title=\"little tool for offline wikipedia RAG\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I was bored and handwrote a tiny 100-line bash script to let an agent search for and read articles from an offline wikipedia archive during a regular chat. It's not particularly useful, but it's definitely neat and a big step up from llama-cli. I got surprisingly good results even with LFM2.5-2B (Q8 at 0.5 temp), which is usually too weak to be of much use. (and Qwen had no trouble, obviously— see main image)</p> <p>Just point it at your llama-server endpoint and chat away! Or whatever.</p> <p>The handwritten <a href=\"https://gbkorr.github.io/r-bites/ratsearch/ratsearch.html\">writeup</a> has more examples and a pretty comprehensive overview of how it works— I was surprised how simple the llama-server API is for general agentic stuff and toolcalling. Makes me want to make a proper harness...</p> <p>edit: forgot to link <a href=\"https://github.com/gbkorr/ratsearch\">github</a>, but you should read the writeup instead 🙃 </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/mantisalt\"> /u/mantisalt </a> <br /> <span><a href=\"https://i.redd.it/q4oc9mzx4rlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz3a1a/little_tool_for_offline_wikipedia_rag/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "304527ba952c1b3a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Running local LLM's as agents in Claude Code",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vze6jl/running_local_llms_as_agents_in_claude_code/",
+    "published": "2026-08-27T00:03:15+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I hit my token limit three times a day on my max subscription - got sick of that and designed this MCP setup to shift some of the coding load to my local Qwen3.8-27B model. I've been iterating on it now for a bit, and thought I'd share it now. This allows you to use Anthropics' models (Opus, etc) for the main model and shift the well-specified work down to local models all within the same session and context. Similar to how you can use sub-agents now in a project.</p> <p><a href=\"https://github.com/ccebelenski/localagents\">https://github.com/ccebelenski/localagents</a> </p> <p>No guarantees or support here - you'll need quite a bit of context size and caching memory to make this work well, and I've hardly tested the vllm path at all (llama.cpp seems solid). --metrics and --slots are just about required as parameters (might work without?). Have Claude help you set up the MCP itself. Then it's just &quot;Use local agent for...&quot; as a prompt. </p> <p>My launch for qwen38-27B looks like this for reference:</p> <pre><code>llama-server -hf unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL --host 0.0.0.0 --port 8080 --jinja \\ --batch-size 8192 -fa on --main-gpu 1 --split-mode none \\ --spec-type draft-mtp,ngram-mod --spec-draft-n-max 2 \\ --temp 1.0 --top-p 0.95 --top-k 20 --min-p 0.0 --no-context-shift \\ --presence-penalty 0.0 --spec-ngram-mod-n-match 24 --spec-ngram-mod-n-min 24 --spec-ngram-mod-n-max 86 \\ --reasoning on --reasoning-preserve --cache-type-k q8_0 --cache-type-v q8_0 --fit on \\ --cache-ram 16384 --parallel 2 --metrics --slots \\ --chat-template-kwargs &quot;{\\&quot;reasoning_effort\\&quot;:\\&quot;medium\\&quot;}&quot; </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CodeSlave9000\"> /u/CodeSlave9000 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vze6jl/running_local_llms_as_agents_in_claude_code/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalL…",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "66b9ee9b2bc03834",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Anyone else doing eGPUs (OCuLink)?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz531z/anyone_else_doing_egpus_oculink/",
+    "published": "2026-08-26T18:18:01+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz531z/anyone_else_doing_egpus_oculink/\"> <img alt=\"Anyone else doing eGPUs (OCuLink)?\" src=\"https://preview.redd.it/smju9kwcfrlh1.jpg?width=140&amp;height=105&amp;auto=webp&amp;s=8921b50be41d98593329426d96deb0990f01a428\" title=\"Anyone else doing eGPUs (OCuLink)?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Upgraded to a 5070 Ti so I could run Qwen 3.8 27B, which works perfectly, but didn't want to let the old 4070 Ti go to waste. The cards would touch if I put them both in the PC and I knew the heat would be awful from my crypto mining days. I always was curious about eGPUs so I slapped together this hillbilly OCuLink enclosure and added a PCIe 4.0 16x OCuLink card to the PC.</p> <p>Anybody else doing this? Tips? Gotchas? Is this gonna end in tears?</p> <p>EDIT: OK this exceeded ALL expectations. Took almost no time at all to get back to 50 TPS at full context and q8_0 KV cache. I can't believe there is no loss especially at higher cache quant and max context. I was doing 112k and q4_0 on just the 5070 Ti. One oddity on latest server-cuda13, I had to reverse tensor-split. Instead of &quot;N0,N1&quot;, I had to set &quot;N1, N0&quot;. Noticed in nvtop it was going heavy on the 4070 Ti. I may try my own build next because: &quot;W NCCL not compiled in; falling back to internal AllReduce. Recompile with -DGGML_CUDA_NCCL=ON for best multi-GPU performance.&quot;</p> <p>Here's what I'm using at the moment:</p> <pre><code># Global configurations applied to all models unless overridden [*] load-mode = none ctx-size = 131072 fit = on # Leave 450MB for the display driver fitt = 450 # IMPORTANT: Only use this fitt setting on a headless server. # This will tell llama_server to take 100% VRAM. # It normally reserves 1GB for system by default. # You will probably crash. #fitt = 0 fit-ctx = 131072 fa = on reasoning-preserve = true temp = 0.6 top-p = 0.95 top-k = 20 min-p = 0.0 repeat-penalty = 1.0 ngl…",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  },
+  {
+    "id": "161f4d0e3ad52c8a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Any news about DeepSeek V4 Flash Vision weights?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vz8mih/any_news_about_deepseek_v4_flash_vision_weights/",
+    "published": "2026-08-26T20:22:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I'd be curious to try it locally since I use 0731 daily but still no news on the weights</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LegacyRemaster\"> /u/LegacyRemaster </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz8mih/any_news_about_deepseek_v4_flash_vision_weights/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vz8mih/any_news_about_deepseek_v4_flash_vision_weights/\">[comments]</a></span>",
+    "fetched_at": "2026-08-27T01:03:24.798189+00:00"
+  }
+]
