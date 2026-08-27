@@ -12,6 +12,13 @@
 # what makes "compare against last week's report before acting" — the sentence
 # the old body printed at a human — something you can actually do.
 #
+# The thread is also assigned to the repository owner, because on GitHub an
+# issue reaches a person only through assignment, an @-mention or prior
+# participation — a label subscribes nobody, and neither does owning the repo.
+# Issue #37 carried a red test suite in its body and all seven of its comments
+# for eight days and reached nobody. Assignment is best-effort on purpose: a
+# filed alarm that could not be assigned is still a filed alarm.
+#
 # Usage: flag_issue.sh <title-prefix> <title> <body-file>
 #   Comments on the lowest-numbered OPEN issue whose title starts with
 #   <title-prefix>; opens one titled <title> if there is none.
@@ -48,15 +55,36 @@ if matches:
     print(matches[0])
 ')
 
+# owner/repo -> owner. Unset outside Actions, where there is nobody to assign
+# — and `set -u` above turns a bare ${GITHUB_REPOSITORY%%/*} into an abort, so
+# the default has to come first.
+repo=${GITHUB_REPOSITORY-}
+owner=${repo%%/*}
+
+assign() {
+  [ -n "${owner:-}" ] || return 0
+  [ -n "${1:-}" ] || return 0
+  gh issue edit "$1" --add-assignee "$owner" >/dev/null 2>&1 \
+    || echo "flag_issue: filed, but could not assign #$1 to $owner" >&2
+}
+
 if [ -n "${existing:-}" ]; then
   if gh issue comment "$existing" --body-file "$body_file" >/dev/null 2>&1; then
+    # Assign on every comment, not only at creation: the thread that needed
+    # this most was opened before anyone thought to, and a comment on an
+    # unassigned issue notifies nobody either.
+    assign "$existing"
     echo "flag_issue: commented on #$existing"
     exit 0
   fi
   echo "flag_issue: could not comment on #$existing — opening a new issue instead" >&2
 fi
 
-if gh issue create --title "$title" --body-file "$body_file" >/dev/null 2>&1; then
+# Created bare and assigned after, rather than with --assignee: an assignee
+# GitHub rejects fails the whole create, and losing the alarm to fix its
+# addressing would be the wrong trade.
+if created=$(gh issue create --title "$title" --body-file "$body_file" 2>/dev/null); then
+  assign "${created##*/}"
   echo "flag_issue: opened a new issue — $title"
   exit 0
 fi
