@@ -39,7 +39,10 @@ Read first: CLAUDE.md, policy/verification.md (note §0 scope and §0a duplicate
 prevention), policy/style.md, policy/sources.yaml, policy/discovery.yaml,
 policy/article-template.md.
 
-Fresh ingest has just run — data/raw/ is current as of this cycle's start.
+Fresh ingest has just run. The raw capture for this night spans these
+directories — the window opens at 02:00 UTC, so the current UTC day holds only
+tonight's own ingest and the two daytime captures are under yesterday:
+  {{RAW_DIRS}}
 Google News feed items are Tier-3 aggregator leads: `via_outlet` names the
 origin outlet; always trace to the origin before any use. Never use domains
 from discovery.yaml `blocked_evidence_domains` as evidence.
@@ -54,10 +57,14 @@ Work order:
    zhipuai.cn is JS-rendered — for these, use ONE site-scoped web search each
    instead, then move on.
 3. DISCOVERY SWEEP: take `recurring_queries` from policy/discovery.yaml and run
-   the 3 queries starting at index ((({{CYCLE_NUMBER}} - 1) * 3) mod list
-   length) via WebSearch. New candidates found this way join triage. Log each
+   the 3 queries starting at index ((({{SWEEP_OFFSET}} + {{CYCLE_NUMBER}} - 1)
+   * 3) mod list length) via WebSearch. The offset is the day of the year, so
+   the pool rotates across nights instead of the same first indices every
+   night — with 12 queries and 3 cycles, a cycle-only index never reached the
+   last three at all. New candidates found this way join triage. Log each
    query's hit/miss in the report — this is how the query pool gets tuned.
-4. TRIAGE: consider items published within the last 72 hours that are NOT
+4. TRIAGE: grep/jq across ALL of {{RAW_DIRS}} — not just today's — for items
+   published within the last 72 hours that are NOT
    already covered by an article or ledger entry (grep/jq over the raw JSON,
    not full-file reads). Cluster into candidate stories, apply the clickbait
    residual-substance test (verification.md §4), check scope (§0), rank by

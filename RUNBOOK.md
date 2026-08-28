@@ -5,9 +5,12 @@ work out from first principles. Keep it short enough to stay true.
 
 ## The system in one paragraph
 
-A GitHub Actions cron starts `night_loop.sh` at 21:40 UTC. It holds until 22:00,
-then runs up to six cycles: ingest feeds → fresh `claude -p` session → verify and
-publish → commit → dispatch a site deploy. It ends by 01:20 UTC. Two daytime
+A GitHub Actions cron starts `night_loop.sh` at 01:40 UTC. It holds until 02:00
+(05:00 Istanbul), then runs up to three cycles: ingest feeds → fresh `claude -p`
+session → verify and publish → commit → dispatch a site deploy. It ends by 04:00
+UTC (07:00 Istanbul). A cron delivered after 02:20 costs a cycle; after 04:00 the
+night is lost and the job goes red with an issue — the window is two hours, so it
+tolerates less delay than the old three-and-a-third did. Two daytime
 ingest crons capture feeds without any model calls. Every push to `main` rebuilds
 and deploys the site. Nothing needs a human to run.
 
@@ -51,7 +54,7 @@ gh secret set CLAUDE_CODE_OAUTH_TOKEN --repo y-nihat/noiseless-news
 
 Then verify with `gh workflow run "Nightly scan" -f smoke=true` — two cycles, one
 story, about 55 minutes, and it works at any time of day. A non-smoke dispatch
-only does useful work inside the 22:00–01:20 UTC window: outside it the loop
+only does useful work inside the 02:00–04:00 UTC window: outside it the loop
 captures the feeds, writes its report, says so in the log and exits **green**
 within a few minutes. It used to exit red and this runbook called that correct;
 it was not. A red badge for doing exactly what was asked is how a red badge

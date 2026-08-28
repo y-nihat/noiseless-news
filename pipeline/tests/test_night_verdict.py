@@ -29,9 +29,11 @@ from night_harness import (
 REPO_ROOT = Path(__file__).resolve().parents[2]
 NIGHTLY = REPO_ROOT / ".github" / "workflows" / "nightly.yml"
 
-# 07:00 UTC: the window closed at 01:20 and the next does not open until 22:00,
-# so the loop computes negative runway and starts no cycle. This is the clock of
-# the 08:55 dispatch on 2026-08-07 (run 31163752065).
+# 07:00 UTC: the window closed at 04:00 and the next does not open until 02:00
+# tomorrow, so the loop computes negative runway and starts no cycle. Still out
+# of window after the 2026-08-28 move from 22:00-01:20; it was the clock of the
+# 08:55 dispatch on 2026-08-07 (run 31163752065) and it is three hours past the
+# close now rather than five and a half hours before the open.
 OUT_OF_WINDOW = "1786604400"
 
 
@@ -113,12 +115,25 @@ class TestALostScheduledNight:
 
 class TestTheReportIsHonestAboutTheWindow:
     def test_the_footer_says_how_many_cycles_the_window_allowed(self, scratch):
-        """"Cycles run: 5 … max: 6" read as though a sixth had been possible."""
+        """"Cycles run: 5 … max: 6" read as though a sixth had been possible.
+
+        The expected count is read from the script rather than written here, so
+        moving the window changes one constant instead of silently reddening a
+        test about a different subject — which is what it did on 2026-08-28.
+        """
+        import re
+
+        # Two branches set it, smoke first and production second; matching the
+        # first found MAX_CYCLES=2 and asserted the smoke count against a real
+        # night's footer.
+        counts = re.findall(r"MAX_CYCLES=(\d+); CYCLE_INTERVAL", SCRIPT.read_text("utf-8"))
+        assert len(counts) == 2, f"expected a smoke and a production branch, found {counts}"
+        expected = counts[-1]
         run_night(scratch, NIGHT_NOW=OUT_OF_WINDOW, EVENT_NAME="schedule")
         reports = list((scratch["work"] / "data" / "ledger").glob("run-report-*.md"))
         assert reports, "no run report was written"
         footer = reports[0].read_text(encoding="utf-8")
-        assert "Cycles run: 0 of 6" in footer
+        assert f"Cycles run: 0 of {expected}" in footer, footer
         assert "did not fit the rest" in footer
 
     def test_the_footer_records_what_the_agent_was_run_with(self, scratch):
@@ -129,8 +144,12 @@ class TestTheReportIsHonestAboutTheWindow:
         assert "effort max" in footer
         assert "claude-sonnet-5" in footer
 
-    def test_a_routine_five_of_six_night_does_not_raise_a_flag(self):
-        """It happens on 31 nights in 36, and the sixth slot has never published."""
+    def test_a_routine_short_night_does_not_raise_a_flag(self):
+        """A cycle lost to a slightly late cron is the ordinary shape of a night.
+
+        The warning fires below half the cycles — one of four, or the old three
+        of six — not on the routine shortfall, which the footer records anyway.
+        """
         script = SCRIPT.read_text(encoding="utf-8")
         clause = next(
             line for line in script.splitlines()
