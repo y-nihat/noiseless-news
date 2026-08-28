@@ -1,0 +1,22 @@
+[
+  {
+    "id": "e3b2e5ced1c907bb",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Enhancing reproducibility in hybrid Earth system models",
+    "url": "https://www.nature.com/articles/s42256-026-01299-5",
+    "published": "2026-08-28T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 28 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01299-5\">doi:10.1038/s42256-026-01299-5</a></p>AI integration in Earth system models enhances prediction and modelling capabilities but also amplifies challenges for reproducibility. This Perspective introduces a framework for assessing reproducibility and provides practical ways to strengthen reproducibility in hybrid Earth system models.",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "4dafdc6125c42818",
+    "source": "Nature Machine Intelligence",
+    "tier": 1,
+    "title": "Large language models as uncertainty-calibrated optimizers for experimental discovery",
+    "url": "https://www.nature.com/articles/s42256-026-01283-z",
+    "published": "2026-08-28T00:00:00+00:00",
+    "summary": "<p>Nature Machine Intelligence, Published online: 28 August 2026; <a href=\"https://www.nature.com/articles/s42256-026-01283-z\">doi:10.1038/s42256-026-01283-z</a></p>Although language models can be helpful in molecular design, they are not typically calibrated for uncertainty. Rankovic and colleagues present a method to train language models while taking into account the uncertainty of the data.",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  }
+]

@@ -18,5 +18,35 @@
     "published": "2026-08-27T18:36:08+00:00",
     "summary": "Amazon Bedrock now supports the OpenAI GPT-5.6 models, Terra and Luna, in India with India geographic cross-Region inference. If you have local data processing requirements, you can now use these models at scale while Amazon Bedrock keeps inference requests and data within India.",
     "fetched_at": "2026-08-28T00:47:43.165888+00:00"
+  },
+  {
+    "id": "a3c9722a85987756",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Batch write and discover records in Amazon SageMaker Feature Store",
+    "url": "https://aws.amazon.com/blogs/machine-learning/batch-write-and-discover-records-in-amazon-sagemaker-feature-store/",
+    "published": "2026-08-28T19:31:05+00:00",
+    "summary": "Amazon SageMaker Feature Store now supports two new APIs: BatchWriteRecord writes up to 25 records across multiple feature groups in a single call, and ListRecords enumerates record identifiers within a feature group. In this post, we walk through each API with code examples you can use to get started.",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "ea803b9ee6deab91",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "How Decathlon runs demand forecasting at scale with Chronos-2",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2/",
+    "published": "2026-08-28T16:22:30+00:00",
+    "summary": "Decathlon, one of the world's largest sporting goods retailers, forecasts weekly demand for tens of thousands of products across multiple continents. Learn how they deployed Chronos-2 on AWS to improve forecast accuracy by 11-15 points while cutting operational complexity and running weekly inference for about $0.03 on CPU-only instances.",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "1484132ab400f439",
+    "source": "AWS Machine Learning Blog",
+    "tier": 0,
+    "title": "Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components",
+    "url": "https://aws.amazon.com/blogs/machine-learning/spreading-the-load-how-salesforce-met-multi-az-ha-with-sagemaker-inference-components/",
+    "published": "2026-08-28T16:20:40+00:00",
+    "summary": "Learn how Salesforce used Amazon SageMaker AI Inference Component placement (the SchedulingConfig parameter) to distribute model copies across multiple Availability Zones, meeting their Multi-AZ high availability compliance requirements without sacrificing the cost efficiency of multi-model co-hosting.",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
   }
 ]

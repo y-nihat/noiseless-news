@@ -1,0 +1,32 @@
+[
+  {
+    "id": "c118559786195696",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "GLM-5.3-Flash vs Qwen3.8-Flash-Next: Two Chinese AI Labs Independently Converge on the Same Model Architecture",
+    "url": "https://www.marktechpost.com/2026/08/28/glm-5-3-flash-vs-qwen3-8-flash-next-two-chinese-ai-labs-independently-converge-on-the-same-model-architecture/",
+    "published": "2026-08-28T19:12:21+00:00",
+    "summary": "<p>Z.ai and Qwen independently shipped near-identical architectures: 3:1 linear hybrids, compressed indexers, gated residuals, and Muon training.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/28/glm-5-3-flash-vs-qwen3-8-flash-next-two-chinese-ai-labs-independently-converge-on-the-same-model-architecture/\">GLM-5.3-Flash vs Qwen3.8-Flash-Next: Two Chinese AI Labs Independently Converge on the Same Model Architecture</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "56c90591ffa8fe70",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Vercel AI Open-Sources vgpu: A TypeScript WebGPU Library for AI Agent Shaders",
+    "url": "https://www.marktechpost.com/2026/08/28/vercel-vgpu-webgpu-library-open-source/",
+    "published": "2026-08-28T17:28:47+00:00",
+    "summary": "<p>Vercel has open-sourced vgpu, the WebGPU library it built to ship the shaders on vercel.com. It treats .wgsl files as importable TypeScript modules, runs the same shader in the browser, in headless Node.js via Dawn, and in a deterministic CI mock, and ships a fullscreen effect in 25 KB gzipped.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/28/vercel-vgpu-webgpu-library-open-source/\">Vercel AI Open-Sources vgpu: A TypeScript WebGPU Library for AI Agent Shaders</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "a85ab74c368eb11e",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Google AI Releases Gemini 3.5 Transcribe: A Speech-to-Text Model Reporting 2.6% Average WER Across 85+ Languages",
+    "url": "https://www.marktechpost.com/2026/08/27/google-ai-releases-gemini-3-5-transcribe-a-speech-to-text-model-reporting-2-6-average-wer-across-85-languages/",
+    "published": "2026-08-28T05:00:38+00:00",
+    "summary": "<p>Google has released Gemini 3.5 Transcribe, a speech-to-text model that ships as two separate endpoints rather than one. The streaming endpoint delivers sub-second transcription but drops speaker diarization and word timestamps. The batch endpoint keeps both, at half the cost. Google reports 4.0% word error rate streaming and 2.6% non-streaming, with 70% faster finalization than Chirp 3. Here is what the split means for anyone building voice agents or transcription pipelines.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/27/google-ai-releases-gemini-3-5-transcribe-a-speech-to-text-model-reporting-2-6-average-wer-across-85-languages/\">Google AI Releases Gemini 3.5 Transcribe: A Speech-to-Text Model Reporting 2.6% Average WER Across 85+ Languages</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  }
+]

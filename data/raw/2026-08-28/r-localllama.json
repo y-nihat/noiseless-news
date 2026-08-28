@@ -38,5 +38,205 @@
     "published": "2026-08-27T21:40:18+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w07ezc/agent_arena_code_very_good_result_preliminary_for/\"> <img alt=\"Agent Arena Code - Very good result (preliminary) for GLM and Qwen!\" src=\"https://preview.redd.it/eial838dlzlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b7f34449bf818353ff33af20c0dbdbfaf7212b80\" title=\"Agent Arena Code - Very good result (preliminary) for GLM and Qwen!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Everything has changed in two months: DS4 0731 flash was the start of a wave that is taking open weights to paradise. </p> <p>It is easy to think that Qwen 4 and GLM 6 will be on par with Mythos.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LegacyRemaster\"> /u/LegacyRemaster </a> <br /> <span><a href=\"https://i.redd.it/eial838dlzlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w07ezc/agent_arena_code_very_good_result_preliminary_for/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-28T00:47:43.165888+00:00"
+  },
+  {
+    "id": "4d55065de34456b4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "zai-org/GLM-5.3 · Hugging Face",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0tgzl/zaiorgglm53_hugging_face/",
+    "published": "2026-08-28T15:19:04+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0tgzl/zaiorgglm53_hugging_face/\"> <img alt=\"zai-org/GLM-5.3 · Hugging Face\" src=\"https://external-preview.redd.it/BhH_AjL0mdp-2nZPRCiygI2acL0nwkgIh3KfgwJsMEU.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=dea490193213b00bb41f33cf60be19d474c255bb\" title=\"zai-org/GLM-5.3 · Hugging Face\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>GLM-5.3 uses the same base model as GLM-5.2 — every gain comes from post-training. Compared with GLM-5.2, it is much better at complex coding and long-horizon tasks:</p> <ul> <li>Stronger Coding: GLM-5.3 is the most capable open-weights model for coding, with a 50% improvement over GLM-5.2 on our in-house <a href=\"http://Z.ai\">Z.ai</a> Code Bench. It also achieve open-source SOTA on public benchmarks including Terminal Bench 3.0 and Agents' Last Exam.</li> <li>Emergent Cyber Capability: As we scaled post-training, cyber capability developed faster than we expected. GLM-5.3 is state of the art on CyberGym for vulnerability discovery, and its gains are largest further up the exploitation chain, where it more than doubles GLM-5.2 on exploitation benchmarks.</li> </ul> <p><a href=\"https://huggingface.co/unsloth/GLM-5.3-GGUF\">https://huggingface.co/unsloth/GLM-5.3-GGUF</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jacek2023\"> /u/jacek2023 </a> <br /> <span><a href=\"https://huggingface.co/zai-org/GLM-5.3\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0tgzl/zaiorgglm53_hugging_face/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "135d0fc478696ea5",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "claude mods didn't like that, somehow 🤷‍♀️",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0lz7e/claude_mods_didnt_like_that_somehow/",
+    "published": "2026-08-28T09:43:02+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0lz7e/claude_mods_didnt_like_that_somehow/\"> <img alt=\"claude mods didn't like that, somehow 🤷‍♀️\" src=\"https://preview.redd.it/537x3esh63mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=35e6107ace946cb960445c2e0656e5a1086ad666\" title=\"claude mods didn't like that, somehow 🤷‍♀️\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/peculiar-ragdoll\"> /u/peculiar-ragdoll </a> <br /> <span><a href=\"https://i.redd.it/537x3esh63mh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0lz7e/claude_mods_didnt_like_that_somehow/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "d77cbf7bb12c29a0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0yfmn/rocm_100_a_decade_of_open_compute_built_for_the/",
+    "published": "2026-08-28T18:20:40+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0yfmn/rocm_100_a_decade_of_open_compute_built_for_the/\"> <img alt=\"ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI\" src=\"https://external-preview.redd.it/IqBqDZLIfJiqYVEfoGTdXcNqrlQw6vgzhzKpMfyunVs.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=a268e747b2809413fd459df554ee75bc4fde2966\" title=\"ROCm 10.0: A Decade of Open Compute, Built for the Age of Agentic AI\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Their last version 7.14 was released just a month ago.</p> <p>llama.cpp PR(waiting for approval) for Version 10.0</p> <p><a href=\"https://github.com/ggml-org/llama.cpp/pull/27803\">https://github.com/ggml-org/llama.cpp/pull/27803</a></p> <p>Hope this version comes with more boost &amp; improvements.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://rocm.blogs.amd.com/ecosystems-and-partners/rocm-x-blog/README.html\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0yfmn/rocm_100_a_decade_of_open_compute_built_for_the/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "52da779df2489ff0",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Micron: HBM Requires Three Times More Wafer Area Than DDR5",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0mmk7/micron_hbm_requires_three_times_more_wafer_area/",
+    "published": "2026-08-28T10:19:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0mmk7/micron_hbm_requires_three_times_more_wafer_area/\"> <img alt=\"Micron: HBM Requires Three Times More Wafer Area Than DDR5\" src=\"https://external-preview.redd.it/STdtW0uUlnN4IourE5V0JH1scleUG6gfzctYw2B5T4A.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=c9ad5af2240082534d3db1bbdfd6ee167a1b23dd\" title=\"Micron: HBM Requires Three Times More Wafer Area Than DDR5\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>&quot;At Hot Chips 2026, Micron drew a notable comparison: For the same memory capacity, HBM requires approximately three times the wafer area of DDR5.&quot;</p> <p>&quot;When asked whether this ratio would improve with newer generations, the Micron Fellow reportedly explained that it definitely would not get better.&quot;</p> <p>&quot;According to the data shown at Hot Chips, an HBM4 die, for example, operates with 256 memory banks, while DDR5 is specified with 32. Additional data paths, the power supply, and the Through-Silicon Vias, which connect the stacked memory dies to one another, must also be taken into account.&quot;</p> <p>So, for each 1GB of HBM going in a datacebter GPU, 3GB of regular DRAM capacity are being taken away.</p> <p>This explains a lot about the shortage. Each B100 has 144GB of HBM, which take the same wafer area as 432GB of regular DDR5.</p> <p>The shift by the big three (Micron, Samsung and SK) to HBM has effectively cut DRAM supply by 2/3rds in terms of GB output. Even as new wafer capacity comes online next year, and even if we assume all this extra capacity is allocated to DRAM rather than HBM, it doesn't seem like supply constraints will get better anytime soon.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/FullstackSensei\"> /u/FullstackSensei </a> <br /> <span><a href=\"https://www.igorslab.de/en/micron-hbm-requires-three-times-wafer-area-ddr5-gap-widens/\">[link]</a></span> &#32; <span><a href=\"https://www.reddi…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "4a8f36b325fc5a36",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Flash on RTX3090 + 64GB RAM (but you only need 12GB VRAM)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0u24k/qwen38flash_on_rtx3090_64gb_ram_but_you_only_need/",
+    "published": "2026-08-28T15:40:53+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I've got Qwen3.8-Flash-next running on RTX 3090, Ryzen 9 3950X, a PCIe 3.0 motherboard, and 64GB DDR RAM from 2020.</p> <p>IQ4_XS weights, full kvarn5 context, vision on GPU, experts in host RAM, n-grams on disk.<br /> MTP works but actually slows decode down even with 80% draft acceptance, as expected since every rejected token eats into the host RAM bandwidth.</p> <p>I get <strong>160 tok/s prefill 16 tok/s decode</strong>, which makes it a decent option whenever I know I'll be AFK for at least a couple of hours, but not usable for interactive work.</p> <p><strong>Variant setups</strong></p> <p>kvarn5 is unrecognizable from q8/q8 on the KLD charts for the Qwen models. If you don't want to use Beellama, q5_0/q5_0 is also fine (just a very minor drop). Nonetheless, there's plenty of headroom so you can bump up the KV quant to q8/q8 if you prefer. </p> <p>You can go down to 16GB VRAM, with enough room for desktop, if you drop KV to kvarn4 and offload the vision tower to CPU - but then you'll need to make sure you don't <em>breathe too hard</em> because you're going to have very little spare host RAM for running anything else. I do not recommend using plain q4_0/q4_0 KV as the drop starts being measurable.</p> <p>You can fit in a 12GB card by further dropping ub from 2048 to 512, but your prefill will halve.</p> <p><strong>How to deploy</strong></p> <ul> <li>One-line deployment (CUDA Linux): <a href=\"https://github.com/crusaderky/pixi-llm-recipes\">https://github.com/crusaderky/pixi-llm-recipes</a> . Choose <code>llamacpp-source-cuda</code> when starting the server. It <em>should</em> also work on Vulkan and ROCm, but it's untested.</li> <li>Just the llamacpp fork: <a href=\"https://github.com/crusaderky/llama.cpp/releases/tag/beellama-staging-v0.4.4-r9\">https://github.com/crusaderky/llama.cpp/releases/tag/beellama-staging-v0.4.4-r9</a>; if you wait it will eventually land in the main beellama branch. Or you can just use llamacpp master…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "800d7a323964b9a7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Tencent/Hy4-preview 770B-A49B weight dropped",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0igxk/tencenthy4preview_770ba49b_weight_dropped/",
+    "published": "2026-08-28T06:14:02+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0igxk/tencenthy4preview_770ba49b_weight_dropped/\"> <img alt=\"Tencent/Hy4-preview 770B-A49B weight dropped\" src=\"https://external-preview.redd.it/nghXCifPWn430pOWL8oiTmbeBTyEmKGA5c-Q1-dOGCI.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b6852c3376702a9aed94aed34327f56f2f537cad\" title=\"Tencent/Hy4-preview 770B-A49B weight dropped\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Beamsters\"> /u/Beamsters </a> <br /> <span><a href=\"https://huggingface.co/tencent/Hy4-preview\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0igxk/tencenthy4preview_770ba49b_weight_dropped/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "98a3865eb93b1c1e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "ds4 branch with GLM 5.3 Flash support",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0u82b/ds4_branch_with_glm_53_flash_support/",
+    "published": "2026-08-28T15:46:55+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0u82b/ds4_branch_with_glm_53_flash_support/\"> <img alt=\"ds4 branch with GLM 5.3 Flash support\" src=\"https://preview.redd.it/je57l3ojz4mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=245d2274ef64ac453ca27f38cd39a68d868c08a3\" title=\"ds4 branch with GLM 5.3 Flash support\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>As a happy user of ds4, I'm very excited about this branch. Ran some prompts and it seems to be working well on my M4 Max 128gb!</p> <p><a href=\"https://x.com/antirez/status/2093349448445243873\">https://x.com/antirez/status/2093349448445243873</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/lakySK\"> /u/lakySK </a> <br /> <span><a href=\"https://i.redd.it/je57l3ojz4mh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0u82b/ds4_branch_with_glm_53_flash_support/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "616606a4eed010bf",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "open source caught up because it's open",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0kstl/open_source_caught_up_because_its_open/",
+    "published": "2026-08-28T08:33:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Proof is in the method honestly. Closed model labs need to constantly reinvent the wheel to keep lead. Open source has a bunch of independent labs practically working somewhat together. Eventually when everyone is just releasing weights and papers on how they did it the closed source secrets just get overrun by having plenty of very good secret sauces to the public.</p> <p>That and NO DOUBT chinese labs are sharing internal secrets amongst each which explains how when any of them makes a big jump the others seem to follow almost immediately. If gemini/openai/anthropic put their heads together they'd have to compromise monopolies but they sure as hell wouldn't be struggling to keep the lead</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/YogurtExternal7923\"> /u/YogurtExternal7923 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0kstl/open_source_caught_up_because_its_open/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0kstl/open_source_caught_up_because_its_open/\">[comments]</a></span>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "2ca26eebdd7011c7",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Breeze-TTS-2 initial impressions: genuinely 'frontier' TTS",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1002h/breezetts2_initial_impressions_genuinely_frontier/",
+    "published": "2026-08-28T19:18:12+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1002h/breezetts2_initial_impressions_genuinely_frontier/\"> <img alt=\"Breeze-TTS-2 initial impressions: genuinely 'frontier' TTS\" src=\"https://external-preview.redd.it/-pj3EaAZl0w-hakP8gLse10DPkyDfPZoaca3Z85ka24.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=066dca6b173a6a80f0fb74f3b5bcb67b270f9476\" title=\"Breeze-TTS-2 initial impressions: genuinely 'frontier' TTS\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>You can test it out on <a href=\"https://breezeblue.ai/\">breezblue's playground</a> or use it locally, its only ~7GB. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Gohab2001\"> /u/Gohab2001 </a> <br /> <span><a href=\"https://huggingface.co/BreezeBlue/Breeze-TTS-2\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1002h/breezetts2_initial_impressions_genuinely_frontier/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "56cc0239fc267280",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I benchmarked 9 open models on spotting fake sources during agentic search (DeepSeek V4, Qwen 3.8, Nemotron 3 Ultra)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0zl5q/i_benchmarked_9_open_models_on_spotting_fake/",
+    "published": "2026-08-28T19:03:11+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0zl5q/i_benchmarked_9_open_models_on_spotting_fake/\"> <img alt=\"I benchmarked 9 open models on spotting fake sources during agentic search (DeepSeek V4, Qwen 3.8, Nemotron 3 Ultra)\" src=\"https://preview.redd.it/fed1y8a6v5mh1.png?width=140&amp;height=82&amp;auto=webp&amp;s=559280b7a52c5fa3f0fb095a89c2391d44321cc8\" title=\"I benchmarked 9 open models on spotting fake sources during agentic search (DeepSeek V4, Qwen 3.8, Nemotron 3 Ultra)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I built a benchmark called EchoNet. An agent gets a factual question, then searches a syntheic web I made before answering. Some of that web is seeded with misinformation: one fake page, a fake page ranked first in search results, the same fake claim copied across many pages, a loud fake majority around a real primary source, or a genuine update the model's training predates.</p> <p>When a model reads a new page, it weighs two things: what it already knows and what the text says. Usually, they agree. Sometimes they conflict, and often, multiple pages contradict one another.</p> <p>Choosing whether to trust its own memory or a new source is called epistemic arbitration. A stubborn model ignores real updates. A trusting model believes fake data. Bad sources easily fake high search rankings, repeat lies, and mimic agreement. However, no source can fake being correct. This benchmark measures how well models make this choice.</p> <p>I ran 9 open-weight models this way, 50 to 100 trials each: GLM 5.2, Qwen3.7 Max, Qwen3.7 Plus, Qwen3.8 Flash, Qwen3.8 27B, DeepSeek V4 Flash, DeepSeek V4 Pro, Nemotron 3 Ultra, Inkling Small.</p> <p>Image 1 is the number to start with: how often a model already had the right answer, read convincing fake pages, and changed its mind anyway. DeepSeek V4 Flash is easiest to fool at 15.8%. Nothing fooled GLM 5.2 or either Qwen3.8 model, not once.</p> <p>Image 2 rolls that into the full compos…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "5b5f97b3023ce401",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM-5.3 on HF Viewer",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w11epf/glm53_on_hf_viewer/",
+    "published": "2026-08-28T20:10:20+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w11epf/glm53_on_hf_viewer/\"> <img alt=\"GLM-5.3 on HF Viewer\" src=\"https://preview.redd.it/dsakie2ta6mh1.gif?width=320&amp;crop=smart&amp;s=ba1307ef8fa454620e824bd8cac0b57200303261\" title=\"GLM-5.3 on HF Viewer\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>GLM-5.3 is now ready to visualize in HF Viewer!</p> <p>Note again that the architecture is unchanged since GLM-5.2! Crazy improvements just from improved training!</p> <p>The graph visualization becomes quite complex at the expanded levels, with sparse attention, MoE routing, shared indexers, and multi-token prediction!</p> <p><a href=\"https://hfviewer.com/zai-org/GLM-5.3\">https://hfviewer.com/zai-org/GLM-5.3</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Course_Latter\"> /u/Course_Latter </a> <br /> <span><a href=\"https://i.redd.it/dsakie2ta6mh1.gif\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w11epf/glm53_on_hf_viewer/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "db7f2246dad6d7e4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27b q8 KV cache does seem to actually hurt model performance",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0pscn/qwen3827b_q8_kv_cache_does_seem_to_actually_hurt/",
+    "published": "2026-08-28T12:54:01+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p><strong>EDIT:</strong> Though the issue with q8 kv cache seems to arise from <em>when and how often</em> we run the quantize step, not that kv quantizing can't ever work - see comments</p> <p>---</p> <p>One of the things I see debated a lot is whether to use kv cache quantization. The idea I see a lot is that q8 should be free / nearly lossless (which for model weights it usually is). But from some experiments I've been running, it actually isn't, but the reason is slightly weirder than just &lt;quantization loses accuracy&gt;</p> <p>Basically it's because most backends, e.g. llama.cpp, do kv-quantization <strong>on-write</strong>. When KV is quantized on write, every subsequent prefill step reads quantized keys</p> <p>So even though 8bit really is just a sub-1% rounding error, it's not a 1% error applied once - it thus compounds from slightly-wrong attention over slightly-wrong keys, at every layer, and feeds the keys written next</p> <p>In my tests: needle retrieval that passes at bf16 fails with q8-on-write at 125k. <strong>However!!</strong> It's not actually q8 that's the problem per-se - when I take a cache that was built at bf16 and quantize the whole thing in one go to be q8, then the error really is just the 1% and it works fine, needle retrieval restored</p> <p>*Caveats: this is from my tests with just one model family (Qwen3.8-27B), small number of trials, with some of the more out there experiments running on my slightly weirdo custom MLX stack. But it seems like the mechanism might be generalisable</p> <p>---</p> <p><strong>TL;DR</strong> If your long-context quality drops with quantized KV, it might be because of <em>when</em> we quantize (i.e. every token on-the-fly instead of in chunks), not that quantizing can't ever work</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/maddie-lovelace\"> /u/maddie-lovelace </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "6579ee56bb914679",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I audited 443 GGUF quants across 25 repos. 64 of them can't be the quant their filename claims.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w11ob5/i_audited_443_gguf_quants_across_25_repos_64_of/",
+    "published": "2026-08-28T20:20:26+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w11ob5/i_audited_443_gguf_quants_across_25_repos_64_of/\"> <img alt=\"I audited 443 GGUF quants across 25 repos. 64 of them can't be the quant their filename claims.\" src=\"https://preview.redd.it/mx32ahg9c6mh1.png?width=140&amp;height=84&amp;auto=webp&amp;s=66c3deeba602cd39178fa13a340e9b0b3b2453e8\" title=\"I audited 443 GGUF quants across 25 repos. 64 of them can't be the quant their filename claims.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>TL;DR: k-quants need tensor rows divisible by 256. When they aren't, llama-quantize quietly swaps in a ~4.5 bpw type and the file keeps its low-bit name. I audited 443 quants across 25 repos; 64 are affected. On Nemotron-3.5-Lightning all four IQ2 rungs are the same 4.58 bpw file under four different names. Tool and full census linked at the bottom.</p> <p>Your quant's filename tells you what the quantizer was asked to make. It doesn't necessarily tell you what ended up in the file.</p> <p>K-quants and i-quants need the first tensor dimension divisible by 256. When it isn't, llama-quantize substitutes a compatible 32-block type instead, often IQ4_NL for i-quants or Q4_0 for k-quants. Either way you can end up around 4.5 bits per weight instead of the low-bit type you requested. That's intentional, it's been in llama.cpp since <a href=\"https://github.com/ggml-org/llama.cpp/pull/3747\">PR #3747</a> in 2023, and the quantizer does print a warning. The catch is where the warning goes: into the quantize log. If you're downloading the finished GGUF you never see it. The filename still says IQ2_XXS, the model card says IQ2_XXS, and the metadata still describes an IQ2_XXS recipe.</p> <p><a href=\"https://preview.redd.it/mx32ahg9c6mh1.png?width=2320&amp;format=png&amp;auto=webp&amp;s=b5183bfe1a1a109e202eb5800a1f4630f1d94e40\">https://preview.redd.it/mx32ahg9c6mh1.png?width=2320&amp;format=png&amp;auto=webp&amp;s=b5183bfe1a1a109e202eb5800a1f4630f1d94e40</a></p> <…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "da1cb4f2e9194afa",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "how to setup llama.cpp and blender to make lovely 3d stuff together",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0r66e/how_to_setup_llamacpp_and_blender_to_make_lovely/",
+    "published": "2026-08-28T13:51:19+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0r66e/how_to_setup_llamacpp_and_blender_to_make_lovely/\"> <img alt=\"how to setup llama.cpp and blender to make lovely 3d stuff together\" src=\"https://preview.redd.it/d8rnim1we4mh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=0e315d9686abd39938ab4be9b5e3387a9cf6cf20\" title=\"how to setup llama.cpp and blender to make lovely 3d stuff together\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>see <a href=\"https://projects.blender.org/lab/blender_mcp/issues/44#issuecomment-2024581\">here</a> or read the following:</p> <p>### I've found this workaround/complete setup:</p> <p>- git clone <a href=\"https://projects.blender.org/lab/blender_mcp.git\">https://projects.blender.org/lab/blender_mcp.git</a></p> <p>- cd blender_mcp</p> <p>- uv --directory ./mcp/ run blender-mcp --transport http --port 9191</p> <p>(this last command raise the error relative to this issue because mcp v2 is installed)</p> <p>- uv --directory ./mcp/ pip uninstall mcp</p> <p>- uv --directory ./mcp/ add mcp==1.29.1</p> <p>- uv --directory ./mcp/ run blender-mcp --transport http --port 9191</p> <p>(now the mcp server works again)</p> <p>### Into llama-server webui, i.e. usually browser url http://localhost:8080 or http://localhost:9931 (latest llama.cpp default webui port):</p> <p>- start llama-server as usual loading your preferred model and settings adding the option --ui-mcp-proxy</p> <p>- big + (under chat edit box) &gt; mcp servers &gt; enter server url <a href=\"http://127.0.0.1:9191\">http://127.0.0.1:9191</a> then check &quot;Use llama-server proxy&quot;</p> <p>### Also, to install the counterpart addon that will communicate with the enabled mcp server above:</p> <p>- cd addon</p> <p>- zip -r blender_mcp_addon.zip blender_mcp_addon/</p> <p>### Into blender:</p> <p>- edit &gt; preferences &gt; system &gt; allow online access</p> <p>- edit &gt; preferences &gt; addons &gt; V &gt; install from disk</p> <p>- navigate to the pa…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "0e5cfb5fbed3babe",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Flash-Next (UD-IQ4_XS) on 2x RTX 3060 + 7800X3D, from initial 36 tps prefill to 400 tps and other benchmarks (-sm tensor trap) + VRAM/RAM usage",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0na2z/qwen38flashnext_udiq4_xs_on_2x_rtx_3060_7800x3d/",
+    "published": "2026-08-28T10:55:24+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><h1>TL;DR:</h1> <p>llama.cpp with <code>--load-mode mmap</code> used 21-32 GB of RAM, with ik_llama.cpp using 106-108 GB. <code>-sm tensor</code> killed my prefill, changing to <code>-sm layer</code> went from 36 tps to 135 tps. After that, <code>-ubatch 2048</code> pushed it up to <strong>400 tps</strong> at <code>-c 131072</code>. I can't fit <code>-ubatch 2048</code> at <code>-c 262144</code>, which is why it caps out for me at ~180-200 tps prefill and 12 tps decode at 262144 context.</p> <hr /> <p>After testing locally and getting 14-15 tps decode initially, I hit a brick wall with 36 tps prefill which isn't usable to me. After failing to improve that value after tweaking a lot of settings, I decided to run a bunch of benchmarks locally and the results surprised me, so I decided to post them so others can benefit from the results. All tests were from locally compiled llama.cpp and ik_llama.cpp binaries on my CachyOS system. CUDA 0 is on 16x PCI lanes and has all 12 GB available, while CUDA 1 runs my desktop UI and idles at 1.5/12 GB normally on 4x PCI lanes.</p> <p>Everything below this line is an AI-generated report of the benchmark findings, followed by the raw data. It's AI-generated because fuck you; I'm not writing that all out. Have a nice day.</p> <h2>Report:</h2> <p>Benchmark data for <code>Qwen3.8-Flash-Next</code> UD-IQ4_XS (93.7 GB, 125B MoE / 6B active) on a consumer dual-GPU box, comparing <code>llama.cpp</code> and <code>ik_llama.cpp</code>.</p> <p>Everything below was measured on one machine over a single session. All prefill figures come from an 8k-token synthetic prompt with <code>cache_prompt: false</code>.</p> <hr /> <h2>Findings</h2> <p><strong>1. <code>-sm tensor</code> costs 7x prefill on llama.cpp.</strong> 41.7 t/s with <code>-sm tensor</code>, 303 t/s with <code>-sm layer</code>, same hardware and same everything else. llama.cpp op-offloads CPU-resident MoE weights to the GPU for batches of 32 or more, copy…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "85bb0aeb2f9d2db4",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B on a 24GB RTX PRO 4000 Blackwell: 128K real context, 785 tok/s prefill, 67 tok/s MTP3 decode",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w10qem/qwen3827b_on_a_24gb_rtx_pro_4000_blackwell_128k/",
+    "published": "2026-08-28T19:45:33+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I wanted to see whether NInfer could run Qwen3.8-27B on an RTX PRO 4000 Blackwell 24GB.</p> <p>Hardware/software:</p> <ul> <li>NVIDIA RTX PRO 4000 Blackwell, 24GB</li> <li>145W power limit</li> <li>CUDA 13.3</li> <li>NVIDIA driver 610.x</li> <li>Ubuntu LXC under Proxmox</li> <li>Qwen3.8-27B NInfer artifact</li> <li><code>ruwwww/ninfer-5060ti</code>, branch <code>rtx-5060ti</code></li> </ul> <p>I used the 5060 Ti fork rather than the 4090 fork because the PRO 4000 is Blackwell and supports <code>sm_120a</code>. The 5060 Ti fork also has changes that calculate cooperative scheduling from the GPU's actual SM count instead of assuming a 5090.</p> <p><strong>What I had to do</strong></p> <p>Install the missing build dependencies:</p> <pre><code>sudo apt install -y \\ build-essential \\ ninja-build \\ pkg-config \\ libavformat-dev \\ libavcodec-dev \\ libavutil-dev \\ libswscale-dev \\ libcurl4-openssl-dev </code></pre> <p>I then hit this during CMake:</p> <pre><code>nvcc fatal: Unsupported gpu architecture 'compute_120a' </code></pre> <p>The machine had several CUDA toolchains installed. <code>/usr/bin/nvcc</code> was being selected and did not support the Blackwell architecture-specific target properly.</p> <p>The actual CUDA 13.3 compiler was here:</p> <pre><code>/usr/local/cuda-13.3/bin/nvcc </code></pre> <p>I verified it directly:</p> <pre><code>/usr/local/cuda-13.3/bin/nvcc \\ -arch=sm_120a \\ /tmp/test120a.cu \\ -o /tmp/test120a </code></pre> <p>Compile and execution both returned <code>0</code>, confirming that <code>sm_120a</code> worked on the RTX PRO 4000.</p> <p>Then I rebuilt NInfer explicitly against CUDA 13.3:</p> <pre><code>export CUDA_HOME=/usr/local/cuda-13.3 export PATH=/usr/local/cuda-13.3/bin:$PATH export LD_LIBRARY_PATH=/usr/local/cuda-13.3/lib64:${LD_LIBRARY_PATH:-} cmake -S . -B build \\ -G Ninja \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_CUDA_COMPILER=/usr/local/cuda-13.3/bin/nvcc \\ -DCUDAToolkit_ROOT=/usr/local/cuda-13.3 cmake -…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "b1a8a4391beb560f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Local agentic coding Benchmark : Qwen3.8-Flash-Next NVFP4 vs 27B (and the others...)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0x1r2/local_agentic_coding_benchmark_qwen38flashnext/",
+    "published": "2026-08-28T17:30:34+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0x1r2/local_agentic_coding_benchmark_qwen38flashnext/\"> <img alt=\"Local agentic coding Benchmark : Qwen3.8-Flash-Next NVFP4 vs 27B (and the others...)\" src=\"https://preview.redd.it/8a8qqgrgf5mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c79f37430713db29794d335f4762fc190694df95\" title=\"Local agentic coding Benchmark : Qwen3.8-Flash-Next NVFP4 vs 27B (and the others...)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Using <a href=\"https://huggingface.co/RadixArk/Qwen3.8-Flash-Next-NVFP4\">https://huggingface.co/RadixArk/Qwen3.8-Flash-Next-NVFP4</a> and <a href=\"https://old.reddit.com/r/BlackwellPerformance/comments/1w04xb7/qwen38_flashnext_on_1x_rtx_pro_6000_171_ts_c1_428/\">https://old.reddit.com/r/BlackwellPerformance/comments/1w04xb7/qwen38_flashnext_on_1x_rtx_pro_6000_171_ts_c1_428/</a></p> <p>As usual, all the details in <a href=\"https://wonderrico.github.io/local_llm_benchmark/benchmark-main.html?filter=3.8\">https://wonderrico.github.io/local_llm_benchmark/benchmark-main.html?filter=3.8</a> and even more in <a href=\"https://wonderrico.github.io/local_llm_benchmark/benchmark-detail.html?filter=3.8\">https://wonderrico.github.io/local_llm_benchmark/benchmark-detail.html?filter=3.8</a></p> <p>(the bad score one is a &quot;random&quot; uncensored version from HF <a href=\"https://huggingface.co/dealignai/Qwen3.8-Flash-Next-UNCENSORED-NVFP4\">https://huggingface.co/dealignai/Qwen3.8-Flash-Next-UNCENSORED-NVFP4</a> ) I shall test other ones</p> <p>Bottom line : almost highest score of all local model I tested, the most efficient in both nb requests / point and fewer generated tokens / pt, all in medium reasoning. (xhigh is not useful, again, in this benchmark) and if it was not enough very fast</p> <p>All that for an undertrained model...</p> <p><a href=\"https://preview.redd.it/dnk0yc90g5mh1.png?width=1366&amp;format=png&amp;auto=webp&amp;s=115509753cb30cfe67f9b9d13158dcc300c3435d\">https:…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "9165f2ce69e0ef41",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Can I do anything with this?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0yzva/can_i_do_anything_with_this/",
+    "published": "2026-08-28T18:41:30+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0yzva/can_i_do_anything_with_this/\"> <img alt=\"Can I do anything with this?\" src=\"https://preview.redd.it/zne4ep8zu5mh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=3c911605db99b8bed64fdad24c7ef2011099062b\" title=\"Can I do anything with this?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>500GB of optane ram?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/nosimsol\"> /u/nosimsol </a> <br /> <span><a href=\"https://i.redd.it/zne4ep8zu5mh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0yzva/can_i_do_anything_with_this/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "5ceefcc4b3486a57",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "GLM-5.3-Flash Benchmarks on TensorSharp and llama.cpp",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0wgad/glm53flash_benchmarks_on_tensorsharp_and_llamacpp/",
+    "published": "2026-08-28T17:08:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0wgad/glm53flash_benchmarks_on_tensorsharp_and_llamacpp/\"> <img alt=\"GLM-5.3-Flash Benchmarks on TensorSharp and llama.cpp\" src=\"https://external-preview.redd.it/MAHoKOR06rt-1gNArAyzEvCq_TALYyaB8ZK9ULTxkHA.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=41c031a2a379270331b16aa3ee2561c788769683\" title=\"GLM-5.3-Flash Benchmarks on TensorSharp and llama.cpp\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Model: unsloth/GLM-5.3-Flash-GGUF UD-Q2_K_XL (4 shards, 101 GiB) + mmproj-BF16.</p> <p>Reference: llama.cpp PR #27754 (glm5next), CUDA 12.8, SM 120.</p> <h1>Throughput</h1> <p>Both engines back to back in one session, flash attention on, <code>n_ubatch</code> 2048 on both (<code>llama-bench</code> vs the parity harness <code>--bench</code>). Run-to-run spread on throughput numbers is roughly 3–4%.</p> <table><thead> <tr> <th align=\"left\">test</th> <th align=\"left\">llama.cpp</th> <th align=\"left\">TensorSharp</th> <th align=\"left\">ratio</th> </tr> </thead><tbody> <tr> <td align=\"left\">pp2048</td> <td align=\"left\">2070 t/s</td> <td align=\"left\">2014 t/s</td> <td align=\"left\">0.97×</td> </tr> <tr> <td align=\"left\">pp16384</td> <td align=\"left\">1690 t/s</td> <td align=\"left\">1692 t/s</td> <td align=\"left\">1.00×</td> </tr> <tr> <td align=\"left\">pp32768</td> <td align=\"left\">1483 t/s</td> <td align=\"left\">1446 t/s</td> <td align=\"left\">0.98×</td> </tr> <tr> <td align=\"left\">tg64</td> <td align=\"left\">36.6 t/s</td> <td align=\"left\">73.5 t/s</td> <td align=\"left\">2.01×</td> </tr> </tbody></table> <p>Decode at depth holds up: 40.9 t/s after a 17.7K-token prompt, 28.2 t/s after 36K. Weight load is 98.6 GiB across two GPUs in 17 s from a warm cache. CPU-MoE offload (first 10 layers’ experts host-resident) decodes at 35–40 t/s.</p> <h1>Why decode is 2×</h1> <p>The executor submits one ggml graph per ubatch through <code>ggml_backend_sched</code> with a shape-keyed LRU graph cache, so steady-state decode…",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
+  },
+  {
+    "id": "013be05bce3a4a40",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "After Meta avocado we get watermelon, due in November",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0p5ho/after_meta_avocado_we_get_watermelon_due_in/",
+    "published": "2026-08-28T12:25:28+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0p5ho/after_meta_avocado_we_get_watermelon_due_in/\"> <img alt=\"After Meta avocado we get watermelon, due in November\" src=\"https://external-preview.redd.it/aMMEEBCN2EThYpcrzhiGXNVcPEUbd4P7jo1xHJL5ICU.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=319f7828b0ac476b184c4f0f041e1de6a8a714bb\" title=\"After Meta avocado we get watermelon, due in November\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Quote: ... developing a new A.I. model intended to be as powerful as Anthropic’s cutting-edge models. ...</p> <p>In July, while developing Watermelon, Meta paused and later resumed a stage of A.I. development called “pretraining,” which delayed its release until at least October, four people with knowledge of the matter said. Meta has not announced when Hatch or Watermelon will be rolled out.</p> <p>/end quote</p> <p>The underwhelming avocado was released as muse spark. Will the larger watermelon also underperform? Check out the hype of avocado: <a href=\"https://www.reddit.com/r/singularity/comments/1r04z53/metas_nextgeneration_llm_avocado_surpasses_top/\">https://www.reddit.com/r/singularity/comments/1r04z53/metas_nextgeneration_llm_avocado_surpasses_top/</a></p> <p>Update:</p> <p>Mark said muse spark would be open weights in the coming weeks, on Aug 10: <a href=\"https://www.instagram.com/reels/Db2vvaRxMmi/\">https://www.instagram.com/reels/Db2vvaRxMmi/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Terminator857\"> /u/Terminator857 </a> <br /> <span><a href=\"https://www.nytimes.com/2026/08/27/technology/meta-anthropic-frenemies.html\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0p5ho/after_meta_avocado_we_get_watermelon_due_in/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T21:08:11.622632+00:00"
   }
 ]
