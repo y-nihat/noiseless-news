@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Night-loop supervisor: repeated ingest → agent-cycle → publish rounds across
-# the 01:00-05:00 Istanbul window. Fresh agent session per cycle; the ledger is
-# the shared state. Ends early on usage-limit errors or the story cap.
+# the 05:00-07:00 Istanbul window (02:00-04:00 UTC). Fresh agent session per
+# cycle; the ledger is the shared state. Ends early on usage-limit errors or
+# the story cap. This line said "01:00-05:00" while the window was 01:00-04:20,
+# so it has now been wrong about two different windows; a test pins it.
 set -uo pipefail  # deliberately NOT -e: errors are handled per cycle
 
 log() { echo "[loop $(date -u +%H:%M:%S)] $*"; }
@@ -22,12 +24,28 @@ if [ "$SMOKE" = "true" ]; then
   MAX_CYCLES=2; CYCLE_INTERVAL=1500; STORIES_PER_CYCLE=1
   MAX_SEARCHES=3; MAX_TURNS=40; NIGHT_STORY_CAP=2; NIGHT_SECONDS=3300
 else
-  MAX_CYCLES=4; CYCLE_INTERVAL=2100; STORIES_PER_CYCLE=4
+  MAX_CYCLES=3; CYCLE_INTERVAL=2100; STORIES_PER_CYCLE=4
   MAX_SEARCHES=15; MAX_TURNS=120; NIGHT_STORY_CAP=12
-  # Window is 02:00 -> 04:00 UTC (05:00-07:00 Istanbul; UTC+3, no DST). Four
-  # cycles, not six: 7200s at a 2100s interval fits four, and the loop would
-  # have stopped at four anyway — saying six would only make every footer read
-  # "4 of 6" and every prompt promise the agent two cycles it will never get.
+  # Window is 02:00 -> 04:00 UTC (05:00-07:00 Istanbul; UTC+3, no DST). Three
+  # cycles at the full 2100s each, not four and not six.
+  #
+  # Four was the first answer and it was wrong. 4 x 2100 = 8400 > 7200, so a
+  # fourth cycle only ever existed as an 840s stub of a 35-minute cycle — and
+  # not even that in practice: the pre-cycle ingest runs INSIDE the window
+  # (~210s of feed capture, plus the content gate and the test suite), the slot
+  # grid advances in exact CYCLE_INTERVAL steps from wherever cycle 1 begins,
+  # and 7200 = 3 x 2100 + 900 exactly, so any offset at all pushes the third
+  # slot's remainder under the 900s floor below and ends the night there.
+  # Driving this script under a virtual clock at production overheads logged
+  # three cycles, and a footer reading "3 of 4" that blamed the cron for a
+  # shortfall the cron did not cause.
+  #
+  # So: three, honestly. 3 x 4 stories is exactly NIGHT_STORY_CAP, the cycles
+  # keep the 35 minutes the agent needs for verify + falsify, and the footer
+  # stops lying about what the window could have held. Shortening the interval
+  # to fit a fourth was the other option and it is the wrong one — the night
+  # reports have complained since 2026-08-17 that short cycles are "too tight
+  # to start any new verify+falsify work".
   #
   # The whole window now sits inside one UTC day, so the midnight crossing the
   # old 22:00->01:20 arithmetic had to carry is gone. Still plain epoch
@@ -258,7 +276,7 @@ PYEOF
 
 # The unit tests, reported and never a deploy predicate. deploy.yml already
 # made that call — "a flaky unit test has no business freezing the public
-# site" — and the agent may not touch pipeline code, so a red suite at 01:00 is
+# site" — and the agent may not touch pipeline code, so a red suite at 03:00 is
 # something for the operator, not a reason to hold the site. It was inside the
 # gate until 2026-08-19, which made the night stricter than the deploy it was
 # withholding.
@@ -430,12 +448,27 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   [ "$repairs_pending" -eq 1 ] && log "cycle $cycle: repair queue is non-empty — the agent runs even at the story cap"
 
   CYCLE_DEADLINE=$(date -u -d "@$((SLOT_END - 120))" +%H:%M)
+  # The night now opens at 02:00 UTC, so the current UTC-day raw directory holds
+  # only this night's own capture: both daytime ingests (10:00 and 16:00 UTC)
+  # are filed under YESTERDAY. Under the old 22:00 window they were all in one
+  # directory and "grep the raw JSON" quietly meant the whole day. Name the
+  # directories instead of leaving triage to that habit — three of them, to
+  # match the 72 hours step 4 asks for.
+  RAW_DIRS="data/raw/$(date -u +%F) data/raw/$(date -u -d yesterday +%F) data/raw/$(date -u -d '2 days ago' +%F)"
+  # 12 recurring queries, 3 a cycle, 3 cycles: a start index that depends only
+  # on the cycle number runs indices 0, 3 and 6 every single night and never
+  # reaches the last three queries. Rotating by the day of year covers the
+  # whole pool every four nights. 10# because `date +%j` is zero-padded and
+  # bash reads 008 as octal.
+  SWEEP_OFFSET=$((10#$(date -u +%j)))
   sed -e "s/{{CYCLE_NUMBER}}/$cycle/g" \
       -e "s/{{MAX_CYCLES}}/$MAX_CYCLES/g" \
       -e "s/{{CYCLE_DEADLINE}}/$CYCLE_DEADLINE/g" \
       -e "s/{{MAX_STORIES}}/$stories/g" \
       -e "s/{{REMAINING_NIGHT}}/$remaining/g" \
       -e "s/{{MAX_SEARCHES}}/$MAX_SEARCHES/g" \
+      -e "s/{{SWEEP_OFFSET}}/$SWEEP_OFFSET/g" \
+      -e "s|{{RAW_DIRS}}|$RAW_DIRS|g" \
       -e "s|{{REPORT_FILE}}|$REPORT_FILE|g" \
       -e "s|{{SWEEP_INSTRUCTION}}|$sweep|g" \
       -e "s|{{WATCHING_INSTRUCTION}}|$watching|g" \

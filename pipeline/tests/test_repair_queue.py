@@ -347,19 +347,60 @@ class TestTheSupervisorClosesTheLoop:
         (scratch["state"] / "repair-1.md").write_text(
             "REPAIR QUEUE — 1 story(ies) are HELD.\n- `held-one` (evidence-log)\n", "utf-8"
         )
+        # The slice starts at the first value the render DERIVES, not at the sed
+        # itself: a token whose value is computed just above the pipeline would
+        # otherwise be excluded from the test and unbound at run time. That is
+        # exactly what happened when RAW_DIRS and SWEEP_OFFSET were added.
         result = drive(
             scratch,
-            'cycle=1; MAX_CYCLES=6; CYCLE_DEADLINE=00:00; stories=4; remaining=12; '
+            'cycle=1; MAX_CYCLES=3; CYCLE_DEADLINE=00:00; stories=4; remaining=12; '
             'MAX_SEARCHES=15; REPORT_FILE=r.md; sweep=s; watching=w; final_note=f\n'
-            + script[script.index('  sed -e "s/{{CYCLE_NUMBER}}'):script.index('  if grep -q \'{{\' "$NIGHT_STATE_DIR/prompt-$cycle.md"')]
+            + script[script.index('  RAW_DIRS="data/raw/'):script.index('  if grep -q \'{{\' "$NIGHT_STATE_DIR/prompt-$cycle.md"')]
             + '\ngrep -c "{{" "$NIGHT_STATE_DIR/prompt-1.md" | sed "s/^/PLACEHOLDERS=/"\n'
+            'grep -c "data/raw/20" "$NIGHT_STATE_DIR/prompt-1.md" | sed "s/^/RAWLINES=/"\n'
             'grep -n "REPAIR QUEUE" "$NIGHT_STATE_DIR/prompt-1.md" | head -1 | sed "s/^/QUEUE_AT=/"\n'
             'grep -n "1. WATCHING STORIES" "$NIGHT_STATE_DIR/prompt-1.md" | head -1 | sed "s/^/WATCH_AT=/"',
         )
         assert "PLACEHOLDERS=0" in result.stdout, result.stdout[-800:]
+        assert "RAWLINES=0" not in result.stdout, (
+            "the prompt names no raw directory — triage would fall back to habit, "
+            "and at 02:00 UTC today's directory holds only the night's own ingest"
+        )
         queue_at = int(result.stdout.split("QUEUE_AT=")[1].split(":")[0])
         watch_at = int(result.stdout.split("WATCH_AT=")[1].split(":")[0])
         assert queue_at < watch_at, "the repair queue is not step 0"
+
+    def test_the_rendered_prompt_names_three_days_of_raw_capture(self, scratch):
+        """The window opens at 02:00 UTC, so both daytime ingests (10:00 and
+        16:00 UTC) are filed under yesterday. Under the old 22:00 window they
+        shared one directory and "grep the raw JSON" quietly meant the day."""
+        import datetime
+        import re
+
+        script = SCRIPT.read_text(encoding="utf-8")
+        (scratch["state"] / "repair-1.md").write_text("REPAIR QUEUE: empty\n", "utf-8")
+        result = drive(
+            scratch,
+            'cycle=1; MAX_CYCLES=3; CYCLE_DEADLINE=00:00; stories=4; remaining=12; '
+            'MAX_SEARCHES=15; REPORT_FILE=r.md; sweep=s; watching=w; final_note=f\n'
+            + script[script.index('  RAW_DIRS="data/raw/'):script.index('  if grep -q \'{{\' "$NIGHT_STATE_DIR/prompt-$cycle.md"')]
+            + '\ncat "$NIGHT_STATE_DIR/prompt-1.md"',
+        )
+        dirs = set(re.findall(r"data/raw/(\d{4}-\d{2}-\d{2})", result.stdout))
+        today = datetime.datetime.now(datetime.timezone.utc).date()
+        expected = {str(today - datetime.timedelta(days=n)) for n in (0, 1, 2)}
+        assert expected <= dirs, f"expected {sorted(expected)}, prompt named {sorted(dirs)}"
+
+    def test_the_discovery_sweep_rotates_across_nights_not_just_cycles(self, scratch):
+        """12 recurring queries, 3 a cycle, 3 cycles: an index built from the
+        cycle alone runs 0, 3 and 6 every night and never reaches the last
+        three queries at all."""
+        prompt = CYCLE_PROMPT.read_text(encoding="utf-8")
+        assert "{{SWEEP_OFFSET}}" in prompt, "the sweep index does not vary by night"
+        assert "SWEEP_OFFSET=$((10#$(date -u +%j)))" in SCRIPT.read_text("utf-8"), (
+            "the offset must be the day of year, base-10 — `date +%j` is "
+            "zero-padded and bash reads 008 as octal"
+        )
 
     def test_a_pending_repair_runs_a_cycle_even_at_the_story_cap(self):
         script = SCRIPT.read_text(encoding="utf-8")

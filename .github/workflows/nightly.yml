@@ -5,11 +5,19 @@ on:
     # Cron'd 20 min EARLY (01:40 UTC) to absorb GitHub's typical cron delay;
     # the loop supervisor holds until exactly 02:00 UTC (05:00 Istanbul) and
     # always ends by 04:00 UTC (07:00 Istanbul). Turkey is UTC+3, no DST.
-    # Not on the hour, and not at 22:00: GitHub delays scheduled deliveries
-    # most at the busiest slots, and the two nights before this window moved
-    # were delivered 3h23m and 3h19m late — one produced nothing, one never
-    # arrived. The window moving does not fix cron delay, but it does move off
-    # the peak, and a 2h window has less to lose to a delay that still comes.
+    # Not on the hour: a :40 slot is the one piece of cron-delay advice GitHub
+    # actually gives. Moving OFF 22:00 is a bet, not a finding — GitHub
+    # publishes no per-slot delay figures and this repository has no delivery
+    # data at 01:40 UTC yet. What is measured is why the bet was taken: the
+    # night of 2026-08-26 was delivered 3h23m late and published nothing from
+    # the 996s it had left, and the night of 2026-08-27 had still not arrived
+    # 3h44m after its cron, by which time its window had closed.
+    #
+    # The honest gain is the second half, not the first: two hours is a smaller
+    # thing to lose. The cost is that tolerance for a late delivery drops from
+    # 3h40m to 2h20m, and a delivery past 04:00 UTC is now a red job and an
+    # auto-filed issue rather than a thin green night. Revisit after two weeks
+    # of recorded delivery times.
     - cron: "40 1 * * *"
   workflow_dispatch:
     inputs:
@@ -20,7 +28,7 @@ on:
 
 # No `pages: write` or `id-token: write` any more: this job no longer touches
 # the Pages backend itself, it asks deploy.yml to. Keeping credentials for a
-# thing the job stopped doing is how a four-hour unattended agent session ends
+# thing the job stopped doing is how a two-hour unattended agent session ends
 # up holding more than it needs.
 permissions:
   contents: write
@@ -55,7 +63,7 @@ jobs:
       - run: pip install -r pipeline/requirements.txt
 
       # Pinned, like pipeline/requirements.txt. An unpinned global install means
-      # a four-hour unattended agent session silently changes version between
+      # a two-hour unattended agent session silently changes version between
       # one night and the next, and a bad release would show up as an
       # unexplained night with nothing in the repository saying what changed.
       # Bump it deliberately — see RUNBOOK.md.

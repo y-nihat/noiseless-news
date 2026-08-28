@@ -62,7 +62,7 @@ Outputs land in `data/` (pipeline artifacts, committed as an audit trail) and
 Running. The pipeline has published on most nights since 9 July 2026, in English
 and Turkish, unattended.
 
-- **Nightly** (`.github/workflows/nightly.yml`) — up to four cycles between 05:00
+- **Nightly** (`.github/workflows/nightly.yml`) — up to three cycles between 05:00
   and 07:00 Istanbul. Each cycle re-ingests the feeds, re-checks open stories,
   triages, verifies, and publishes what clears the bar. Caps: 4 stories per
   cycle, 12 per night, 15 searches per story.

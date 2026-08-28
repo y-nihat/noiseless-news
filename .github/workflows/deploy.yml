@@ -33,8 +33,8 @@ jobs:
       # The night loop's content gate withholds its own deploys, but it
       # deliberately does not block the commit — the night's work must reach
       # origin either way — so main already carries the article, and the daytime
-      # ingest crons dispatch this workflow unconditionally eight to eleven
-      # hours later. Without this step the site publishes exactly what the gate
+      # ingest crons (10:00 and 16:00 UTC) dispatch this workflow
+      # unconditionally six to seven and a half hours later. Without this step the site publishes exactly what the gate
       # refused, just later and with nothing said. Checking here is also
       # recomputed rather than remembered: no sticky hold file for the agent to
       # forge or delete, and a repaired archive publishes on the next run.

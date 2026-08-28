@@ -7,7 +7,7 @@ seconds, and was killed at the 235-minute step timeout having run zero cycles
 and published nothing (run 31136812347).
 
 These tests shell out to `night_loop.sh` itself with `NIGHT_PLAN_ONLY=1` and an
-injected clock, so what is asserted is the code that actually runs at 22:00 —
+injected clock, so what is asserted is the code that actually runs at 02:00 —
 not a Python reimplementation of it that could drift.
 """
 
@@ -69,7 +69,7 @@ class TestTheIncident:
         assert night < 0
 
     def test_a_hold_can_never_exceed_the_cron_offset(self):
-        """The bug was an unbounded sleep. Nothing may hold longer than 21:40->22:00."""
+        """The bug was an unbounded sleep. Nothing may hold longer than 01:40->02:00."""
         for hour in range(24):
             for minute in (0, 17, 41, 59):
                 hold, _ = plan(f"2026-08-06 {hour:02d}:{minute:02d}:00")
@@ -89,7 +89,9 @@ class TestNormalOperation:
             ("2026-08-06 01:40:00", 1200, 7200),  # cron on time: hold to 02:00
             ("2026-08-06 01:50:00", 600, 7200),   # half the offset used up
             ("2026-08-06 02:00:00", 0, 7200),     # window opens exactly
-            ("2026-08-06 02:19:00", 0, 6060),     # the typical +19min delivery
+            ("2026-08-06 01:58:00", 120, 7200),   # +18min: the median delivery,
+                                                  # still inside the hold
+            ("2026-08-06 02:19:00", 0, 6060),     # +39min: double the median
             ("2026-08-06 03:00:00", 0, 3600),     # an hour late: half a night
             ("2026-08-06 03:59:59", 0, 1),        # last second of the window
         ],
@@ -100,8 +102,9 @@ class TestNormalOperation:
     def test_a_typical_delivery_delay_still_gets_a_usable_night(self):
         """Median delivery drift was +18min over the fortnight before the move.
 
-        A 2h window has less to lose to a delay than a 3h20m one had, so this
-        is the number that decides whether moving the window was worth it.
+        Measured from the CRON, not the window: +18min lands at 01:58, still
+        inside the hold, so the median delivery loses nothing at all. These are
+        the ones that do cost something — twice the median and worse.
         """
         for when in ("2026-08-06 02:15:00", "2026-08-06 02:19:00", "2026-08-06 02:30:00"):
             hold, night = plan(when)
@@ -194,35 +197,113 @@ class TestTheWindowAndTheCronAgree:
         fires = int(cron.group(2)) * 3600 + int(cron.group(1)) * 60
         opens = 7200  # 02:00 UTC, the OPEN constant below
         assert opens - fires == MAX_HOLD, (
-            f"cron fires {opens - fires}s before the window; the supervisor will "
-            f"only hold {MAX_HOLD}s, so the rest is lost every night"
+            f"cron fires {opens - fires}s before the window but the supervisor "
+            f"holds at most {MAX_HOLD}s. Earlier than that is not a shorter "
+            f"hold — it falls into the pre-cron branch, computes negative "
+            f"runway and loses the WHOLE night; later just shrinks the margin "
+            f"a late delivery has to play with."
         )
 
     def test_the_script_opens_the_window_where_the_cron_expects(self):
         assert "OPEN=$((DAY + 7200))" in self.SCRIPT_TEXT
 
-    def test_the_job_timeout_covers_the_hold_and_the_whole_window(self):
-        """A timeout shorter than the window kills the final cycle mid-verify."""
+    def test_both_timeouts_cover_the_hold_and_the_whole_window(self):
+        """A timeout shorter than the window kills the final cycle mid-verify.
+
+        Two are declared and the STEP one is the one that kills the loop; a
+        `re.search` for the first only ever saw the job-level number, so the
+        binding timeout was unasserted.
+        """
         import re
 
-        job = int(re.search(r"timeout-minutes: (\d+)", self.WORKFLOW).group(1))
+        found = [int(m) for m in re.findall(r"timeout-minutes: (\d+)", self.WORKFLOW)]
+        assert len(found) == 2, f"expected a job and a step timeout, found {found}"
+        job, step = max(found), min(found)
         needed = (MAX_HOLD + WINDOW_SECONDS) / 60
-        assert job >= needed, f"job timeout {job}min cannot cover {needed}min"
-        assert job <= needed + 45, (
-            f"job timeout {job}min is far longer than the {needed}min it can use; "
+        assert step >= needed, f"step timeout {step}min cannot cover {needed}min"
+        assert job >= step, "the job must outlive the step it runs"
+        assert step <= needed + 45, (
+            f"step timeout {step}min is far longer than the {needed}min it can use; "
             "a hung run should be killed, not billed"
         )
 
-    def test_four_cycles_is_what_the_window_actually_fits(self):
-        """MAX_CYCLES is also what the prompt promises the agent it will get."""
-        assert "MAX_CYCLES=4" in self.SCRIPT_TEXT
+    # The loop does not start at t=0. `START` is stamped before an unconditional
+    # pre-cycle ingest (~210s of real feed capture on the runner), a content
+    # gate over the whole archive and the full test suite, all inside the
+    # window. Modelling from zero is what certified MAX_CYCLES=4: 7200 is
+    # 3 x 2100 + 900 exactly, so at t=0 the third slot's remainder ties the
+    # floor and a fourth cycle appears — and any offset at all removes it.
+    PRE_CYCLE_OFFSETS = [0, 1, 60, 180, 265, 300, 420, 600]
+
+    def _cycles_that_fit(self, offset: int, max_cycles: int) -> int:
         interval, floor = 2100, 900
-        end, cycles = WINDOW_SECONDS, 0
-        now = 0
-        while now < end:
+        now, cycles = offset, 0
+        while now < WINDOW_SECONDS and cycles < max_cycles:
             cycles += 1
-            slot_end = min(now + interval, end)
-            if end - slot_end < floor:
+            slot_end = min(now + interval, WINDOW_SECONDS)
+            if WINDOW_SECONDS - slot_end < floor:
                 break
             now = slot_end
-        assert cycles == 4, f"the window fits {cycles} cycles, not 4"
+        return cycles
+
+    def test_max_cycles_is_what_the_window_fits_at_every_realistic_offset(self):
+        """A cycle count that changes when the ingest is one second slower is
+        not a cycle count, and MAX_CYCLES is what the prompt promises the
+        agent: "you are cycle N of MAX"."""
+        import re
+
+        counts = re.findall(r"MAX_CYCLES=(\d+); CYCLE_INTERVAL", self.SCRIPT_TEXT)
+        assert len(counts) == 2, f"expected a smoke and a production branch: {counts}"
+        declared = int(counts[-1])
+        fitted = {o: self._cycles_that_fit(o, declared) for o in self.PRE_CYCLE_OFFSETS}
+        assert set(fitted.values()) == {declared}, (
+            f"MAX_CYCLES={declared} but the window fits {fitted} — the loop would "
+            "report a shortfall every night and blame the cron for it"
+        )
+
+    def test_one_more_cycle_would_not_fit_at_any_of_them(self):
+        """The other half: three must also be the most it can hold."""
+        import re
+
+        declared = int(re.findall(r"MAX_CYCLES=(\d+); CYCLE_INTERVAL", self.SCRIPT_TEXT)[-1])
+        fitted = {o: self._cycles_that_fit(o, declared + 1) for o in self.PRE_CYCLE_OFFSETS}
+        beyond = {o for o, n in fitted.items() if n > declared}
+        assert beyond == {0}, (
+            f"a {declared + 1}th cycle fits at offsets {sorted(beyond)}; only the "
+            "impossible zero-overhead start should reach it"
+        )
+
+
+class TestTheDocumentedWindowMatchesTheCode:
+    """Four documents state this schedule and none of them was checked.
+
+    night_loop.sh's own header said "01:00-05:00 Istanbul" while the window was
+    01:00-04:20, so it was wrong about a window that never existed — and stayed
+    wrong through a second window change. Prose that no test reads is prose
+    that drifts.
+    """
+
+    SCRIPT_TEXT = SCRIPT.read_text(encoding="utf-8")
+    DOCS = ["CLAUDE.md", "README.md", "RUNBOOK.md"]
+
+    def _window(self) -> tuple[str, str]:
+        import re
+
+        open_s = int(re.search(r"OPEN=\$\(\(DAY \+ (\d+)\)\)", self.SCRIPT_TEXT).group(1))
+        istanbul = lambda s: f"{(s // 3600 + 3) % 24:02d}:{s % 3600 // 60:02d}"
+        return istanbul(open_s), istanbul(open_s + WINDOW_SECONDS)
+
+    def test_the_docs_name_the_window_the_script_opens(self):
+        start, end = self._window()
+        for doc in self.DOCS:
+            text = (REPO_ROOT / doc).read_text("utf-8")
+            assert f"{start}" in text and f"{end}" in text, (
+                f"{doc} does not name the {start}-{end} Istanbul window"
+            )
+
+    def test_the_script_header_names_it_too(self):
+        start, end = self._window()
+        header = "\n".join(self.SCRIPT_TEXT.splitlines()[:8])
+        assert f"{start}-{end} Istanbul" in header, (
+            f"night_loop.sh's header does not say {start}-{end}: {header}"
+        )
