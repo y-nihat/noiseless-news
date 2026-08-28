@@ -268,8 +268,9 @@ suite_check() {
   return 1
 }
 
-# `suite_check` has written the suite's failures to gate-pytest.txt since
-# 2026-08-19 and nothing ever read the file again. So on every night from
+# `suite_check` logs the failures and leaves them in gate-pytest.txt; nothing
+# outside it ever read the file, so they reached the job log and never the
+# agent's repair brief. On every night from
 # 2026-08-20 the repair queue printed "REPAIR QUEUE: empty — the archive is
 # clean" in the same container where pytest was failing on two published
 # articles, and eight consecutive nights of self-repair never saw it.
@@ -279,22 +280,38 @@ suite_check() {
 # Advisory, never a gate: a red suite is not a deploy predicate here (deploy.yml
 # made that call first), it does not decide whether a cycle runs, and pipeline
 # code is not the agent's to touch.
+# The archive tests — the ones whose subject is content/ and data/, not the
+# pipeline. Ownership is decided by the test MODULE, because every pytest
+# failure line begins "FAILED pipeline/tests/…" whatever it is about: a rule
+# phrased as "a failure naming content/ or data/ is yours" routes every failure
+# to the operator, including the archive ones this whole change exists for.
+# The same list appears in RUNBOOK.md's "The test suite is red".
+ARCHIVE_TESTS='test_dedup_repo_data|test_evidence_surface.*TestRealArchive|test_validate_content.*TestRealArchive'
+
 append_suite_repairs() {
-  local brief=$1 pytest_out="$NIGHT_STATE_DIR/gate-pytest.txt" failures
+  local brief=$1 pytest_out="$NIGHT_STATE_DIR/gate-pytest.txt" failures yours
   [ -s "$pytest_out" ] || return 0
-  failures=$(grep -E '^(FAILED|ERROR) ' "$pytest_out" | head -n 10)
+  # `{{` is how the cycle prompt marks an unsubstituted placeholder, and the
+  # loop refuses to send a prompt still containing one. A test name or an
+  # assertion carrying `{{` would therefore abort the night at cycle 1 — a
+  # supervisor killed by the text of a failure it was only meant to relay.
+  failures=$(grep -E '^(FAILED|ERROR) ' "$pytest_out" | head -n 10 | sed 's/{{/{ {/g')
   [ -n "$failures" ] || return 0
+  yours=$(printf '%s\n' "$failures" | grep -cE "$ARCHIVE_TESTS") || true
   {
     echo
     echo "## Unit suite — advisory, from the previous cycle"
     echo
-    echo '```'
-    echo "$failures"
-    echo '```'
+    printf '%s\n' "$failures"
     echo
-    echo "A failure naming content/ or data/ is yours to repair in this cycle,"
-    echo "the same way a held story is: fix the archive, not the test. A failure"
-    echo "in pipeline/ is the operator's — leave it alone, it is already filed."
+    if [ "${yours:-0}" -gt 0 ]; then
+      echo "$yours of these are ARCHIVE tests — their subject is content/ and data/,"
+      echo "which are yours. Repair them in this cycle the same way a held story is"
+      echo "repaired: fix the archive, not the test. Run the named test to see the"
+      echo "assertion in full; it prints the remedy."
+    fi
+    echo "A failure in any other module is pipeline code, which is the operator's."
+    echo "Leave it alone — it is already filed."
   } >> "$brief"
 }
 

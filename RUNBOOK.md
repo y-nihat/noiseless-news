@@ -146,8 +146,10 @@ gh run list --workflow=tests.yml --branch main --limit 10
 
 How it clears, by what failed:
 
-- **An archive test** (`test_dedup_repo_data.py`, `test_evidence_surface.py`,
-  `test_validate_content.py::TestRealArchive`) is about `content/` and
+- **An archive test** (`test_dedup_repo_data.py`,
+  `test_evidence_surface.py::TestRealArchive`,
+  `test_validate_content.py::TestRealArchive` — the same list
+  `night_loop.sh`'s `ARCHIVE_TESTS` uses) is about `content/` and
   `data/` — the agent's own paths. It reaches the next night's cycle 1 in the
   repair brief and is repaired there, like a held story. Fix the archive, not
   the test.

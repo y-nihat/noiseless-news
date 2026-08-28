@@ -276,11 +276,36 @@ class TestTheSuiteReachesTheRepairQueue:
         assert "test_dedup_repo_data" in text
         assert "Unit suite" in text
 
-    def test_it_says_which_failures_are_the_agent_s_to_fix(self, scratch):
-        """A red pipeline test is the operator's; a red archive test is not."""
-        text = self._brief(scratch, "FAILED pipeline/tests/test_x.py::test_y - boom\n")
-        assert "content/ or data/" in text
+    def test_an_archive_failure_is_named_as_the_agent_s(self, scratch):
+        """Ownership is decided by the test module, not by the assertion text.
+
+        Every pytest failure line begins "FAILED pipeline/tests/…", whatever it
+        is about. The first cut of this said "a failure naming content/ or
+        data/ is yours", which routed every failure — including the archive
+        ones this whole change exists for — to the operator.
+        """
+        text = self._brief(
+            scratch,
+            "FAILED pipeline/tests/test_dedup_repo_data.py::test_no_two_published"
+            "_stories_strong_match_each_other - AssertionError\n",
+        )
+        assert "1 of these are ARCHIVE tests" in text, text
+        assert "yours" in text
+
+    def test_a_pipeline_failure_is_named_as_the_operator_s(self, scratch):
+        text = self._brief(scratch, "FAILED pipeline/tests/test_publish.py::test_y - boom\n")
+        assert "ARCHIVE tests" not in text, text
         assert "operator" in text
+
+    def test_a_brace_pair_in_a_failure_cannot_abort_the_night(self, scratch):
+        """`{{` marks an unsubstituted placeholder and the loop refuses to send
+        a prompt still carrying one — so a test name containing it would kill
+        the supervisor with the text of a failure it was only relaying."""
+        text = self._brief(
+            scratch, "FAILED pipeline/tests/test_x.py::test_renders_{{TOKEN}} - boom\n"
+        )
+        assert "{{" not in text, text
+        assert "TOKEN" in text, "the failure was neutralised into uselessness"
 
     def test_a_green_suite_appends_nothing(self, scratch):
         text = self._brief(scratch, "447 passed in 20.1s\n")

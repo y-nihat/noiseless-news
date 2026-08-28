@@ -215,11 +215,36 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "dedup-staged":
         # Imported here for the same reason validate-content is: this runs as a
         # pre-commit hook and must not pay for, or fail on, the feed stack.
-        from noiseless.dedup import unlinked_duplicates
-        from noiseless.validate_content import _staged_slugs
+        import shutil
+        import subprocess
 
-        slugs, _paths = _staged_slugs(Path("."))
-        offenders = unlinked_duplicates(Path("."), slugs)
+        from noiseless.dedup import unlinked_duplicates
+        from noiseless.validate_content import _staged_slugs, export_staged_tree
+
+        # git invokes a hook from the repo root, but nothing guarantees a human
+        # or a test does; resolving it explicitly stops the check from finding
+        # no archive, reporting nothing and exiting 0 — a silent pass.
+        top = subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True
+        )
+        if top.returncode != 0:
+            print("dedup-staged: not inside a git repository")
+            return 2
+        root = Path(top.stdout.strip())
+
+        slugs, staged = _staged_slugs(root)
+        # Same rule as check_staged: only slugs whose ARTICLE is in this commit
+        # are this commit's business. Otherwise a ledger-only or report-only
+        # commit is refused for a defect someone else left behind, which is the
+        # incentive to un-publish another story to land your own.
+        touched = {Path(p).stem for p in staged if p.startswith("content/articles/")}
+        if not touched:
+            return 0
+        tree = export_staged_tree(root, slugs, staged)
+        try:
+            offenders = unlinked_duplicates(root, slugs & touched, staged_root=tree)
+        finally:
+            shutil.rmtree(tree, ignore_errors=True)
         if not offenders:
             return 0
         for bad in offenders:

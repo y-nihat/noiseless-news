@@ -33,10 +33,13 @@ in its frontmatter, ledger entry, and the story index.
 - **Moderate matches**: read the matched article before deciding new vs update;
   justify the decision in the run report.
 - The dedup-check result (matches found, decision taken) is recorded in the
-  story's evidence log, in a `dedup_check` field that NAMES the matched slug.
-  That record is not paperwork: it is what the archive test reads to tell a
-  justified standalone from an unlinked duplicate, and a decision that does not
-  name the story it was made against cannot excuse anything.
+  story's evidence log: `dedup_check` in prose, and — where a STRONG match was
+  assessed as unrelated — the matched slug listed in `dedup_standalone`. That
+  list is not paperwork: it is the only thing that lets two published stories
+  match, and the archive test and the pre-commit hook both read it. Prose is
+  not enough and deliberately so; until 2026-08-28 the gate read the prose, and
+  a note saying "clean, no matches against the archive" excused the very pair
+  it denied.
 
 ## 1. Source tiers
 
@@ -133,7 +136,7 @@ one of three outcomes — never an unlinked duplicate:
 |---|---|
 | Same event, new details (extra confirmation, minor development) | **In-place update**: edit the existing article, add a dated `updated:` changelog entry |
 | A NEW event in the same saga (ruling in a covered lawsuit, launch of a previewed product, follow-through or reversal of a covered announcement) | **Follow-up article**: new slug, frontmatter `follows: <original-slug>` — the site renders the whole thread ("story so far") on every member article |
-| Unrelated despite surface similarity | New standalone article; record the dedup decision in the evidence log's `dedup_check`, naming the matched slug, and in the report |
+| Unrelated despite surface similarity | New standalone article; list the matched slug in the evidence log's `dedup_standalone`, say why in its `dedup_check` prose, and note it in the report |
 
 - The follow-up test: could a reader who missed the original still need that
   context? If yes, it's a follow-up (`follows`), not an in-place update.

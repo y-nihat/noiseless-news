@@ -73,6 +73,11 @@ Work order:
      unless you can justify in the report why the match is coincidental.
    - Moderate matches: read the matched article first. Record the dedup result
      and the chosen outcome in the story's evidence log and the report.
+   - Choosing (c) after a STRONG match: you MUST also list the matched slug in
+     the new story's data/verified/<slug>.json `dedup_standalone` array, beside
+     the `dedup_check` prose explaining why. That array is the only thing that
+     lets two published stories match — without it the pre-commit hook refuses
+     the commit and the archive test goes red. Prose alone does not count.
 6. VERIFY AND PUBLISH up to {{MAX_STORIES}} stories this cycle
    ({{REMAINING_NIGHT}} remaining in tonight's overall budget), in rank order:
    - Extract typed factual claims (verification.md §3 — note legal/litigation

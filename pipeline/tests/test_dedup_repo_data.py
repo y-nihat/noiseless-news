@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pytest
 
-from noiseless.dedup import check, load_index, policy_exempt_pair, tokens
+from noiseless.dedup import check, declarations, load_index, policy_exempt_pair, tokens
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -103,10 +103,11 @@ def _strong_pairs(published):
     """Every published pair the live gate would score `strong`, each once.
 
     Scored by `check()` — the same function `dedup-check` runs — rather than by
-    a copy of its arithmetic. The copy this replaces had drifted: it inlined
-    MODERATE_THRESHOLD as a literal `0.34` and omitted the `elif shared` branch
-    added to `check()` later, so the invariant guarding the archive and the gate
-    guarding a new story no longer agreed on what a duplicate is.
+    a copy of its arithmetic. The copy this replaces was written alongside
+    `check()` and never matched it: it inlined MODERATE_THRESHOLD as a literal
+    `0.34` and omitted the `elif shared` branch. A second definition of the
+    same rule that nothing kept in sync is a defect whether or not the two have
+    diverged yet.
     """
     by_slug = {e.slug: e for e in published}
     seen = set()
@@ -141,18 +142,20 @@ def test_no_two_published_stories_strong_match_each_other(index):
     duplicate has nowhere to hide.
     """
     published = [e for e in index if e.state == "published"]
+    declared = declarations(REPO_ROOT, [e.slug for e in published])
     collisions = [
         (first.slug, second.slug, score)
         for first, second, score in _strong_pairs(published)
-        if not policy_exempt_pair(REPO_ROOT, first, second)
+        if not policy_exempt_pair(declared, first, second)
     ]
     assert not collisions, (
         f"published stories that would block each other: {collisions}\n"
         "policy/verification.md §8 gives three outcomes for a strong match — pick one:\n"
         "  * same event      -> fold the newer story into the older one (in-place update)\n"
         "  * same saga       -> `follows: <slug>` in the article frontmatter AND the ledger\n"
-        "  * coincidental    -> record why in the newer story's data/verified/<slug>.json\n"
-        "                       `dedup_check` field, naming the other slug"
+        "  * coincidental    -> list the other slug in the newer story's\n"
+        "                       data/verified/<slug>.json `dedup_standalone`, and say why\n"
+        "                       in its `dedup_check` prose"
     )
 
 
@@ -165,3 +168,24 @@ def test_every_follows_link_points_at_a_real_story(index):
     known = {e.slug for e in index}
     broken = [(e.slug, e.follows) for e in index if e.follows and e.follows not in known]
     assert not broken, f"follows: pointing at no known story: {broken}"
+
+
+def test_no_standalone_is_declared_against_a_story_that_does_not_exist(index):
+    """A declaration is an exemption; one pointing nowhere is a silent hole.
+
+    The field replaced a check that read the prose `dedup_check` and looked for
+    the other slug's name in it. That granted amnesty for merely mentioning a
+    slug — a note reading "dedup-check clean, no matches against the archive"
+    excused the pair it denied — and 28 published pairs carried such a standing
+    exemption nobody had declared. A typo'd declaration would be the same hole
+    in a smaller form.
+    """
+    known = {e.slug for e in index}
+    declared = declarations(REPO_ROOT, [e.slug for e in index])
+    dangling = sorted(
+        (slug, other)
+        for slug, others in declared.items()
+        for other in others
+        if other not in known
+    )
+    assert not dangling, f"dedup_standalone naming no known story: {dangling}"

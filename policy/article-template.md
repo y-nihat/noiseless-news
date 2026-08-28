@@ -118,10 +118,20 @@ one that got skipped.
     }
   ],
   "falsifier_notes": "What the adversarial pass tried to break and what happened",
-  "dedup_check": "The dedup-check result and the §8 outcome chosen"
+  "dedup_check": "The dedup-check result and the §8 outcome chosen",
+  "dedup_standalone": ["slug-this-was-checked-against-and-found-unrelated"]
 }
 ```
 
+- **`dedup_standalone`** is the machine-readable half of §8's third outcome:
+  every slug this story was found to match strongly and assessed as unrelated.
+  Omit it when there was no strong match — the common case. It is the ONLY
+  thing that excuses two published stories matching, so a coincidental
+  standalone published without it fails the archive test and is refused by the
+  pre-commit hook. `dedup_check` stays the prose beside it: why, in sentences,
+  for the reader of the audit trail. It was the prose that was read until
+  2026-08-28, and reading it granted amnesty for merely mentioning a slug —
+  including in notes that said the check came back clean.
 - **The build enforces**: the file exists, parses as a JSON object, and
   `claims` is a non-empty list. An article whose log fails that is **held**
   from the site (a stub at its URL, absent from index/feed/sitemap) until it is

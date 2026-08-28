@@ -267,15 +267,36 @@ class TestTheHookReAsksTheDuplicateGate:
         assert "same saga" in combined and "coincidental" in combined
         assert _git("log", "--oneline", cwd=repo).stdout.count("\n") == 1
 
-    def test_a_recorded_decision_lets_it_through(self, repo):
-        self._stage_twin(repo)
-        log = repo / "data" / "verified" / "twin-story.json"
+    def _declare(self, repo, slug, *others):
+        log = repo / "data" / "verified" / f"{slug}.json"
         data = json.loads(log.read_text(encoding="utf-8"))
-        data["dedup_check"] = "strong match against seed-story; coincidental, different event"
+        data["dedup_standalone"] = list(others)
+        data["dedup_check"] = f"strong match against {others[0]}; coincidental"
         log.write_text(json.dumps(data), encoding="utf-8")
+
+    def test_a_declared_standalone_lets_it_through(self, repo):
+        self._stage_twin(repo)
+        self._declare(repo, "twin-story", "seed-story")
         _git("add", "-A", cwd=repo)
         result = commit_with_hook(repo, "publish twin-story")
         assert result.returncode == 0, result.stdout + result.stderr
+
+    def test_a_declaration_left_unstaged_does_not_count(self, repo):
+        """The hook judges the index. A log edited on disk but never `git add`ed
+        is exactly what `check_staged` was built to refuse, and this half has to
+        agree with it or the two give different verdicts on the same commit."""
+        self._stage_twin(repo)
+        self._declare(repo, "twin-story", "seed-story")   # written, NOT staged
+        result = commit_with_hook(repo, "publish twin-story")
+        assert result.returncode != 0, "an unstaged declaration excused the commit"
+
+    def test_a_ledger_only_commit_is_not_refused_for_someone_else_s_defect(self, repo):
+        """No incentive to un-publish another story to land your own."""
+        self._stage_twin(repo)
+        _git("commit", "-q", "--no-verify", "-m", "twin lands unchecked", cwd=repo)
+        (repo / "data" / "ledger" / "run-report-2026-08-28.md").write_text("r", "utf-8")
+        _git("add", "data/ledger/run-report-2026-08-28.md", cwd=repo)
+        assert commit_with_hook(repo, "report only").returncode == 0
 
     def test_a_follow_up_is_never_refused_for_sharing_its_saga(self, repo):
         """§8(b) members share sources by design."""

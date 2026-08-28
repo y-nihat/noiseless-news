@@ -12,7 +12,7 @@ import json
 from noiseless.dedup import (
     IndexEntry,
     check,
-    dedup_note,
+    declarations,
     identity_urls,
     load_index,
     policy_exempt_pair,
@@ -200,12 +200,17 @@ Body.
 """
 
 
-def write_verified(repo, slug, note):
+def write_verified(repo, slug, *, declares=None, note="prose about the check"):
     verified = repo / "data/verified"
     verified.mkdir(parents=True, exist_ok=True)
-    (verified / f"{slug}.json").write_text(
-        json.dumps({"slug": slug, "dedup_check": note}), encoding="utf-8"
-    )
+    body = {"slug": slug, "dedup_check": note}
+    if declares is not None:
+        body["dedup_standalone"] = declares
+    (verified / f"{slug}.json").write_text(json.dumps(body), encoding="utf-8")
+
+
+def declared_for(repo, *slugs):
+    return declarations(repo, slugs)
 
 
 def test_follows_is_indexed_from_the_article(tmp_path):
@@ -233,75 +238,104 @@ def test_follows_is_indexed_from_the_ledger(tmp_path):
 
 
 def test_a_saga_link_excuses_the_pair_in_either_direction(tmp_path):
-    repo = make_repo(tmp_path)
     first = IndexEntry("a", "A", "2026-07-01", "published")
     second = IndexEntry("b", "B", "2026-07-02", "published", follows="a")
-    assert policy_exempt_pair(repo, first, second) == "follows"
-    assert policy_exempt_pair(repo, second, first) == "follows"
+    assert policy_exempt_pair({}, first, second) == "follows"
+    assert policy_exempt_pair({}, second, first) == "follows"
 
 
-def test_a_recorded_standalone_excuses_the_pair(tmp_path):
+def test_a_declaration_on_the_newer_story_excuses_the_pair(tmp_path):
     repo = make_repo(tmp_path)
-    write_verified(repo, "b", "strong match against a -- different event, coincidental")
+    write_verified(repo, "b", declares=["a"])
     first = IndexEntry("a", "A", "2026-07-01", "published")
     second = IndexEntry("b", "B", "2026-07-02", "published")
-    assert "data/verified/b.json" in policy_exempt_pair(repo, first, second)
+    declared = declared_for(repo, "a", "b")
+    assert "data/verified/b.json" in policy_exempt_pair(declared, first, second)
 
 
-def test_a_note_about_a_different_match_excuses_nothing(tmp_path):
-    """The precision that keeps the exemption from being a blanket amnesty.
+def test_prose_that_merely_names_the_slug_excuses_nothing(tmp_path):
+    """The hole the declaration replaced.
 
-    A story may legitimately carry a dedup_check about some other candidate it
-    was compared against. That note says nothing about *this* pair, so it must
-    not excuse it.
+    Reading the prose `dedup_check` for the other slug's name granted amnesty
+    for merely mentioning it: a note reading "clean, no matches against the
+    archive" excused the very pair it denied, and so did a slug cited as a
+    styling precedent, a slug inside a URL, and a note confessing to being an
+    unlinked duplicate. Twenty-eight published pairs carried such a standing
+    exemption on 2026-08-28 without anyone having declared one.
     """
     repo = make_repo(tmp_path)
-    write_verified(repo, "b", "strong match against some-other-story -- coincidental")
+    for note in (
+        "dedup-check clean, no matches against the archive; a is a styling precedent",
+        "This is the same event as a. I could not be bothered to fold it in.",
+        "see https://example.com/x/a/y for background",
+    ):
+        write_verified(repo, "b", note=note)
+        first = IndexEntry("a", "A", "2026-07-01", "published")
+        second = IndexEntry("b", "B", "2026-07-02", "published")
+        assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == "", note
+
+
+def test_an_older_story_cannot_excuse_a_newer_duplicate(tmp_path):
+    """§8 puts the decision on the story being opened, not the one it matched."""
+    repo = make_repo(tmp_path)
+    write_verified(repo, "a", declares=["b"])
+    older = IndexEntry("a", "A", "2026-07-01", "published")
+    newer = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), older, newer) == ""
+
+
+def test_either_side_counts_when_the_dates_cannot_order_them(tmp_path):
+    """Same-day stories have no newer one; refusing both would be arbitrary."""
+    repo = make_repo(tmp_path)
+    write_verified(repo, "a", declares=["b"])
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-01", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second)
+    undated = IndexEntry("b", "B", "", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, undated)
+
+
+def test_a_declaration_naming_a_different_story_excuses_nothing(tmp_path):
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", declares=["some-other-story"])
     first = IndexEntry("a", "A", "2026-07-01", "published")
     second = IndexEntry("b", "B", "2026-07-02", "published")
-    assert policy_exempt_pair(repo, first, second) == ""
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == ""
 
 
-def test_a_neighbouring_slug_does_not_excuse_the_pair(tmp_path):
-    """Substring matching would let the wrong decision excuse this pair.
-
-    `gpt-5-6-launch` is a substring of `gpt-5-6-launch-delay`; a short slug is
-    also a substring of ordinary prose. Both were true of the first cut of this
-    exemption, and both are how an unlinked duplicate would slip through it.
-    """
+def test_an_undeclared_standalone_is_not_excused(tmp_path):
     repo = make_repo(tmp_path)
-    write_verified(repo, "b", "coincidental match against gpt-5-6-launch-delay")
-    launch = IndexEntry("gpt-5-6-launch", "A", "2026-07-01", "published")
-    second = IndexEntry("b", "B", "2026-07-02", "published")
-    assert policy_exempt_pair(repo, launch, second) == ""
-
-    write_verified(repo, "b", "no dedup match was found against anything")
-    short = IndexEntry("a", "A", "2026-07-01", "published")
-    assert policy_exempt_pair(repo, short, second) == ""
-
-    write_verified(repo, "b", "coincidental match against gpt-5-6-launch, five weeks apart")
-    assert "data/verified/b.json" in policy_exempt_pair(repo, launch, second)
-
-
-def test_an_unrecorded_standalone_is_not_excused(tmp_path):
-    """No evidence log at all is the unlinked duplicate the gate exists to catch."""
-    repo = make_repo(tmp_path)
+    write_verified(repo, "b")
     first = IndexEntry("a", "A", "2026-07-01", "published")
     second = IndexEntry("b", "B", "2026-07-02", "published")
-    assert policy_exempt_pair(repo, first, second) == ""
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == ""
 
 
-def test_an_unreadable_evidence_log_excuses_nothing(tmp_path):
-    """Fail closed: a log we cannot parse is not a justification we can trust."""
+def test_an_unreadable_or_missing_evidence_log_excuses_nothing(tmp_path):
+    """Fail closed: a log we cannot parse is not a declaration we can trust."""
     repo = make_repo(tmp_path)
     verified = repo / "data/verified"
     verified.mkdir(parents=True, exist_ok=True)
     (verified / "b.json").write_text("{not json", encoding="utf-8")
-    assert dedup_note(repo, "b") == ""
-    assert dedup_note(repo, "never-written") == ""
+    assert declarations(repo, ["b", "never-written"]) == {}
     first = IndexEntry("a", "A", "2026-07-01", "published")
     second = IndexEntry("b", "B", "2026-07-02", "published")
-    assert policy_exempt_pair(repo, first, second) == ""
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == ""
+
+
+def test_a_declaration_may_be_written_as_a_bare_string(tmp_path):
+    """One slug is the common case; a list of one is easy to get wrong."""
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", declares="a")
+    assert declarations(repo, ["b"]) == {"b": {"a"}}
+
+
+def test_a_malformed_declaration_is_ignored_rather_than_trusted(tmp_path):
+    repo = make_repo(tmp_path)
+    for bad in (5, {"a": 1}, [None, 7, ""], []):
+        write_verified(repo, "b", declares=bad)
+        assert declarations(repo, ["b"]) == {}, bad
+
 
 # A second article whose title agrees with gpt-5-6-launch and which cites one of
 # its sources — the exact shape of the pair that reddened CI for eight days.
@@ -333,11 +367,23 @@ def test_an_unlinked_duplicate_is_reported(tmp_path):
     assert offenders[0]["score"] == 1.0
 
 
-def test_a_recorded_decision_clears_it(tmp_path):
+def test_a_declared_standalone_clears_it(tmp_path):
     """The same record the archive test reads, asked before the commit lands."""
     repo = with_twin(tmp_path)
-    write_verified(repo, "gpt-5-6-twin", "coincidental against gpt-5-6-launch")
+    write_verified(repo, "gpt-5-6-twin", declares=["gpt-5-6-launch"])
     assert unlinked_duplicates(repo, ["gpt-5-6-twin"]) == []
+
+
+def test_prose_alone_does_not_clear_it(tmp_path):
+    repo = with_twin(tmp_path)
+    write_verified(repo, "gpt-5-6-twin", note="coincidental against gpt-5-6-launch")
+    assert len(unlinked_duplicates(repo, ["gpt-5-6-twin"])) == 1
+
+
+def test_a_pair_staged_together_is_one_refusal(tmp_path):
+    repo = with_twin(tmp_path)
+    offenders = unlinked_duplicates(repo, ["gpt-5-6-twin", "gpt-5-6-launch"])
+    assert len(offenders) == 1, offenders
 
 
 def test_a_follow_up_clears_it(tmp_path):

@@ -112,8 +112,13 @@ jobs:
             echo
             echo 'Failures:'
             echo '```'
-            grep -E '^(FAILED|ERROR) ' /tmp/pytest.txt 2>/dev/null | head -n 20 \
-              || echo "(pytest wrote nothing; a step other than the suite failed)"
+            # `grep | head` reports head's status, so the `||` fallback never
+            # fired and a non-pytest failure filed an empty code block.
+            if grep -E '^(FAILED|ERROR) ' /tmp/pytest.txt > /tmp/failures.txt 2>/dev/null; then
+              head -n 20 /tmp/failures.txt
+            else
+              echo "(no pytest failures — an earlier or later step failed; see the run log)"
+            fi
             echo '```'
           } > /tmp/suite.md
           bash .github/scripts/flag_issue.sh \
