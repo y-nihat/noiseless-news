@@ -1,0 +1,12 @@
+[
+  {
+    "id": "8d85e026153142c2",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "Visual Studio Code 1.135 introduces Rubber Duck agent",
+    "url": "https://www.infoworld.com/article/4215053/visual-studio-code-1-135-introduces-rubber-duck-agent.html",
+    "published": "2026-08-27T23:48:56+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">Microsoft’s latest update to <a href=\"https://www.infoworld.com/article/2254808/get-started-with-visual-studio-code.html\">Visual Studio Code</a>, released <a href=\"https://code.visualstudio.com/updates/v1_135\">August 26</a>, features a Rubber Duck agent for a second model opinion as well as UX improvements to the Agents window. VS Code also now can show recent Copilot or Claude agent sessions created in other applications and allow users to continue them.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><a href=\"https://code.visualstudio.com/Download?_exp_download=fb315fc982\">Downloads of Visual Studio Code</a> are available for Mac, Windows, and Linux. </p>\n\n\n\n<p class=\"wp-block-paragraph\">VS Code 1.135 features Rubber Duck, an experimental AI mode that <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/\">debuted in GitHub Copilot CLI in April</a>. The Rubber Duck agent is a built-in critic that provides a constructive second opinion on plans, code, and tests of the primary agent, using a different AI model from the one driving the session. Rubber Duck helps surface missed details or edge cases, according to Microsoft. </p>\n\n\n\n<p class=\"wp-block-paragraph\">Also with VS Code 1.135, the agent host now lets users connect to the same agent session from multiple VS Code windows. The agent host runs agent harnesses in a dedicated process based on the <a href=\"https://microsoft.github.io/agent-host-protocol/\" rel=\"noreferrer noopener\" target=\"_blank\">Agent Host Protocol</a>. Its Copilot agent is powered by the <a href=\"https://www.npmjs.com/package/@github/copilot-sdk\" rel=\"noreferrer noopener\" target=…",
+    "fetched_at": "2026-08-28T00:47:43.165888+00:00"
+  }
+]

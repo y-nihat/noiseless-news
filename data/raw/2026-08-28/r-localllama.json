@@ -1,0 +1,42 @@
+[
+  {
+    "id": "9708748751ce5016",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "5090 now officially cost 5090",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w05kbt/5090_now_officially_cost_5090/",
+    "published": "2026-08-27T20:30:22+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w05kbt/5090_now_officially_cost_5090/\"> <img alt=\"5090 now officially cost 5090\" src=\"https://preview.redd.it/8k90w5qh9zlh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=b3004fa7201673c6aee45dfcc9f0c1a6f2de30e8\" title=\"5090 now officially cost 5090\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I was planning on another 5090, but then I realize... perhaps I am much better off getting an M5 Ultra Mac Studio with 256gb of ram.</p> <p>We are so genuinely cooked.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Sadge404\"> /u/Sadge404 </a> <br /> <span><a href=\"https://i.redd.it/8k90w5qh9zlh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w05kbt/5090_now_officially_cost_5090/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T00:47:43.165888+00:00"
+  },
+  {
+    "id": "7ac3dc053c7aa515",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "The Unsloth appreciation post. BIG thanks to Daniel and Michael! Thanks from the community to you guys for so much!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w05clp/the_unsloth_appreciation_post_big_thanks_to/",
+    "published": "2026-08-27T20:22:55+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>With HF being bought out and its future feeling a little iffy, I got to thinking about the teams that have constantly looked out for the little guys and stayed true to their open-source roots. There are great developers who share their work freely, and the local AI scene is incredible for it—one user once described it as &quot;having Xmas every day,&quot; and that stuck with me.</p> <p>Unsloth in particular has worked tirelessly to bring high-quality quants to lower-end GPUs, super-fast GGUFs for everyone to test, and every time I see Daniel or Michael post, they're always humble and helpful.</p> <p>The last few days must have been non-stop for them with all the latest model drops. Daniel was right there pushing PRs for new architecture support (including keeping huge n-gram structures streaming properly from disk from day one).</p> <p>Huge respect to <a href=\"/u/danielhanchen\">u/danielhanchen</a> and <a href=\"/u/yoracale\">u/yoracale</a>. Keep up the most epic work!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Uncle___Marty\"> /u/Uncle___Marty </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w05clp/the_unsloth_appreciation_post_big_thanks_to/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w05clp/the_unsloth_appreciation_post_big_thanks_to/\">[comments]</a></span>",
+    "fetched_at": "2026-08-28T00:47:43.165888+00:00"
+  },
+  {
+    "id": "a4c4e9ac8c5ff98a",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I implemented a modern LLM in 700 lines of C",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w0ao39/i_implemented_a_modern_llm_in_700_lines_of_c/",
+    "published": "2026-08-27T23:53:48+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w0ao39/i_implemented_a_modern_llm_in_700_lines_of_c/\"> <img alt=\"I implemented a modern LLM in 700 lines of C\" src=\"https://external-preview.redd.it/bHAxMDR3amY5MG1oMUghZcTddpDMh35fbKIz_jvzOoMZDruriEz9j-KrcYXC.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6da4bd9e7f33576b0e337ad8c5b41e9eb5a1be31\" title=\"I implemented a modern LLM in 700 lines of C\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I’ve been working on a small project called gemma4.c.</p> <p>The idea is pretty simple: you can download a modern language model, compile one 700-line C file, and have it generate text on an ordinary CPU. Then you can read that same file from top to bottom and understand exactly how the model generates each new token.</p> <p>The model is Gemma 4 E2B, one of Google’s latest open models. The C runtime handles the tokenizer, transformer, KV cache, sampling, and CPU kernels itself. There’s no inference framework or external library doing the interesting parts underneath it.</p> <p>I built it mostly because I wanted to understand LLM inference at the level where it stops being diagrams and equations and becomes actual code. Keeping everything in one file made that much easier. You can start at <code>main()</code>, follow a prompt all the way through the runtime, see every buffer that’s allocated, every mathematical operation that transforms the activations, and every step that eventually turns your input into new tokens.</p> <p>I ended up spending a lot of time on the CPU side too. The runtime uses int8 weights and activations, OpenMP, AVX2, and AVX-512 VNNI where available. On my Ryzen 7 7700 it gets about 639 tok/s on a 512-token prefill and 25.9 tok/s during generation, making it faster than llama.cpp.</p> <p>The repo stays small on purpose. It only supports this model and CPU inference, so there’s much less machinery to work through than in a general-purpose runtime.</p> <p><a href=\"https://github.…",
+    "fetched_at": "2026-08-28T00:47:43.165888+00:00"
+  },
+  {
+    "id": "c9294e2fa01b8528",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Agent Arena Code - Very good result (preliminary) for GLM and Qwen!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w07ezc/agent_arena_code_very_good_result_preliminary_for/",
+    "published": "2026-08-27T21:40:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w07ezc/agent_arena_code_very_good_result_preliminary_for/\"> <img alt=\"Agent Arena Code - Very good result (preliminary) for GLM and Qwen!\" src=\"https://preview.redd.it/eial838dlzlh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b7f34449bf818353ff33af20c0dbdbfaf7212b80\" title=\"Agent Arena Code - Very good result (preliminary) for GLM and Qwen!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Everything has changed in two months: DS4 0731 flash was the start of a wave that is taking open weights to paradise. </p> <p>It is easy to think that Qwen 4 and GLM 6 will be on par with Mythos.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LegacyRemaster\"> /u/LegacyRemaster </a> <br /> <span><a href=\"https://i.redd.it/eial838dlzlh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w07ezc/agent_arena_code_very_good_result_preliminary_for/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-28T00:47:43.165888+00:00"
+  }
+]
