@@ -439,6 +439,36 @@ def _staged_slugs(repo_root: Path) -> tuple[set[str], list[str]]:
     return slugs, out
 
 
+def export_staged_tree(repo_root: Path, slugs, staged: list[str]) -> Path:
+    """Each touched slug's four twins, exported from the INDEX into a temp tree.
+
+    The caller owns the directory and must remove it. Shared with the duplicate
+    gate so both halves of the pre-commit hook judge the same bytes — the ones
+    about to be committed, not whatever happens to be on disk.
+    """
+    import subprocess
+    import tempfile
+
+    tmp = Path(tempfile.mkdtemp(prefix="staged-"))
+    for slug in slugs:
+        for rel in (
+            *(f"content/articles/{lang}/{y}/{m}/{slug}.md"
+              for lang in ("en", "tr")
+              for y, m in _year_months(repo_root, staged, slug)),
+            f"data/verified/{slug}.json",
+            f"data/ledger/{slug}.json",
+        ):
+            blob = subprocess.run(
+                ["git", "show", f":{rel}"], cwd=repo_root,
+                capture_output=True, text=True,
+            )
+            if blob.returncode == 0:
+                target = tmp / rel
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(blob.stdout, encoding="utf-8")
+    return tmp
+
+
 def check_staged(repo_root: Path | str) -> list[Finding]:
     """Validate what is about to be COMMITTED — the index, not the tree.
 
@@ -461,24 +491,8 @@ def check_staged(repo_root: Path | str) -> list[Finding]:
     if not article_touch:
         return []
 
-    tmp = Path(tempfile.mkdtemp(prefix="staged-"))
+    tmp = export_staged_tree(repo_root, slugs, staged)
     try:
-        for slug in slugs:
-            for rel in (
-                *(f"content/articles/{lang}/{y}/{m}/{slug}.md"
-                  for lang in ("en", "tr")
-                  for y, m in _year_months(repo_root, staged, slug)),
-                f"data/verified/{slug}.json",
-                f"data/ledger/{slug}.json",
-            ):
-                blob = subprocess.run(
-                    ["git", "show", f":{rel}"], cwd=repo_root,
-                    capture_output=True, text=True,
-                )
-                if blob.returncode == 0:
-                    target = tmp / rel
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_text(blob.stdout, encoding="utf-8")
         found = [f for f in validate(tmp) if f.level == "ERROR" and f.slug in slugs]
         # Only slugs whose ARTICLE is being committed are this commit's business.
         touched_articles = {Path(p).stem for p in article_touch}

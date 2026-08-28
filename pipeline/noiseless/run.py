@@ -126,6 +126,11 @@ def main(argv: list[str] | None = None) -> int:
         "--url", action="append", default=[], help="candidate source URL(s); repeatable"
     )
 
+    subparsers.add_parser(
+        "dedup-staged",
+        help="re-ask the duplicate gate about the staged articles (exit 1 to refuse)",
+    )
+
     args = parser.parse_args(argv)
 
     # Only the commands that read the registry load it. validate-content and
@@ -206,6 +211,59 @@ def main(argv: list[str] | None = None) -> int:
             max_held=args.max_held, github=args.github, json_path=args.json,
             brief=args.brief, staged=args.staged,
         )
+
+    if args.command == "dedup-staged":
+        # Imported here for the same reason validate-content is: this runs as a
+        # pre-commit hook and must not pay for, or fail on, the feed stack.
+        import shutil
+        import subprocess
+
+        from noiseless.dedup import unlinked_duplicates
+        from noiseless.validate_content import _staged_slugs, export_staged_tree
+
+        # git invokes a hook from the repo root, but nothing guarantees a human
+        # or a test does; resolving it explicitly stops the check from finding
+        # no archive, reporting nothing and exiting 0 — a silent pass.
+        top = subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True
+        )
+        if top.returncode != 0:
+            print("dedup-staged: not inside a git repository")
+            return 2
+        root = Path(top.stdout.strip())
+
+        slugs, staged = _staged_slugs(root)
+        # Same rule as check_staged: only slugs whose ARTICLE is in this commit
+        # are this commit's business. Otherwise a ledger-only or report-only
+        # commit is refused for a defect someone else left behind, which is the
+        # incentive to un-publish another story to land your own.
+        touched = {Path(p).stem for p in staged if p.startswith("content/articles/")}
+        if not touched:
+            return 0
+        tree = export_staged_tree(root, slugs, staged)
+        try:
+            offenders = unlinked_duplicates(root, slugs & touched, staged_root=tree)
+        finally:
+            shutil.rmtree(tree, ignore_errors=True)
+        if not offenders:
+            return 0
+        for bad in offenders:
+            print(
+                f"commit refused: {bad['slug']} strongly matches {bad['matches']} "
+                f"(score {bad['score']}, {bad['shared_url_count']} shared source URL(s)) "
+                "and nothing links or excuses them."
+            )
+        print(
+            "\npolicy/verification.md §8 gives three outcomes — pick one and stage it:\n"
+            "  same event   -> fold this into the matched article instead\n"
+            "  same saga    -> `follows: <slug>` in the article frontmatter AND the "
+            "ledger entry\n"
+            "  coincidental -> say why in data/verified/<this-slug>.json's `dedup_check` "
+            "field,\n"
+            "                  naming the matched slug. That record is what the archive "
+            "test reads."
+        )
+        return 1
 
     if args.command == "dedup-check":
         import json as _json

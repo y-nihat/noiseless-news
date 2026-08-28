@@ -212,11 +212,20 @@ PYEOF
 )
     read -r held_now held_slugs <<<"$summary"
     [ "$held_slugs" = "-" ] && held_slugs=""
-    if [ "$held_now" = "?" ]; then
-      gate_trips=$((gate_trips + 1)); content_gate_ok=0; held_now=0
-      log "GATE BLOCKED — the findings file could not be read; refusing to guess"
-      return 1
-    fi
+    # Anything that is not a number is "held = unknown", which is blocked. The
+    # guard used to test for the literal `?` this reader prints when it catches
+    # an exception, and so missed the case where the reader printed nothing at
+    # all: $held_now was empty, `[ "" -gt 0 ]` below errored to stderr, and the
+    # function fell through to content_gate_ok=1 — a fail-open, and the exact
+    # opposite of the comment above it. Seen for real in CI run #62, whose
+    # STATE line read `gate_ok=1 held=`.
+    case "${held_now:-}" in
+      '' | *[!0-9]*)
+        gate_trips=$((gate_trips + 1)); content_gate_ok=0; held_now=0
+        log "GATE BLOCKED — the findings file could not be read; refusing to guess"
+        return 1
+        ;;
+    esac
     if [ "$held_now" -gt 0 ]; then
       log "GATE: $held_now held from the site — ${held_slugs//,/, } — deploy proceeds without them; repair queued for the next cycle"
       # First-seen bookkeeping for the footer's lifecycle line.
@@ -257,6 +266,53 @@ suite_check() {
   grep -E '^(FAILED|ERROR) ' "$NIGHT_STATE_DIR/gate-pytest.txt" | head -n 10 \
     | while IFS= read -r line; do log "  $line"; done
   return 1
+}
+
+# `suite_check` logs the failures and leaves them in gate-pytest.txt; nothing
+# outside it ever read the file, so they reached the job log and never the
+# agent's repair brief. On every night from
+# 2026-08-20 the repair queue printed "REPAIR QUEUE: empty — the archive is
+# clean" in the same container where pytest was failing on two published
+# articles, and eight consecutive nights of self-repair never saw it.
+#
+# The archive tests' subject is content/ and data/ledger/ — the agent's own
+# OWNED_PATHS — so a failure there is precisely the class of thing it can fix.
+# Advisory, never a gate: a red suite is not a deploy predicate here (deploy.yml
+# made that call first), it does not decide whether a cycle runs, and pipeline
+# code is not the agent's to touch.
+# The archive tests — the ones whose subject is content/ and data/, not the
+# pipeline. Ownership is decided by the test MODULE, because every pytest
+# failure line begins "FAILED pipeline/tests/…" whatever it is about: a rule
+# phrased as "a failure naming content/ or data/ is yours" routes every failure
+# to the operator, including the archive ones this whole change exists for.
+# The same list appears in RUNBOOK.md's "The test suite is red".
+ARCHIVE_TESTS='test_dedup_repo_data|test_evidence_surface.*TestRealArchive|test_validate_content.*TestRealArchive'
+
+append_suite_repairs() {
+  local brief=$1 pytest_out="$NIGHT_STATE_DIR/gate-pytest.txt" failures yours
+  [ -s "$pytest_out" ] || return 0
+  # `{{` is how the cycle prompt marks an unsubstituted placeholder, and the
+  # loop refuses to send a prompt still containing one. A test name or an
+  # assertion carrying `{{` would therefore abort the night at cycle 1 — a
+  # supervisor killed by the text of a failure it was only meant to relay.
+  failures=$(grep -E '^(FAILED|ERROR) ' "$pytest_out" | head -n 10 | sed 's/{{/{ {/g')
+  [ -n "$failures" ] || return 0
+  yours=$(printf '%s\n' "$failures" | grep -cE "$ARCHIVE_TESTS") || true
+  {
+    echo
+    echo "## Unit suite — advisory, from the previous cycle"
+    echo
+    printf '%s\n' "$failures"
+    echo
+    if [ "${yours:-0}" -gt 0 ]; then
+      echo "$yours of these are ARCHIVE tests — their subject is content/ and data/,"
+      echo "which are yours. Repair them in this cycle the same way a held story is"
+      echo "repaired: fix the archive, not the test. Run the named test to see the"
+      echo "assertion in full; it prints the remedy."
+    fi
+    echo "A failure in any other module is pipeline code, which is the operator's."
+    echo "Leave it alone — it is already filed."
+  } >> "$brief"
 }
 
 commit_push() {
@@ -354,6 +410,9 @@ for cycle in $(seq 1 "$MAX_CYCLES"); do
   [ -s "$NIGHT_STATE_DIR/repair-$cycle.md" ] \
     || echo "REPAIR QUEUE: could not be computed — run validate-content --strict before your first commit." \
        > "$NIGHT_STATE_DIR/repair-$cycle.md"
+  # Deliberately after `repairs_pending` is set, so a red suite never decides
+  # whether a cycle runs — only what it is told once it does.
+  append_suite_repairs "$NIGHT_STATE_DIR/repair-$cycle.md"
 
   if [ "$stories" -eq 0 ] && [ "$is_final" -eq 0 ] && [ "$repairs_pending" -eq 0 ]; then
     log "night story cap reached — skipping agent cycle $cycle"

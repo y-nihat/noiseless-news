@@ -46,6 +46,12 @@ def gh_stub(tmp_path: Path) -> dict[str, Path]:
         f'  cat "{listing}"\n'
         "  exit 0\n"
         "fi\n"
+        'if [ "$1" = "issue" ] && [ "$2" = "create" ]; then\n'
+        '  echo "https://github.com/y-nihat/noiseless-news/issues/99"\n'
+        "fi\n"
+        'if [ "$1" = "issue" ] && [ "$2" = "edit" ]; then\n'
+        '  exit "${GH_EDIT_EXIT:-0}"\n'
+        "fi\n"
         'exit "${GH_WRITE_EXIT:-0}"\n',
         encoding="utf-8",
     )
@@ -107,6 +113,48 @@ class TestWhenThereIsNoThreadYet:
         result = flag(gh_stub, "Source health: failing feeds", "a title")
         assert result.returncode == 0
         assert any(c.startswith("issue create") for c in calls(gh_stub))
+
+
+class TestTheAlarmIsAddressedToSomebody:
+    """A filed alarm that reaches nobody is the failure mode this exists for.
+
+    On GitHub an issue reaches a person through assignment, an @-mention or
+    prior participation. A label subscribes nobody, and neither does owning the
+    repository: issue #37 carried a red test suite in its body and all seven of
+    its comments for eight days, unassigned, and reached nobody.
+    """
+
+    OWNER = {"GITHUB_REPOSITORY": "y-nihat/noiseless-news"}
+
+    def test_a_new_thread_is_assigned_to_the_repository_owner(self, gh_stub):
+        gh_stub["listing"].write_text("[]", encoding="utf-8")
+        result = flag(gh_stub, "Tests red", "Tests red 2026-08-28", env=self.OWNER)
+        assert result.returncode == 0
+        assert any("--add-assignee y-nihat" in c for c in calls(gh_stub)), calls(gh_stub)
+
+    def test_an_existing_thread_is_assigned_too(self, gh_stub):
+        """The thread that needed this most was opened before anyone thought to,
+        and a comment on an unassigned issue notifies nobody either."""
+        flag(gh_stub, "Source health: failing feeds", "a title", env=self.OWNER)
+        assert any("issue edit 19 --add-assignee y-nihat" in c for c in calls(gh_stub))
+
+    def test_a_refused_assignment_still_leaves_the_alarm_filed(self, gh_stub):
+        """Losing the alarm to fix its addressing would be the wrong trade."""
+        gh_stub["listing"].write_text("[]", encoding="utf-8")
+        result = flag(
+            gh_stub, "Tests red", "a title", env={**self.OWNER, "GH_EDIT_EXIT": "1"}
+        )
+        assert result.returncode == 0
+        assert any(c.startswith("issue create") for c in calls(gh_stub))
+
+    def test_outside_actions_it_files_without_assigning(self, gh_stub):
+        """`set -u` turns a bare ${GITHUB_REPOSITORY%%/*} into an abort, which
+        would take every local and test invocation of the script with it."""
+        gh_stub["listing"].write_text("[]", encoding="utf-8")
+        result = flag(gh_stub, "Tests red", "a title")
+        assert result.returncode == 0, result.stderr
+        assert any(c.startswith("issue create") for c in calls(gh_stub))
+        assert not any("add-assignee" in c for c in calls(gh_stub))
 
 
 class TestWhenGitHubRefuses:

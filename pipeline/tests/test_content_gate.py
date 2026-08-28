@@ -87,6 +87,39 @@ class TestTheGateItself:
         )
         assert state(result)["gate_ok"] == "0"
 
+    def test_a_read_back_that_prints_nothing_blocks(self, scratch):
+        """The fail-open the `?` sentinel could not see.
+
+        The reader prints `? -` when it catches an exception, and the guard
+        tested for that literal `?`. An interpreter that dies before printing
+        anything leaves $held_now empty instead: `[ "" -gt 0 ]` errors to
+        stderr, and the gate used to fall through to content_gate_ok=1 — the
+        exact opposite of "treat an unreadable file as held = unknown, which is
+        blocked, not clean". CI run #62 recorded it live, as `gate_ok=1 held=`.
+        """
+        result = drive(
+            scratch, f"STUB_READBACK_SILENT=1 content_gate; {HELD_REPORT}"
+        )
+        assert state(result)["gate_ok"] == "0", "an unreadable held set opened the gate"
+        assert state(result)["trips"] == "1"
+        assert "refusing to guess" in result.stdout
+
+    def test_a_read_back_that_prints_nonsense_blocks_too(self, scratch):
+        """Whatever is not a number is "held = unknown", not "held = none"."""
+        result = drive(
+            scratch,
+            'cat > "$(dirname "$(command -v python)")/python" <<\'EOF\'\n'
+            '#!/bin/sh\n'
+            'if [ "$1" = "-" ]; then echo "banana -"; exit 0; fi\n'
+            'json=""\n'
+            'while [ $# -gt 0 ]; do [ "$1" = "--json" ] && json="$2"; shift; done\n'
+            '[ -n "$json" ] && echo \'{"held": {}}\' > "$json"\n'
+            'exit 0\nEOF\n'
+            f"content_gate; {HELD_REPORT}",
+        )
+        assert state(result)["gate_ok"] == "0"
+        assert "refusing to guess" in result.stdout
+
     def test_a_later_cycle_within_the_ceiling_reopens_it(self, scratch):
         """A cycle can repair what an earlier one broke; the site should catch up."""
         result = drive(
@@ -213,3 +246,84 @@ class TestTheVisibleSignalOnMain:
         workflow = INGEST_WORKFLOW.read_text(encoding="utf-8")
         assert 'gh workflow run "Tests" --ref main' in workflow
         assert workflow.index('gh workflow run "Tests"') > workflow.rindex("git push")
+
+
+class TestTheSuiteReachesTheRepairQueue:
+    """`suite_check` wrote its failures to a file nothing read again.
+
+    From 2026-08-20 the repair queue printed "REPAIR QUEUE: empty — the archive
+    is clean" on eight consecutive nights, in the same container where pytest
+    was failing on two published articles. The archive tests' subject is
+    content/ and data/ledger/ — the agent's own OWNED_PATHS — so that was the
+    one class of failure the self-repair loop could have closed and did not.
+    """
+
+    def _brief(self, scratch, failures: str, existing: str = "REPAIR QUEUE: empty\n"):
+        (scratch["state"] / "gate-pytest.txt").write_text(failures, encoding="utf-8")
+        brief = scratch["state"] / "repair-1.md"
+        brief.write_text(existing, encoding="utf-8")
+        drive(scratch, f'append_suite_repairs "{brief}"')
+        return brief.read_text(encoding="utf-8")
+
+    def test_the_failures_are_appended_to_the_brief(self, scratch):
+        text = self._brief(
+            scratch,
+            "FAILED pipeline/tests/test_dedup_repo_data.py::test_no_two_published"
+            "_stories_strong_match_each_other - AssertionError\n"
+            "1 failed, 447 passed\n",
+        )
+        assert "REPAIR QUEUE: empty" in text, "the archive's own queue was overwritten"
+        assert "test_dedup_repo_data" in text
+        assert "Unit suite" in text
+
+    def test_an_archive_failure_is_named_as_the_agent_s(self, scratch):
+        """Ownership is decided by the test module, not by the assertion text.
+
+        Every pytest failure line begins "FAILED pipeline/tests/…", whatever it
+        is about. The first cut of this said "a failure naming content/ or
+        data/ is yours", which routed every failure — including the archive
+        ones this whole change exists for — to the operator.
+        """
+        text = self._brief(
+            scratch,
+            "FAILED pipeline/tests/test_dedup_repo_data.py::test_no_two_published"
+            "_stories_strong_match_each_other - AssertionError\n",
+        )
+        assert "1 of these are ARCHIVE tests" in text, text
+        assert "yours" in text
+
+    def test_a_pipeline_failure_is_named_as_the_operator_s(self, scratch):
+        text = self._brief(scratch, "FAILED pipeline/tests/test_publish.py::test_y - boom\n")
+        assert "ARCHIVE tests" not in text, text
+        assert "operator" in text
+
+    def test_a_brace_pair_in_a_failure_cannot_abort_the_night(self, scratch):
+        """`{{` marks an unsubstituted placeholder and the loop refuses to send
+        a prompt still carrying one — so a test name containing it would kill
+        the supervisor with the text of a failure it was only relaying."""
+        text = self._brief(
+            scratch, "FAILED pipeline/tests/test_x.py::test_renders_{{TOKEN}} - boom\n"
+        )
+        assert "{{" not in text, text
+        assert "TOKEN" in text, "the failure was neutralised into uselessness"
+
+    def test_a_green_suite_appends_nothing(self, scratch):
+        text = self._brief(scratch, "447 passed in 20.1s\n")
+        assert text.strip() == "REPAIR QUEUE: empty"
+
+    def test_no_suite_output_at_all_appends_nothing(self, scratch):
+        """Cycle 1 of a night has no previous cycle to have written one."""
+        brief = scratch["state"] / "repair-1.md"
+        brief.write_text("REPAIR QUEUE: empty\n", encoding="utf-8")
+        drive(scratch, f'append_suite_repairs "{brief}"')
+        assert brief.read_text(encoding="utf-8").strip() == "REPAIR QUEUE: empty"
+
+    def test_it_does_not_decide_whether_a_cycle_runs(self):
+        """Advisory only. Promoting a red suite to a run predicate would spend a
+        cycle every night on pipeline tests the agent may not touch."""
+        text = SCRIPT.read_text(encoding="utf-8")
+        splice = text.split("append_suite_repairs \"$NIGHT_STATE_DIR")[0]
+        assert "repairs_pending=$((" in splice, (
+            "the suite is spliced in before repairs_pending is computed, so it "
+            "now decides whether the agent runs at the story cap"
+        )

@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pytest
 
-from noiseless.dedup import STRONG_THRESHOLD, load_index, similarity, tokens
+from noiseless.dedup import check, declarations, load_index, policy_exempt_pair, tokens
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -99,17 +99,93 @@ def test_open_stories_carry_an_identity_url(index):
     )
 
 
+def _strong_pairs(published):
+    """Every published pair the live gate would score `strong`, each once.
+
+    Scored by `check()` — the same function `dedup-check` runs — rather than by
+    a copy of its arithmetic. The copy this replaces was written alongside
+    `check()` and never matched it: it inlined MODERATE_THRESHOLD as a literal
+    `0.34` and omitted the `elif shared` branch. A second definition of the
+    same rule that nothing kept in sync is a defect whether or not the two have
+    diverged yet.
+    """
+    by_slug = {e.slug: e for e in published}
+    seen = set()
+    for first in published:
+        others = [e for e in published if e.slug != first.slug]
+        for match in check(first.title, sorted(first.urls), others):
+            if match["strength"] != "strong":
+                continue
+            pair = frozenset((first.slug, match["slug"]))
+            if pair in seen:
+                continue
+            seen.add(pair)
+            yield first, by_slug[match["slug"]], match["score"]
+
+
 def test_no_two_published_stories_strong_match_each_other(index):
-    """A strong match means "do not publish this". Two live articles matching
-    each other means the gate would have blocked one of them."""
+    """A strong match means "do not publish this" — unless §8 says otherwise.
+
+    §8 gives a strong match three outcomes, and two of them deliberately leave
+    two published stories matching: a follow-up shares its predecessor's saga
+    and usually its sources, and "unrelated despite surface similarity" is an
+    explicit licence to publish standalone. Asserting that no two published
+    stories may match asserted something stricter than the policy it exists to
+    mechanise, and on 2026-08-20 it started failing on a pair the policy allows:
+    the Pennsylvania executive-order story cites New York's Executive Order 62 —
+    as evidence for its own claim that Pennsylvania is the third such state —
+    and one shared citation plus four generic title words ("governor", "signs",
+    "data", "centers") scored 1.0. That is the site doing its job.
+
+    What still fails, and must: an *unrecorded* standalone. The exemption
+    requires the evidence log to name the other slug, so a genuine unlinked
+    duplicate has nowhere to hide.
+    """
     published = [e for e in index if e.state == "published"]
-    collisions = []
-    for i, first in enumerate(published):
-        for second in published[i + 1 :]:
-            score = similarity(tokens(first.title), tokens(second.title))
-            shared = first.urls & second.urls
-            if shared and (len(shared) >= 2 or score >= 0.34):
-                score = 1.0
-            if score >= STRONG_THRESHOLD:
-                collisions.append((first.slug, second.slug, round(score, 3)))
-    assert not collisions, f"published stories that would block each other: {collisions}"
+    declared = declarations(REPO_ROOT, [e.slug for e in published])
+    collisions = [
+        (first.slug, second.slug, score)
+        for first, second, score in _strong_pairs(published)
+        if not policy_exempt_pair(declared, first, second)
+    ]
+    assert not collisions, (
+        f"published stories that would block each other: {collisions}\n"
+        "policy/verification.md §8 gives three outcomes for a strong match — pick one:\n"
+        "  * same event      -> fold the newer story into the older one (in-place update)\n"
+        "  * same saga       -> `follows: <slug>` in the article frontmatter AND the ledger\n"
+        "  * coincidental    -> list the other slug in the newer story's\n"
+        "                       data/verified/<slug>.json `dedup_standalone`, and say why\n"
+        "                       in its `dedup_check` prose"
+    )
+
+
+def test_every_follows_link_points_at_a_real_story(index):
+    """A saga link into nothing is a thread the site cannot render.
+
+    Also the half of the exemption above that has no other guard: a typo'd
+    `follows` would silently stop excusing the pair it was written for.
+    """
+    known = {e.slug for e in index}
+    broken = [(e.slug, e.follows) for e in index if e.follows and e.follows not in known]
+    assert not broken, f"follows: pointing at no known story: {broken}"
+
+
+def test_no_standalone_is_declared_against_a_story_that_does_not_exist(index):
+    """A declaration is an exemption; one pointing nowhere is a silent hole.
+
+    The field replaced a check that read the prose `dedup_check` and looked for
+    the other slug's name in it. That granted amnesty for merely mentioning a
+    slug — a note reading "dedup-check clean, no matches against the archive"
+    excused the pair it denied — and 28 published pairs carried such a standing
+    exemption nobody had declared. A typo'd declaration would be the same hole
+    in a smaller form.
+    """
+    known = {e.slug for e in index}
+    declared = declarations(REPO_ROOT, [e.slug for e in index])
+    dangling = sorted(
+        (slug, other)
+        for slug, others in declared.items()
+        for other in others
+        if other not in known
+    )
+    assert not dangling, f"dedup_standalone naming no known story: {dangling}"

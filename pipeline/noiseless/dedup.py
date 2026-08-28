@@ -73,6 +73,10 @@ class IndexEntry:
     date: str
     state: str
     urls: set[str] = field(default_factory=set)
+    # §8's saga link. Two members of one thread are *meant* to look alike, so
+    # anything reasoning about "these two stories match" has to be able to see
+    # the relationship the policy already blessed.
+    follows: str = ""
 
 
 def tokens(text: str) -> set[str]:
@@ -114,6 +118,7 @@ def load_index(repo_root: Path | str) -> list[IndexEntry]:
             date=str(meta.get("date", "")),
             state="published",
             urls=urls,
+            follows=str(meta.get("follows") or ""),
         )
 
     ledger_dir = repo_root / "data" / "ledger"
@@ -145,6 +150,7 @@ def load_index(repo_root: Path | str) -> list[IndexEntry]:
                 date=_first_present(data, LEDGER_DATE_KEYS),
                 state=str(data.get("state", data.get("status", "unknown"))),
                 urls=urls,
+                follows=str(data.get("follows") or ""),
             )
 
     return list(entries.values())
@@ -189,3 +195,132 @@ def check(
             )
     matches.sort(key=lambda m: m["score"], reverse=True)
     return matches
+
+
+def declarations(repo_root: Path | str, slugs) -> dict[str, set[str]]:
+    """Per slug, the stories its evidence log declares §8(c) coincidental against.
+
+    `dedup_standalone` is a list of slugs and nothing else. The first cut of
+    this read the prose `dedup_check` field and looked for the other slug's
+    name in it, which turned out to grant amnesty for merely *mentioning* a
+    slug: a note reading "dedup-check clean, no matches against the archive"
+    excused the very pair it denied, a note citing a slug as a styling
+    precedent excused it, a slug inside a URL excused it, and so would a note
+    confessing to being an unlinked duplicate. Twenty-eight published pairs
+    carried such a standing exemption on 2026-08-28 without anyone declaring
+    one. A gate cannot read intent out of prose; it can read a list.
+
+    The prose record §0a asks for stays where it is. It is the human half.
+    """
+    found: dict[str, set[str]] = {}
+    for slug in slugs:
+        path = Path(repo_root) / "data" / "verified" / f"{slug}.json"
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        declared = data.get("dedup_standalone")
+        if isinstance(declared, str):
+            declared = [declared]
+        if not isinstance(declared, list):
+            continue
+        named = {d for d in declared if isinstance(d, str) and d}
+        if named:
+            found[slug] = named
+    return found
+
+
+def policy_exempt_pair(
+    declared: dict[str, set[str]], first: IndexEntry, second: IndexEntry
+) -> str:
+    """Why §8 permits these two published stories to match strongly, or "".
+
+    A strong match is not by itself a defect. §8 gives it three outcomes and
+    two of them leave two published stories matching on purpose:
+
+      * a follow-up article, which shares the saga and usually the sources; and
+      * "unrelated despite surface similarity" — a standalone, whose only
+        requirement is that the dedup decision is recorded.
+
+    The declaration is read from the NEWER story, which is the one §8 puts the
+    decision on; an older story cannot excuse a duplicate published after it.
+    When the two carry the same date, or either has none, a declaration on
+    either side counts — the ordering is unknowable, not absent.
+    """
+    if first.follows == second.slug or second.follows == first.slug:
+        return "follows"
+    pairs = [(first, second), (second, first)]
+    if first.date and second.date and first.date != second.date:
+        newer, older = (first, second) if first.date > second.date else (second, first)
+        pairs = [(newer, older)]
+    for declarer, other in pairs:
+        if other.slug in declared.get(declarer.slug, ()):
+            return f"§8(c) declared in data/verified/{declarer.slug}.json"
+    return ""
+
+
+def unlinked_duplicates(
+    repo_root: Path | str, slugs, staged_root: Path | str | None = None
+) -> list[dict]:
+    """Strong matches among published stories that §8 has not accounted for.
+
+    The same question `test_dedup_repo_data.py` asks of the whole archive,
+    asked of a few slugs — so the pre-commit hook can refuse exactly what CI
+    would later fail on, rather than a near-miss of it.
+
+    This exists because the gate that runs BEFORE a story is written and the
+    invariant that runs after it is committed were scoring different things.
+    On 2026-08-20 `dedup-check` was run, honestly, against a working title and
+    the one URL that existed at triage; the finished article then acquired a
+    citation of the matched story's primary document, and CI went red for eight
+    days on a decision the agent had already justified in writing. Re-asking
+    with the finished article's real title and real sources is what makes that
+    justification land against the evidence it will be judged on.
+
+    `staged_root` is a tree exported from the git index. When given, it wins
+    for every slug it contains: the hook's whole contract is that it judges
+    what is about to be committed, so an article or a declaration edited on
+    disk but never `git add`ed must not count.
+    """
+    repo_root = Path(repo_root)
+    index = {e.slug: e for e in load_index(repo_root) if e.state == "published"}
+    declared = declarations(repo_root, index)
+    if staged_root is not None:
+        staged = {e.slug: e for e in load_index(staged_root) if e.state == "published"}
+        index.update(staged)
+        # Drop the working tree's answer for these slugs before taking the
+        # index's, so a declaration written on disk and never `git add`ed is
+        # gone rather than merged in. Updating without clearing first left the
+        # on-disk value standing, which is the fail-open this argument exists
+        # to close.
+        for slug in staged:
+            declared.pop(slug, None)
+        declared.update(declarations(staged_root, staged))
+    published = list(index.values())
+    offenders, seen = [], set()
+    for slug in sorted(slugs):
+        entry = index.get(slug)
+        if entry is None:
+            continue  # not a published article: nothing for this check to say
+        others = [e for e in published if e.slug != slug]
+        for match in check(entry.title, sorted(entry.urls), others):
+            if match["strength"] != "strong":
+                continue
+            other = index[match["slug"]]
+            if policy_exempt_pair(declared, entry, other):
+                continue
+            pair = frozenset((slug, other.slug))
+            if pair in seen:  # both halves staged together is one refusal
+                continue
+            seen.add(pair)
+            offenders.append(
+                {
+                    "slug": slug,
+                    "matches": other.slug,
+                    "score": match["score"],
+                    "shared_url_count": match["shared_url_count"],
+                }
+            )
+    return offenders

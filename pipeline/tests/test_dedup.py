@@ -9,7 +9,17 @@ while two watching stories were invisible to the live duplicate gate.
 
 import json
 
-from noiseless.dedup import check, identity_urls, load_index, similarity, tokens
+from noiseless.dedup import (
+    IndexEntry,
+    check,
+    declarations,
+    identity_urls,
+    load_index,
+    policy_exempt_pair,
+    similarity,
+    tokens,
+    unlinked_duplicates,
+)
 
 ARTICLE = """---
 title: OpenAI releases GPT-5.6 model family
@@ -165,3 +175,245 @@ def test_watching_ledger_entry_matches(tmp_path):
 def test_token_similarity_basics():
     assert similarity(tokens("OpenAI releases GPT-5.6"), tokens("the of and")) == 0.0
     assert similarity(set(), set()) == 0.0
+
+
+# --- §8: the outcomes that leave two published stories matching on purpose ---
+#
+# A strong match is not by itself a defect. §8 gives it three outcomes and two
+# of them are supposed to produce exactly the state the archive invariant used
+# to fail on. These fix the shape of the exemption, so widening it later takes a
+# deliberate edit rather than an accident.
+
+FOLLOW_UP = """---
+title: OpenAI ships GPT-5.6 to the enterprise tier
+date: 2026-07-20
+slug: gpt-5-6-enterprise
+lang: en
+follows: gpt-5-6-launch
+tldr: The enterprise rollout of the GPT-5.6 family.
+sources:
+  - name: OpenAI News
+    url: https://openai.com/index/gpt-5-6-enterprise
+---
+
+Body.
+"""
+
+
+def write_verified(repo, slug, *, declares=None, note="prose about the check"):
+    verified = repo / "data/verified"
+    verified.mkdir(parents=True, exist_ok=True)
+    body = {"slug": slug, "dedup_check": note}
+    if declares is not None:
+        body["dedup_standalone"] = declares
+    (verified / f"{slug}.json").write_text(json.dumps(body), encoding="utf-8")
+
+
+def declared_for(repo, *slugs):
+    return declarations(repo, slugs)
+
+
+def test_follows_is_indexed_from_the_article(tmp_path):
+    repo = make_repo(tmp_path)
+    (repo / "content/articles/en/2026/07/gpt-5-6-enterprise.md").write_text(
+        FOLLOW_UP, encoding="utf-8"
+    )
+    by_slug = {e.slug: e for e in load_index(repo)}
+    assert by_slug["gpt-5-6-enterprise"].follows == "gpt-5-6-launch"
+    assert by_slug["gpt-5-6-launch"].follows == ""
+
+
+def test_follows_is_indexed_from_the_ledger(tmp_path):
+    """§8 requires the ledger entry to mirror the field; a `null` is not a link."""
+    repo = make_repo(
+        tmp_path,
+        {"slug": "meta-chip-2", "status": "watching", "first_seen": "2026-07-10",
+         "follows": "meta-chip"},
+        {"slug": "meta-chip", "status": "watching", "first_seen": "2026-07-09",
+         "follows": None},
+    )
+    by_slug = {e.slug: e for e in load_index(repo)}
+    assert by_slug["meta-chip-2"].follows == "meta-chip"
+    assert by_slug["meta-chip"].follows == ""
+
+
+def test_a_saga_link_excuses_the_pair_in_either_direction(tmp_path):
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published", follows="a")
+    assert policy_exempt_pair({}, first, second) == "follows"
+    assert policy_exempt_pair({}, second, first) == "follows"
+
+
+def test_a_declaration_on_the_newer_story_excuses_the_pair(tmp_path):
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", declares=["a"])
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    declared = declared_for(repo, "a", "b")
+    assert "data/verified/b.json" in policy_exempt_pair(declared, first, second)
+
+
+def test_prose_that_merely_names_the_slug_excuses_nothing(tmp_path):
+    """The hole the declaration replaced.
+
+    Reading the prose `dedup_check` for the other slug's name granted amnesty
+    for merely mentioning it: a note reading "clean, no matches against the
+    archive" excused the very pair it denied, and so did a slug cited as a
+    styling precedent, a slug inside a URL, and a note confessing to being an
+    unlinked duplicate. Twenty-eight published pairs carried such a standing
+    exemption on 2026-08-28 without anyone having declared one.
+    """
+    repo = make_repo(tmp_path)
+    for note in (
+        "dedup-check clean, no matches against the archive; a is a styling precedent",
+        "This is the same event as a. I could not be bothered to fold it in.",
+        "see https://example.com/x/a/y for background",
+    ):
+        write_verified(repo, "b", note=note)
+        first = IndexEntry("a", "A", "2026-07-01", "published")
+        second = IndexEntry("b", "B", "2026-07-02", "published")
+        assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == "", note
+
+
+def test_an_older_story_cannot_excuse_a_newer_duplicate(tmp_path):
+    """§8 puts the decision on the story being opened, not the one it matched."""
+    repo = make_repo(tmp_path)
+    write_verified(repo, "a", declares=["b"])
+    older = IndexEntry("a", "A", "2026-07-01", "published")
+    newer = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), older, newer) == ""
+
+
+def test_either_side_counts_when_the_dates_cannot_order_them(tmp_path):
+    """Same-day stories have no newer one; refusing both would be arbitrary."""
+    repo = make_repo(tmp_path)
+    write_verified(repo, "a", declares=["b"])
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-01", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second)
+    undated = IndexEntry("b", "B", "", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, undated)
+
+
+def test_a_declaration_naming_a_different_story_excuses_nothing(tmp_path):
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", declares=["some-other-story"])
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == ""
+
+
+def test_an_undeclared_standalone_is_not_excused(tmp_path):
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b")
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == ""
+
+
+def test_an_unreadable_or_missing_evidence_log_excuses_nothing(tmp_path):
+    """Fail closed: a log we cannot parse is not a declaration we can trust."""
+    repo = make_repo(tmp_path)
+    verified = repo / "data/verified"
+    verified.mkdir(parents=True, exist_ok=True)
+    (verified / "b.json").write_text("{not json", encoding="utf-8")
+    assert declarations(repo, ["b", "never-written"]) == {}
+    first = IndexEntry("a", "A", "2026-07-01", "published")
+    second = IndexEntry("b", "B", "2026-07-02", "published")
+    assert policy_exempt_pair(declared_for(repo, "a", "b"), first, second) == ""
+
+
+def test_a_declaration_may_be_written_as_a_bare_string(tmp_path):
+    """One slug is the common case; a list of one is easy to get wrong."""
+    repo = make_repo(tmp_path)
+    write_verified(repo, "b", declares="a")
+    assert declarations(repo, ["b"]) == {"b": {"a"}}
+
+
+def test_a_malformed_declaration_is_ignored_rather_than_trusted(tmp_path):
+    repo = make_repo(tmp_path)
+    for bad in (5, {"a": 1}, [None, 7, ""], []):
+        write_verified(repo, "b", declares=bad)
+        assert declarations(repo, ["b"]) == {}, bad
+
+
+# A second article whose title agrees with gpt-5-6-launch and which cites one of
+# its sources — the exact shape of the pair that reddened CI for eight days.
+TWIN = """---
+title: OpenAI releases GPT-5.6 model family to enterprise
+date: 2026-07-19
+slug: gpt-5-6-twin
+lang: en
+tldr: A second story on the same launch.
+sources:
+  - name: OpenAI News
+    url: https://openai.com/index/gpt-5-6
+---
+
+Body.
+"""
+
+
+def with_twin(tmp_path):
+    repo = make_repo(tmp_path)
+    (repo / "content/articles/en/2026/07/gpt-5-6-twin.md").write_text(TWIN, encoding="utf-8")
+    return repo
+
+
+def test_an_unlinked_duplicate_is_reported(tmp_path):
+    repo = with_twin(tmp_path)
+    offenders = unlinked_duplicates(repo, ["gpt-5-6-twin"])
+    assert [o["matches"] for o in offenders] == ["gpt-5-6-launch"]
+    assert offenders[0]["score"] == 1.0
+
+
+def test_a_declared_standalone_clears_it(tmp_path):
+    """The same record the archive test reads, asked before the commit lands."""
+    repo = with_twin(tmp_path)
+    write_verified(repo, "gpt-5-6-twin", declares=["gpt-5-6-launch"])
+    assert unlinked_duplicates(repo, ["gpt-5-6-twin"]) == []
+
+
+def test_prose_alone_does_not_clear_it(tmp_path):
+    repo = with_twin(tmp_path)
+    write_verified(repo, "gpt-5-6-twin", note="coincidental against gpt-5-6-launch")
+    assert len(unlinked_duplicates(repo, ["gpt-5-6-twin"])) == 1
+
+
+def test_a_pair_staged_together_is_one_refusal(tmp_path):
+    repo = with_twin(tmp_path)
+    offenders = unlinked_duplicates(repo, ["gpt-5-6-twin", "gpt-5-6-launch"])
+    assert len(offenders) == 1, offenders
+
+
+def test_a_follow_up_clears_it(tmp_path):
+    repo = with_twin(tmp_path)
+    path = repo / "content/articles/en/2026/07/gpt-5-6-twin.md"
+    path.write_text(
+        TWIN.replace("lang: en", "lang: en\nfollows: gpt-5-6-launch"), encoding="utf-8"
+    )
+    assert unlinked_duplicates(repo, ["gpt-5-6-twin"]) == []
+
+
+def test_a_story_never_matches_itself(tmp_path):
+    """`load_index` reads the working tree, so the staged article is in it."""
+    assert unlinked_duplicates(make_repo(tmp_path), ["gpt-5-6-launch"]) == []
+
+
+def test_a_moderate_match_is_not_refused(tmp_path):
+    """Only what the archive test would reject may refuse a commit."""
+    repo = make_repo(tmp_path)
+    (repo / "content/articles/en/2026/07/mild.md").write_text(
+        TWIN.replace("slug: gpt-5-6-twin", "slug: mild")
+            .replace("title: OpenAI releases GPT-5.6 model family to enterprise",
+                     "title: OpenAI hires a chief revenue officer")
+            .replace("url: https://openai.com/index/gpt-5-6",
+                     "url: https://openai.com/index/hiring"),
+        encoding="utf-8",
+    )
+    assert unlinked_duplicates(repo, ["mild"]) == []
+
+
+def test_a_slug_that_is_not_a_published_article_says_nothing(tmp_path):
+    """Ledger-only and report-only commits pass untouched."""
+    assert unlinked_duplicates(make_repo(tmp_path), ["meta-chip", "nonexistent"]) == []
