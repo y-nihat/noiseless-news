@@ -39,12 +39,20 @@ def gh_stub(tmp_path: Path) -> dict[str, Path]:
     log = tmp_path / "gh.log"
     listing = tmp_path / "issues.json"
     listing.write_text(OPEN_ISSUES, encoding="utf-8")
+    closed = tmp_path / "closed.json"
+    closed.write_text("[]", encoding="utf-8")
     (bindir / "gh").write_text(
         "#!/bin/sh\n"
         f'echo "$@" >> "{log}"\n'
         'if [ "$1" = "issue" ] && [ "$2" = "list" ]; then\n'
-        f'  cat "{listing}"\n'
+        '  case "$*" in\n'
+        f'    *"--state closed"*) cat "{closed}" ;;\n'
+        f'    *) cat "{listing}" ;;\n'
+        "  esac\n"
         "  exit 0\n"
+        "fi\n"
+        'if [ "$1" = "issue" ] && [ "$2" = "reopen" ]; then\n'
+        '  exit "${GH_REOPEN_EXIT:-0}"\n'
         "fi\n"
         'if [ "$1" = "issue" ] && [ "$2" = "create" ]; then\n'
         '  echo "https://github.com/y-nihat/noiseless-news/issues/99"\n'
@@ -58,7 +66,8 @@ def gh_stub(tmp_path: Path) -> dict[str, Path]:
     (bindir / "gh").chmod(0o755)
     body = tmp_path / "body.md"
     body.write_text("the same four 403s, again\n", encoding="utf-8")
-    return {"bin": bindir, "log": log, "listing": listing, "body": body}
+    return {"bin": bindir, "log": log, "listing": listing, "closed": closed,
+            "body": body}
 
 
 def flag(gh_stub, prefix: str, title: str, env: dict | None = None):
@@ -113,6 +122,70 @@ class TestWhenThereIsNoThreadYet:
         result = flag(gh_stub, "Source health: failing feeds", "a title")
         assert result.returncode == 0
         assert any(c.startswith("issue create") for c in calls(gh_stub))
+
+
+class TestAClosedThreadIsReopened:
+    """Closing is how an operator says "read", not "never tell me again".
+
+    `flag_issue.sh` searched only OPEN issues, so closing the source-health
+    thread on 2026-08-28 would have had the next Monday open a fresh one and
+    restart from empty the week-on-week record its own body instructs the
+    reader to make — the churn this script exists to stop, by a different door.
+    """
+
+    CLOSED = """[
+      {"number": 34, "title": "Source health: failing feeds 2026-08-17"},
+      {"number": 31, "title": "Source health: failing feeds 2026-08-10"},
+      {"number": 20, "title": "Source health: failing feeds 2026-08-03"},
+      {"number": 19, "title": "Source health: failing feeds 2026-07-27"}
+    ]"""
+
+    def _only_closed(self, gh_stub):
+        gh_stub["listing"].write_text("[]", encoding="utf-8")
+        gh_stub["closed"].write_text(self.CLOSED, encoding="utf-8")
+
+    def test_it_reopens_instead_of_opening_a_new_one(self, gh_stub):
+        self._only_closed(gh_stub)
+        result = flag(gh_stub, "Source health: failing feeds", "a title")
+        assert result.returncode == 0, result.stderr
+        assert any(c.startswith("issue reopen 34") for c in calls(gh_stub)), calls(gh_stub)
+        assert any(c.startswith("issue comment 34") for c in calls(gh_stub))
+        assert not any(c.startswith("issue create") for c in calls(gh_stub))
+
+    def test_it_reopens_the_most_recent_not_the_oldest(self, gh_stub):
+        """#19, #20 and #31 are the duplicates from before this script existed.
+        Resurrecting #19 from 2026-07-27 would be worse than opening a new one."""
+        self._only_closed(gh_stub)
+        flag(gh_stub, "Source health: failing feeds", "a title")
+        assert any(c.startswith("issue reopen 34") for c in calls(gh_stub))
+        for stale in ("19", "20", "31"):
+            assert not any(c.startswith(f"issue reopen {stale}") for c in calls(gh_stub))
+
+    def test_an_open_thread_still_wins_over_a_closed_one(self, gh_stub):
+        gh_stub["closed"].write_text(self.CLOSED, encoding="utf-8")
+        flag(gh_stub, "Source health: failing feeds", "a title")
+        assert any(c.startswith("issue comment 19") for c in calls(gh_stub))
+        assert not any(c.startswith("issue reopen") for c in calls(gh_stub))
+
+    def test_a_refused_reopen_still_files_the_alarm(self, gh_stub):
+        """Losing the alarm is worse than a noisy one."""
+        self._only_closed(gh_stub)
+        result = flag(gh_stub, "Source health: failing feeds", "a title",
+                      env={"GH_REOPEN_EXIT": "1"})
+        assert result.returncode == 0
+        assert any(c.startswith("issue create") for c in calls(gh_stub))
+
+    def test_an_unrelated_closed_thread_is_not_reopened(self, gh_stub):
+        self._only_closed(gh_stub)
+        flag(gh_stub, "Test suite red on main", "Test suite red on main 2026-08-28")
+        assert not any(c.startswith("issue reopen") for c in calls(gh_stub))
+        assert any(c.startswith("issue create") for c in calls(gh_stub))
+
+    def test_a_reopened_thread_is_assigned_too(self, gh_stub):
+        self._only_closed(gh_stub)
+        flag(gh_stub, "Source health: failing feeds", "a title",
+             env={"GITHUB_REPOSITORY": "y-nihat/noiseless-news"})
+        assert any("issue edit 34 --add-assignee y-nihat" in c for c in calls(gh_stub))
 
 
 class TestTheAlarmIsAddressedToSomebody:

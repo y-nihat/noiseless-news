@@ -19,9 +19,20 @@
 # for eight days and reached nobody. Assignment is best-effort on purpose: a
 # filed alarm that could not be assigned is still a filed alarm.
 #
+# A closed thread is REOPENED rather than replaced. Closing is how an operator
+# says "read"; the condition recurring afterwards is the same condition, and
+# the week-on-week comparison these bodies instruct the reader to make only
+# works if it stays in one place. Without this, closing #34 on 2026-08-28 would
+# have had the next Monday open a fresh thread and restart that record from
+# empty — the churn this script was written to stop, arriving by a different
+# door. Consistent with the rule below it: losing or scattering the alarm is
+# worse than a noisy one, so a `not planned` close does not suppress a
+# recurrence either.
+#
 # Usage: flag_issue.sh <title-prefix> <title> <body-file>
 #   Comments on the lowest-numbered OPEN issue whose title starts with
-#   <title-prefix>; opens one titled <title> if there is none.
+#   <title-prefix>; failing that reopens the most recent CLOSED one; opens one
+#   titled <title> if there is neither.
 set -uo pipefail
 
 if [ "$#" -ne 3 ]; then
@@ -40,8 +51,9 @@ fi
 # The prefix travels in the environment rather than being pasted into the
 # filter: it is ordinary prose and has no business being parsed as code. Also
 # means an unreadable or empty listing yields "no match" rather than an error.
-existing=$(gh issue list --state open --limit 100 --json number,title 2>/dev/null \
-  | PREFIX="$prefix" python3 -c '
+find_thread() {  # <state> <first|last>
+  gh issue list --state "$1" --limit 100 --json number,title 2>/dev/null \
+    | PREFIX="$prefix" PICK="$2" python3 -c '
 import json, os, sys
 try:
     issues = json.load(sys.stdin)
@@ -52,8 +64,24 @@ matches = sorted(
     if isinstance(i, dict) and str(i.get("title", "")).startswith(os.environ["PREFIX"])
 )
 if matches:
-    print(matches[0])
-')
+    print(matches[0] if os.environ["PICK"] == "first" else matches[-1])
+'
+}
+
+# Open threads: the LOWEST number, so everything keeps landing in the one that
+# has the history. Closed threads: the HIGHEST, because the older ones are the
+# duplicates from before this script existed — #19, #20 and #31 all still carry
+# the source-health prefix, and resurrecting #19 from 2026-07-27 would be worse
+# than opening something new.
+existing=$(find_thread open first)
+
+if [ -z "${existing:-}" ]; then
+  reopened=$(find_thread closed last)
+  if [ -n "${reopened:-}" ] && gh issue reopen "$reopened" >/dev/null 2>&1; then
+    existing=$reopened
+    echo "flag_issue: reopened #$reopened — the condition recurred"
+  fi
+fi
 
 # owner/repo -> owner. Unset outside Actions, where there is nobody to assign
 # — and `set -u` above turns a bare ${GITHUB_REPOSITORY%%/*} into an abort, so
