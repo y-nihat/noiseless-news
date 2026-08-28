@@ -2,10 +2,15 @@ name: Nightly scan
 
 on:
   schedule:
-    # Cron'd 20 min EARLY (21:40 UTC) to absorb GitHub's typical cron delay;
-    # the loop supervisor holds until exactly 22:00 UTC (01:00 Istanbul) and
-    # always ends by 01:20 UTC (04:20 Istanbul). Turkey is UTC+3, no DST.
-    - cron: "40 21 * * *"
+    # Cron'd 20 min EARLY (01:40 UTC) to absorb GitHub's typical cron delay;
+    # the loop supervisor holds until exactly 02:00 UTC (05:00 Istanbul) and
+    # always ends by 04:00 UTC (07:00 Istanbul). Turkey is UTC+3, no DST.
+    # Not on the hour, and not at 22:00: GitHub delays scheduled deliveries
+    # most at the busiest slots, and the two nights before this window moved
+    # were delivered 3h23m and 3h19m late — one produced nothing, one never
+    # arrived. The window moving does not fix cron delay, but it does move off
+    # the peak, and a 2h window has less to lose to a delay that still comes.
+    - cron: "40 1 * * *"
   workflow_dispatch:
     inputs:
       smoke:
@@ -29,7 +34,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 245   # up-to-20min window hold + 200min night + slack
+    timeout-minutes: 165   # up-to-20min window hold + 120min night + slack
     # Every scratch file the night owns, in one directory scoped to this run.
     # The loop's content gate runs the test suite on this runner, and the suite
     # drives the supervisor against scratch repositories — so with fixed /tmp
@@ -59,7 +64,7 @@ jobs:
 
       - name: Night loop
         id: loop
-        timeout-minutes: 235
+        timeout-minutes: 155
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GH_TOKEN: ${{ github.token }}
@@ -76,7 +81,7 @@ jobs:
       # them. GitHub allows a single deployment in flight, so on 2026-08-04 the
       # final cycle's dispatch and this backstop collided and the second create
       # call got HTTP 400 (run 30867516175). PR #24 stopped the loop racing
-      # itself, but a human merge to main inside the 01:00-01:20 UTC window
+      # itself, but a human merge to main inside the 02:00-04:00 UTC window
       # would still have collided (precedent: run 29175086965). Dispatching
       # instead puts every Pages deployment in this repository through
       # deploy.yml's single `pages` group, where an overlap cancels a superseded

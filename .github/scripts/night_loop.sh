@@ -14,7 +14,7 @@ if [ -f .paused ]; then
 fi
 
 SMOKE="${SMOKE:-false}"
-# The cron fires 21:40 UTC, twenty minutes before the window opens, so no
+# The cron fires 01:40 UTC, twenty minutes before the window opens, so no
 # legitimate hold is longer than this. Enforced here, not asserted in a comment.
 MAX_HOLD=1200
 HOLD=0
@@ -22,26 +22,33 @@ if [ "$SMOKE" = "true" ]; then
   MAX_CYCLES=2; CYCLE_INTERVAL=1500; STORIES_PER_CYCLE=1
   MAX_SEARCHES=3; MAX_TURNS=40; NIGHT_STORY_CAP=2; NIGHT_SECONDS=3300
 else
-  MAX_CYCLES=6; CYCLE_INTERVAL=2100; STORIES_PER_CYCLE=4
+  MAX_CYCLES=4; CYCLE_INTERVAL=2100; STORIES_PER_CYCLE=4
   MAX_SEARCHES=15; MAX_TURNS=120; NIGHT_STORY_CAP=12
-  # Window is 22:00 -> 01:20 UTC (01:00-04:20 Istanbul; UTC+3, no DST). Plain
-  # epoch arithmetic, deliberately: `date -d "today 22:00"` resolves against the
-  # ACTUAL start date, so a cron delivered 3h24m late at 01:04 on 2026-08-07
-  # pointed 22 hours forward instead of twenty minutes and slept the job away
-  # until the step timeout killed it (run 31136812347). Every branch below
-  # yields NIGHT_SECONDS <= 12000 by construction, so no start time can ask for
-  # more window than the window has.
+  # Window is 02:00 -> 04:00 UTC (05:00-07:00 Istanbul; UTC+3, no DST). Four
+  # cycles, not six: 7200s at a 2100s interval fits four, and the loop would
+  # have stopped at four anyway — saying six would only make every footer read
+  # "4 of 6" and every prompt promise the agent two cycles it will never get.
+  #
+  # The whole window now sits inside one UTC day, so the midnight crossing the
+  # old 22:00->01:20 arithmetic had to carry is gone. Still plain epoch
+  # arithmetic, deliberately: `date -d "today 02:00"` resolves against the
+  # ACTUAL start date, and that is what broke the old window — a cron delivered
+  # 3h24m late at 01:04 on 2026-08-07 pointed 22 hours forward instead of
+  # twenty minutes back, slept 75318s, and was killed at the step timeout
+  # having run nothing (run 31136812347). Every branch below yields
+  # NIGHT_SECONDS <= 7200 by construction, so no start time can ask for more
+  # window than the window has.
   # NIGHT_NOW is a test hook. It is never set in production.
   NOW=${NIGHT_NOW:-$(date -u +%s)}
   DAY=$((NOW - NOW % 86400))                      # 00:00 UTC of the start date
-  OPEN=$((DAY + 79200))                           # 22:00 UTC that same date
-  if [ "$NOW" -ge "$OPEN" ]; then                 # 22:00-23:59 — start now
-    CLOSE=$((OPEN + 12000))
-  elif [ $((OPEN - NOW)) -le "$MAX_HOLD" ]; then  # 21:40-21:59 — wait for 22:00
-    HOLD=$((OPEN - NOW)); CLOSE=$((OPEN + 12000))
-  else                                            # 00:00-21:39 — this run belongs
-    CLOSE=$((DAY + 4800))                         # to last night's window (01:20)
-  fi
+  OPEN=$((DAY + 7200))                            # 02:00 UTC that same date
+  if [ "$NOW" -ge "$OPEN" ]; then                 # 02:00 on — start now, and go
+    CLOSE=$((OPEN + 7200))                        # negative once 04:00 is past
+  elif [ $((OPEN - NOW)) -le "$MAX_HOLD" ]; then  # 01:40-01:59 — wait for 02:00
+    HOLD=$((OPEN - NOW)); CLOSE=$((OPEN + 7200))
+  else                                            # 00:00-01:39 — earlier than the
+    CLOSE=$((DAY - 86400 + 14400))                # cron can fire, so this belongs
+  fi                                              # to yesterday's 04:00 close
   NIGHT_SECONDS=$((CLOSE - NOW - HOLD))
 fi
 
@@ -50,7 +57,7 @@ if [ -n "${NIGHT_PLAN_ONLY:-}" ]; then   # test hook: pytest drives the arithmet
 fi
 
 if [ "$HOLD" -gt 0 ]; then
-  log "holding ${HOLD}s until the 22:00 UTC window opens"
+  log "holding ${HOLD}s until the 02:00 UTC window opens"
   sleep "$HOLD"
 fi
 
@@ -152,7 +159,7 @@ assert_push_scope() {
   log "GUARD: $label touch paths outside content/ and data/:"
   printf '%s\n' "$strays" | while IFS= read -r line; do log "  $line"; done
   # A legitimate cause exists and is rare: an operator merging to main inside
-  # the 22:00-01:20 UTC window, pulled in by commit_push's rebase. One such
+  # the 02:00-04:00 UTC window, pulled in by commit_push's rebase. One such
   # merge has happened in the repository's history. Failing loudly on it is the
   # right trade for a control whose other case is a supervisor rewritten by a
   # session that spent the night reading untrusted third-party text.
@@ -551,10 +558,10 @@ PY
   echo ""
   echo "## Loop supervisor footer"
   echo ""
-  # "Cycles run: 5 … max: 6" read as though a sixth had been possible. A sixth
-  # needs the window to have opened by 22:10 UTC and it opened later than that
-  # on 31 of 36 nights, so the shortfall is the cron's arrival time, not the
-  # loop giving up. Say which.
+  # "Cycles run: 5 … max: 6" read as though a sixth had been possible. It is
+  # the cron's arrival time that decides how many slots fit, not the loop
+  # giving up: under the old window a sixth cycle needed the window open by
+  # 22:10 UTC and it opened later on 31 of 36 nights. Say which.
   echo "- Cycles run: $ran_cycles of $MAX_CYCLES (successful: $ok_cycles)$(
     [ "$ran_cycles" -lt "$MAX_CYCLES" ] \
       && echo " — the ${NIGHT_SECONDS}s of window left at start did not fit the rest" \
@@ -652,11 +659,12 @@ warnings=()
 [ "$((new_articles + updated_articles))" -eq 0 ] && [ "$no_runway" -eq 0 ] \
   && warnings+=("published nothing tonight")
 [ "$no_runway" -eq 1 ] && [ "$scheduled" -eq 1 ] \
-  && warnings+=("the cron arrived with only ${NIGHT_SECONDS}s of the 22:00-01:20 UTC window left, so no cycle could start — the night is lost, not broken")
+  && warnings+=("the cron arrived with only ${NIGHT_SECONDS}s of the 02:00-04:00 UTC window left, so no cycle could start — the night is lost, not broken")
 [ "$ok_cycles" -lt "$ran_cycles" ] && warnings+=("$((ran_cycles - ok_cycles)) of $ran_cycles cycles did not complete cleanly")
-# Only a badly truncated night, not the routine 5-of-6: a sixth cycle needs the
-# window open by 22:10 UTC and it rarely is, and the sixth slot has produced no
-# article on any night it ran. The footer records the shortfall either way.
+# Only a badly truncated night: with four cycles this fires at one, which is a
+# window that lost three quarters of itself to a late cron. A 3-of-4 is the
+# routine shape of a slightly delayed start and says nothing worth waking to.
+# The footer records the shortfall either way.
 [ "$ran_cycles" -gt 0 ] && [ $((ran_cycles * 2)) -lt "$MAX_CYCLES" ] \
   && warnings+=("only $ran_cycles of $MAX_CYCLES cycles fitted in the window")
 [ "$guard_trips" -gt 0 ] && warnings+=("$guard_trips out-of-scope write attempt(s) blocked")
@@ -682,7 +690,7 @@ job_failed=0
 [ "$no_runway" -eq 1 ] && [ "$scheduled" -eq 1 ] && job_failed=1
 
 if [ "$no_runway" -eq 1 ] && [ "$scheduled" -eq 0 ]; then
-  log "dispatched outside the 22:00-01:20 UTC window (${NIGHT_SECONDS}s of runway), so no cycle ran"
+  log "dispatched outside the 02:00-04:00 UTC window (${NIGHT_SECONDS}s of runway), so no cycle ran"
   log "that is documented behaviour, not a fault — use -f smoke=true to exercise the loop at any hour"
 fi
 
