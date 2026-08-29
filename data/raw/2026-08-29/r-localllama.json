@@ -1,0 +1,42 @@
+[
+  {
+    "id": "43a749a27f1657a1",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Today I hit 181 toks/s (aggregate) on Qwen3.8-Flash-Next on 2x DGX Sparks",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1486l/today_i_hit_181_tokss_aggregate_on/",
+    "published": "2026-08-28T22:00:36+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1486l/today_i_hit_181_tokss_aggregate_on/\"> <img alt=\"Today I hit 181 toks/s (aggregate) on Qwen3.8-Flash-Next on 2x DGX Sparks\" src=\"https://preview.redd.it/8ymtyifut6mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=6bf7624bc7f4da8ac5252110726a98422f09ea73\" title=\"Today I hit 181 toks/s (aggregate) on Qwen3.8-Flash-Next on 2x DGX Sparks\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hey all, and hello fellow DGX Spark-ers!</p> <p>Today I managed some pretty crazy numbers: <strong>181 tok/s aggregate on 2× DGX Spark on Qwen3.8-Flash-Next at 512Kcontext (2.8M kvc)</strong></p> <p>I hit 181 tok/s aggregate today across a multi-agent fleet on a 2-node DGX Spark cluster. Single-stream decode is 30–50 tok/s — the 181 is total throughput with ~9 concurrent agent sessions sharing the engine. I actually peaked to 195 while writing this. Quick rundown of how it's served:</p> <p><strong>Hardware</strong></p> <ul> <li>2× NVIDIA DGX Spark (GB10 Grace Blackwell, 128 GB unified memory each, 20-core ARM)</li> <li>Nodes linked with a direct ConnectX-7 cable — NCCL over RDMA (RoCE, 200 Gb), TP=2 across both boxes</li> <li>Verify <code>Using network IB</code> in the NCCL log — the TCP fallback is <em>silent</em> and costs you half your speed</li> </ul> <p><strong>Model</strong></p> <ul> <li>Qwen3.8-Flash-Next, RadixArk <strong>NVFP4</strong> quant (4-bit routed experts, FP8 n-gram table)</li> <li>Hybrid arch: 3/4 linear attention + 1/4 sparse full attention, 512-expert MoE, MTP speculative decoding k=3 (~40% acceptance)</li> <li>Native 262K context stretched to <strong>512K with YaRN factor 2.0</strong> — needle-verified at 487K depth</li> </ul> <p><strong>The trick: PLE table on NVMe</strong></p> <ul> <li>The model carries a 320M-row n-gram embedding table (<strong>47.7 GiB in FP8</strong>) that's read on every token — but each token only touches 16 rows (~2.5 KB)</li> <li>We mmap it straight off NVMe…",
+    "fetched_at": "2026-08-29T00:28:55.013652+00:00"
+  },
+  {
+    "id": "bd9762afae2ad92b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "[Release] SOTA GGUFs for Qwen3.8-27B: GSQ-RCO at 2.5 to 3.0 bpw",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w13vse/release_sota_ggufs_for_qwen3827b_gsqrco_at_25_to/",
+    "published": "2026-08-28T21:46:58+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w13vse/release_sota_ggufs_for_qwen3827b_gsqrco_at_25_to/\"> <img alt=\"[Release] SOTA GGUFs for Qwen3.8-27B: GSQ-RCO at 2.5 to 3.0 bpw\" src=\"https://preview.redd.it/e0zubsoj16mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8686d32db706f4c4501a120c40da4401a949b910\" title=\"[Release] SOTA GGUFs for Qwen3.8-27B: GSQ-RCO at 2.5 to 3.0 bpw\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>We're releasing Qwen3.8-27B quantized with our newest methods, GSQ + RCO. Higher-quality models, same file size, now with the search and the quantizer both learned.</p> <p><strong>What's inside:</strong></p> <ul> <li><strong>GSQ</strong> (Gumbel-Softmax Quantization): post-training scalar quantization that jointly learns grid assignments and scales, closing most of the scalar-vs-vector gap at 2 to 3 bits while staying fully GGUF-deployable </li> <li><strong>RCO</strong> (Riemannian Constrained Optimization): assigns a quantization type to every tensor under a strict size budget by gradient descent directly on the task loss, no per-constraint tuning </li> <li>Three GGUFs (2.50 / 2.75 / 3.00 bpw, 8.4 to 10.1 GB) plus the vision projector</li> </ul> <p><strong>Further Details:</strong> </p> <p>Uniform quants give every tensor the same precision. RCO finds where the precision actually matters and GSQ quantizes every tensor at its assigned type. The result runs unmodified in llama.cpp, Ollama, and LM Studio. </p> <p><strong>Results (vs. the BF16 base and Unsloth Dynamic quants)</strong><br /> To the best of our knowledge, these are the best size-to-accuracy GGUFs available for Qwen3.8-27B at these file sizes: at every size we evaluated, they match or beat the strongest published quantizations.</p> <ul> <li>3.00 bpw (10.1 GB): matches the base model on AIME25 (100.00), within about one point on GPQA-Diamond (88.89 vs 89.90) and LiveCodeBench v6 (84.57 vs 85.71) </li> <li>2.75 bpw (9.3 GB): AIME25 100.00, and its zero…",
+    "fetched_at": "2026-08-29T00:28:55.013652+00:00"
+  },
+  {
+    "id": "c38570778a623c54",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is it worth running Qwen 3.8 Flash Next on 4x3090 vs 27B?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w16kts/is_it_worth_running_qwen_38_flash_next_on_4x3090/",
+    "published": "2026-08-28T23:38:37+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Can someone please tell me if it's worth running Qwen 3.8 Flash Next on 4x3090 yet over 27B?</p> <p>27B is good but damn it is indecisive. I am getting frustrated watching it get &quot;so close&quot; to solving a problem, only to do another 2 hours of &quot;let me just check/prove/etc&quot;</p> <p>It looks like a 4 bit quant of Flash Next should fit with the ngrams in SSD and be a lot faster but it also sounds like the architecture isn't quite there yet</p> <p>Can someone smarter and more patient than me tell me what to do pls? thanks</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Acceptable_Adagio_91\"> /u/Acceptable_Adagio_91 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w16kts/is_it_worth_running_qwen_38_flash_next_on_4x3090/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w16kts/is_it_worth_running_qwen_38_flash_next_on_4x3090/\">[comments]</a></span>",
+    "fetched_at": "2026-08-29T00:28:55.013652+00:00"
+  },
+  {
+    "id": "7e5b6b54c026c19c",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Hot or not?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w16nfx/hot_or_not/",
+    "published": "2026-08-28T23:41:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w16nfx/hot_or_not/\"> <img alt=\"Hot or not?\" src=\"https://preview.redd.it/ymvh794kc7mh1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=d63425213c948655e0d76dcd3dd2ab1527cdac83\" title=\"Hot or not?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Does anyone else add active cooling to their DGX stack? Found mine was getting quite hot under extended load. This helps immensely with that so far. I will be adding some stats as they relate to comphy and DeepSeek flash this weekend. I did not create the original designs but merged them together and added a few tweaks I can explain in another post. I will share attributes and all that when I get back to my laptop. I just couldn't wait to share the results. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/koalfied-coder\"> /u/koalfied-coder </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1w16nfx\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w16nfx/hot_or_not/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T00:28:55.013652+00:00"
+  }
+]

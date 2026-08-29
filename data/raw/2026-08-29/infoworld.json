@@ -1,0 +1,12 @@
+[
+  {
+    "id": "22cfcb9ebf3cc0b4",
+    "source": "InfoWorld",
+    "tier": 2,
+    "title": "Rust language adds algebraic floating-point methods",
+    "url": "https://www.infoworld.com/article/4215422/rust-language-adds-algebraic-floating-point-methods.html",
+    "published": "2026-08-28T21:39:17+00:00",
+    "summary": "<div id=\"remove_no_follow\">\n\t\t<div class=\"grid grid--cols-10@md grid--cols-8@lg article-column\">\n\t\t\t\t\t  <div class=\"col-12 col-10@md col-6@lg col-start-3@lg\">\n\t\t\t\t\t\t<div class=\"article-column__content\">\n<section class=\"wp-block-bigbite-multi-title\"><div class=\"container\"></div></section>\n\n\n\n<p class=\"wp-block-paragraph\">The Rust team has released Rust 1.98.0, an update to the language that introduces algebraic methods for floating-point operations. </p>\n\n\n\n<p class=\"wp-block-paragraph\">Developers who have a previous version of Rust installed via <code>rustup</code> can update to Rust 1.98.0 by running <code>rustup update stable</code>. </p>\n\n\n\n<p class=\"wp-block-paragraph\">Introduced <a href=\"https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/\">August 20</a>, Rust 1.98.0 brings algebraic methods for addition, subtraction, multiplication, division, and remainder to the floating-point types <code>f32</code> and <code>f64</code>. The algebraic methods allow optimizations on these operations using algebraic properties of real numbers. These optimizations are not specified, but may be similar to the kind of optimization seen with the <code>-ffast-math</code> option in other languages, the Rust team said. </p>\n\n\n\n<p class=\"wp-block-paragraph\">“For example, floating-point addition is <a href=\"https://en.wikipedia.org/wiki/Associative_property#Nonassociativity_of_floating-point_calculation\">not associative</a>, so a sum like <code>a + b + c + d</code> must be evaluated in the left-associative order in which it is parsed, like <code>((a + b) + c) + d</code>,” the Rust team noted. “If you write the same sum as a chain of <code>algebraic_add</code> calls, then the compiler is free to reorder it, perhaps like <code>(a + b) + (c + d)</code> to evaluate the partial sums simultaneously. Broader loop-vectorization is often enabled by using these algebraic methods as well.” </p>\n\n\n\n<p class=\"wp-block-paragraph\">The methods are non-deterministic, because the compiler is free to choose…",
+    "fetched_at": "2026-08-29T00:28:55.013652+00:00"
+  }
+]
