@@ -138,5 +138,125 @@
     "published": "2026-08-29T01:23:13+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18v86/use_llms_to_auto_annotation_your_dataset_locally/\"> <img alt=\"use llms to auto annotation your dataset locally\" src=\"https://external-preview.redd.it/eG5wNnM0dGp1N21oMXq8CUYhnl8FLuvYZ0rVBwPFaaNb6UQHI2-mYzc4bWD2.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a4dfc5dd95f22337b23e287cc14714d77aca2f0e\" title=\"use llms to auto annotation your dataset locally\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>hi i make tool for this called llmog it's purpose to make llms free to</p> <p>- auto annotation datasets</p> <p>- reclassification existing yolo datasets</p> <p>running totally local using llama cpp or vllm or use external api</p> <p>you'd rather click than code.</p> <p>🔗 GitHub: <a href=\"https://github.com/mohamed-em2m/llmog\">mohamed-em2m/llmog: framework for using llms on object grounding</a></p> <p>You can try it directly online</p> <p>🔵 Google Colab:</p> <p><a href=\"https://colab.research.google.com/drive/1YIKlyTVtRjJdRC5IjCZ39i48ydyt_J5D?usp=sharing\">https://colab.research.google.com/drive/1YIKlyTVtRjJdRC5IjCZ39i48ydyt_J5D?usp=sharing</a></p> <p>🟠 Kaggle:</p> <p><a href=\"https://www.kaggle.com/code/elemam/auto-annotation-using-llms\">https://www.kaggle.com/code/elemam/auto-annotation-using-llms</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SavingsWeather1659\"> /u/SavingsWeather1659 </a> <br /> <span><a href=\"https://v.redd.it/dwp3l5tju7mh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18v86/use_llms_to_auto_annotation_your_dataset_locally/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "4d5e68c88f42b24f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 27B at 50 tok/s with 100k Context on a 16GB GPU! (beellama.cpp)",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1lq7u/qwen_38_27b_at_50_toks_with_100k_context_on_a/",
+    "published": "2026-08-29T12:50:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I wanted to share my successful setup for running a <strong>Qwen 3.8 27B</strong> model with a massive context window on a consumer 16GB GPU (RTX 4070 Ti SUPER). The goal was to fit everything into VRAM without sacrificing quality or speed.</p> <h1>🧠 Key Components</h1> <ul> <li><strong>Model:</strong> <code>Qwen3.8-27B-i1-IQ4_XS-GGUF-Smaller</code> from <a href=\"https://huggingface.co/jrell/Qwen3.8-27B-i1-IQ4_XS-GGUF-Smaller\">jrell on Hugging Face</a>. It's a custom hybrid quantization specifically designed to fit Multi-Token Prediction (MTP) and long contexts into a 16GB VRAM budget.</li> <li><strong>Chat Template:</strong> I used the Jinja template from <a href=\"https://huggingface.co/peculiar-ragdoll/Qwen-Sharp-Chat-Templates\">peculiar-ragdoll's Qwen-Sharp-Chat-Templates</a>. It helps use fewer thinking tokens without noticeably affecting quality, which is great for speed.</li> <li><strong>Inference Engine:</strong> This is crucial. I used <strong>beellama.cpp</strong> (<a href=\"https://github.com/Anbeeld/beellama.cpp\">GitHub link</a>) because it supports the <code>kvarn</code> KV cache types, which are key to this optimization.</li> </ul> <h1>🖥️ Optimized llama-server Command (Windows)</h1> <p>Here's the polished command I'm running. The magic is in the <code>kvarn</code> cache settings and the tail precision.</p> <pre><code>%LLAMA_DIR%/llama-server.exe ^ -m %MODEL_PATH% ^ -a %MODEL_NAME% ^ --port 11434 ^ --temp 1.0 ^ --top-p 0.95 ^ --top-k 20 ^ --min-p 0.0 ^ --presence-penalty 0.0 ^ --repeat-penalty 1.0 ^ --parallel 1 ^ --n-gpu-layers 99 ^ --batch-size 1024 ^ --ubatch-size 256 ^ --flash-attn on ^ --spec-type draft-mtp ^ --spec-draft-n-max 2 ^ --cache-type-k kvarn5 ^ &lt;-- Key: Higher precision for K cache --cache-type-v kvarn4 ^ &lt;-- Key: Balanced precision for V cache --kv-tail-tokens 1024 ^ &lt;-- Keeps recent tokens at full precision --ctx-size 100000 ^ --fit-ctx 100000 ^ --jinja ^ --chat-template-kwargs &quot;{\\&quot;pr…",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "c584ce22ba815b07",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Tencent compressed Hy4-preview from 1.5TB to about 200GB GGUF and kept about 98% performance.",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1o324/tencent_compressed_hy4preview_from_15tb_to_about/",
+    "published": "2026-08-29T14:31:38+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1o324/tencent_compressed_hy4preview_from_15tb_to_about/\"> <img alt=\"Tencent compressed Hy4-preview from 1.5TB to about 200GB GGUF and kept about 98% performance.\" src=\"https://preview.redd.it/lpt5x1t2rbmh1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=68c336393088d751fd42d151e83c4697773385e7\" title=\"Tencent compressed Hy4-preview from 1.5TB to about 200GB GGUF and kept about 98% performance.\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/RedditUsr2\"> /u/RedditUsr2 </a> <br /> <span><a href=\"https://i.redd.it/lpt5x1t2rbmh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1o324/tencent_compressed_hy4preview_from_15tb_to_about/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "8073a2b9a1ab8d2e",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "How important is it for Chinese LLMs to reach the Opus 4.8 level?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1l3a2/how_important_is_it_for_chinese_llms_to_reach_the/",
+    "published": "2026-08-29T12:19:44+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1l3a2/how_important_is_it_for_chinese_llms_to_reach_the/\"> <img alt=\"How important is it for Chinese LLMs to reach the Opus 4.8 level?\" src=\"https://preview.redd.it/6q1zwgym2bmh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=05f26b851f6332192189795525ecaa042ca82354\" title=\"How important is it for Chinese LLMs to reach the Opus 4.8 level?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>In mid-August, Ramp published spending data collected from 70,000 U.S. companies: Fable 5 ,the most powerful and expensive model in Anthropic’s lineup, accounts for just 11% of what those businesses spend on the company’s tools. </p> <p>The remaining 79% is worth its weight in gold. With the new releases from Qwen and GLM, we are likely close to Opus 4.8, and certainly ahead of Sonnet and the other LLMs shown at the top of the image. The &quot;anti-open-source crusade&quot; therefore comes as no surprise: it is a genuine threat to their business, especially considering the parallel with the video game industry, where the hardware needed to run a game in Full HD became &quot;low-end&quot; within just a few years as 4K took over.</p> <p>We are in a frenetic phase: new models appearing daily, varying sizes, and—unfortunately—increasingly expensive hardware. But in the long run, I believe the winners will be those selling the silicon for computing (AMD, Nvidia, and soon other competitors) rather than those selling tokens.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/LegacyRemaster\"> /u/LegacyRemaster </a> <br /> <span><a href=\"https://i.redd.it/6q1zwgym2bmh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1l3a2/how_important_is_it_for_chinese_llms_to_reach_the/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "a75c577b00d65d38",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "If your t/s is low enough, you can see speculative decoding with your own eyes",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1je5d/if_your_ts_is_low_enough_you_can_see_speculative/",
+    "published": "2026-08-29T10:51:58+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>The other day I was trying out a distillation of DS4 Pro, and it came with MTP. It was slow as hell on my hardware, barely 2-3 t/s, BUT the speed got bumps every once in a while, and I noticed it was in moments like:</p> <ul> <li>United States of America</li> <li>First law of thermodynamics</li> <li>The enshittification of the internet</li> </ul> <p>Basically, every time a very predictable phrase came up, it was instantly written. A fun thing to see. </p> <p>But it also has me wondering - would MTP work together with n-grams? Since n-grams are Markov chains, the same engine behind autosuggest, how much sense would it make to combine them with speculative decoding? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/zippydazoop\"> /u/zippydazoop </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1je5d/if_your_ts_is_low_enough_you_can_see_speculative/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1je5d/if_your_ts_is_low_enough_you_can_see_speculative/\">[comments]</a></span>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "5b435773d9caf6f2",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Different Qwen thinking levels",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1gm8y/different_qwen_thinking_levels/",
+    "published": "2026-08-29T08:09:36+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1gm8y/different_qwen_thinking_levels/\"> <img alt=\"Different Qwen thinking levels\" src=\"https://preview.redd.it/ygxscjf5v9mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=f54ae16b21d5ef4afe2ebbbd68f07c45d68428a4\" title=\"Different Qwen thinking levels\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Tall_Abrocoma_3533\"> /u/Tall_Abrocoma_3533 </a> <br /> <span><a href=\"https://i.redd.it/ygxscjf5v9mh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1gm8y/different_qwen_thinking_levels/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "bf16caa9ec4a551b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "An official 1-bit quant for Hy4??? 👀",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1kt83/an_official_1bit_quant_for_hy4/",
+    "published": "2026-08-29T12:05:52+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1kt83/an_official_1bit_quant_for_hy4/\"> <img alt=\"An official 1-bit quant for Hy4??? 👀\" src=\"https://external-preview.redd.it/FlcMFmYMZTv14oNtDNvQYc45O-kKtdEF6wcQrZkR3Pk.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=904cae94d22bd7a02ac78a204dd7ce6074f6f1da\" title=\"An official 1-bit quant for Hy4??? 👀\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Has anyone tried it? The results in their tweet look very promising! Sadly, I don’t have enough RAM yet…</p> <p>Accuracy barely moves vs BF16<br /> 📊 MCP Atlas 83.7→83.2<br /> 📊 SWE-Bench multi 82.9→81.3<br /> 📊 MRCR 81.3→81.1<br /> 📊 IFBench 73.5→72.5</p> <p><a href=\"https://x.com/TencentHunyuan/status/2093572224342954019\">https://x.com/TencentHunyuan/status/2093572224342954019</a></p> <p>EDIT:</p> <p>Alright, 2.38-bit bpw, just labeled as Q1… My bad!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/lakySK\"> /u/lakySK </a> <br /> <span><a href=\"https://huggingface.co/AngelSlim/Hy4-preview-GGUF\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1kt83/an_official_1bit_quant_for_hy4/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "133c4143eea6c61f",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Exo labs claiming 4.8 tb/s memory bandwidth through m5u Mac Studio clustering",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1nc1c/exo_labs_claiming_48_tbs_memory_bandwidth_through/",
+    "published": "2026-08-29T14:00:49+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1nc1c/exo_labs_claiming_48_tbs_memory_bandwidth_through/\"> <img alt=\"Exo labs claiming 4.8 tb/s memory bandwidth through m5u Mac Studio clustering\" src=\"https://preview.redd.it/o39563etlbmh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=95ef95af5fad6fbae2ac6b1728f9909406e02540\" title=\"Exo labs claiming 4.8 tb/s memory bandwidth through m5u Mac Studio clustering\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Exo labs making some very exciting and interesting claims. The headline is bandwidth scales linearly on Mac Studio clusters with their solution. There is a thread over at localllm subreddit (<a href=\"https://www.reddit.com/r/LocalLLM/s/qEYLOFaYwc\">https://www.reddit.com/r/LocalLLM/s/qEYLOFaYwc</a> ) where one of their employees speaks about how its latency, not bandwidth that matters in their RDMA clustering solution.</p> <p>I made a post about m5u 96gb x 2 clustered vs a single m5u 256gb and most folks recommended a single 256, with bandwidth limitations over TB5 being the main reason. I feel like most individuals (myself included) weren’t aware of these claims by Exo when they made those recommendations.</p> <p>FWIW I think I’m sticking with the 256gb order but I feel like taking the risk on a cluster of 96gb studios is worth considering now given that news. Ultimately I’ll stick with the 256 gb though because in the future it gives me the agility to scale processing power AND ram with a second 256 gb studio if I ever desire it, and maybe I’ll get lucky and buy an off lease unit in 2 years for a lot less, reducing my overall cost per unit ;)</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/anonmt57\"> /u/anonmt57 </a> <br /> <span><a href=\"https://i.redd.it/o39563etlbmh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1nc1c/exo_labs_claiming_48_tbs_memory_bandwidth_through/\">[comments]</a></span> </t…",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "0155b8a1ed93c263",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Did anyone else notice the Ornith 1.5 35B GGUFs got a \"silent\" update?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1nhpp/did_anyone_else_notice_the_ornith_15_35b_ggufs/",
+    "published": "2026-08-29T14:07:10+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey all, I stumbled onto something funny and figured I'd share before it gets buried.</p> <p>I'd been running the Ornith 1.5 35B A3B GGUF (Q4_K_M) for a while, then recently a new revision showed up in my HF cache and I figured, eh, I'd pruned my old one. Fast forward a bit later when I wanted to dig into what actually changed, and it turned into a little rabbit hole.</p> <p>Long story short: the Aug 24 &quot;update&quot; to the official GGUF repo (with no meaningful commit message other than the pretty uninformative &quot;Upload &lt;file&gt; with huggingface_hub&quot;) wasn't just a re-upload of the same files. I pulled my old snapshot out of a Btrfs backup and diffed it against the current one, and here's what's actually different in the Q4_K_M:</p> <ul> <li><strong>The weights themselves changed.</strong> I compared the raw tensor bytes and they differ from the very first byte. So it's not the same quantization with a fresh coat of paint.</li> <li><strong>The importance matrix / calibration is different.</strong> The GGUF metadata still has the author's machine paths baked in, and they changed from something like <code>35b-4000</code> to <code>ornith-1.5-35b</code>. Which lines up with the fact that the old file had <code>general.version = &quot;4000&quot;</code> and <code>general.finetune = &quot;35b&quot;</code> — fields the new one dropped.</li> <li><strong>The labels got cleaned up.</strong> <code>size_label</code> went from <code>&quot;256x2.6B&quot;</code> to <code>&quot;35B&quot;</code>, and they added <code>license</code>, <code>tags</code>, and a <code>basename</code>.</li> </ul> <p>Just to preempt the usual comment: I verified this against the official <code>ornith-ai</code> repo specifically, not the third-party mirrors, so your copy might already differ if you pulled from somewhere else.</p> <p>The interesting bit: everything <em>structural</em> is identical — same architecture (<code>qwen35moe</code>), same 248k toke…",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "cac368e4a0c1cb45",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Were designing a tiny autonomous research agent",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1kg1v/were_designing_a_tiny_autonomous_research_agent/",
+    "published": "2026-08-29T11:47:42+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1kg1v/were_designing_a_tiny_autonomous_research_agent/\"> <img alt=\"Were designing a tiny autonomous research agent\" src=\"https://external-preview.redd.it/Pc02TulybqRYki9rWXKjb8pLEfnOZal-ncKDvB1zaQQ.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=c01408f8822a9c361cc9d87263277ba15160bf78\" title=\"Were designing a tiny autonomous research agent\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>This base model is only 43m parameters trained on 3m arXiv abstracts. We plan to continue pre-training and post training. If you create fine-tuning datasets or if you know of any datasets that can help shape the behavior for our goal we appreciate all contributors. The goal is to make a local agent that can autonomously do research. Its just a simple loop to search the web &amp; document its findings as an experiment to see what is possible. If we train a language model on nothing but science, physics and technology can it make new discoveries? </p> <p>We are testing this by creating fine-tuning examples that contain a pattern of asking questions and answering them until coming to a conclusion from first principles. If you have any suggestions to achieve the goal we are all ears. Please leave a comment.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Helpful-Series132\"> /u/Helpful-Series132 </a> <br /> <span><a href=\"https://huggingface.co/StarpowerTechnology/arXiv-WVY-43M\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1kg1v/were_designing_a_tiny_autonomous_research_agent/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "aa77668c51f05509",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Someone tested various Models on the Political Compass test...",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1o1ji/someone_tested_various_models_on_the_political/",
+    "published": "2026-08-29T14:30:05+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1o1ji/someone_tested_various_models_on_the_political/\"> <img alt=\"Someone tested various Models on the Political Compass test...\" src=\"https://external-preview.redd.it/gHceBAHvS2CXXLNynUplyjXas1Xgc353TOwDPQOruf0.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=66143b1a4299d3ea50289d27f49882fcd3da0329\" title=\"Someone tested various Models on the Political Compass test...\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Thrumpwart\"> /u/Thrumpwart </a> <br /> <span><a href=\"https://aipolcom.net/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1o1ji/someone_tested_various_models_on_the_political/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "ecc3a9b8247338f6",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-27B vs Qwen3.8-Flash-Next smaller quant?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1e1uq/qwen3827b_vs_qwen38flashnext_smaller_quant/",
+    "published": "2026-08-29T05:44:05+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>If you only had 128gb ram which one would be more &quot;intelligent&quot;, Qwen3.8-27B (or even 3.6) or a smaller quant of Qwen3.8-Flash-Next (Q4/Q5) ? Mostly for discussions, but also interested in coding. Thanks</p> <p>edit: I have a 128gb Halo. By &quot;intelligent&quot; I mean more intelligent answers like proprietary models, not just world knowledge. Please only answer if you actually tried the model.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TheGlobinKing\"> /u/TheGlobinKing </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1e1uq/qwen3827b_vs_qwen38flashnext_smaller_quant/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1e1uq/qwen3827b_vs_qwen38flashnext_smaller_quant/\">[comments]</a></span>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "c730fe5acd600609",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Is it possible to run it with a combined memory setup: 16 GB VRAM + 64 GB RAM + SSD for offloading n-grams?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1lu77/is_it_possible_to_run_it_with_a_combined_memory/",
+    "published": "2026-08-29T12:55:14+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hardware: rtx 5080 16 gb vram; 64 gb ram ddr5 6000hz; ssd with unlimited memory; ryzen 7 9800 x3d.<br /> OS: Windows 11<br /> Software: I’d prefer llama.cpp, but it’s not a strict requirement; I’ll use whatever you suggest, as long as it works on Windows.</p> <p>My attempts to run it with llama.cpp:</p> <pre><code>llama-server ^ -m &quot;F:.lmstudio\\models\\unsloth\\Qwen-Next\\Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00003.gguf&quot; ^ -c 10000 ^ --n-gpu-layers 999 ^ -b 512 ^ -ub 512 ^ --fit off ^ --parallel 1 ^ --jinja ^ --flash-attn auto ^ --load-mode mmap ^ --no-host ^ --override-tensor &quot;per_layer_token_embd.weight=CPU&quot; </code></pre> <p>and 2nd attemtp:</p> <pre><code>llama-server ^ -m &quot;F:.lmstudio\\models\\AtomicChat\\Qwen3.8-Flash-Next-GGUF\\Qwen3.8-Flash-Next-AD-4.27bpw-Q4_K_M-M64-00001-of-00033.gguf&quot; ^ -c 10000 ^ -ngl 99 ^ -b 512 ^ -ub 512 ^ --fit off ^ --parallel 1 ^ --jinja ^ -fa on </code></pre> <p>and i got 6 t/sec, its just unusable</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Additional-Ordinary2\"> /u/Additional-Ordinary2 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1lu77/is_it_possible_to_run_it_with_a_combined_memory/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1lu77/is_it_possible_to_run_it_with_a_combined_memory/\">[comments]</a></span>",
+    "fetched_at": "2026-08-29T14:57:16.811950+00:00"
   }
 ]
