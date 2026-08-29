@@ -18,5 +18,15 @@
     "published": "2026-08-29T05:25:16+00:00",
     "summary": "<p>Pollen Robotics, the Bordeaux robotics team at Hugging Face, opened pre-orders for Microduck — a 25 cm bipedal robot where every movement is a neural policy trained in MuJoCo and exported to ONNX. At $399, it puts the full sim-to-real loop on a desk: 15 motors, camera, LiDAR, two IMUs, and an Apache-2.0 training stack you can retrain yourself.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/28/pollen-robotics-hugging-face-microduck-399-open-source-rl-biped-robot/\">Hugging Face Unveils Microduck: A $399 Open-Source 25 cm Biped You Train with Reinforcement Learning</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
     "fetched_at": "2026-08-29T14:57:16.811950+00:00"
+  },
+  {
+    "id": "79c30e10cc43fb61",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Building Custom Batched Ensemble Weather Forecasting with NVIDIA Earth2Studio",
+    "url": "https://www.marktechpost.com/2026/08/29/building-custom-batched-ensemble-weather-forecasting-with-nvidia-earth2studio/",
+    "published": "2026-08-29T18:57:26+00:00",
+    "summary": "<p>In this tutorial, we build an ensemble weather forecasting workflow with NVIDIA Earth2Studio. We install the required Earth2Studio components while preserving Colab’s existing CUDA-enabled PyTorch environment, load the FCN prognostic model, and retrieve atmospheric initial conditions from GFS. We then implement a custom wind-power diagnostic that converts 10-meter wind components into turbine capacity factors, along [&#8230;]</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/29/building-custom-batched-ensemble-weather-forecasting-with-nvidia-earth2studio/\">Building Custom Batched Ensemble Weather Forecasting with NVIDIA Earth2Studio</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-29T19:18:03.572169+00:00"
   }
 ]
