@@ -38,5 +38,105 @@
     "published": "2026-08-28T23:41:49+00:00",
     "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w16nfx/hot_or_not/\"> <img alt=\"Hot or not?\" src=\"https://preview.redd.it/ymvh794kc7mh1.jpg?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=d63425213c948655e0d76dcd3dd2ab1527cdac83\" title=\"Hot or not?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Does anyone else add active cooling to their DGX stack? Found mine was getting quite hot under extended load. This helps immensely with that so far. I will be adding some stats as they relate to comphy and DeepSeek flash this weekend. I did not create the original designs but merged them together and added a few tweaks I can explain in another post. I will share attributes and all that when I get back to my laptop. I just couldn't wait to share the results. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/koalfied-coder\"> /u/koalfied-coder </a> <br /> <span><a href=\"https://www.reddit.com/gallery/1w16nfx\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w16nfx/hot_or_not/\">[comments]</a></span> </td></tr></table>",
     "fetched_at": "2026-08-29T00:28:55.013652+00:00"
+  },
+  {
+    "id": "eaaf823fc4e11935",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Saved my fiances phone with qwen 3.8 27b",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1cbb0/saved_my_fiances_phone_with_qwen_38_27b/",
+    "published": "2026-08-29T04:12:59+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>this model is really something incredible, saved us like 600 dollars. my fiance is always breaking her electronics and then getting me to fix them. The other day she brought me her phone and it was stuck in a boot loop that wouldn't post. tried normal stuff, managed to get it to fastboot but the recovery mode wouldn't load and I couldn't find any firmware online. It's a folding phone and out of warranty so its not cheap to repair and usually isn't worth it, and she had basically written it off as dead. So I said hey what the hell, I've got fastboot access to the computer, let's just let AI give it a shot, can't get much worse.</p> <p>So I loaded up pi and qwen, and basically just explained the situation. It took quite a while, but I checked up on it every once in a while and it successfully found the exact build that the phone had down to the same version, and then managed to save the device through fastboot. I am quite amazed. this is a situation I've never really trusted local models with, I found 3.6 to be incredible but not quite trustworthy enough to be left unattended or on more critical tasks. but 3.8 has been incredible in its reliability. </p> <p>this was on Q5 uncensored from orcarouter, xhigh</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Prudent-Objective852\"> /u/Prudent-Objective852 </a> <br /> <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1cbb0/saved_my_fiances_phone_with_qwen_38_27b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1cbb0/saved_my_fiances_phone_with_qwen_38_27b/\">[comments]</a></span>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "aae09fbbaa791c8b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Terminal Bench 4.0 just dropped, GLM-5.3 is at the same level as Fable 5, accounting for margin of error",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1fpxi/terminal_bench_40_just_dropped_glm53_is_at_the/",
+    "published": "2026-08-29T07:17:09+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1fpxi/terminal_bench_40_just_dropped_glm53_is_at_the/\"> <img alt=\"Terminal Bench 4.0 just dropped, GLM-5.3 is at the same level as Fable 5, accounting for margin of error\" src=\"https://preview.redd.it/49j32fxfk9mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=8b4fef10ec92ba49c55974de956673941355815d\" title=\"Terminal Bench 4.0 just dropped, GLM-5.3 is at the same level as Fable 5, accounting for margin of error\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Announcement: <a href=\"https://www.tbench.ai/news/terminal-bench-4-0\">https://www.tbench.ai/news/terminal-bench-4-0</a></p> <p>Leaderboard: <a href=\"https://www.tbench.ai/\">https://www.tbench.ai/</a></p> <p>Imo the best aspect in their announcement is their focus on rapidly iterating on TerminalBench to keep the pace up with new model releases to fight benchmark saturation.</p> <p>On a similar note, what cheaper/smaller alternatives are there to benchmarking coding agents or your own harness? Large benchmarks like this take 5-10B tokens, which is not economically/computationally feasible for the vast majority of us.</p> <p>I'd love to objectively measure how my skills/harness/tools/etc change token usage and success probability on general coding tasks, there has to be a way to do this to at least give an idea or general direction, without requiring billions of tokens for each run.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SorosAhaverom\"> /u/SorosAhaverom </a> <br /> <span><a href=\"https://i.redd.it/49j32fxfk9mh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1fpxi/terminal_bench_40_just_dropped_glm53_is_at_the/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "e3b3efc9c6ac55eb",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen 3.8 Flash Next ngram look up table offloaded to SSD and streamed in SGLang",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w18b1k/qwen_38_flash_next_ngram_look_up_table_offloaded/",
+    "published": "2026-08-29T00:56:57+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18b1k/qwen_38_flash_next_ngram_look_up_table_offloaded/\"> <img alt=\"Qwen 3.8 Flash Next ngram look up table offloaded to SSD and streamed in SGLang\" src=\"https://external-preview.redd.it/WaOnnN57oaxTR-xhVqhzXv5G1YoM_enEx-DR9SE2kCI.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=66b89eba1a30ce7ffe331c664f450adf124a75bd\" title=\"Qwen 3.8 Flash Next ngram look up table offloaded to SSD and streamed in SGLang\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Have anyone tried this yet? Looks promising, seems too good to be true with no performance loss.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Easy_Werewolf7903\"> /u/Easy_Werewolf7903 </a> <br /> <span><a href=\"https://huggingface.co/garnermccloud/Qwen3.8-Flash-Next-NVFP4-SSD-Stream\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18b1k/qwen_38_flash_next_ngram_look_up_table_offloaded/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "ea2fc12e2010aa6b",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "I always wonder how much more speed and/or context they'd be getting..",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1gec7/i_always_wonder_how_much_more_speed_andor_context/",
+    "published": "2026-08-29T07:57:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1gec7/i_always_wonder_how_much_more_speed_andor_context/\"> <img alt=\"I always wonder how much more speed and/or context they'd be getting..\" src=\"https://preview.redd.it/g8o8dwags9mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=0f34a64573a9f3dfee9b2269dd3c43f41ee09cc1\" title=\"I always wonder how much more speed and/or context they'd be getting..\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Nothing personal. I just have too much time on my hands. Probably because I spend none of it inspecting the code my agent writes, just the finished product.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/_-_David\"> /u/_-_David </a> <br /> <span><a href=\"https://i.redd.it/g8o8dwags9mh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1gec7/i_always_wonder_how_much_more_speed_andor_context/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "4e152969c436c623",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "AtomicChat/Qwen3.8-Flash-Next-GGUF is Really Good",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w17zbg/atomicchatqwen38flashnextgguf_is_really_good/",
+    "published": "2026-08-29T00:41:27+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w17zbg/atomicchatqwen38flashnextgguf_is_really_good/\"> <img alt=\"AtomicChat/Qwen3.8-Flash-Next-GGUF is Really Good\" src=\"https://preview.redd.it/zbnyc5jif7mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=d4b48a8b6ff78ba4e9361638201f9c580695f721\" title=\"AtomicChat/Qwen3.8-Flash-Next-GGUF is Really Good\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><h1>specs</h1> <ul> <li>hardware: M4 Max 128GB Studio</li> <li>inference engine: llama.cpp (qwen4exp branch)</li> <li>judge: claude-opus-4-6</li> </ul> <h1>AtomicChat/Qwen3.8-Flash-Next-GGUF</h1> <p><code>Qwen3.8-Flash-Next</code> is a great model I benched in <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1vzspz6/qwen38flashnext_time_to_update_those_benchmarks/\">my previous post</a>, but it is very tight, since all n-grams / PLE are loaded along with the experts, taking 106GB, leaving very little room for K/V, context, etc. Offloading PLE to SSD currently slows down prefill from 600 t/s to 180 t/s on oMLX.</p> <p><a href=\"/u/erikdhoward\">u/erikdhoward</a> suggested to try the <a href=\"https://huggingface.co/AtomicChat/Qwen3.8-Flash-Next-GGUF\">Atomic Chat</a> quant which I did not know anything about. I tried it, and it is... really good.</p> <p>AtomicChat's quant uses llama.cpp mmap (through GGUF shard layout vs. in the runtime) and keeps the PLE table (n-grams) pageable backed by a file. Because of this the same <strong>model that took 106GB, now takes 65GB</strong> (starts from 55GB) in RAM. And since PLE is pageable the prefill is actually not that bad, cold start is about 500 t/s.</p> <h1>oMLX &quot;right behind you!&quot;</h1> <p><code>Qwen3.8-Flash-Next</code> just came out, and there are many open PRs in oMLX to address the size and performance, including <a href=\"https://github.com/jundot/omlx/pull/3235\">this one</a> that makes PLE offload SSD cold prefill almost 3 times faster 🎉 </p> </div><!-- SC_ON --> &#32; submitted by &#32;…",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "3fd78ec44912f1c8",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Tenstorrent Quietbox 2 Arrived!",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w18pu9/tenstorrent_quietbox_2_arrived/",
+    "published": "2026-08-29T01:16:18+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18pu9/tenstorrent_quietbox_2_arrived/\"> <img alt=\"Tenstorrent Quietbox 2 Arrived!\" src=\"https://preview.redd.it/kuevesset7mh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=ad9136b8200d9b22078f7355160030e31a8e3b46\" title=\"Tenstorrent Quietbox 2 Arrived!\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Super excited to start dev on this. I've already deployed a number of galaxy systems and want to really figure out the ideal models on this architecture that I haven't discovered.</p> <p>It's actually quite a system for the price. 256G system mem, 128G of interconnected GDDR over the accelerators...</p> <p>The interconnect and scalability on these is seriously neat!</p> <p>Looking forward to requests or questions!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SashaUsesReddit\"> /u/SashaUsesReddit </a> <br /> <span><a href=\"https://i.redd.it/kuevesset7mh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18pu9/tenstorrent_quietbox_2_arrived/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "081dedbfdf95d2df",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "50% tg increase with offloading \"hot\" experts to VRAM",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1996t/50_tg_increase_with_offloading_hot_experts_to_vram/",
+    "published": "2026-08-29T01:42:09+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1996t/50_tg_increase_with_offloading_hot_experts_to_vram/\"> <img alt=\"50% tg increase with offloading &quot;hot&quot; experts to VRAM\" src=\"https://preview.redd.it/svy9r67yx7mh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=e9324d5941fb255b13f58a91a46a1a364454734e\" title=\"50% tg increase with offloading &quot;hot&quot; experts to VRAM\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I got a 50% performance boost (20 t/s -&gt; 30 t/s) in llama.cpp for MoE models that don’t fit entirely in VRAM—in my case, Qwen 3.8 Flash Next. </p> <p>The idea is simple: instead of offloading entire layers to the GPU, I offload only the “hot” experts. I found that <strong>certain groups of experts remain relatively stable across coding, refactoring, and code-review workloads.</strong></p> <p><a href=\"https://github.com/timadinorth/llama.cpp/pull/1\">https://github.com/timadinorth/llama.cpp/pull/1</a></p> <p>A couple of important caveats: this llama.cpp fork has been tested only on coding workloads, and it’s useful only when the full model cannot fit in VRAM.<br /> Will upstream ever accept it? Probably not. Opus did the low-level implementation, and I don’t feel like showing up to explain every line</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/nbvehrfr\"> /u/nbvehrfr </a> <br /> <span><a href=\"https://i.redd.it/svy9r67yx7mh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1996t/50_tg_increase_with_offloading_hot_experts_to_vram/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "5c78f3278db5881d",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Qwen3.8-Flash-Next + MTP on Strix Halo: Vulkan Runtime Notes",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1d3zl/qwen38flashnext_mtp_on_strix_halo_vulkan_runtime/",
+    "published": "2026-08-29T04:54:41+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Below are the benchmark results for running Qwen3.8-Flash-Next on Strix Halo using the Vulkan backend of llama.cpp, combined with MTP model.</p> <h1>Hardware</h1> <table><thead> <tr> <th align=\"left\">Item</th> <th align=\"left\">Details</th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>CPU</strong></td> <td align=\"left\">AMD Ryzen AI MAX+ 395 (16C/32T)</td> </tr> <tr> <td align=\"left\"><strong>GPU</strong></td> <td align=\"left\">Radeon 8060S (integrated, RADV STRIX_HALO)</td> </tr> <tr> <td align=\"left\"><strong>RAM</strong></td> <td align=\"left\">128GB unified memory</td> </tr> </tbody></table> <h1>Software</h1> <table><thead> <tr> <th align=\"left\">Item</th> <th align=\"left\">Details</th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>OS</strong></td> <td align=\"left\">Ubuntu 26.04.1 LTS / Kernel 7.0.0-30</td> </tr> <tr> <td align=\"left\"><strong>Vulkan</strong></td> <td align=\"left\">Mesa 26.0.8 / Vulkan API 1.4.335</td> </tr> </tbody></table> <p><strong>Kernel Boot Parameters (Excerpt)</strong> <code>amdgpu.gttsize=126976 amdgpu.noretry=0 ttm.pages_limit=28835840 ttm.page_pool_size=14417920 iommu=off</code></p> <h1>llama.cpp</h1> <p>Using the fork by Laurent Zuijdwijk:</p> <pre><code>git clone https://github.com/LaurentZuijdwijk/llama.cpp cd llama.cpp &amp;&amp; git checkout vulkan/qwen4exp-rocmfpx </code></pre> <h1>Models</h1> <ul> <li><strong>Main:</strong> <code>Qwen3.8-Flash-Next-AD-5.00bpw-Q5_K_M-M64</code> (AtomicChat)</li> <li><strong>MTP Draft:</strong> <code>Qwen3.8-Flash-Next-MTP-Q4_K_M.gguf</code> (dzannotti)</li> </ul> <h1>Launch Command</h1> <pre><code>./build/bin/llama-server \\ --host 0.0.0.0 --port 8080 \\ --model ./models/Qwen3.8-Flash-Next-AD-5.00bpw-Q5_K_M-M64/Qwen3.8-Flash-Next-AD-5.00bpw-Q5_K_M-M64-00001-of-00033.gguf \\ -c 262144 --n-predict 32768 \\ -t 2 --threads-batch 8 \\ -ngl 999 --parallel 1 \\ -b 8192 --ubatch-size 512 \\ --load-mode mlock \\ -fa on -cb \\ -ctk f16 -ctv f16 \\ --cache-reuse 1024 \\ --jinja --re…",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "db4cf35b5221d4e9",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "Linux Ubuntu 26.04 LTS & 26.04.1 upgrade - How much Improvements?",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w1d2hm/linux_ubuntu_2604_lts_26041_upgrade_how_much/",
+    "published": "2026-08-29T04:52:29+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1d2hm/linux_ubuntu_2604_lts_26041_upgrade_how_much/\"> <img alt=\"Linux Ubuntu 26.04 LTS &amp; 26.04.1 upgrade - How much Improvements?\" src=\"https://external-preview.redd.it/qtmJ8jlhu4X8BQ3sV7ZdgbZYX2_wBM_QdMEJ5LB8z_I.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=482194919f3f6a13114886d8c48d7d9cccc0aa68\" title=\"Linux Ubuntu 26.04 LTS &amp; 26.04.1 upgrade - How much Improvements?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>People who moved from older version to this new one, how much improvements do you see on inference? Ex: llama.cpp performance?</p> <p>This new version comes with Linux Kernel 7.0.</p> <p>Hope AMD cards gonna enjoy additional improvements with their recent ROCm 10.0 version release.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pmttyji\"> /u/pmttyji </a> <br /> <span><a href=\"https://www.omgubuntu.co.uk/2026/08/ubuntu-26041-lts-point-release-download\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w1d2hm/linux_ubuntu_2604_lts_26041_upgrade_how_much/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
+  },
+  {
+    "id": "d7c9c84e0ed06a29",
+    "source": "r/LocalLLaMA",
+    "tier": 3,
+    "title": "use llms to auto annotation your dataset locally",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w18v86/use_llms_to_auto_annotation_your_dataset_locally/",
+    "published": "2026-08-29T01:23:13+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18v86/use_llms_to_auto_annotation_your_dataset_locally/\"> <img alt=\"use llms to auto annotation your dataset locally\" src=\"https://external-preview.redd.it/eG5wNnM0dGp1N21oMXq8CUYhnl8FLuvYZ0rVBwPFaaNb6UQHI2-mYzc4bWD2.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a4dfc5dd95f22337b23e287cc14714d77aca2f0e\" title=\"use llms to auto annotation your dataset locally\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>hi i make tool for this called llmog it's purpose to make llms free to</p> <p>- auto annotation datasets</p> <p>- reclassification existing yolo datasets</p> <p>running totally local using llama cpp or vllm or use external api</p> <p>you'd rather click than code.</p> <p>🔗 GitHub: <a href=\"https://github.com/mohamed-em2m/llmog\">mohamed-em2m/llmog: framework for using llms on object grounding</a></p> <p>You can try it directly online</p> <p>🔵 Google Colab:</p> <p><a href=\"https://colab.research.google.com/drive/1YIKlyTVtRjJdRC5IjCZ39i48ydyt_J5D?usp=sharing\">https://colab.research.google.com/drive/1YIKlyTVtRjJdRC5IjCZ39i48ydyt_J5D?usp=sharing</a></p> <p>🟠 Kaggle:</p> <p><a href=\"https://www.kaggle.com/code/elemam/auto-annotation-using-llms\">https://www.kaggle.com/code/elemam/auto-annotation-using-llms</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SavingsWeather1659\"> /u/SavingsWeather1659 </a> <br /> <span><a href=\"https://v.redd.it/dwp3l5tju7mh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/LocalLLaMA/comments/1w18v86/use_llms_to_auto_annotation_your_dataset_locally/\">[comments]</a></span> </td></tr></table>",
+    "fetched_at": "2026-08-29T08:17:49.279958+00:00"
   }
 ]
