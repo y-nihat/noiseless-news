@@ -1,0 +1,22 @@
+[
+  {
+    "id": "9df4dd3c01164758",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Anthropic Opens a Research Preview of the Model Hardware Standard (MHS): A Shared Specification for AI Agents to Safely Operate Physical Devices",
+    "url": "https://www.marktechpost.com/2026/08/29/anthropic-opens-a-research-preview-of-the-model-hardware-standard-mhs-a-shared-specification-for-ai-agents-to-safely-operate-physical-devices/",
+    "published": "2026-08-30T06:12:21+00:00",
+    "summary": "<p>Anthropic has opened a research preview of the Model Hardware Standard (MHS), a shared driver specification that lets AI agents discover and safely operate physical devices. Instrument integration that normally takes weeks or months drops to hours: Carnegie Mellon went from raw equipment to a finished dose-response curve in eight, and QuEra's laser relock improved from 58% to 99.3% across 700 trials. MHS is model-agnostic, reachable over MCP, and enforces safety limits in the driver rather than the prompt.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/29/anthropic-opens-a-research-preview-of-the-model-hardware-standard-mhs-a-shared-specification-for-ai-agents-to-safely-operate-physical-devices/\">Anthropic Opens a Research Preview of the Model Hardware Standard (MHS): A Shared Specification for  AI Agents to Safely Operate Physical Devices</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-30T07:21:37.748487+00:00"
+  },
+  {
+    "id": "d88d7da276777ad9",
+    "source": "MarkTechPost",
+    "tier": 3,
+    "title": "Meet ‘Code-as-World’: An Agentic Loop That Rewrites Real Videos Into Executable MuJoCo Physics Programs",
+    "url": "https://www.marktechpost.com/2026/08/29/mirros-code-as-world-executable-world-representations/",
+    "published": "2026-08-30T01:35:02+00:00",
+    "summary": "<p>Code-as-World recovers editable MuJoCo scene code from real video, then uses those verified worlds to train physical reasoning.</p>\n<p>The post <a href=\"https://www.marktechpost.com/2026/08/29/mirros-code-as-world-executable-world-representations/\">Meet &#8216;Code-as-World&#8217;: An Agentic Loop That Rewrites Real Videos Into Executable MuJoCo Physics Programs</a> appeared first on <a href=\"https://www.marktechpost.com\">MarkTechPost</a>.</p>",
+    "fetched_at": "2026-08-30T07:21:37.748487+00:00"
+  }
+]

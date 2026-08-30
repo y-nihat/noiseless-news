@@ -1,0 +1,42 @@
+[
+  {
+    "id": "98fffa69b3971ab9",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "You can beat SOTA Time Series Anomaly Detection methods with a 100 year old algorithm [R]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1w1wt1s/you_can_beat_sota_time_series_anomaly_detection/",
+    "published": "2026-08-29T20:16:17+00:00",
+    "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/MachineLearning/comments/1w1wt1s/you_can_beat_sota_time_series_anomaly_detection/\"> <img alt=\"You can beat SOTA Time Series Anomaly Detection methods with a 100 year old algorithm [R]\" src=\"https://preview.redd.it/y2ez5kvccdmh1.jpg?width=140&amp;height=77&amp;auto=webp&amp;s=f1eca7fbdb7fe15a973e7a88ffa00d31c695209b\" title=\"You can beat SOTA Time Series Anomaly Detection methods with a 100 year old algorithm [R]\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/y2ez5kvccdmh1.jpg?width=2859&amp;format=pjpg&amp;auto=webp&amp;s=3f80362f7124fab5cfe5d2798746d68e637bce13\">You can beat SOTA Time Series Anomaly Detection methods with a 100 year old algorithm</a></p> <p>Time Series Anomaly Detection (TSAD) seems to be one of the hottest topics in NeurIPS, SIGKDD, VLDB etc.</p> <p>Many (perhaps most) papers evaluate on Paparrizos’ <em>TSB-AD-M benchmark…</em></p> <p>However, I tested these benchmark datasets and found that in most cases I could beat the SOTA TSAD methods with a 100-year-old algorithm, simple Statistical Process Control (SPC). In the attached example, SPC gets <em>perfect</em> results.</p> <p>If we can beat the SOTA papers with 100-year-old algorithm, we probably should not be too impressed with them [b]. I really think this calls for some introspection by the community.</p> <p>To be clear, I make no claims (here) about the proposed algorithms in all these paper. But the TSB-AD benchmark is obviously too trivial to make meaningful claims on [a][b].</p> <p>The example shown is one of the ECG traces but look at dozen of traces marked “TAO”, they are even more trivial to solve with SPC [a][c].</p> <p>I do not claim to have solved the triviality problem, but I have done 90% of the work to introduce more challenging TSAD problems ([d] sled dogs, [e] Tuna, Fuel Cells, Smart Manufacturing etc.).</p> <p> </p> <p><strong>TLDR:</strong> I think the TSAD community needs more introspecti…",
+    "fetched_at": "2026-08-30T07:21:37.748487+00:00"
+  },
+  {
+    "id": "b5259d792e86480f",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "*ACL Findings or TMLR? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1w23w2l/acl_findings_or_tmlr_d/",
+    "published": "2026-08-30T01:23:36+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Expecting a rejection from NeurIPS given our scores of 5/2/2. Trying to decide between ARR vs. TMLR, but thinking NAACL findings are more likely than main conference. Would you rather have TMLR or *ACL findings on your publication list? Genuinely curious to hear what people have to say.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Pure-Ad9079\"> /u/Pure-Ad9079 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1w23w2l/acl_findings_or_tmlr_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1w23w2l/acl_findings_or_tmlr_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-30T07:21:37.748487+00:00"
+  },
+  {
+    "id": "178d6355e81392ea",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Do you use a whiteboard when thinking? [D]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1w1yv9b/do_you_use_a_whiteboard_when_thinking_d/",
+    "published": "2026-08-29T21:39:44+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello all, here is a chill post.</p> <p>When I was an undergrad, I really liked working things out on a whiteboard. Drawing stuff, talking through ideas out loud, testing little hypotheses.</p> <p>Now I work in radar DSP, and a lot of my work is code, numerical experiments, deep learning and waiting for training to finish 😅</p> <p>I’m wondering how other people bring that whiteboard style of thinking into DSP, data science or ML work.</p> <p>Do you still use a whiteboard regularly, or do you mostly go straight from idea to code?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Huge-Leek844\"> /u/Huge-Leek844 </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1w1yv9b/do_you_use_a_whiteboard_when_thinking_d/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1w1yv9b/do_you_use_a_whiteboard_when_thinking_d/\">[comments]</a></span>",
+    "fetched_at": "2026-08-30T07:21:37.748487+00:00"
+  },
+  {
+    "id": "fa4382d88e891de0",
+    "source": "r/MachineLearning",
+    "tier": 3,
+    "title": "Open-source access-control checker for retrieval-based AI applications [P]",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1w1zm5m/opensource_accesscontrol_checker_for/",
+    "published": "2026-08-29T22:11:26+00:00",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey Guys,</p> <p>I built a small open-source tool that checks whether a RAG application retrieves documents a user shouldn’t have access to.</p> <p>It supports offline test cases and live HTTP API testing with bearer token/API-key auth.</p> <p>I’m looking for a few engineers to try it on a test or non-sensitive environment and tell me whether it catches anything useful or what would make it better.</p> <p>GitHub: <a href=\"https://github.com/InfraGuard-Labs/rag-access-check\">https://github.com/InfraGuard-Labs/rag-access-check</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Lostboy_journey\"> /u/Lostboy_journey </a> <br /> <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1w1zm5m/opensource_accesscontrol_checker_for/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/MachineLearning/comments/1w1zm5m/opensource_accesscontrol_checker_for/\">[comments]</a></span>",
+    "fetched_at": "2026-08-30T07:21:37.748487+00:00"
+  }
+]
