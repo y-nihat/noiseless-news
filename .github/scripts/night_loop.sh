@@ -10,7 +10,10 @@ log() { echo "[loop $(date -u +%H:%M:%S)] $*"; }
 
 # A pause you can see in the repository, rather than a workflow toggled off in a
 # settings page nobody will remember. See RUNBOOK.md.
-if [ -f .paused ]; then
+# The plan-only hook below parses this script's stdout, so the pause must not
+# speak before it: with .paused committed, an unguarded log line here is the
+# first thing pytest reads and every window test fails on it.
+if [ -z "${NIGHT_PLAN_ONLY:-}" ] && [ -f .paused ]; then
   log "'.paused' present at the repo root — publishing is paused, exiting cleanly"
   exit 0
 fi

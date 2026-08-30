@@ -3,7 +3,15 @@
 An autonomous news site for artificial intelligence that publishes **only what it can
 verify across independent sources** — and shows its work.
 
-**Live site: https://y-nihat.github.io/noiseless-news/** · [Türkçe](https://y-nihat.github.io/noiseless-news/tr/)
+**The site is offline.** Publishing stopped on 30 August 2026 and the site that was
+served at `https://y-nihat.github.io/noiseless-news/` has been taken down. Every article,
+evidence log and ledger entry stays here, in English and Turkish, under
+[`content/articles/`](content/articles/) and [`data/`](data/).
+
+**Corrections and right of reply are still read.** If something here is wrong, or you are
+named in an article and want to respond, [open an issue](https://github.com/y-nihat/noiseless-news/issues/new)
+— the tracker stays open and this repository stays public. Publishers asking for feed
+material in `data/raw/` to be removed should do the same; see [NOTICE](NOTICE).
 
 Articles are written and verified by AI agents following the rules in
 [`policy/verification.md`](policy/verification.md), with no per-article human
@@ -59,8 +67,23 @@ Outputs land in `data/` (pipeline artifacts, committed as an audit trail) and
 
 ## Status
 
-Running. The pipeline has published on most nights since 9 July 2026, in English
-and Turkish, unattended.
+**Stopped.** The pipeline ran unattended from 9 July 2026 and published 159 stories,
+each in English and Turkish, the last on 26 August 2026. It was stopped on 30 August
+2026: all five GitHub Actions workflows are disabled, `.paused` is present at the repo
+root, and the published site has been taken down. Nothing runs on a schedule any more.
+
+Two things the archive still owes its readers, written down here because the pages that
+carried them are gone:
+
+- **33 published stories carry `open_obligation: true`** in [`data/ledger/`](data/ledger/),
+  each with a `revisit_after` date — mostly legal proceedings whose outcome this project
+  said it would follow up. Those follow-ups will not be published. `policy/verification.md`
+  calls a published accusation with no published outcome a defect; it is one, and it is
+  recorded here rather than quietly dropped.
+- **11 stories sit in `watching`** in the ledger — reported somewhere, never verified to
+  the standard needed to publish them. They stay unpublished, listed in `data/ledger/`.
+
+What ran while it was running:
 
 - **Nightly** (`.github/workflows/nightly.yml`) — up to three cycles between 05:00
   and 07:00 Istanbul. Each cycle re-ingests the feeds, re-checks open stories,
